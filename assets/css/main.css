@@ -115,14 +115,35 @@ footer .tiny{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;gap:34px;padding:52px 0 44px}
   .grid{grid-template-columns:1fr}
-  .previewCol{position:static}
+  .previewCol{position:static;order:-1}
   .studio{padding:30px 22px}
 }
-@media(max-width:820px){.prins{grid-template-columns:1fr}}
+@media(max-width:820px){.prins{grid-template-columns:1fr}.prins{margin:52px 0 10px}}
 @media(max-width:640px){
   .wrap{padding:0 18px}
+  header.top{padding:18px 0 8px}
+  .brand{font-size:21px}
   .tnav{display:none}
-  .types{grid-template-columns:repeat(2,1fr)}
+  .kicker{font-size:11px;letter-spacing:.18em;margin-bottom:16px}
+  h1{font-size:clamp(34px,9.5vw,44px)}
+  .lede{font-size:15.5px}
+  .hero{padding:38px 0 32px}
+  .herocard{padding:22px}
+  .studio{padding:26px 18px;border-radius:22px;margin:6px 0}
+  .shead h2{font-size:26px}
+  .types{grid-template-columns:repeat(2,1fr);gap:8px}
+  .types button{padding:14px 6px}
   .r2{grid-template-columns:1fr}
+  .previewCol{padding:24px 18px;border-radius:18px}
+  #qrbox{width:210px;height:210px}
+  .qrpaper{padding:18px}
+  input[type=text],textarea,select{font-size:16px;padding:14px 15px}
+  .dlrow button{padding:15px 0}
+  .faq{margin:52px auto 24px}
+  .faq h2{font-size:26px}
+  details{padding:18px}
+  summary{font-size:15px}
+  .batchGrid{grid-template-columns:repeat(2,1fr);gap:10px}
+  footer{padding:28px 0 40px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
