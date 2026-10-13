@@ -39,12 +39,13 @@ const TOOLS = [
 
 function apiUrl(base, args) {
   const u = new URL('/api/qr', base);
+  const eccRaw = String(args.ecc || 'M').toUpperCase();
   const p = {
     data: args.data,
     size: String(Math.min(2048, Math.max(128, parseInt(args.size) || 1024))),
     color: ((args.color || '2F4A62').replace(/^#/, '') || '2F4A62'),
     bgcolor: ((args.bgcolor || 'ffffff').replace(/^#/, '') || 'ffffff'),
-    ecc: (['L', 'M', 'Q', 'H'].includes((args.ecc || 'M').toUpperCase()) ? args.ecc.toUpperCase() : 'M'),
+    ecc: (['L', 'M', 'Q', 'H'].includes(eccRaw) ? eccRaw : 'M'),
   };
   if (!HEX.test(p.color)) p.color = '2F4A62';
   if (!HEX.test(p.bgcolor)) p.bgcolor = 'ffffff';
