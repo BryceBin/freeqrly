@@ -6,7 +6,7 @@ const $ = id => document.getElementById(id);
 const I18N = {
 en:{
   title:"FreeQrly — QR Code Generator, Private by Design",
-  metaDesc:"Generate beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded. PNG & SVG export.",
+  metaDesc:"FreeQrly is a free QR code generator that runs entirely in your browser. No sign-up, no tracking, no expiry. Export PNG & SVG.",
   navStudio:"Studio",navWhy:"Principles",navFaq:"FAQ",
   kicker:"Free · No sign-up · Private by design",
   h1a:"Quiet codes for",h1b:"loud",h1c:"places.",
@@ -16,6 +16,7 @@ en:{
   appearance:"Style",ink:"Ink",paper:"Paper",dots:"Dot style",ecc:"Error correction",
   dSquare:"Square",dRound:"Round",dSoft:"Soft",dPebble:"Pebble",
   eL:"L — light",eM:"M — medium",eQ:"Q — strong",eH:"H — maximum",
+  eccHint:"Higher levels survive logos and wear.",
   size:"Export size",logo:"Add your logo",
   privnote:"Everything is generated locally in your browser. Disconnect from the internet after the page loads — it still works.",
   live:"Live preview — updates as you type",
@@ -28,6 +29,8 @@ en:{
   q2:"Is my WiFi password safe here?",a2:"Yes. Your password never leaves your browser — nothing is sent anywhere. Extra careful? Load the page, disconnect, then type.",
   q3:"Static or dynamic — which should I choose?",a3:"If the destination won't change, go static: WiFi, business cards, fixed links. Dynamic codes (editable links + scan stats) suit marketing campaigns — they're on our roadmap.",
   q4:"Can I use these commercially?",a4:"Absolutely. Every code you make here is yours — packaging, menus, business cards, no attribution needed.",
+  q5:"Is FreeQrly really free?",a5:"Yes — everything on this page is free, with no watermark and no account. We don't sell subscriptions; this is a tool, not a funnel.",
+  q6:"Do I need an account?",a6:"No. There is nothing to sign up for — open the page and make your code.",
   fin:"Made quietly, in your browser.",
   dl:"Download",
   types:{url:["Website","link, page, video"],text:["Text","any words"],wifi:["WiFi","join instantly"],vcard:["Contact","vCard"],email:["Email","prefilled"],sms:["SMS","prefilled text"],phone:["Call","tap to dial"],geo:["Place","map pin"],batch:["Batch","many at once"]},
@@ -50,6 +53,7 @@ zh:{
   appearance:"外观样式",ink:"墨色",paper:"纸色",dots:"码点形状",ecc:"容错等级",
   dSquare:"方形",dRound:"圆形",dSoft:"柔和",dPebble:"鹅卵石",
   eL:"L — 低",eM:"M — 中",eQ:"Q — 高",eH:"H — 最高",
+  eccHint:"容错越高，越耐磨损、越适合加 Logo。",
   size:"导出尺寸",logo:"添加 Logo",
   privnote:"所有生成都在你的浏览器里完成。页面加载后断网，也照样能用。",
   live:"实时预览，输入即变",
@@ -62,6 +66,8 @@ zh:{
   q2:"在这里输入 WiFi 密码安全吗？",a2:"安全。密码从头到尾都在你的浏览器里，不会发送到任何地方。实在不放心，页面加载完成后断网再输入。",
   q3:"静态码和动态码怎么选？",a3:"地址不变就用静态码：WiFi、名片、固定链接。动态码（可修改地址、看扫码统计）适合做营销活动，我们的路线图上有它。",
   q4:"可以商用吗？",a4:"当然。这里生成的所有二维码都属于你，印在包装、菜单、名片上都不需要署名。",
+  q5:"FreeQrly 真的免费吗？",a5:"真的。这一页的所有功能都免费，无水印、不用注册。我们不卖订阅，这就是一个趁手的工具。",
+  q6:"需要注册账号吗？",a6:"不需要。这里没有什么可注册的——打开页面，直接做码。",
   fin:"在你的浏览器里，静静生成。",
   dl:"下载",
   types:{url:["网址","链接、页面、视频"],text:["文本","任意文字"],wifi:["WiFi","一键联网"],vcard:["名片","vCard"],email:["邮箱","预填内容"],sms:["短信","预填内容"],phone:["电话","点击拨号"],geo:["位置","地图标记"],batch:["批量","一次多个"]},
@@ -73,8 +79,32 @@ zh:{
     phone:[["phone","电话","+86 138 0000 0000"]],geo:[["lat","纬度","39.9042"],["lng","经度","116.4074"]]}
 }};
 
-let lang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("freeqrly-lang") || ((navigator.language||"en").startsWith("zh") ? "zh" : "en");
-if(!["en","zh"].includes(lang)) lang = "en";
+let lang = "en";
+/* language: ?lang= > saved choice > timezone hint > IP geolocation > browser language */
+function syncGuess(){
+  const q = new URLSearchParams(location.search).get("lang");
+  if(q==="en"||q==="zh") return q;
+  const saved = localStorage.getItem("freeqrly-lang");
+  if(saved==="en"||saved==="zh") return saved;
+  try{
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone||"";
+    if(/Asia\/(Shanghai|Taipei|Hong_Kong|Macau|Urumqi|Chongqing)/.test(tz)) return "zh";
+  }catch(e){}
+  return null;
+}
+async function detectLang(){
+  const s = syncGuess();
+  if(s) return s;
+  try{
+    const ctrl = new AbortController();
+    const t = setTimeout(()=>ctrl.abort(), 1500);
+    const r = await fetch("https://ipapi.co/json/", {signal:ctrl.signal});
+    clearTimeout(t);
+    const j = await r.json();
+    if(j && ["CN","HK","TW","MO"].includes(j.country_code)) return "zh";
+  }catch(e){}
+  return ((navigator.language||"en").toLowerCase().startsWith("zh")) ? "zh" : "en";
+}
 let cur = "url", logoData = null;
 const ORDER = ["url","text","wifi","vcard","email","sms","phone","geo","batch"];
 
@@ -203,5 +233,6 @@ setTheme(localStorage.getItem("freeqrly-theme")==="dark" ||
 $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
 $("langBtn").onclick=()=>{ lang = lang==="en"?"zh":"en"; applyLang(); };
 
-applyLang(); syncHex(); draw();
+syncHex();
+detectLang().then(l=>{ lang = l; applyLang(); draw(); });
 })();

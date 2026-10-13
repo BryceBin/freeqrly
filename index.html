@@ -4,15 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FreeQrly — QR Code Generator, Private by Design</title>
-<meta name="description" content="Generate beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded. PNG & SVG export.">
+<meta name="description" content="FreeQrly is a free QR code generator that runs entirely in your browser. No sign-up, no tracking, no expiry. Export PNG & SVG.">
 <link rel="canonical" href="https://freeqrly.com/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/?lang=zh">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/">
+<meta name="theme-color" content="#e9eef4">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A62'/%3E%3Crect x='7' y='7' width='8' height='8' fill='white'/%3E%3Crect x='17' y='7' width='8' height='8' fill='white'/%3E%3Crect x='7' y='17' width='8' height='8' fill='white'/%3E%3Crect x='19' y='19' width='4' height='4' fill='white'/%3E%3C/svg%3E">
 <meta property="og:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta property="og:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
+<meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
+<meta name="twitter:image" content="https://freeqrly.com/og.png">
 <link rel="stylesheet" href="assets/css/main.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up."}
+{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
 </head>
 <body>
@@ -77,7 +89,7 @@
               <option value="M" selected data-i18n="eM">M — medium</option>
               <option value="Q" data-i18n="eQ">Q — strong</option>
               <option value="H" data-i18n="eH">H — maximum</option>
-            </select></div>
+            </select><div class="hint" data-i18n="eccHint">Higher levels survive logos and wear.</div></div>
         </div>
         <div class="fl"><span data-i18n="size">Export size</span> · <span id="sizeVal">1024</span> px</div>
         <input type="range" id="size" min="512" max="2048" step="512" value="1024" list="sizes">
@@ -105,6 +117,8 @@
     <details><summary><span data-i18n="q2">Is my WiFi password safe here?</span></summary><p data-i18n="a2">Yes. Your password never leaves your browser — nothing is sent anywhere. Extra careful? Load the page, disconnect, then type.</p></details>
     <details><summary><span data-i18n="q3">Static or dynamic — which should I choose?</span></summary><p data-i18n="a3">If the destination won't change, go static: WiFi, business cards, fixed links. Dynamic codes (editable links + scan stats) suit marketing campaigns — they're on our roadmap.</p></details>
     <details><summary><span data-i18n="q4">Can I use these commercially?</span></summary><p data-i18n="a4">Absolutely. Every code you make here is yours — packaging, menus, business cards, no attribution needed.</p></details>
+    <details><summary><span data-i18n="q5">Is FreeQrly really free?</span></summary><p data-i18n="a5">Yes — everything on this page is free, with no watermark and no account. We don't sell subscriptions; this is a tool, not a funnel.</p></details>
+    <details><summary><span data-i18n="q6">Do I need an account?</span></summary><p data-i18n="a6">No. There is nothing to sign up for — open the page and make your code.</p></details>
   </section>
 
   <footer>
