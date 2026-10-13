@@ -8,6 +8,14 @@
 <link rel="canonical" href="https://freeqrly.com/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/?lang=es">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/?lang=hi">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/?lang=ar">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/?lang=pt">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/?lang=fr">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/?lang=ru">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/?lang=de">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/?lang=ja">
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/">
 <meta name="theme-color" content="#e9eef4">
 <meta name="google-site-verification" content="uZRfmoKMXGzp2UDaEonRjvSuWAo8jPzn2JrGFT6Byqw">
@@ -21,6 +29,16 @@
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
@@ -80,6 +98,14 @@
         "@type": "Answer",
         "text": "No. There is nothing to sign up for — open the page and make your code."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add my logo to the QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — upload any square logo and it goes in the center of the QR code, with error correction raised automatically so it keeps scanning. For print, use Q or H correction."
+      }
     }
   ]
 }
@@ -93,7 +119,7 @@
       <a href="#studio" data-i18n="navStudio">Studio</a><a href="#why" data-i18n="navWhy">Principles</a><a href="#faq" data-i18n="navFaq">FAQ</a>
     </nav>
     <div class="topbtns">
-      <button class="tbtn" id="langBtn" aria-label="language">中文</button>
+      <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
       <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
     </div>
   </header>
@@ -179,6 +205,7 @@
     <details><summary><span data-i18n="q4">Can I use these commercially?</span></summary><p data-i18n="a4">Absolutely. Every code you make here is yours — packaging, menus, business cards, no attribution needed.</p></details>
     <details><summary><span data-i18n="q5">Is FreeQrly really free?</span></summary><p data-i18n="a5">Yes — everything on this page is free, with no watermark and no account. We don't sell subscriptions; this is a tool, not a funnel.</p></details>
     <details><summary><span data-i18n="q6">Do I need an account?</span></summary><p data-i18n="a6">No. There is nothing to sign up for — open the page and make your code.</p></details>
+    <details><summary><span data-i18n="q7">Can I add my logo to the QR code?</span></summary><p data-i18n="a7">Yes — upload any square logo and it goes in the center, with error correction raised automatically so it keeps scanning. For print, use Q or H.</p></details>
   </section>
 
   <footer>

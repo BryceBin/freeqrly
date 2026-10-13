@@ -115,7 +115,7 @@ HEADER = '''<header class="top">
       <a href="#studio">Studio</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
     </nav>
     <div class="topbtns">
-      <button class="tbtn" id="langBtn" aria-label="language">中文</button>
+      <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
       <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
     </div>
   </header>

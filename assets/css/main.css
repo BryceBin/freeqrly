@@ -34,6 +34,12 @@ header.top{padding:26px 0 10px;display:flex;justify-content:space-between;align-
 .topbtns{display:flex;gap:8px}
 .tbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;cursor:pointer;transition:border-color .15s}
 .tbtn:hover{border-color:var(--coral)}
+select.tbtn{appearance:none;-webkit-appearance:none;font-family:inherit;padding-right:26px;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237C8494' fill='none' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 10px center}
+select.tbtn option{font-family:inherit}
+/* RTL: Arabic script breaks with wide letter-spacing */
+[dir="rtl"] .kicker,[dir="rtl"] .shead .over,[dir="rtl"] .fl,[dir="rtl"] footer .tiny,[dir="rtl"] .tnav{letter-spacing:.02em}
 .topline{height:1px;background:var(--line);margin-top:14px}
 /* hero */
 .hero{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;padding:38px 0 30px;align-items:center}
