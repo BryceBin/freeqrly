@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRForge — Free QR Code Generator, Private by Design</title>
+<meta name="description" content="Generate beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded. PNG & SVG export.">
+<link rel="canonical" href="https://qrforge.example/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A62'/%3E%3Crect x='7' y='7' width='8' height='8' fill='white'/%3E%3Crect x='17' y='7' width='8' height='8' fill='white'/%3E%3Crect x='7' y='17' width='8' height='8' fill='white'/%3E%3Crect x='19' y='19' width='4' height='4' fill='white'/%3E%3C/svg%3E">
+<meta property="og:title" content="QRForge — Free QR Code Generator">
+<meta property="og:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/css/main.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"QRForge","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up."}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">QR<em>Forge</em></div>
+    <nav class="tnav">
+      <a href="#studio" data-i18n="navStudio">Studio</a><a href="#why" data-i18n="navWhy">Principles</a><a href="#faq" data-i18n="navFaq">FAQ</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language">中文</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <section class="hero">
+    <div>
+      <div class="kicker" data-i18n="kicker">Free · No sign-up · Private by design</div>
+      <h1><span data-i18n="h1a">Quiet codes for</span> <em data-i18n="h1b">loud</em> <span data-i18n="h1c">places.</span></h1>
+      <p class="lede" data-i18n="lede">A calm little studio for making QR codes. Everything happens in your browser — no accounts, no tracking, no expiry. Just a code that works, for as long as you need it.</p>
+    </div>
+    <div class="herocard" aria-hidden="true">
+      <div class="row"><span class="k" data-i18n="hc1">Content types</span><span class="v">8</span></div>
+      <div class="row"><span class="k" data-i18n="hc2">Export</span><span class="v">PNG · SVG</span></div>
+      <div class="row"><span class="k" data-i18n="hc3">Data uploaded</span><span class="v ok" data-i18n="hc3v">Nothing</span></div>
+      <div class="row"><span class="k" data-i18n="hc4">Price</span><span class="v ok" data-i18n="hc4v">Free, forever</span></div>
+    </div>
+  </section>
+
+  <main class="studio" id="studio">
+    <div class="shead"><div class="over" data-i18n="sOver">The studio</div><h2 data-i18n="sTitle">Make your code</h2></div>
+    <div class="grid">
+      <div>
+        <div class="types" id="tabs" role="tablist"></div>
+        <div id="fields"></div>
+
+        <div id="batchPanel" hidden>
+          <div class="fl" data-i18n="bLabel">One link per line</div>
+          <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
+          <div class="batchActions">
+            <button class="btn-solid" id="batchGo" data-i18n="bGo">Generate all</button>
+            <button class="btn-ghost" id="batchZip" data-i18n="bZip" disabled>Download ZIP</button>
+          </div>
+          <div class="batchGrid" id="batchGrid"></div>
+        </div>
+
+        <div class="fl" data-i18n="appearance">Appearance</div>
+        <div class="r2">
+          <div><div class="fl" style="margin-top:0" data-i18n="ink">Ink</div><div class="colorbox"><input type="color" id="fg" value="#22303F"><span class="hex" id="fgHex">#22303F</span></div></div>
+          <div><div class="fl" style="margin-top:0" data-i18n="paper">Paper</div><div class="colorbox"><input type="color" id="bgc" value="#ffffff"><span class="hex" id="bgHex">#ffffff</span></div></div>
+          <div><div class="fl" data-i18n="dots">Module style</div>
+            <select id="dots">
+              <option value="square" data-i18n="dSquare">Square</option>
+              <option value="dots" data-i18n="dRound">Round</option>
+              <option value="rounded" data-i18n="dSoft">Soft</option>
+              <option value="extra-rounded" data-i18n="dPebble">Pebble</option>
+            </select></div>
+          <div><div class="fl" data-i18n="ecc">Error correction</div>
+            <select id="ecc">
+              <option value="L" data-i18n="eL">L — light</option>
+              <option value="M" selected data-i18n="eM">M — medium</option>
+              <option value="Q" data-i18n="eQ">Q — strong</option>
+              <option value="H" data-i18n="eH">H — maximum</option>
+            </select></div>
+        </div>
+        <div class="fl"><span data-i18n="size">Export size</span> · <span id="sizeVal">1024</span> px</div>
+        <input type="range" id="size" min="512" max="2048" step="512" value="1024" list="sizes">
+        <datalist id="sizes"><option value="512"></option><option value="1024"></option><option value="2048"></option></datalist>
+        <div style="margin-top:14px"><label class="filebtn" for="logo">＋ <span data-i18n="logo">Add your logo</span></label><input type="file" id="logo" accept="image/*" hidden></div>
+        <p class="privnote" data-i18n="privnote">🔒 Everything is generated locally in your browser. Disconnect from the internet after the page loads — it still works.</p>
+      </div>
+      <div class="previewCol">
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
+        <div class="livenote" data-i18n="live">— a live preview, drawn as you type —</div>
+        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button></div>
+      </div>
+    </div>
+  </main>
+
+  <section class="prins" id="why">
+    <div class="prin"><div class="no" data-i18n="p1n">No. 1</div><h3 data-i18n="p1t">Nothing leaves your desk</h3><p data-i18n="p1p">Codes are drawn by JavaScript on your own device. Load the page, disconnect the network — it keeps working. There is no server to trust, because none is involved.</p></div>
+    <div class="prin"><div class="no" data-i18n="p2n">No. 2</div><h3 data-i18n="p2t">Made to be permanent</h3><p data-i18n="p2p">A static code holds its destination inside its pattern. Print it today; it scans in a decade. No subscription to lapse, no platform to vanish.</p></div>
+    <div class="prin"><div class="no" data-i18n="p3n">No. 3</div><h3 data-i18n="p3t">Free without footnotes</h3><p data-i18n="p3p">No watermark, no sign-up wall, no expiry. The studio is the whole product, and the whole product is free.</p></div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faqT">Questions, answered gently</h2>
+    <details><summary><span data-i18n="q1">Do free QR codes expire?</span></summary><p data-i18n="a1">Never. The destination lives inside the pattern itself, so a code works as long as its destination does. Paid "dynamic" codes route through a vendor's servers and can stop working when you cancel.</p></details>
+    <details><summary><span data-i18n="q2">Is my WiFi password safe here?</span></summary><p data-i18n="a2">Yes — it never leaves your browser. For peace of mind, load this page once, disconnect from the internet, and then type.</p></details>
+    <details><summary><span data-i18n="q3">Static or dynamic — which should I choose?</span></summary><p data-i18n="a3">Static for anything permanent: WiFi cards, contact details, fixed links. Dynamic (editable + scan analytics) suits campaigns, and is on our roadmap.</p></details>
+    <details><summary><span data-i18n="q4">Can I use these commercially?</span></summary><p data-i18n="a4">Yes. Everything you generate here is yours — packaging, menus, business cards, no attribution required.</p></details>
+  </section>
+
+  <footer>
+    <div class="fin" data-i18n="fin">Set quietly, printed in your browser.</div>
+    <div class="rule"></div>
+    <div class="tiny">QRForge · MMXXVI</div>
+  </footer>
+</div>
+<script src="assets/lib/qr-code-styling.js"></script>
+<script src="assets/lib/jszip.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
