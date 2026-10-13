@@ -26,7 +26,8 @@ QR payload formats the generator understands:
 
 ## Site map
 
-- `/` — the studio (9 QR types, batch mode, logo upload, PNG/SVG export, 10 languages)
+- `/` — the studio (9 QR types + event calendar codes, batch mode, logo upload, PNG/SVG export, transparent background option, local history, 10 languages)
+- `/scan/` — free QR scanner (camera + image upload, decoded 100% on-device with jsQR, nothing uploaded)
 - `/google-form-qr-code/` — QR codes for Google Forms
 - `/wifi-qr-code/` — WiFi QR codes
 - `/vcard-qr-code/` — vCard contact QR codes

@@ -117,7 +117,8 @@
         <div class="fl" data-i18n="appearance">Style</div>
         <div class="r2">
           <div><div class="fl" style="margin-top:0" data-i18n="ink">Ink</div><div class="colorbox"><input type="color" id="fg" value="#22303F"><span class="hex" id="fgHex">#22303F</span></div></div>
-          <div><div class="fl" style="margin-top:0" data-i18n="paper">Paper</div><div class="colorbox"><input type="color" id="bgc" value="#ffffff"><span class="hex" id="bgHex">#ffffff</span></div></div>
+          <div><div class="fl" style="margin-top:0" data-i18n="paper">Paper</div><div class="colorbox"><input type="color" id="bgc" value="#ffffff"><span class="hex" id="bgHex">#ffffff</span></div>
+          <label class="transp"><input type="checkbox" id="transp"> <span data-i18n="transparent">Transparent background</span></label></div>
           <div><div class="fl" data-i18n="dots">Dot style</div>
             <select id="dots">
               <option value="square" data-i18n="dSquare">Square</option>
@@ -143,6 +144,10 @@
         <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
         <div class="livenote" data-i18n="live">Live preview — updates as you type</div>
         <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button></div>
+        <div id="histSec" hidden>
+          <div class="fl histhead"><span data-i18n="history">Recent</span><button id="histClear" class="linkbtn" data-i18n="histClear">Clear</button></div>
+          <div id="histList" class="histlist"></div>
+        </div>
       </div>
     </div>
   </main>

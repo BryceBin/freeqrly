@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free QR Code Scanner — Scan in Your Browser, 100% Private | FreeQrly</title>
+<meta name="description" content="Free QR code scanner that runs entirely in your browser. Scan with your camera or upload an image — nothing is ever uploaded. No app, no sign-up.">
+<link rel="canonical" href="https://freeqrly.com/scan/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/scan/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/scan/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Free QR Code Scanner — 100% Private | FreeQrly">
+<meta property="og:description" content="Scan QR codes with your camera or an uploaded image. Decoded on your device — nothing is ever uploaded.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/scan/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../assets/css/main.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly QR Scanner","url":"https://freeqrly.com/scan/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code scanner that decodes entirely in the browser. No uploads, no tracking."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Is this QR scanner private?","acceptedAnswer":{"@type":"Answer","text":"Yes. The image is decoded by JavaScript running on your device (jsQR). Nothing is uploaded to any server — you can even load the page and go offline before scanning an uploaded image."}},
+  {"@type":"Question","name":"Why won't my QR code scan?","acceptedAnswer":{"@type":"Answer","text":"Usually it's too small, low contrast, damaged, or shot at an angle. Hold steady, fill the frame, and make sure there's good light. See our troubleshooting guide for the full checklist."}},
+  {"@type":"Question","name":"Do I need to install anything?","acceptedAnswer":{"@type":"Answer","text":"No. It works in any modern mobile or desktop browser. Camera scanning needs you to grant camera permission; image upload works everywhere."}}
+]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">Studio</a><a href="/blog/">Field notes</a><a href="/about/">About</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="themeBtn" aria-label="theme">&#9681;</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <article class="article scanwrap">
+    <div class="mascot mascot-blog" aria-hidden="true"><img src="../assets/img/elephant-qr.png" alt="FreeQrly elephant mascot holding a QR code"></div>
+    <div class="kicker" style="text-align:center">Scanner</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Point, scan, <span class="hl hl-mint">done</span>.</h1>
+    <p class="lede">A QR scanner that never phones home. Your camera frames and uploaded images are decoded <b>on your device</b> — nothing is uploaded, stored, or tracked. No app, no account.</p>
+
+    <div class="scanbtns" style="justify-content:center">
+      <button class="btn-solid" id="camStart">Start camera</button>
+      <button class="btn-ghost" id="camStop" disabled>Stop</button>
+      <label class="btn-ghost" for="scanFile" style="cursor:pointer">Upload image</label>
+      <input type="file" id="scanFile" accept="image/*" hidden>
+    </div>
+    <video id="scanVideo" playsinline muted></video>
+    <canvas id="scanCanvas" hidden></canvas>
+
+    <div class="scanresult" id="scanResult" hidden>
+      <div class="fl">Decoded</div>
+      <p id="scanText" style="margin:0 0 12px"></p>
+      <div class="scanbtns" style="margin:0">
+        <button class="btn-solid" id="scanOpen" hidden>Open link</button>
+        <button class="btn-ghost" id="scanCopy">Copy</button>
+        <button class="btn-ghost" id="scanAgain">Scan another</button>
+      </div>
+    </div>
+    <p class="privnote" style="text-align:center">Decoding happens locally with jsQR — your images never leave this page.</p>
+
+    <h2 style="text-align:center;margin-top:44px">Good to know</h2>
+    <details><summary><span>Is this scanner private?</span></summary><p>Yes. The image is decoded by JavaScript running on your device. Nothing is uploaded to any server — load the page, go offline, and image upload still works.</p></details>
+    <details><summary><span>Why won't my QR code scan?</span></summary><p>Usually it's too small, low contrast, damaged, or shot at a steep angle. Hold steady, fill the frame with the code, and use good light. The full checklist is in <a href="/blog/why-is-my-qr-code-not-working/">why your QR code won't scan</a>.</p></details>
+    <details><summary><span>Do I need to install anything?</span></summary><p>No — any modern mobile or desktop browser works. Camera mode asks for camera permission once; upload mode works everywhere, even offline.</p></details>
+    <details><summary><span>Can I make my own QR codes too?</span></summary><p>Of course — that's the main act. <a href="/#studio">Generate a free QR code</a> with your logo, in 9 content types, right in your browser.</p></details>
+
+    <p style="text-align:center;margin-top:26px"><a class="btn" href="/#studio" style="text-decoration:none">Make a QR code &rarr;</a></p>
+  </article>
+
+<footer>
+    <div class="mascot mascot-foot" aria-hidden="true"><img src="../assets/img/elephant-party.png" alt="FreeQrly elephant mascot celebrating"></div>
+    <p class="fline">Made quietly, in your browser.</p>
+    <p class="flinks"><a href="/google-form-qr-code/">Google Form QR codes</a><a href="/wifi-qr-code/">WiFi QR codes</a><a href="/vcard-qr-code/">vCard QR codes</a><a href="/batch-qr-code/">Batch QR codes</a></p>
+    <p class="flinks"><a href="/business-card-qr-code/">Business card QR codes</a><a href="/google-review-qr-code/">Google review QR codes</a><a href="/qr-code-with-logo/">QR codes with logo</a><a href="/wedding-qr-code/">Wedding QR codes</a><a href="/instagram-qr-code/">Instagram QR codes</a><a href="/real-estate-qr-code/">Real estate QR codes</a></p>
+    <p class="flinks"><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About FreeQrly</a><a href="/developers/">API &amp; MCP for agents</a></p>
+    <p class="fmeta">FREEQRLY &middot; MMXXVI</p>
+  </footer>
+</div>
+<script src="../assets/lib/jsqr.js"></script>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+(function(){
+  const video=document.getElementById("scanVideo"), canvas=document.getElementById("scanCanvas"),
+        ctx=canvas.getContext("2d",{willReadFrequently:true}),
+        res=document.getElementById("scanResult"), txt=document.getElementById("scanText"),
+        openBtn=document.getElementById("scanOpen"),
+        startBtn=document.getElementById("camStart"), stopBtn=document.getElementById("camStop");
+  let stream=null, raf=null, lastData="";
+
+  function showResult(data){
+    if(!data || data===lastData) return;
+    lastData=data;
+    txt.textContent=data;
+    const isUrl=/^https?:\/\//i.test(data.trim());
+    openBtn.hidden=!isUrl;
+    openBtn.onclick=()=>window.open(data.trim(),"_blank","noopener");
+    res.hidden=false;
+    res.scrollIntoView({behavior:"smooth",block:"nearest"});
+  }
+  document.getElementById("scanCopy").onclick=()=>{ navigator.clipboard.writeText(txt.textContent).catch(()=>{}); };
+  document.getElementById("scanAgain").onclick=()=>{ lastData=""; res.hidden=true; };
+
+  function tick(){
+    if(video.readyState===video.HAVE_ENOUGH_DATA){
+      canvas.width=video.videoWidth; canvas.height=video.videoHeight;
+      ctx.drawImage(video,0,0,canvas.width,canvas.height);
+      const img=ctx.getImageData(0,0,canvas.width,canvas.height);
+      const code=jsQR(img.data,img.width,img.height,{inversionAttempts:"dontInvert"});
+      if(code) showResult(code.data);
+    }
+    raf=requestAnimationFrame(tick);
+  }
+  startBtn.onclick=async()=>{
+    try{
+      stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:false});
+    }catch(e){ txt.textContent="Camera unavailable: "+(e.message||e); res.hidden=false; return; }
+    video.srcObject=stream; video.style.display="block"; video.play();
+    startBtn.disabled=true; stopBtn.disabled=false; lastData="";
+    tick();
+  };
+  function stop(){
+    if(raf) cancelAnimationFrame(raf);
+    if(stream) stream.getTracks().forEach(t=>t.stop());
+    stream=null; video.style.display="none";
+    startBtn.disabled=false; stopBtn.disabled=true;
+  }
+  stopBtn.onclick=stop;
+
+  document.getElementById("scanFile").addEventListener("change",e=>{
+    const f=e.target.files[0]; if(!f) return;
+    const img=new Image();
+    img.onload=()=>{
+      const w=img.naturalWidth,h=img.naturalHeight, s=Math.min(1,1200/Math.max(w,h));
+      canvas.width=w*s; canvas.height=h*s;
+      ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      const d=ctx.getImageData(0,0,canvas.width,canvas.height);
+      const code=jsQR(d.data,d.width,d.height);
+      URL.revokeObjectURL(img.src);
+      if(code){ lastData=""; showResult(code.data); }
+      else { txt.textContent="No QR code found in that image. Try a clearer photo."; openBtn.hidden=true; res.hidden=false; }
+    };
+    img.src=URL.createObjectURL(f);
+    e.target.value="";
+  });
+})();
+</script>
+</body>
+</html>

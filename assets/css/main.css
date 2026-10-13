@@ -245,3 +245,22 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
   footer{padding:28px 0 40px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* transparent bg + history */
+.transp{display:flex;align-items:center;gap:7px;margin-top:9px;font-size:13px;color:var(--soft);cursor:pointer}
+.transp input{accent-color:var(--gold);width:15px;height:15px}
+#histSec{margin-top:18px}
+.histhead{display:flex;align-items:center;justify-content:space-between}
+.linkbtn{background:none;border:none;color:var(--faint);font-size:12.5px;cursor:pointer;text-decoration:underline;font-family:inherit;padding:0}
+.linkbtn:hover{color:var(--soft)}
+.histlist{display:flex;flex-direction:column;gap:7px;margin-top:8px;max-height:220px;overflow-y:auto}
+.hitem{display:flex;align-items:baseline;gap:10px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 13px;cursor:pointer;font-family:inherit;width:100%}
+.hitem:hover{border-color:var(--gold)}
+.hitem b{font-size:12.5px;color:var(--gold);font-weight:700;white-space:nowrap}
+.hitem span{font-size:13px;color:var(--soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* scanner page */
+.scanwrap{max-width:720px;margin:0 auto}
+.scanbtns{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+#scanVideo{width:100%;border-radius:18px;background:#1a1a1a;display:none}
+.scanresult{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:16px;word-break:break-all;font-size:14.5px;line-height:1.6}
+.scanresult .fl{margin-top:0}
