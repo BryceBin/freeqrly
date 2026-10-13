@@ -1,11 +1,11 @@
-/* QRForge v1.0 — app logic */
+/* FreeQrly v1.0 — app logic */
 (function(){
 "use strict";
 const $ = id => document.getElementById(id);
 
 const I18N = {
 en:{
-  title:"QRForge — Free QR Code Generator, Private by Design",
+  title:"FreeQrly — QR Code Generator, Private by Design",
   metaDesc:"Generate beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded. PNG & SVG export.",
   navStudio:"Studio",navWhy:"Principles",navFaq:"FAQ",
   kicker:"Free · No sign-up · Private by design",
@@ -39,7 +39,7 @@ en:{
     phone:[["phone","Phone","+1 555 0100"]],geo:[["lat","Latitude","37.7749"],["lng","Longitude","-122.4194"]]}
 },
 zh:{
-  title:"QRForge — 免费二维码生成器，隐私优先",
+  title:"FreeQrly — 免费二维码生成器，隐私优先",
   metaDesc:"直接在浏览器里生成精美二维码。永久免费、免注册、不上传任何数据。支持 PNG / SVG 导出。",
   navStudio:"工作台",navWhy:"理念",navFaq:"常见问题",
   kicker:"免费 · 免注册 · 隐私优先",
@@ -73,7 +73,7 @@ zh:{
     phone:[["phone","电话","+86 138 0000 0000"]],geo:[["lat","纬度","39.9042"],["lng","经度","116.4074"]]}
 }};
 
-let lang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("qrforge-lang") || ((navigator.language||"en").startsWith("zh") ? "zh" : "en");
+let lang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("freeqrly-lang") || ((navigator.language||"en").startsWith("zh") ? "zh" : "en");
 if(!["en","zh"].includes(lang)) lang = "en";
 let cur = "url", logoData = null;
 const ORDER = ["url","text","wifi","vcard","email","sms","phone","geo","batch"];
@@ -147,7 +147,7 @@ function applyLang(){
   });
   $("langBtn").textContent = lang==="en" ? "中文" : "EN";
   renderTabs(); renderFields();
-  localStorage.setItem("qrforge-lang", lang);
+  localStorage.setItem("freeqrly-lang", lang);
 }
 /* batch */
 let batchItems = [];
@@ -177,7 +177,7 @@ $("batchZip").onclick = async ()=>{
   }
   const blob = await zip.generateAsync({type:"blob"});
   const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob); a.download = "qrforge-batch.zip"; a.click();
+  a.href = URL.createObjectURL(blob); a.download = "freeqrly-batch.zip"; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
 };
 /* controls */
@@ -190,16 +190,16 @@ $("logo").addEventListener("change",e=>{
   r.onload=()=>{ logoData=r.result; if(["L","M"].includes($("ecc").value)) $("ecc").value="Q"; draw(); if(cur==="batch") renderBatch(); };
   r.readAsDataURL(f);
 });
-$("dlPng").onclick=()=> new QRCodeStyling(styleOpts(parseInt($("size").value)||1024)).download({name:"qrforge",extension:"png"});
-$("dlSvg").onclick=()=> new QRCodeStyling(styleOpts(1024)).download({name:"qrforge",extension:"svg"});
+$("dlPng").onclick=()=> new QRCodeStyling(styleOpts(parseInt($("size").value)||1024)).download({name:"freeqrly",extension:"png"});
+$("dlSvg").onclick=()=> new QRCodeStyling(styleOpts(1024)).download({name:"freeqrly",extension:"svg"});
 /* theme */
 const root=document.documentElement;
 function setTheme(dark){
   if(dark) root.setAttribute("data-theme","dark"); else root.removeAttribute("data-theme");
-  localStorage.setItem("qrforge-theme", dark?"dark":"light");
+  localStorage.setItem("freeqrly-theme", dark?"dark":"light");
 }
-setTheme(localStorage.getItem("qrforge-theme")==="dark" ||
-  (!localStorage.getItem("qrforge-theme") && matchMedia("(prefers-color-scheme: dark)").matches));
+setTheme(localStorage.getItem("freeqrly-theme")==="dark" ||
+  (!localStorage.getItem("freeqrly-theme") && matchMedia("(prefers-color-scheme: dark)").matches));
 $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
 $("langBtn").onclick=()=>{ lang = lang==="en"?"zh":"en"; applyLang(); };
 
