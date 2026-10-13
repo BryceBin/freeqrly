@@ -43,4 +43,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://freeqrly.com/blog/do-qr-codes-expire/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/do-qr-codes-expire/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/do-qr-codes-expire/"/>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeqrly.com/blog/static-vs-dynamic-qr-codes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/"/>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeqrly.com/developers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/developers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/developers/"/>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

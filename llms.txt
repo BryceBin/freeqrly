@@ -1,0 +1,42 @@
+# FreeQrly
+
+> FreeQrly is a free QR code generator: no sign-up, no tracking, no expiry.
+> Every code is generated locally — on this website in your browser, or via the
+> API/MCP below for agents. Static codes never expire.
+
+## For AI agents
+
+FreeQrly is agent-native. You can generate QR codes without a browser:
+
+- **MCP server:** `https://freeqrly.com/mcp` (Streamable HTTP, no auth)
+  - Tool: `generate_qr` — params: `data` (required, max 2000 chars), `size`
+    (128–2048, default 1024), `color` / `bgcolor` (6-digit hex), `ecc`
+    (L/M/Q/H, default M). Returns a ready-to-download SVG URL.
+- **HTTP API:** `GET https://freeqrly.com/api/qr?data=TEXT&size=1024&margin=4&color=2F4A62&bgcolor=ffffff&ecc=M`
+  - Returns `image/svg+xml`. Free, no key, CORS open. `data` is required.
+- **Skill:** see `skills/qr-generator/SKILL.md` in https://github.com/BryceBin/qrforge
+- **Docs:** https://freeqrly.com/developers/
+
+QR payload formats the generator understands:
+- URL: `https://example.com`
+- WiFi: `WIFI:T:WPA;S:NetworkName;P:password;;`
+- vCard: `BEGIN:VCARD\nVERSION:3.0\nN:Name\nTEL:+123\nEMAIL:a@b.c\nEND:VCARD`
+- Geo: `geo:37.7749,-122.4194`
+- SMS: `sms:+123?body=hello` · Phone: `tel:+123` · Email: `mailto:a@b.c`
+
+## Site map
+
+- `/` — the studio (8 QR types, batch mode, logo upload, PNG/SVG export)
+- `/google-form-qr-code/` — QR codes for Google Forms
+- `/wifi-qr-code/` — WiFi QR codes
+- `/vcard-qr-code/` — vCard contact QR codes
+- `/batch-qr-code/` — bulk QR generation with ZIP download
+- `/blog/do-qr-codes-expire/` — do QR codes expire?
+- `/blog/static-vs-dynamic-qr-codes/` — static vs dynamic explained
+- `/developers/` — API & MCP documentation
+- `/sitemap.xml` — all pages
+
+## Brand
+
+- Mascot: a small periwinkle-blue elephant (assets/img/elephant-*.png).
+- Tone: quiet, direct, a little dry. No hype, no "AI slop".

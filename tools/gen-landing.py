@@ -12,7 +12,7 @@ STUDIO = m.group(0)
 
 PAGES = [
  dict(
-  slug="google-form-qr-code", dtype="url",
+  slug="google-form-qr-code", dtype="url", mascot="wave",
   title="Free QR Code Generator for Google Forms — No Sign-Up | FreeQrly",
   desc="Turn any Google Form link into a QR code in seconds. Free, no sign-up, no watermark. Paste your form URL and download a printable PNG or SVG.",
   kw="qr code generator for google form",
@@ -36,7 +36,7 @@ PAGES = [
   ],
  ),
  dict(
-  slug="wifi-qr-code", dtype="wifi",
+  slug="wifi-qr-code", dtype="wifi", mascot="qr",
   title="Free WiFi QR Code Generator — Share WiFi Without the Password | FreeQrly",
   desc="Create a free WiFi QR code so guests join your network with one scan. No app needed, no sign-up. Your password never leaves your browser.",
   kw="wifi qr code generator",
@@ -60,7 +60,7 @@ PAGES = [
   ],
  ),
  dict(
-  slug="vcard-qr-code", dtype="vcard",
+  slug="vcard-qr-code", dtype="vcard", mascot="party",
   title="Free vCard QR Code Generator — Contact QR Codes | FreeQrly",
   desc="Turn your contact details into a scannable vCard QR code. Free, no sign-up. One scan saves you straight to their phone.",
   kw="vcard qr code generator",
@@ -84,7 +84,7 @@ PAGES = [
   ],
  ),
  dict(
-  slug="batch-qr-code", dtype="batch",
+  slug="batch-qr-code", dtype="batch", mascot="party",
   title="Free Batch QR Code Generator — Bulk QR Codes as ZIP | FreeQrly",
   desc="Generate dozens of QR codes at once and download them as a ZIP. Free, no sign-up, no limits games. One link per line — done.",
   kw="batch qr code generator",
@@ -141,6 +141,8 @@ def build(p):
     url = f"https://freeqrly.com/{p['slug']}/"
     studio = STUDIO_H2_RE.sub(
         '<div class="shead"><div class="over">The studio</div><h2>%s</h2></div>' % p["studio_h2"], STUDIO)
+    studio = studio.replace('<main class="studio" id="studio">',
+        '<main class="studio" id="studio">\n    <div class="mascot mascot-peek" aria-hidden="true"><img src="../assets/img/elephant-%s.png" alt="FreeQrly elephant mascot"></div>' % p["mascot"], 1)
     # studio assets live one level up
     studio = studio.replace('id="batchPanel"', 'id="batchPanel"')  # noop, keep ids
     steps_html = "\n".join(
@@ -168,7 +170,8 @@ def build(p):
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A62'/%3E%3Crect x='7' y='7' width='8' height='8' fill='white'/%3E%3Crect x='17' y='7' width='8' height='8' fill='white'/%3E%3Crect x='7' y='17' width='8' height='8' fill='white'/%3E%3Crect x='19' y='19' width='4' height='4' fill='white'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-elephant.png">
 <link rel="stylesheet" href="../assets/css/main.css">
 <style>{EXTRA_CSS}</style>
 <script type="application/ld+json">
