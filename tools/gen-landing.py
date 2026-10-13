@@ -207,7 +207,7 @@ def build(p):
   <footer>
     <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, in your browser.</div>
     <div class="rule"></div>
-    <div class="tiny" style="margin-bottom:14px">{foot_links}</div>
+    <div class="lplinks">{foot_links}</div>
     <div class="tiny">FreeQrly · MMXXVI</div>
   </footer>
 </div>

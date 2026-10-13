@@ -112,8 +112,11 @@ footer{margin-top:40px;padding:36px 0 50px;text-align:center}
 footer .fin{font-family:Georgia,serif;font-style:italic;color:var(--soft);font-size:14px}
 footer .rule{width:44px;height:1px;background:var(--gold);margin:18px auto}
 .flinks{margin:20px 0 4px;font-size:13px;color:var(--soft)}
-.flinks a{color:inherit;text-decoration:none;margin:0 10px}
+.flinks a{color:inherit;text-decoration:none;margin:0 10px;white-space:nowrap}
 .flinks a:hover{color:var(--deep)}
+.lplinks{margin:18px 0 6px;font-size:12.5px;color:var(--soft);line-height:2}
+.lplinks a{color:inherit;text-decoration:none;margin:0 8px;white-space:nowrap}
+.lplinks a:hover{color:var(--deep)}
 footer .tiny{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--soft)}
 /* responsive */
 @media(max-width:960px){
