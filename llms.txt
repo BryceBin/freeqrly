@@ -26,13 +26,25 @@ QR payload formats the generator understands:
 
 ## Site map
 
-- `/` — the studio (8 QR types, batch mode, logo upload, PNG/SVG export)
+- `/` — the studio (9 QR types, batch mode, logo upload, PNG/SVG export, 10 languages)
 - `/google-form-qr-code/` — QR codes for Google Forms
 - `/wifi-qr-code/` — WiFi QR codes
 - `/vcard-qr-code/` — vCard contact QR codes
 - `/batch-qr-code/` — bulk QR generation with ZIP download
+- `/business-card-qr-code/` — QR codes for business cards
+- `/google-review-qr-code/` — Google review QR codes
+- `/qr-code-with-logo/` — QR codes with your logo in the center
+- `/wedding-qr-code/` — wedding QR codes (RSVP, photos, seating)
+- `/instagram-qr-code/` — Instagram profile QR codes
+- `/blog/` — field notes: all guides
+- `/blog/how-to-scan-a-qr-code/` — how to scan a QR code (iPhone & Android)
+- `/blog/why-is-my-qr-code-not-working/` — troubleshooting unscannable codes
+- `/blog/qr-code-print-size-guide/` — print sizes and the 1:10 rule
+- `/blog/qr-codes-for-restaurants/` — menus, reviews, WiFi for restaurants
+- `/blog/free-qr-codes-that-dont-expire/` — static codes that never expire
 - `/blog/do-qr-codes-expire/` — do QR codes expire?
 - `/blog/static-vs-dynamic-qr-codes/` — static vs dynamic explained
+- `/about/` — what FreeQrly is (Organization facts)
 - `/developers/` — API & MCP documentation
 - `/sitemap.xml` — all pages
 

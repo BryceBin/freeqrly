@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Instagram QR Code Generator — Link Your Profile | FreeQrly</title>
+<meta name="description" content="Turn your Instagram profile or post into a scannable QR code. Free, no sign-up. Print it for packaging, flyers, and shop windows.">
+<link rel="canonical" href="https://freeqrly.com/instagram-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/instagram-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/instagram-qr-code/">
+<meta name="theme-color" content="#e9eef4">
+<meta property="og:title" content="Free Instagram QR Code Generator — Link Your Profile | FreeQrly">
+<meta property="og:description" content="Turn your Instagram profile or post into a scannable QR code. Free, no sign-up. Print it for packaging, flyers, and shop windows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/instagram-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+.lp-hero{grid-template-columns:1fr 1fr;align-items:start}
+.steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.steps li{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 17px;font-size:14.5px;line-height:1.6;color:var(--soft)}
+.steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
+@media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — qr code for instagram","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/instagram-qr-code/","description":"Turn your Instagram profile or post into a scannable QR code. Free, no sign-up. Print it for packaging, flyers, and shop windows."}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Profile link or a specific post?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Profile link for general follows. Linking a Reel or post works too — handy for campaigns and packaging inserts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it open in the Instagram app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On most phones, tapping the scanned link offers to open it in the app if installed; otherwise it opens in the browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add my logo or brand colors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — upload your logo and set your brand colors. Keep contrast high so it scans in any light."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it expire if I change my username?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The code encodes the exact URL, so if your handle changes, make a fresh code. The code itself never expires."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body data-lp="instagram-qr-code" data-type="url">
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="#studio">Studio</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="topbtns">
+      <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <section class="hero lp-hero">
+    <div>
+      <div class="kicker">Free · No sign-up · No watermark</div>
+      <h1>Your profile, <span class="hl hl-blush">off the screen</span>.</h1>
+      <p class="lede">Paste your Instagram URL and get a scannable code for packaging, flyers, receipts, and the shop window. New followers, minus the username spelling.</p>
+    </div>
+    <ol class="steps" id="how">
+      <li><span class="sn">1</span><span><b>Copy your profile link</b>From your profile: instagram.com/yourname — or any post or Reel URL.</span></li>
+      <li><span class="sn">2</span><span><b>Paste it above</b>Your code appears instantly in the link tab.</span></li>
+      <li><span class="sn">3</span><span><b>Print it where people look</b>Packaging inserts, counter cards, flyers. Export 1024 px for print.</span></li>
+    </ol>
+  </section>
+<main class="studio" id="studio">
+    <div class="mascot mascot-peek" aria-hidden="true"><img src="../assets/img/elephant-wave.png" alt="FreeQrly elephant mascot"></div>
+    <div class="mascot mascot-peek" aria-hidden="true"><img src="assets/img/elephant-qr.png" alt="FreeQrly elephant mascot showing a QR code"></div>
+    <div class="shead"><div class="over">The studio</div><h2>Make your Instagram QR code</h2></div>
+    <div class="grid">
+      <div>
+        <div class="types" id="tabs" role="tablist"></div>
+        <div id="fields"></div>
+
+        <div id="batchPanel" hidden>
+          <div class="fl" data-i18n="bLabel">One link per line</div>
+          <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
+          <div class="batchActions">
+            <button class="btn-solid" id="batchGo" data-i18n="bGo">Generate all</button>
+            <button class="btn-ghost" id="batchZip" data-i18n="bZip" disabled>Download ZIP</button>
+          </div>
+          <div class="batchGrid" id="batchGrid"></div>
+        </div>
+
+        <div class="fl" data-i18n="appearance">Style</div>
+        <div class="r2">
+          <div><div class="fl" style="margin-top:0" data-i18n="ink">Ink</div><div class="colorbox"><input type="color" id="fg" value="#22303F"><span class="hex" id="fgHex">#22303F</span></div></div>
+          <div><div class="fl" style="margin-top:0" data-i18n="paper">Paper</div><div class="colorbox"><input type="color" id="bgc" value="#ffffff"><span class="hex" id="bgHex">#ffffff</span></div></div>
+          <div><div class="fl" data-i18n="dots">Dot style</div>
+            <select id="dots">
+              <option value="square" data-i18n="dSquare">Square</option>
+              <option value="dots" data-i18n="dRound">Round</option>
+              <option value="rounded" data-i18n="dSoft">Soft</option>
+              <option value="extra-rounded" data-i18n="dPebble">Pebble</option>
+            </select></div>
+          <div><div class="fl" data-i18n="ecc">Error correction</div>
+            <select id="ecc">
+              <option value="L" data-i18n="eL">L — light</option>
+              <option value="M" selected data-i18n="eM">M — medium</option>
+              <option value="Q" data-i18n="eQ">Q — strong</option>
+              <option value="H" data-i18n="eH">H — maximum</option>
+            </select><div class="hint" data-i18n="eccHint">Higher levels survive logos and wear.</div></div>
+        </div>
+        <div class="fl"><span data-i18n="size">Export size</span> · <span id="sizeVal">1024</span> px</div>
+        <input type="range" id="size" min="512" max="2048" step="512" value="1024" list="sizes">
+        <datalist id="sizes"><option value="512"></option><option value="1024"></option><option value="2048"></option></datalist>
+        <div style="margin-top:14px"><label class="filebtn" for="logo">＋ <span data-i18n="logo">Add your logo</span></label><input type="file" id="logo" accept="image/*" hidden></div>
+        <p class="privnote" data-i18n="privnote">Everything is generated locally in your browser. Disconnect from the internet after the page loads — it still works.</p>
+      </div>
+      <div class="previewCol">
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
+        <div class="livenote" data-i18n="live">Live preview — updates as you type</div>
+        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button></div>
+      </div>
+    </div>
+  </main>
+
+  <section class="faq" id="faq">
+    <h2>Good to know</h2>
+    <details><summary><span>Profile link or a specific post?</span></summary><p>Profile link for general follows. Linking a Reel or post works too — handy for campaigns and packaging inserts.</p></details>
+    <details><summary><span>Does it open in the Instagram app?</span></summary><p>On most phones, tapping the scanned link offers to open it in the app if installed; otherwise it opens in the browser.</p></details>
+    <details><summary><span>Can I add my logo or brand colors?</span></summary><p>Yes — upload your logo and set your brand colors. Keep contrast high so it scans in any light.</p></details>
+    <details><summary><span>Does it expire if I change my username?</span></summary><p>The code encodes the exact URL, so if your handle changes, make a fresh code. The code itself never expires.</p></details>
+  </section>
+
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, in your browser.</div>
+    <div class="rule"></div>
+    <div class="lplinks"><a href="/google-form-qr-code/">qr code generator for google form</a> · <a href="/wifi-qr-code/">wifi qr code generator</a> · <a href="/vcard-qr-code/">vcard qr code generator</a> · <a href="/batch-qr-code/">batch qr code generator</a> · <a href="/business-card-qr-code/">qr code for business cards</a> · <a href="/google-review-qr-code/">qr code for google review</a> · <a href="/qr-code-with-logo/">qr code with logo</a> · <a href="/wedding-qr-code/">qr code wedding</a></div>
+    <div class="tiny">FreeQrly · MMXXVI</div>
+  </footer>
+</div>
+<script src="../assets/lib/qr-code-styling.js"></script>
+<script src="../assets/lib/jszip.min.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

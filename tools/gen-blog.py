@@ -127,6 +127,258 @@ POSTS = [
  ),
 ]
 
+
+POSTS += [{'body': '\n'
+          '<h2>On iPhone</h2>\n'
+          '<p>Open the Camera app and point it at the code — hold steady for a second. A yellow '
+          "notification appears; tap it. That's it. This works on iOS 11 and later, so unless your "
+          "phone is ancient, you're covered.</p>\n"
+          '<p>Two shortcuts worth knowing: open <b>Control Center</b> and tap the QR scanner icon '
+          "(add it via Settings → Control Center if it's missing), or long-press the Camera icon "
+          'on the lock screen. If the code is in a photo or screenshot, open it in the Photos app '
+          'and long-press the code — iOS detects it right in the image.</p>\n'
+          '<h2>On Android</h2>\n'
+          '<p>Most Android phones scan from the built-in camera too: point, wait for the prompt, '
+          'tap. On Pixel and many others, <b>Google Lens</b> in the camera or Google app handles '
+          'it. Samsung phones have a dedicated scanner in the Quick Settings panel — swipe down '
+          'and look for "Scan QR code". And like iPhone, you can open a saved image in Google '
+          'Photos and tap the Lens button.</p>\n'
+          '<h2>When nothing happens</h2>\n'
+          "<p>Nine times out of ten it's the code, not your phone: too small, low contrast, "
+          "damaged, or printed on a curve. There's a full checklist in <a "
+          'href="/blog/why-is-my-qr-code-not-working/">why your QR code won\'t scan</a>. Dirty '
+          'camera lens is the classic overlooked one — wipe it and try again.</p>\n'
+          '<h2>A 3-second safety habit</h2>\n'
+          '<p>Your phone shows a preview of the link before opening it. Glance at it. If a code on '
+          'a lamppost promises a parking meter but the URL looks like a random string of '
+          "characters, don't tap — stickers over real codes are a known scam. Codes you generate "
+          'yourself with <a href="/">FreeQrly</a> are static and contain exactly what you typed, '
+          'nothing hidden.</p>\n',
+  'date': '2026-10-14',
+  'desc': 'How to scan a QR code on iPhone and Android — no app needed. Use the built-in camera, '
+          "Control Center, or Google Lens, and fix it when it won't scan.",
+  'faq': [('Do I need an app to scan QR codes?',
+           'No. iPhones (iOS 11+) and virtually all Android phones scan QR codes with the built-in '
+           'camera. Third-party scanner apps are unnecessary and often full of ads.'),
+          ('How do I scan a QR code from a screenshot?',
+           'On iPhone, open the screenshot in Photos and long-press the code. On Android, open it '
+           'in Google Photos and tap the Lens button.'),
+          ("Why won't my camera scan the QR code?",
+           "Usually the code is too small, low contrast, damaged, or there's no quiet zone around "
+           'it. Wipe your lens, move closer, and see the full fix list in our troubleshooting '
+           'guide.')],
+  'h1': 'How to <span class="hl hl-mint">scan</span> a QR code',
+  'howto': [('Point your camera at the code',
+             'Open the built-in Camera app and point it at the QR code, keeping the whole square '
+             'in frame.'),
+            ('Tap the notification',
+             'A banner or link preview appears — tap it to open the destination.'),
+            ('Check the preview first',
+             'Glance at the URL before opening, especially on codes you find in public places.')],
+  'lede': 'No app required. Every modern iPhone and Android phone scans QR codes with the camera '
+          "it already has. Here's how — plus what to do when nothing happens.",
+  'mascot': 'wave',
+  'slug': 'how-to-scan-a-qr-code',
+  'title': 'How to Scan a QR Code on iPhone & Android (2026 Guide) | FreeQrly'},
+ {'body': '\n'
+          "<h2>1. It's too small</h2>\n"
+          "<p>The classic. A code squeezed into the corner of a business card at 1 cm wide won't "
+          'scan reliably. Minimum for print: <b>2x2 cm</b> (about 0.8 inches), and bigger is '
+          "always safer. There's a full breakdown in the <a "
+          'href="/blog/qr-code-print-size-guide/">print size guide</a>.</p>\n'
+          '<h2>2. Low contrast killed it</h2>\n'
+          '<p>QR readers look for dark modules on a light background. Light gray on white, brand '
+          'pastels, or a code over a busy photo will fail — especially in dim light. When in '
+          'doubt: black on white always works.</p>\n'
+          "<h2>3. It's damaged or faded</h2>\n"
+          '<p>Creased flyers, sun-faded posters, scratched stickers. Error correction can survive '
+          'some damage (that\'s why <a href="/qr-code-with-logo/">adding a logo</a> works), but '
+          "there's a limit. If a quarter of the code is gone, reprint.</p>\n"
+          '<h2>4. No quiet zone</h2>\n'
+          "<p>The blank margin around the code isn't decoration — scanners need it to find the "
+          "edges. Keep a clear border at least as wide as one module on all four sides. Don't let "
+          'text or design elements crowd it.</p>\n'
+          '<h2>5. Glare, curve, or angle</h2>\n'
+          '<p>Glossy lamination under bright light, a code wrapped around a bottle, or shot at a '
+          'steep angle. Flatten it, kill the glare, shoot straight on.</p>\n'
+          '<h2>6. The content is dead</h2>\n'
+          '<p>The code scans fine — but the link is broken, the page moved, or the "free" '
+          "generator's trial expired and took your code with it. This is the expired-link trap: <a "
+          'href="/blog/do-qr-codes-expire/">do QR codes expire?</a> explains which ones do and how '
+          'to avoid them.</p>\n'
+          '<h2>7. Your camera</h2>\n'
+          '<p>Wipe the lens. Seriously — a smudged lens is behind an embarrassing number of '
+          '"broken" codes. Then test on a second phone: if phone B reads it, the code was never '
+          'the problem.</p>\n'
+          '<h2>Test before you print</h2>\n'
+          '<p>Scan the code on two different phones (one iPhone, one Android if you can) before '
+          'sending anything to print. Thirty seconds now saves a reprint later. Generate a test '
+          'code in the <a href="/">free generator</a> and try it.</p>\n',
+  'date': '2026-10-14',
+  'desc': 'QR code not scanning? Seven real fixes: size, contrast, damage, quiet zone, and the '
+          'expired-link trap — plus how to test before you print.',
+  'faq': [('Why does my QR code scan on one phone but not another?',
+           "Then the code itself is fine — it's the camera, lighting, or angle on the failing "
+           'phone. Wipe the lens and try in better light.'),
+          ('Can a damaged QR code still work?',
+           'Often yes, thanks to error correction — up to 30% damage can be tolerated at the High '
+           'setting. But heavy damage, fading, or missing finder patterns will kill it.'),
+          ("My QR code scans but the link doesn't work — is the code broken?",
+           'No, the code is doing its job. The destination is the problem: the page moved, the '
+           'site is down, or a trial-based generator deactivated it.')],
+  'h1': 'Why won\\u2019t this thing <span class="hl hl-blush">scan</span>?',
+  'howto': [('Check the size',
+             'Printed codes need to be at least 2x2 cm. On screen, make it at least 2 cm wide on '
+             'your display.'),
+            ('Check the contrast',
+             'Dark code on a light background. Fancy low-contrast color pairs are the #1 design '
+             'killer.'),
+            ('Test on a second phone',
+             "If one phone reads it and another doesn't, the code is fine — it's the camera or "
+             'lighting.'),
+            ('Re-export at higher resolution',
+             'Blurry edges from a low-res export fail at print size. Export PNG at 1024 px or '
+             'higher, or use SVG.')],
+  'lede': "A QR code that won't scan is almost never a mystery. Run through these seven checks — "
+          "in order — and you'll find the culprit in about two minutes.",
+  'mascot': 'qr',
+  'slug': 'why-is-my-qr-code-not-working',
+  'title': 'Why Is My QR Code Not Working? 7 Fixes That Actually Help | FreeQrly'},
+ {'body': '\n'
+          '<h2>The two rules that matter</h2>\n'
+          '<p><b>Rule 1 — minimum size:</b> 2 x 2 cm (0.8 x 0.8 in). Below that, phone cameras '
+          "can't resolve the modules reliably, especially codes holding a lot of data like "
+          'vCards.</p>\n'
+          "<p><b>Rule 2 — the 1:10 distance ratio:</b> the code's width should be at least "
+          'one-tenth of the scanning distance. Scanning from 50 cm (a table card)? 5 cm code. From '
+          '5 meters (a poster)? 50 cm code. Printers and signage folks live by this ratio.</p>\n'
+          '<h2>Cheat sheet by use case</h2>\n'
+          '<p><b>Business cards:</b> 2x2 cm minimum — see the <a '
+          'href="/business-card-qr-code/">business card generator</a>. Keep it clear of the card '
+          'edge.<br>\n'
+          "<b>Flyers &amp; menus:</b> 3x3 cm. People scan these at arm's length.<br>\n"
+          '<b>Table tents:</b> 4–5 cm, so guests scan from their seats.<br>\n'
+          '<b>Posters:</b> use the 1:10 ratio against expected viewing distance.<br>\n'
+          '<b>Packaging:</b> 2x2 cm minimum, and avoid curved surfaces that distort the '
+          'pattern.</p>\n'
+          '<h2>Resolution: export big</h2>\n'
+          '<p>Print needs 300 dpi. A 2 cm code at 300 dpi is only ~240 px — but always export '
+          'larger and let the designer scale down: <b>PNG at 1024 or 2048 px</b>, or <b>SVG</b> '
+          'which is infinitely scalable and the best choice for professional print. FreeQrly '
+          'exports both, free.</p>\n'
+          "<h2>Don't forget the quiet zone</h2>\n"
+          '<p>Leave a blank margin around the code at least 4 modules wide on every side. Crowding '
+          'it with text or graphics is one of the top reasons codes fail — more in <a '
+          'href="/blog/why-is-my-qr-code-not-working/">why your code won\'t scan</a>.</p>\n'
+          '<h2>Logo in the middle? Go bigger</h2>\n'
+          '<p>A <a href="/qr-code-with-logo/">logo in the center</a> eats into the pattern, so '
+          "give it room: 3x3 cm minimum in print, and keep the logo under ~30% of the code's "
+          'area.</p>\n',
+  'date': '2026-10-14',
+  'desc': 'How big should a QR code be in print? Minimum sizes for business cards, flyers, and '
+          'posters — plus resolution and quiet-zone rules that keep codes scannable.',
+  'faq': [('What is the minimum size for a printed QR code?',
+           '2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, especially for '
+           'data-heavy codes like vCards.'),
+          ('How big should a QR code be on a poster?',
+           'Use the 1:10 rule: the code width should be at least one-tenth of the expected '
+           'scanning distance. A poster scanned from 5 meters needs a 50 cm code.'),
+          ('PNG or SVG for print?',
+           'SVG is best — it scales infinitely with no quality loss. If your printer needs raster, '
+           'export PNG at 2048 px.')],
+  'h1': 'How <span class="hl hl-mint">big</span> should a printed QR code be?',
+  'lede': 'The short answer: at least 2x2 cm, at 300 dpi, with a clear margin. The longer answer — '
+          'with the distance rule printers actually use — is below.',
+  'mascot': 'batch',
+  'slug': 'qr-code-print-size-guide',
+  'title': 'QR Code Print Size Guide: How Big Should It Be? | FreeQrly'},
+ {'body': '\n'
+          '<h2>1. The menu code</h2>\n'
+          '<p>Link it to your online menu — your website, a PDF, or your Google Business menu. '
+          'Print one per table or a single framed code at the entrance. Generate it with the <a '
+          'href="/google-form-qr-code/">link generator</a> in seconds, export at 1024 px, and '
+          "you're done. Pro tip: link to a page you control, not a screenshot — when the menu "
+          'changes, you update the page, not the print.</p>\n'
+          '<h2>2. The review code</h2>\n'
+          '<p>This is the highest-ROI square centimeter in your restaurant. A code linking '
+          'straight to your Google review form — on the receipt, the table tent, the takeout bag — '
+          "turns happy meals into public reviews. There's a dedicated <a "
+          'href="/google-review-qr-code/">Google review QR generator</a> that walks through '
+          'finding your review link.</p>\n'
+          '<h2>3. The WiFi code</h2>\n'
+          '<p>Guests ask for the WiFi password fifty times a day. A <a href="/wifi-qr-code/">WiFi '
+          'QR code</a> on each table connects them in one scan — no spelling out "capital K, '
+          'underscore, 123" ever again. It never expires, so print it once.</p>\n'
+          '<h2>Printing tips for restaurants</h2>\n'
+          '<p>Laminate table codes (spills happen), use at least 3x3 cm so guests scan from their '
+          'seats, and keep contrast high — dim dining rooms punish pastel codes. Full sizing '
+          'rules: <a href="/blog/qr-code-print-size-guide/">print size guide</a>.</p>\n'
+          '<h2>What it costs</h2>\n'
+          '<p>Nothing. These are static codes — no subscriptions, no scan limits, no "pro plan" to '
+          "unlock the menu link. Print them once and they work for years. That's the whole "
+          'pitch.</p>\n',
+  'date': '2026-10-14',
+  'desc': 'How restaurants use QR codes: digital menus, Google reviews, and guest WiFi. Free setup '
+          'guide with printable codes — no sign-up, no fees.',
+  'faq': [('What QR codes does a restaurant need?',
+           'Three: a menu link, a Google review link, and the WiFi credentials. That covers nearly '
+           'every guest interaction.'),
+          ('Should the menu QR link to a PDF or a webpage?',
+           'A webpage you control. When prices change you update the page — the printed code stays '
+           'the same. A PDF works but is harder to update.'),
+          ('How do I get more Google reviews with a QR code?',
+           'Link a code directly to your Google review form and place it where happy customers '
+           'look: receipts, table tents, takeout bags.')],
+  'h1': 'The restaurant <span class="hl hl-blush">playbook</span>',
+  'lede': 'Three QR codes cover 90% of what a restaurant needs: the menu, the review link, and the '
+          'WiFi password. All free, all printable today.',
+  'mascot': 'party',
+  'slug': 'qr-codes-for-restaurants',
+  'title': 'QR Codes for Restaurants: Menus, Reviews & WiFi (Free Guide) | FreeQrly'},
+ {'body': '\n'
+          '<h2>Static vs. dynamic: the only distinction that matters</h2>\n'
+          '<p>A <b>static</b> code encodes your link directly in the pattern. Nothing to expire, '
+          'nothing to renew — it works as long as the link works. A <b>dynamic</b> code encodes a '
+          "redirect on the vendor's server, so they can charge you monthly to keep it alive. The "
+          'full explainer: <a href="/blog/static-vs-dynamic-qr-codes/">static vs dynamic QR '
+          'codes</a>.</p>\n'
+          '<h2>The trial trap</h2>\n'
+          '<p>Many "free QR code generators" quietly create dynamic codes on a 7- or 14-day trial. '
+          'Your printed flyers work beautifully — until the trial ends and every code goes dead. '
+          'Red flags: the site asks for your email before generating, mentions "scan analytics", '
+          'or talks about "campaigns". A truly free static generator needs none of that.</p>\n'
+          '<h2>The 30-second test</h2>\n'
+          '<p>Before you trust a generator with your print run: generate a code <b>without '
+          "creating an account</b>. If it works, it's static. FreeQrly only makes static codes — "
+          "no accounts exist, so there's nothing to expire. That's also why <a "
+          'href="/blog/do-qr-codes-expire/">QR codes don\'t have to expire</a>.</p>\n'
+          "<h2>What can still break (it's not the code)</h2>\n"
+          '<p>A static code lasts forever, but its destination might not: if you delete the page '
+          'it links to, the code "stops working". Link to stable URLs you control, and your codes '
+          'will outlive most of your marketing materials.</p>\n'
+          '<h2>Make yours</h2>\n'
+          '<p>Pick any type in the <a href="/">free generator</a> — link, vCard, WiFi — download '
+          'the PNG or SVG, and print it. No sign-up, no trial, no expiry date hiding in the fine '
+          'print.</p>\n',
+  'date': '2026-10-14',
+  'desc': "Free QR codes that don't expire do exist — they're called static codes. How to spot "
+          'trial-trap generators and make codes that last forever.',
+  'faq': [('Do free QR codes expire?',
+           "Static ones don't — the destination is baked into the pattern. Dynamic ones from "
+           'trial-based generators stop working when the subscription or trial ends.'),
+          ('How can I tell if my QR code will expire?',
+           "If the generator required an account or email, it's almost certainly dynamic and tied "
+           'to a subscription. True static generators work with no sign-up.'),
+          ("What's the catch with FreeQrly?",
+           "There isn't one for static codes: they're generated entirely in your browser, so "
+           "there's no server cost to pass on to you.")],
+  'h1': 'Free codes that <span class="hl hl-mint">never</span> expire',
+  'lede': "Yes, they exist — they're called static QR codes. Here's how to tell them apart from "
+          'the trial-trap kind, and how to make yours in 30 seconds.',
+  'mascot': 'sleep',
+  'slug': 'free-qr-codes-that-dont-expire',
+  'title': "Free QR Codes That Don't Expire — How to Make Yours Last | FreeQrly"}]
+
 def faq_json(faq):
     return ",\n    ".join(
         '{\n      "@type": "Question",\n      "name": "%s",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "%s"\n      }\n    }' % (q.replace('"', '\\"'), a.replace('"', '\\"'))
@@ -134,6 +386,13 @@ def faq_json(faq):
 
 def build(p):
     url = f"https://freeqrly.com/blog/{p['slug']}/"
+    howto_json = ""
+    if p.get("howto"):
+        steps_json = ",\n    ".join(
+            '{\n      "@type": "HowToStep",\n      "name": "%s",\n      "text": "%s"\n    }' % (s[0].replace('"', '\\"'), s[1].replace('"', '\\"'))
+            for s in p["howto"])
+        howto_json = '<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"HowTo","name":"' + p["title"].replace('"','\\"') + '","description":"' + p["desc"].replace('"','\\"') + '","step":[\n    ' + steps_json + '\n  ]}\n</script>\n'
+
     faq_html = "\n".join(
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
         for q, a in p["faq"])
@@ -169,7 +428,7 @@ def build(p):
   ]
 }}
 </script>
-</head>
+{howto_json}</head>
 <body>
 <div class="wrap">
 {HEADER}
