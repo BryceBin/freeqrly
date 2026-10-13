@@ -107,6 +107,9 @@ async function detectLang(){
 }
 let cur = "url", logoData = null;
 const ORDER = ["url","text","wifi","vcard","email","sms","phone","geo","batch"];
+/* landing pages preselect a type via body[data-type]; ?type= also works */
+const _preType = document.body.getAttribute("data-type") || new URLSearchParams(location.search).get("type");
+if (_preType && ORDER.includes(_preType)) cur = _preType;
 
 const v = id => { const el = $("f_"+id); return el ? el.value.trim() : ""; };
 function content(){
@@ -152,6 +155,7 @@ function renderTabs(){
     };
     t.appendChild(b);
   });
+  const bp = $("batchPanel"); if (bp) bp.hidden = cur !== "batch";
 }
 function renderFields(){
   const f = $("fields"); f.innerHTML="";
@@ -169,8 +173,10 @@ function renderFields(){
 }
 function applyLang(){
   document.documentElement.lang = lang==="zh" ? "zh-CN" : "en";
-  document.title = I18N[lang].title;
-  document.querySelector('meta[name="description"]').setAttribute("content", I18N[lang].metaDesc);
+  if (!document.body.hasAttribute("data-lp")) {
+    document.title = I18N[lang].title;
+    document.querySelector('meta[name="description"]').setAttribute("content", I18N[lang].metaDesc);
+  }
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const k = el.getAttribute("data-i18n");
     if(I18N[lang][k] !== undefined) el.textContent = I18N[lang][k];
