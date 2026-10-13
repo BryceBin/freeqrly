@@ -84,7 +84,7 @@ PAGES = [
   ],
  ),
  dict(
-  slug="batch-qr-code", dtype="batch", mascot="party",
+  slug="batch-qr-code", dtype="batch", mascot="batch",
   title="Free Batch QR Code Generator — Bulk QR Codes as ZIP | FreeQrly",
   desc="Generate dozens of QR codes at once and download them as a ZIP. Free, no sign-up, no limits games. One link per line — done.",
   kw="batch qr code generator",
