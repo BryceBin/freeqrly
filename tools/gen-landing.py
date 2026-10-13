@@ -196,6 +196,23 @@ dict(slug="instagram-qr-code", dtype="url", mascot="wave",
        ("Does it expire if I change my username?","The code encodes the exact URL, so if your handle changes, make a fresh code. The code itself never expires.")]),
 ]
 
+PAGES += [
+dict(slug="real-estate-qr-code", dtype="url", mascot="party",
+  title="Free Real Estate QR Code Generator \u2014 Listings & Yard Signs | FreeQrly",
+  desc="QR codes for real estate: listings, virtual tours, flyers, and yard signs. Free, no sign-up \u2014 one scan takes buyers to the listing.",
+  kw="qr code for real estate",
+  h1='Every listing, <span class="hl hl-mint">one scan away</span>.',
+  lede="Link listings, virtual tours, and open-house details to scannable codes. Print them for yard signs, brochures, and window displays \u2014 free forever, no account.",
+  steps=[("Copy your listing URL","Your MLS page, Zillow/Redfin link, or virtual tour \u2014 any URL works."),
+         ("Paste it above","Your code appears instantly in the link tab."),
+         ("Print for signs & flyers","SVG for the sign printer, PNG for flyers. Yard signs need 10+ cm \u2014 see the 1:10 rule.")],
+  studio_h2="Make your real estate QR code",
+  faq=[("What do agents usually link to?","Listing pages, virtual tours, open-house schedules, mortgage calculators, and the agent\u2019s contact card."),
+       ("How big for a yard sign?","Use the 1:10 rule: code width at least one-tenth of the viewing distance. A sign read from 5 meters needs a 50 cm code \u2014 SVG export keeps it sharp at any size."),
+       ("Can I add my photo or brokerage logo?","Yes \u2014 upload your logo or headshot in the center. Error correction adjusts automatically so it still scans."),
+       ("What if the listing sells?","Point the code at your agent profile or listings page instead of a single property, so the sign keeps working after the sale. The code itself never expires.")]),
+]
+
 EXTRA_CSS = '''
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}

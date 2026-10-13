@@ -36,6 +36,7 @@ QR payload formats the generator understands:
 - `/qr-code-with-logo/` — QR codes with your logo in the center
 - `/wedding-qr-code/` — wedding QR codes (RSVP, photos, seating)
 - `/instagram-qr-code/` — Instagram profile QR codes
+- `/real-estate-qr-code/` — real estate listing QR codes
 - `/blog/` — field notes: all guides
 - `/blog/how-to-scan-a-qr-code/` — how to scan a QR code (iPhone & Android)
 - `/blog/why-is-my-qr-code-not-working/` — troubleshooting unscannable codes
