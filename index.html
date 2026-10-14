@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="assets/css/main.css?v=b3b-20261014">
+<link rel="stylesheet" href="assets/css/main.css?v=b3c-20261014">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 <script type="application/ld+json">
@@ -126,24 +126,15 @@
   </header>
   <div class="topline"></div>
 
-  <section class="hero">
-    <div>
-      <div class="kicker" data-i18n="kicker">Free · No sign-up · Private by design</div>
-      <h1><span data-i18n="h1a">Quiet codes for</span> <em class="hl" data-i18n="h1b">loud</em> <span data-i18n="h1c">places.</span></h1>
-      <p class="lede" data-i18n="lede">Make beautiful QR codes right in your browser — no sign-up, no tracking, no expiry. Free, simple, and yours to keep.</p>
-    </div>
-    <div class="herocard" aria-hidden="true">
-      <div class="mascot m-herocard" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly the elephant waving hello"></div>
-      <div class="row"><span class="k" data-i18n="hc1">Content types</span><span class="v">9</span></div>
-      <div class="row"><span class="k" data-i18n="hc2">Export</span><span class="v">PNG · SVG</span></div>
-      <div class="row"><span class="k" data-i18n="hc3">Your data</span><span class="v ok" data-i18n="hc3v">Stays with you</span></div>
-      <div class="row"><span class="k" data-i18n="hc4">Price</span><span class="v ok" data-i18n="hc4v">Free, forever</span></div>
-    </div>
+  <section class="hero hero-slim">
+    <div class="kicker" data-i18n="kicker">Free · No sign-up · Private by design</div>
+    <h1><span data-i18n="h1a">Quiet codes for</span> <em class="hl" data-i18n="h1b">loud</em> <span data-i18n="h1c">places.</span></h1>
+    <p class="lede" data-i18n="lede">Make beautiful QR codes right in your browser — no sign-up, no tracking, no expiry.</p>
   </section>
 
   <main class="studio" id="studio">
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
-    <div class="shead"><div class="over" data-i18n="sOver">The studio</div><h2 data-i18n="sTitle">Create your QR code</h2></div>
+    <div class="shead"><div><div class="over" data-i18n="sOver">The studio</div><h2 data-i18n="sTitle">Create your QR code</h2></div><p class="privnote privnote-head" data-i18n="privnote">Everything is generated locally in your browser.</p></div>
     <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
     <div class="grid">
       <div>
@@ -188,8 +179,18 @@
         <div hidden><select id="dots"><option value="square">Square</option><option value="dots">Round</option><option value="rounded">Soft</option><option value="extra-rounded">Pebble</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
         <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
-        <div style="margin-top:14px"><label class="filebtn" for="logo">＋ <span data-i18n="logo">Add your logo</span></label><input type="file" id="logo" accept="image/*" hidden></div>
-        <p class="privnote" data-i18n="privnote">Everything is generated locally in your browser. Disconnect from the internet after the page loads — it still works.</p>
+        <div class="approw"><div class="applabel"><span data-i18n="logo">Logo</span><small data-i18n="logoSub">Brand or your own</small></div>
+          <div class="logorow" id="logoRow">
+            <button class="logopick" data-preset="apple" aria-label="Apple"><img src="/assets/img/logos/apple.svg" alt="Apple" loading="lazy"></button>
+            <button class="logopick" data-preset="x" aria-label="X"><img src="/assets/img/logos/x.svg" alt="X" loading="lazy"></button>
+            <button class="logopick" data-preset="facebook" aria-label="Facebook"><img src="/assets/img/logos/facebook.svg" alt="Facebook" loading="lazy"></button>
+            <button class="logopick" data-preset="instagram" aria-label="Instagram"><img src="/assets/img/logos/instagram.svg" alt="Instagram" loading="lazy"></button>
+            <button class="logopick" data-preset="google" aria-label="Google"><img src="/assets/img/logos/google.svg" alt="Google" loading="lazy"></button>
+            <button class="logopick" data-preset="microsoft" aria-label="Microsoft"><img src="/assets/img/logos/microsoft.svg" alt="Microsoft" loading="lazy"></button>
+            <label class="logopick logoupload" for="logo" aria-label="Upload logo">+<input type="file" id="logo" accept="image/*" hidden></label>
+            <button class="logopick logoclear" id="logoClear" aria-label="Remove logo">✕</button>
+          </div></div>
+
       </div>
       <div class="previewCol">
         <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
@@ -277,23 +278,18 @@
   <footer>
     <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly the elephant waving hello"></div>
     <div class="fin" data-i18n="fin">Made quietly, in your browser.</div>
-    <div class="flinks">
-      <a href="/google-form-qr-code/">Google Form QR codes</a><a href="/wifi-qr-code/">WiFi QR codes</a><a href="/vcard-qr-code/">vCard QR codes</a><a href="/batch-qr-code/">Batch QR codes</a><a href="/scan/">QR scanner</a>
-    </div>
-    <div class="flinks">
-      <a href="/business-card-qr-code/">Business card QR codes</a><a href="/google-review-qr-code/">Google review QR codes</a><a href="/qr-code-with-logo/">QR codes with logo</a><a href="/wedding-qr-code/">Wedding QR codes</a><a href="/instagram-qr-code/">Instagram QR codes</a><a href="/real-estate-qr-code/">Real estate QR codes</a>
-    </div>
-    <div class="flinks">
-      <a href="/blog/">Field notes</a><a href="/blog/how-to-scan-a-qr-code/">How to scan</a><a href="/blog/qr-code-print-size-guide/">Print size guide</a><a href="/about/">About FreeQrly</a><a href="/developers/">API & MCP for agents</a>
+    <div class="fgroups">
+      <div class="fgroup"><span class="fglabel">Generators</span><a href="/google-form-qr-code/">Google Form</a><a href="/wifi-qr-code/">WiFi</a><a href="/vcard-qr-code/">vCard</a><a href="/business-card-qr-code/">Business card</a><a href="/google-review-qr-code/">Google review</a><a href="/qr-code-with-logo/">With logo</a><a href="/wedding-qr-code/">Wedding</a><a href="/instagram-qr-code/">Instagram</a><a href="/real-estate-qr-code/">Real estate</a><a href="/batch-qr-code/">Batch</a></div>
+      <div class="fgroup"><span class="fglabel">More</span><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a><a href="/developers/">API & MCP</a></div>
     </div>
     <div class="rule"></div>
-    <div class="tiny">FreeQrly · MMXXVI</div>
+    <div class="tiny">© 2026 FreeQrly</div>
   </footer>
 </div>
 <script src="assets/lib/qr-code-styling.js"></script>
 <script src="assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3b-20261014"></script>
-<script src="assets/js/app.js?v=b3b-20261014"></script>
+<script src="/assets/js/vcard.js?v=b3c-20261014"></script>
+<script src="assets/js/app.js?v=b3c-20261014"></script>
 </body>
 </html>
 

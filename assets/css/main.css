@@ -78,9 +78,22 @@ h1 em{color:var(--coral)}
 .m-lp{width:110px;margin:0 auto 14px;transform:rotate(3deg)}
 .feat{position:relative}
 
+
+.logorow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.logopick{width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:8px;transition:all .15s;font-family:inherit}
+.logopick img{width:100%;height:100%;object-fit:contain;display:block}
+.logopick:hover{border-color:#D8C9A8;transform:translateY(-1px)}
+.logopick.on{border-color:var(--coral);box-shadow:0 0 0 3px rgba(224,120,86,.15)}
+.logopick.logoupload{border-style:dashed;font-size:20px;color:#a89a7e;font-weight:400}
+.logopick.logoclear{font-size:14px;color:#a89a7e;display:none}
+.logopick.logoclear.show{display:flex}
+
 /* ===== B3 selectors: typerail + segmented + swatches + switch ===== */
-.typerail{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.typerail::-webkit-scrollbar{display:none}
+.typerail{display:flex;gap:8px;flex-wrap:wrap;padding:4px 2px 16px}
+@media(max-width:900px){
+  .typerail{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .typerail::-webkit-scrollbar{display:none}
+}
 .ttab{flex-shrink:0;display:flex;align-items:center;gap:7px;padding:9px 15px;border-radius:99px;border:1.5px solid var(--line);background:#fff;font-family:inherit;font-size:13.5px;font-weight:600;color:#8a7f6a;cursor:pointer;transition:all .16s;white-space:nowrap}
 .ttab .tico{font-size:15px;line-height:1}
 .ttab:hover{border-color:#D8C9A8;color:var(--ink)}
@@ -114,7 +127,9 @@ h1 em{color:var(--coral)}
 
 /* studio */
 .studio{position:relative;background:var(--card);border-radius:28px;box-shadow:var(--shadow);padding:44px;margin:10px 0;border:1px solid var(--line)}
-.shead{margin-bottom:22px}
+.shead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.privnote-head{margin:0;max-width:280px;text-align:right;font-size:12px}
+@media(max-width:640px){.shead{flex-direction:column;align-items:flex-start}.privnote-head{text-align:left;max-width:none}}
 .shead .over{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--coral);font-weight:600;margin-bottom:10px}
 .shead h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:31px}
 .grid{display:grid;grid-template-columns:1fr 350px;gap:44px}
@@ -339,3 +354,35 @@ textarea.shake{animation:shake .3s;border-color:#b3402e !important}
   .featgrid,.casegrid{grid-template-columns:1fr}
   .feats h2,.cases h2{font-size:26px}
 }
+
+/* slim hero */
+.hero-slim{padding:34px 0 8px;text-align:left}
+.hero-slim h1{font-size:clamp(30px,4.5vw,44px);margin:10px 0 8px}
+.hero-slim .lede{font-size:15px;max-width:560px;margin:0}
+.hero-slim .kicker{margin-bottom:0}
+@media(max-width:640px){.hero-slim{padding:26px 0 4px}}
+
+/* modern datetime */
+input[type="datetime-local"]{position:relative}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator{opacity:.55;cursor:pointer;padding:4px;border-radius:8px;transition:all .15s}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover{opacity:1;background:#F3EDE0}
+input[type="datetime-local"]::-webkit-datetime-edit{padding:0}
+input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper{display:flex;gap:2px}
+input[type="datetime-local"]::-webkit-datetime-edit-text{color:#a89a7e;padding:0 2px}
+input[type="datetime-local"]::-webkit-datetime-edit-month-field,
+input[type="datetime-local"]::-webkit-datetime-edit-day-field,
+input[type="datetime-local"]::-webkit-datetime-edit-year-field,
+input[type="datetime-local"]::-webkit-datetime-edit-hour-field,
+input[type="datetime-local"]::-webkit-datetime-edit-minute-field{padding:3px 5px;border-radius:6px}
+input[type="datetime-local"]::-webkit-datetime-edit-month-field:focus,
+input[type="datetime-local"]::-webkit-datetime-edit-day-field:focus,
+input[type="datetime-local"]::-webkit-datetime-edit-year-field:focus,
+input[type="datetime-local"]::-webkit-datetime-edit-hour-field:focus,
+input[type="datetime-local"]::-webkit-datetime-edit-minute-field:focus{background:#FFF1E8;color:var(--ink);outline:none}
+input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3px rgba(224,120,86,.12)}
+
+.fgroups{display:flex;flex-direction:column;gap:10px;margin:18px 0 6px}
+.fgroup{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;justify-content:center;font-size:13px}
+.fglabel{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#b3a68c;font-weight:600}
+.fgroup a{color:#7a6f5c;text-decoration:none}
+.fgroup a:hover{color:var(--coral)}
