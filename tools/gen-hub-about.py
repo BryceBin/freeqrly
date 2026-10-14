@@ -28,7 +28,7 @@ FOOT = '''<footer>
     <p class="fline">Made quietly, in your browser.</p>
     <p class="flinks"><a href="/google-form-qr-code/">Google Form QR codes</a><a href="/wifi-qr-code/">WiFi QR codes</a><a href="/vcard-qr-code/">vCard QR codes</a><a href="/batch-qr-code/">Batch QR codes</a></p>
     <p class="flinks"><a href="/business-card-qr-code/">Business card QR codes</a><a href="/google-review-qr-code/">Google review QR codes</a><a href="/qr-code-with-logo/">QR codes with logo</a><a href="/wedding-qr-code/">Wedding QR codes</a><a href="/instagram-qr-code/">Instagram QR codes</a></p>
-    <p class="flinks"><a href="/blog/">Field notes</a><a href="/about/">About FreeQrly</a><a href="/developers/">API &amp; MCP for agents</a></p>
+    <p class="flinks"><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About FreeQrly</a><a href="/developers/">API &amp; MCP for agents</a></p>
     <p class="fmeta">FREEQRLY &middot; MMXXVI</p>
   </footer>'''
 
@@ -44,6 +44,10 @@ HUB_CSS = '''<style>
 </style>'''
 
 POSTS = [
+ ("scan-qr-code-online", "Scan QR codes online", "No app, no upload — camera or image, decoded privately in your browser.", "2026-10-14"),
+ ("scan-qr-code-from-image", "Scan a QR code from a picture", "iPhone, Android, and PC methods for decoding codes trapped in photos.", "2026-10-14"),
+ ("qr-codes-for-events", "QR codes for events", "Check-in, add-to-calendar, photo sharing, and venue WiFi — the full playbook.", "2026-10-14"),
+ ("wedding-rsvp-qr-code", "Wedding RSVP QR codes", "Link your RSVP form, print on invitations, stop chasing reply cards.", "2026-10-14"),
  ("how-to-scan-a-qr-code", "How to scan a QR code", "No app needed — your iPhone or Android camera already does it. The 3-second method, plus screenshots and safety.", "2026-10-14"),
  ("why-is-my-qr-code-not-working", "Why is my QR code not working?", "Seven real fixes in two minutes: size, contrast, damage, quiet zone, dead links, and the smudged lens.", "2026-10-14"),
  ("qr-code-print-size-guide", "QR code print size guide", "The 2x2 cm rule, the 1:10 distance ratio, and resolution settings for cards, flyers, and posters.", "2026-10-14"),

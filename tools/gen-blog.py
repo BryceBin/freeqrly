@@ -379,6 +379,189 @@ POSTS += [{'body': '\n'
   'slug': 'free-qr-codes-that-dont-expire',
   'title': "Free QR Codes That Never Expire | FreeQrly"}]
 
+
+POSTS += [{'body': '\n'
+          '<h2>Why "no upload" matters</h2>\n'
+          '<p>QR codes often contain sensitive things: WiFi passwords, event tickets, boarding '
+          "passes, private links. Uploading that image to a stranger's server — just to read it — "
+          "is a privacy trade most people don't realize they're making. FreeQrly's <a "
+          'href="/scan/">QR scanner</a> decodes the image with JavaScript on your device (the '
+          'open-source jsQR library). The image never leaves the page.</p>\n'
+          '<h2>Two ways to scan</h2>\n'
+          '<p><b>Camera:</b> hit "Start camera", point at the code, done. Uses your rear camera on '
+          "phones. Your browser will ask for camera permission once — that's between you and your "
+          'browser; we never see the feed.</p>\n'
+          '<p><b>Upload:</b> got a screenshot, a saved flyer, or a photo with a code in it? Upload '
+          "the image and it's decoded instantly. This even works <b>offline</b> — load the page "
+          'once, disconnect, and upload scanning still works.</p>\n'
+          '<h2>What you get back</h2>\n'
+          '<p>The raw decoded content, plus smart actions: links get an "Open link" button (check '
+          'the URL first — the <a href="/blog/how-to-scan-a-qr-code/">scanning guide</a> has a '
+          '3-second safety habit), everything else gets a Copy button.</p>\n'
+          "<h2>When it can't read your code</h2>\n"
+          '<p>Blurry photos, tiny codes, heavy glare — the usual suspects. The full fix list is in '
+          '<a href="/blog/why-is-my-qr-code-not-working/">why your QR code won\'t scan</a>. And if '
+          'you need to <a href="/">make your own QR code</a> instead, that\'s the main studio — '
+          'also free, also private.</p>\n',
+  'date': '2026-10-14',
+  'desc': 'Scan QR codes online for free: use your camera or upload an image. Decoded in your '
+          'browser — nothing is ever uploaded. No app, no sign-up.',
+  'faq': [('Is it safe to scan QR codes online?',
+           'It depends where the image goes. Most online scanners upload your image to their '
+           'server. FreeQrly decodes it locally in your browser, so nothing is transmitted '
+           'anywhere.'),
+          ('Do I need to download an app to scan QR codes?',
+           'No. The scanner runs in any modern browser on phone or desktop — camera mode on '
+           'mobile, image upload everywhere.'),
+          ('Can I scan a QR code from a screenshot?',
+           "Yes — upload the screenshot and it's decoded instantly, even offline after the page "
+           'has loaded.')],
+  'h1': 'Scan QR codes <span class="hl hl-mint">online</span>, privately',
+  'howto': [('Open the scanner',
+             'Go to the FreeQrly scanner — no app to install, no account needed.'),
+            ('Use your camera or upload',
+             'Point your camera at the code, or upload a photo or screenshot that contains one.'),
+            ('Get the result instantly',
+             'The decoded text or link appears immediately. Links get an Open button; everything '
+             'else gets Copy.')],
+  'lede': "Most online QR scanners make you upload your image to their server. Ours doesn't — the "
+          'code is decoded right in your browser. Camera or image upload, free forever.',
+  'mascot': 'qr',
+  'slug': 'scan-qr-code-online',
+  'title': 'Scan QR Codes Online — Free, No App, No Upload | FreeQrly'},
+ {'body': '\n'
+          '<h2>On iPhone</h2>\n'
+          '<p>Open the photo in the Photos app and <b>long-press the QR code</b> — iOS detects it '
+          'right in the image and offers to open the link. No extra tools needed.</p>\n'
+          '<h2>On Android</h2>\n'
+          '<p>Open the image in Google Photos and tap the <b>Lens</b> button. Most gallery apps on '
+          'Samsung and Pixel phones do the same from the share menu.</p>\n'
+          '<h2>On PC / Mac</h2>\n'
+          "<p>Phones can't help you here — this is where an online decoder earns its keep. Take a "
+          'screenshot (or save the image), then upload it to <a href="/scan/">FreeQrly\'s '
+          "scanner</a>. It's decoded in your browser, so the image is never uploaded anywhere — "
+          'nice when the screenshot contains something private.</p>\n'
+          '<h2>Tips for stubborn images</h2>\n'
+          '<p>Crop tight around the code before uploading — decoders work faster and more reliably '
+          'on a clean crop. If the photo is blurry or shot at an angle, no decoder can save it; '
+          'retake it straight-on. More in <a href="/blog/why-is-my-qr-code-not-working/">why your '
+          "QR code won't scan</a>.</p>\n"
+          '<h2>Privacy note</h2>\n'
+          '<p>Screenshots often contain more than the QR code — chats, tickets, personal photos. '
+          'Think twice before uploading them to a random decoder site. A <a href="/scan/">local '
+          'decoder</a> never sees anything but your own browser tab.</p>\n',
+  'date': '2026-10-14',
+  'desc': 'How to scan a QR code from a picture, photo, or screenshot — on iPhone, Android, and '
+          'PC. Free online decoder, no app needed.',
+  'faq': [('How do I scan a QR code from a screenshot on iPhone?',
+           'Open the screenshot in Photos and long-press the code — iOS reads it directly from the '
+           'image.'),
+          ('How do I scan a QR code from an image on PC?',
+           'Upload the image to a free online QR decoder. Prefer one that decodes locally in the '
+           'browser so your image is never uploaded.'),
+          ("Why can't the decoder read my picture?",
+           'Usually blur, a steep angle, or the code is too small in the frame. Crop tightly '
+           'around the code and try again in good light.')],
+  'h1': 'Scan a QR code <span class="hl hl-honey">from a picture</span>',
+  'howto': [('Save or open the picture',
+             'Screenshot it, save it, or just open the photo that contains the QR code.'),
+            ('Upload it to a decoder',
+             'Use a free online decoder that reads the image — preferably one that works locally, '
+             'so the picture is never uploaded.'),
+            ('Read the result',
+             'The decoded link or text appears instantly. Check the URL before opening, as '
+             'always.')],
+  'lede': "The code is in a photo, not in front of your camera. Here's how to decode it on iPhone, "
+          'Android, and desktop — no app required.',
+  'mascot': 'wave',
+  'slug': 'scan-qr-code-from-image',
+  'title': 'How to Scan a QR Code from a Picture | FreeQrly'},
+ {'body': '\n'
+          '<h2>1. Check-in &amp; registration</h2>\n'
+          '<p>Put a code on the confirmation email linking to a check-in form (or a simple "I\'m '
+          'here" page). Guests scan at the door instead of spelling their names for a volunteer '
+          'with a clipboard. For ticketed events, link each ticket to its validation page.</p>\n'
+          '<h2>2. Add-to-calendar codes</h2>\n'
+          "<p>The most underused event code: one that drops the event straight into the guest's "
+          'calendar. FreeQrly\'s <a href="/?type=event">event QR type</a> builds it in seconds — '
+          'title, start/end time, location — and scanning it offers "add to calendar" on both '
+          'iPhone and Android. Print it on the invitation and watch no-show rates drop.</p>\n'
+          '<h2>3. The shared photo album</h2>\n'
+          '<p>Every event has the same problem: the photos scatter across fifty phones. A code '
+          'linking to a shared album (Google Photos, iCloud shared album) on table cards fixes it '
+          '— guests upload their shots in one tap. Autocomplete shows "event qr code for photos" '
+          'is exactly what organizers search for.</p>\n'
+          '<h2>4. WiFi for the venue</h2>\n'
+          '<p>Attendees will ask for WiFi. A <a href="/wifi-qr-code/">WiFi QR code</a> on signage '
+          'connects them in one scan — no password spelling over loud music.</p>\n'
+          '<h2>5. Feedback &amp; follow-up</h2>\n'
+          '<p>A code linking to a 2-question feedback form on the exit signage or closing slide. '
+          'Response rates beat emailed surveys by a mile.</p>\n'
+          '<h2>Printing tips</h2>\n'
+          '<p>Event codes get scanned in chaotic lighting by hurried people: go bigger than you '
+          'think (the <a href="/blog/qr-code-print-size-guide/">1:10 distance rule</a>), keep '
+          'contrast high, and test on both iPhone and Android before printing a hundred table '
+          "cards. Static codes never expire, so last year's signage template still works.</p>\n",
+  'date': '2026-10-14',
+  'desc': 'How to use QR codes for events: check-in, registration, tickets, photo sharing, and '
+          'add-to-calendar codes. Free generator, no sign-up.',
+  'faq': [('How do I make a QR code for event check-in?',
+           'Link the code to your check-in form or registration page, print it for the entrance, '
+           'and guests scan on arrival instead of queueing at a desk.'),
+          ('Can a QR code add an event to my calendar?',
+           "Yes — calendar (VEVENT) QR codes open an 'add to calendar' prompt on iPhones and "
+           'Androids. FreeQrly generates them free with its event type.'),
+          ('What QR codes do I need for an event?',
+           'At minimum: check-in/registration, a shared photo album, and venue WiFi. '
+           'Add-to-calendar codes on invitations are the high-ROI extra.')],
+  'h1': 'QR codes for <span class="hl hl-blush">events</span>, done right',
+  'lede': "Check-in lines, ticket chaos, 'where are the photos?' — a few well-placed QR codes "
+          "solve the recurring event headaches. Here's the playbook.",
+  'mascot': 'party',
+  'slug': 'qr-codes-for-events',
+  'title': 'QR Codes for Events: Check-In, Tickets & More | FreeQrly'},
+ {'body': '\n'
+          '<h2>The setup</h2>\n'
+          '<p>Build your RSVP form first (Google Forms is free and perfect for this — see the <a '
+          'href="/google-form-qr-code/">Google Form QR generator</a>). Then generate the code, '
+          'print it on the invitation suite, and guests scan → tap → done. No stamps, no lost '
+          'reply cards, no deciphering handwriting.</p>\n'
+          '<h2>Where to print it</h2>\n'
+          '<p><b>Invitations:</b> on the details card, at least 2x2 cm. <b>Save-the-dates:</b> '
+          'link it to your wedding website. <b>Table cards:</b> a second code linking to the <a '
+          'href="/wedding-qr-code/">shared photo album</a> — guests upload their shots all '
+          'night.</p>\n'
+          '<h2>The add-to-calendar trick</h2>\n'
+          '<p>Pair the RSVP code with an <a href="/?type=event">event QR code</a> on the '
+          'invitation. One scan drops your wedding — date, time, venue — into their calendar. '
+          'Fewer "wait, when was it again?" texts.</p>\n'
+          '<h2>RSVP wording that works</h2>\n'
+          '<p>Next to the code, print exactly what to do: <i>"Scan to RSVP by June 1st."</i> Older '
+          'guests may need the nudge — and keep a phone number on the invitation for the truly '
+          'scan-averse.</p>\n'
+          '<h2>After the RSVPs roll in</h2>\n'
+          '<p>Google Forms tallies responses automatically — meal choices included. Export to a '
+          'sheet, share with the caterer, done. The whole pipeline costs nothing: free form, <a '
+          'href="/">free QR code</a>, zero postage.</p>\n',
+  'date': '2026-10-14',
+  'desc': 'How to use QR codes for wedding RSVPs: link your RSVP form, print on invitations, track '
+          'responses. Free generator — no sign-up.',
+  'faq': [('How do I create a QR code for my wedding RSVP?',
+           'Make your RSVP form (Google Forms works great), paste its link into a free QR '
+           'generator, and print the code on your invitations at 2x2 cm or larger.'),
+          ('Should the RSVP QR code link to a form or a website?',
+           'A form — one tap to respond. Link your wedding website separately for details like '
+           'travel and registry.'),
+          ('Do wedding QR codes expire?',
+           "Static ones don't. Generate them months ahead; they'll scan on the day and for years "
+           'after as a keepsake.')],
+  'h1': 'Wedding <span class="hl hl-honey">RSVP</span> codes, minus the chase',
+  'lede': 'Half your RSVPs are late because the reply card is sitting in a drawer. A QR code on '
+          'the invitation — straight to your RSVP form — fixes the biggest wedding admin headache.',
+  'mascot': 'wave',
+  'slug': 'wedding-rsvp-qr-code',
+  'title': 'Wedding RSVP QR Codes: A Complete Guide | FreeQrly'}]
+
 REL_CSS = """<style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}

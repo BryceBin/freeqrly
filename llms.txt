@@ -44,6 +44,10 @@ QR payload formats the generator understands:
 - `/blog/qr-code-print-size-guide/` — print sizes and the 1:10 rule
 - `/blog/qr-codes-for-restaurants/` — menus, reviews, WiFi for restaurants
 - `/blog/free-qr-codes-that-dont-expire/` — static codes that never expire
+- `/blog/scan-qr-code-online/` — scan QR codes online (no app, no upload)
+- `/blog/scan-qr-code-from-image/` — decode QR codes from pictures
+- `/blog/qr-codes-for-events/` — events: check-in, calendar, photos
+- `/blog/wedding-rsvp-qr-code/` — wedding RSVP QR guide
 - `/blog/do-qr-codes-expire/` — do QR codes expire?
 - `/blog/static-vs-dynamic-qr-codes/` — static vs dynamic explained
 - `/about/` — what FreeQrly is (Organization facts)
