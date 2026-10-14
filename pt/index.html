@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3r-20261014">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3s-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 <script type="application/ld+json">
@@ -141,8 +141,10 @@
         <div id="fields"></div>
 
         <div id="batchPanel" hidden>
+          <div class="fl"><span data-i18n="bType">Tipo</span>: <select id="batchType" class="batchTypeSel"></select></div>
           <div class="fl" data-i18n="bLabel">Um link por linha</div>
           <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
+          <div class="fl batchFmt" id="batchFmt"></div>
           <div class="batchActions">
             <button class="btn-solid" id="batchGo" data-i18n="bGo">Gerar todos</button>
             <button class="btn-ghost" id="batchZip" data-i18n="bZip" disabled>Baixar ZIP</button>
@@ -293,8 +295,8 @@
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3r-20261014"></script>
-<script src="/assets/js/app.js?v=b3r-20261014"></script>
+<script src="/assets/js/vcard.js?v=b3s-20261015"></script>
+<script src="/assets/js/app.js?v=b3s-20261015"></script>
 </body>
 </html>
 
