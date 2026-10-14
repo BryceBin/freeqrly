@@ -58,3 +58,10 @@ QR payload formats the generator understands:
 
 - Mascot: Qly, a small periwinkle-blue elephant, hosted at https://assets.freeqrly.com/mascots/v1/<pose>.webp (512x512 webp, transparent). 12 poses: home-welcome, studio-qr, scanner, batch, privacy, success, faq, error, wifi, business-card, wedding, logo-customize.
 - Tone: quiet, direct, a little dry. No hype, no "AI slop".
+
+## Languages
+
+FreeQrly speaks 10 languages: English (/), 中文 (/zh/), Español (/es/), हिन्दी (/hi/),
+العربية (/ar/), Português (/pt/), Français (/fr/), Русский (/ru/), Deutsch (/de/), 日本語 (/ja/).
+Each has a fully translated static homepage for SEO. The studio UI translates client-side
+via ?lang= parameter (e.g. /wifi-qr-code/?lang=es).

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreeQrly — 免费二维码生成器，隐私优先</title>
+<meta name="description" content="直接在浏览器里生成精美二维码。永久免费、免注册、不上传任何数据。支持 PNG / SVG 导出。">
+<link rel="canonical" href="https://freeqrly.com/zh/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/">
+<meta name="theme-color" content="#e9eef4">
+<meta name="google-site-verification" content="uZRfmoKMXGzp2UDaEonRjvSuWAo8jPzn2JrGFT6Byqw">
+<meta name="msvalidate.01" content="4885139B2D8CFB346C9538F5DB74BBF3">
+<link rel="icon" type="image/png" href="assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-elephant.png">
+<meta property="og:title" content="FreeQrly — QR Code Generator, Private by Design">
+<meta property="og:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
+<meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
+<meta name="twitter:image" content="https://freeqrly.com/og.png">
+<link rel="stylesheet" href="assets/css/main.css?v=b3j-20261014">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do free QR codes expire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never. The destination is encoded directly in the pattern, so a code works as long as the destination does. Paid dynamic codes run through a vendor's servers and can die when you stop paying."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my WiFi password safe here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your password never leaves your browser — nothing is sent anywhere. Extra careful? Load the page, disconnect, then type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Static or dynamic — which should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the destination will not change, go static: WiFi, business cards, fixed links. Dynamic codes (editable links + scan stats) suit marketing campaigns — they are on our roadmap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Every code you make here is yours — packaging, menus, business cards, no attribution needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is FreeQrly really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — everything on this page is free, with no watermark and no account. We do not sell subscriptions; this is a tool, not a funnel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is nothing to sign up for — open the page and make your code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add my logo to the QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — upload any square logo and it goes in the center of the QR code, with error correction raised automatically so it keeps scanning. For print, use Q or H correction."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://assets.freeqrly.com">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Free<em>Qrly</em></div>
+    <nav class="tnav">
+      <a href="#studio" data-i18n="navStudio">工作台</a><a href="#why" data-i18n="navWhy">理念</a><a href="#faq" data-i18n="navFaq">常见问题</a><a href="/scan/" data-i18n="navScan">扫码</a>
+    </nav>
+    <div class="topbtns">
+      <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <section class="hero hero-slim">
+    <div class="kicker" data-i18n="kicker">免费 · 免注册 · 隐私优先</div>
+    <h1><span data-i18n="h1a">把内容变成</span> <em class="hl" data-i18n="h1b">好看</em> <span data-i18n="h1c">的二维码。</span></h1>
+    <p class="lede" data-i18n="lede">在浏览器里直接做二维码——免注册、无追踪、永不过期。免费、简单、一直都在。</p>
+  </section>
+
+  <main class="studio" id="studio">
+    <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
+    <div class="shead"><div><h2 data-i18n="sTitle">做一张二维码</h2></div></div>
+    <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
+    <div class="grid">
+      <div>
+        <div id="fields"></div>
+
+        <div id="batchPanel" hidden>
+          <div class="fl" data-i18n="bLabel">每行一个链接</div>
+          <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
+          <div class="batchActions">
+            <button class="btn-solid" id="batchGo" data-i18n="bGo">全部生成</button>
+            <button class="btn-ghost" id="batchZip" data-i18n="bZip" disabled>下载 ZIP</button>
+          </div>
+          <div class="batchHint" id="batchHint" hidden></div>
+          <div class="batchGrid" id="batchGrid"></div>
+        </div>
+
+        <div class="fl" data-i18n="appearance">外观样式</div>
+        <div class="approw"><div class="applabel"><span data-i18n="dots">码点形状</span><small data-i18n="dotsSub">二维码点的样式</small></div>
+          <div class="seg" id="segDots" role="radiogroup">
+            <button data-v="square" data-i18n="dSquare">方形</button><button data-v="dots" data-i18n="dRound">圆形</button><button data-v="rounded" data-i18n="dSoft">柔和</button><button data-v="extra-rounded" data-i18n="dPebble">鹅卵石</button>
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="ecc">容错等级</span><small data-i18n="eccSub">越高越耐磨损</small></div>
+          <div class="seg" id="segEcc" role="radiogroup">
+            <button data-v="L"><span data-i18n="eL">Bajo</span></button><button data-v="M"><span data-i18n="eM">Medio</span></button><button data-v="Q"><span data-i18n="eQ">Alto</span></button><button data-v="H"><span data-i18n="eH">Máximo</span></button>
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="colors">颜色</span><small data-i18n="colorsSub">点选或自定义</small></div>
+          <div class="cpair">
+            <div class="cgroup"><span class="cname" data-i18n="ink">墨色</span><div class="cdots" id="fgDots">
+              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink"></button><button class="cdot" data-v="#B4563C" style="background:#B4563C" aria-label="Ink"></button><button class="cdot" data-v="#2F6B4F" style="background:#2F6B4F" aria-label="Ink"></button><button class="cdot" data-v="#2F4B7C" style="background:#2F4B7C" aria-label="Ink"></button><button class="cpick" aria-label="Custom ink color">+<input type="color" id="fgPick" value="#22303F"></button>
+            </div></div>
+            <div class="cgroup"><span class="cname" data-i18n="background">背景</span><div class="cdots" id="bgDots">
+              <button class="cdot ctransp on" data-v="transparent" aria-label="Transparent background"></button><button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Background"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Background"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Background"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Background"></button><button class="cpick" aria-label="Custom background color">+<input type="color" id="bgPick" value="#ffffff"></button>
+            </div></div>
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="logo">添加 Logo</span><small data-i18n="logoSub">品牌或自定义</small></div>
+          <div class="logorow" id="logoRow">
+            <button class="logopick" data-preset="apple" aria-label="Apple"><img src="/assets/img/logos/apple.svg" alt="Apple" loading="lazy"></button>
+            <button class="logopick" data-preset="x" aria-label="X"><img src="/assets/img/logos/x.svg" alt="X" loading="lazy"></button>
+            <button class="logopick" data-preset="facebook" aria-label="Facebook"><img src="/assets/img/logos/facebook.svg" alt="Facebook" loading="lazy"></button>
+            <button class="logopick" data-preset="instagram" aria-label="Instagram"><img src="/assets/img/logos/instagram.svg" alt="Instagram" loading="lazy"></button>
+            <button class="logopick" data-preset="google" aria-label="Google"><img src="/assets/img/logos/google.svg" alt="Google" loading="lazy"></button>
+            <button class="logopick" data-preset="microsoft" aria-label="Microsoft"><img src="/assets/img/logos/microsoft.svg" alt="Microsoft" loading="lazy"></button>
+            <label class="logopick logoupload" for="logo" aria-label="Upload logo">+<input type="file" id="logo" accept="image/*" hidden></label>
+            
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="size">导出尺寸</span><small><span id="sizeVal">1024</span> px</small></div>
+          <div class="seg" id="segSize" role="radiogroup">
+            <button data-v="512">512</button><button data-v="1024">1024</button><button data-v="2048">2048</button><button data-v="4096">4096</button>
+          </div></div>
+        <!-- hidden native controls (synced by the visual UI above) -->
+        <div hidden><select id="dots"><option value="square">Square</option><option value="dots">Round</option><option value="rounded">Soft</option><option value="extra-rounded">Pebble</option></select>
+        <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+
+      </div>
+      <div class="previewCol">
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
+        <div class="livenote" data-i18n="live">实时预览，输入即变</div>
+        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button></div>
+        <div id="histSec" hidden>
+          <div class="fl histhead"><span data-i18n="history">最近</span><button id="histClear" class="linkbtn" data-i18n="histClear">清除</button></div>
+          <div id="histList" class="histlist"></div>
+        </div>
+      </div>
+    </div>
+    <p class="privnote-foot" data-i18n="privnote">所有生成都在你的浏览器里完成。</p>
+  </main>
+
+  <section class="feats" id="features">
+    <div class="seckick" data-i18n="featsK">不止于生成</div>
+    <h2 data-i18n="featsT">二维码之外，还有更多</h2>
+    <p class="seclede" data-i18n="featsS">生成只是开始。FreeQrly 里还有这些。</p>
+    <div class="featgrid">
+      <div class="feat">
+        <div class="mascot m-card" aria-hidden="true"><img loading="lazy" decoding="async" width="128" height="128" src="https://assets.freeqrly.com/mascots/v1/scanner.webp" alt=""></div>
+        <h3 data-i18n="f1t">内置扫码器</h3>
+        <p data-i18n="f1d">用摄像头对准，或上传图片——二维码在你的浏览器里直接解码，绝不上传到服务器。离线也能用。</p>
+        <a href="/scan/" data-i18n="f1l">打开扫码器 →</a>
+      </div>
+      <div class="feat">
+        <h3 data-i18n="f2t">10 种二维码类型</h3>
+        <p data-i18n="f2d">网址、文本、WiFi、电子名片、邮件、短信、电话、地点、日历事件。每种类型自动生成正确格式，不用记语法。</p>
+        <a href="#studio" data-i18n="f2l">都试试 →</a>
+      </div>
+      <div class="feat">
+        <div class="mascot m-card" aria-hidden="true"><img loading="lazy" decoding="async" width="128" height="128" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt=""></div>
+        <h3 data-i18n="f3t">批量生成</h3>
+        <p data-i18n="f3d">一次粘贴 50 个链接，一键得到 50 个可打印的二维码。逐个下载，或打包成 ZIP。</p>
+        <a href="/batch-qr-code/" data-i18n="f3l">批量模式 →</a>
+      </div>
+      <div class="feat">
+        <h3 data-i18n="f4t">日历事件码</h3>
+        <p data-i18n="f4d">扫一下，活动标题、时间、地点直接进手机日历。为请柬而生。</p>
+        <a href="/?type=event" data-i18n="f4l">生成事件码 →</a>
+      </div>
+      <div class="feat">
+        <div class="mascot m-card" aria-hidden="true"><img loading="lazy" decoding="async" width="128" height="128" src="https://assets.freeqrly.com/mascots/v1/logo-customize.webp" alt=""></div>
+        <h3 data-i18n="f5t">Logo 与美化</h3>
+        <p data-i18n="f5d">把 logo 放中间，容错等级自动提高，保证扫得出。圆点、墨色、纸色随便搭，还能透明底。</p>
+        <a href="/qr-code-with-logo/" data-i18n="f5l">带 logo 的码 →</a>
+      </div>
+      <div class="feat">
+        <h3 data-i18n="f6t">私密历史记录</h3>
+        <p data-i18n="f6d">每次下载只记在这台设备上——最近 12 条，一键恢复。随时清空，我们永远看不到。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cases" id="usecases">
+    <div class="seckick" data-i18n="casesK">真实场景</div>
+    <h2 data-i18n="casesT">为真实时刻而造</h2>
+    <p class="seclede" data-i18n="casesS">选你的场景，方法都准备好了。</p>
+    <div class="casegrid">
+      <a class="case" href="/business-card-qr-code/"><b data-i18n="c1t">名片</b><span data-i18n="c1d">扫一下，联系方式直接进对方手机。</span></a>
+      <a class="case" href="/wedding-qr-code/"><b data-i18n="c2t">婚礼</b><span data-i18n="c2d">RSVP、照片共享、日历提醒。纸的流程，无纸的体验。</span></a>
+      <a class="case" href="/real-estate-qr-code/"><b data-i18n="c3t">房产</b><span data-i18n="c3d">房源立牌扫码看，一键预约看房。</span></a>
+      <a class="case" href="/blog/qr-codes-for-events/"><b data-i18n="c4t">活动</b><span data-i18n="c4d">签到、验票、共享相册，一码搞定。</span></a>
+      <a class="case" href="/wifi-qr-code/"><b data-i18n="c5t">WiFi 分享</b><span data-i18n="c5d">客人扫码上网。再也不用念密码。</span></a>
+      <a class="case" href="/google-review-qr-code/"><b data-i18n="c6t">谷歌评价</b><span data-i18n="c6d">把满意的客人变成柜台前的五星好评。</span></a>
+    </div>
+  </section>
+
+  <section class="prins" id="why">
+    <div class="prin"><div class="mascot m-prin" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/privacy.webp" alt="Qly protecting your privacy with a shield"></div><div class="no" data-i18n="p1n">其一</div><h3 data-i18n="p1t">你的数据，哪儿也不去</h3><p data-i18n="p1p">二维码在你的设备上直接绘制，不上传、不追踪、不用注册。页面加载后断网，也一切如常。</p></div>
+    <div class="prin"><div class="no" data-i18n="p2n">其二</div><h3 data-i18n="p2t">一次生成，永久有效</h3><p data-i18n="p2p">静态码把网址直接写进图案里。今天印出来，十年后照样能扫。不用续费，不怕平台倒闭。</p></div>
+    <div class="prin"><div class="no" data-i18n="p3n">其三</div><h3 data-i18n="p3t">免费，就只是免费</h3><p data-i18n="p3p">无水印、无注册墙、永不过期。没有 Pro 版，没有隐藏收费——好用的东西就该免费。</p></div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2><span class="mascot m-head" aria-hidden="true"><img loading="lazy" decoding="async" width="128" height="128" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt=""></span><span data-i18n="faqT">你可能想问</span></h2>
+    <details><summary><span data-i18n="q1">免费的二维码会过期吗？</span></summary><p data-i18n="a1">不会。网址直接编码在图案里，只要网址本身有效，码就一直有效。付费动态码走服务商的服务器，停付就可能失效——这也是静态码更让人放心的原因。</p></details>
+    <details><summary><span data-i18n="q2">在这里输入 WiFi 密码安全吗？</span></summary><p data-i18n="a2">安全。密码从头到尾都在你的浏览器里，不会发送到任何地方。实在不放心，页面加载完成后断网再输入。</p></details>
+    <details><summary><span data-i18n="q3">静态码和动态码怎么选？</span></summary><p data-i18n="a3">地址不变就用静态码：WiFi、名片、固定链接。动态码（可修改地址、看扫码统计）适合做营销活动，我们的路线图上有它。</p></details>
+    <details><summary><span data-i18n="q4">可以商用吗？</span></summary><p data-i18n="a4">当然。这里生成的所有二维码都属于你，印在包装、菜单、名片上都不需要署名。</p></details>
+    <details><summary><span data-i18n="q5">FreeQrly 真的免费吗？</span></summary><p data-i18n="a5">真的。这一页的所有功能都免费，无水印、不用注册。我们不卖订阅，这就是一个趁手的工具。</p></details>
+    <details><summary><span data-i18n="q6">需要注册账号吗？</span></summary><p data-i18n="a6">不需要。这里没有什么可注册的——打开页面，直接做码。</p></details>
+    <details><summary><span data-i18n="q7">二维码中间能加我的 Logo 吗？</span></summary><p data-i18n="a7">可以。上传一张方形 Logo，它会放在正中央，容错等级会自动提高以保证可扫。用来印刷的话，建议选 Q 或 H 容错。</p></details>
+  </section>
+
+  <footer>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly the elephant waving hello"></div>
+    <div class="fin" data-i18n="fin">在你的浏览器里，静静生成。</div>
+    <div class="fgroups">
+      <div class="fgroup"><span class="fglabel">Generators</span><a href="/google-form-qr-code/">Google Form</a><a href="/wifi-qr-code/">WiFi</a><a href="/vcard-qr-code/">vCard</a><a href="/business-card-qr-code/">Business card</a><a href="/google-review-qr-code/">Google review</a><a href="/qr-code-with-logo/">With logo</a><a href="/wedding-qr-code/">Wedding</a><a href="/instagram-qr-code/">Instagram</a><a href="/real-estate-qr-code/">Real estate</a><a href="/batch-qr-code/">Batch</a></div>
+      <div class="fgroup"><span class="fglabel">More</span><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a><a href="/developers/">API & MCP</a></div>
+    </div>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+
+<div class="cpop" id="cpop" hidden>
+  <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
+  <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
+  <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
+</div>
+<script src="assets/lib/qr-code-styling.js"></script>
+<script src="assets/lib/jszip.min.js"></script>
+<script src="/assets/js/vcard.js?v=b3j-20261014"></script>
+<script src="assets/js/app.js?v=b3j-20261014"></script>
+</body>
+</html>
+
+<!-- auto-deploy check -->
