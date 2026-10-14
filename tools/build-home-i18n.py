@@ -30,7 +30,7 @@ for lang in LANGS:
 
     # Set html lang and dir
     bcp = {'zh':'zh-CN','es':'es','hi':'hi','ar':'ar','pt':'pt','fr':'fr','ru':'ru','de':'de','ja':'ja'}[lang]
-    h = re.sub(r'<html lang="[^"]*"', f'<html lang="{bcp}"', h)
+    h = re.sub(r'<html lang="[^"]*"', f'<html lang="{bcp}" data-lang="{lang}"', h)
     if lang == 'ar':
         h = h.replace('<html lang="ar"', '<html lang="ar" dir="rtl"')
 

@@ -98,6 +98,8 @@ let lang = "en";
 function syncGuess(){
   const q = new URLSearchParams(location.search).get("lang");
   if(q && LANGS.includes(q)) return q;
+  const dl = document.documentElement.getAttribute("data-lang");
+  if(dl && LANGS.includes(dl)) return dl;
   const saved = localStorage.getItem("freeqrly-lang");
   if(saved && LANGS.includes(saved)) return saved;
   try{
