@@ -268,3 +268,31 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
 .batchHint{color:#b3402e;font-size:13px;margin:8px 0 0;font-weight:600}
 textarea.shake{animation:shake .3s;border-color:#b3402e !important}
 @keyframes shake{25%{transform:translateX(-4px)}50%{transform:translateX(4px)}75%{transform:translateX(-2px)}}
+
+/* features + use cases */
+.feats{margin:70px 0 10px}
+.cases{margin:70px 0 10px}
+.seckick{font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:.12em;color:var(--coral);text-transform:uppercase;margin-bottom:12px}
+.feats h2,.cases h2{font-family:Georgia,serif;font-weight:400;font-size:32px;margin-bottom:10px}
+.seclede{font-size:15.5px;color:var(--soft);margin-bottom:30px;max-width:560px;line-height:1.6}
+.featgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat{border-radius:22px;padding:28px 26px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(190,145,60,.08)}
+.feat:nth-child(6n+1){background:var(--mintbg)}
+.feat:nth-child(6n+2){background:var(--honeybg)}
+.feat:nth-child(6n+3){background:var(--skybg)}
+.feat:nth-child(6n+4){background:var(--blushbg)}
+.feat:nth-child(6n+5){background:var(--peach)}
+.feat:nth-child(6n+6){background:#EFE9FB}
+.feat h3{font-family:Georgia,serif;font-weight:400;font-size:20px;margin-bottom:10px}
+.feat p{font-size:14px;line-height:1.7;color:var(--soft);margin-bottom:14px}
+.feat a{font-size:14px;font-weight:700;color:var(--deep);text-decoration:none;border-bottom:2px solid var(--honey)}
+.feat a:hover{color:var(--coral);border-color:var(--coral)}
+.casegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.case{display:block;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.case:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.case b{display:block;font-size:15.5px;color:var(--ink);margin-bottom:6px}
+.case span{font-size:13.5px;line-height:1.6;color:var(--soft)}
+@media(max-width:760px){
+  .featgrid,.casegrid{grid-template-columns:1fr}
+  .feats h2,.cases h2{font-size:26px}
+}
