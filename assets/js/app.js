@@ -181,16 +181,16 @@ function renderTabs(){
 function renderFields(){
   const f = $("fields"); f.innerHTML="";
   if(cur==="batch") return;
-  I18N[lang].fields[cur].forEach(([id,label,kind,ph])=>{
+  I18N[lang].fields[cur].forEach(([id,label,third,ph])=>{
     const lab = document.createElement("div"); lab.className="fl"; lab.textContent=label; f.appendChild(lab);
-    let el;
-    if(kind==="textarea"){ el=document.createElement("textarea"); el.placeholder=ph||""; }
-    else if(kind==="datetime-local"){ el=document.createElement("input"); el.type="datetime-local"; }
-    else if(typeof kind==="string" && kind.startsWith("select:")){
+    let el, defVal="";
+    if(third==="textarea"){ el=document.createElement("textarea"); el.placeholder=ph||""; defVal=ph||""; }
+    else if(third==="datetime-local"){ el=document.createElement("input"); el.type="datetime-local"; }
+    else if(typeof third==="string" && third.startsWith("select:")){
       el=document.createElement("select");
-      kind.slice(7).split(",").forEach(o=>{ const op=document.createElement("option"); op.value=o; op.textContent=o; el.appendChild(op); });
-    } else { el=document.createElement("input"); el.type="text"; el.placeholder=kind||""; }
-    el.id="f_"+id; el.oninput=draw; f.appendChild(el);
+      third.slice(7).split(",").forEach(o=>{ const op=document.createElement("option"); op.value=o; op.textContent=o; el.appendChild(op); });
+    } else { el=document.createElement("input"); el.type="text"; defVal=third||""; el.placeholder=defVal; }
+    el.id="f_"+id; if(defVal) el.value=defVal; el.oninput=draw; f.appendChild(el);
   });
 }
 function applyLang(){
