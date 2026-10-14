@@ -170,7 +170,7 @@ function updateStudioMascot(){
   const pose=poses[cur] || image.getAttribute("data-mascot-default") || "studio-qr";
   image.src=MASCOT_BASE+pose+".webp";
 }
-const TYPE_EMOJI = {url:"\U0001F517",text:"\U0001F4DD",wifi:"\U0001F4F6",vcard:"\U0001F464",email:"\u2709\uFE0F",sms:"\U0001F4AC",phone:"\U0001F4DE",geo:"\U0001F4CD",event:"\U0001F4C5",batch:"\U0001F4DA"};
+const TYPE_EMOJI = {url:"🔗",text:"📝",wifi:"📶",vcard:"👤",email:"✉️",sms:"💬",phone:"📞",geo:"📍",event:"📅",batch:"📚"};
 function renderTabs(){
   updateStudioMascot();
   const t = $("typerail") || $("tabs"); if(!t) return; t.innerHTML="";
