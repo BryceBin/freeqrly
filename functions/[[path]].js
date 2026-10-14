@@ -4,6 +4,7 @@
    Pattern-based (not enumerated) so new blog posts/pages just work. */
 const TOP_LEVEL = new Set([
   'scan', 'about', 'developers',
+  'zh', 'es', 'hi', 'ar', 'pt', 'fr', 'ru', 'de', 'ja',
   'sitemap.xml', 'robots.txt', 'llms.txt', 'og.png', 'favicon.ico', '404.html',
   'google-form-qr-code', 'wifi-qr-code', 'vcard-qr-code', 'batch-qr-code',
   'business-card-qr-code', 'google-review-qr-code', 'qr-code-with-logo',
