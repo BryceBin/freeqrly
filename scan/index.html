@@ -102,8 +102,17 @@
         startBtn=document.getElementById("camStart"), stopBtn=document.getElementById("camStop");
   let stream=null, raf=null, lastData="";
 
+  function trackScan(method){
+    try{
+      var body=JSON.stringify({event:"scan_decode",method:method,lang:document.documentElement.lang||"en"});
+      if(navigator.sendBeacon){ navigator.sendBeacon("/api/track", new Blob([body],{type:"application/json"})); }
+      else{ fetch("/api/track",{method:"POST",headers:{"Content-Type":"application/json"},body:body,keepalive:true}).catch(function(){}); }
+    }catch(e){}
+  }
+  var scanMethod="upload";
   function showResult(data){
     if(!data || data===lastData) return;
+    trackScan(scanMethod);
     lastData=data;
     txt.textContent=data;
     const isUrl=/^https?:\/\//i.test(data.trim());
@@ -116,6 +125,7 @@
   document.getElementById("scanAgain").onclick=()=>{ lastData=""; res.hidden=true; };
 
   function tick(){
+    scanMethod="camera";
     if(video.readyState===video.HAVE_ENOUGH_DATA){
       canvas.width=video.videoWidth; canvas.height=video.videoHeight;
       ctx.drawImage(video,0,0,canvas.width,canvas.height);
@@ -141,6 +151,7 @@
   }
   stopBtn.onclick=stop;
 
+  document.getElementById("scanFile").addEventListener("change",function(){scanMethod="upload";});
   document.getElementById("scanFile").addEventListener("change",e=>{
     const f=e.target.files[0]; if(!f) return;
     const img=new Image();

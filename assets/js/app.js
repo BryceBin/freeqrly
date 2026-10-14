@@ -240,9 +240,10 @@ $("batchGo").onclick = ()=>{
     return;
   }
   hint.hidden = true;
+  track("batch_generate",{count:batchItems.length});
   renderBatch();
 };
-$("batchZip").onclick = async ()=>{
+$("batchZip").onclick = async ()=>{ track("batch_zip",{count:batchItems.length});
   const zip = new JSZip();
   for(let i=0;i<batchItems.length;i++){
     const blob = await new QRCodeStyling(Object.assign(styleOpts(1024),{data:batchItems[i]})).getRawData("png");
@@ -253,6 +254,17 @@ $("batchZip").onclick = async ()=>{
   a.href = URL.createObjectURL(blob); a.download = "freeqrly-batch.zip"; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
 };
+/* privacy-first analytics: fire-and-forget, no cookies/ids */
+function track(event, props){
+  try{
+    const body = JSON.stringify(Object.assign({event:event, lang:lang}, props||{}));
+    if(navigator.sendBeacon){
+      navigator.sendBeacon("/api/track", new Blob([body], {type:"application/json"}));
+    }else{
+      fetch("/api/track", {method:"POST", headers:{"Content-Type":"application/json"}, body:body, keepalive:true}).catch(()=>{});
+    }
+  }catch(e){}
+}
 /* history (local only) */
 const HIST_KEY="freeqrly-history";
 function getHist(){ try{ return JSON.parse(localStorage.getItem(HIST_KEY))||[]; }catch(e){ return []; } }
@@ -290,8 +302,8 @@ $("logo").addEventListener("change",e=>{
   r.onload=()=>{ logoData=r.result; if(["L","M"].includes($("ecc").value)) $("ecc").value="Q"; draw(); if(cur==="batch") renderBatch(); };
   r.readAsDataURL(f);
 });
-$("dlPng").onclick=()=>{ saveHist(); new QRCodeStyling(styleOpts(parseInt($("size").value)||1024)).download({name:"freeqrly",extension:"png"}); };
-$("dlSvg").onclick=()=>{ saveHist(); new QRCodeStyling(styleOpts(1024)).download({name:"freeqrly",extension:"svg"}); };
+$("dlPng").onclick=()=>{ saveHist(); track("qr_download",{type:cur,format:"png"}); new QRCodeStyling(styleOpts(parseInt($("size").value)||1024)).download({name:"freeqrly",extension:"png"}); };
+$("dlSvg").onclick=()=>{ saveHist(); track("qr_download",{type:cur,format:"svg"}); new QRCodeStyling(styleOpts(1024)).download({name:"freeqrly",extension:"svg"}); };
 const _tp=$("transp"); if(_tp) _tp.addEventListener("change",()=>{ $("bgc").disabled=_tp.checked; draw(); });
 const _hc=$("histClear"); if(_hc) _hc.onclick=()=>{ try{localStorage.removeItem(HIST_KEY);}catch(e){} renderHist(); };
 /* theme */
