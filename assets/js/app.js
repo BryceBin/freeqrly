@@ -441,7 +441,7 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
   const pop=$("cpop"); if(!pop) return;
   const sat=$("cpopSat"), satDot=$("cpopSatDot"), hue=$("cpopHue"), hueDot=$("cpopHueDot");
   const prev=$("cpopPrev"), hexI=$("cpopHex"), ok=$("cpopOk");
-  let H=210, S=30, V=25, target=null, onPick=null;
+  let H=210, S=30, V=25, target=null, onPick=null, interacted=false;
   function hsv2hex(h,s,v){
     s/=100; v/=100;
     const k=(n)=>(n+h/60)%6, f=(n)=>v*(1-s*Math.max(0,Math.min(k(n),4-k(n),1)));
@@ -460,13 +460,14 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     satDot.style.left=S+"%"; satDot.style.top=(100-V)+"%";
     hueDot.style.left=(H/360*100)+"%";
     prev.style.background=hex; hexI.value=hex;
-    if(onPick) onPick(hex);
+    if(onPick && interacted) onPick(hex);
   }
   function fromHex(hex){
     if(!/^#[0-9A-Fa-f]{6}$/.test(hex)) return;
     [H,S,V]=hex2hsv(hex); render();
   }
   sat.addEventListener("pointerdown",e=>{
+    interacted=true;
     const move=ev=>{ const r=sat.getBoundingClientRect();
       S=Math.min(100,Math.max(0,(ev.clientX-r.left)/r.width*100));
       V=100-Math.min(100,Math.max(0,(ev.clientY-r.top)/r.height*100));
@@ -476,19 +477,20 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     window.addEventListener("pointermove",move); window.addEventListener("pointerup",up);
   });
   hue.addEventListener("pointerdown",e=>{
+    interacted=true;
     const move=ev=>{ const r=hue.getBoundingClientRect();
       H=Math.min(360,Math.max(0,(ev.clientX-r.left)/r.width*360)); render(); };
     move(e);
     const up=()=>{window.removeEventListener("pointermove",move);window.removeEventListener("pointerup",up);};
     window.addEventListener("pointermove",move); window.addEventListener("pointerup",up);
   });
-  hexI.addEventListener("input",()=>fromHex(hexI.value));
-  ok.addEventListener("click",()=>{ pop.hidden=true; });
+  hexI.addEventListener("input",()=>{ interacted=true; fromHex(hexI.value); });
+  ok.addEventListener("click",()=>{ if(onPick && interacted){ render(); } pop.hidden=true; });
   document.addEventListener("pointerdown",e=>{
     if(!pop.hidden && !pop.contains(e.target) && !e.target.closest(".cpick")) pop.hidden=true;
   });
   window.openColorPicker=function(anchorBtn, initialHex, cb){
-    target=anchorBtn; onPick=cb;
+    target=anchorBtn; onPick=cb; interacted=false;
     fromHex(initialHex||"#22303F");
     pop.hidden=false;
     const r=anchorBtn.getBoundingClientRect();
