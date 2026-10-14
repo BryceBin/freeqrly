@@ -12,7 +12,7 @@ STUDIO = m.group(0)
 
 PAGES = [
  dict(
-  slug="google-form-qr-code", dtype="url", mascot="wave",
+  slug="google-form-qr-code", dtype="url",
   title="Free Google Form QR Code Generator | FreeQrly",
   desc="Turn any Google Form link into a QR code in seconds. Free, no sign-up, no watermark. Paste your form URL and download a printable PNG or SVG.",
   kw="qr code generator for google form",
@@ -36,7 +36,7 @@ PAGES = [
   ],
  ),
  dict(
-  slug="wifi-qr-code", dtype="wifi", mascot="qr",
+  slug="wifi-qr-code", dtype="wifi",
   title="Free WiFi QR Code Generator | FreeQrly",
   desc="Create a free WiFi QR code so guests join your network with one scan. No app needed, no sign-up. Your password never leaves your browser.",
   kw="wifi qr code generator",
@@ -60,7 +60,7 @@ PAGES = [
   ],
  ),
  dict(
-  slug="vcard-qr-code", dtype="vcard", mascot="party",
+  slug="vcard-qr-code", dtype="vcard",
   title="Free vCard QR Code Generator — Contact QR Codes | FreeQrly",
   desc="Turn your contact details into a scannable vCard QR code. Free, no sign-up. One scan saves you straight to their phone.",
   kw="vcard qr code generator",
@@ -84,7 +84,7 @@ PAGES = [
   ],
  ),
  dict(
-  slug="batch-qr-code", dtype="batch", mascot="batch",
+  slug="batch-qr-code", dtype="batch",
   title="Free Batch QR Code Generator | FreeQrly",
   desc="Generate dozens of QR codes at once and download them as a ZIP. Free, no sign-up, no limits games. One link per line — done.",
   kw="batch qr code generator",
@@ -124,7 +124,7 @@ HEADER = '''<header class="top">
 STUDIO_H2_RE = re.compile(r'<div class="shead"><div class="over" data-i18n="sOver">.*?</div><h2 data-i18n="sTitle">.*?</h2></div>', re.S)
 
 PAGES += [
-dict(slug="business-card-qr-code", dtype="vcard", mascot="qr",
+dict(slug="business-card-qr-code", dtype="vcard",
   title="Free Business Card QR Code Generator | FreeQrly",
   desc="Put a scannable vCard QR code on your business card. Free, no sign-up \u2014 one scan saves your contact straight to their phone.",
   kw="qr code for business cards",
@@ -138,7 +138,7 @@ dict(slug="business-card-qr-code", dtype="vcard", mascot="qr",
        ("How big should the QR code be on a card?","At least 2x2 cm (0.8x0.8 in). Export at 1024 px or higher so edges stay crisp in print."),
        ("Will it scan on iPhone and Android?","Yes \u2014 both read vCard codes natively with the built-in camera. No app needed."),
        ("Does it expire or need an account?","No. It is a static code: your details live inside the pattern. Print it today, it scans in ten years.")]),
-dict(slug="google-review-qr-code", dtype="url", mascot="party",
+dict(slug="google-review-qr-code", dtype="url",
   title="Free Google Review QR Code Generator | FreeQrly",
   desc="Turn your Google review link into a printable QR code. Free, no sign-up. Put it on the counter and watch the reviews come in.",
   kw="qr code for google review",
@@ -152,7 +152,7 @@ dict(slug="google-review-qr-code", dtype="url", mascot="party",
        ("Do reviewers need to be signed in?","They need a Google account to post, but scanning works for everyone \u2014 the code just opens your review form."),
        ("Can I track how many scans it gets?","FreeQrly codes are static and private \u2014 no tracking by design. For counts, put a URL shortener with stats in front of the link."),
        ("Does the code expire?","No. Static codes never expire and need no account, so your counter card works forever.")]),
-dict(slug="qr-code-with-logo", dtype="url", mascot="qr",
+dict(slug="qr-code-with-logo", dtype="url",
   title="QR Code Generator with Logo \u2014 Free | FreeQrly",
   desc="Add your logo to the center of any QR code. Free, no sign-up, no watermark. Error correction adjusts automatically so it always scans.",
   kw="qr code with logo",
@@ -166,7 +166,7 @@ dict(slug="qr-code-with-logo", dtype="url", mascot="qr",
        ("What logo file works best?","A square PNG with a transparent background. Avoid fine text inside the logo \u2014 bold shapes read better at small sizes."),
        ("What size should I print it?","At least 2x2 cm, at 1024 px export or higher. Bigger is safer when a logo covers the center."),
        ("Is there a watermark or a fee?","No. Logo upload is free and unlimited, and your files never leave your browser.")]),
-dict(slug="wedding-qr-code", dtype="url", mascot="wave",
+dict(slug="wedding-qr-code", dtype="url",
   title="Free Wedding QR Code Generator | FreeQrly",
   desc="QR codes for weddings: RSVP forms, photo sharing, menus, seating charts. Free, no sign-up \u2014 one scan for your guests.",
   kw="qr code wedding",
@@ -180,7 +180,7 @@ dict(slug="wedding-qr-code", dtype="url", mascot="wave",
        ("Can I match my wedding colors?","Yes \u2014 set any ink and paper color. Just keep strong contrast between the code and background so phones read it in dim venues."),
        ("How big for table cards?","At least 3x3 cm so guests can scan from across the table without standing up."),
        ("Will they still work on the day?","Yes \u2014 static codes never expire. Make them months ahead; they will scan on the day and for years after as a keepsake.")]),
-dict(slug="instagram-qr-code", dtype="url", mascot="wave",
+dict(slug="instagram-qr-code", dtype="url",
   title="Free Instagram QR Code Generator | FreeQrly",
   desc="Turn your Instagram profile or post into a scannable QR code. Free, no sign-up. Print it for packaging, flyers, and shop windows.",
   kw="qr code for instagram",
@@ -197,7 +197,7 @@ dict(slug="instagram-qr-code", dtype="url", mascot="wave",
 ]
 
 PAGES += [
-dict(slug="real-estate-qr-code", dtype="url", mascot="party",
+dict(slug="real-estate-qr-code", dtype="url",
   title="Free Real Estate QR Code Generator | FreeQrly",
   desc="QR codes for real estate: listings, virtual tours, flyers, and yard signs. Free, no sign-up \u2014 one scan takes buyers to the listing.",
   kw="qr code for real estate",
@@ -232,7 +232,7 @@ def build(p):
     studio = STUDIO_H2_RE.sub(
         '<div class="shead"><div class="over">The studio</div><h2>%s</h2></div>' % p["studio_h2"], STUDIO)
     studio = studio.replace('<main class="studio" id="studio">',
-        '<main class="studio" id="studio">\n    <div class="mascot mascot-peek" aria-hidden="true"><img src="../assets/img/elephant-%s.png" alt="FreeQrly elephant mascot"></div>' % p["mascot"], 1)
+        '<main class="studio" id="studio">\n    <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>', 1)
     # studio assets live one level up
     studio = studio.replace('id="batchPanel"', 'id="batchPanel"')  # noop, keep ids
     steps_html = "\n".join(

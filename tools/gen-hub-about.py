@@ -24,7 +24,7 @@ THEME_JS = '''<script>
 </script>'''
 
 FOOT = '''<footer>
-    <div class="mascot mascot-foot" aria-hidden="true"><img src="/assets/img/elephant-party.png" alt="FreeQrly elephant mascot celebrating"></div>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly the elephant waving hello"></div>
     <p class="fline">Made quietly, in your browser.</p>
     <p class="flinks"><a href="/google-form-qr-code/">Google Form QR codes</a><a href="/wifi-qr-code/">WiFi QR codes</a><a href="/vcard-qr-code/">vCard QR codes</a><a href="/batch-qr-code/">Batch QR codes</a></p>
     <p class="flinks"><a href="/business-card-qr-code/">Business card QR codes</a><a href="/google-review-qr-code/">Google review QR codes</a><a href="/qr-code-with-logo/">QR codes with logo</a><a href="/wedding-qr-code/">Wedding QR codes</a><a href="/instagram-qr-code/">Instagram QR codes</a></p>
@@ -91,7 +91,7 @@ hub = f'''<!DOCTYPE html>
 <div class="wrap">
 {HEADER}
   <article class="article" style="max-width:880px">
-    <div class="mascot mascot-blog" aria-hidden="true"><img src="/assets/img/elephant-sleep.png" alt="FreeQrly elephant mascot reading"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="Qly thinking about your question"></div>
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Notes on <span class="hl hl-honey">QR codes</span></h1>
     <p class="lede">Short, practical guides from the studio — scanning, printing, troubleshooting, and getting the most out of a free code.</p>
@@ -158,7 +158,7 @@ about = f'''<!DOCTYPE html>
 <div class="wrap">
 {HEADER}
   <article class="article">
-    <div class="mascot mascot-blog" aria-hidden="true"><img src="/assets/img/elephant-wave.png" alt="FreeQrly elephant mascot waving"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/privacy.webp" alt="Qly protecting your privacy with a shield"></div>
     <div class="kicker" style="text-align:center">About</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">What is <span class="hl hl-mint">FreeQrly</span>?</h1>
     <p class="lede">FreeQrly is a free QR code generator with a simple idea: the tool should live in your browser, not on somebody's server. You type, it draws — nothing is uploaded, tracked, or billed.</p>

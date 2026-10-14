@@ -34,7 +34,7 @@ POSTS = [
   h1="Do QR codes <span class='hl hl-mint'>expire</span>?",
   lede="Short answer: no — at least, not the kind you make here. The longer answer is worth knowing before you print a thousand of them.",
   date="October 13, 2026",
-  mascot="sleep",
+  mascot="privacy",
   body="""
 <p>You've seen the warnings: "free QR codes expire!" Usually right next to a pricing page. So let's settle it plainly: a static QR code <strong>cannot expire</strong>. There is no clock inside those little squares. A static code is just your link, drawn as a pattern. As long as the link works, the code works — print it today, scan it in ten years.</p>
 
@@ -79,7 +79,7 @@ POSTS = [
   h1="Static vs <span class='hl hl-blush'>dynamic</span> QR codes",
   lede="One of them is free forever. The other is a subscription. Here's how to tell which one you actually need.",
   date="October 13, 2026",
-  mascot="wave",
+  mascot="faq",
   body="""
 <p>Every QR code generator wants to have the same conversation with you: <em>have you considered dynamic?</em> Before you answer, it helps to know what the two kinds actually are — and why the industry pushes one of them so hard.</p>
 
@@ -177,7 +177,7 @@ POSTS += [{'body': '\n'
              'Glance at the URL before opening, especially on codes you find in public places.')],
   'lede': 'No app required. Every modern iPhone and Android phone scans QR codes with the camera '
           "it already has. Here's how — plus what to do when nothing happens.",
-  'mascot': 'wave',
+  'mascot': 'scanner',
   'slug': 'how-to-scan-a-qr-code',
   'title': 'How to Scan a QR Code (iPhone & Android) | FreeQrly'},
  {'body': '\n'
@@ -241,7 +241,7 @@ POSTS += [{'body': '\n'
              'higher, or use SVG.')],
   'lede': "A QR code that won't scan is almost never a mystery. Run through these seven checks — "
           "in order — and you'll find the culprit in about two minutes.",
-  'mascot': 'qr',
+  'mascot': 'error',
   'slug': 'why-is-my-qr-code-not-working',
   'title': 'QR Code Not Working? 7 Fixes That Help | FreeQrly'},
  {'body': '\n'
@@ -332,7 +332,7 @@ POSTS += [{'body': '\n'
   'h1': 'The restaurant <span class="hl hl-blush">playbook</span>',
   'lede': 'Three QR codes cover 90% of what a restaurant needs: the menu, the review link, and the '
           'WiFi password. All free, all printable today.',
-  'mascot': 'party',
+  'mascot': 'faq',
   'slug': 'qr-codes-for-restaurants',
   'title': 'QR Codes for Restaurants — Free Guide | FreeQrly'},
  {'body': '\n'
@@ -375,7 +375,7 @@ POSTS += [{'body': '\n'
   'h1': 'Free codes that <span class="hl hl-mint">never</span> expire',
   'lede': "Yes, they exist — they're called static QR codes. Here's how to tell them apart from "
           'the trial-trap kind, and how to make yours in 30 seconds.',
-  'mascot': 'sleep',
+  'mascot': 'privacy',
   'slug': 'free-qr-codes-that-dont-expire',
   'title': "Free QR Codes That Never Expire | FreeQrly"}]
 
@@ -426,7 +426,7 @@ POSTS += [{'body': '\n'
              'else gets Copy.')],
   'lede': "Most online QR scanners make you upload your image to their server. Ours doesn't — the "
           'code is decoded right in your browser. Camera or image upload, free forever.',
-  'mascot': 'qr',
+  'mascot': 'scanner',
   'slug': 'scan-qr-code-online',
   'title': 'Scan QR Codes Online — Free, No App, No Upload | FreeQrly'},
  {'body': '\n'
@@ -473,7 +473,7 @@ POSTS += [{'body': '\n'
              'always.')],
   'lede': "The code is in a photo, not in front of your camera. Here's how to decode it on iPhone, "
           'Android, and desktop — no app required.',
-  'mascot': 'wave',
+  'mascot': 'scanner',
   'slug': 'scan-qr-code-from-image',
   'title': 'How to Scan a QR Code from a Picture | FreeQrly'},
  {'body': '\n'
@@ -517,7 +517,7 @@ POSTS += [{'body': '\n'
   'h1': 'QR codes for <span class="hl hl-blush">events</span>, done right',
   'lede': "Check-in lines, ticket chaos, 'where are the photos?' — a few well-placed QR codes "
           "solve the recurring event headaches. Here's the playbook.",
-  'mascot': 'party',
+  'mascot': 'wedding',
   'slug': 'qr-codes-for-events',
   'title': 'QR Codes for Events: Check-In, Tickets & More | FreeQrly'},
  {'body': '\n'
@@ -558,7 +558,7 @@ POSTS += [{'body': '\n'
   'h1': 'Wedding <span class="hl hl-honey">RSVP</span> codes, minus the chase',
   'lede': 'Half your RSVPs are late because the reply card is sitting in a drawer. A QR code on '
           'the invitation — straight to your RSVP form — fixes the biggest wedding admin headache.',
-  'mascot': 'wave',
+  'mascot': 'wedding',
   'slug': 'wedding-rsvp-qr-code',
   'title': 'Wedding RSVP QR Codes: A Complete Guide | FreeQrly'}]
 
@@ -633,7 +633,7 @@ def build(p, all_posts=None):
 <div class="wrap">
 {HEADER}
   <article class="article">
-    <div class="mascot mascot-blog" aria-hidden="true"><img src="../../assets/img/elephant-{p["mascot"]}.png" alt="FreeQrly elephant mascot"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/{p["mascot"]}.webp" alt="Qly the FreeQrly elephant mascot"></div>
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">{p["h1"]}</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">{p["lede"]}</p>
@@ -642,7 +642,7 @@ def build(p, all_posts=None):
 {p["body"]}
     </div>
     <div class="cta-card">
-      <div class="mascot" aria-hidden="true"><img src="../../assets/img/elephant-qr.png" alt="FreeQrly elephant mascot showing a QR code"></div>
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
         <h3>Try it yourself — free, no sign-up</h3>
         <p>Everything in this article works in the FreeQrly studio right now. Static codes, ten content types, PNG and SVG export.</p>
