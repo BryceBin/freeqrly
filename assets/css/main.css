@@ -77,6 +77,41 @@ h1 em{color:var(--coral)}
 .m-scan{width:104px;margin:0 auto 8px}
 .m-lp{width:110px;margin:0 auto 14px;transform:rotate(3deg)}
 .feat{position:relative}
+
+/* ===== B3 selectors: typerail + segmented + swatches + switch ===== */
+.typerail{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.typerail::-webkit-scrollbar{display:none}
+.ttab{flex-shrink:0;display:flex;align-items:center;gap:7px;padding:9px 15px;border-radius:99px;border:1.5px solid var(--line);background:#fff;font-family:inherit;font-size:13.5px;font-weight:600;color:#8a7f6a;cursor:pointer;transition:all .16s;white-space:nowrap}
+.ttab .tico{font-size:15px;line-height:1}
+.ttab:hover{border-color:#D8C9A8;color:var(--ink)}
+.ttab.on{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 4px 14px rgba(43,38,32,.2)}
+.approw{display:grid;grid-template-columns:128px 1fr;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #F3EDE0}
+.approw:last-child{border-bottom:0}
+.applabel{font-size:14px;font-weight:600}
+.applabel small{display:block;font-size:11.5px;color:#a89a7e;font-weight:400;margin-top:2px}
+.seg{display:flex;background:#F1EAD9;border-radius:11px;padding:3px;gap:2px;justify-self:start;flex-wrap:wrap;max-width:100%}
+.seg button{border:0;background:transparent;padding:8px 13px;border-radius:8px;font-size:13px;font-weight:600;color:#8a7f6a;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .16s}
+.seg button small{font-weight:400;opacity:.65;margin-left:3px;font-size:11px}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.seg button:hover:not(.on){color:var(--ink)}
+.cpair{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.cgroup{display:flex;align-items:center;gap:8px}
+.cgroup .cname{font-size:12.5px;color:#8a7f6a;font-weight:600}
+.cdots{display:flex;gap:7px;align-items:center}
+.cdot{width:32px;height:32px;border-radius:50%;cursor:pointer;border:2px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.15);position:relative;flex-shrink:0;padding:0}
+.cdot.on::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.cpick{width:32px;height:32px;border-radius:50%;border:2px dashed #C9BC9F;background:#fff;cursor:pointer;font-size:15px;color:#a89a7e;position:relative;flex-shrink:0;overflow:hidden;padding:0;font-family:inherit;line-height:1}
+.cpick input{position:absolute;opacity:0;inset:-8px;cursor:pointer}
+.sw{width:46px;height:27px;border-radius:99px;background:#DDD2B8;position:relative;cursor:pointer;transition:background .2s;border:0;flex-shrink:0;justify-self:start;padding:0}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.25);transition:left .18s}
+.sw.on{background:var(--ink)}
+.sw.on::after{left:22px}
+@media(max-width:640px){
+  .approw{grid-template-columns:1fr;gap:8px;padding:12px 0}
+  .seg{justify-self:stretch}
+  .seg button{flex:1;text-align:center}
+}
+
 /* studio */
 .studio{position:relative;background:var(--card);border-radius:28px;box-shadow:var(--shadow);padding:44px;margin:10px 0;border:1px solid var(--line)}
 .shead{margin-bottom:22px}

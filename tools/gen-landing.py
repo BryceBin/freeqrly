@@ -315,7 +315,8 @@ def build(p):
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="../assets/js/app.js"></script>
+<script src="/assets/js/vcard.js?v=b3-20261014"></script>
+<script src="../assets/js/app.js?v=b3-20261014"></script>
 </body>
 </html>
 '''

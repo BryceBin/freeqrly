@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../assets/img/favicon-elephant.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-elephant.png">
-<link rel="stylesheet" href="../assets/css/main.css?v=qly2-20261014">
+<link rel="stylesheet" href="../assets/css/main.css">
 <style>
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
@@ -78,7 +78,6 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://assets.freeqrly.com">
 </head>
 <body data-lp="wifi-qr-code" data-type="wifi">
 <div class="wrap">
@@ -106,11 +105,12 @@
     </ol>
   </section>
 <main class="studio" id="studio">
-    <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/wifi.webp" alt="Qly sharing a WiFi connection" data-studio-mascot data-mascot-default="wifi"></div>
+    <div class="mascot mascot-peek" aria-hidden="true"><img src="../assets/img/elephant-qr.png" alt="FreeQrly elephant mascot"></div>
+    <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
     <div class="shead"><div class="over">The studio</div><h2>Make your WiFi QR code</h2></div>
+    <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
     <div class="grid">
       <div>
-        <div class="types" id="tabs" role="tablist"></div>
         <div id="fields"></div>
 
         <div id="batchPanel" hidden>
@@ -120,32 +120,38 @@
             <button class="btn-solid" id="batchGo" data-i18n="bGo">Generate all</button>
             <button class="btn-ghost" id="batchZip" data-i18n="bZip" disabled>Download ZIP</button>
           </div>
+          <div class="batchHint" id="batchHint" hidden></div>
           <div class="batchGrid" id="batchGrid"></div>
         </div>
 
         <div class="fl" data-i18n="appearance">Style</div>
-        <div class="r2">
-          <div><div class="fl" style="margin-top:0" data-i18n="ink">Ink</div><div class="colorbox"><input type="color" id="fg" value="#22303F"><span class="hex" id="fgHex">#22303F</span></div></div>
-          <div><div class="fl" style="margin-top:0" data-i18n="paper">Paper</div><div class="colorbox"><input type="color" id="bgc" value="#ffffff"><span class="hex" id="bgHex">#ffffff</span></div>
-          <label class="transp"><input type="checkbox" id="transp"> <span data-i18n="transparent">Transparent background</span></label></div>
-          <div><div class="fl" data-i18n="dots">Dot style</div>
-            <select id="dots">
-              <option value="square" data-i18n="dSquare">Square</option>
-              <option value="dots" data-i18n="dRound">Round</option>
-              <option value="rounded" data-i18n="dSoft">Soft</option>
-              <option value="extra-rounded" data-i18n="dPebble">Pebble</option>
-            </select></div>
-          <div><div class="fl" data-i18n="ecc">Error correction</div>
-            <select id="ecc">
-              <option value="L" data-i18n="eL">L — light</option>
-              <option value="M" selected data-i18n="eM">M — medium</option>
-              <option value="Q" data-i18n="eQ">Q — strong</option>
-              <option value="H" data-i18n="eH">H — maximum</option>
-            </select><div class="hint" data-i18n="eccHint">Higher levels survive logos and wear.</div></div>
-        </div>
-        <div class="fl"><span data-i18n="size">Export size</span> · <span id="sizeVal">1024</span> px</div>
-        <input type="range" id="size" min="512" max="2048" step="512" value="1024" list="sizes">
-        <datalist id="sizes"><option value="512"></option><option value="1024"></option><option value="2048"></option></datalist>
+        <div class="approw"><div class="applabel"><span data-i18n="dots">Dot style</span><small data-i18n="dotsSub">QR dot shape</small></div>
+          <div class="seg" id="segDots" role="radiogroup">
+            <button data-v="square" data-i18n="dSquare">Square</button><button data-v="dots" data-i18n="dRound">Round</button><button data-v="rounded" data-i18n="dSoft">Soft</button><button data-v="extra-rounded" data-i18n="dPebble">Pebble</button>
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="ecc">Error correction</span><small data-i18n="eccSub">Higher survives wear</small></div>
+          <div class="seg" id="segEcc" role="radiogroup">
+            <button data-v="L"><span data-i18n="eL">Low</span></button><button data-v="M"><span data-i18n="eM">Medium</span></button><button data-v="Q"><span data-i18n="eQ">High</span></button><button data-v="H"><span data-i18n="eH">Max</span></button>
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="colors">Colors</span><small data-i18n="colorsSub">Tap or customize</small></div>
+          <div class="cpair">
+            <div class="cgroup"><span class="cname" data-i18n="ink">Ink</span><div class="cdots" id="fgDots">
+              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink #22303F"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink black"></button><button class="cdot" data-v="#E07856" style="background:#E07856" aria-label="Ink coral"></button><button class="cdot" data-v="#2E8B62" style="background:#2E8B62" aria-label="Ink green"></button><button class="cdot" data-v="#3A76C4" style="background:#3A76C4" aria-label="Ink blue"></button><button class="cpick" aria-label="Custom ink color">+<input type="color" id="fgPick" value="#22303F"></button>
+            </div></div>
+            <div class="cgroup"><span class="cname" data-i18n="paper">Paper</span><div class="cdots" id="bgDots">
+              <button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Paper white"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Paper cream"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Paper black"></button><button class="cpick" aria-label="Custom paper color">+<input type="color" id="bgPick" value="#ffffff"></button>
+            </div></div>
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="size">Export size</span><small><span id="sizeVal">1024</span> px</small></div>
+          <div class="seg" id="segSize" role="radiogroup">
+            <button data-v="512">512</button><button data-v="1024">1024</button><button data-v="2048">2048</button><button data-v="4096">4096</button>
+          </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="transparent">Transparent background</span><small data-i18n="transparentSub">No white base</small></div>
+          <button class="sw" id="swTransp" role="switch" aria-checked="false" aria-label="Transparent background"></button></div>
+        <!-- hidden native controls (synced by the visual UI above) -->
+        <div hidden><select id="dots"><option value="square">Square</option><option value="dots">Round</option><option value="rounded">Soft</option><option value="extra-rounded">Pebble</option></select>
+        <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
         <div style="margin-top:14px"><label class="filebtn" for="logo">＋ <span data-i18n="logo">Add your logo</span></label><input type="file" id="logo" accept="image/*" hidden></div>
         <p class="privnote" data-i18n="privnote">Everything is generated locally in your browser. Disconnect from the internet after the page loads — it still works.</p>
       </div>
@@ -162,7 +168,7 @@
   </main>
 
   <section class="faq" id="faq">
-    <h2><span class="mascot m-head" aria-hidden="true"><img loading="lazy" decoding="async" width="128" height="128" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt=""></span><span>Good to know</span></h2>
+    <h2>Good to know</h2>
     <details><summary><span>Is my WiFi password safe here?</span></summary><p>Yes. The code is drawn entirely in your browser — your password is never uploaded or stored anywhere. For extra peace of mind, load the page, disconnect from the internet, then type.</p></details>
     <details><summary><span>Which phones can scan a WiFi QR code?</span></summary><p>iPhones on iOS 11+ join straight from the Camera app; most Android phones on Android 10+ do the same from the camera or WiFi settings. No extra app needed.</p></details>
     <details><summary><span>Does it work with WPA3 or hidden networks?</span></summary><p>Choose the security type that matches your router (WPA, WPA2, WEP, or open). Enter a hidden network's name exactly and it connects the same way.</p></details>
@@ -178,8 +184,7 @@
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=contact-20261014"></script>
-<script src="../assets/js/app.js?v=contact-20261014"></script>
-<div id="downloadMascot" hidden class="mascot m-foot" aria-hidden="true"><img loading="eager" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/success.webp" alt="Qly celebrating a successful download"></div>
+<script src="/assets/js/vcard.js?v=b3-20261014"></script>
+<script src="../assets/js/app.js?v=b3-20261014"></script>
 </body>
 </html>
