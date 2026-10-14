@@ -107,7 +107,7 @@
 <main class="studio" id="studio">
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
-    <div class="shead"><div><div class="over" data-i18n="sOver">The studio</div><h2 data-i18n="sTitle">Create your QR code</h2></div><p class="privnote privnote-head" data-i18n="privnote">Everything is generated locally in your browser.</p></div>
+    <div class="shead"><div><h2 data-i18n="sTitle">Create your QR code</h2></div></div>
     <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
     <div class="grid">
       <div>
@@ -136,22 +136,12 @@
         <div class="approw"><div class="applabel"><span data-i18n="colors">Colors</span><small data-i18n="colorsSub">Tap or customize</small></div>
           <div class="cpair">
             <div class="cgroup"><span class="cname" data-i18n="ink">Ink</span><div class="cdots" id="fgDots">
-              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink #22303F"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink black"></button><button class="cdot" data-v="#E07856" style="background:#E07856" aria-label="Ink coral"></button><button class="cdot" data-v="#2E8B62" style="background:#2E8B62" aria-label="Ink green"></button><button class="cdot" data-v="#3A76C4" style="background:#3A76C4" aria-label="Ink blue"></button><button class="cpick" aria-label="Custom ink color">+<input type="color" id="fgPick" value="#22303F"></button>
+              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink"></button><button class="cdot" data-v="#B4563C" style="background:#B4563C" aria-label="Ink"></button><button class="cdot" data-v="#2F6B4F" style="background:#2F6B4F" aria-label="Ink"></button><button class="cdot" data-v="#2F4B7C" style="background:#2F4B7C" aria-label="Ink"></button><button class="cpick" aria-label="Custom ink color">+<input type="color" id="fgPick" value="#22303F"></button>
             </div></div>
-            <div class="cgroup"><span class="cname" data-i18n="paper">Paper</span><div class="cdots" id="bgDots">
-              <button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Paper white"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Paper cream"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Paper black"></button><button class="cpick" aria-label="Custom paper color">+<input type="color" id="bgPick" value="#ffffff"></button>
+            <div class="cgroup"><span class="cname" data-i18n="background">Background</span><div class="cdots" id="bgDots">
+              <button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Background"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Background"></button><button class="cdot" data-v="#EDE6D6" style="background:#EDE6D6" aria-label="Background"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Background"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Background"></button><button class="cdot ctransp" data-v="transparent" aria-label="Transparent background"></button><button class="cpick" aria-label="Custom background color">+<input type="color" id="bgPick" value="#ffffff"></button>
             </div></div>
           </div></div>
-        <div class="approw"><div class="applabel"><span data-i18n="size">Export size</span><small><span id="sizeVal">1024</span> px</small></div>
-          <div class="seg" id="segSize" role="radiogroup">
-            <button data-v="512">512</button><button data-v="1024">1024</button><button data-v="2048">2048</button><button data-v="4096">4096</button>
-          </div></div>
-        <div class="approw"><div class="applabel"><span data-i18n="transparent">Transparent background</span><small data-i18n="transparentSub">No white base</small></div>
-          <button class="sw" id="swTransp" role="switch" aria-checked="false" aria-label="Transparent background"></button></div>
-        <!-- hidden native controls (synced by the visual UI above) -->
-        <div hidden><select id="dots"><option value="square">Square</option><option value="dots">Round</option><option value="rounded">Soft</option><option value="extra-rounded">Pebble</option></select>
-        <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
         <div class="approw"><div class="applabel"><span data-i18n="logo">Logo</span><small data-i18n="logoSub">Brand or your own</small></div>
           <div class="logorow" id="logoRow">
             <button class="logopick" data-preset="apple" aria-label="Apple"><img src="/assets/img/logos/apple.svg" alt="Apple" loading="lazy"></button>
@@ -163,6 +153,14 @@
             <label class="logopick logoupload" for="logo" aria-label="Upload logo">+<input type="file" id="logo" accept="image/*" hidden></label>
             <button class="logopick logoclear" id="logoClear" aria-label="Remove logo">✕</button>
           </div></div>
+        <div class="approw"><div class="applabel"><span data-i18n="size">Export size</span><small><span id="sizeVal">1024</span> px</small></div>
+          <div class="seg" id="segSize" role="radiogroup">
+            <button data-v="512">512</button><button data-v="1024">1024</button><button data-v="2048">2048</button><button data-v="4096">4096</button>
+          </div></div>
+        <!-- hidden native controls (synced by the visual UI above) -->
+        <div hidden><select id="dots"><option value="square">Square</option><option value="dots">Round</option><option value="rounded">Soft</option><option value="extra-rounded">Pebble</option></select>
+        <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">

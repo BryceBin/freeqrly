@@ -89,12 +89,15 @@ h1 em{color:var(--coral)}
 .logopick.logoclear.show{display:flex}
 
 /* ===== B3 selectors: typerail + segmented + swatches + switch ===== */
-.typerail{display:flex;gap:8px;flex-wrap:wrap;padding:4px 2px 16px}
-@media(max-width:900px){
+.typerail{display:flex;gap:6px;flex-wrap:nowrap;padding:4px 2px 16px}
+@media(max-width:1100px){
+  .typerail{flex-wrap:wrap}
+}
+@media(max-width:640px){
   .typerail{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .typerail::-webkit-scrollbar{display:none}
 }
-.ttab{flex-shrink:0;display:flex;align-items:center;gap:7px;padding:9px 15px;border-radius:99px;border:1.5px solid var(--line);background:#fff;font-family:inherit;font-size:13.5px;font-weight:600;color:#8a7f6a;cursor:pointer;transition:all .16s;white-space:nowrap}
+.ttab{flex-shrink:1;min-width:0;flex-shrink:0;display:flex;align-items:center;gap:7px;padding:9px 15px;border-radius:99px;border:1.5px solid var(--line);background:#fff;font-family:inherit;font-size:13.5px;font-weight:600;color:#8a7f6a;cursor:pointer;transition:all .16s;white-space:nowrap}
 .ttab .tico{font-size:15px;line-height:1}
 .ttab:hover{border-color:#D8C9A8;color:var(--ink)}
 .ttab.on{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 4px 14px rgba(43,38,32,.2)}
@@ -102,8 +105,8 @@ h1 em{color:var(--coral)}
 .approw:last-child{border-bottom:0}
 .applabel{font-size:14px;font-weight:600}
 .applabel small{display:block;font-size:11.5px;color:#a89a7e;font-weight:400;margin-top:2px}
-.seg{display:flex;background:#F1EAD9;border-radius:11px;padding:3px;gap:2px;justify-self:start;flex-wrap:wrap;max-width:100%}
-.seg button{border:0;background:transparent;padding:8px 13px;border-radius:8px;font-size:13px;font-weight:600;color:#8a7f6a;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .16s}
+.seg{display:flex;background:#F1EAD9;border-radius:11px;padding:3px;gap:2px;width:100%;max-width:100%}
+.seg button{border:0;background:transparent;padding:8px 6px;border-radius:8px;font-size:13px;font-weight:600;color:#8a7f6a;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .16s;flex:1;text-align:center}
 .seg button small{font-weight:400;opacity:.65;margin-left:3px;font-size:11px}
 .seg button.on{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.12)}
 .seg button:hover:not(.on){color:var(--ink)}
@@ -386,3 +389,24 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 .fglabel{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#b3a68c;font-weight:600}
 .fgroup a{color:#7a6f5c;text-decoration:none}
 .fgroup a:hover{color:var(--coral)}
+
+.cdot.ctransp{background:repeating-conic-gradient(#d8d2c4 0% 25%, #ffffff 0% 50%) 50% / 12px 12px;border:1.5px dashed #b3a68c}
+.cdot.ctransp.on{border:2px solid var(--ink)}
+.privnote-foot{margin:18px 0 0;text-align:right;font-size:12px;color:#a89a7e}
+
+/* custom color picker popover */
+.cpop{position:fixed;z-index:100;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 12px 40px rgba(60,50,35,.18);width:230px}
+.cpop-sat{position:relative;height:140px;border-radius:10px;cursor:crosshair;background:linear-gradient(to top,#000,transparent),linear-gradient(to right,#fff,transparent),hsl(0,100%,50%)}
+.cpop-sat-dot{position:absolute;width:14px;height:14px;border-radius:50%;border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);transform:translate(-50%,-50%);pointer-events:none}
+.cpop-hue{position:relative;height:12px;border-radius:7px;margin-top:10px;cursor:pointer;background:linear-gradient(to right,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00)}
+.cpop-hue-dot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);transform:translate(-50%,-50%);pointer-events:none}
+.cpop-row{display:flex;gap:8px;margin-top:10px;align-items:center}
+.cpop-preview{width:32px;height:32px;border-radius:9px;border:1px solid var(--line);flex-shrink:0}
+.cpop-hex{flex:1;border:1.5px solid var(--line);border-radius:9px;padding:7px 10px;font-size:13px;font-family:ui-monospace,monospace;text-transform:uppercase;color:var(--ink);background:#FFFEFA;min-width:0}
+.cpop-hex:focus{outline:none;border-color:var(--coral)}
+.cpop-ok{border:0;background:var(--ink);color:#fff;width:32px;height:32px;border-radius:9px;cursor:pointer;font-size:15px;flex-shrink:0}
+
+.dtpair{display:flex;gap:8px}
+.dtpair input{flex:1;min-width:0}
+.dtpair input[type="date"],.dtpair input[type="time"]{position:relative}
+.dtpair input::-webkit-calendar-picker-indicator{opacity:.5;cursor:pointer}
