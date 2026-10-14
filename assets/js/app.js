@@ -228,7 +228,7 @@ function dotsInit(){
   document.querySelectorAll(".cpick").forEach(btn=>{
     btn.addEventListener("click",e=>{
       e.preventDefault();
-      const isFg = btn.querySelector("#fgPick");
+      const isFg = btn.dataset.kind === "fg";
       const hidden = $(isFg ? "fg" : "bgc");
       const dotsId = isFg ? "fgDots" : "bgDots";
       window.openColorPicker(btn, hidden?hidden.value:"#22303F", (hex)=>{
