@@ -139,7 +139,7 @@
               <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink"></button><button class="cdot" data-v="#B4563C" style="background:#B4563C" aria-label="Ink"></button><button class="cdot" data-v="#2F6B4F" style="background:#2F6B4F" aria-label="Ink"></button><button class="cdot" data-v="#2F4B7C" style="background:#2F4B7C" aria-label="Ink"></button><button class="cpick" aria-label="Custom ink color">+<input type="color" id="fgPick" value="#22303F"></button>
             </div></div>
             <div class="cgroup"><span class="cname" data-i18n="background">Background</span><div class="cdots" id="bgDots">
-              <button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Background"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Background"></button><button class="cdot" data-v="#EDE6D6" style="background:#EDE6D6" aria-label="Background"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Background"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Background"></button><button class="cdot ctransp" data-v="transparent" aria-label="Transparent background"></button><button class="cpick" aria-label="Custom background color">+<input type="color" id="bgPick" value="#ffffff"></button>
+              <button class="cdot ctransp on" data-v="transparent" aria-label="Transparent background"></button><button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Background"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Background"></button><button class="cdot" data-v="#EDE6D6" style="background:#EDE6D6" aria-label="Background"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Background"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Background"></button><button class="cpick" aria-label="Custom background color">+<input type="color" id="bgPick" value="#ffffff"></button>
             </div></div>
           </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="logo">Logo</span><small data-i18n="logoSub">Brand or your own</small></div>
@@ -151,7 +151,7 @@
             <button class="logopick" data-preset="google" aria-label="Google"><img src="/assets/img/logos/google.svg" alt="Google" loading="lazy"></button>
             <button class="logopick" data-preset="microsoft" aria-label="Microsoft"><img src="/assets/img/logos/microsoft.svg" alt="Microsoft" loading="lazy"></button>
             <label class="logopick logoupload" for="logo" aria-label="Upload logo">+<input type="file" id="logo" accept="image/*" hidden></label>
-            <button class="logopick logoclear" id="logoClear" aria-label="Remove logo">✕</button>
+            
           </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="size">Export size</span><small><span id="sizeVal">1024</span> px</small></div>
           <div class="seg" id="segSize" role="radiogroup">
@@ -160,7 +160,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Square</option><option value="dots">Round</option><option value="rounded">Soft</option><option value="extra-rounded">Pebble</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">

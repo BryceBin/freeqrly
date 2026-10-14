@@ -15,7 +15,7 @@ en:{
   sOver:"The studio",sTitle:"Create your QR code",
   appearance:"Style",ink:"Ink",paper:"Paper",background:"Background",dots:"Dot style",ecc:"Error correction",
   dSquare:"Square",dRound:"Round",dSoft:"Soft",dPebble:"Pebble",
-  eL:"Low",eM:"Medium",eQ:"Quartile",eH:"High",
+  eL:"Low",eM:"Medium",eQ:"High",eH:"Max",
   eccHint:"Higher levels survive logos and wear.",dotsSub:"QR dot shape",eccSub:"Higher survives wear",colors:"Colors",colorsSub:"Tap or customize",transparentSub:"No white base",
   size:"Export size",logo:"Add your logo",logoSub:"Brand or your own",
   privnote:"Everything is generated locally in your browser.",
@@ -52,7 +52,7 @@ zh:{
   sOver:"工作台",sTitle:"做一张二维码",
   appearance:"外观样式",ink:"墨色",paper:"纸色",background:"背景",dots:"码点形状",ecc:"容错等级",
   dSquare:"方形",dRound:"圆形",dSoft:"柔和",dPebble:"鹅卵石",
-  eL:"低",eM:"中",eQ:"高",eH:"最高",
+  eL:"Bajo",eM:"Medio",eQ:"Alto",eH:"Máximo",
   eccHint:"容错越高，越耐磨损、越适合加 Logo。",dotsSub:"二维码点的样式",eccSub:"越高越耐磨损",colors:"颜色",colorsSub:"点选或自定义",transparentSub:"去掉白色底",
   size:"导出尺寸",logo:"添加 Logo",logoSub:"品牌或自定义",
   privnote:"所有生成都在你的浏览器里完成。",
@@ -390,19 +390,17 @@ function setLogo(dataURL, preset){
     const seg=$("segEcc"); if(seg){ seg.querySelectorAll("button").forEach(b=>b.classList.toggle("on", b.dataset.v==="Q")); }
   }
   document.querySelectorAll("#logoRow .logopick[data-preset]").forEach(b=>b.classList.toggle("on", b.dataset.preset===preset));
-  const clr=$("logoClear"); if(clr) clr.classList.toggle("show", !!logoData);
   draw(); if(cur==="batch") renderBatch();
 }
 document.querySelectorAll("#logoRow .logopick[data-preset]").forEach(b=>b.addEventListener("click", async ()=>{
+  const cur = b.classList.contains("on");
+  if(cur){ setLogo(null, null); return; }  // toggle off
   try{
-    const res = await fetch("/assets/img/logos/"+b.dataset.preset+"@2x.png");
-    const blob = await res.blob();
-    const r = new FileReader();
-    r.onload = ()=> setLogo(r.result, b.dataset.preset);
-    r.readAsDataURL(blob);
+    const res = await fetch("/assets/img/logos/"+b.dataset.preset+".svg");
+    const txt = await res.text();
+    setLogo("data:image/svg+xml;charset=utf-8,"+encodeURIComponent(txt), b.dataset.preset);
   }catch(e){ /* offline: ignore */ }
 }));
-const _lc=$("logoClear"); if(_lc) _lc.addEventListener("click",()=>setLogo(null,null));
 $("logo").addEventListener("change",e=>{
   const f=e.target.files[0]; if(!f) return;
   const r=new FileReader();
