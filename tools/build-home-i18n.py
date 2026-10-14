@@ -65,6 +65,9 @@ for lang in LANGS:
         url = "https://freeqrly.com/" if l == 'en' else f"https://freeqrly.com/{l}/"
         h = re.sub(f'hreflang="{l}" href="[^"]*"', f'hreflang="{l}" href="{url}"', h)
 
+    # Fix asset paths: relative -> absolute (page lives in /{lang}/)
+    h = re.sub(r'((?:href|src)=")assets/', r'\1/assets/', h)
+
     # Write to /{lang}/index.html
     outdir = os.path.join(SITE, lang)
     os.makedirs(outdir, exist_ok=True)
