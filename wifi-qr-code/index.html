@@ -119,6 +119,8 @@
           <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
           <div class="fl batchFmt" id="batchFmt"></div>
           <div class="batchActions">
+            <label class="btn-ghost fileBtn"><span data-i18n="bUpload">Upload CSV / Excel</span><input type="file" id="batchFile" accept=".csv,.xlsx,.xls" hidden></label>
+            <button class="btn-ghost" id="batchTemplate" data-i18n="bTemplate">Download template</button>
             <button class="btn-solid" id="batchGo" data-i18n="bGo">Generate all</button>
             <button class="btn-ghost" id="batchZip" data-i18n="bZip" disabled>Download ZIP</button>
           </div>

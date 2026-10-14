@@ -418,3 +418,5 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 
 .batchTypeSel{border:1.5px solid var(--line);border-radius:8px;padding:4px 8px;font-size:13px;background:var(--card);color:var(--ink);margin-left:4px}
 .batchFmt{font-size:12px;color:var(--soft);font-family:ui-monospace,monospace;margin-top:4px}
+
+.fileBtn{cursor:pointer;display:inline-flex;align-items:center}
