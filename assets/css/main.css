@@ -63,19 +63,20 @@ h1 em{color:var(--coral)}
 .herocard .v.ok{color:var(--mint)}
 .herocard .row:nth-child(1) .v{color:var(--honey)}
 .herocard .row:nth-child(2) .v{color:var(--sky)}
-/* mascot */
-.mascot{flex-shrink:0;pointer-events:none}
+/* Qly — transparent character art, grounded with soft shadow */
+.mascot{flex-shrink:0;pointer-events:none;line-height:0}
 .mascot[hidden]{display:none}
-.mascot img{display:block;width:100%;height:100%;object-fit:contain}
-.mascot-herocard{position:absolute;top:-56px;right:-14px;width:102px;height:102px;transform:rotate(-6deg);z-index:2}
-.mascot-peek{position:absolute;top:-64px;right:30px;width:118px;height:118px;transform:rotate(6deg);z-index:2}
-.mascot-foot{width:66px;height:66px;margin:0 auto 8px;transform:rotate(3deg)}
-.mascot-blog{width:160px;height:160px;margin:0 auto 18px;transform:rotate(-4deg)}
-/* Contextual mascot illustrations stay outside functional QR previews. */
-.mascot-section{width:92px;height:92px;margin:0 auto 12px}
-.mascot-privacy{width:84px;height:84px;margin-bottom:12px}
-.mascot-state{width:84px;height:84px;float:right;margin:0 0 12px 16px}
-.mascot-download{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));width:128px;height:128px;z-index:20}
+.mascot img{display:block;width:100%;height:auto;filter:drop-shadow(0 12px 16px rgba(47,74,98,.13))}
+.m-herocard{position:absolute;top:-52px;right:-12px;width:98px;transform:rotate(-6deg);z-index:2}
+.m-peek{position:absolute;top:-60px;right:28px;width:112px;transform:rotate(5deg);z-index:2}
+.m-card{position:absolute;top:14px;right:14px;width:54px;transform:rotate(6deg)}
+.m-prin{width:76px;margin:0 auto 14px;transform:rotate(-3deg)}
+.m-head{width:54px;display:inline-block;vertical-align:-14px;margin-right:10px;transform:rotate(-4deg)}
+.m-foot{width:68px;margin:0 auto 10px;transform:rotate(3deg)}
+.m-blog{width:132px;margin:0 auto 16px;transform:rotate(-3deg)}
+.m-scan{width:104px;margin:0 auto 8px}
+.m-lp{width:110px;margin:0 auto 14px;transform:rotate(3deg)}
+.feat{position:relative}
 /* studio */
 .studio{position:relative;background:var(--card);border-radius:28px;box-shadow:var(--shadow);padding:44px;margin:10px 0;border:1px solid var(--line)}
 .shead{margin-bottom:22px}
@@ -188,7 +189,6 @@ footer .tiny{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:
 .prose strong{font-weight:700}
 .prose blockquote{border-left:4px solid var(--honey);background:var(--honeybg);border-radius:0 14px 14px 0;padding:16px 22px;margin:0 0 1.4em;font-family:Georgia,serif;font-style:italic;font-size:18px}
 .cta-card{margin:44px 0;background:var(--mintbg);border:1px solid var(--mint);border-radius:22px;padding:30px 32px;display:flex;gap:20px;align-items:center}
-.cta-card .mascot{width:84px;height:84px}
 .cta-card h3{font-family:Georgia,serif;font-weight:400;font-size:21px;margin-bottom:8px}
 .cta-card p{font-size:14.5px;color:var(--soft);margin-bottom:14px;line-height:1.6}
 .cta-card a.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;border-radius:14px;padding:12px 26px}
@@ -229,7 +229,9 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
   .lede{font-size:15px;margin-top:12px}
   .hero{padding:24px 0 18px;gap:0}
   .herocard{display:none}
-  .mascot-peek{width:84px;height:84px;top:-46px;right:14px}
+  .m-peek{width:88px;top:-46px;right:16px}
+  .m-herocard{width:76px;top:-40px;right:-8px}
+  .m-card{width:44px}
   .studio{padding:26px 18px;border-radius:22px;margin:6px 0}
   .shead{margin-bottom:14px}
   .shead h2{font-size:24px}
