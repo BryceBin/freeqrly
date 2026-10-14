@@ -134,7 +134,7 @@ function content(){
     case "url": return v("url")||"https://example.com";
     case "text": return v("text")||" ";
     case "wifi": return `WIFI:T:${v("enc")};S:${v("ssid")};P:${v("pass")};;`;
-    case "vcard": return `BEGIN:VCARD\nVERSION:3.0\nN:${v("name")}\nTEL:${v("phone")}\nEMAIL:${v("email")}\nEND:VCARD`;
+    case "vcard": return FreeQrlyVCard.build({name:v("name"),phone:v("phone"),email:v("email")});
     case "email": return `mailto:${v("to")}?subject=${encodeURIComponent(v("subject"))}&body=${encodeURIComponent(v("body"))}`;
     case "sms": return `sms:${v("phone")}?body=${encodeURIComponent(v("body"))}`;
     case "phone": return `tel:${v("phone")}`;
