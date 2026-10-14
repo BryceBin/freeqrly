@@ -1,0 +1,92 @@
+{
+  "baseUrl": "https://assets.freeqrly.com/mascots/v1/",
+  "width": 512,
+  "height": 512,
+  "format": "webp",
+  "assets": [
+    {
+      "name": "home-welcome",
+      "bytes": 31332,
+      "sha256": "1f254eb1b31fcee12e702b21fcfe8a0abe5da29e439d691744578f53a7287eda",
+      "key": "mascots/v1/home-welcome.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/home-welcome.webp"
+    },
+    {
+      "name": "studio-qr",
+      "bytes": 39592,
+      "sha256": "b5e31d6986bc52a6edb977dd0e76f35caae9e4bb005d685e3c4019dafda66f97",
+      "key": "mascots/v1/studio-qr.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/studio-qr.webp"
+    },
+    {
+      "name": "scanner",
+      "bytes": 41080,
+      "sha256": "c0735adc44429aa41bb7aaf9eb66a8f2233826d0e90893c0bd5344d3414e7c6b",
+      "key": "mascots/v1/scanner.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/scanner.webp"
+    },
+    {
+      "name": "batch",
+      "bytes": 42070,
+      "sha256": "9efb576d5cf7ce4b9261d1f878fd8ce1576b937b5996b632496e1c55e12c5044",
+      "key": "mascots/v1/batch.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/batch.webp"
+    },
+    {
+      "name": "privacy",
+      "bytes": 32814,
+      "sha256": "6d7084d78cedfa644eb20a5e8a495458cdf015a05297adf952a789aa73d399a4",
+      "key": "mascots/v1/privacy.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/privacy.webp"
+    },
+    {
+      "name": "success",
+      "bytes": 35204,
+      "sha256": "b40cd76b80491fbe6edf896e7f779a882bc064159ad26c9f045a8a691024a7af",
+      "key": "mascots/v1/success.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/success.webp"
+    },
+    {
+      "name": "faq",
+      "bytes": 34710,
+      "sha256": "f33e2a5f3f6a0e766a486db17fc44cbe65f4c49620002034c7e00068b30cb994",
+      "key": "mascots/v1/faq.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/faq.webp"
+    },
+    {
+      "name": "error",
+      "bytes": 38842,
+      "sha256": "27972f267a6d8afd08b0d71447653f8b58392b343a5a96597d8af6a3667f59d1",
+      "key": "mascots/v1/error.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/error.webp"
+    },
+    {
+      "name": "wifi",
+      "bytes": 35178,
+      "sha256": "012ba2691dca6dffddfed34e0fbb27d00f533ae0a224eb89d6dec564e617b329",
+      "key": "mascots/v1/wifi.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/wifi.webp"
+    },
+    {
+      "name": "business-card",
+      "bytes": 34862,
+      "sha256": "9d7aa37629425aabf123f6a193febbcc2c0c38f2d60f02fceb8d96eefdfa164a",
+      "key": "mascots/v1/business-card.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/business-card.webp"
+    },
+    {
+      "name": "wedding",
+      "bytes": 34774,
+      "sha256": "4a09e63c446a74835753a511671dca416df9d17b395afd2db315a7304a225b25",
+      "key": "mascots/v1/wedding.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/wedding.webp"
+    },
+    {
+      "name": "logo-customize",
+      "bytes": 41952,
+      "sha256": "f32208714d3ea39a06cbce0ba5d067399e648025aff0bc8eeec33792c0140394",
+      "key": "mascots/v1/logo-customize.webp",
+      "url": "https://assets.freeqrly.com/mascots/v1/logo-customize.webp"
+    }
+  ]
+}

@@ -163,7 +163,23 @@ function draw(){
   const qr = new QRCodeStyling(styleOpts(236));
   $("qrbox").innerHTML=""; qr.append($("qrbox"));
 }
+const MASCOT_BASE="https://assets.freeqrly.com/mascots/v1/";
+let mascotTimer;
+function showMascotState(state){
+  const box=$("downloadMascot"); if(!box) return;
+  box.querySelector("img").src=MASCOT_BASE+state+".webp";
+  box.hidden=false;
+  clearTimeout(mascotTimer);
+  mascotTimer=setTimeout(()=>{box.hidden=true;},2500);
+}
+function updateStudioMascot(){
+  const image=document.querySelector("[data-studio-mascot]"); if(!image) return;
+  const poses={wifi:"wifi",vcard:"business-card",event:"wedding",batch:"batch"};
+  const pose=poses[cur] || image.getAttribute("data-mascot-default") || "studio-qr";
+  image.src=MASCOT_BASE+pose+".webp";
+}
 function renderTabs(){
+  updateStudioMascot();
   const t = $("tabs"); t.innerHTML="";
   ORDER.forEach(k=>{
     const [name, sub] = I18N[lang].types[k];
@@ -223,7 +239,7 @@ function renderBatch(){
     qr.append(qd);
     const lab = document.createElement("div"); lab.className="blabel"; lab.textContent = it.length>42 ? it.slice(0,42)+"…" : it; cell.appendChild(lab);
     const btn = document.createElement("button"); btn.textContent = I18N[lang].dl+" PNG";
-    btn.onclick = ()=> new QRCodeStyling(Object.assign(styleOpts(1024),{data:it})).download({name:"qr-"+(i+1),extension:"png"});
+    btn.onclick = ()=> new QRCodeStyling(Object.assign(styleOpts(1024),{data:it})).download({name:"qr-"+(i+1),extension:"png"}).then(()=>showMascotState("success")).catch(()=>showMascotState("error"));
     cell.appendChild(btn); grid.appendChild(cell);
   });
   $("batchZip").disabled = batchItems.length===0;
@@ -237,6 +253,7 @@ $("batchGo").onclick = ()=>{
     const ta = $("batchInput");
     ta.classList.remove("shake"); void ta.offsetWidth; ta.classList.add("shake");
     ta.focus();
+    showMascotState("error");
     return;
   }
   hint.hidden = true;
@@ -253,6 +270,7 @@ $("batchZip").onclick = async ()=>{ track("batch_zip",{count:batchItems.length})
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob); a.download = "freeqrly-batch.zip"; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+  showMascotState("success");
 };
 /* privacy-first analytics: fire-and-forget, no cookies/ids */
 function track(event, props){
@@ -302,8 +320,19 @@ $("logo").addEventListener("change",e=>{
   r.onload=()=>{ logoData=r.result; if(["L","M"].includes($("ecc").value)) $("ecc").value="Q"; draw(); if(cur==="batch") renderBatch(); };
   r.readAsDataURL(f);
 });
-$("dlPng").onclick=()=>{ saveHist(); track("qr_download",{type:cur,format:"png"}); new QRCodeStyling(styleOpts(parseInt($("size").value)||1024)).download({name:"freeqrly",extension:"png"}); };
-$("dlSvg").onclick=()=>{ saveHist(); track("qr_download",{type:cur,format:"svg"}); new QRCodeStyling(styleOpts(1024)).download({name:"freeqrly",extension:"svg"}); };
+async function downloadQR(format){
+  const button=$(format==="png"?"dlPng":"dlSvg");
+  button.disabled=true;
+  try{
+    const px=format==="png"?(parseInt($("size").value)||1024):1024;
+    await new QRCodeStyling(styleOpts(px)).download({name:"freeqrly",extension:format});
+    saveHist(); track("qr_download",{type:cur,format:format});
+    showMascotState("success");
+  }catch(e){showMascotState("error");}
+  finally{button.disabled=false;}
+}
+$("dlPng").onclick=()=>downloadQR("png");
+$("dlSvg").onclick=()=>downloadQR("svg");
 const _tp=$("transp"); if(_tp) _tp.addEventListener("change",()=>{ $("bgc").disabled=_tp.checked; draw(); });
 const _hc=$("histClear"); if(_hc) _hc.onclick=()=>{ try{localStorage.removeItem(HIST_KEY);}catch(e){} renderHist(); };
 /* theme */

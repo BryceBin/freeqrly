@@ -78,6 +78,7 @@
   ]
 }
 </script>
+<link rel="preconnect" href="https://assets.freeqrly.com">
 </head>
 <body data-lp="qr-code-with-logo" data-type="url">
 <div class="wrap">
@@ -105,8 +106,7 @@
     </ol>
   </section>
 <main class="studio" id="studio">
-    <div class="mascot mascot-peek" aria-hidden="true"><img src="../assets/img/elephant-qr.png" alt="FreeQrly elephant mascot"></div>
-    <div class="mascot mascot-peek" aria-hidden="true"><img src="assets/img/elephant-qr.png" alt="FreeQrly elephant mascot showing a QR code"></div>
+    <div class="mascot mascot-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/logo-customize.webp" alt="Qly customizing a QR code with a paintbrush" data-studio-mascot data-mascot-default="logo-customize"></div>
     <div class="shead"><div class="over">The studio</div><h2>Make your logo QR code</h2></div>
     <div class="grid">
       <div>
@@ -162,6 +162,7 @@
   </main>
 
   <section class="faq" id="faq">
+    <div class="mascot mascot-section" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="Qly thinking about your question"></div>
     <h2>Good to know</h2>
     <details><summary><span>Will the code still scan with a logo on it?</span></summary><p>Yes. Uploading a logo automatically raises error correction to High, which reserves up to 30% of the pattern for recovery — that is where your logo sits.</p></details>
     <details><summary><span>What logo file works best?</span></summary><p>A square PNG with a transparent background. Avoid fine text inside the logo — bold shapes read better at small sizes.</p></details>
@@ -179,5 +180,6 @@
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
 <script src="../assets/js/app.js"></script>
+<div id="downloadMascot" hidden class="mascot mascot-download" aria-hidden="true"><img loading="eager" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/success.webp" alt="Qly celebrating a successful download"></div>
 </body>
 </html>
