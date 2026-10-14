@@ -264,3 +264,7 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
 #scanVideo{width:100%;border-radius:18px;background:#1a1a1a;display:none}
 .scanresult{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:16px;word-break:break-all;font-size:14.5px;line-height:1.6}
 .scanresult .fl{margin-top:0}
+
+.batchHint{color:#b3402e;font-size:13px;margin:8px 0 0;font-weight:600}
+textarea.shake{animation:shake .3s;border-color:#b3402e !important}
+@keyframes shake{25%{transform:translateX(-4px)}50%{transform:translateX(4px)}75%{transform:translateX(-2px)}}
