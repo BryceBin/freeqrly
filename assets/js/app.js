@@ -233,6 +233,22 @@ function dotsInit(){
       const dotsId = isFg ? "fgDots" : "bgDots";
       window.openColorPicker(btn, hidden?hidden.value:"#22303F", (hex)=>{
         if(hidden){ hidden.value=hex; hidden.dispatchEvent(new Event("input",{bubbles:true})); }
+        // Add or update a custom color dot in the options
+        const box=document.getElementById(dotsId);
+        let custom = box ? box.querySelector(".cdot.custom") : null;
+        if(box && !custom){
+          custom=document.createElement("button");
+          custom.type="button"; custom.className="cdot custom";
+          custom.setAttribute("aria-label","Custom color");
+          box.insertBefore(custom, box.querySelector(".cpick"));
+          custom.addEventListener("click",()=>{
+            if(hidden){ hidden.value=custom.dataset.v; hidden.dispatchEvent(new Event("input",{bubbles:true})); }
+            dotsInit._mark(dotsId, custom.dataset.v);
+            const transp=$("transp"); if(transp && !isFg) transp.checked=false;
+            draw();
+          });
+        }
+        if(custom){ custom.dataset.v=hex; custom.style.background=hex; custom.title=hex; }
         dotsInit._mark(dotsId, hex);
         const transp=$("transp"); if(transp && !isFg) transp.checked=false;
         draw();
