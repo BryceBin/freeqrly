@@ -78,6 +78,7 @@
   ]
 }
 </script>
+<link rel="preconnect" href="https://assets.freeqrly.com">
 </head>
 <body data-lp="wedding-qr-code" data-type="url">
 <div class="wrap">
@@ -105,8 +106,7 @@
     </ol>
   </section>
 <main class="studio" id="studio">
-    <div class="mascot mascot-peek" aria-hidden="true"><img src="../assets/img/elephant-wave.png" alt="FreeQrly elephant mascot"></div>
-    <div class="mascot mascot-peek" aria-hidden="true"><img src="assets/img/elephant-qr.png" alt="FreeQrly elephant mascot showing a QR code"></div>
+    <div class="mascot mascot-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/wedding.webp" alt="Qly holding a wedding invitation" data-studio-mascot data-mascot-default="wedding"></div>
     <div class="shead"><div class="over">The studio</div><h2>Make your wedding QR code</h2></div>
     <div class="grid">
       <div>
@@ -162,6 +162,7 @@
   </main>
 
   <section class="faq" id="faq">
+    <div class="mascot mascot-section" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="Qly thinking about your question"></div>
     <h2>Good to know</h2>
     <details><summary><span>What do couples usually link to?</span></summary><p>RSVP forms, shared photo albums (guests upload their shots), digital menus, seating charts, and the gift registry.</p></details>
     <details><summary><span>Can I match my wedding colors?</span></summary><p>Yes — set any ink and paper color. Just keep strong contrast between the code and background so phones read it in dim venues.</p></details>
@@ -179,5 +180,6 @@
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
 <script src="../assets/js/app.js"></script>
+<div id="downloadMascot" hidden class="mascot mascot-download" aria-hidden="true"><img loading="eager" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/success.webp" alt="Qly celebrating a successful download"></div>
 </body>
 </html>
