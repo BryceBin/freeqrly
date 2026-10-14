@@ -513,7 +513,7 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     pop.hidden=false;
     const r=anchorBtn.getBoundingClientRect();
     pop.style.left=Math.min(window.innerWidth-250, Math.max(10, r.left-100))+"px";
-    pop.style.top=(r.bottom+8+window.scrollY)+"px";
+    pop.style.top=Math.min(window.innerHeight-320, r.bottom+8)+"px";
   };
 })();
 
