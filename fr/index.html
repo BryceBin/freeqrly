@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3u-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 <script type="application/ld+json">
@@ -197,7 +197,13 @@
       <div class="previewCol">
         <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
         <div class="livenote" data-i18n="live">Aperçu en direct — change à la frappe</div>
-        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button></div>
+        <div class="frameRow">
+          <div class="fl" data-i18n="frame">Cadre</div>
+          <select id="frameSel" class="frameSel"><option value="none" data-i18n="frameNone">Aucun</option><option value="rounded" data-i18n="frameRounded">Arrondi</option><option value="cta" data-i18n="frameCta">Avec texte</option></select>
+          <input type="text" id="frameText" class="frameText" placeholder="Scan me" placeholder="Scannez" hidden>
+        </div>
+        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button><button id="dlPdf">PDF ↓</button><button id="dlEps">EPS ↓</button></div>
+        <div id="scanScore" class="scanScore" hidden></div>
         <div id="histSec" hidden>
           <div class="fl histhead"><span data-i18n="history">Récents</span><button id="histClear" class="linkbtn" data-i18n="histClear">Effacer</button></div>
           <div id="histList" class="histlist"></div>
@@ -219,7 +225,7 @@
         <a href="/scan/" data-i18n="f1l">Ouvrir le scanner →</a>
       </div>
       <div class="feat">
-        <h3 data-i18n="f2t">10 types de codes</h3>
+        <h3 data-i18n="f2t">13 types de codes</h3>
         <p data-i18n="f2d">Site web, texte, WiFi, cartes de visite, e-mail, SMS, appels, lieux, événements. Chaque type génère le bon format — aucune syntaxe à retenir.</p>
         <a href="#studio" data-i18n="f2l">Tous les essayer →</a>
       </div>
@@ -298,8 +304,8 @@
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/lib/jszip.min.js"></script>
 <script src="/assets/lib/xlsx.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3t-20261015"></script>
-<script src="/assets/js/app.js?v=b3t-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3u-20261015"></script>
+<script src="/assets/js/app.js?v=b3u-20261015"></script>
 </body>
 </html>
 

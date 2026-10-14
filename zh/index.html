@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3u-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 <script type="application/ld+json">
@@ -197,7 +197,13 @@
       <div class="previewCol">
         <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
         <div class="livenote" data-i18n="live">即时输入，即时生成</div>
-        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button></div>
+        <div class="frameRow">
+          <div class="fl" data-i18n="frame">边框</div>
+          <select id="frameSel" class="frameSel"><option value="none" data-i18n="frameNone">无</option><option value="rounded" data-i18n="frameRounded">圆角</option><option value="cta" data-i18n="frameCta">带文字</option></select>
+          <input type="text" id="frameText" class="frameText" placeholder="Scan me" placeholder="扫我" hidden>
+        </div>
+        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button><button id="dlPdf">PDF ↓</button><button id="dlEps">EPS ↓</button></div>
+        <div id="scanScore" class="scanScore" hidden></div>
         <div id="histSec" hidden>
           <div class="fl histhead"><span data-i18n="history">最近生成</span><button id="histClear" class="linkbtn" data-i18n="histClear">清除</button></div>
           <div id="histList" class="histlist"></div>
@@ -219,7 +225,7 @@
         <a href="/scan/" data-i18n="f1l">打开扫码器 →</a>
       </div>
       <div class="feat">
-        <h3 data-i18n="f2t">10 种二维码类型</h3>
+        <h3 data-i18n="f2t">13 种二维码类型</h3>
         <p data-i18n="f2d">网址、文本、WiFi、电子名片、邮件、短信、电话、地点、日历事件。每种类型自动生成正确格式，不用记语法。</p>
         <a href="#studio" data-i18n="f2l">都试试 →</a>
       </div>
@@ -298,8 +304,8 @@
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/lib/jszip.min.js"></script>
 <script src="/assets/lib/xlsx.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3t-20261015"></script>
-<script src="/assets/js/app.js?v=b3t-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3u-20261015"></script>
+<script src="/assets/js/app.js?v=b3u-20261015"></script>
 </body>
 </html>
 

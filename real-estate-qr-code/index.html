@@ -170,7 +170,13 @@
       <div class="previewCol">
         <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
         <div class="livenote" data-i18n="live">Live preview — updates as you type</div>
-        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button></div>
+        <div class="frameRow">
+          <div class="fl" data-i18n="frame">Frame</div>
+          <select id="frameSel" class="frameSel"><option value="none" data-i18n="frameNone">None</option><option value="rounded" data-i18n="frameRounded">Rounded</option><option value="cta" data-i18n="frameCta">With text</option></select>
+          <input type="text" id="frameText" class="frameText" placeholder="Scan me" data-i18n-ph="frameTextPh" hidden>
+        </div>
+        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button><button id="dlPdf">PDF ↓</button><button id="dlEps">EPS ↓</button></div>
+        <div id="scanScore" class="scanScore" hidden></div>
         <div id="histSec" hidden>
           <div class="fl histhead"><span data-i18n="history">Recent</span><button id="histClear" class="linkbtn" data-i18n="histClear">Clear</button></div>
           <div id="histList" class="histlist"></div>

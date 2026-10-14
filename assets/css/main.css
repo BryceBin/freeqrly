@@ -420,3 +420,10 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 .batchFmt{font-size:12px;color:var(--soft);font-family:ui-monospace,monospace;margin-top:4px}
 
 .fileBtn{cursor:pointer;display:inline-flex;align-items:center}
+
+.frameRow{display:flex;gap:8px;align-items:center;margin:10px 0;flex-wrap:wrap}
+.frameSel{border:1.5px solid var(--line);border-radius:8px;padding:5px 8px;font-size:13px;background:var(--card);color:var(--ink)}
+.frameText{border:1.5px solid var(--line);border-radius:8px;padding:5px 10px;font-size:13px;background:var(--card);color:var(--ink);width:120px}
+.scanScore{font-size:12px;padding:6px 10px;border-radius:8px;margin-top:6px;text-align:center}
+.scanScore.good{background:#E8F5E9;color:#2E7D32}
+.scanScore.bad{background:#FFEBEE;color:#C62828}
