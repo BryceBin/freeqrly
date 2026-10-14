@@ -70,7 +70,7 @@ h1 em{color:var(--coral)}
 .m-herocard{position:absolute;top:-52px;right:-12px;width:98px;transform:rotate(-6deg);z-index:2}
 .m-peek{position:absolute;top:-60px;right:28px;width:112px;transform:rotate(5deg);z-index:2}
 .m-card{position:absolute;top:14px;right:14px;width:54px;transform:rotate(6deg)}
-.m-prin{width:76px;margin:0 auto 14px;transform:rotate(-3deg)}
+.m-prin{position:absolute;top:18px;right:18px;width:64px;transform:rotate(6deg)}
 .m-head{width:54px;display:inline-block;vertical-align:-14px;margin-right:10px;transform:rotate(-4deg)}
 .m-foot{width:68px;margin:0 auto 10px;transform:rotate(3deg)}
 .m-blog{width:132px;margin:0 auto 16px;transform:rotate(-3deg)}
@@ -133,8 +133,8 @@ input[type=range]{width:100%;accent-color:var(--coral)}
 #dlSvg:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(245,185,66,.2)}
 /* principles — dopamine pastels */
 .prins{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:70px 0 10px}
-.prin{border-radius:22px;padding:32px 30px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(190,145,60,.08)}
-.prin:nth-child(1){background:var(--peach)}
+.prin{position:relative;border-radius:22px;padding:32px 30px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(190,145,60,.08)}
+.prin:nth-child(1){background:var(--peach);padding-right:96px}
 .prin:nth-child(2){background:var(--mintbg)}
 .prin:nth-child(3){background:var(--skybg)}
 .prin .no{font-family:Georgia,serif;font-style:italic;font-size:15px;margin-bottom:14px;letter-spacing:.1em}
