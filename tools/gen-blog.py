@@ -74,7 +74,7 @@ POSTS = [
  ),
  dict(
   slug="static-vs-dynamic-qr-codes",
-  title="Static vs Dynamic QR Codes: Which Should You Choose? — FreeQrly",
+  title="Static vs Dynamic QR Codes | FreeQrly",
   desc="Static vs dynamic QR codes explained honestly: when you need an editable, trackable dynamic code — and when static is the smarter, free choice.",
   h1="Static vs <span class='hl hl-blush'>dynamic</span> QR codes",
   lede="One of them is free forever. The other is a subscription. Here's how to tell which one you actually need.",
@@ -179,7 +179,7 @@ POSTS += [{'body': '\n'
           "it already has. Here's how — plus what to do when nothing happens.",
   'mascot': 'wave',
   'slug': 'how-to-scan-a-qr-code',
-  'title': 'How to Scan a QR Code on iPhone & Android (2026 Guide) | FreeQrly'},
+  'title': 'How to Scan a QR Code (iPhone & Android) | FreeQrly'},
  {'body': '\n'
           "<h2>1. It's too small</h2>\n"
           "<p>The classic. A code squeezed into the corner of a business card at 1 cm wide won't "
@@ -243,7 +243,7 @@ POSTS += [{'body': '\n'
           "in order — and you'll find the culprit in about two minutes.",
   'mascot': 'qr',
   'slug': 'why-is-my-qr-code-not-working',
-  'title': 'Why Is My QR Code Not Working? 7 Fixes That Actually Help | FreeQrly'},
+  'title': 'QR Code Not Working? 7 Fixes That Help | FreeQrly'},
  {'body': '\n'
           '<h2>The two rules that matter</h2>\n'
           '<p><b>Rule 1 — minimum size:</b> 2 x 2 cm (0.8 x 0.8 in). Below that, phone cameras '
@@ -334,7 +334,7 @@ POSTS += [{'body': '\n'
           'WiFi password. All free, all printable today.',
   'mascot': 'party',
   'slug': 'qr-codes-for-restaurants',
-  'title': 'QR Codes for Restaurants: Menus, Reviews & WiFi (Free Guide) | FreeQrly'},
+  'title': 'QR Codes for Restaurants — Free Guide | FreeQrly'},
  {'body': '\n'
           '<h2>Static vs. dynamic: the only distinction that matters</h2>\n'
           '<p>A <b>static</b> code encodes your link directly in the pattern. Nothing to expire, '
@@ -377,15 +377,31 @@ POSTS += [{'body': '\n'
           'the trial-trap kind, and how to make yours in 30 seconds.',
   'mascot': 'sleep',
   'slug': 'free-qr-codes-that-dont-expire',
-  'title': "Free QR Codes That Don't Expire — How to Make Yours Last | FreeQrly"}]
+  'title': "Free QR Codes That Never Expire | FreeQrly"}]
 
+REL_CSS = """<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>"""
 def faq_json(faq):
     return ",\n    ".join(
         '{\n      "@type": "Question",\n      "name": "%s",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "%s"\n      }\n    }' % (q.replace('"', '\\"'), a.replace('"', '\\"'))
         for q, a in faq)
 
-def build(p):
+def build(p, all_posts=None):
     url = f"https://freeqrly.com/blog/{p['slug']}/"
+    rel_html = ""
+    if all_posts:
+        others = [q for q in all_posts if q["slug"] != p["slug"]]
+        # pick 3: rotate by index for variety
+        idx = all_posts.index(p)
+        picks = [others[(idx + i) % len(others)] for i in (1, 3, 5)]
+        rel_html = "\n".join(
+            '        <a class="rel-card" href="/blog/%s/"><b>%s</b></a>' % (q["slug"], q["title"].split("|")[0].strip())
+            for q in picks)
     howto_json = ""
     if p.get("howto"):
         steps_json = ",\n    ".join(
@@ -416,6 +432,7 @@ def build(p):
 <link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
 <link rel="stylesheet" href="../../assets/css/main.css">
+{REL_CSS}
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","datePublished":"2026-10-13","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
 </script>
@@ -449,6 +466,12 @@ def build(p):
         <a class="btn" href="/#studio">Open the studio</a>
       </div>
     </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Keep reading</div>
+      <div class="rel-grid">
+{rel_html}
+      </div>
+    </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
 {faq_html}
@@ -456,6 +479,7 @@ def build(p):
   </article>
   <footer>
     <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, in your browser.</div>
+    <p class="flinks"><a href="/scan/">QR scanner</a><a href="/blog/">All field notes</a><a href="/about/">About</a></p>
     <div class="rule"></div>
     <div class="tiny">FreeQrly · MMXXVI</div>
   </footer>
@@ -468,6 +492,6 @@ def build(p):
 for p in POSTS:
     d = os.path.join(SITE, "blog", p["slug"])
     os.makedirs(d, exist_ok=True)
-    html = build(p)
+    html = build(p, POSTS)
     open(os.path.join(d, "index.html"), "w").write(html)
     print("wrote blog/" + p["slug"], len(html), "bytes")

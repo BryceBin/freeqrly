@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found | FreeQrly</title>
+<meta name="description" content="This page doesn't exist. Head back to the free QR code studio.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">Studio</a><a href="/blog/">Field notes</a><a href="/about/">About</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="themeBtn" aria-label="theme">&#9681;</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article" style="text-align:center;max-width:560px">
+    <div class="mascot mascot-blog" aria-hidden="true"><img src="/assets/img/elephant-sleep.png" alt="FreeQrly elephant mascot napping"></div>
+    <div class="kicker">404</div>
+    <h1>Nothing here but <span class="hl hl-blush">crumbs</span>.</h1>
+    <p class="lede">This page doesn't exist — but the studio does, and it's free.</p>
+    <p style="margin-top:24px"><a class="btn" href="/" style="text-decoration:none">Back to the studio &rarr;</a></p>
+    <p class="flinks" style="margin-top:28px"><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a></p>
+  </article>
+<footer>
+    <div class="mascot mascot-foot" aria-hidden="true"><img src="/assets/img/elephant-party.png" alt="FreeQrly elephant mascot celebrating"></div>
+    <p class="fline">Made quietly, in your browser.</p>
+    <p class="flinks"><a href="/">Free QR code generator</a><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a></p>
+    <p class="fmeta">FREEQRLY &middot; MMXXVI</p>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

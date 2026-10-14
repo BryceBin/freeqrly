@@ -13,7 +13,7 @@ STUDIO = m.group(0)
 PAGES = [
  dict(
   slug="google-form-qr-code", dtype="url", mascot="wave",
-  title="Free QR Code Generator for Google Forms — No Sign-Up | FreeQrly",
+  title="Free Google Form QR Code Generator | FreeQrly",
   desc="Turn any Google Form link into a QR code in seconds. Free, no sign-up, no watermark. Paste your form URL and download a printable PNG or SVG.",
   kw="qr code generator for google form",
   h1="QR codes for Google Forms, without the fine print.",
@@ -37,7 +37,7 @@ PAGES = [
  ),
  dict(
   slug="wifi-qr-code", dtype="wifi", mascot="qr",
-  title="Free WiFi QR Code Generator — Share WiFi Without the Password | FreeQrly",
+  title="Free WiFi QR Code Generator | FreeQrly",
   desc="Create a free WiFi QR code so guests join your network with one scan. No app needed, no sign-up. Your password never leaves your browser.",
   kw="wifi qr code generator",
   h1="Share your WiFi without spelling the password.",
@@ -85,7 +85,7 @@ PAGES = [
  ),
  dict(
   slug="batch-qr-code", dtype="batch", mascot="batch",
-  title="Free Batch QR Code Generator — Bulk QR Codes as ZIP | FreeQrly",
+  title="Free Batch QR Code Generator | FreeQrly",
   desc="Generate dozens of QR codes at once and download them as a ZIP. Free, no sign-up, no limits games. One link per line — done.",
   kw="batch qr code generator",
   h1="Dozens of QR codes. One download.",
@@ -125,7 +125,7 @@ STUDIO_H2_RE = re.compile(r'<div class="shead"><div class="over" data-i18n="sOve
 
 PAGES += [
 dict(slug="business-card-qr-code", dtype="vcard", mascot="qr",
-  title="Free Business Card QR Code Generator \u2014 vCard QR Codes | FreeQrly",
+  title="Free Business Card QR Code Generator | FreeQrly",
   desc="Put a scannable vCard QR code on your business card. Free, no sign-up \u2014 one scan saves your contact straight to their phone.",
   kw="qr code for business cards",
   h1='Your business card, <span class="hl hl-mint">but it introduces itself</span>.',
@@ -139,7 +139,7 @@ dict(slug="business-card-qr-code", dtype="vcard", mascot="qr",
        ("Will it scan on iPhone and Android?","Yes \u2014 both read vCard codes natively with the built-in camera. No app needed."),
        ("Does it expire or need an account?","No. It is a static code: your details live inside the pattern. Print it today, it scans in ten years.")]),
 dict(slug="google-review-qr-code", dtype="url", mascot="party",
-  title="Free Google Review QR Code Generator \u2014 Get More Reviews | FreeQrly",
+  title="Free Google Review QR Code Generator | FreeQrly",
   desc="Turn your Google review link into a printable QR code. Free, no sign-up. Put it on the counter and watch the reviews come in.",
   kw="qr code for google review",
   h1='More five-star reviews, <span class="hl hl-blush">one scan away</span>.',
@@ -153,7 +153,7 @@ dict(slug="google-review-qr-code", dtype="url", mascot="party",
        ("Can I track how many scans it gets?","FreeQrly codes are static and private \u2014 no tracking by design. For counts, put a URL shortener with stats in front of the link."),
        ("Does the code expire?","No. Static codes never expire and need no account, so your counter card works forever.")]),
 dict(slug="qr-code-with-logo", dtype="url", mascot="qr",
-  title="Free QR Code Generator with Logo \u2014 Custom Branded Codes | FreeQrly",
+  title="QR Code Generator with Logo \u2014 Free | FreeQrly",
   desc="Add your logo to the center of any QR code. Free, no sign-up, no watermark. Error correction adjusts automatically so it always scans.",
   kw="qr code with logo",
   h1='Your logo, <span class="hl hl-honey">right in the middle</span>.',
@@ -167,7 +167,7 @@ dict(slug="qr-code-with-logo", dtype="url", mascot="qr",
        ("What size should I print it?","At least 2x2 cm, at 1024 px export or higher. Bigger is safer when a logo covers the center."),
        ("Is there a watermark or a fee?","No. Logo upload is free and unlimited, and your files never leave your browser.")]),
 dict(slug="wedding-qr-code", dtype="url", mascot="wave",
-  title="Free Wedding QR Code Generator \u2014 RSVP, Photos & Seating | FreeQrly",
+  title="Free Wedding QR Code Generator | FreeQrly",
   desc="QR codes for weddings: RSVP forms, photo sharing, menus, seating charts. Free, no sign-up \u2014 one scan for your guests.",
   kw="qr code wedding",
   h1='One scan, <span class="hl hl-honey">zero wedding-day questions</span>.',
@@ -181,7 +181,7 @@ dict(slug="wedding-qr-code", dtype="url", mascot="wave",
        ("How big for table cards?","At least 3x3 cm so guests can scan from across the table without standing up."),
        ("Will they still work on the day?","Yes \u2014 static codes never expire. Make them months ahead; they will scan on the day and for years after as a keepsake.")]),
 dict(slug="instagram-qr-code", dtype="url", mascot="wave",
-  title="Free Instagram QR Code Generator \u2014 Link Your Profile | FreeQrly",
+  title="Free Instagram QR Code Generator | FreeQrly",
   desc="Turn your Instagram profile or post into a scannable QR code. Free, no sign-up. Print it for packaging, flyers, and shop windows.",
   kw="qr code for instagram",
   h1='Your profile, <span class="hl hl-blush">off the screen</span>.',
@@ -198,7 +198,7 @@ dict(slug="instagram-qr-code", dtype="url", mascot="wave",
 
 PAGES += [
 dict(slug="real-estate-qr-code", dtype="url", mascot="party",
-  title="Free Real Estate QR Code Generator \u2014 Listings & Yard Signs | FreeQrly",
+  title="Free Real Estate QR Code Generator | FreeQrly",
   desc="QR codes for real estate: listings, virtual tours, flyers, and yard signs. Free, no sign-up \u2014 one scan takes buyers to the listing.",
   kw="qr code for real estate",
   h1='Every listing, <span class="hl hl-mint">one scan away</span>.',
@@ -252,6 +252,15 @@ def build(p):
 <meta name="description" content="{p["desc"]}">
 <link rel="canonical" href="{url}">
 <link rel="alternate" hreflang="en" href="{url}">
+<link rel="alternate" hreflang="zh" href="{url}?lang=zh">
+<link rel="alternate" hreflang="es" href="{url}?lang=es">
+<link rel="alternate" hreflang="hi" href="{url}?lang=hi">
+<link rel="alternate" hreflang="ar" href="{url}?lang=ar">
+<link rel="alternate" hreflang="pt" href="{url}?lang=pt">
+<link rel="alternate" hreflang="fr" href="{url}?lang=fr">
+<link rel="alternate" hreflang="ru" href="{url}?lang=ru">
+<link rel="alternate" hreflang="de" href="{url}?lang=de">
+<link rel="alternate" hreflang="ja" href="{url}?lang=ja">
 <link rel="alternate" hreflang="x-default" href="{url}">
 <meta name="theme-color" content="#e9eef4">
 <meta property="og:title" content="{p["title"]}">
