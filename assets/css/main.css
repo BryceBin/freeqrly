@@ -89,10 +89,7 @@ h1 em{color:var(--coral)}
 .logopick.logoclear.show{display:flex}
 
 /* ===== B3 selectors: typerail + segmented + swatches + switch ===== */
-.typerail{display:flex;gap:6px;flex-wrap:nowrap;padding:4px 2px 16px}
-@media(max-width:1100px){
-  .typerail{flex-wrap:wrap}
-}
+.typerail{display:flex;gap:6px;flex-wrap:wrap;padding:4px 2px 16px}
 @media(max-width:640px){
   .typerail{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .typerail::-webkit-scrollbar{display:none}
@@ -437,3 +434,5 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 .dlMenu button{display:block;width:100%;text-align:left;padding:10px 14px;background:none;border:none;color:var(--ink);font-size:14px;cursor:pointer}
 .dlMenu button:hover{background:var(--line)}
 .dlMenu button + button{border-top:1px solid var(--line)}
+
+.frameTextInput{width:100%;padding:8px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:14px;background:var(--card);color:var(--ink);font-family:inherit}
