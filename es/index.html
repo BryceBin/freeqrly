@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3w-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3x-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 <script type="application/ld+json">
@@ -202,7 +202,15 @@
           <select id="frameSel" class="frameSel"><option value="none" data-i18n="frameNone">Ninguno</option><option value="rounded" data-i18n="frameRounded">Redondeado</option><option value="cta" data-i18n="frameCta">Con texto</option></select>
           <input type="text" id="frameText" class="frameText" placeholder="Scan me" placeholder="Escanea" hidden>
         </div>
-        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button><button id="dlPdf">PDF ↓</button><button id="dlEps">EPS ↓</button></div>
+        <div class="dlrow"><div class="dlSplit">
+          <button id="dlPng" class="dlMain"><span data-i18n="dl">Download</span> PNG ↓</button>
+          <button id="dlArrow" class="dlArrow" aria-label="More formats">▾</button>
+          <div class="dlMenu" id="dlMenu">
+            <button data-fmt="svg">SVG ↓</button>
+            <button data-fmt="pdf">PDF ↓</button>
+            <button data-fmt="eps">EPS ↓</button>
+          </div>
+        </div></div>
         <div id="scanScore" class="scanScore" hidden></div>
         <div id="histSec" hidden>
           <div class="fl histhead"><span data-i18n="history">Recientes</span><button id="histClear" class="linkbtn" data-i18n="histClear">Borrar</button></div>
@@ -304,8 +312,8 @@
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/lib/jszip.min.js"></script>
 <script src="/assets/lib/xlsx.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3w-20261015"></script>
-<script src="/assets/js/app.js?v=b3w-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3x-20261015"></script>
+<script src="/assets/js/app.js?v=b3x-20261015"></script>
 </body>
 </html>
 

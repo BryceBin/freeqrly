@@ -175,7 +175,15 @@
           <select id="frameSel" class="frameSel"><option value="none" data-i18n="frameNone">None</option><option value="rounded" data-i18n="frameRounded">Rounded</option><option value="cta" data-i18n="frameCta">With text</option></select>
           <input type="text" id="frameText" class="frameText" placeholder="Scan me" data-i18n-ph="frameTextPh" hidden>
         </div>
-        <div class="dlrow"><button id="dlPng">PNG ↓</button><button id="dlSvg">SVG ↓</button><button id="dlPdf">PDF ↓</button><button id="dlEps">EPS ↓</button></div>
+        <div class="dlrow"><div class="dlSplit">
+          <button id="dlPng" class="dlMain"><span data-i18n="dl">Download</span> PNG ↓</button>
+          <button id="dlArrow" class="dlArrow" aria-label="More formats">▾</button>
+          <div class="dlMenu" id="dlMenu">
+            <button data-fmt="svg">SVG ↓</button>
+            <button data-fmt="pdf">PDF ↓</button>
+            <button data-fmt="eps">EPS ↓</button>
+          </div>
+        </div></div>
         <div id="scanScore" class="scanScore" hidden></div>
         <div id="histSec" hidden>
           <div class="fl histhead"><span data-i18n="history">Recent</span><button id="histClear" class="linkbtn" data-i18n="histClear">Clear</button></div>

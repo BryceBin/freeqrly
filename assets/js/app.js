@@ -192,6 +192,49 @@ function draw(){
   scanScore();
   const qr = new QRCodeStyling(styleOpts(236));
   $("qrbox").innerHTML=""; qr.append($("qrbox"));
+  // Apply frame to preview in real time
+  const frame = ($("frameSel") && $("frameSel").value) || "none";
+  if(frame !== "none"){
+    const canvas = $("qrbox").querySelector("canvas");
+    if(canvas){
+      const px = canvas.width;
+      const fg = $("fg").value;
+      const bg = ($("transp") && $("transp").checked) ? "#FFFFFF" : $("bgc").value;
+      const pad = Math.round(px * 0.06);
+      const ctaH = frame === "cta" ? Math.round(px * 0.14) : 0;
+      const total = px + pad * 2 + ctaH;
+      const out = document.createElement("canvas");
+      out.width = total; out.height = total;
+      const ctx = out.getContext("2d");
+      // Background
+      ctx.fillStyle = bg; ctx.fillRect(0, 0, total, total);
+      // Border
+      ctx.strokeStyle = fg; ctx.lineWidth = 2;
+      const radius = frame === "rounded" ? Math.round(px * 0.05) : 0;
+      if(radius > 0){
+        ctx.beginPath();
+        ctx.roundRect(2, 2, total - 4, total - 4, radius);
+        ctx.stroke();
+      } else {
+        ctx.strokeRect(2, 2, total - 4, total - 4);
+      }
+      // QR code
+      ctx.drawImage(canvas, pad, pad);
+      // CTA text
+      if(frame === "cta"){
+        const ctaText = ($("frameText") && $("frameText").value) || "Scan me";
+        ctx.fillStyle = fg;
+        ctx.font = `600 ${Math.round(px * 0.055)}px system-ui, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(ctaText, total / 2, total - pad / 2 - 2);
+      }
+      // Replace preview canvas
+      canvas.replaceWith(out);
+      // Keep same display size
+      out.style.width = "100%"; out.style.height = "auto";
+    }
+  }
 }
 const MASCOT_BASE="https://assets.freeqrly.com/mascots/v1/";
 const MASCOT_LOCAL="/assets/img/mascots/";
@@ -799,8 +842,24 @@ async function downloadQR(format){
 }
 $("dlPng").onclick=()=>downloadQR("png");
 $("dlSvg").onclick=()=>downloadQR("svg");
-const _pdf = $("dlPdf"); if(_pdf) _pdf.onclick=()=>downloadQR("pdf");
-const _eps = $("dlEps"); if(_eps) _eps.onclick=()=>downloadQR("eps");
+// Dropdown menu: SVG / PDF / EPS
+document.querySelectorAll("#dlMenu button").forEach(btn=>{
+  btn.addEventListener("click", ()=>downloadQR(btn.dataset.fmt));
+});
+// Arrow button also toggles menu on click (for touch devices)
+const _arrow = $("dlArrow");
+if(_arrow) _arrow.addEventListener("click", (e)=>{
+  e.stopPropagation();
+  const menu = $("dlMenu");
+  if(menu) menu.style.opacity = menu.style.opacity === "1" ? "0" : "1";
+  if(menu) menu.style.visibility = menu.style.visibility === "visible" ? "hidden" : "visible";
+});
+document.addEventListener("click", (e)=>{
+  const menu = $("dlMenu");
+  if(menu && !e.target.closest(".dlSplit")){
+    menu.style.opacity = "0"; menu.style.visibility = "hidden";
+  }
+});
 // Frame selector wiring + scan score update
 const _fs = $("frameSel");
 if(_fs){
