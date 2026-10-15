@@ -176,9 +176,9 @@ input[type=range]{width:100%;accent-color:var(--coral)}
 .livenote{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:13.5px;color:var(--soft);text-align:center}
 .dlrow{display:flex;gap:10px;width:100%}
 .dlrow button{flex:1;border-radius:14px;padding:14px 0;font-family:inherit;font-size:14.5px;font-weight:700;cursor:pointer;transition:transform .15s,box-shadow .15s}
-#dlPng,#dlSvg{background:var(--deep);color:#fff;border:none;box-shadow:0 10px 24px rgba(47,74,98,.28)}
-[data-theme="dark"] #dlPng,[data-theme="dark"] #dlSvg{color:#16140F}
-#dlPng:hover,#dlSvg:hover{transform:translateY(-2px)}
+#dlPng,#dlArrow{background:var(--deep);color:#fff;border:none;box-shadow:0 10px 24px rgba(47,74,98,.28)}
+[data-theme="dark"] #dlPng,[data-theme="dark"] #dlArrow{color:#16140F}
+#dlPng:hover,#dlArrow:hover{transform:translateY(-2px)}
 /* principles — dopamine pastels */
 .prins{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:70px 0 10px}
 .prin{position:relative;border-radius:22px;padding:32px 30px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(190,145,60,.08)}
@@ -425,14 +425,13 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 .scanScore.good{background:#E8F5E9;color:#2E7D32}
 .scanScore.bad{background:#FFEBEE;color:#C62828}
 
-/* Split download button: main + dropdown arrow */
-.dlSplit{position:relative;display:inline-flex;align-items:stretch}
-.dlMain{border-radius:10px 0 0 10px !important}
-.dlArrow{border-radius:0 10px 10px 0 !important;padding-left:10px !important;padding-right:10px !important;border-left:1px solid rgba(255,255,255,.25) !important;cursor:pointer}
-.dlMenu{position:absolute;top:calc(100% + 4px);right:0;min-width:120px;background:var(--card);border:1.5px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12);overflow:hidden;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:20}
+/* Split download button: big main + small arrow, dropdown matches main style */
+.dlSplit{position:relative;display:flex;width:100%;align-items:stretch}
+.dlMain{flex:1;border-radius:14px 0 0 14px !important}
+.dlArrow{flex:0 0 44px !important;border-radius:0 14px 14px 0 !important;padding:14px 0 !important;border-left:1px solid rgba(255,255,255,.25) !important;cursor:pointer;font-size:12px !important}
+.dlMenu{position:absolute;top:calc(100% + 6px);left:0;right:0;display:flex;flex-direction:column;gap:6px;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:20}
 .dlSplit:hover .dlMenu,.dlSplit:focus-within .dlMenu{opacity:1;visibility:visible;transform:translateY(0)}
-.dlMenu button{display:block;width:100%;text-align:left;padding:10px 14px;background:none;border:none;color:var(--ink);font-size:14px;cursor:pointer}
-.dlMenu button:hover{background:var(--line)}
-.dlMenu button + button{border-top:1px solid var(--line)}
+.dlMenu button{display:block;width:100%;padding:14px 0 !important;border-radius:14px !important;background:var(--deep) !important;color:#fff !important;border:none !important;box-shadow:0 10px 24px rgba(47,74,98,.28) !important;font-family:inherit;font-size:14.5px !important;font-weight:700 !important;cursor:pointer;text-align:center !important;transition:transform .15s,box-shadow .15s}
+.dlMenu button:hover{transform:translateY(-2px)}
 
 .frameTextInput{width:100%;padding:8px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:14px;background:var(--card);color:var(--ink);font-family:inherit}
