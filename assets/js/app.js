@@ -747,13 +747,12 @@ function scanScore(){
   const bg = ($("transp") && $("transp").checked) ? "#FFFFFF" : $("bgc").value;
   const l1 = hex2lum(fg), l2 = hex2lum(bg);
   const ratio = (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);
+  // Only warn when contrast is too low — no number, just text
   const ok = ratio >= 3;
-  el.hidden = false;
-  el.className = "scanScore " + (ok ? "good" : "bad");
+  el.hidden = ok;
+  el.className = "scanScore bad";
   const t = I18N[lang];
-  el.textContent = ok
-    ? `${t.scanGood || "Good contrast"} (${ratio.toFixed(1)}:1)`
-    : `${t.scanBad || "Low contrast — may not scan"} (${ratio.toFixed(1)}:1)`;
+  if(!ok) el.textContent = t.scanBad || "Low contrast — may not scan";
 }
 
 async function downloadQR(format){
