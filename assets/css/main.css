@@ -170,8 +170,9 @@ input[type=range]{width:100%;accent-color:var(--coral)}
 .bcell button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:7px 14px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:inherit}
 /* preview */
 .previewCol{background:var(--preview-bg);border-radius:22px;padding:32px 26px;display:flex;flex-direction:column;align-items:center;gap:18px;border:1px solid var(--line);align-self:start;position:sticky;top:20px}
-.qrpaper{background:#fff;border-radius:18px;padding:24px;box-shadow:0 14px 36px rgba(190,145,60,.16)}
+.qrpaper{background:#fff;border-radius:18px;padding:24px;box-shadow:0 14px 36px rgba(190,145,60,.16);max-width:100%;box-sizing:border-box}
 #qrbox{width:236px;height:236px;max-width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#qrbox{overflow:hidden}
 #qrbox canvas,#qrbox svg,#qrbox img{max-width:100%!important;max-height:100%!important;width:auto!important;height:auto!important;display:block;object-fit:contain}
 .livenote{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:13.5px;color:var(--soft);text-align:center}
 .dlrow{display:flex;gap:10px;width:100%}
@@ -288,8 +289,8 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
   .types button{padding:14px 6px}
   .r2{grid-template-columns:1fr}
   .previewCol{padding:24px 28px;border-radius:18px}
-  #qrbox{width:210px;height:210px}
-  .qrpaper{padding:24px}
+  #qrbox{width:190px;height:190px;max-width:100%}
+  .qrpaper{padding:20px;max-width:calc(100% - 16px);margin:0 auto}
   input[type=text],textarea,select{font-size:16px;padding:14px 15px}
   .dlrow button{padding:15px 0}
   .faq{margin:52px auto 24px}
