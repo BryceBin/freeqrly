@@ -703,12 +703,12 @@ function frameWrap(svgStr, px){
   const ctaText = ($("frameText") && $("frameText").value) || "Scan me";
   const radius = frame === "rounded" ? Math.round(px * 0.05) : 0;
   const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-  // Strip XML declaration — it must be at document start, not mid-document
-  svgStr = svgStr.replace(/<\?xml[^?]*\?>/g, "");
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${total}" height="${total}" viewBox="0 0 ${total} ${total}">` +
+  // Embed QR SVG as <image> — avoids fragile string surgery on QR internals
+  const qrUri = "data:image/svg+xml," + encodeURIComponent(svgStr);
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${total}" height="${total}" viewBox="0 0 ${total} ${total}">` +
     `<rect width="${total}" height="${total}" rx="${radius}" fill="${bg}"/>` +
     `<rect x="2" y="2" width="${total-4}" height="${total-4}" rx="${Math.max(0,radius-2)}" fill="none" stroke="${fg}" stroke-width="2"/>` +
-    `<g transform="translate(${pad},${pad})">${svgStr.replace(/<svg[^>]*>/,"").replace(/<\/svg>/,"")}</g>` +
+    `<image href="${qrUri}" xlink:href="${qrUri}" x="${pad}" y="${pad}" width="${px}" height="${px}"/>` +
     (frame === "cta" ? `<text x="${total/2}" y="${total - pad/2 - 2}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.round(px*0.055)}" font-weight="600" fill="${fg}">${esc(ctaText)}</text>` : "") +
     `</svg>`;
 }
@@ -836,8 +836,8 @@ if(_segFrame){
     const btn = e.target.closest("button"); if(!btn) return;
     frameVal = btn.dataset.v;
     _segFrame.querySelectorAll("button").forEach(b=>b.classList.toggle("on", b === btn));
-    const ftRow = $("frameTextRow");
-    if(ftRow) ftRow.hidden = frameVal !== "cta";
+    const ft = $("frameText");
+    if(ft) ft.classList.toggle("show", frameVal === "cta");
     draw(); scanScore();
   });
   // Default: mark "None" as active
