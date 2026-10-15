@@ -47,17 +47,18 @@ print("→ 统一 ?v= 版本号...")
 versions = set()
 for f in glob.glob(os.path.join(SITE, "**/*.html"), recursive=True):
     h = open(f, encoding="utf-8").read()
-    versions.update(re.findall(r'\?v=(b3[a-z]-\d{8})', h))
+    versions.update(re.findall(r'\?v=(b3[a-z]?-\d{8})', h))
 if not versions:
     print("  未找到旧版本号，跳过")
 else:
     cur = sorted(versions)[-1]
-    m = re.match(r'b3([a-z])-(\d{8})', cur)
-    nxt = f"b3{chr(ord(m.group(1))+1)}-{TODAY}"
+    m = re.match(r'b3([a-z]?)-(\d{8})', cur)
+    letter = m.group(1)
+    nxt = f"b3{chr(ord(letter)+1) if letter else ''}-{TODAY}"
     n = 0
     for f in glob.glob(os.path.join(SITE, "**/*.html"), recursive=True):
         h = open(f, encoding="utf-8").read()
-        h2, c = re.subn(r'\?v=b3[a-z]-\d{8}', f'?v={nxt}', h)
+        h2, c = re.subn(r'\?v=b3[a-z]?-\d{8}', f'?v={nxt}', h)
         if c:
             open(f, "w", encoding="utf-8").write(h2)
             n += 1
