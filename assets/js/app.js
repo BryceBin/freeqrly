@@ -703,6 +703,8 @@ function frameWrap(svgStr, px){
   const ctaText = ($("frameText") && $("frameText").value) || "Scan me";
   const radius = frame === "rounded" ? Math.round(px * 0.05) : 0;
   const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  // Strip XML declaration — it must be at document start, not mid-document
+  svgStr = svgStr.replace(/<\?xml[^?]*\?>/g, "");
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${total}" height="${total}" viewBox="0 0 ${total} ${total}">` +
     `<rect width="${total}" height="${total}" rx="${radius}" fill="${bg}"/>` +
     `<rect x="2" y="2" width="${total-4}" height="${total-4}" rx="${Math.max(0,radius-2)}" fill="none" stroke="${fg}" stroke-width="2"/>` +
