@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3e-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3f-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -146,9 +146,8 @@
     </div>
     <div id="dynamicPanel" hidden>
       <div class="dynBox">
-        <label class="fl" data-i18n="dynDest">गंतव्य URL</label>
-        <input type="text" id="dynDest" placeholder="https://example.com/landing">
-        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">गतिशील QR बनाएं</button>
+        <p class="dynIntro" data-i18n="dynIntro">ऊपर अपना QR डिज़ाइन करें — प्रकार चुनें, सामग्री भरें, स्टाइल करें। फिर गतिशील कोड बनाएं: छपा हुआ QR वही रहेगा, लेकिन आप इसकी सामग्री कभी भी बदल सकते हैं।</p>
+        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">वर्तमान डिज़ाइन से गतिशील QR बनाएं</button>
         <div id="dynResult" hidden>
           <div class="dynShort"><span data-i18n="dynShort">आपका गतिशील QR लिंक:</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <div class="dynKey"><span data-i18n="dynKey">संपादन कुंजी (इसे सहेजें — संपादन या आंकड़े देखने के लिए चाहिए):</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">कॉपी करें</button></div>
@@ -161,12 +160,12 @@
           <div class="fl"><span data-i18n="dynKey">संपादन कुंजी (इसे सहेजें — संपादन या आंकड़े देखने के लिए चाहिए):</span> <input type="text" id="dynManageKey" placeholder=""></div>
           <div class="dynManageBtns">
             <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">आंकड़े देखें</button>
-            <button class="btn-ghost" id="dynEditBtn" data-i18n="dynEdit">गंतव्य संपादित करें</button>
+            <button class="btn-ghost" id="dynLoadEdit" data-i18n="dynLoadEdit">संपादन के लिए लोड करें</button>
           </div>
           <div id="dynStats" hidden></div>
           <div id="dynEditForm" hidden>
-            <input type="text" id="dynNewDest" placeholder="https://example.com/new">
-            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">नया गंतव्य सहेजें</button>
+            <p class="dynEditHint" data-i18n="dynEditHint">ऊपर प्रकार और सामग्री संपादित करें, फिर सहेजें। आपका छपा QR नई सामग्री दिखाएगा।</p>
+            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">बदलाव सहेजें</button>
           </div>
         </div>
       </div>
@@ -350,8 +349,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3e-20261015"></script>
-<script src="/assets/js/app.js?v=b3e-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
+<script src="/assets/js/app.js?v=b3f-20261015"></script>
 </body>
 </html>
 

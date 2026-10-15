@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3e-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3f-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -146,9 +146,8 @@
     </div>
     <div id="dynamicPanel" hidden>
       <div class="dynBox">
-        <label class="fl" data-i18n="dynDest">URL de destino</label>
-        <input type="text" id="dynDest" placeholder="https://example.com/landing">
-        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">Crear QR dinámico</button>
+        <p class="dynIntro" data-i18n="dynIntro">Diseña tu QR arriba: elige un tipo, rellena el contenido y dale estilo. Luego crea un código dinámico: el QR impreso no cambia, pero puedes modificar su contenido cuando quieras.</p>
+        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">Crear QR dinámico con el diseño actual</button>
         <div id="dynResult" hidden>
           <div class="dynShort"><span data-i18n="dynShort">Tu enlace dinámico:</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <div class="dynKey"><span data-i18n="dynKey">Clave de edición (guárdala, la necesitas para editar o ver estadísticas):</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">Copiar</button></div>
@@ -161,12 +160,12 @@
           <div class="fl"><span data-i18n="dynKey">Clave de edición (guárdala, la necesitas para editar o ver estadísticas):</span> <input type="text" id="dynManageKey" placeholder=""></div>
           <div class="dynManageBtns">
             <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">Ver estadísticas</button>
-            <button class="btn-ghost" id="dynEditBtn" data-i18n="dynEdit">Editar destino</button>
+            <button class="btn-ghost" id="dynLoadEdit" data-i18n="dynLoadEdit">Cargar para editar</button>
           </div>
           <div id="dynStats" hidden></div>
           <div id="dynEditForm" hidden>
-            <input type="text" id="dynNewDest" placeholder="https://example.com/new">
-            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">Guardar nuevo destino</button>
+            <p class="dynEditHint" data-i18n="dynEditHint">Edita el tipo y el contenido arriba y guarda. Tu QR impreso mostrará el nuevo contenido.</p>
+            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">Guardar cambios</button>
           </div>
         </div>
       </div>
@@ -350,8 +349,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3e-20261015"></script>
-<script src="/assets/js/app.js?v=b3e-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
+<script src="/assets/js/app.js?v=b3f-20261015"></script>
 </body>
 </html>
 

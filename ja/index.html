@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3e-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3f-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -146,9 +146,8 @@
     </div>
     <div id="dynamicPanel" hidden>
       <div class="dynBox">
-        <label class="fl" data-i18n="dynDest">遷移先URL</label>
-        <input type="text" id="dynDest" placeholder="https://example.com/landing">
-        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">動的QRを作成</button>
+        <p class="dynIntro" data-i18n="dynIntro">上でQRをデザインしてください — タイプを選び、内容を入力し、スタイルを整えます。次に動的コードを作成：印刷されたQRは変わりませんが、内容はいつでも変更できます。</p>
+        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">現在のデザインで動的QRを作成</button>
         <div id="dynResult" hidden>
           <div class="dynShort"><span data-i18n="dynShort">動的QRリンク:</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <div class="dynKey"><span data-i18n="dynKey">編集キー（保存してください — 編集や統計表示に必要です）:</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">コピー</button></div>
@@ -161,12 +160,12 @@
           <div class="fl"><span data-i18n="dynKey">編集キー（保存してください — 編集や統計表示に必要です）:</span> <input type="text" id="dynManageKey" placeholder=""></div>
           <div class="dynManageBtns">
             <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">統計を見る</button>
-            <button class="btn-ghost" id="dynEditBtn" data-i18n="dynEdit">遷移先を編集</button>
+            <button class="btn-ghost" id="dynLoadEdit" data-i18n="dynLoadEdit">編集用に読み込む</button>
           </div>
           <div id="dynStats" hidden></div>
           <div id="dynEditForm" hidden>
-            <input type="text" id="dynNewDest" placeholder="https://example.com/new">
-            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">新しい遷移先を保存</button>
+            <p class="dynEditHint" data-i18n="dynEditHint">上でタイプと内容を編集して保存してください。印刷されたQRは新しい内容を表示します。</p>
+            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">変更を保存</button>
           </div>
         </div>
       </div>
@@ -350,8 +349,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3e-20261015"></script>
-<script src="/assets/js/app.js?v=b3e-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
+<script src="/assets/js/app.js?v=b3f-20261015"></script>
 </body>
 </html>
 

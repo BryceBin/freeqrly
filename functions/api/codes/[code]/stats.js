@@ -1,4 +1,4 @@
-// GET /api/codes/:code/stats — scan stats (requires editKey as ?key=)
+// GET /api/codes/:code/stats — scan stats + current type/payload (requires editKey as ?key=)
 import { sha256Hex, json } from '../../../_lib/dynamic.js';
 
 export async function onRequestGet(context) {
@@ -9,7 +9,7 @@ export async function onRequestGet(context) {
   const editKey = url.searchParams.get('key') || '';
   if (!editKey) return json({ error: 'editKey is required (as ?key=)' }, 401);
 
-  const row = await env.DB.prepare('SELECT edit_key_hash, destination, total_scans, created_at FROM codes WHERE code = ?').bind(code).first();
+  const row = await env.DB.prepare('SELECT edit_key_hash, type, payload, destination, total_scans, created_at FROM codes WHERE code = ?').bind(code).first();
   if (!row) return json({ error: 'Code not found' }, 404);
   const hash = await sha256Hex(editKey);
   if (hash !== row.edit_key_hash) return json({ error: 'Invalid edit key' }, 403);
@@ -26,7 +26,9 @@ export async function onRequestGet(context) {
 
   return json({
     code,
-    destination: row.destination,
+    type: row.type || 'url',
+    payload: row.payload || row.destination || '',
+    destination: row.destination || '',
     totalScans: row.total_scans,
     createdAt: row.created_at,
     byDate: byDate.results || [],
