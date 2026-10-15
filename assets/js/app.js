@@ -214,6 +214,16 @@ function updateStudioMascot(){
 }
 const TYPE_EMOJI = {url:"🔗",text:"📝",wifi:"📶",vcard:"👤",email:"✉️",sms:"💬",phone:"📞",geo:"📍",event:"📅",bitcoin:"₿",coupon:"🎟️",appstore:"📱",batch:"📚"};
 function renderTabs(){
+  // Batch can't be dynamic (one code at a time) — hide the toggle, force static
+  const seg = $("segMode");
+  if(seg){
+    seg.style.display = (cur === "batch") ? "none" : "";
+    if(cur === "batch" && dynamicMode){
+      dynamicMode = false; dynamicShortUrl = ''; dynamicGenerated = false;
+      seg.querySelectorAll("button[data-mode]").forEach(b => b.classList.toggle("on", b.dataset.mode === "static"));
+      if(window.refreshDynamicUI) window.refreshDynamicUI();
+    }
+  }
   updateStudioMascot();
   const t = $("typerail") || $("tabs"); if(!t) return; t.innerHTML="";
   ORDER.forEach(k=>{
@@ -1061,6 +1071,7 @@ let dynamicGenerated = false;
       const res = $("dynResult"); if(res) res.hidden = false;
       const link = $("dynShortUrl"); if(link){ link.href = d.shortUrl; link.textContent = d.shortUrl.replace(/^https?:\/\//, ''); }
       const keyEl = $("dynEditKey"); if(keyEl) keyEl.textContent = d.editKey;
+      const mLink = $("dynManageLink"); if(mLink) mLink.href = "/manage/?c=" + encodeURIComponent(d.code);
       refreshDynamicUI();
     }catch(e){ alert("Network error"); }
     finally{

@@ -1,6 +1,6 @@
 // GET /q/:code — dynamic QR redirect / hosted page
 // URL type → 302 redirect. Other types → hosted page rendering the content.
-import { deviceFromUA } from '../_lib/dynamic.js';
+import { deviceFromUA, osFromUA, scanFingerprint } from '../_lib/dynamic.js';
 import { renderHostedPage } from '../_lib/hosted.js';
 
 export async function onRequest(context) {
@@ -25,15 +25,23 @@ export async function onRequest(context) {
     const isBot = request.cf && request.cf.client_bot;
     if (!isBot && context.waitUntil) {
       const country = (request.cf && request.cf.country) || 'XX';
+      const city = (request.cf && request.cf.city) || '';
       const device = deviceFromUA(ua);
+      const os = osFromUA(ua);
       const date = new Date().toISOString().slice(0, 10);
+      const ip = request.headers.get('CF-Connecting-IP') || '';
       const p = (async () => {
         try {
           await env.DB.prepare(
-            `INSERT INTO daily_stats (code, date, country, device, count) VALUES (?, ?, ?, ?, 1)
-             ON CONFLICT(code, date, country, device) DO UPDATE SET count = count + 1`
-          ).bind(code, date, country, device).run();
+            `INSERT INTO daily_stats (code, date, country, city, device, os, count) VALUES (?, ?, ?, ?, ?, ?, 1)
+             ON CONFLICT(code, date, country, city, device, os) DO UPDATE SET count = count + 1`
+          ).bind(code, date, country, city, device, os).run();
           await env.DB.prepare('UPDATE codes SET total_scans = total_scans + 1 WHERE code = ?').bind(code).run();
+          // Unique scan: one fingerprint row per (code, date, IP+UA hash)
+          const fp = await scanFingerprint(ip, ua, date);
+          await env.DB.prepare(
+            `INSERT OR IGNORE INTO scan_fingerprints (code, date, fingerprint) VALUES (?, ?, ?)`
+          ).bind(code, date, fp).run();
         } catch (err) { /* ignore */ }
       })();
       context.waitUntil(p);

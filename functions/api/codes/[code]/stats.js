@@ -23,6 +23,18 @@ export async function onRequestGet(context) {
   const byDevice = await env.DB.prepare(
     `SELECT device, SUM(count) AS scans FROM daily_stats WHERE code = ? GROUP BY device ORDER BY scans DESC`
   ).bind(code).all();
+  const byCity = await env.DB.prepare(
+    `SELECT city, SUM(count) AS scans FROM daily_stats WHERE code = ? AND city != '' GROUP BY city ORDER BY scans DESC LIMIT 10`
+  ).bind(code).all();
+  const byOS = await env.DB.prepare(
+    `SELECT os, SUM(count) AS scans FROM daily_stats WHERE code = ? GROUP BY os ORDER BY scans DESC`
+  ).bind(code).all();
+  const uniqueRow = await env.DB.prepare(
+    `SELECT COUNT(DISTINCT fingerprint) AS n FROM scan_fingerprints WHERE code = ?`
+  ).bind(code).first();
+  const uniqueByDate = await env.DB.prepare(
+    `SELECT date, COUNT(*) AS uniques FROM scan_fingerprints WHERE code = ? GROUP BY date ORDER BY date DESC LIMIT 30`
+  ).bind(code).all();
 
   return json({
     code,
@@ -34,5 +46,9 @@ export async function onRequestGet(context) {
     byDate: byDate.results || [],
     byCountry: byCountry.results || [],
     byDevice: byDevice.results || [],
+    byCity: byCity.results || [],
+    byOS: byOS.results || [],
+    uniqueScans: (uniqueRow && uniqueRow.n) || 0,
+    uniqueByDate: uniqueByDate.results || [],
   });
 }

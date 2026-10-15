@@ -45,6 +45,24 @@ export function deviceFromUA(ua = '') {
   return 'desktop';
 }
 
+// OS classification from User-Agent
+export function osFromUA(ua = '') {
+  const s = ua.toLowerCase();
+  if (/windows/.test(s)) return 'Windows';
+  if (/iphone|ipad|ipod/.test(s)) return 'iOS';
+  if (/android/.test(s)) return 'Android';
+  if (/mac os|macintosh/.test(s)) return 'macOS';
+  if (/cros/.test(s)) return 'ChromeOS';
+  if (/linux/.test(s)) return 'Linux';
+  return 'Other';
+}
+
+// Privacy-preserving scan fingerprint: SHA-256(IP + UA + date).
+// Cannot be reversed to an IP. Used only for unique-scan counting.
+export async function scanFingerprint(ip, ua, date) {
+  return sha256Hex([ip || '', ua || '', date].join('|'));
+}
+
 export function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,

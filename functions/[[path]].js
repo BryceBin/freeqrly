@@ -9,7 +9,7 @@ const TOP_LEVEL = new Set([
   'google-form-qr-code', 'wifi-qr-code', 'vcard-qr-code', 'batch-qr-code',
   'business-card-qr-code', 'google-review-qr-code', 'qr-code-with-logo',
   'wedding-qr-code', 'instagram-qr-code', 'real-estate-qr-code',
-]);
+, 'manage']);
 
 function isKnown(path) {
   if (path === '/') return true;

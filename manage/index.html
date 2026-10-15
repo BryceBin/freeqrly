@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manage your dynamic QR code — FreeQrly</title>
+<meta name="description" content="View scan stats or change the destination of your dynamic QR code. No sign-up — your edit key is the password.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3k-20261015">
+<style>
+.manageWrap{max-width:720px;margin:0 auto;padding:40px 20px 60px}
+.manageWrap h1{font-size:28px;margin-bottom:8px;text-align:center}
+.manageWrap .sub{text-align:center;color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:28px}
+.manageCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;margin-bottom:24px;box-shadow:0 8px 28px rgba(190,145,60,.10)}
+.manageCard h2{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
+.mfield{margin-bottom:14px}
+.mfield label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.mfield input,.mfield select,.mfield textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;background:#FBF6EC;outline:none;box-sizing:border-box}
+.mfield input:focus,.mfield select:focus,.mfield textarea:focus{border-color:var(--deep);background:#fff}
+.mfield .ex{font-size:12px;color:var(--muted);margin-top:5px}
+.mbtn{width:100%;border:0;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;background:var(--deep);color:#fff}
+.mbtn:disabled{opacity:.6}
+.mbtnSave{background:#2F6B4F}
+.mbtnGhost{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;background:#fff;color:#22303F;margin-top:12px;text-decoration:none;display:block;text-align:center;box-sizing:border-box}
+.mhint{font-size:12px;color:var(--muted);line-height:1.6;margin-top:14px;text-align:center}
+.mhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.mhead a{font-weight:700;color:var(--deep);font-size:16px;word-break:break-all}
+.mhead .dest{font-size:13px;color:var(--muted);margin-top:4px;word-break:break-all}
+.mbadge{font-size:12px;background:#DCE5DD;padding:5px 12px;border-radius:20px;white-space:nowrap}
+.mstatTop{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.mstatBig{flex:1;min-width:120px;background:#FBF6EC;border-radius:14px;padding:16px;text-align:center}
+.mstatBig .num{font-size:28px;font-weight:800}
+.mstatBig .lbl{font-size:12px;color:var(--muted);margin-top:2px}
+.msecTitle{font-size:15px;font-weight:700;margin:20px 0 10px}
+.mchart{display:flex;align-items:flex-end;gap:10px;height:72px;padding:0 4px}
+.mchart .bar{flex:1;background:#DCE5DD;border-radius:6px 6px 0 0;min-height:4px;position:relative}
+.mchart .bar.today{background:var(--deep)}
+.mchart .bar span{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--muted)}
+.mchartLabels{display:flex;gap:10px;font-size:11px;color:var(--muted);padding:0 4px;margin-top:6px}
+.mchartLabels span{flex:1;text-align:center}
+.mtwo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.mtwo{grid-template-columns:1fr}}
+.mbreakRow{display:flex;justify-content:space-between;font-size:13px;padding:8px 0;border-bottom:1px solid #F1EAD9}
+.mbreakRow:last-child{border-bottom:0}
+.mbreakRow .pct{color:var(--muted)}
+.meditBox{background:#FBF6EC;border-radius:12px;padding:16px}
+.merror{color:#b45309;font-size:13px;margin-top:10px;text-align:center}
+.mok{color:#2F6B4F;font-size:13px;margin-top:10px;text-align:center}
+</style>
+</head>
+<body>
+<div class="manageWrap">
+  <h1>Manage your code</h1>
+  <p class="sub">View stats or change the destination. No sign-up — your edit key is the password.</p>
+
+  <!-- Step 1: Unlock -->
+  <div class="manageCard" id="unlockCard">
+    <h2>Step 1 — Unlock</h2>
+    <div class="mfield"><label>Code or link</label>
+      <input id="mCode" type="text" placeholder="FGAbTtR or freeqrly.com/q/FGAbTtR" autocomplete="off">
+      <div class="ex">Paste the full link or just the code — we figure it out.</div>
+    </div>
+    <div class="mfield"><label>Edit key</label>
+      <input id="mKey" type="text" placeholder="8-character edit key" autocomplete="off">
+    </div>
+    <button class="mbtn" id="mUnlock">Unlock →</button>
+    <p class="merror" id="mUnlockErr" hidden></p>
+    <p class="mhint">The key was shown right after you generated the code. Without it, the code keeps working — it just can't be edited.</p>
+  </div>
+
+  <!-- Step 2: Stats + Edit -->
+  <div class="manageCard" id="manageCard" hidden>
+    <h2>Step 2 — Stats &amp; Edit</h2>
+    <div class="mhead">
+      <div><a id="mShortUrl" href="#" target="_blank" rel="noopener"></a><div class="dest" id="mDest"></div></div>
+      <span class="mbadge">● Live</span>
+    </div>
+    <div class="mstatTop">
+      <div class="mstatBig"><div class="num" id="mTotal">—</div><div class="lbl">Total scans</div></div>
+      <div class="mstatBig"><div class="num" id="mToday">—</div><div class="lbl">Today</div></div>
+      <div class="mstatBig"><div class="num" id="mUnique">—</div><div class="lbl">Unique scans</div></div>
+      <div class="mstatBig"><div class="num" id="mCreated">—</div><div class="lbl">Created</div></div>
+    </div>
+    <div class="msecTitle">Scans — last 7 days</div>
+    <div class="mchart" id="mChart"></div>
+    <div class="mchartLabels" id="mChartLabels"></div>
+    <div class="mtwo">
+      <div><div class="msecTitle">By country</div><div id="mByCountry"></div></div>
+      <div><div class="msecTitle">By city</div><div id="mByCity"></div></div>
+      <div><div class="msecTitle">By device</div><div id="mByDevice"></div></div>
+      <div><div class="msecTitle">By OS</div><div id="mByOS"></div></div>
+    </div>
+    <div class="msecTitle">Edit content</div>
+    <div class="meditBox">
+      <div class="mfield"><label>Type</label><select id="mType"></select></div>
+      <div id="mEditFields"></div>
+      <button class="mbtn mbtnSave" id="mSave">Save changes</button>
+      <p class="merror" id="mSaveErr" hidden></p>
+      <p class="mok" id="mSaveOk" hidden>Saved. Your printed QR now serves the new content.</p>
+    </div>
+    <a class="mbtnGhost" href="/">Done — back to generator</a>
+  </div>
+</div>
+<script>
+// Manage page: unlock (code or link + edit key), stats, edit with type switch.
+const $ = id => document.getElementById(id);
+const TYPES = [
+  ['url','Website'],['text','Text'],['wifi','WiFi'],['vcard','Contact'],
+  ['email','Email'],['sms','SMS'],['phone','Call'],['geo','Place'],
+  ['event','Event'],['bitcoin','Bitcoin'],['coupon','Coupon'],['appstore','App Store']
+];
+// Field specs: [key, label, inputType, placeholder]
+const FIELDS = {
+  url: [['dest','Destination URL','text','https://example.com']],
+  text: [['txt','Text','textarea','Any text']],
+  wifi: [['ssid','WiFi name (SSID)','text','MyWiFi'],['wpass','Password','text',''],['wenc','Encryption','select','WPA']],
+  vcard: [['vname','Full name','text','Ada Lovelace'],['vphone','Phone','text','+1 555 010 1234'],['vemail','Email','text','ada@example.com'],['vorg','Organization','text',''],['vtitle','Title','text',''],['vurl','Website','text',''],['vaddr','Address','text',''],['vnote','Note','text','']],
+  email: [['eto','To','text','hello@example.com'],['esub','Subject','text',''],['ebody','Body','textarea','']],
+  sms: [['sphone','Phone','text','+1 555 010 1234'],['smsg','Message','textarea','']],
+  phone: [['phone','Phone number','text','+1 555 010 1234']],
+  geo: [['lat','Latitude','text','37.7749'],['lng','Longitude','text','-122.4194']],
+  event: [['etitle','Title','text','Birthday party'],['estart','Start','datetime-local',''],['eend','End','datetime-local',''],['eloc','Location','text',''],['edesc','Description','textarea','']],
+  bitcoin: [['btcaddr','Wallet address','text','bc1q...'],['btcamt','Amount (BTC)','text',''],['btclabel','Label','text',''],['btcmsg','Message','text','']],
+  coupon: [['cpcode','Code','text','SAVE20'],['cpdesc','Description','text','']],
+  appstore: [['appios','App Store link','text','https://apps.apple.com/app/...'],['appand','Google Play link','text','https://play.google.com/store/apps/...']],
+};
+const enc = s => encodeURIComponent(s || '');
+function buildPayload(type, vals){
+  switch(type){
+    case 'url': return vals.dest || '';
+    case 'text': return vals.txt || '';
+    case 'wifi': return `WIFI:T:${vals.wenc||'WPA'};S:${vals.ssid||''};P:${vals.wpass||''};;`;
+    case 'vcard': {
+      const L = [];
+      L.push('BEGIN:VCARD','VERSION:3.0');
+      if(vals.vname) L.push(`FN:${vals.vname}`);
+      if(vals.vorg) L.push(`ORG:${vals.vorg}`);
+      if(vals.vtitle) L.push(`TITLE:${vals.vtitle}`);
+      if(vals.vphone) L.push(`TEL;TYPE=CELL:${vals.vphone}`);
+      if(vals.vemail) L.push(`EMAIL:${vals.vemail}`);
+      if(vals.vurl) L.push(`URL:${vals.vurl}`);
+      if(vals.vaddr) L.push(`ADR:;;${vals.vaddr};;;;`);
+      if(vals.vnote) L.push(`NOTE:${vals.vnote}`);
+      L.push('END:VCARD');
+      return L.join('\n');
+    }
+    case 'email': return `mailto:${vals.eto||''}?subject=${enc(vals.esub)}&body=${enc(vals.ebody)}`;
+    case 'sms': return `sms:${vals.sphone||''}?body=${enc(vals.smsg)}`;
+    case 'phone': return `tel:${vals.phone||''}`;
+    case 'geo': return `geo:${vals.lat||''},${vals.lng||''}`;
+    case 'event': {
+      const f = d => d ? d.replace(/[-:]/g,'').replace('T','T') + '00' : '';
+      const L = ['BEGIN:VEVENT', `SUMMARY:${vals.etitle||''}`];
+      if(vals.estart) L.push(`DTSTART:${f(vals.estart)}`);
+      if(vals.eend) L.push(`DTEND:${f(vals.eend)}`);
+      if(vals.eloc) L.push(`LOCATION:${vals.eloc}`);
+      if(vals.edesc) L.push(`DESCRIPTION:${vals.edesc}`);
+      L.push('END:VEVENT');
+      return L.join('\n');
+    }
+    case 'bitcoin': {
+      let u = `bitcoin:${vals.btcaddr||''}`;
+      const q = [];
+      if(vals.btcamt) q.push(`amount=${vals.btcamt}`);
+      if(vals.btclabel) q.push(`label=${enc(vals.btclabel)}`);
+      if(vals.btcmsg) q.push(`message=${enc(vals.btcmsg)}`);
+      return q.length ? u + '?' + q.join('&') : u;
+    }
+    case 'coupon': return [vals.cpdesc||'', vals.cpcode ? `Code: ${vals.cpcode}` : ''].filter(Boolean).join('\n');
+    case 'appstore': return vals.appios || vals.appand || '';
+    default: return '';
+  }
+}
+function parsePayload(type, payload){
+  const v = {};
+  try{
+    if(type==='url') v.dest = payload;
+    else if(type==='text') v.txt = payload;
+    else if(type==='wifi'){ const m = payload.match(/WIFI:T:([^;]*);S:([^;]*);P:([^;]*);/); if(m){ v.wenc=m[1]; v.ssid=m[2]; v.wpass=m[3]; } }
+    else if(type==='vcard'){ const g = k => { const m = payload.match(new RegExp('^'+k+':(.*)$','m')); return m ? m[1] : ''; }; v.vname=g('FN'); v.vorg=g('ORG'); v.vtitle=g('TITLE'); v.vphone=g('TEL;TYPE=CELL')||g('TEL'); v.vemail=g('EMAIL'); v.vurl=g('URL'); v.vaddr=(g('ADR').split(';')[2]||''); v.vnote=g('NOTE'); }
+    else if(type==='email'){ const m = payload.match(/^mailto:([^?]*)\??(.*)$/); if(m){ v.eto=m[1]; const p = new URLSearchParams(m[2]||''); v.esub=p.get('subject')||''; v.ebody=p.get('body')||''; } }
+    else if(type==='sms'){ const m = payload.match(/^sms:([^?]*)\??(.*)$/); if(m){ v.sphone=m[1]; v.smsg=new URLSearchParams(m[2]||'').get('body')||''; } }
+    else if(type==='phone') v.phone = payload.replace(/^tel:/,'');
+    else if(type==='geo'){ const m = payload.match(/^geo:([^,]*),?(.*)$/); if(m){ v.lat=m[1]; v.lng=m[2]; } }
+    else if(type==='event'){ const g = k => { const m = payload.match(new RegExp('^'+k+':(.*)$','m')); return m ? m[1] : ''; }; v.etitle=g('SUMMARY'); v.eloc=g('LOCATION'); v.edesc=g('DESCRIPTION'); }
+    else if(type==='bitcoin'){ const m = payload.match(/^bitcoin:([^?]*)\??(.*)$/); if(m){ v.btcaddr=m[1]; const p = new URLSearchParams(m[2]||''); v.btcamt=p.get('amount')||''; v.btclabel=p.get('label')||''; v.btcmsg=p.get('message')||''; } }
+    else if(type==='coupon'){ const m = payload.match(/^Code: (.*)$/m); v.cpcode = m ? m[1] : ''; v.cpdesc = payload.replace(/\nCode: .*$/,''); }
+    else if(type==='appstore'){ if(/apps\.apple\.com/.test(payload)) v.appios = payload; else v.appand = payload; }
+  }catch(e){}
+  return v;
+}
+function parseCode(input){
+  let s = (input||'').trim();
+  if(!s) return '';
+  // Accept full link: https://freeqrly.com/q/XXXXXXX or freeqrly.com/q/XXXXXXX
+  const m = s.match(/\/q\/([A-Za-z0-9_-]+)/);
+  if(m) return m[1];
+  return s;
+}
+let curCode = '', curKey = '', curType = 'url', curPayload = '';
+
+function renderEditFields(){
+  const box = $('mEditFields');
+  const specs = FIELDS[curType] || [];
+  const vals = parsePayload(curType, curPayload);
+  box.innerHTML = specs.map(([key, label, inputType, ph]) => {
+    const val = (vals[key] || '').replace(/"/g, '&quot;');
+    if(inputType === 'textarea') return `<div class="mfield"><label>${label}</label><textarea data-k="${key}" rows="3" placeholder="${ph}">${val}</textarea></div>`;
+    if(inputType === 'select') return `<div class="mfield"><label>${label}</label><select data-k="${key}"><option ${vals[key]==='WPA'?'selected':''}>WPA</option><option ${vals[key]==='WEP'?'selected':''}>WEP</option><option ${vals[key]==='nopass'?'selected':''}>nopass</option></select></div>`;
+    return `<div class="mfield"><label>${label}</label><input data-k="${key}" type="${inputType}" placeholder="${ph}" value="${val}"></div>`;
+  }).join('');
+}
+function renderStats(d){
+  $('mShortUrl').href = 'https://freeqrly.com/q/' + d.code;
+  $('mShortUrl').textContent = 'freeqrly.com/q/' + d.code;
+  $('mDest').textContent = '→ ' + (d.payload || '');
+  $('mTotal').textContent = (d.totalScans || 0).toLocaleString();
+  const today = new Date().toISOString().slice(0,10);
+  const todayRow = (d.byDate||[]).find(r => r.date === today);
+  $('mToday').textContent = (todayRow ? todayRow.scans : 0).toLocaleString();
+  $('mUnique').textContent = (d.uniqueScans || 0).toLocaleString();
+  $('mCreated').textContent = d.createdAt ? new Date(d.createdAt).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '—';
+  // 7-day chart (oldest → newest, today last)
+  const last7 = (d.byDate||[]).slice(0,7).reverse();
+  const max = Math.max(1, ...last7.map(r => r.scans));
+  $('mChart').innerHTML = last7.map(r => {
+    const isToday = r.date === today;
+    return `<div class="bar ${isToday?'today':''}" style="height:${Math.max(6, r.scans/max*100)}%"><span>${r.scans}</span></div>`;
+  }).join('');
+  $('mChartLabels').innerHTML = last7.map(r => {
+    const dt = new Date(r.date + 'T00:00:00');
+    return `<span>${r.date === today ? 'Today' : dt.toLocaleDateString('en-US',{weekday:'short'})}</span>`;
+  }).join('');
+  const rows = (arr, empty) => {
+    if(!arr || !arr.length) return `<div class="mbreakRow"><span>${empty}</span><span class="pct">—</span></div>`;
+    const total = arr.reduce((s,r) => s + r.scans, 0) || 1;
+    return arr.map(r => `<div class="mbreakRow"><span>${r.country || r.city || r.device || r.os || 'Unknown'}</span><span class="pct">${Math.round(r.scans/total*100)}%</span></div>`).join('');
+  };
+  $('mByCountry').innerHTML = rows(d.byCountry, 'No scans yet');
+  $('mByCity').innerHTML = rows(d.byCity, 'No city data yet');
+  $('mByDevice').innerHTML = rows(d.byDevice, 'No scans yet');
+  $('mByOS').innerHTML = rows(d.byOS, 'No scans yet');
+  // Type selector + edit fields
+  $('mType').innerHTML = TYPES.map(([v,l]) => `<option value="${v}" ${v===d.type?'selected':''}>${l}</option>`).join('');
+  curType = d.type || 'url'; curPayload = d.payload || '';
+  renderEditFields();
+}
+async function unlock(){
+  const code = parseCode($('mCode').value);
+  const key = $('mKey').value.trim();
+  const err = $('mUnlockErr');
+  if(!code || !key){ err.textContent = 'Please enter both the code (or link) and the edit key.'; err.hidden = false; return; }
+  $('mUnlock').disabled = true;
+  $('mUnlock').textContent = 'Unlocking…';
+  try{
+    const r = await fetch(`/api/codes/${encodeURIComponent(code)}/stats?key=${encodeURIComponent(key)}`);
+    const d = await r.json();
+    if(!r.ok){ err.textContent = d.error || 'Could not unlock. Check the code and key.'; err.hidden = false; return; }
+    curCode = code; curKey = key;
+    err.hidden = true;
+    $('unlockCard').hidden = true;
+    $('manageCard').hidden = false;
+    renderStats(d);
+  }catch(e){ err.textContent = 'Network error. Please try again.'; err.hidden = false; }
+  finally{ $('mUnlock').disabled = false; $('mUnlock').textContent = 'Unlock →'; }
+}
+$('mUnlock').addEventListener('click', unlock);
+$('mType').addEventListener('change', e => {
+  // Switching type: keep current payload for pre-fill attempt, fields re-render
+  curType = e.target.value;
+  // When switching type, start from empty (payload belongs to old type)
+  curPayload = '';
+  renderEditFields();
+});
+$('mSave').addEventListener('click', async () => {
+  const vals = {};
+  document.querySelectorAll('#mEditFields [data-k]').forEach(el => vals[el.dataset.k] = el.value);
+  const payload = buildPayload(curType, vals);
+  if(!payload){ $('mSaveErr').textContent = 'Please fill in the content first.'; $('mSaveErr').hidden = false; return; }
+  $('mSave').disabled = true; $('mSave').textContent = 'Saving…';
+  try{
+    const r = await fetch(`/api/codes/${encodeURIComponent(curCode)}`, {
+      method: 'PATCH', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ editKey: curKey, type: curType, payload })
+    });
+    const d = await r.json();
+    if(!r.ok){ $('mSaveErr').textContent = d.error || 'Save failed.'; $('mSaveErr').hidden = false; return; }
+    $('mSaveErr').hidden = true;
+    $('mSaveOk').hidden = false;
+    curPayload = payload;
+    $('mDest').textContent = '→ ' + payload;
+    setTimeout(() => $('mSaveOk').hidden = true, 4000);
+  }catch(e){ $('mSaveErr').textContent = 'Network error.'; $('mSaveErr').hidden = false; }
+  finally{ $('mSave').disabled = false; $('mSave').textContent = 'Save changes'; }
+});
+// Pre-fill from ?c= param
+const params = new URLSearchParams(location.search);
+if(params.get('c')) $('mCode').value = params.get('c');
+</script>
+</body></html>
