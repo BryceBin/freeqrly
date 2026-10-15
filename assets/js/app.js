@@ -229,7 +229,7 @@ function renderTabs(){
   }
   updateStudioMascot();
   const t = $("typerail") || $("tabs"); if(!t) return; t.innerHTML="";
-  ORDER.forEach(k=>{
+  ORDER.filter(k => !(window.MANAGE_MODE && k === "batch")).forEach(k=>{
     const [name] = I18N[lang].types[k];
     const b = document.createElement("button");
     b.setAttribute("role","tab");
@@ -1061,8 +1061,18 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     const payload = content();
     if(!payload){ alert("Please enter content first"); return; }
     genBtn.disabled = true;
-    genBtn.innerHTML = '<span class="spinner"></span>Generating…';
+    genBtn.innerHTML = window.MANAGE_MODE ? '<span class="spinner"></span>Saving…' : '<span class="spinner"></span>Generating…';
     try{
+      // Manage mode: PATCH the existing code instead of creating a new one
+      if(window.MANAGE_MODE){
+        const r = await fetch("/api/codes/" + encodeURIComponent(manageCode), { method:"PATCH", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ editKey: manageKey, type: cur, payload }) });
+        const d = await r.json();
+        if(!r.ok){ alert(d.error || "Save failed"); return; }
+        genBtn.textContent = "Saved ✓";
+        setTimeout(() => { genBtn.textContent = "Save changes"; }, 2500);
+        refreshDynamicUI();
+        return;
+      }
       const r = await fetch("/api/codes", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type: cur, payload }) });
       const d = await r.json();
       if(!r.ok){ alert(d.error || "Failed to create"); return; }
@@ -1076,7 +1086,8 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     }catch(e){ alert("Network error"); }
     finally{
       genBtn.disabled = false;
-      genBtn.innerHTML = (I18N[lang] && I18N[lang].dynCreate ? I18N[lang].dynCreate : 'Generate dynamic QR') + ' →';
+      if(window.MANAGE_MODE){ genBtn.textContent = "Save changes"; }
+      else genBtn.innerHTML = (I18N[lang] && I18N[lang].dynCreate ? I18N[lang].dynCreate : 'Generate dynamic QR') + ' →';
     }
   });
 
@@ -1089,6 +1100,27 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
 
   // Expose refresh for draw() to call when content changes
   window.refreshDynamicUI = refreshDynamicUI;
+
+  // --- Manage mode ( /manage/ ) ---
+  let manageCode = '', manageKey = '';
+  if(window.MANAGE_MODE){
+    // Fixed Dynamic: hide the Static/Dynamic toggle entirely
+    if(seg) seg.style.display = "none";
+    if(genBtn) genBtn.textContent = "Save changes";
+  }
+  // Called by the Manage page boot script after unlock
+  window.manageSetup = function(code, key, type, payload, shortUrl){
+    manageCode = code; manageKey = key;
+    dynamicShortUrl = shortUrl;
+    dynamicGenerated = true;
+    dynamicMode = true;
+    fillFieldsFromPayload(type, payload);
+    refreshDynamicUI();
+    // Manage-mode labels (applyLang overwrote them with generator copy on load)
+    if(genBtn) genBtn.textContent = "Save changes";
+    if(hintLine) hintLine.textContent = "Edit the type or content, then hit Save changes.";
+  };
+  window.manageGetCode = () => manageCode;
 })();
 
 // Switch the type rail to a given type
@@ -1098,6 +1130,51 @@ function switchToType(type){
   renderTabs();
   renderFields();
   updateStudioMascot();
+}
+
+// Reverse-parse a stored payload into the generator fields (Manage page)
+function fillFieldsFromPayload(type, payload){
+  if(!ORDER.includes(type) || type === "batch") type = "url";
+  cur = type;
+  renderTabs();
+  renderFields();
+  const set = (id, val) => { const el = $("f_"+id); if(el){ el.value = val || ""; el.dispatchEvent(new Event("input", {bubbles:true})); } };
+  const setSeg = val => { // wifi enc segmented buttons
+    const seg = document.querySelector("#fields .seg"); if(!seg) return;
+    seg.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.v === val));
+    const sel = $("f_enc"); if(sel) sel.value = val || "WPA";
+  };
+  const setDT = (id, compact) => { // "20261015T120000" -> date + time inputs
+    if(!compact) return;
+    const m = String(compact).match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})/);
+    if(!m) return;
+    const d = $("f_"+id+"_date"), t = $("f_"+id+"_time");
+    if(d) d.value = `${m[1]}-${m[2]}-${m[3]}`;
+    if(t) t.value = `${m[4]}:${m[5]}`;
+    if(d) d.dispatchEvent(new Event("input", {bubbles:true}));
+    if(t) t.dispatchEvent(new Event("input", {bubbles:true}));
+  };
+  const g = k => { const m = payload.match(new RegExp("^"+k+":(.*)$","m")); return m ? m[1] : ""; };
+  try{
+    if(type==="url") set("url", payload);
+    else if(type==="text") set("text", payload);
+    else if(type==="wifi"){ const m = payload.match(/WIFI:T:([^;]*);S:([^;]*);P:([^;]*);/); if(m){ setSeg(m[1]); set("ssid", m[2]); set("pass", m[3]); } }
+    else if(type==="vcard"){
+      set("name", payload.match(/^N:(.*)$/m)?.[1] || payload.match(/^FN:(.*)$/m)?.[1] || "");
+      set("vcorg", g("ORG")); set("vctitle", g("TITLE"));
+      set("phone", g("TEL")); set("email", g("EMAIL")); set("vcurl", g("URL"));
+      set("vcadr", (g("ADR").split(";")[2]||"")); set("vcnote", g("NOTE"));
+    }
+    else if(type==="email"){ const m = payload.match(/^mailto:([^?]*)\??(.*)$/); if(m){ set("to", m[1]); const p = new URLSearchParams(m[2]||""); set("subject", p.get("subject")||""); set("body", p.get("body")||""); } }
+    else if(type==="sms"){ const m = payload.match(/^sms:([^?]*)\??(.*)$/); if(m){ set("phone", m[1]); set("body", new URLSearchParams(m[2]||"").get("body")||""); } }
+    else if(type==="phone") set("phone", payload.replace(/^tel:/,""));
+    else if(type==="geo"){ const m = payload.match(/^geo:([^,]*),?(.*)$/); if(m){ set("lat", m[1]); set("lng", m[2]); } }
+    else if(type==="bitcoin"){ const m = payload.match(/^bitcoin:([^?]*)\??(.*)$/); if(m){ set("btcaddr", m[1]); const p = new URLSearchParams(m[2]||""); set("btcamt", p.get("amount")||""); set("btclabel", p.get("label")||""); set("btcmsg", p.get("message")||""); } }
+    else if(type==="coupon"){ const m = payload.match(/^Code: (.*)$/m); set("cpcode", m ? m[1] : ""); set("cpdesc", payload.replace(/\nCode: .*$/,"")); }
+    else if(type==="appstore"){ if(/apps\.apple\.com/.test(payload)) set("appios", payload); else set("appand", payload); }
+    else if(type==="event"){ set("etitle", g("SUMMARY")); setDT("estart", g("DTSTART")); setDT("eend", g("DTEND")); set("eloc", g("LOCATION")); set("edesc", g("DESCRIPTION")); }
+  }catch(e){}
+  draw();
 }
 
 detectLang().then(l=>{ lang = l; applyLang(); draw(); if(window.refreshDynamicUI) window.refreshDynamicUI(); });
