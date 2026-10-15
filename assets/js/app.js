@@ -802,8 +802,35 @@ async function downloadQR(format){
       ps += `showpage\n%%EOF`;
       const blob = new Blob([ps], {type:"application/postscript"});
       const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "freeqrly.eps"; a.click();
+    } else if(format === "svg"){
+      // Apply frame to SVG download
+      const svgBlob = await qr.getRawData("svg");
+      let svgText = await svgBlob.text();
+      svgText = frameWrap(svgText, px);
+      const blob = new Blob([svgText], {type:"image/svg+xml"});
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "freeqrly.svg"; a.click();
+      setTimeout(()=>URL.revokeObjectURL(a.href), 5000);
     } else {
-      await qr.download({name:"freeqrly",extension:format});
+      // PNG: render framed SVG to canvas, then download
+      const svgBlob = await qr.getRawData("svg");
+      let svgText = await svgBlob.text();
+      svgText = frameWrap(svgText, px);
+      const img = new Image();
+      const url = URL.createObjectURL(new Blob([svgText], {type:"image/svg+xml"}));
+      await new Promise((res, rej)=>{ img.onload=res; img.onerror=rej; img.src=url; });
+      // Framed size: px + padding + CTA height
+      const frame = (typeof getFrame === "function" ? getFrame() : "none");
+      const pad = frame === "none" ? 0 : Math.round(px * 0.06);
+      const ctaH = frame === "cta" ? Math.round(px * 0.14) : 0;
+      const total = px + pad * 2 + ctaH;
+      const canvas = document.createElement("canvas");
+      canvas.width = total; canvas.height = total;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, total, total);
+      URL.revokeObjectURL(url);
+      const a = document.createElement("a");
+      a.href = canvas.toDataURL("image/png");
+      a.download = "freeqrly.png"; a.click();
     }
     saveHist(); track("qr_download",{type:cur,format:format});
   }catch(e){}
