@@ -1065,7 +1065,7 @@ let dynamicGenerated = false;
     }catch(e){ alert("Network error"); }
     finally{
       genBtn.disabled = false;
-      genBtn.innerHTML = document.querySelector('[data-i18n="dynCreate"]').textContent + ' →';
+      genBtn.innerHTML = (I18N[lang] && I18N[lang].dynCreate ? I18N[lang].dynCreate : 'Generate dynamic QR') + ' →';
     }
   });
 
