@@ -465,6 +465,7 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 .dlrow.disabled{opacity:.45;pointer-events:none}
 #dynResult{margin-bottom:12px;font-size:13px;line-height:1.7}
 .dynShort a{font-weight:700;word-break:break-all}
-.dynKey{margin-top:6px;word-break:break-all}
-.dynKey code{background:#F1EAD9;padding:3px 8px;border-radius:6px;font-size:15px;font-weight:800;letter-spacing:.12em}
+.dynKey{display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
+.dynKey code{display:inline-flex;align-items:center;height:34px;background:#F1EAD9;padding:0 10px;border-radius:8px;font-size:15px;font-weight:800;letter-spacing:.12em}
+#dynCopyKey{display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:8px;border:1.5px solid #E8DFC8;background:#fff;font-size:13px;font-weight:600;cursor:pointer;color:#22303F}
 .dynWarn{font-size:12px;color:#b45309;margin-top:4px}
