@@ -230,7 +230,7 @@ function renderTabs(){
     t.appendChild(b);
   });
   const bp = $("batchPanel"); if (bp) bp.hidden = cur !== "batch";
-  if(cur === "batch") batchTypeInit();
+  if(cur === "batch"){ batchTypeInit(); ensureXLSX(); ensureJSZip(); }
 }
 /* B3 segmented appearance controls: visual UI syncs hidden native inputs */
 function segInit(id, hiddenId, def){
@@ -416,6 +416,21 @@ function batchPayload(type, line){
 }
 
 // Format hints per type (shown under the textarea)
+
+// Lazy-load heavy libs only when batch features are used
+const _libCache = {};
+function loadLib(src){
+  if(_libCache[src]) return _libCache[src];
+  _libCache[src] = new Promise((res, rej)=>{
+    const s = document.createElement("script");
+    s.src = src; s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+  return _libCache[src];
+}
+const ensureXLSX = ()=>loadLib("/assets/lib/xlsx.min.js");
+const ensureJSZip = ()=>loadLib("/assets/lib/jszip.min.js");
+
 const BATCH_FMT = {
   url: "https://example.com/a",
   text: "Any text, one per line",
@@ -532,8 +547,9 @@ function batchRowsToPayloads(type, rows){
 function batchHandleFile(file){
   const isXlsx = /\.xlsx?$/i.test(file.name);
   const reader = new FileReader();
-  reader.onload = (e)=>{
+  reader.onload = async (e)=>{
     try{
+      if(isXlsx){ await ensureXLSX(); }
       if(isXlsx && typeof XLSX !== "undefined"){
         const wb = XLSX.read(e.target.result, {type: "array"});
         let all = [];
@@ -594,7 +610,7 @@ if(_bf){
 // Template download
 const _bt = $("batchTemplate");
 if(_bt){
-  _bt.addEventListener("click", ()=>{
+  _bt.addEventListener("click", async ()=>{
     // Multi-sheet Excel: one sheet per type, each with headers + example rows
     const sheets = {
       url: [["URL"], ["https://example.com/a"], ["https://example.com/b"]],
@@ -610,6 +626,7 @@ if(_bt){
       coupon: [["Code","Description"], ["SAVE20","20% off"], ["WELCOME10","10% off first order"]],
       appstore: [["App Store Link","Google Play Link"], ["https://apps.apple.com/app/...","https://play.google.com/store/apps/..."], ["https://apps.apple.com/app/...","https://play.google.com/store/apps/..."]],
     };
+    await ensureXLSX();
     if(typeof XLSX !== "undefined"){
       const wb = XLSX.utils.book_new();
       for(const [name, rows] of Object.entries(sheets)){
@@ -632,6 +649,7 @@ if(_bt){
 }
 
 $("batchZip").onclick = async ()=>{ track("batch_zip",{count:batchItems.length});
+  await ensureJSZip();
   const zip = new JSZip();
   for(let i=0;i<batchItems.length;i++){
     const blob = await new QRCodeStyling(Object.assign(styleOpts(1024),{data:batchItems[i]})).getRawData("png");
