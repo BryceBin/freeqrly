@@ -227,6 +227,22 @@ def faq_json(faq):
         '{\n      "@type": "Question",\n      "name": "%s",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "%s"\n      }\n    }' % (q.replace('"', '\\"'), a.replace('"', '\\"'))
         for q, a in faq)
 
+def strip_tags(s):
+    return re.sub(r'<[^>]+>', '', s)
+
+def howto_json(p):
+    # HowTo steps mirror the page's own "how" steps — no invented steps.
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": p["studio_h2"],
+        "description": strip_tags(p["lede"]),
+        "step": [
+            {"@type": "HowToStep", "name": t, "text": strip_tags(d)}
+            for t, d in p["steps"]
+        ],
+    }, ensure_ascii=False)
+
 def build(p):
     url = f"https://freeqrly.com/{p['slug']}/"
     studio = STUDIO_H2_RE.sub(
@@ -274,7 +290,7 @@ def build(p):
 <link rel="stylesheet" href="../assets/css/main.css">
 <style>{EXTRA_CSS}</style>
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — {p["kw"]}","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0"}},"url":"{url}","description":"{p["desc"]}"}}
+{{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — {p["kw"]}","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"offers":{{"@type":"Offer","price":"0"}},"url":"{url}","description":"{p["desc"]}"}}
 </script>
 <script type="application/ld+json">
 {{
@@ -284,6 +300,9 @@ def build(p):
     {faq_json(p["faq"])}
   ]
 }}
+</script>
+<script type="application/ld+json">
+{howto_json(p)}
 </script>
 </head>
 <body data-lp="{p["slug"]}" data-type="{p["dtype"]}">

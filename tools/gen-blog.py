@@ -129,6 +129,23 @@ POSTS = [
 
 
 POSTS += [{'body': '\n'
+          '<ol>\n'
+          '<li><b>Point your camera at the code</b> Open the built-in Camera app and point it '
+          'at the QR code, keeping the whole square in frame.</li>\n'
+          '<li><b>Tap the notification</b> A banner or link preview appears — tap it to open '
+          'the destination.</li>\n'
+          '<li><b>On iPhone, use the built-in shortcuts</b> Control Center QR scanner, or '
+          'long-press the Camera icon. For a code inside a photo, long-press it in '
+          'Photos.</li>\n'
+          '<li><b>On Android, use Lens or Quick Settings</b> Google Lens in the camera or '
+          'Google app, or the Scan QR code tile in Quick Settings. For a saved image, Google '
+          'Photos + Lens.</li>\n'
+          '<li><b>If nothing happens, fix the code, not the phone</b> Move closer, wipe the '
+          'lens, and check the code itself: too small, low contrast, damaged, or printed on a '
+          'curve.</li>\n'
+          '<li><b>Check the preview before opening</b> Glance at the URL before tapping, '
+          'especially on codes you find in public places.</li>\n'
+          '</ol>\n'
           '<h2>On iPhone</h2>\n'
           '<p>Open the Camera app and point it at the code — hold steady for a second. A yellow '
           "notification appears; tap it. That's it. This works on iOS 11 and later, so unless your "
@@ -173,8 +190,19 @@ POSTS += [{'body': '\n'
              'in frame.'),
             ('Tap the notification',
              'A banner or link preview appears — tap it to open the destination.'),
-            ('Check the preview first',
-             'Glance at the URL before opening, especially on codes you find in public places.')],
+            ('On iPhone, use the built-in shortcuts',
+             'Open Control Center and tap the QR scanner icon, or long-press the Camera icon. '
+             'To scan a code inside a photo, open it in Photos and long-press the code.'),
+            ('On Android, use Lens or Quick Settings',
+             'Use Google Lens in the camera or Google app, or the Scan QR code tile in Quick '
+             'Settings (Samsung). For a saved image, open it in Google Photos and tap the Lens '
+             'button.'),
+            ('If nothing happens, fix the code, not the phone',
+             'Move closer, wipe the lens, and check the code itself: too small, low contrast, '
+             'damaged, or printed on a curve. See the full troubleshooting checklist.'),
+            ('Check the preview before opening',
+             'Glance at the URL before tapping, especially on codes you find in public places '
+             '— stickers over real codes are a known scam.')],
   'lede': 'No app required. Every modern iPhone and Android phone scans QR codes with the camera '
           "it already has. Here's how — plus what to do when nothing happens.",
   'mascot': 'scanner',
@@ -617,7 +645,7 @@ def build(p, all_posts=None):
 <link rel="stylesheet" href="../../assets/css/main.css">
 {REL_CSS}
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","datePublished":"2026-10-13","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
+{{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"2026-10-13","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
 </script>
 <script type="application/ld+json">
 {{
