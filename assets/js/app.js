@@ -126,6 +126,9 @@ async function detectLang(){
   return "en";
 }
 let cur = "url", logoData = null;
+let dynamicMode = false;
+let dynamicShortUrl = '';
+let dynamicGenerated = false;
 const ORDER = ["url","text","wifi","vcard","email","sms","phone","geo","event","bitcoin","coupon","appstore","batch"];
 /* landing pages preselect a type via body[data-type]; ?type= also works */
 const _preType = document.body.getAttribute("data-type") || new URLSearchParams(location.search).get("type");
@@ -1011,9 +1014,6 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
 /* Toggle lives at top of preview. Dynamic: preview blurs + download disabled
    + Generate button appears. After generation: QR clears, download enabled,
    result shows link + 8-char edit key. No manage section. */
-let dynamicMode = false;
-let dynamicShortUrl = '';
-let dynamicGenerated = false;
 (function(){
   const seg = $("segMode"); if(!seg) return;
   const genBtn = $("dynCreate");
