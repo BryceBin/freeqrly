@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3d-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3e-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -137,6 +137,41 @@
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
     <div class="shead"><div><h2 data-i18n="sTitle">QR कोड बनाएं</h2></div></div>
     <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
+    <div class="modeRow">
+      <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
+        <button type="button" data-mode="static" class="on" data-i18n="modeStatic">स्थिर</button>
+        <button type="button" data-mode="dynamic" data-i18n="modeDynamic">गतिशील</button>
+      </div>
+      <span class="modeHint" data-i18n="modeHint">स्थिर कोड कभी समाप्त नहीं होते। गतिशील कोड छपने के बाद भी बदले जा सकते हैं और स्कैन गिने जा सकते हैं।</span>
+    </div>
+    <div id="dynamicPanel" hidden>
+      <div class="dynBox">
+        <label class="fl" data-i18n="dynDest">गंतव्य URL</label>
+        <input type="text" id="dynDest" placeholder="https://example.com/landing">
+        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">गतिशील QR बनाएं</button>
+        <div id="dynResult" hidden>
+          <div class="dynShort"><span data-i18n="dynShort">आपका गतिशील QR लिंक:</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
+          <div class="dynKey"><span data-i18n="dynKey">संपादन कुंजी (इसे सहेजें — संपादन या आंकड़े देखने के लिए चाहिए):</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">कॉपी करें</button></div>
+          <p class="dynWarn" data-i18n="dynWarn">अपनी संपादन कुंजी सुरक्षित जगह सहेजें। इसके बिना आप इस कोड को संपादित या इसके आंकड़े नहीं देख सकते।</p>
+        </div>
+        <hr class="dynSep">
+        <div class="dynManage">
+          <h3 data-i18n="dynManage">गतिशील कोड प्रबंधित करें</h3>
+          <div class="fl"><span data-i18n="dynCode">कोड</span> <input type="text" id="dynManageCode" placeholder="abc1234"></div>
+          <div class="fl"><span data-i18n="dynKey">संपादन कुंजी (इसे सहेजें — संपादन या आंकड़े देखने के लिए चाहिए):</span> <input type="text" id="dynManageKey" placeholder=""></div>
+          <div class="dynManageBtns">
+            <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">आंकड़े देखें</button>
+            <button class="btn-ghost" id="dynEditBtn" data-i18n="dynEdit">गंतव्य संपादित करें</button>
+          </div>
+          <div id="dynStats" hidden></div>
+          <div id="dynEditForm" hidden>
+            <input type="text" id="dynNewDest" placeholder="https://example.com/new">
+            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">नया गंतव्य सहेजें</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="grid">
       <div>
         <div id="fields"></div>
@@ -315,8 +350,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3d-20261015"></script>
-<script src="/assets/js/app.js?v=b3d-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3e-20261015"></script>
+<script src="/assets/js/app.js?v=b3e-20261015"></script>
 </body>
 </html>
 

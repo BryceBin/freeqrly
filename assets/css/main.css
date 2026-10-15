@@ -446,3 +446,27 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 .frameExpand.show{max-height:72px;opacity:1;padding:12px}
 .frameExpand{padding:0 12px;box-sizing:border-box}
 .frameExpandInput{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:14px;background:#fff;color:var(--ink);font-family:inherit;box-sizing:border-box;display:block}
+
+/* --- Dynamic QR mode --- */
+.modeRow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.segMode{width:auto}
+.modeHint{font-size:13px;color:var(--muted);max-width:420px}
+.dynBox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.dynBox .fl{display:block;margin:10px 0 6px;font-weight:600}
+.dynBox input[type=text]{width:100%;box-sizing:border-box}
+.dynBox .btn-primary{margin-top:12px}
+.dynShort{margin-top:16px;word-break:break-all}
+.dynShort a{font-weight:700}
+.dynKey{margin-top:10px;word-break:break-all}
+.dynKey code{background:#f5f0e6;padding:3px 8px;border-radius:6px;font-size:13px}
+.dynWarn{font-size:13px;color:#b45309;margin-top:8px}
+.dynSep{border:none;border-top:1px solid var(--line);margin:20px 0}
+.dynManage h3{font-size:16px;margin:0 0 8px}
+.dynManage .fl{display:flex;align-items:center;gap:10px;margin:8px 0}
+.dynManage .fl span{min-width:70px}
+.dynManageBtns{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.dynStatTable{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.dynStatTable th,.dynStatTable td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}
+.dynStatTable th{font-weight:700}
+#dynEditForm{margin-top:12px}
+#dynEditForm input{margin-bottom:10px}

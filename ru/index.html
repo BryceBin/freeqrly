@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3d-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3e-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -137,6 +137,41 @@
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
     <div class="shead"><div><h2 data-i18n="sTitle">Создать QR-код</h2></div></div>
     <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
+    <div class="modeRow">
+      <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
+        <button type="button" data-mode="static" class="on" data-i18n="modeStatic">Статический</button>
+        <button type="button" data-mode="dynamic" data-i18n="modeDynamic">Динамический</button>
+      </div>
+      <span class="modeHint" data-i18n="modeHint">Статические коды не истекают. Динамические можно редактировать после печати и отслеживать сканы.</span>
+    </div>
+    <div id="dynamicPanel" hidden>
+      <div class="dynBox">
+        <label class="fl" data-i18n="dynDest">Целевой URL</label>
+        <input type="text" id="dynDest" placeholder="https://example.com/landing">
+        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">Создать динамический QR</button>
+        <div id="dynResult" hidden>
+          <div class="dynShort"><span data-i18n="dynShort">Ваша динамическая ссылка:</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
+          <div class="dynKey"><span data-i18n="dynKey">Ключ редактирования (сохраните — нужен для правок и статистики):</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">Копировать</button></div>
+          <p class="dynWarn" data-i18n="dynWarn">Сохраните ключ редактирования в надёжном месте. Без него нельзя редактировать код или смотреть статистику.</p>
+        </div>
+        <hr class="dynSep">
+        <div class="dynManage">
+          <h3 data-i18n="dynManage">Управление динамическим кодом</h3>
+          <div class="fl"><span data-i18n="dynCode">Код</span> <input type="text" id="dynManageCode" placeholder="abc1234"></div>
+          <div class="fl"><span data-i18n="dynKey">Ключ редактирования (сохраните — нужен для правок и статистики):</span> <input type="text" id="dynManageKey" placeholder=""></div>
+          <div class="dynManageBtns">
+            <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">Статистика</button>
+            <button class="btn-ghost" id="dynEditBtn" data-i18n="dynEdit">Изменить адрес</button>
+          </div>
+          <div id="dynStats" hidden></div>
+          <div id="dynEditForm" hidden>
+            <input type="text" id="dynNewDest" placeholder="https://example.com/new">
+            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">Сохранить новый адрес</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="grid">
       <div>
         <div id="fields"></div>
@@ -315,8 +350,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3d-20261015"></script>
-<script src="/assets/js/app.js?v=b3d-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3e-20261015"></script>
+<script src="/assets/js/app.js?v=b3e-20261015"></script>
 </body>
 </html>
 
