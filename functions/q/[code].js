@@ -47,6 +47,6 @@ export async function onRequest(context) {
   }
   // Non-URL types: serve hosted page
   return new Response(renderHostedPage(type, payload), {
-    headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
+    headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' },
   });
 }
