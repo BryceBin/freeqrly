@@ -2,6 +2,7 @@
 // Body: { type: string, payload: string }
 // Returns: { code, shortUrl, editKey }
 import { genCode, genEditKey, sha256Hex, json } from '../_lib/dynamic.js';
+import { getSessionUser, getCodeCount } from '../_lib/auth.js';
 
 const VALID_TYPES = new Set(['url','text','wifi','vcard','email','sms','phone','geo','event','bitcoin','coupon','appstore']);
 
@@ -24,6 +25,18 @@ export async function onRequestPost(context) {
     } catch { return json({ error: 'Invalid URL' }, 400); }
   }
 
+  // Signed-in create: attach the code to the user + enforce per-plan quota.
+  // Anonymous create is unchanged (EditKey flow, IP limit below still applies).
+  let ownerId = null;
+  try {
+    const sess = await getSessionUser(env, request);
+    if (sess) {
+      const used = await getCodeCount(env, sess.user.id);
+      if (used >= sess.user.code_limit) return json({ error: 'quota_exceeded' }, 403);
+      ownerId = sess.user.id;
+    }
+  } catch { /* session lookup failure is non-fatal: fall through as anonymous */ }
+
   // Per-IP creation rate limit: ~10 codes/hour
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
   const hour = new Date().toISOString().slice(0, 13);
@@ -45,8 +58,8 @@ export async function onRequestPost(context) {
       const editKey = genEditKey();
       const editKeyHash = await sha256Hex(editKey);
       await env.DB.prepare(
-        'INSERT INTO codes (code, destination, type, payload, edit_key_hash, created_at, total_scans) VALUES (?, ?, ?, ?, ?, ?, 0)'
-      ).bind(candidate, type === 'url' ? payload : '', type, payload, editKeyHash, Date.now()).run();
+        'INSERT INTO codes (code, destination, type, payload, edit_key_hash, created_at, total_scans, user_id) VALUES (?, ?, ?, ?, ?, ?, 0, ?)'
+      ).bind(candidate, type === 'url' ? payload : '', type, payload, editKeyHash, Date.now(), ownerId).run();
       return json({ code: candidate, shortUrl: `${new URL(request.url).origin}/q/${candidate}`, editKey });
     } catch (e) {
       if (String(e.message || e).includes('UNIQUE')) continue;

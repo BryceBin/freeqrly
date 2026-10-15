@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — FreeQrly</title>
+<meta name="description" content="FreeQrly Privacy Policy: what we collect, why, how long we keep it, and your rights.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#F5EFE3;color:#22303F;padding:0}
+.wrap{max-width:720px;margin:0 auto;padding:48px 20px 40px}
+h1{font-size:28px;margin-bottom:6px;text-align:center}
+.dateline{font-size:13px;color:#8a7a5f;text-align:center;margin-bottom:28px}
+.lede{font-size:15px;line-height:1.7;color:#8a7a5f;text-align:center;margin-bottom:28px}
+h2{font-size:17px;margin:28px 0 10px}
+p,li{font-size:15px;line-height:1.7}
+p{margin-bottom:12px}
+ul{margin:0 0 12px 20px}
+li{margin-bottom:6px}
+a{color:#2F4A62;font-weight:600;text-decoration:none}
+.foot{font-size:13px;color:#8a7a5f;text-align:center;margin-top:36px}
+.foot a{color:#2F4A62;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="dateline">Last updated: October 15, 2026</p>
+  <p class="lede">FreeQrly is built around a simple idea: the QR generator runs entirely in your browser, and we collect as little as possible. This page says plainly what we do collect, why, and how long we keep it.</p>
+
+  <h2>What we collect</h2>
+  <ul>
+    <li><b>Your email address</b> — only if you create an account. We use it to sign you in and to tie your dynamic codes to your account. Nothing else.</li>
+    <li><b>IP address</b> — used for rate limiting and abuse prevention (for example, to stop someone hammering the API). We do not build profiles from it.</li>
+    <li><b>Scan statistics</b> — for dynamic codes only, we count scans by country, city, device type, and operating system. These are aggregate counts with no personal identification. We never see who scanned a code.</li>
+    <li><b>Scan fingerprints</b> — to count <i>unique</i> scans, we store a one-way hash of a few request properties. A hash cannot be reversed back into a person or device, and it is used only for the unique-scan count.</li>
+  </ul>
+  <p>What we do <b>not</b> collect: the content of static QR codes. Static codes are drawn entirely in your browser — the text, links, WiFi passwords, and contact details you type never leave your device.</p>
+
+  <h2>Why we collect it</h2>
+  <p>Account email exists so you can sign in and manage your dynamic codes. IP addresses exist to keep the service working for everyone. Scan statistics exist because that is the point of a dynamic code — you asked to know how often it gets scanned.</p>
+
+  <h2>How long we keep it</h2>
+  <ul>
+    <li><b>Sessions:</b> 30 days. After that you sign in again.</li>
+    <li><b>Unverified accounts:</b> deleted after 30 days if the email was never verified.</li>
+    <li><b>Scan statistics:</b> kept while the code exists. Delete the code, and its statistics go with it.</li>
+  </ul>
+
+  <h2>Where data is stored</h2>
+  <p>Data is stored in Cloudflare D1, on currently US-based infrastructure. That may change as the service grows; if it does, we will update this page.</p>
+
+  <h2>Cookies</h2>
+  <p>One strictly-necessary session cookie keeps you signed in. That is all. No tracking pixels, no advertising cookies, no third-party analytics that follow you around the web.</p>
+
+  <h2>Your rights</h2>
+  <p>You can <a href="/dashboard/">export your data</a> or <a href="/dashboard/">delete your account</a> at any time from your Dashboard. Deleting your account releases your codes — they keep working, and their Edit Keys still work — and removes your account data. If you need anything else, reach us through the contact link in the footer.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, we will post the updated version here with a new date. Substantial changes will be noted on the homepage as well.</p>
+
+  <p class="foot"><a href="/">Generator</a> · <a href="/terms/">Terms</a></p>
+</div>
+</body></html>

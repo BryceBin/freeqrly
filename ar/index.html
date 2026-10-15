@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3o-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3p-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -121,6 +121,7 @@
       <a href="#studio" data-i18n="navStudio">الاستوديو</a><a href="#why" data-i18n="navWhy">المبادئ</a><a href="#faq" data-i18n="navFaq">أسئلة</a><a href="/scan/" data-i18n="navScan">ماسح</a>
     </nav>
     <div class="topbtns">
+      <span id="authArea"><a class="tbtn authLink" href="/login/">Sign in</a></span>
       <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
       <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
     </div>
@@ -211,6 +212,7 @@
           <button type="button" data-mode="dynamic" data-i18n="modeDynamic">ديناميكي</span><span class="modeTip" id="modeTip" data-i18n="modeTip">يمكن تعديل الرموز الديناميكية بعد الطباعة وتتبع عمليات المسح. يبقى الرمز المطبوع كما هو.</span></button>
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">معاينة حية — تتغير أثناء الكتابة</div>
+        <div class="quotaHint" id="quotaHint" hidden></div>
         <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div><div class="blurOverlay" data-i18n="dynBlurHint">املأ المحتوى ثم اضغط إنشاء</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
@@ -314,7 +316,7 @@
     <div class="fin" data-i18n="fin">صُنع في متصفحك.</div>
     <div class="fgroups">
       <div class="fgroup"><span class="fglabel">Generators</span><a href="/google-form-qr-code/">Google Form</a><a href="/wifi-qr-code/">WiFi</a><a href="/vcard-qr-code/">vCard</a><a href="/business-card-qr-code/">Business card</a><a href="/google-review-qr-code/">Google review</a><a href="/qr-code-with-logo/">With logo</a><a href="/wedding-qr-code/">Wedding</a><a href="/instagram-qr-code/">Instagram</a><a href="/real-estate-qr-code/">Real estate</a><a href="/batch-qr-code/">Batch</a></div>
-      <div class="fgroup"><span class="fglabel">More</span><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a><a href="/developers/">API & MCP</a></div>
+      <div class="fgroup"><span class="fglabel">More</span><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a><a href="/developers/">API & MCP</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
     </div>
     <div class="rule"></div>
     <div class="tiny">© 2026 FreeQrly</div>
@@ -327,8 +329,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3o-20261015"></script>
-<script src="/assets/js/app.js?v=b3o-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3p-20261015"></script>
+<script src="/assets/js/app.js?v=b3p-20261015"></script>
 </body>
 </html>
 

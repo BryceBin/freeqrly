@@ -115,6 +115,7 @@ HEADER = '''<header class="top">
       <a href="#studio">Studio</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
     </nav>
     <div class="topbtns">
+      <span id="authArea"><a class="tbtn authLink" href="/login/">Sign in</a></span>
       <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
       <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
     </div>
@@ -329,6 +330,7 @@ def build(p):
     <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, in your browser.</div>
     <div class="rule"></div>
     <div class="lplinks">{foot_links}</div>
+    <div class="lplinks"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>
     <div class="tiny">FreeQrly · MMXXVI</div>
   </footer>
 </div>

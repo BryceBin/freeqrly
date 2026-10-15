@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in — FreeQrly</title>
+<meta name="description" content="Sign in to FreeQrly to manage your dynamic QR codes.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#F5EFE3;color:#22303F;padding:0}
+.top{max-width:520px;margin:0 auto;padding:48px 20px 24px;text-align:center}
+.top h1{font-size:28px;margin-bottom:8px}
+.top p{font-size:14px;color:#8a7a5f;line-height:1.6}
+.top a{color:#2F4A62;text-decoration:none;font-weight:600}
+.card{background:#fff;border:1px solid #E8DFC8;border-radius:20px;padding:28px;max-width:520px;margin:0 auto 24px;box-shadow:0 8px 28px rgba(190,145,60,.10)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input{width:100%;padding:12px 14px;border:1.5px solid #E8DFC8;border-radius:10px;font-size:15px;background:#FBF6EC;outline:none}
+.field input:focus{border-color:#2F4A62;background:#fff}
+.btn{width:100%;border:0;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;background:#2F4A62;color:#fff}
+.btn:disabled{opacity:.6}
+.divider{display:flex;align-items:center;gap:12px;margin:22px 0;font-size:12px;color:#8a7a5f;text-transform:uppercase;letter-spacing:.08em}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:#E8DFC8}
+.oauth{width:100%;border:1.5px solid #E8DFC8;border-radius:12px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;background:#fff;color:#22303F;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:inherit}
+.oauth:hover{border-color:#2F4A62}
+.oauth:disabled{opacity:.5;cursor:not-allowed}
+.oauth .mark{font-size:16px}
+.merror{color:#b45309;font-size:13px;margin-top:10px;text-align:center}
+.mok{color:#2F6B4F;font-size:13px;margin-top:10px;text-align:center}
+.note{font-size:12px;color:#8a7a5f;line-height:1.6;margin-top:14px;text-align:center}
+.foot{font-size:13px;color:#8a7a5f;text-align:center;padding-bottom:40px}
+.foot a{color:#2F4A62;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="top">
+  <h1>Sign in</h1>
+  <p>Sign in to manage your dynamic QR codes. Static codes never need an account — <a href="/">back to the generator</a>.</p>
+</div>
+
+<div class="card">
+  <p class="merror" id="loginErr" hidden></p>
+  <form id="magicForm">
+    <div class="field"><label for="magicEmail">Email</label>
+      <input id="magicEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+    </div>
+    <button class="btn" id="magicBtn" type="submit">Send sign-in link</button>
+  </form>
+  <p class="mok" id="magicSent" hidden>Check your inbox — we sent you a sign-in link.</p>
+  <p class="note" id="emailNote" hidden>Email sign-in is not available right now.</p>
+
+  <div class="divider">or continue with</div>
+  <button class="oauth" id="oauthGoogle"><span class="mark">G</span> Continue with Google</button>
+  <button class="oauth" id="oauthGithub"><span class="mark">⌘</span> Continue with GitHub</button>
+  <button class="oauth" id="oauthMicrosoft"><span class="mark">▦</span> Continue with Microsoft</button>
+
+  <p class="note">We only use sign-in to tie your dynamic codes to your account. No tracking, no ads.</p>
+</div>
+<p class="foot"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+<script>
+const $ = id => document.getElementById(id);
+const ERRORS = {
+  invalid_link: 'That sign-in link is expired or already used. Request a new one.',
+  provider_unavailable: 'That sign-in option is not available right now.',
+  csrf: 'Something went wrong. Please try again.',
+  no_verified_email: "We couldn't get a verified email from that account."
+};
+const params = new URLSearchParams(location.search);
+if(params.get('error') && ERRORS[params.get('error')]){
+  $('loginErr').textContent = ERRORS[params.get('error')];
+  $('loginErr').hidden = false;
+}
+fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
+  if(!cfg) return;
+  if(cfg.email === false){
+    $('magicEmail').disabled = true;
+    $('magicBtn').disabled = true;
+    $('emailNote').hidden = false;
+  }
+  if(cfg.providers){
+    if(!cfg.providers.google) $('oauthGoogle').hidden = true;
+    if(!cfg.providers.github) $('oauthGithub').hidden = true;
+    if(!cfg.providers.microsoft) $('oauthMicrosoft').hidden = true;
+  }
+}).catch(()=>{});
+$('magicForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const email = $('magicEmail').value.trim();
+  if(!email) return;
+  $('magicBtn').disabled = true; $('magicBtn').textContent = 'Sending…';
+  try{
+    await fetch('/api/auth/magic-link', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ email })
+    });
+    // Same message either way — never reveal whether the email exists.
+    $('magicForm').hidden = true;
+    $('magicSent').hidden = false;
+  }catch(err){
+    $('magicForm').hidden = true;
+    $('magicSent').hidden = false;
+  }
+});
+$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google');
+$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github');
+$('oauthMicrosoft').addEventListener('click', () => location.href = '/api/auth/oauth/microsoft');
+</script>
+</body></html>

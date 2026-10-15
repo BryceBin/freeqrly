@@ -3,7 +3,7 @@
    unknown paths get the branded 404 (fixes soft-404s hurting SEO).
    Pattern-based (not enumerated) so new blog posts/pages just work. */
 const TOP_LEVEL = new Set([
-  'scan', 'about', 'developers',
+  'scan', 'about', 'developers', 'login', 'dashboard', 'privacy', 'terms',
   'zh', 'es', 'hi', 'ar', 'pt', 'fr', 'ru', 'de', 'ja',
   'sitemap.xml', 'robots.txt', 'llms.txt', 'og.png', 'favicon.ico', '404.html',
   'google-form-qr-code', 'wifi-qr-code', 'vcard-qr-code', 'batch-qr-code',

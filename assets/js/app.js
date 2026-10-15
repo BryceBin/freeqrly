@@ -1177,5 +1177,47 @@ function fillFieldsFromPayload(type, payload){
   draw();
 }
 
+// Header auth state + quota hint. Fail-open: anonymous use is unaffected
+// if /api/auth/me is unreachable, 401s, or returns anything unexpected.
+function initAuthHeader(){
+  try{
+    const area = $("authArea");
+    const quotaEl = $("quotaHint");
+    fetch("/api/auth/me", {credentials:"same-origin"}).then(r => {
+      if(!r.ok) return null;
+      return r.json().catch(()=>null);
+    }).then(me => {
+      if(!me || !me.email) return;
+      if(area){
+        area.textContent = "";
+        if(me.avatar){
+          const img = document.createElement("img");
+          img.className = "authAvatar";
+          img.src = me.avatar;
+          img.alt = "";
+          img.referrerPolicy = "no-referrer";
+          area.appendChild(img);
+        }
+        const who = document.createElement("span");
+        who.className = "authEmail";
+        who.textContent = me.email;
+        area.appendChild(who);
+        const dash = document.createElement("a");
+        dash.className = "tbtn authLink";
+        dash.href = "/dashboard/";
+        dash.textContent = "Dashboard";
+        area.appendChild(dash);
+      }
+      if(quotaEl && typeof me.codeCount === "number" && typeof me.codeLimit === "number"){
+        if(me.codeCount >= me.codeLimit){
+          quotaEl.textContent = "You've reached your code limit (" + me.codeCount + "/" + me.codeLimit + ")";
+          quotaEl.hidden = false;
+        }
+      }
+    }).catch(()=>{});
+  }catch(e){}
+}
+initAuthHeader();
+
 detectLang().then(l=>{ lang = l; applyLang(); draw(); if(window.refreshDynamicUI) window.refreshDynamicUI(); });
 })();

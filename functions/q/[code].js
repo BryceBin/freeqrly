@@ -53,8 +53,8 @@ export async function onRequest(context) {
   if (type === 'url' && payload) {
     return Response.redirect(payload, 302);
   }
-  // Non-URL types: serve hosted page
-  return new Response(renderHostedPage(type, payload), {
+  // Non-URL types: serve hosted page (pass code so the "Report this code" link can report it)
+  return new Response(renderHostedPage(type, payload, code), {
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' },
   });
 }
