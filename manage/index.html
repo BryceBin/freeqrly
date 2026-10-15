@@ -90,7 +90,7 @@
     </div>
     <div class="msecTitle">Edit content</div>
     <div class="meditBox">
-      <div class="mfield"><label>Type</label><select id="mType"></select></div>
+      <div class="mfield"><label>Type</label><div class="typerail" id="mTypeRail" role="tablist" aria-label="Content type"></div></div>
       <div id="mEditFields"></div>
       <button class="mbtn mbtnSave" id="mSave">Save changes</button>
       <p class="merror" id="mSaveErr" hidden></p>
@@ -102,10 +102,11 @@
 <script>
 // Manage page: unlock (code or link + edit key), stats, edit with type switch.
 const $ = id => document.getElementById(id);
+// Same type rail as the generator (emoji pills) — Batch excluded (dynamic is one code at a time)
 const TYPES = [
-  ['url','Website'],['text','Text'],['wifi','WiFi'],['vcard','Contact'],
-  ['email','Email'],['sms','SMS'],['phone','Call'],['geo','Place'],
-  ['event','Event'],['bitcoin','Bitcoin'],['coupon','Coupon'],['appstore','App Store']
+  ['url','🔗','Website'],['text','📝','Text'],['wifi','📶','WiFi'],['vcard','👤','Contact'],
+  ['email','✉️','Email'],['sms','💬','SMS'],['phone','📞','Call'],['geo','📍','Place'],
+  ['event','📅','Event'],['bitcoin','₿','Bitcoin'],['coupon','🎟️','Coupon'],['appstore','📱','App Store']
 ];
 // Field specs: [key, label, inputType, placeholder]
 const FIELDS = {
@@ -238,8 +239,8 @@ function renderStats(d){
   $('mByCity').innerHTML = rows(d.byCity, 'No city data yet');
   $('mByDevice').innerHTML = rows(d.byDevice, 'No scans yet');
   $('mByOS').innerHTML = rows(d.byOS, 'No scans yet');
-  // Type selector + edit fields
-  $('mType').innerHTML = TYPES.map(([v,l]) => `<option value="${v}" ${v===d.type?'selected':''}>${l}</option>`).join('');
+  // Type rail (same as generator) + edit fields
+  renderTypeRail(d.type || 'url');
   curType = d.type || 'url'; curPayload = d.payload || '';
   renderEditFields();
 }
@@ -263,13 +264,25 @@ async function unlock(){
   finally{ $('mUnlock').disabled = false; $('mUnlock').textContent = 'Unlock →'; }
 }
 $('mUnlock').addEventListener('click', unlock);
-$('mType').addEventListener('change', e => {
-  // Switching type: keep current payload for pre-fill attempt, fields re-render
-  curType = e.target.value;
-  // When switching type, start from empty (payload belongs to old type)
-  curPayload = '';
-  renderEditFields();
-});
+function renderTypeRail(selected){
+  const rail = $('mTypeRail');
+  rail.innerHTML = '';
+  TYPES.forEach(([v, emoji, label]) => {
+    const b = document.createElement('button');
+    b.setAttribute('role','tab');
+    b.className = 'ttab' + (v === selected ? ' on' : '');
+    b.setAttribute('aria-selected', v === selected ? 'true' : 'false');
+    const ic = document.createElement('span'); ic.className = 'tico'; ic.textContent = emoji;
+    b.appendChild(ic); b.appendChild(document.createTextNode(label));
+    b.addEventListener('click', () => {
+      // Switching type: start from empty (payload belongs to old type)
+      curType = v; curPayload = '';
+      renderTypeRail(v);
+      renderEditFields();
+    });
+    rail.appendChild(b);
+  });
+}
 $('mSave').addEventListener('click', async () => {
   const vals = {};
   document.querySelectorAll('#mEditFields [data-k]').forEach(el => vals[el.dataset.k] = el.value);
