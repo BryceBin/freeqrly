@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3f-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3g-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -137,38 +137,7 @@
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
     <div class="shead"><div><h2 data-i18n="sTitle">生成二维码</h2></div></div>
     <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
-    <div class="modeRow">
-      <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
-        <button type="button" data-mode="static" class="on" data-i18n="modeStatic">静态</button>
-        <button type="button" data-mode="dynamic" data-i18n="modeDynamic">动态</button>
-      </div>
       <span class="modeHint" data-i18n="modeHint">静态码永不过期。动态码打印后可改地址，还能统计扫码。</span>
-    </div>
-    <div id="dynamicPanel" hidden>
-      <div class="dynBox">
-        <p class="dynIntro" data-i18n="dynIntro">先在上方设计二维码——选类型、填内容、调样式。然后生成动态码：印出来的码不变，但内容随时可以改。</p>
-        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">用当前设计生成动态码</button>
-        <div id="dynResult" hidden>
-          <div class="dynShort"><span data-i18n="dynShort">你的动态码链接：</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
-          <div class="dynKey"><span data-i18n="dynKey">编辑密钥（请保存，改地址和看统计都要用）：</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">复制</button></div>
-          <p class="dynWarn" data-i18n="dynWarn">请妥善保存编辑密钥。丢了就无法修改这个码或查看统计。</p>
-        </div>
-        <hr class="dynSep">
-        <div class="dynManage">
-          <h3 data-i18n="dynManage">管理动态码</h3>
-          <div class="fl"><span data-i18n="dynCode">短码</span> <input type="text" id="dynManageCode" placeholder="abc1234"></div>
-          <div class="fl"><span data-i18n="dynKey">编辑密钥（请保存，改地址和看统计都要用）：</span> <input type="text" id="dynManageKey" placeholder=""></div>
-          <div class="dynManageBtns">
-            <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">查看统计</button>
-            <button class="btn-ghost" id="dynLoadEdit" data-i18n="dynLoadEdit">加载以编辑</button>
-          </div>
-          <div id="dynStats" hidden></div>
-          <div id="dynEditForm" hidden>
-            <p class="dynEditHint" data-i18n="dynEditHint">在上方修改类型和内容，然后保存。已印出的码将显示新内容。</p>
-            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">保存修改</button>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="grid">
@@ -239,8 +208,18 @@
 
       </div>
       <div class="previewCol">
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
-        <div class="livenote" data-i18n="live">即时输入，即时生成</div>
+        <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
+          <button type="button" data-mode="static" class="on" data-i18n="modeStatic">静态</button>
+          <button type="button" data-mode="dynamic" data-i18n="modeDynamic">动态</span><span class="modeTip" id="modeTip" data-i18n="modeTip">动态码打印后可改内容，还能统计扫码。印出的码不变。</span></button>
+        </div>
+        <div class="modeHintLine" id="modeHintLine" data-i18n="live">即时输入，即时生成</div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
+        <button class="btn-primary dynGenBtn" id="dynCreate" data-i18n="dynCreate" hidden>生成动态码</button>
+        <div id="dynResult" hidden>
+          <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
+          <div class="dynKey"><span data-i18n="dynKeyShort">编辑密钥：</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">复制</button></div>
+          <p class="dynWarn" data-i18n="dynWarnShort">请保存编辑密钥，改内容和看统计都要用。</p>
+        </div>
         <div class="dlrow"><div class="dlSplit">
           <button id="dlPng" class="dlMain"><span data-i18n="dl">下载</span> PNG ↓</button>
           <button id="dlArrow" class="dlArrow" aria-label="More formats">▾</button>
@@ -349,8 +328,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
-<script src="/assets/js/app.js?v=b3f-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3g-20261015"></script>
+<script src="/assets/js/app.js?v=b3g-20261015"></script>
 </body>
 </html>
 

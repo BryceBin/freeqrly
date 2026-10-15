@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3f-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3g-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -137,38 +137,7 @@
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
     <div class="shead"><div><h2 data-i18n="sTitle">QRコードを作成</h2></div></div>
     <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
-    <div class="modeRow">
-      <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
-        <button type="button" data-mode="static" class="on" data-i18n="modeStatic">静的</button>
-        <button type="button" data-mode="dynamic" data-i18n="modeDynamic">動的</button>
-      </div>
       <span class="modeHint" data-i18n="modeHint">静的コードは有効期限がありません。動的コードは印刷後も変更でき、スキャン数を数えられます。</span>
-    </div>
-    <div id="dynamicPanel" hidden>
-      <div class="dynBox">
-        <p class="dynIntro" data-i18n="dynIntro">上でQRをデザインしてください — タイプを選び、内容を入力し、スタイルを整えます。次に動的コードを作成：印刷されたQRは変わりませんが、内容はいつでも変更できます。</p>
-        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">現在のデザインで動的QRを作成</button>
-        <div id="dynResult" hidden>
-          <div class="dynShort"><span data-i18n="dynShort">動的QRリンク:</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
-          <div class="dynKey"><span data-i18n="dynKey">編集キー（保存してください — 編集や統計表示に必要です）:</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">コピー</button></div>
-          <p class="dynWarn" data-i18n="dynWarn">編集キーは安全な場所に保存してください。紛失するとこのコードの編集や統計表示ができなくなります。</p>
-        </div>
-        <hr class="dynSep">
-        <div class="dynManage">
-          <h3 data-i18n="dynManage">動的コードを管理</h3>
-          <div class="fl"><span data-i18n="dynCode">コード</span> <input type="text" id="dynManageCode" placeholder="abc1234"></div>
-          <div class="fl"><span data-i18n="dynKey">編集キー（保存してください — 編集や統計表示に必要です）:</span> <input type="text" id="dynManageKey" placeholder=""></div>
-          <div class="dynManageBtns">
-            <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">統計を見る</button>
-            <button class="btn-ghost" id="dynLoadEdit" data-i18n="dynLoadEdit">編集用に読み込む</button>
-          </div>
-          <div id="dynStats" hidden></div>
-          <div id="dynEditForm" hidden>
-            <p class="dynEditHint" data-i18n="dynEditHint">上でタイプと内容を編集して保存してください。印刷されたQRは新しい内容を表示します。</p>
-            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">変更を保存</button>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="grid">
@@ -239,8 +208,18 @@
 
       </div>
       <div class="previewCol">
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
-        <div class="livenote" data-i18n="live">ライブプレビュー — 入力と同時に変わる</div>
+        <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
+          <button type="button" data-mode="static" class="on" data-i18n="modeStatic">静的</button>
+          <button type="button" data-mode="dynamic" data-i18n="modeDynamic">動的</span><span class="modeTip" id="modeTip" data-i18n="modeTip">動的コードは印刷後も変更でき、スキャン数を数えられます。印刷されたQRは変わりません。</span></button>
+        </div>
+        <div class="modeHintLine" id="modeHintLine" data-i18n="live">ライブプレビュー — 入力と同時に変わる</div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div><div class="blurOverlay" data-i18n="dynBlurHint">内容を入力して「生成」を押してください</div></div>
+        <button class="btn-primary dynGenBtn" id="dynCreate" data-i18n="dynCreate" hidden>動的QRを生成</button>
+        <div id="dynResult" hidden>
+          <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
+          <div class="dynKey"><span data-i18n="dynKeyShort">編集キー:</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">コピー</button></div>
+          <p class="dynWarn" data-i18n="dynWarnShort">編集キーを保存してください — 編集や統計表示に必要です。</p>
+        </div>
         <div class="dlrow"><div class="dlSplit">
           <button id="dlPng" class="dlMain"><span data-i18n="dl">ダウンロード</span> PNG ↓</button>
           <button id="dlArrow" class="dlArrow" aria-label="More formats">▾</button>
@@ -349,8 +328,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
-<script src="/assets/js/app.js?v=b3f-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3g-20261015"></script>
+<script src="/assets/js/app.js?v=b3g-20261015"></script>
 </body>
 </html>
 

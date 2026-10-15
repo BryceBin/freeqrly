@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3f-20261015">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3g-20261015">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -137,38 +137,7 @@
     <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>
     <div class="shead"><div><h2 data-i18n="sTitle">Crie seu QR code</h2></div></div>
     <div class="typerail" id="typerail" role="tablist" aria-label="Content type"></div>
-    <div class="modeRow">
-      <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
-        <button type="button" data-mode="static" class="on" data-i18n="modeStatic">Estático</button>
-        <button type="button" data-mode="dynamic" data-i18n="modeDynamic">Dinâmico</button>
-      </div>
       <span class="modeHint" data-i18n="modeHint">Códigos estáticos nunca expiram. Códigos dinâmicos podem ser editados após imprimir e contam escaneamentos.</span>
-    </div>
-    <div id="dynamicPanel" hidden>
-      <div class="dynBox">
-        <p class="dynIntro" data-i18n="dynIntro">Desenhe seu QR acima — escolha um tipo, preencha o conteúdo, estilize. Depois crie um código dinâmico: o QR impresso não muda, mas você pode alterar o conteúdo quando quiser.</p>
-        <button class="btn-primary" id="dynCreate" data-i18n="dynCreate">Criar QR dinâmico com o design atual</button>
-        <div id="dynResult" hidden>
-          <div class="dynShort"><span data-i18n="dynShort">Seu link dinâmico:</span> <a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
-          <div class="dynKey"><span data-i18n="dynKey">Chave de edição (salve-a — você precisa dela para editar ou ver estatísticas):</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">Copiar</button></div>
-          <p class="dynWarn" data-i18n="dynWarn">Salve sua chave de edição em lugar seguro. Sem ela, você não poderá editar este código nem ver suas estatísticas.</p>
-        </div>
-        <hr class="dynSep">
-        <div class="dynManage">
-          <h3 data-i18n="dynManage">Gerenciar um código dinâmico</h3>
-          <div class="fl"><span data-i18n="dynCode">Código</span> <input type="text" id="dynManageCode" placeholder="abc1234"></div>
-          <div class="fl"><span data-i18n="dynKey">Chave de edição (salve-a — você precisa dela para editar ou ver estatísticas):</span> <input type="text" id="dynManageKey" placeholder=""></div>
-          <div class="dynManageBtns">
-            <button class="btn-ghost" id="dynViewStats" data-i18n="dynViewStats">Ver estatísticas</button>
-            <button class="btn-ghost" id="dynLoadEdit" data-i18n="dynLoadEdit">Carregar para editar</button>
-          </div>
-          <div id="dynStats" hidden></div>
-          <div id="dynEditForm" hidden>
-            <p class="dynEditHint" data-i18n="dynEditHint">Edite o tipo e o conteúdo acima e salve. Seu QR impresso exibirá o novo conteúdo.</p>
-            <button class="btn-primary" id="dynSaveEdit" data-i18n="dynSave">Salvar alterações</button>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="grid">
@@ -239,8 +208,18 @@
 
       </div>
       <div class="previewCol">
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div></div>
-        <div class="livenote" data-i18n="live">Prévia ao vivo — muda ao digitar</div>
+        <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
+          <button type="button" data-mode="static" class="on" data-i18n="modeStatic">Estático</button>
+          <button type="button" data-mode="dynamic" data-i18n="modeDynamic">Dinâmico</span><span class="modeTip" id="modeTip" data-i18n="modeTip">Códigos dinâmicos podem ser editados após imprimir e contam escaneamentos. O QR impresso não muda.</span></button>
+        </div>
+        <div class="modeHintLine" id="modeHintLine" data-i18n="live">Prévia ao vivo — muda ao digitar</div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div><div class="blurOverlay" data-i18n="dynBlurHint">Preencha seu conteúdo e clique em Gerar</div></div>
+        <button class="btn-primary dynGenBtn" id="dynCreate" data-i18n="dynCreate" hidden>Gerar QR dinâmico</button>
+        <div id="dynResult" hidden>
+          <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
+          <div class="dynKey"><span data-i18n="dynKeyShort">Chave de edição:</span> <code id="dynEditKey"></code> <button class="btn-ghost btn-sm" id="dynCopyKey" data-i18n="copy">Copiar</button></div>
+          <p class="dynWarn" data-i18n="dynWarnShort">Salve sua chave de edição — você precisará dela para editar ou ver estatísticas.</p>
+        </div>
         <div class="dlrow"><div class="dlSplit">
           <button id="dlPng" class="dlMain"><span data-i18n="dl">Baixar</span> PNG ↓</button>
           <button id="dlArrow" class="dlArrow" aria-label="More formats">▾</button>
@@ -349,8 +328,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
-<script src="/assets/js/app.js?v=b3f-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3g-20261015"></script>
+<script src="/assets/js/app.js?v=b3g-20261015"></script>
 </body>
 </html>
 

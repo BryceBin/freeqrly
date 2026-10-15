@@ -17,10 +17,12 @@ export async function sha256Hex(str) {
   return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
+// 8-char edit key (clear alphabet, no ambiguous 0/O/1/l/I) — e.g. A3K7M9Q2
+const KEY_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 export function genEditKey() {
-  const arr = new Uint8Array(24);
+  const arr = new Uint8Array(8);
   crypto.getRandomValues(arr);
-  return Array.from(arr, b => b.toString(16).padStart(2, '0')).join('');
+  return Array.from(arr, b => KEY_ALPHABET[b % KEY_ALPHABET.length]).join('');
 }
 
 export function isValidDestination(url) {
