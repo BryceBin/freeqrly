@@ -1,6 +1,8 @@
 # FreeQrly — Cloudflare Pages config
-# D1 binding: create the database first, then bind it in
-# Dashboard → Pages → qrforge → Settings → Functions → D1 database bindings
-# Variable name: DB, Database: freeqrly
 name = "qrforge"
 pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "freeqrly"
+database_id = "7c643833-dd76-4cb5-b528-0d6575b54362"
