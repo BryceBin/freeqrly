@@ -1018,7 +1018,7 @@ let dynamicGenerated = false;
       // Dynamic: blur preview, disable download, show Generate (if not yet generated)
       if(qrpaper) qrpaper.classList.toggle("blurred", !dynamicGenerated);
       if(dlRow) dlRow.classList.toggle("disabled", !dynamicGenerated);
-      if(genBtn) genBtn.hidden = dynamicGenerated;
+      if(genBtn) genBtn.hidden = false; // stays visible — can generate a new code anytime
       if(!dynamicGenerated){
         hintLine.textContent = t.dynHint || "Fill in your content, then hit Generate.";
       } else {
