@@ -197,7 +197,7 @@ async function draw(){
     let svgText = await svgBlob.text();
     svgText = frameWrap(svgText, 236);
     const box = $("qrbox");
-    if(box) box.innerHTML = `<img src="data:image/svg+xml,${encodeURIComponent(svgText)}" style="width:100%;height:auto;display:block" alt="QR code preview">`;
+    if(box) box.innerHTML = `<img src="data:image/svg+xml,${encodeURIComponent(svgText)}" alt="QR code preview">`;
   }catch(e){
     // Fallback to canvas append
     $("qrbox").innerHTML=""; qr.append($("qrbox"));
