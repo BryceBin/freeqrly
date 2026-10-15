@@ -841,7 +841,6 @@ async function downloadQR(format){
   finally{ if(button) button.disabled=false; }
 }
 $("dlPng").onclick=()=>downloadQR("png");
-$("dlSvg").onclick=()=>downloadQR("svg");
 // Dropdown menu: SVG / PDF / EPS
 document.querySelectorAll("#dlMenu button").forEach(btn=>{
   btn.addEventListener("click", ()=>downloadQR(btn.dataset.fmt));
