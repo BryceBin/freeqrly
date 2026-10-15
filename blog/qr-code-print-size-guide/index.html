@@ -24,6 +24,11 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"QR Code Print Size Guide: How Big Should It Be? | FreeQrly","description":"How big should a QR code be in print? Minimum sizes for business cards, flyers, and posters — plus resolution and quiet-zone rules that keep codes scannable.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
@@ -38,7 +43,7 @@
       "name": "What is the minimum size for a printed QR code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, especially for data-heavy codes like vCards."
+        "text": "As a rule of thumb, 2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, especially for data-heavy codes like vCards."
       }
     },
     {
@@ -46,7 +51,7 @@
       "name": "How big should a QR code be on a poster?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the 1:10 rule: the code width should be at least one-tenth of the expected scanning distance. A poster scanned from 5 meters needs a 50 cm code."
+        "text": "Use the 1:10 rule of thumb: the code width should be at least one-tenth of the expected scanning distance. A poster scanned from 5 meters needs a 50 cm code."
       }
     },
     {
@@ -78,13 +83,13 @@
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt="Qly the FreeQrly elephant mascot"></div>
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">How <span class="hl hl-mint">big</span> should a printed QR code be?</h1>
-    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">The short answer: at least 2x2 cm, at 300 dpi, with a clear margin. The longer answer — with the distance rule printers actually use — is below.</p>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">The short answer: at least 2x2 cm, at 300 dpi, with a clear margin. The longer answer — with the distance rule of thumb printers actually use — is below.</p>
     <p class="meta" style="text-align:center">2026-10-14 · 4 min read</p>
     <div class="prose" style="margin-top:40px">
 
 <h2>The two rules that matter</h2>
-<p><b>Rule 1 — minimum size:</b> 2 x 2 cm (0.8 x 0.8 in). Below that, phone cameras can't resolve the modules reliably, especially codes holding a lot of data like vCards.</p>
-<p><b>Rule 2 — the 1:10 distance ratio:</b> the code's width should be at least one-tenth of the scanning distance. Scanning from 50 cm (a table card)? 5 cm code. From 5 meters (a poster)? 50 cm code. Printers and signage folks live by this ratio.</p>
+<p><b>Rule of thumb 1 — minimum size:</b> 2 x 2 cm (0.8 x 0.8 in). Below that, phone cameras can't resolve the modules reliably, especially codes holding a lot of data like vCards.</p>
+<p><b>Rule of thumb 2 — the 1:10 distance ratio:</b> the code's width should be at least one-tenth of the scanning distance. Scanning from 50 cm (a table card)? 5 cm code. From 5 meters (a poster)? 50 cm code. Printers and signage folks use this ratio as a rule of thumb.</p>
 <h2>Cheat sheet by use case</h2>
 <p><b>Business cards:</b> 2x2 cm minimum — see the <a href="/business-card-qr-code/">business card generator</a>. Keep it clear of the card edge.<br>
 <b>Flyers &amp; menus:</b> 3x3 cm. People scan these at arm's length.<br>
@@ -94,11 +99,18 @@
 <h2>Resolution: export big</h2>
 <p>Print needs 300 dpi. A 2 cm code at 300 dpi is only ~240 px — but always export larger and let the designer scale down: <b>PNG at 1024 or 2048 px</b>, or <b>SVG</b> which is infinitely scalable and the best choice for professional print. FreeQrly exports both, free.</p>
 <h2>Don't forget the quiet zone</h2>
-<p>Leave a blank margin around the code at least 4 modules wide on every side. Crowding it with text or graphics is one of the top reasons codes fail — more in <a href="/blog/why-is-my-qr-code-not-working/">why your code won't scan</a>.</p>
+<p>Leave a blank margin around the code <a href="http://www.iso.org/standard/83389.html">at least 4 modules wide</a> on every side, as specified in ISO/IEC 18004. Crowding it with text or graphics is one of the top reasons codes fail — more in <a href="/blog/why-is-my-qr-code-not-working/">why your code won't scan</a>.</p>
 <h2>Logo in the middle? Go bigger</h2>
-<p>A <a href="/qr-code-with-logo/">logo in the center</a> eats into the pattern, so give it room: 3x3 cm minimum in print, and keep the logo under ~30% of the code's area.</p>
+<p>A <a href="/qr-code-with-logo/">logo in the center</a> eats into the pattern, so give it room: 3x3 cm minimum in print, and keep the logo under ~30% of the code's area as a rule of thumb.</p>
 
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
@@ -117,8 +129,8 @@
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
-    <details><summary><span>What is the minimum size for a printed QR code?</span></summary><p>2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, especially for data-heavy codes like vCards.</p></details>
-    <details><summary><span>How big should a QR code be on a poster?</span></summary><p>Use the 1:10 rule: the code width should be at least one-tenth of the expected scanning distance. A poster scanned from 5 meters needs a 50 cm code.</p></details>
+    <details><summary><span>What is the minimum size for a printed QR code?</span></summary><p>As a rule of thumb, 2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, especially for data-heavy codes like vCards.</p></details>
+    <details><summary><span>How big should a QR code be on a poster?</span></summary><p>Use the 1:10 rule of thumb: the code width should be at least one-tenth of the expected scanning distance. A poster scanned from 5 meters needs a 50 cm code.</p></details>
     <details><summary><span>PNG or SVG for print?</span></summary><p>SVG is best — it scales infinitely with no quality loss. If your printer needs raster, export PNG at 2048 px.</p></details>
     </section>
   </article>

@@ -54,9 +54,9 @@ POSTS = [
 <h2>What actually goes wrong with printed codes</h2>
 <p>Since expiry isn't a thing, here's what to actually watch for:</p>
 <ul>
-<li><strong>Print too small.</strong> Keep codes at least 2 × 2 cm with a quiet margin. Tiny codes on business cards are the #1 scan failure.</li>
+<li><strong>Print too small.</strong> As a rule of thumb, keep codes at least 2 × 2 cm with a quiet margin. Tiny codes on business cards are a common scan failure.</li>
 <li><strong>Low contrast.</strong> Dark ink on a light background. That champagne-on-cream wedding code is beautiful and unreadable.</li>
-<li><strong>Damage.</strong> Outdoor codes fade and scratch. Higher error correction (we default to M, and bump it automatically when you add a logo) lets a code survive up to 30% damage.</li>
+<li><strong>Damage.</strong> Outdoor codes fade and scratch. Higher error correction (we default to M, and bump it automatically when you add a logo) lets a code survive <a href="http://www.iso.org/standard/83389.html">up to 30% damage</a> at the High level defined in ISO/IEC 18004.</li>
 <li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Keep a list of where each code lives.</li>
 </ul>
 
@@ -71,6 +71,7 @@ POSTS = [
     ("How long do static QR codes last?",
      "Indefinitely. The pattern encodes your data directly with no server involved, so there's nothing to maintain or renew."),
   ],
+  sources=[("http://www.iso.org/standard/83389.html", "ISO/IEC 18004:2024", "The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.")],
  ),
  dict(
   slug="static-vs-dynamic-qr-codes",
@@ -114,7 +115,7 @@ POSTS = [
 </ul>
 
 <h2>Where FreeQrly stands</h2>
-<p>We make static codes — free, unlimited, no account. It's the honest 90% of the job. Dynamic codes with editable links and analytics are on our roadmap for people running campaigns; until then, we'd rather tell you the truth than sell you the subscription.</p>
+<p>We make static codes — free, unlimited, no account. It covers most everyday needs. Dynamic codes with editable links and analytics are on our roadmap for people running campaigns; until then, we'd rather tell you the truth than sell you the subscription.</p>
 """,
   faq=[
     ("What is the difference between static and dynamic QR codes?",
@@ -148,8 +149,9 @@ POSTS += [{'body': '\n'
           '</ol>\n'
           '<h2>On iPhone</h2>\n'
           '<p>Open the Camera app and point it at the code — hold steady for a second. A yellow '
-          "notification appears; tap it. That's it. This works on iOS 11 and later, so unless your "
-          "phone is ancient, you're covered.</p>\n"
+          "notification appears; tap it. That's it. This works on any modern iPhone — "
+          '<a href="https://support.apple.com/en-ca/102680">Apple\'s guide</a> covers the Camera '
+          "app and Code Scanner.</p>\n"
           '<p>Two shortcuts worth knowing: open <b>Control Center</b> and tap the QR scanner icon '
           "(add it via Settings → Control Center if it's missing), or long-press the Camera icon "
           'on the lock screen. If the code is in a photo or screenshot, open it in the Photos app '
@@ -168,15 +170,19 @@ POSTS += [{'body': '\n'
           '<h2>A 3-second safety habit</h2>\n'
           '<p>Your phone shows a preview of the link before opening it. Glance at it. If a code on '
           'a lamppost promises a parking meter but the URL looks like a random string of '
-          "characters, don't tap — stickers over real codes are a known scam. Codes you generate "
+          "characters, don't tap — <a "
+          'href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">stickers '
+          'over real codes are a known scam the FTC has warned about</a>. Codes you generate '
           'yourself with <a href="/">FreeQrly</a> are static and contain exactly what you typed, '
           'nothing hidden.</p>\n',
   'date': '2026-10-14',
   'desc': 'How to scan a QR code on iPhone and Android — no app needed. Use the built-in camera, '
           "Control Center, or Google Lens, and fix it when it won't scan.",
   'faq': [('Do I need an app to scan QR codes?',
-           'No. iPhones (iOS 11+) and virtually all Android phones scan QR codes with the built-in '
-           'camera. Third-party scanner apps are unnecessary and often full of ads.'),
+           'No. iPhones and virtually all Android phones scan QR codes with the built-in '
+           'camera. Third-party scanner apps are unnecessary and often full of ads. '
+           '<a href="https://support.apple.com/en-ca/102680">Apple\'s guide</a> covers the '
+           'Camera app and Code Scanner on iPhone.'),
           ('How do I scan a QR code from a screenshot?',
            'On iPhone, open the screenshot in Photos and long-press the code. On Android, open it '
            'in Google Photos and tap the Lens button.'),
@@ -207,11 +213,13 @@ POSTS += [{'body': '\n'
           "it already has. Here's how — plus what to do when nothing happens.",
   'mascot': 'scanner',
   'slug': 'how-to-scan-a-qr-code',
-  'title': 'How to Scan a QR Code (iPhone & Android) | FreeQrly'},
+  'title': 'How to Scan a QR Code (iPhone & Android) | FreeQrly',
+  'sources': [('https://support.apple.com/en-ca/102680', 'Apple Support: Scan a QR code with your iPhone or iPad', 'How to scan with the Camera app or Code Scanner.'),
+              ('https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information', 'FTC: Scammers hide harmful links in QR codes', 'The FTC on QR codes covering real ones, spoofed sites, and checking the URL before opening.')]},
  {'body': '\n'
           "<h2>1. It's too small</h2>\n"
           "<p>The classic. A code squeezed into the corner of a business card at 1 cm wide won't "
-          'scan reliably. Minimum for print: <b>2x2 cm</b> (about 0.8 inches), and bigger is '
+          'scan reliably. Minimum for print, as a rule of thumb: <b>2x2 cm</b> (about 0.8 inches), and bigger is '
           "always safer. There's a full breakdown in the <a "
           'href="/blog/qr-code-print-size-guide/">print size guide</a>.</p>\n'
           '<h2>2. Low contrast killed it</h2>\n'
@@ -224,7 +232,8 @@ POSTS += [{'body': '\n'
           "there's a limit. If a quarter of the code is gone, reprint.</p>\n"
           '<h2>4. No quiet zone</h2>\n'
           "<p>The blank margin around the code isn't decoration — scanners need it to find the "
-          "edges. Keep a clear border at least as wide as one module on all four sides. Don't let "
+          'edges. Keep a clear border <a href="http://www.iso.org/standard/83389.html">at least '
+          '4 modules wide</a> on all four sides, as specified in ISO/IEC 18004. Don\'t let '
           'text or design elements crowd it.</p>\n'
           '<h2>5. Glare, curve, or angle</h2>\n'
           '<p>Glossy lamination under bright light, a code wrapped around a bottle, or shot at a '
@@ -249,15 +258,15 @@ POSTS += [{'body': '\n'
            "Then the code itself is fine — it's the camera, lighting, or angle on the failing "
            'phone. Wipe the lens and try in better light.'),
           ('Can a damaged QR code still work?',
-           'Often yes, thanks to error correction — up to 30% damage can be tolerated at the High '
-           'setting. But heavy damage, fading, or missing finder patterns will kill it.'),
+           'Often yes, thanks to error correction — <a href="http://www.iso.org/standard/83389.html">up to 30% damage can be tolerated at the High setting</a>, as defined in ISO/IEC 18004. '
+           'But heavy damage, fading, or missing finder patterns will kill it.'),
           ("My QR code scans but the link doesn't work — is the code broken?",
            'No, the code is doing its job. The destination is the problem: the page moved, the '
            'site is down, or a trial-based generator deactivated it.')],
   'h1': 'Why won\\u2019t this thing <span class="hl hl-blush">scan</span>?',
   'howto': [('Check the size',
-             'Printed codes need to be at least 2x2 cm. On screen, make it at least 2 cm wide on '
-             'your display.'),
+             'As a rule of thumb, printed codes need to be at least 2x2 cm. On screen, make it '
+             'at least 2 cm wide on your display.'),
             ('Check the contrast',
              'Dark code on a light background. Fancy low-contrast color pairs are the #1 design '
              'killer.'),
@@ -271,15 +280,16 @@ POSTS += [{'body': '\n'
           "in order — and you'll find the culprit in about two minutes.",
   'mascot': 'error',
   'slug': 'why-is-my-qr-code-not-working',
-  'title': 'QR Code Not Working? 7 Fixes That Help | FreeQrly'},
+  'title': 'QR Code Not Working? 7 Fixes That Help | FreeQrly',
+  'sources': [('http://www.iso.org/standard/83389.html', 'ISO/IEC 18004:2024', 'The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.')]},
  {'body': '\n'
           '<h2>The two rules that matter</h2>\n'
-          '<p><b>Rule 1 — minimum size:</b> 2 x 2 cm (0.8 x 0.8 in). Below that, phone cameras '
+          '<p><b>Rule of thumb 1 — minimum size:</b> 2 x 2 cm (0.8 x 0.8 in). Below that, phone cameras '
           "can't resolve the modules reliably, especially codes holding a lot of data like "
           'vCards.</p>\n'
-          "<p><b>Rule 2 — the 1:10 distance ratio:</b> the code's width should be at least "
+          "<p><b>Rule of thumb 2 — the 1:10 distance ratio:</b> the code's width should be at least "
           'one-tenth of the scanning distance. Scanning from 50 cm (a table card)? 5 cm code. From '
-          '5 meters (a poster)? 50 cm code. Printers and signage folks live by this ratio.</p>\n'
+          '5 meters (a poster)? 50 cm code. Printers and signage folks use this ratio as a rule of thumb.</p>\n'
           '<h2>Cheat sheet by use case</h2>\n'
           '<p><b>Business cards:</b> 2x2 cm minimum — see the <a '
           'href="/business-card-qr-code/">business card generator</a>. Keep it clear of the card '
@@ -295,31 +305,32 @@ POSTS += [{'body': '\n'
           'which is infinitely scalable and the best choice for professional print. FreeQrly '
           'exports both, free.</p>\n'
           "<h2>Don't forget the quiet zone</h2>\n"
-          '<p>Leave a blank margin around the code at least 4 modules wide on every side. Crowding '
+          '<p>Leave a blank margin around the code <a href="http://www.iso.org/standard/83389.html">at least 4 modules wide</a> on every side, as specified in ISO/IEC 18004. Crowding '
           'it with text or graphics is one of the top reasons codes fail — more in <a '
           'href="/blog/why-is-my-qr-code-not-working/">why your code won\'t scan</a>.</p>\n'
           '<h2>Logo in the middle? Go bigger</h2>\n'
           '<p>A <a href="/qr-code-with-logo/">logo in the center</a> eats into the pattern, so '
           "give it room: 3x3 cm minimum in print, and keep the logo under ~30% of the code's "
-          'area.</p>\n',
+          'area as a rule of thumb.</p>\n',
   'date': '2026-10-14',
   'desc': 'How big should a QR code be in print? Minimum sizes for business cards, flyers, and '
           'posters — plus resolution and quiet-zone rules that keep codes scannable.',
   'faq': [('What is the minimum size for a printed QR code?',
-           '2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, especially for '
-           'data-heavy codes like vCards.'),
+           'As a rule of thumb, 2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, '
+           'especially for data-heavy codes like vCards.'),
           ('How big should a QR code be on a poster?',
-           'Use the 1:10 rule: the code width should be at least one-tenth of the expected '
-           'scanning distance. A poster scanned from 5 meters needs a 50 cm code.'),
+           'Use the 1:10 rule of thumb: the code width should be at least one-tenth of the '
+           'expected scanning distance. A poster scanned from 5 meters needs a 50 cm code.'),
           ('PNG or SVG for print?',
            'SVG is best — it scales infinitely with no quality loss. If your printer needs raster, '
            'export PNG at 2048 px.')],
   'h1': 'How <span class="hl hl-mint">big</span> should a printed QR code be?',
   'lede': 'The short answer: at least 2x2 cm, at 300 dpi, with a clear margin. The longer answer — '
-          'with the distance rule printers actually use — is below.',
+          'with the distance rule of thumb printers actually use — is below.',
   'mascot': 'batch',
   'slug': 'qr-code-print-size-guide',
-  'title': 'QR Code Print Size Guide: How Big Should It Be? | FreeQrly'},
+  'title': 'QR Code Print Size Guide: How Big Should It Be? | FreeQrly',
+  'sources': [('http://www.iso.org/standard/83389.html', 'ISO/IEC 18004:2024', 'The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.')]},
  {'body': '\n'
           '<h2>1. The menu code</h2>\n'
           '<p>Link it to your online menu — your website, a PDF, or your Google Business menu. '
@@ -371,7 +382,7 @@ POSTS += [{'body': '\n'
           'full explainer: <a href="/blog/static-vs-dynamic-qr-codes/">static vs dynamic QR '
           'codes</a>.</p>\n'
           '<h2>The trial trap</h2>\n'
-          '<p>Many "free QR code generators" quietly create dynamic codes on a 7- or 14-day trial. '
+          '<p>Many "free QR code generators" quietly create dynamic codes on a short trial. '
           'Your printed flyers work beautifully — until the trial ends and every code goes dead. '
           'Red flags: the site asks for your email before generating, mentions "scan analytics", '
           'or talks about "campaigns". A truly free static generator needs none of that.</p>\n'
@@ -414,7 +425,7 @@ POSTS += [{'body': '\n'
           "passes, private links. Uploading that image to a stranger's server — just to read it — "
           "is a privacy trade most people don't realize they're making. FreeQrly's <a "
           'href="/scan/">QR scanner</a> decodes the image with JavaScript on your device (the '
-          'open-source jsQR library). The image never leaves the page.</p>\n'
+          '<a href="https://github.com/cozmo/jsQR">open-source jsQR library</a>). The image never leaves the page.</p>\n'
           '<h2>Two ways to scan</h2>\n'
           '<p><b>Camera:</b> hit "Start camera", point at the code, done. Uses your rear camera on '
           "phones. Your browser will ask for camera permission once — that's between you and your "
@@ -435,7 +446,7 @@ POSTS += [{'body': '\n'
   'desc': 'Scan QR codes online for free: use your camera or upload an image. Decoded in your '
           'browser — nothing is ever uploaded. No app, no sign-up.',
   'faq': [('Is it safe to scan QR codes online?',
-           'It depends where the image goes. Most online scanners upload your image to their '
+           'It depends where the image goes. Many online scanners upload your image to their '
            'server. FreeQrly decodes it locally in your browser, so nothing is transmitted '
            'anywhere.'),
           ('Do I need to download an app to scan QR codes?',
@@ -452,11 +463,12 @@ POSTS += [{'body': '\n'
             ('Get the result instantly',
              'The decoded text or link appears immediately. Links get an Open button; everything '
              'else gets Copy.')],
-  'lede': "Most online QR scanners make you upload your image to their server. Ours doesn't — the "
+  'lede': "Many online QR scanners ask you to upload your image to their server. Ours doesn't — the "
           'code is decoded right in your browser. Camera or image upload, free forever.',
   'mascot': 'scanner',
   'slug': 'scan-qr-code-online',
-  'title': 'Scan QR Codes Online — Free, No App, No Upload | FreeQrly'},
+  'title': 'Scan QR Codes Online — Free, No App, No Upload | FreeQrly',
+  'sources': [('https://github.com/cozmo/jsQR', 'jsQR on GitHub', 'A pure JavaScript QR code reading library. Takes in raw images and locates, extracts and parses any QR code found within.')]},
  {'body': '\n'
           '<h2>On iPhone</h2>\n'
           '<p>Open the photo in the Photos app and <b>long-press the QR code</b> — iOS detects it '
@@ -513,21 +525,20 @@ POSTS += [{'body': '\n'
           "<p>The most underused event code: one that drops the event straight into the guest's "
           'calendar. FreeQrly\'s <a href="/?type=event">event QR type</a> builds it in seconds — '
           'title, start/end time, location — and scanning it offers "add to calendar" on both '
-          'iPhone and Android. Print it on the invitation and watch no-show rates drop.</p>\n'
+          'iPhone and Android. Print it on the invitation — one less step between the invite and the calendar may mean fewer no-shows.</p>\n'
           '<h2>3. The shared photo album</h2>\n'
           '<p>Every event has the same problem: the photos scatter across fifty phones. A code '
           'linking to a shared album (Google Photos, iCloud shared album) on table cards fixes it '
-          '— guests upload their shots in one tap. Autocomplete shows "event qr code for photos" '
-          'is exactly what organizers search for.</p>\n'
+          '— guests upload their shots in one tap.</p>\n'
           '<h2>4. WiFi for the venue</h2>\n'
           '<p>Attendees will ask for WiFi. A <a href="/wifi-qr-code/">WiFi QR code</a> on signage '
           'connects them in one scan — no password spelling over loud music.</p>\n'
           '<h2>5. Feedback &amp; follow-up</h2>\n'
           '<p>A code linking to a 2-question feedback form on the exit signage or closing slide. '
-          'Response rates beat emailed surveys by a mile.</p>\n'
+          'Guests answer while the event is still fresh, instead of ignoring a follow-up email days later.</p>\n'
           '<h2>Printing tips</h2>\n'
           '<p>Event codes get scanned in chaotic lighting by hurried people: go bigger than you '
-          'think (the <a href="/blog/qr-code-print-size-guide/">1:10 distance rule</a>), keep '
+          'think (the <a href="/blog/qr-code-print-size-guide/">1:10 distance rule of thumb</a>), keep '
           'contrast high, and test on both iPhone and Android before printing a hundred table '
           "cards. Static codes never expire, so last year's signage template still works.</p>\n",
   'date': '2026-10-14',
@@ -584,7 +595,7 @@ POSTS += [{'body': '\n'
            "Static ones don't. Generate them months ahead; they'll scan on the day and for years "
            'after as a keepsake.')],
   'h1': 'Wedding <span class="hl hl-honey">RSVP</span> codes, minus the chase',
-  'lede': 'Half your RSVPs are late because the reply card is sitting in a drawer. A QR code on '
+  'lede': 'Plenty of RSVPs arrive late because the reply card is sitting in a drawer. A QR code on '
           'the invitation — straight to your RSVP form — fixes the biggest wedding admin headache.',
   'mascot': 'wedding',
   'slug': 'wedding-rsvp-qr-code',
@@ -596,6 +607,12 @@ REL_CSS = """<style>
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>"""
+SOURCES_CSS = """<style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>"""
 def faq_json(faq):
     return ",\n    ".join(
@@ -620,6 +637,13 @@ def build(p, all_posts=None):
             for s in p["howto"])
         howto_json = '<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"HowTo","name":"' + p["title"].replace('"','\\"') + '","description":"' + p["desc"].replace('"','\\"') + '","step":[\n    ' + steps_json + '\n  ]}\n</script>\n'
 
+    sources_html = ""
+    if p.get("sources"):
+        items = "\n".join(
+            '      <li><a href="%s">%s</a> - %s</li>' % (u, label, note)
+            for u, label, note in p["sources"])
+        sources_html = ('\n    <section class="sources">\n      <h2>Sources</h2>\n      <ul>\n'
+                        + items + '\n      </ul>\n    </section>\n')
     faq_html = "\n".join(
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
         for q, a in p["faq"])
@@ -643,7 +667,7 @@ def build(p, all_posts=None):
 <link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
 <link rel="stylesheet" href="../../assets/css/main.css">
-{REL_CSS}
+{REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"2026-10-13","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
 </script>
@@ -669,7 +693,7 @@ def build(p, all_posts=None):
     <div class="prose" style="margin-top:40px">
 {p["body"]}
     </div>
-    <div class="cta-card">
+{sources_html}    <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
         <h3>Try it yourself — free, no sign-up</h3>

@@ -24,6 +24,11 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Do QR Codes Expire? The Short Answer Is No — FreeQrly","description":"Do QR codes expire? Static QR codes never expire — the pattern holds your link forever. Learn what actually stops working (and why paid codes die).","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
@@ -100,9 +105,9 @@
 <h2>What actually goes wrong with printed codes</h2>
 <p>Since expiry isn't a thing, here's what to actually watch for:</p>
 <ul>
-<li><strong>Print too small.</strong> Keep codes at least 2 × 2 cm with a quiet margin. Tiny codes on business cards are the #1 scan failure.</li>
+<li><strong>Print too small.</strong> As a rule of thumb, keep codes at least 2 × 2 cm with a quiet margin. Tiny codes on business cards are a common scan failure.</li>
 <li><strong>Low contrast.</strong> Dark ink on a light background. That champagne-on-cream wedding code is beautiful and unreadable.</li>
-<li><strong>Damage.</strong> Outdoor codes fade and scratch. Higher error correction (we default to M, and bump it automatically when you add a logo) lets a code survive up to 30% damage.</li>
+<li><strong>Damage.</strong> Outdoor codes fade and scratch. Higher error correction (we default to M, and bump it automatically when you add a logo) lets a code survive <a href="http://www.iso.org/standard/83389.html">up to 30% damage</a> at the High level defined in ISO/IEC 18004.</li>
 <li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Keep a list of where each code lives.</li>
 </ul>
 
@@ -110,6 +115,13 @@
 <p>Every code made here is static, free, and yours — no account, no redirect server, nothing to cancel. There is simply no mechanism by which it could expire. That's not a marketing claim; it's just how static codes work when nobody inserts themselves in the middle.</p>
 
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>

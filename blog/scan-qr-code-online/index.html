@@ -24,6 +24,11 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Scan QR Codes Online — Free, No App, No Upload | FreeQrly","description":"Scan QR codes online for free: use your camera or upload an image. Decoded in your browser — nothing is ever uploaded. No app, no sign-up.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
@@ -38,7 +43,7 @@
       "name": "Is it safe to scan QR codes online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends where the image goes. Most online scanners upload your image to their server. FreeQrly decodes it locally in your browser, so nothing is transmitted anywhere."
+        "text": "It depends where the image goes. Many online scanners upload your image to their server. FreeQrly decodes it locally in your browser, so nothing is transmitted anywhere."
       }
     },
     {
@@ -97,12 +102,12 @@
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/scanner.webp" alt="Qly the FreeQrly elephant mascot"></div>
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Scan QR codes <span class="hl hl-mint">online</span>, privately</h1>
-    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Most online QR scanners make you upload your image to their server. Ours doesn't — the code is decoded right in your browser. Camera or image upload, free forever.</p>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Many online QR scanners ask you to upload your image to their server. Ours doesn't — the code is decoded right in your browser. Camera or image upload, free forever.</p>
     <p class="meta" style="text-align:center">2026-10-14 · 4 min read</p>
     <div class="prose" style="margin-top:40px">
 
 <h2>Why "no upload" matters</h2>
-<p>QR codes often contain sensitive things: WiFi passwords, event tickets, boarding passes, private links. Uploading that image to a stranger's server — just to read it — is a privacy trade most people don't realize they're making. FreeQrly's <a href="/scan/">QR scanner</a> decodes the image with JavaScript on your device (the open-source jsQR library). The image never leaves the page.</p>
+<p>QR codes often contain sensitive things: WiFi passwords, event tickets, boarding passes, private links. Uploading that image to a stranger's server — just to read it — is a privacy trade most people don't realize they're making. FreeQrly's <a href="/scan/">QR scanner</a> decodes the image with JavaScript on your device (the <a href="https://github.com/cozmo/jsQR">open-source jsQR library</a>). The image never leaves the page.</p>
 <h2>Two ways to scan</h2>
 <p><b>Camera:</b> hit "Start camera", point at the code, done. Uses your rear camera on phones. Your browser will ask for camera permission once — that's between you and your browser; we never see the feed.</p>
 <p><b>Upload:</b> got a screenshot, a saved flyer, or a photo with a code in it? Upload the image and it's decoded instantly. This even works <b>offline</b> — load the page once, disconnect, and upload scanning still works.</p>
@@ -112,6 +117,13 @@
 <p>Blurry photos, tiny codes, heavy glare — the usual suspects. The full fix list is in <a href="/blog/why-is-my-qr-code-not-working/">why your QR code won't scan</a>. And if you need to <a href="/">make your own QR code</a> instead, that's the main studio — also free, also private.</p>
 
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="https://github.com/cozmo/jsQR">jsQR on GitHub</a> - A pure JavaScript QR code reading library. Takes in raw images and locates, extracts and parses any QR code found within.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
@@ -130,7 +142,7 @@
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
-    <details><summary><span>Is it safe to scan QR codes online?</span></summary><p>It depends where the image goes. Most online scanners upload your image to their server. FreeQrly decodes it locally in your browser, so nothing is transmitted anywhere.</p></details>
+    <details><summary><span>Is it safe to scan QR codes online?</span></summary><p>It depends where the image goes. Many online scanners upload your image to their server. FreeQrly decodes it locally in your browser, so nothing is transmitted anywhere.</p></details>
     <details><summary><span>Do I need to download an app to scan QR codes?</span></summary><p>No. The scanner runs in any modern browser on phone or desktop — camera mode on mobile, image upload everywhere.</p></details>
     <details><summary><span>Can I scan a QR code from a screenshot?</span></summary><p>Yes — upload the screenshot and it's decoded instantly, even offline after the page has loaded.</p></details>
     </section>

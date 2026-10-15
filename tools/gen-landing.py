@@ -159,10 +159,10 @@ dict(slug="qr-code-with-logo", dtype="url",
   h1='Your logo, <span class="hl hl-honey">right in the middle</span>.',
   lede="Upload your logo and it lands dead center, with error correction cranked up automatically so the code still scans perfectly. Free, no watermark, no account.",
   steps=[("Make your code","Any type above \u2014 link, vCard, WiFi. The logo step works with all of them."),
-         ("Upload your logo","Square PNG with transparency works best. Keep it under ~30% of the code area."),
+         ("Upload your logo","Square PNG with transparency works best. Keep it under ~30% of the code area as a rule of thumb."),
          ("Download print-ready","PNG up to 2048 px or infinitely scalable SVG \u2014 crisp on cards and banners alike.")],
   studio_h2="Make your logo QR code",
-  faq=[("Will the code still scan with a logo on it?","Yes. Uploading a logo automatically raises error correction to High, which reserves up to 30% of the pattern for recovery \u2014 that is where your logo sits."),
+  faq=[("Will the code still scan with a logo on it?","Yes. Uploading a logo automatically raises error correction to High, which reserves <a href=\"http://www.iso.org/standard/83389.html\">up to 30% of the pattern for recovery</a> under ISO/IEC 18004 \u2014 that is where your logo sits."),
        ("What logo file works best?","A square PNG with a transparent background. Avoid fine text inside the logo \u2014 bold shapes read better at small sizes."),
        ("What size should I print it?","At least 2x2 cm, at 1024 px export or higher. Bigger is safer when a logo covers the center."),
        ("Is there a watermark or a fee?","No. Logo upload is free and unlimited, and your files never leave your browser.")]),
@@ -205,10 +205,10 @@ dict(slug="real-estate-qr-code", dtype="url",
   lede="Link listings, virtual tours, and open-house details to scannable codes. Print them for yard signs, brochures, and window displays \u2014 free forever, no account.",
   steps=[("Copy your listing URL","Your MLS page, Zillow/Redfin link, or virtual tour \u2014 any URL works."),
          ("Paste it above","Your code appears instantly in the link tab."),
-         ("Print for signs & flyers","SVG for the sign printer, PNG for flyers. Yard signs need 10+ cm \u2014 see the 1:10 rule.")],
+         ("Print for signs & flyers","SVG for the sign printer, PNG for flyers. Yard signs need 10+ cm \u2014 see the 1:10 rule of thumb.")],
   studio_h2="Make your real estate QR code",
   faq=[("What do agents usually link to?","Listing pages, virtual tours, open-house schedules, mortgage calculators, and the agent\u2019s contact card."),
-       ("How big for a yard sign?","Use the 1:10 rule: code width at least one-tenth of the viewing distance. A sign read from 5 meters needs a 50 cm code \u2014 SVG export keeps it sharp at any size."),
+       ("How big for a yard sign?","Use the 1:10 rule of thumb: code width at least one-tenth of the viewing distance. A sign read from 5 meters needs a 50 cm code \u2014 SVG export keeps it sharp at any size."),
        ("Can I add my photo or brokerage logo?","Yes \u2014 upload your logo or headshot in the center. Error correction adjusts automatically so it still scans."),
        ("What if the listing sells?","Point the code at your agent profile or listings page instead of a single property, so the sign keeps working after the sale. The code itself never expires.")]),
 ]
@@ -334,8 +334,8 @@ def build(p):
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3-20261014"></script>
-<script src="../assets/js/app.js?v=b3-20261014"></script>
+<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
+<script src="../assets/js/app.js?v=b3f-20261015"></script>
 </body>
 </html>
 '''
