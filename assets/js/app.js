@@ -863,8 +863,8 @@ if(_segFrame){
     const btn = e.target.closest("button"); if(!btn) return;
     frameVal = btn.dataset.v;
     _segFrame.querySelectorAll("button").forEach(b=>b.classList.toggle("on", b === btn));
-    const ft = $("frameText");
-    if(ft) ft.classList.toggle("show", frameVal === "cta");
+    const fe = $("frameExpand");
+    if(fe) fe.classList.toggle("show", frameVal === "cta");
     draw(); scanScore();
   });
   // Default: mark "None" as active

@@ -189,11 +189,13 @@
             <button data-v="512">512</button><button data-v="1024">1024</button><button data-v="2048">2048</button><button data-v="4096">4096</button>
           </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="frame">边框</span><small data-i18n="frameSub">码外面的边框</small></div>
-          <div class="frameRow2">
+          <div class="frameWrap" id="frameWrap">
             <div class="seg segFrame" id="segFrame" role="radiogroup">
               <button data-v="none" data-i18n="frameNone">无</button><button data-v="rounded" data-i18n="frameRounded">圆角</button><button data-v="cta" data-i18n="frameCta">带文字</button>
             </div>
-            <input type="text" id="frameText" class="frameTextInline" placeholder="Scan me" placeholder="扫我">
+            <div class="frameExpand" id="frameExpand">
+              <input type="text" id="frameText" class="frameExpandInput" placeholder="Scan me" placeholder="扫我">
+            </div>
           </div></div>
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Square</option><option value="dots">Round</option><option value="rounded">Soft</option><option value="extra-rounded">Pebble</option></select>
