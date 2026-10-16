@@ -103,19 +103,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC
     </form>
   </div>
 
-  <div class="divider" id="magicDivider">or use a magic link</div>
-
-  <!-- Magic link (secondary) -->
-  <form id="magicForm">
-    <div class="field"><label for="magicEmail">Email</label>
-      <input id="magicEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
-    </div>
-    <button class="btn" id="magicBtn" type="submit">Send sign-in link</button>
-  </form>
   <div id="tsWidget" style="margin:14px 0 0"></div>
-  <p class="note" id="emailNote" hidden>Email sign-in is not available right now.</p>
 
-  <!-- Check-your-inbox state (after magic link / register / unverified login) -->
+  <!-- Check-your-inbox state (after register / unverified login) -->
   <div class="inboxState" id="inboxState" hidden>
     <div class="inboxIcon">✉️</div>
     <h2>Check your inbox</h2>
@@ -194,8 +184,6 @@ if(params.get('error') && ERRORS[params.get('error')]){
 
 function showInboxState(){
   $('pwSection').hidden = true;
-  $('magicDivider').hidden = true;
-  $('magicForm').hidden = true;
   $('oauthBlock').hidden = true;
   $('tsWidget').hidden = true;
   $('loginErr').hidden = true;
@@ -206,8 +194,6 @@ function showForms(){
   stopPolling();
   $('inboxState').hidden = true;
   $('pwSection').hidden = false;
-  $('magicDivider').hidden = false;
-  $('magicForm').hidden = false;
   $('oauthBlock').hidden = false;
   $('tsWidget').hidden = false;
 }
@@ -248,8 +234,6 @@ $('recheckBtn').addEventListener('click', async () => {
 // --- Page B: ?verified=1 — already verified here, no polling.
 if(isVerifiedPage){
   $('pwSection').hidden = true;
-  $('magicDivider').hidden = true;
-  $('magicForm').hidden = true;
   $('oauthBlock').hidden = true;
   $('tsWidget').hidden = true;
   $('verifiedState').hidden = false;
@@ -261,7 +245,7 @@ if(isVerifiedPage){
   }
 }
 
-// --- Turnstile (bot check). One widget, shared by all three forms.
+// --- Turnstile (bot check) for the login/register form.
 // Token is single-use: reset after every submit for a fresh one.
 let tsWidgetId = null;
 function tsToken(){ try{ return (window.turnstile && tsWidgetId !== null) ? turnstile.getResponse(tsWidgetId) : ''; }catch(e){ return ''; } }
@@ -275,14 +259,6 @@ const TS_ERR = 'Please complete the human check and try again.';
 fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
   if(!cfg) return;
   tsRender(cfg.turnstileSitekey);
-  if(cfg.email === false){
-    $('magicEmail').disabled = true;
-    $('magicBtn').disabled = true;
-    $('pwEmail').disabled = true;
-    $('pwPass').disabled = true;
-    $('pwBtn').disabled = true;
-    $('emailNote').hidden = false;
-  }
   if(cfg.providers){
     if(!cfg.providers.google) $('oauthGoogle').hidden = true;
     if(!cfg.providers.github) $('oauthGithub').hidden = true;
@@ -343,29 +319,6 @@ $('pwForm').addEventListener('submit', async e => {
     $('pwBtn').disabled = false;
     $('pwBtn').textContent = mode === 'login' ? 'Log in' : 'Create account';
   }
-});
-
-// --- Magic link (secondary) ---
-$('magicForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  const email = $('magicEmail').value.trim();
-  if(!email) return;
-  $('magicBtn').disabled = true; $('magicBtn').textContent = 'Sending…';
-  let tsFailed = false;
-  try{
-    const r = await fetch('/api/auth/magic-link', {
-      method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
-      body: JSON.stringify({ email, next: NEXT, turnstileToken: tsToken() })
-    });
-    const d = await r.json().catch(()=>({}));
-    tsFailed = (d.error === 'turnstile_failed');
-  }catch(err){}
-  tsReset();
-  // Same message either way — never reveal whether the email exists.
-  $('magicBtn').disabled = false; $('magicBtn').textContent = 'Send sign-in link';
-  if(tsFailed){ $('loginErr').textContent = TS_ERR; $('loginErr').hidden = false; return; }
-  $('inboxText').textContent = 'We sent you a sign-in link. Click it in any tab — this page continues automatically once you sign in.';
-  showInboxState();
 });
 
 // --- OAuth ---

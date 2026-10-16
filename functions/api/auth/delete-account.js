@@ -1,6 +1,6 @@
 // POST /api/auth/delete-account — delete the account.
 // Requires a session AND a fresh session (created within the last 15 min),
-// else 403 { error: "reauth_required", hint: "request a fresh magic link" }.
+// else 403 { error: "reauth_required", hint: "sign in again" }.
 // Deletes the user row + their session rows; their codes are RELEASED
 // (codes.user_id = NULL), NOT deleted — they keep redirecting, but with no
 // EditKey and no claim flow they can no longer be edited. Clears the cookie.
@@ -12,7 +12,7 @@ export async function onRequestPost({ request, env }) {
   const sess = await getSessionUser(env, request);
   if (!sess) return json({ error: 'unauthorized' }, 401);
   if (Date.now() - sess.session.created_at > REAUTH_WINDOW_MS) {
-    return json({ error: 'reauth_required', hint: 'request a fresh magic link' }, 403);
+    return json({ error: 'reauth_required', hint: 'sign in again' }, 403);
   }
   const userId = sess.user.id;
   await env.DB.prepare('DELETE FROM sessions WHERE user_id = ?').bind(userId).run();

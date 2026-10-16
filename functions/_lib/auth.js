@@ -9,7 +9,6 @@ export const PKCE_COOKIE = 'fq_pkce';
 export const OAUTH_STATE_COOKIE = 'fq_oauth_state';
 export const SESSION_MAX_AGE = 30 * 24 * 3600; // 30 days
 export const REAUTH_WINDOW_MS = 15 * 60 * 1000; // delete-account requires session < 15 min old
-export const MAGIC_LINK_TTL_MS = 15 * 60 * 1000; // 15 min
 export const VERIFY_TOKEN_TTL_MS = 24 * 3600 * 1000; // email-verification tokens: 24 h
 export const RESET_TOKEN_TTL_MS = 3600 * 1000; // password-reset tokens: 1 h
 export const MIN_PASSWORD_LEN = 8;
@@ -208,8 +207,8 @@ export function validateNext(next, fallback = '/dashboard/') {
 }
 
 // URL of the verified landing page: /login/?verified=1&next=<validated next>.
-// Email-verification and magic-link verify both land here (frontend shows the
-// "verified" state, then continues to `next`).
+// The email-verification click lands here (frontend shows the "verified"
+// state, then continues to `next`).
 export function loginVerifiedUrl(origin, next) {
   const u = new URL('/login/', origin);
   u.searchParams.set('verified', '1');

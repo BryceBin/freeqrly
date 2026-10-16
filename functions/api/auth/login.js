@@ -1,6 +1,6 @@
 // POST /api/auth/login — email + password login.
 // Body: { email, password, turnstileToken? }
-// - No user / wrong password / user has NULL password_hash (OAuth/magic-only
+// - No user / wrong password / user has NULL password_hash (OAuth-only
 //   account) → the SAME generic 401 invalid_credentials (no user enumeration).
 // - Correct password but email_verified=0 → 403 email_not_verified
 //   ("verify your email first") + a fresh verification email is sent.
@@ -35,8 +35,8 @@ export async function onRequestPost({ request, env }) {
   }
 
   const user = await getUserByEmail(env, email);
-  // Generic failure for all three cases: no user, no password_hash (OAuth /
-  // magic-only account), wrong password. No enumeration.
+  // Generic failure for all three cases: no user, no password_hash (OAuth-only
+  // account), wrong password. No enumeration.
   if (!user || !user.password_hash || !(await verifyPassword(password, user.password_hash))) {
     await recordLoginFailure(env, lockKey);
     return json({ error: 'invalid_credentials' }, 401);

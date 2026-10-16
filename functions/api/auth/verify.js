@@ -1,10 +1,6 @@
 // GET /api/auth/verify?token=...&next=... — consume a one-time email token.
-// Handles TWO purposes:
-//  - 'verify': email-verification link from registration (24 h). Sets
-//    email_verified=1, marks the token used, creates a session.
-//  - 'magic_login': magic-link sign-in (15 min). Marks the token used,
-//    creates a session. Also sets email_verified=1 (clicking a link sent
-//    to the address proves ownership of it).
+// Only purpose: 'verify' (email-verification link from registration, 24 h).
+// Sets email_verified=1, marks the token used, creates a session.
 // Success → redirect /login/?verified=1&next=<validated next or /dashboard/>
 // (the frontend shows the verified state, then continues to `next`).
 // Invalid/expired/used → redirect /login/?error=invalid_link.
@@ -22,7 +18,7 @@ export async function onRequestGet({ request, env }) {
     'SELECT user_id, purpose, expires_at, used FROM email_tokens WHERE token_hash = ?'
   ).bind(hash).first();
   if (!row || row.used || row.expires_at <= Date.now()) return redirectTo(loginErr);
-  if (row.purpose !== 'verify' && row.purpose !== 'magic_login') return redirectTo(loginErr);
+  if (row.purpose !== 'verify') return redirectTo(loginErr);
 
   await env.DB.prepare('UPDATE email_tokens SET used = 1 WHERE token_hash = ?').bind(hash).run();
   await env.DB.prepare('UPDATE users SET email_verified = 1, last_login_at = ? WHERE id = ?').bind(Date.now(), row.user_id).run();
