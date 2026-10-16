@@ -1,5 +1,5 @@
 // Shared helpers for FreeQrly Tier 2 account system (auth + sessions + rate limits).
-// Secrets come from env only (GOOGLE_*/GITHUB_*/MICROSOFT_*_CLIENT_*, RESEND_API_KEY,
+// Secrets come from env only (GOOGLE_*/GITHUB_*_CLIENT_*, RESEND_API_KEY,
 // TURNSTILE_SECRET_KEY, APP_URL). Never hardcode, never log raw tokens — only SHA-256 hashes.
 import { sha256Hex } from './dynamic.js';
 
@@ -178,12 +178,6 @@ export function oauthProviderConfig(env, provider) {
       authorize: 'https://github.com/login/oauth/authorize',
       token: 'https://github.com/login/oauth/access_token',
       scope: 'read:user user:email', pkce: false,
-    },
-    microsoft: {
-      clientId: env.MICROSOFT_CLIENT_ID, clientSecret: env.MICROSOFT_CLIENT_SECRET,
-      authorize: 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize',
-      token: 'https://login.microsoftonline.com/common/oauth2/v2.0/token',
-      scope: 'openid email profile', pkce: true,
     },
   };
   return map[provider] || null;

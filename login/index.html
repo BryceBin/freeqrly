@@ -51,7 +51,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   <div class="divider">or continue with</div>
   <button class="oauth" id="oauthGoogle"><span class="mark">G</span> Continue with Google</button>
   <button class="oauth" id="oauthGithub"><span class="mark">⌘</span> Continue with GitHub</button>
-  <button class="oauth" id="oauthMicrosoft"><span class="mark">▦</span> Continue with Microsoft</button>
 
   <p class="note">We only use sign-in to tie your dynamic codes to your account. No tracking, no ads.</p>
 </div>
@@ -79,7 +78,6 @@ fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
   if(cfg.providers){
     if(!cfg.providers.google) $('oauthGoogle').hidden = true;
     if(!cfg.providers.github) $('oauthGithub').hidden = true;
-    if(!cfg.providers.microsoft) $('oauthMicrosoft').hidden = true;
   }
 }).catch(()=>{});
 $('magicForm').addEventListener('submit', async e => {
@@ -102,6 +100,5 @@ $('magicForm').addEventListener('submit', async e => {
 });
 $('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google');
 $('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github');
-$('oauthMicrosoft').addEventListener('click', () => location.href = '/api/auth/oauth/microsoft');
 </script>
 </body></html>

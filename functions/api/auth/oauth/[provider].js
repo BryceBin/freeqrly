@@ -1,4 +1,4 @@
-// GET /api/auth/oauth/:provider — start OAuth (google|github|microsoft).
+// GET /api/auth/oauth/:provider — start OAuth (google|github).
 // Optional ?turnstileToken=... — verified server-side when TURNSTILE_SECRET_KEY is set
 // (missing token proceeds; a token that fails verification redirects with error=turnstile).
 // Unconfigured provider → redirect /login/?error=provider_unavailable.

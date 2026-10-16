@@ -1,5 +1,5 @@
 // GET /api/auth/callback/:provider — OAuth callback.
-// Verifies state cookie, exchanges code server-side (PKCE for Google/Microsoft;
+// Verifies state cookie, exchanges code server-side (PKCE for Google;
 // GitHub's OAuth web flow does NOT support PKCE), fetches the user email,
 // upserts the user, creates a session, redirects /dashboard/.
 // Failures redirect to /login/?error=<reason>.
@@ -82,13 +82,6 @@ export async function onRequestGet({ request, env, params }) {
           || (Array.isArray(emails) ? emails : []).find((e) => e.verified);
         email = primary ? primary.email : '';
       }
-      if (!email) return login('no_verified_email');
-    } else if (provider === 'microsoft') {
-      const me = await fetchJson('https://graph.microsoft.com/v1.0/me', {
-        headers: { Authorization: `Bearer ${accessToken}` },
-      });
-      email = me.mail || me.userPrincipalName || '';
-      name = me.displayName || null;
       if (!email) return login('no_verified_email');
     }
   } catch { return login('profile_fetch_failed'); }
