@@ -2,7 +2,8 @@
 // Requires a session AND a fresh session (created within the last 15 min),
 // else 403 { error: "reauth_required", hint: "request a fresh magic link" }.
 // Deletes the user row + their session rows; their codes are RELEASED
-// (codes.user_id = NULL), NOT deleted — EditKey still works. Clears the cookie.
+// (codes.user_id = NULL), NOT deleted — they keep redirecting, but with no
+// EditKey and no claim flow they can no longer be edited. Clears the cookie.
 import { json } from '../../_lib/dynamic.js';
 import { getSessionUser, clearSessionCookie, REAUTH_WINDOW_MS, SESSION_COOKIE, getCookie, deleteSessionByToken } from '../../_lib/auth.js';
 

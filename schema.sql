@@ -5,20 +5,17 @@
 --
 -- Migrations applied to LIVE (2026-10-16, auth changes):
 --   ALTER TABLE users ADD COLUMN password_hash TEXT;
---   codes rebuilt (CREATE codes_new / copy / DROP / RENAME) so that
---   edit_key_hash is NULLABLE: NULL = session-owned code (no EditKey),
---   non-NULL = grandfathered anonymous EditKey code.
 --   CREATE TABLE login_lockouts (see below).
+-- Migrations applied to LIVE (2026-10-16, ATT removal):
+--   ALTER TABLE codes DROP COLUMN edit_key_hash (no EditKey / claim flow);
+--   UPDATE users SET code_limit = 8 (free quota 3 -> 8).
 
--- Dynamic QR codes. user_id is NULL for anonymous codes; set when a signed-in
--- user creates a code or claims an anonymous one via /api/me/claims.
--- edit_key_hash is NULL for session-owned codes created after login became
--- required (no EditKey is ever generated for them); non-NULL for grandfathered
--- anonymous codes, which keep working via the dual-channel PATCH/stats auth.
+-- Dynamic QR codes. user_id is NULL for anonymous codes created before
+-- login was required; those keep redirecting but cannot be edited.
+-- All codes created now are session-owned (user_id set).
 CREATE TABLE IF NOT EXISTS codes (
   code TEXT PRIMARY KEY,
   destination TEXT NOT NULL,
-  edit_key_hash TEXT,
   created_at INTEGER NOT NULL,
   total_scans INTEGER DEFAULT 0,
   type TEXT DEFAULT 'url',
@@ -62,7 +59,7 @@ CREATE TABLE IF NOT EXISTS users (
   avatar_url TEXT,
   auth_provider TEXT NOT NULL DEFAULT 'email',
   plan TEXT NOT NULL DEFAULT 'free',
-  code_limit INTEGER NOT NULL DEFAULT 3,
+  code_limit INTEGER NOT NULL DEFAULT 8,
   created_at INTEGER NOT NULL,
   last_login_at INTEGER,
   -- PBKDF2-SHA256 hash for email+password accounts: pbkdf2$100000$<salt_b64>$<hash_b64>.

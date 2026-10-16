@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Manage your code — FreeQrly</title>
-<meta name="description" content="View stats or change the destination of your dynamic QR code. No sign-up — your edit key is the password.">
+<meta name="description" content="View stats or change the destination of your dynamic QR code. Sign in to manage your codes.">
 <meta name="robots" content="noindex, nofollow">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -57,27 +57,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 <body>
 <div class="top">
   <h1>Manage your code</h1>
-  <p>View stats or change the destination. No sign-up — your edit key is the password.</p>
+  <p>View stats or change the destination. Your codes are tied to your account.</p>
 </div>
 
-<!-- Step 1: Unlock -->
-<div class="card" id="unlockCard">
-  <h2>Step 1 — Unlock</h2>
-  <div class="field"><label>Code or link</label>
-    <input id="mCode" type="text" placeholder="FGAbTtR or freeqrly.com/q/FGAbTtR" autocomplete="off">
-    <div class="ex">Paste the full link or just the code — we figure it out. e.g. <b>FGAbTtR</b> or <b>freeqrly.com/q/FGAbTtR</b></div>
-  </div>
-  <div class="field"><label>Edit key</label>
-    <input id="mKey" type="text" placeholder="8-character edit key" autocomplete="off">
-  </div>
-  <button class="btn" id="mUnlock">Unlock →</button>
-  <p class="merror" id="mUnlockErr" hidden></p>
-  <p class="hint2">The key was shown right after you generated the code. Without it, the code keeps working — it just can't be edited.</p>
+<!-- Load error (not signed in / not your code / not found) -->
+<div class="card" id="loadErrCard" hidden>
+  <h2>Can&rsquo;t open this code</h2>
+  <p class="merror" id="loadErr" style="margin-top:0"></p>
+  <a class="btnGhost" href="/dashboard/">Go to Dashboard</a>
 </div>
 
-<!-- Step 2: Stats & Edit -->
+<!-- Stats & Edit -->
 <div class="card" id="manageCard" hidden>
-  <h2>Step 2 — Stats &amp; Edit</h2>
+  <h2>Stats &amp; Edit</h2>
   <div class="head">
     <div><a id="mShortUrl" href="#" target="_blank" rel="noopener"></a><div class="dest" id="mDest"></div></div>
     <span class="badge">● Live</span>
@@ -199,7 +191,7 @@ function parseCode(input){
   const m = s.match(/\/q\/([A-Za-z0-9_-]+)/);
   return m ? m[1] : s;
 }
-let curCode = '', curKey = '', curType = 'url', curPayload = '';
+let curCode = '', curType = 'url', curPayload = '';
 function renderTypeRail(selected){
   const rail = $('mTypeRail');
   rail.innerHTML = '';
@@ -256,25 +248,30 @@ function renderStats(d){
   curType = d.type || 'url'; curPayload = d.payload || '';
   renderEditFields();
 }
-async function unlock(){
-  const code = parseCode($('mCode').value);
-  const key = $('mKey').value.trim();
-  const err = $('mUnlockErr');
-  if(!code || !key){ err.textContent = 'Please enter both the code (or link) and the edit key.'; err.hidden = false; return; }
-  $('mUnlock').disabled = true; $('mUnlock').textContent = 'Unlocking…';
+// Session-gated: no ?c= -> Dashboard; not signed in -> login (with ?next= back);
+// stats 403 = not your code, 404 = unknown code.
+async function boot(){
+  const params = new URLSearchParams(location.search);
+  const code = parseCode(params.get('c') || '');
+  if(!code){ location.href = '/dashboard/'; return; }
   try{
-    const r = await fetch(`/api/codes/${encodeURIComponent(code)}/stats?key=${encodeURIComponent(key)}`);
-    const d = await r.json();
-    if(!r.ok){ err.textContent = d.error || 'Could not unlock. Check the code and key.'; err.hidden = false; return; }
-    curCode = code; curKey = key;
-    err.hidden = true;
-    $('unlockCard').hidden = true;
+    const r = await fetch(`/api/codes/${encodeURIComponent(code)}/stats`, { credentials: 'same-origin' });
+    if(r.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+    const d = await r.json().catch(() => ({}));
+    if(!r.ok){
+      $('loadErr').textContent = r.status === 403 ? 'This code isn\u2019t on your account.' : (d.error || 'Could not load this code.');
+      $('loadErrCard').hidden = false;
+      return;
+    }
+    curCode = code;
     $('manageCard').hidden = false;
     renderStats(d);
-  }catch(e){ err.textContent = 'Network error. Please try again.'; err.hidden = false; }
-  finally{ $('mUnlock').disabled = false; $('mUnlock').textContent = 'Unlock →'; }
+  }catch(e){
+    $('loadErr').textContent = 'Network error. Please try again.';
+    $('loadErrCard').hidden = false;
+  }
 }
-$('mUnlock').addEventListener('click', unlock);
+boot();
 $('mSave').addEventListener('click', async () => {
   const vals = {};
   document.querySelectorAll('#mEditFields [data-k]').forEach(el => vals[el.dataset.k] = el.value);
@@ -283,11 +280,12 @@ $('mSave').addEventListener('click', async () => {
   $('mSave').disabled = true; $('mSave').textContent = 'Saving…';
   try{
     const r = await fetch(`/api/codes/${encodeURIComponent(curCode)}`, {
-      method: 'PATCH', headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({ editKey: curKey, type: curType, payload })
+      method: 'PATCH', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
+      body: JSON.stringify({ type: curType, payload })
     });
-    const d = await r.json();
-    if(!r.ok){ $('mSaveErr').textContent = d.error || 'Save failed.'; $('mSaveErr').hidden = false; return; }
+    const d = await r.json().catch(() => ({}));
+    if(r.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+    if(!r.ok){ $('mSaveErr').textContent = r.status === 403 ? 'This code isn\u2019t on your account.' : (d.error || 'Save failed.'); $('mSaveErr').hidden = false; return; }
     $('mSaveErr').hidden = true;
     $('mSaveOk').hidden = false;
     curPayload = payload;
@@ -296,7 +294,6 @@ $('mSave').addEventListener('click', async () => {
   }catch(e){ $('mSaveErr').textContent = 'Network error.'; $('mSaveErr').hidden = false; }
   finally{ $('mSave').disabled = false; $('mSave').textContent = 'Save changes'; }
 });
-const params = new URLSearchParams(location.search);
-if(params.get('c')) $('mCode').value = params.get('c');
+
 </script>
 </body></html>

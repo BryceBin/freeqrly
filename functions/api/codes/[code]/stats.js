@@ -1,29 +1,19 @@
 // GET /api/codes/:code/stats — scan stats + current type/payload.
-// DUAL-CHANNEL: pass if (valid session AND codes.user_id == session user)
-// OR (editKey as ?key= matches). Either suffices.
-import { sha256Hex, json } from '../../../_lib/dynamic.js';
+// SESSION-ONLY: the signed-in owner of the code. No EditKey channel.
+import { json } from '../../../_lib/dynamic.js';
 import { getSessionUser } from '../../../_lib/auth.js';
 
 export async function onRequestGet(context) {
   const { request, env, params } = context;
   if (!env.DB) return json({ error: 'Dynamic QR not configured yet' }, 503);
   const code = (params.code || '').trim();
-  const url = new URL(request.url);
-  const editKey = url.searchParams.get('key') || '';
 
-  const row = await env.DB.prepare('SELECT edit_key_hash, user_id, type, payload, destination, total_scans, created_at FROM codes WHERE code = ?').bind(code).first();
+  let sess = null;
+  try { sess = await getSessionUser(env, request); } catch { sess = null; }
+  if (!sess) return json({ error: 'unauthorized' }, 401);
+  const row = await env.DB.prepare('SELECT user_id, type, payload, destination, total_scans, created_at FROM codes WHERE code = ?').bind(code).first();
   if (!row) return json({ error: 'Code not found' }, 404);
-  // Channel 1: session owner. Channel 2: editKey (unchanged legacy behavior).
-  let authorized = false;
-  try {
-    const sess = await getSessionUser(env, request);
-    if (sess && row.user_id && row.user_id === sess.user.id) authorized = true;
-  } catch { /* fall through to editKey channel */ }
-  if (!authorized) {
-    if (!editKey) return json({ error: 'editKey is required (as ?key=)' }, 401);
-    const hash = await sha256Hex(editKey);
-    if (hash !== row.edit_key_hash) return json({ error: 'Invalid edit key' }, 403);
-  }
+  if (row.user_id !== sess.user.id) return json({ error: 'forbidden' }, 403);
 
   const byDate = await env.DB.prepare(
     `SELECT date, SUM(count) AS scans FROM daily_stats WHERE code = ? GROUP BY date ORDER BY date DESC LIMIT 30`

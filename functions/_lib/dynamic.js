@@ -1,6 +1,6 @@
 // Shared helpers for dynamic QR codes (redirect + analytics)
 // D1 binding: context.env.DB
-// Tables: codes(code, destination, edit_key_hash, created_at, total_scans)
+// Tables: codes(code, destination, created_at, total_scans)
 //         daily_stats(code, date, country, device, count)
 
 // Base62 alphabet excluding ambiguous chars (0/O, 1/l/I)
@@ -15,14 +15,6 @@ export function genCode(len = 7) {
 export async function sha256Hex(str) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
   return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-// 8-char edit key (clear alphabet, no ambiguous 0/O/1/l/I) — e.g. A3K7M9Q2
-const KEY_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-export function genEditKey() {
-  const arr = new Uint8Array(8);
-  crypto.getRandomValues(arr);
-  return Array.from(arr, b => KEY_ALPHABET[b % KEY_ALPHABET.length]).join('');
 }
 
 export function isValidDestination(url) {

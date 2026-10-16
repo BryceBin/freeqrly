@@ -72,20 +72,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   <p class="merror" id="codesErr" hidden></p>
 </div>
 
-<div class="card">
-  <h2>Claim a code</h2>
-  <p style="font-size:13px;color:#8a7a5f;line-height:1.6;margin-bottom:14px">Made a dynamic code before signing in? Claim it with its Edit Key and it joins this account.</p>
-  <div class="field"><label for="claimCode">Code</label>
-    <input id="claimCode" type="text" placeholder="FGAbTtR or freeqrly.com/q/FGAbTtR" autocomplete="off">
-  </div>
-  <div class="field"><label for="claimKey">Edit Key</label>
-    <input id="claimKey" type="text" placeholder="8-character edit key" autocomplete="off">
-  </div>
-  <button class="btn" id="claimBtn">Claim code</button>
-  <p class="merror" id="claimErr" hidden></p>
-  <p class="mok" id="claimOk" hidden>Claimed. The code is now on your account.</p>
-</div>
-
 <div class="card danger">
   <h2>Your data</h2>
   <p>Export downloads everything tied to your account. Deleting your account releases your codes — they keep working, and their Edit Keys still work. Nothing is deleted except your account itself.</p>
@@ -126,7 +112,7 @@ async function loadCodes(){
     const list = $('codeList');
     if(!codes.length){
       $('newCodeBtn').hidden = true;
-      list.innerHTML = '<p class="empty">No codes yet. <a href="/" style="color:#2F4A62;font-weight:600">Make your first dynamic code</a>, or claim one with its Edit Key.</p>';
+      list.innerHTML = '<p class="empty">No codes yet. <a href="/" style="color:#2F4A62;font-weight:600">Make your first dynamic code</a></p>';
       return;
     }
     $('newCodeBtn').hidden = false;
@@ -210,54 +196,6 @@ loadMe().then(me => {
 $('signOutBtn').addEventListener('click', async () => {
   try{ await fetch('/api/auth/logout', {method:'POST', credentials:'same-origin'}); }catch(e){}
   location.href = '/';
-});
-$('claimBtn').addEventListener('click', async () => {
-  const code = parseCode($('claimCode').value);
-  const editKey = $('claimKey').value.trim();
-  $('claimErr').hidden = true; $('claimOk').hidden = true;
-  if(!code || !editKey){
-    $('claimErr').textContent = 'Please enter both the code and its Edit Key.';
-    $('claimErr').hidden = false;
-    return;
-  }
-  $('claimBtn').disabled = true; $('claimBtn').textContent = 'Claiming…';
-  try{
-    const r = await fetch('/api/me/claims', {
-      method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
-      body: JSON.stringify({ code, editKey })
-    });
-    const d = await r.json().catch(()=>({}));
-    if(!r.ok){
-      if(d.error === 'quota_exceeded') $('claimErr').textContent = "You've reached your code limit.";
-      else if(d.error === 'invalid_key') $('claimErr').textContent = "That Edit Key doesn't match this code.";
-      else if(d.error === 'already_claimed') $('claimErr').textContent = 'This code is already claimed by another account.';
-      else if(r.status === 401) location.href = '/login/';
-      else $('claimErr').textContent = d.error || 'Claim failed. Please try again.';
-      $('claimErr').hidden = false;
-      return;
-    }
-    $('claimOk').hidden = false;
-    $('claimCode').value = ''; $('claimKey').value = '';
-    loadMe().then(me => {
-      if(!me) return;
-      const u = me.user || me;
-      const count = typeof u.codeCount === 'number' ? u.codeCount : null;
-      const limit = typeof u.codeLimit === 'number' ? u.codeLimit : 3;
-      if(count !== null){
-        $('quotaLabel').textContent = count + ' / ' + limit + ' codes';
-        const pct = limit > 0 ? Math.min(100, Math.round(count / limit * 100)) : 100;
-        const fill = $('quotaFill');
-        fill.style.width = pct + '%';
-        fill.classList.toggle('full', count >= limit);
-      }
-    }).catch(()=>{});
-    loadCodes();
-  }catch(e){
-    $('claimErr').textContent = 'Network error. Please try again.';
-    $('claimErr').hidden = false;
-  }finally{
-    $('claimBtn').disabled = false; $('claimBtn').textContent = 'Claim code';
-  }
 });
 $('exportBtn').addEventListener('click', () => {
   location.href = '/api/auth/export';

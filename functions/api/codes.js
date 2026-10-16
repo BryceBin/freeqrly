@@ -1,10 +1,10 @@
 // POST /api/codes — create a dynamic QR code. LOGIN REQUIRED.
 // Body: { type: string, payload: string }
-// Returns: { code, shortUrl } — NEVER an editKey (new codes are session-owned;
-// edit_key_hash is NULL). Quota: COUNT codes WHERE user_id=? < code_limit,
+// Returns: { code, shortUrl }. Codes are session-owned (user_id set).
+// Quota: COUNT codes WHERE user_id=? < code_limit,
 // else 403 { error: "quota_exceeded", hint: "upgrade" }.
-// Grandfathered anonymous codes (edit_key_hash NOT NULL) keep working via
-// the dual-channel PATCH/stats handlers; they are unaffected by this endpoint.
+// Anonymous codes (user_id NULL, created before login was required) keep
+// redirecting, but cannot be edited — there is no EditKey or claim flow.
 import { genCode, json } from '../_lib/dynamic.js';
 import { getSessionUser, getCodeCount } from '../_lib/auth.js';
 
@@ -54,13 +54,12 @@ export async function onRequestPost(context) {
     ).bind(ip, hour).run();
   } catch { /* rate limit failure is non-fatal */ }
 
-  // Generate unique code (retry on collision). Session-owned: user_id set,
-  // edit_key_hash NULL — no EditKey is ever generated or returned.
+  // Generate unique code (retry on collision). Session-owned: user_id set.
   for (let attempt = 0; attempt < 5; attempt++) {
     const candidate = genCode(7);
     try {
       await env.DB.prepare(
-        'INSERT INTO codes (code, destination, type, payload, edit_key_hash, created_at, total_scans, user_id) VALUES (?, ?, ?, ?, NULL, ?, 0, ?)'
+        'INSERT INTO codes (code, destination, type, payload, created_at, total_scans, user_id) VALUES (?, ?, ?, ?, ?, 0, ?)'
       ).bind(candidate, type === 'url' ? payload : '', type, payload, Date.now(), sess.user.id).run();
       return json({ code: candidate, shortUrl: `${new URL(request.url).origin}/q/${candidate}` });
     } catch (e) {
