@@ -115,8 +115,8 @@ HEADER = '''<header class="top">
       <a href="#studio">Studio</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
     </nav>
     <div class="topbtns">
-      <span id="authArea"><a class="tbtn authLink" href="/login/">Sign in</a></span>
-      <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
+      <span id="authArea"><a class="tbtn authLink" href="/login/" data-i18n="signin">Sign in</a></span>
+      <select class="tbtn langsel" id="langBtn" aria-label="Language" data-i18n-aria="ariaLanguage"></select>
       <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
     </div>
   </header>

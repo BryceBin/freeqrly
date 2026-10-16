@@ -29,11 +29,11 @@
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:locale:alternate" content="hi_IN">
-<meta property="og:locale:alternate" content="ar_AR">
 <meta property="og:locale:alternate" content="pt_BR">
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="ru_RU">
@@ -43,7 +43,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever — static codes need no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3z-20261016">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261016">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. Static codes are 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -121,8 +121,8 @@
       <a href="#studio" data-i18n="navStudio">الاستوديو</a><a href="#why" data-i18n="navWhy">المبادئ</a><a href="#faq" data-i18n="navFaq">أسئلة</a><a href="/scan/" data-i18n="navScan">ماسح</a>
     </nav>
     <div class="topbtns">
-      <span id="authArea"><a class="tbtn authLink" href="/login/">Sign in</a></span>
-      <select class="tbtn langsel" id="langBtn" aria-label="Language"></select>
+      <span id="authArea"><a class="tbtn authLink" href="/login/" data-i18n="signin">تسجيل الدخول</a></span>
+      <select class="tbtn langsel" id="langBtn" aria-label="Language" data-i18n-aria="ariaLanguage"></select>
       <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
     </div>
   </header>
@@ -170,10 +170,10 @@
         <div class="approw"><div class="applabel"><span data-i18n="colors">الألوان</span><small data-i18n="colorsSub">اختر أو خصص</small></div>
           <div class="cpair">
             <div class="cgroup"><span class="cname" data-i18n="ink">الحبر</span><div class="cdots" id="fgDots">
-              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink"></button><button class="cdot" data-v="#B4563C" style="background:#B4563C" aria-label="Ink"></button><button class="cdot" data-v="#2F6B4F" style="background:#2F6B4F" aria-label="Ink"></button><button class="cdot" data-v="#2F4B7C" style="background:#2F4B7C" aria-label="Ink"></button><button class="cpick" data-kind="fg" aria-label="Custom ink color">+</button>
+              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#B4563C" style="background:#B4563C" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#2F6B4F" style="background:#2F6B4F" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#2F4B7C" style="background:#2F4B7C" aria-label="Ink" data-i18n-aria="ink"></button><button class="cpick" data-kind="fg" aria-label="Custom ink color" data-i18n-aria="ariaCustomInk">+</button>
             </div></div>
             <div class="cgroup"><span class="cname" data-i18n="background">الخلفية</span><div class="cdots" id="bgDots">
-              <button class="cdot ctransp on" data-v="transparent" aria-label="Transparent background"></button><button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Background"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Background"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Background"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Background"></button><button class="cpick" data-kind="bg" aria-label="Custom background color">+</button>
+              <button class="cdot ctransp on" data-v="transparent" aria-label="Transparent background" data-i18n-aria="transparent"></button><button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Background" data-i18n-aria="background"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Background" data-i18n-aria="background"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Background" data-i18n-aria="background"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Background" data-i18n-aria="background"></button><button class="cpick" data-kind="bg" aria-label="Custom background color" data-i18n-aria="ariaCustomBg">+</button>
             </div></div>
           </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="logo">أضف شعارك</span><small data-i18n="logoSub">علامة أو خاص</small></div>
@@ -184,20 +184,20 @@
             <button class="logopick" data-preset="instagram" aria-label="Instagram"><img src="/assets/img/logos/instagram.svg" alt="Instagram" loading="lazy"></button>
             <button class="logopick" data-preset="google" aria-label="Google"><img src="/assets/img/logos/google.svg" alt="Google" loading="lazy"></button>
             <button class="logopick" data-preset="microsoft" aria-label="Microsoft"><img src="/assets/img/logos/microsoft.svg" alt="Microsoft" loading="lazy"></button>
-            <label class="logopick logoupload" for="logo" aria-label="Upload logo">+<input type="file" id="logo" accept="image/*" hidden></label>
+            <label class="logopick logoupload" for="logo" aria-label="Upload logo" data-i18n-aria="ariaUploadLogo">+<input type="file" id="logo" accept="image/*" hidden></label>
             
           </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="size">حجم التصدير</span><small><span id="sizeVal">1024</span> px</small></div>
           <div class="seg" id="segSize" role="radiogroup">
             <button data-v="512">512</button><button data-v="1024">1024</button><button data-v="2048">2048</button><button data-v="4096">4096</button>
           </div></div>
-        <div class="approw"><div class="applabel"><span data-i18n="frame">Frame</span><small data-i18n="frameSub">Border around the code</small></div>
+        <div class="approw"><div class="applabel"><span data-i18n="frame">إطار</span><small data-i18n="frameSub">حدود حول الرمز</small></div>
           <div class="frameWrap" id="frameWrap">
             <div class="seg segFrame" id="segFrame" role="radiogroup">
-              <button data-v="none" data-i18n="frameNone">None</button><button data-v="rounded" data-i18n="frameRounded">Round</button><button data-v="cta" data-i18n="frameCta">Text</button>
+              <button data-v="none" data-i18n="frameNone">بدون</button><button data-v="rounded" data-i18n="frameRounded">مستدير</button><button data-v="cta" data-i18n="frameCta">مع نص</button>
             </div>
             <div class="frameExpand" id="frameExpand">
-              <input type="text" id="frameText" class="frameExpandInput" placeholder="Scan me" placeholder="">
+              <input type="text" id="frameText" class="frameExpandInput" placeholder="امسح">
             </div>
           </div></div>
         <!-- hidden native controls (synced by the visual UI above) -->
@@ -217,13 +217,13 @@
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynManageLink" href="/dashboard/" target="_blank" rel="noopener" data-i18n="dynManageLink">Manage this code →</a>
-          <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">View in Dashboard →</a>
+          <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">عرض في لوحة التحكم →</a>
         </div>
-        <p class="dynSigninHint" id="dynSigninHint" hidden><a id="dynSigninLink" href="/login/" data-i18n="dynSigninHint">Sign in to create dynamic codes</a></p>
+        <p class="dynSigninHint" id="dynSigninHint" hidden><a id="dynSigninLink" href="/login/" data-i18n="dynSigninHint">سجّل الدخول لإنشاء رموز ديناميكية</a></p>
         <button class="btn-primary dynGenBtn" id="dynCreate" data-i18n="dynCreate" hidden>إنشاء رمز ديناميكي</button>
         <div class="dlrow"><div class="dlSplit">
           <button id="dlPng" class="dlMain"><span data-i18n="dl">تنزيل</span> PNG ↓</button>
-          <button id="dlArrow" class="dlArrow" aria-label="More formats">▾</button>
+          <button id="dlArrow" class="dlArrow" aria-label="More formats" data-i18n-aria="moreFormats">▾</button>
           <div class="dlMenu" id="dlMenu">
             <button data-fmt="svg">SVG ↓</button>
             <button data-fmt="pdf">PDF ↓</button>
@@ -315,8 +315,8 @@
     <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly the elephant waving hello"></div>
     <div class="fin" data-i18n="fin">رموز ثابتة، صُنعت في متصفحك.</div>
     <div class="fgroups">
-      <div class="fgroup"><span class="fglabel">Generators</span><a href="/google-form-qr-code/">Google Form</a><a href="/wifi-qr-code/">WiFi</a><a href="/vcard-qr-code/">vCard</a><a href="/business-card-qr-code/">Business card</a><a href="/google-review-qr-code/">Google review</a><a href="/qr-code-with-logo/">With logo</a><a href="/wedding-qr-code/">Wedding</a><a href="/instagram-qr-code/">Instagram</a><a href="/real-estate-qr-code/">Real estate</a><a href="/batch-qr-code/">Batch</a></div>
-      <div class="fgroup"><span class="fglabel">More</span><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a><a href="/developers/">API & MCP</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+      <div class="fgroup"><span class="fglabel" data-i18n="footGenerators">المولدات</span><a href="/google-form-qr-code/">Google Form</a><a href="/wifi-qr-code/">WiFi</a><a href="/vcard-qr-code/">vCard</a><a href="/business-card-qr-code/">Business card</a><a href="/google-review-qr-code/">Google review</a><a href="/qr-code-with-logo/">With logo</a><a href="/wedding-qr-code/">Wedding</a><a href="/instagram-qr-code/">Instagram</a><a href="/real-estate-qr-code/">Real estate</a><a href="/batch-qr-code/">Batch</a></div>
+      <div class="fgroup"><span class="fglabel" data-i18n="footMore">المزيد</span><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a><a href="/developers/">API & MCP</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
     </div>
     <div class="rule"></div>
     <div class="tiny">© 2026 FreeQrly</div>
@@ -329,8 +329,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3z-20261016"></script>
-<script src="/assets/js/app.js?v=b3z-20261016"></script>
+<script src="/assets/js/vcard.js?v=b3aa-20261016"></script>
+<script src="/assets/js/app.js?v=b3aa-20261016"></script>
 </body>
 </html>
 

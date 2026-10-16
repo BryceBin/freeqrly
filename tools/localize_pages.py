@@ -94,6 +94,30 @@ def localize_page(key, lang, trans):
     # resolve to /<lang>/assets -> 404 (app.js/CSS never load). Rewrite to
     # root-absolute. (EN pages untouched; bare assets/ only in root index.)
     out = re.sub(r'((?:src|href)=["\'])(?:\.\./)+assets/', r'\1/assets/', out)
+    # internal links: /<localizable-path> -> /<lang>/<localizable-path>
+    # (absolute https://freeqrly.com/... incl. og:url + JSON-LD "url", and
+    # root-relative href="/..." / content="/..."). NOT rewritten: /dashboard/
+    # (not localized), /assets/, /q/, /api/, /mcp/, /skills/, external,
+    # mailto:, tel:, bare #anchors. Query + fragment preserved.
+    _LOCALIZABLE = set(["google-form-qr-code", "wifi-qr-code", "vcard-qr-code",
+        "batch-qr-code", "business-card-qr-code", "google-review-qr-code",
+        "qr-code-with-logo", "wedding-qr-code", "instagram-qr-code",
+        "real-estate-qr-code", "about", "privacy", "terms", "developers",
+        "scan", "login", "reset", "blog"])
+    def _loc_url(m):
+        pre, url = m.group(1), m.group(2)
+        mm = re.match(r'^(https://freeqrly\.com)?(/[^?#]*)([?#].*)?$', url)
+        if not mm:
+            return m.group(0)
+        origin, path, suffix = mm.group(1) or '', mm.group(2), mm.group(3) or ''
+        if path == '/':
+            return pre + origin + f'/{lang}/' + suffix
+        seg = path.strip('/').split('/')[0]
+        if seg in _LOCALIZABLE:
+            return pre + origin + f'/{lang}{path}' + suffix
+        return m.group(0)
+    out = re.sub(r'((?:href|content)=["\'])((?:https://freeqrly\.com)?/[^"\']*)', _loc_url, out)
+    out = re.sub(r'(\"url\"\s*:\s*\")((?:https://freeqrly\.com)?/[^\"]*)', _loc_url, out)
     # hreflang + canonical: skipped for 404 (error pages get neither)
     if key == "404":
         out_path = os.path.join(SITE, out_tmpl.format(lang=lang))
