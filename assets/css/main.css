@@ -472,6 +472,8 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 @keyframes spin{to{transform:rotate(360deg)}}
 .dlrow.disabled{opacity:.45;pointer-events:none}
 #dynResult{margin-bottom:12px;font-size:13px;line-height:1.7}
+.dynSigninHint{text-align:center;font-size:13px;margin:-2px 0 12px;line-height:1.5}
+.dynSigninHint a{color:#b45309;font-weight:600;text-decoration:underline;text-underline-offset:2px}
 .dynShort a{font-weight:700;word-break:break-all}
 .dynKey{display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
 .dynKey code{display:inline-flex;align-items:center;height:34px;background:#F1EAD9;padding:0 10px;border-radius:8px;font-size:15px;font-weight:800;letter-spacing:.12em}

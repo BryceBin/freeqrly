@@ -174,15 +174,17 @@ async function loadCodes(){
 }
 loadMe().then(me => {
   if(!me) return;
-  $('dashEmail').textContent = me.email || '—';
-  if(me.avatar){
+  const u = me.user || me; // /api/auth/me returns {user:{...}}
+  $('dashEmail').textContent = u.email || '—';
+  const avatar = u.avatar || u.avatar_url;
+  if(avatar){
     const img = $('dashAvatar');
-    img.src = me.avatar;
+    img.src = avatar;
     img.referrerPolicy = 'no-referrer';
     img.hidden = false;
   }
-  const count = typeof me.codeCount === 'number' ? me.codeCount : null;
-  const limit = typeof me.codeLimit === 'number' ? me.codeLimit : 3;
+  const count = typeof u.codeCount === 'number' ? u.codeCount : null;
+  const limit = typeof u.codeLimit === 'number' ? u.codeLimit : 3;
   if(count !== null){
     $('quotaLabel').textContent = count + ' / ' + limit + ' codes';
     const pct = limit > 0 ? Math.min(100, Math.round(count / limit * 100)) : 100;
@@ -227,8 +229,9 @@ $('claimBtn').addEventListener('click', async () => {
     $('claimCode').value = ''; $('claimKey').value = '';
     loadMe().then(me => {
       if(!me) return;
-      const count = typeof me.codeCount === 'number' ? me.codeCount : null;
-      const limit = typeof me.codeLimit === 'number' ? me.codeLimit : 3;
+      const u = me.user || me;
+      const count = typeof u.codeCount === 'number' ? u.codeCount : null;
+      const limit = typeof u.codeLimit === 'number' ? u.codeLimit : 3;
       if(count !== null){
         $('quotaLabel').textContent = count + ' / ' + limit + ' codes';
         const pct = limit > 0 ? Math.min(100, Math.round(count / limit * 100)) : 100;

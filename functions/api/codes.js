@@ -1,7 +1,11 @@
-// POST /api/codes — create a dynamic QR code
+// POST /api/codes — create a dynamic QR code. LOGIN REQUIRED.
 // Body: { type: string, payload: string }
-// Returns: { code, shortUrl, editKey }
-import { genCode, genEditKey, sha256Hex, json } from '../_lib/dynamic.js';
+// Returns: { code, shortUrl } — NEVER an editKey (new codes are session-owned;
+// edit_key_hash is NULL). Quota: COUNT codes WHERE user_id=? < code_limit,
+// else 403 { error: "quota_exceeded", hint: "upgrade" }.
+// Grandfathered anonymous codes (edit_key_hash NOT NULL) keep working via
+// the dual-channel PATCH/stats handlers; they are unaffected by this endpoint.
+import { genCode, json } from '../_lib/dynamic.js';
 import { getSessionUser, getCodeCount } from '../_lib/auth.js';
 
 const VALID_TYPES = new Set(['url','text','wifi','vcard','email','sms','phone','geo','event','bitcoin','coupon','appstore']);
@@ -9,6 +13,13 @@ const VALID_TYPES = new Set(['url','text','wifi','vcard','email','sms','phone','
 export async function onRequestPost(context) {
   const { request, env } = context;
   if (!env.DB) return json({ error: 'Dynamic QR not configured yet' }, 503);
+
+  // Login required: anonymous creation is rejected.
+  let sess;
+  try {
+    sess = await getSessionUser(env, request);
+  } catch { sess = null; }
+  if (!sess) return json({ error: 'unauthorized' }, 401);
 
   let body;
   try { body = await request.json(); } catch { return json({ error: 'Invalid JSON' }, 400); }
@@ -25,19 +36,11 @@ export async function onRequestPost(context) {
     } catch { return json({ error: 'Invalid URL' }, 400); }
   }
 
-  // Signed-in create: attach the code to the user + enforce per-plan quota.
-  // Anonymous create is unchanged (EditKey flow, IP limit below still applies).
-  let ownerId = null;
-  try {
-    const sess = await getSessionUser(env, request);
-    if (sess) {
-      const used = await getCodeCount(env, sess.user.id);
-      if (used >= sess.user.code_limit) return json({ error: 'quota_exceeded' }, 403);
-      ownerId = sess.user.id;
-    }
-  } catch { /* session lookup failure is non-fatal: fall through as anonymous */ }
+  // Per-plan quota for the signed-in owner.
+  const used = await getCodeCount(env, sess.user.id);
+  if (used >= sess.user.code_limit) return json({ error: 'quota_exceeded', hint: 'upgrade' }, 403);
 
-  // Per-IP creation rate limit: ~10 codes/hour
+  // Per-IP creation rate limit: ~10 codes/hour (unchanged abuse guard)
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
   const hour = new Date().toISOString().slice(0, 13);
   try {
@@ -51,16 +54,15 @@ export async function onRequestPost(context) {
     ).bind(ip, hour).run();
   } catch { /* rate limit failure is non-fatal */ }
 
-  // Generate unique code (retry on collision)
+  // Generate unique code (retry on collision). Session-owned: user_id set,
+  // edit_key_hash NULL — no EditKey is ever generated or returned.
   for (let attempt = 0; attempt < 5; attempt++) {
     const candidate = genCode(7);
     try {
-      const editKey = genEditKey();
-      const editKeyHash = await sha256Hex(editKey);
       await env.DB.prepare(
-        'INSERT INTO codes (code, destination, type, payload, edit_key_hash, created_at, total_scans, user_id) VALUES (?, ?, ?, ?, ?, ?, 0, ?)'
-      ).bind(candidate, type === 'url' ? payload : '', type, payload, editKeyHash, Date.now(), ownerId).run();
-      return json({ code: candidate, shortUrl: `${new URL(request.url).origin}/q/${candidate}`, editKey });
+        'INSERT INTO codes (code, destination, type, payload, edit_key_hash, created_at, total_scans, user_id) VALUES (?, ?, ?, ?, NULL, ?, 0, ?)'
+      ).bind(candidate, type === 'url' ? payload : '', type, payload, Date.now(), sess.user.id).run();
+      return json({ code: candidate, shortUrl: `${new URL(request.url).origin}/q/${candidate}` });
     } catch (e) {
       if (String(e.message || e).includes('UNIQUE')) continue;
       return json({ error: 'Failed to create code' }, 500);

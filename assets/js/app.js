@@ -40,7 +40,7 @@ en:{
     email:[["to","To","hi@example.com"],["subject","Subject","Hello"],["body","Body","textarea","Email body…"]],
     sms:[["phone","Phone","+1 555 0100"],["body","Message","","Type your message…"]],
     phone:[["phone","Phone","+1 555 0100"]],geo:[["lat","Latitude","37.7749"],["lng","Longitude","-122.4194"]],"event":[["etitle","Title","","e.g. Birthday party"],["estart","Starts","datetime-local"],["eend","Ends","datetime-local"],["eloc","Location","","e.g. Central Park"],["edesc","Details","textarea","Event details…"]],"bitcoin":[["btcaddr","Wallet address","bc1q..."],["btcamt","Amount (BTC)","0.001"],["btclabel","Label","","e.g. Coffee"],["btcmsg","Message","","e.g. Thanks"]],"coupon":[["cpcode","Coupon code","SAVE20"],["cpdesc","Description","","e.g. 20% off"]],"appstore":[["appios","App Store link","https://apps.apple.com/app/..."],["appand","Google Play link","https://play.google.com/store/apps/..."]]}
-, "modeStatic":"Static", "modeDynamic":"Dynamic", "modeHint":"Static codes never expire. Dynamic codes can be edited after printing + track scans.", "dynDest":"Destination URL", "dynCreate":"Generate dynamic QR", "dynShort":"Your dynamic QR link:", "dynKey":"Edit key (save it — you need it to edit or view stats):", "dynWarn":"Save your edit key somewhere safe. Without it, you cannot edit this code or view its stats.", "dynManage":"Manage a dynamic code", "dynCode":"Code", "dynViewStats":"View stats", "dynEdit":"Edit destination", "dynSave":"Save changes", "copy":"Copy", "dynIntro":"Design your QR — pick a type, fill in content, style it. Then create a dynamic code: the printed QR stays the same, but you can change its content anytime.", "dynLoadEdit":"Load for editing", "dynEditHint":"Edit the type and content, then save. Your printed QR will serve the new content.", "dynHint":"Fill in your content, then hit Generate.", "dynReady":"Your dynamic QR is ready. Print it — the content can change anytime.", "dynBlurHint":"Fill in your content, then hit Generate", "dynKeyShort":"Edit key:", "dynWarnShort":"Save your edit key — you'll need it to edit or view stats.", "modeTip":"Dynamic codes can be edited after printing + track scans. The printed QR stays the same."},
+, "modeStatic":"Static", "modeDynamic":"Dynamic", "modeHint":"Static codes never expire. Dynamic codes can be edited after printing + track scans.", "dynDest":"Destination URL", "dynCreate":"Generate dynamic QR", "dynShort":"Your dynamic QR link:", "dynKey":"Edit key (save it — you need it to edit or view stats):", "dynWarn":"Save your edit key somewhere safe. Without it, you cannot edit this code or view its stats.", "dynManage":"Manage a dynamic code", "dynCode":"Code", "dynViewStats":"View stats", "dynEdit":"Edit destination", "dynSave":"Save changes", "copy":"Copy", "dynIntro":"Design your QR — pick a type, fill in content, style it. Then create a dynamic code: the printed QR stays the same, but you can change its content anytime.", "dynLoadEdit":"Load for editing", "dynEditHint":"Edit the type and content, then save. Your printed QR will serve the new content.", "dynHint":"Fill in your content, then hit Generate.", "dynReady":"Your dynamic QR is ready. Print it — the content can change anytime.", "dynBlurHint":"Fill in your content, then hit Generate", "dynKeyShort":"Edit key:", "dynWarnShort":"Save your edit key — you'll need it to edit or view stats.", "modeTip":"Dynamic codes can be edited after printing + track scans. The printed QR stays the same.", "dynSigninHint":"Sign in to create dynamic codes", "dynDashLink":"View in Dashboard →"},
 zh:{
   title:"FreeQrly — 免费二维码生成器",
   metaDesc:"免费在线生成二维码，不用注册。链接、WiFi、名片都能做，下载 PNG 或 SVG，长期有效。",
@@ -1034,11 +1034,23 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
       } else {
         hintLine.textContent = t.dynReady || "Your dynamic QR is ready. Print it — the content can change anytime.";
       }
+      // Dynamic codes require an account: nudge logged-out users to sign in.
+      const signinHint = $("dynSigninHint");
+      if(signinHint){
+        const st = window.__authState || {};
+        const show = !window.MANAGE_MODE && !!st.loaded && !st.user;
+        signinHint.hidden = !show;
+        if(show){
+          const l = $("dynSigninLink");
+          if(l) l.href = "/login/?next=" + encodeURIComponent(location.pathname + location.search);
+        }
+      }
     } else {
       // Static: normal
       if(qrpaper) qrpaper.classList.remove("blurred");
       if(dlRow) dlRow.classList.remove("disabled");
       if(genBtn) genBtn.hidden = true;
+      const sh = $("dynSigninHint"); if(sh) sh.hidden = true;
       hintLine.textContent = t.live || "Live preview — updates as you type";
       const res = $("dynResult"); if(res) res.hidden = true;
     }
@@ -1060,6 +1072,12 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
   if(genBtn) genBtn.addEventListener("click", async () => {
     const payload = content();
     if(!payload){ alert("Please enter content first"); return; }
+    // Dynamic codes require an account — send logged-out users to sign in,
+    // then back here (Manage mode uses an EditKey, not a session, so skip).
+    if(!window.MANAGE_MODE){
+      const st = await window.getAuthState();
+      if(!st.user){ location.href = "/login/?next=" + encodeURIComponent(location.pathname + location.search); return; }
+    }
     genBtn.disabled = true;
     genBtn.innerHTML = window.MANAGE_MODE ? '<span class="spinner"></span>Saving…' : '<span class="spinner"></span>Generating…';
     try{
@@ -1075,13 +1093,30 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
       }
       const r = await fetch("/api/codes", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type: cur, payload }) });
       const d = await r.json();
-      if(!r.ok){ alert(d.error || "Failed to create"); return; }
+      if(!r.ok){
+        if(r.status === 401){ location.href = "/login/?next=" + encodeURIComponent(location.pathname + location.search); return; }
+        alert(d.error || "Failed to create"); return;
+      }
       dynamicShortUrl = d.shortUrl;
       dynamicGenerated = true;
       const res = $("dynResult"); if(res) res.hidden = false;
       const link = $("dynShortUrl"); if(link){ link.href = d.shortUrl; link.textContent = d.shortUrl.replace(/^https?:\/\//, ''); }
-      const keyEl = $("dynEditKey"); if(keyEl) keyEl.textContent = d.editKey;
-      const mLink = $("dynManageLink"); if(mLink) mLink.href = "/manage/?c=" + encodeURIComponent(d.code);
+      // EditKey UI only when the create response includes an editKey.
+      // New account codes have none — show a Dashboard link instead.
+      // (The EditKey branch stays for grandfathered flows.)
+      const keyWrap = $("dynKeyWrap");
+      const dashLink = $("dynDashLink");
+      const mLink = $("dynManageLink");
+      if(d.editKey){
+        if(keyWrap) keyWrap.hidden = false;
+        const keyEl = $("dynEditKey"); if(keyEl) keyEl.textContent = d.editKey;
+        if(mLink){ mLink.hidden = false; mLink.href = "/manage/?c=" + encodeURIComponent(d.code); }
+        if(dashLink) dashLink.hidden = true;
+      } else {
+        if(keyWrap) keyWrap.hidden = true;
+        if(mLink) mLink.hidden = true;
+        if(dashLink) dashLink.hidden = false;
+      }
       refreshDynamicUI();
     }catch(e){ alert("Network error"); }
     finally{
@@ -1177,23 +1212,42 @@ function fillFieldsFromPayload(type, payload){
   draw();
 }
 
+// Shared auth state: one GET /api/auth/me per page load, cached.
+// Shape-tolerant: backend returns {user:{...}}; older callers used a flat object.
+window.__authState = { loaded:false, user:null };
+window.getAuthState = function(){
+  if(window.__authStatePromise) return window.__authStatePromise;
+  window.__authStatePromise = fetch("/api/auth/me", {credentials:"same-origin"}).then(r => {
+    if(!r.ok) return null;
+    return r.json().catch(()=>null);
+  }).then(d => {
+    const u = (d && d.user) || d || null;
+    window.__authState = { loaded:true, user: (u && u.email) ? u : null };
+    return window.__authState;
+  }).catch(() => {
+    window.__authState = { loaded:true, user:null };
+    return window.__authState;
+  });
+  return window.__authStatePromise;
+};
+
 // Header auth state + quota hint. Fail-open: anonymous use is unaffected
 // if /api/auth/me is unreachable, 401s, or returns anything unexpected.
 function initAuthHeader(){
   try{
     const area = $("authArea");
     const quotaEl = $("quotaHint");
-    fetch("/api/auth/me", {credentials:"same-origin"}).then(r => {
-      if(!r.ok) return null;
-      return r.json().catch(()=>null);
-    }).then(me => {
-      if(!me || !me.email) return;
+    window.getAuthState().then(st => {
+      const me = st.user;
+      if(window.refreshDynamicUI) window.refreshDynamicUI();
+      if(!me) return;
       if(area){
         area.textContent = "";
-        if(me.avatar){
+        const avatar = me.avatar || me.avatar_url;
+        if(avatar){
           const img = document.createElement("img");
           img.className = "authAvatar";
-          img.src = me.avatar;
+          img.src = avatar;
           img.alt = "";
           img.referrerPolicy = "no-referrer";
           area.appendChild(img);

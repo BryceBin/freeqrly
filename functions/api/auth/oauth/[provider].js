@@ -1,10 +1,12 @@
 // GET /api/auth/oauth/:provider — start OAuth (google|github).
 // Optional ?turnstileToken=... — verified server-side when TURNSTILE_SECRET_KEY is set
 // (missing token proceeds; a token that fails verification redirects with error=turnstile).
+// Optional ?next=... — validated (same-origin path only) and stored in the
+// state cookie alongside the CSRF state; the callback redirects to it.
 // Unconfigured provider → redirect /login/?error=provider_unavailable.
 // Sets HttpOnly fq_pkce (verifier, 10 min) + fq_oauth_state cookies, redirects to provider.
 import { oauthProviderConfig, appUrl, genToken, sha256Base64Url, tempCookie,
-  PKCE_COOKIE, OAUTH_STATE_COOKIE, verifyTurnstile, getClientIp, redirectTo } from '../../../_lib/auth.js';
+  PKCE_COOKIE, OAUTH_STATE_COOKIE, verifyTurnstile, getClientIp, redirectTo, validateNext } from '../../../_lib/auth.js';
 
 export async function onRequestGet({ request, env, params }) {
   const url = new URL(request.url);
@@ -18,6 +20,7 @@ export async function onRequestGet({ request, env, params }) {
 
   const verifier = genToken(64); // 86-char base64url, within PKCE 43–128
   const state = genToken(24);
+  const next = validateNext(url.searchParams.get('next') || '');
   const redirectUri = `${appUrl(env)}/api/auth/callback/${provider}`;
   const authUrl = new URL(cfg.authorize);
   authUrl.searchParams.set('client_id', cfg.clientId);
@@ -36,7 +39,7 @@ export async function onRequestGet({ request, env, params }) {
     authUrl.searchParams.set('code_challenge_method', 'S256');
     headers.append('Set-Cookie', tempCookie(PKCE_COOKIE, verifier, 600));
   }
-  headers.append('Set-Cookie', tempCookie(OAUTH_STATE_COOKIE, state, 600));
+  headers.append('Set-Cookie', tempCookie(OAUTH_STATE_COOKIE, JSON.stringify({ s: state, n: next }), 600));
   headers.set('Location', authUrl.toString());
   return new Response(null, { status: 302, headers });
 }

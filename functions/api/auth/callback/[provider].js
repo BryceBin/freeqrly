@@ -1,11 +1,12 @@
 // GET /api/auth/callback/:provider — OAuth callback.
 // Verifies state cookie, exchanges code server-side (PKCE for Google;
 // GitHub's OAuth web flow does NOT support PKCE), fetches the user email,
-// upserts the user, creates a session, redirects /dashboard/.
+// upserts the user, creates a session, redirects to the validated `next`
+// carried in the state cookie (default /dashboard/).
 // Failures redirect to /login/?error=<reason>.
 import { oauthProviderConfig, appUrl, getCookie, getClientIp,
   PKCE_COOKIE, OAUTH_STATE_COOKIE, createSession, sessionCookie,
-  clearTempCookie, checkRateLimit, upsertUser, redirectTo } from '../../../_lib/auth.js';
+  clearTempCookie, checkRateLimit, upsertUser, redirectTo, validateNext } from '../../../_lib/auth.js';
 
 async function fetchJson(url, init = {}) {
   const res = await fetch(url, init);
@@ -21,8 +22,19 @@ export async function onRequestGet({ request, env, params }) {
   if (!cfg || !cfg.clientId || !cfg.clientSecret) return login('provider_unavailable');
   if (url.searchParams.get('error')) return login('provider_denied');
 
-  // CSRF: state cookie must match query state
-  const stateCookie = getCookie(request, OAUTH_STATE_COOKIE);
+  // CSRF: state cookie must match query state. The cookie holds
+  // JSON { s: state, n: next } (new) or a bare state string (pre-change flows
+  // still in flight during deploy — accept both).
+  const stateCookieRaw = getCookie(request, OAUTH_STATE_COOKIE);
+  let stateCookie = stateCookieRaw;
+  let next = '/dashboard/';
+  try {
+    const parsed = JSON.parse(stateCookieRaw);
+    if (parsed && typeof parsed.s === 'string') {
+      stateCookie = parsed.s;
+      next = validateNext(parsed.n || '');
+    }
+  } catch { /* not JSON → bare state string, next stays default */ }
   const stateQuery = url.searchParams.get('state') || '';
   if (!stateCookie || !stateQuery || stateCookie !== stateQuery) return login('csrf');
 
@@ -92,6 +104,6 @@ export async function onRequestGet({ request, env, params }) {
   headers.append('Set-Cookie', sessionCookie(sessionToken));
   headers.append('Set-Cookie', clearTempCookie(PKCE_COOKIE));
   headers.append('Set-Cookie', clearTempCookie(OAUTH_STATE_COOKIE));
-  headers.set('Location', new URL('/dashboard/', url.origin).toString());
+  headers.set('Location', new URL(next, url.origin).toString());
   return new Response(null, { status: 302, headers });
 }

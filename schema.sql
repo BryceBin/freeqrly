@@ -2,13 +2,23 @@
 -- This file mirrors the LIVE database. Apply new statements with:
 --   wrangler d1 execute freeqrly --remote --command "<SQL>"
 -- (CREATE TABLE / INDEX statements below are all IF NOT EXISTS, so re-running is safe.)
+--
+-- Migrations applied to LIVE (2026-10-16, auth changes):
+--   ALTER TABLE users ADD COLUMN password_hash TEXT;
+--   codes rebuilt (CREATE codes_new / copy / DROP / RENAME) so that
+--   edit_key_hash is NULLABLE: NULL = session-owned code (no EditKey),
+--   non-NULL = grandfathered anonymous EditKey code.
+--   CREATE TABLE login_lockouts (see below).
 
 -- Dynamic QR codes. user_id is NULL for anonymous codes; set when a signed-in
 -- user creates a code or claims an anonymous one via /api/me/claims.
+-- edit_key_hash is NULL for session-owned codes created after login became
+-- required (no EditKey is ever generated for them); non-NULL for grandfathered
+-- anonymous codes, which keep working via the dual-channel PATCH/stats auth.
 CREATE TABLE IF NOT EXISTS codes (
   code TEXT PRIMARY KEY,
   destination TEXT NOT NULL,
-  edit_key_hash TEXT NOT NULL,
+  edit_key_hash TEXT,
   created_at INTEGER NOT NULL,
   total_scans INTEGER DEFAULT 0,
   type TEXT DEFAULT 'url',
@@ -54,7 +64,10 @@ CREATE TABLE IF NOT EXISTS users (
   plan TEXT NOT NULL DEFAULT 'free',
   code_limit INTEGER NOT NULL DEFAULT 3,
   created_at INTEGER NOT NULL,
-  last_login_at INTEGER
+  last_login_at INTEGER,
+  -- PBKDF2-SHA256 hash for email+password accounts: pbkdf2$100000$<salt_b64>$<hash_b64>.
+  -- NULL for OAuth / magic-link-only accounts. Never returned by any API.
+  password_hash TEXT
 );
 
 -- Sessions store only the SHA-256 hash of the opaque fq_session cookie token.
@@ -67,7 +80,8 @@ CREATE TABLE IF NOT EXISTS sessions (
   ip TEXT
 );
 
--- One-time email tokens (magic links). Only SHA-256 hashes are stored.
+-- One-time email tokens (magic links, email verification, password reset).
+-- Only SHA-256 hashes are stored. Single-use (used=1 after consume).
 CREATE TABLE IF NOT EXISTS email_tokens (
   token_hash TEXT PRIMARY KEY,
   user_id TEXT NOT NULL,
@@ -91,4 +105,14 @@ CREATE TABLE IF NOT EXISTS rate_limits (
   hour TEXT NOT NULL,
   count INTEGER DEFAULT 0,
   PRIMARY KEY (key, hour)
+);
+
+-- Login lockout: 5 failed password attempts per IP+email → 15 min lockout.
+-- key = SHA-256 hex of "<ip>|<lowercase email>". failures resets to 1 once a
+-- lockout expires; a successful login deletes the row.
+CREATE TABLE IF NOT EXISTS login_lockouts (
+  key TEXT PRIMARY KEY,
+  failures INTEGER NOT NULL DEFAULT 0,
+  locked_until INTEGER NOT NULL DEFAULT 0,
+  updated_at INTEGER NOT NULL
 );

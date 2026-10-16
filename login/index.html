@@ -18,6 +18,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .field input:focus{border-color:#2F4A62;background:#fff}
 .btn{width:100%;border:0;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;background:#2F4A62;color:#fff}
 .btn:disabled{opacity:.6}
+.btnGhost{width:100%;border:1.5px solid #E8DFC8;border-radius:12px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;background:#fff;color:#22303F}
 .divider{display:flex;align-items:center;gap:12px;margin:22px 0;font-size:12px;color:#8a7a5f;text-transform:uppercase;letter-spacing:.08em}
 .divider::before,.divider::after{content:"";flex:1;height:1px;background:#E8DFC8}
 .oauth{width:100%;border:1.5px solid #E8DFC8;border-radius:12px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;background:#fff;color:#22303F;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:inherit}
@@ -29,6 +30,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .note{font-size:12px;color:#8a7a5f;line-height:1.6;margin-top:14px;text-align:center}
 .foot{font-size:13px;color:#8a7a5f;text-align:center;padding-bottom:40px}
 .foot a{color:#2F4A62;text-decoration:none;font-weight:600}
+.segToggle{display:flex;background:#FBF6EC;border:1.5px solid #E8DFC8;border-radius:12px;padding:4px;margin-bottom:18px}
+.segToggle button{flex:1;border:0;border-radius:9px;padding:10px;font-size:14px;font-weight:700;cursor:pointer;background:transparent;color:#8a7a5f;font-family:inherit}
+.segToggle button.on{background:#2F4A62;color:#fff}
+.rowBetween{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.rowBetween a{font-size:13px;color:#2F4A62;text-decoration:none;font-weight:600}
+.inboxIcon{font-size:36px;text-align:center;margin-bottom:12px}
+.inboxState h2{font-size:20px;text-align:center;margin-bottom:8px}
+.inboxState p{font-size:14px;color:#8a7a5f;line-height:1.6;text-align:center}
+.linkbtn{background:none;border:0;color:#2F4A62;font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-family:inherit}
 </style>
 </head>
 <body>
@@ -39,18 +49,64 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 
 <div class="card">
   <p class="merror" id="loginErr" hidden></p>
+
+  <!-- Password form (primary) -->
+  <div id="pwSection">
+    <div class="segToggle" role="tablist" aria-label="Sign in or create account">
+      <button type="button" id="tabLogin" class="on" role="tab" aria-selected="true">Log in</button>
+      <button type="button" id="tabRegister" role="tab" aria-selected="false">Create account</button>
+    </div>
+    <form id="pwForm">
+      <div class="field"><label for="pwEmail">Email</label>
+        <input id="pwEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div class="field"><label for="pwPass">Password</label>
+        <input id="pwPass" type="password" placeholder="Your password" autocomplete="current-password" required>
+      </div>
+      <button class="btn" id="pwBtn" type="submit">Log in</button>
+      <p class="merror" id="pwErr" hidden></p>
+      <p class="note" id="pwHint" hidden>We'll email you a verification link — click it and you're in.</p>
+      <div class="rowBetween">
+        <span></span>
+        <a href="/reset/" id="forgotLink">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="divider" id="magicDivider">or use a magic link</div>
+
+  <!-- Magic link (secondary) -->
   <form id="magicForm">
     <div class="field"><label for="magicEmail">Email</label>
       <input id="magicEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
     </div>
     <button class="btn" id="magicBtn" type="submit">Send sign-in link</button>
   </form>
-  <p class="mok" id="magicSent" hidden>Check your inbox — we sent you a sign-in link.</p>
   <p class="note" id="emailNote" hidden>Email sign-in is not available right now.</p>
 
-  <div class="divider">or continue with</div>
-  <button class="oauth" id="oauthGoogle"><span class="mark">G</span> Continue with Google</button>
-  <button class="oauth" id="oauthGithub"><span class="mark">⌘</span> Continue with GitHub</button>
+  <!-- Check-your-inbox state (after magic link / register / unverified login) -->
+  <div class="inboxState" id="inboxState" hidden>
+    <div class="inboxIcon">✉️</div>
+    <h2>Check your inbox</h2>
+    <p id="inboxText">We sent you a link. Click it in any tab — this page continues automatically once you're verified.</p>
+    <button class="btn" id="recheckBtn" style="margin-top:18px">Already verified? Check again</button>
+    <p class="mok" id="recheckNote" hidden>Not verified yet — check your inbox for the link.</p>
+    <p style="margin-top:14px"><button class="linkbtn" id="inboxBackBtn" type="button">Use a different email</button></p>
+  </div>
+
+  <!-- Verified landing (Page B): ?verified=1 — no polling here -->
+  <div class="inboxState" id="verifiedState" hidden>
+    <div class="inboxIcon">✅</div>
+    <h2>Verified</h2>
+    <p>You're signed in. If you started from another tab, return to your original tab — it continues automatically.</p>
+    <button class="btn" id="verifiedContinueBtn" style="margin-top:18px">Continue to dashboard</button>
+  </div>
+
+  <div id="oauthBlock">
+    <div class="divider" id="oauthDivider">or continue with</div>
+    <button class="oauth" id="oauthGoogle"><span class="mark">G</span> Continue with Google</button>
+    <button class="oauth" id="oauthGithub"><span class="mark">⌘</span> Continue with GitHub</button>
+  </div>
 
   <p class="note">We only use sign-in to tie your dynamic codes to your account. No tracking, no ads.</p>
 </div>
@@ -58,21 +114,125 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 <script>
 const $ = id => document.getElementById(id);
 const ERRORS = {
-  invalid_link: 'That sign-in link is expired or already used. Request a new one.',
+  invalid_link: 'That link is expired or already used. Request a new one.',
   provider_unavailable: 'That sign-in option is not available right now.',
   csrf: 'Something went wrong. Please try again.',
-  no_verified_email: "We couldn't get a verified email from that account."
+  no_verified_email: "We couldn't get a verified email from that account.",
+  invalid_credentials: 'Wrong email or password. Please try again.',
+  email_not_verified: 'Please verify your email first — we just sent you a fresh verification link.',
+  already_registered: 'An account with this email already exists — try logging in instead.',
+  weak_password: 'Please choose a stronger password (at least 8 characters, with letters and numbers).',
+  rate_limited: 'Too many attempts. Please wait a bit and try again.'
 };
+function errText(key, fallback){
+  return ERRORS[key] || fallback || 'Something went wrong. Please try again.';
+}
 const params = new URLSearchParams(location.search);
+// Only same-origin paths are valid redirect targets — never an absolute URL.
+function validNext(n){
+  if(!n) return '/dashboard/';
+  try{
+    if(n.startsWith('/') && !n.startsWith('//') && !n.includes('\\') && !n.startsWith('/\\')) return n;
+  }catch(e){}
+  return '/dashboard/';
+}
+const NEXT = validNext(params.get('next') || '');
+const isVerifiedPage = params.get('verified') === '1';
+
+let mode = 'login'; // 'login' | 'register'
+function setMode(m){
+  mode = m;
+  $('tabLogin').classList.toggle('on', m === 'login');
+  $('tabRegister').classList.toggle('on', m === 'register');
+  $('tabLogin').setAttribute('aria-selected', m === 'login' ? 'true' : 'false');
+  $('tabRegister').setAttribute('aria-selected', m === 'register' ? 'true' : 'false');
+  $('pwBtn').textContent = m === 'login' ? 'Log in' : 'Create account';
+  $('pwPass').autocomplete = m === 'login' ? 'current-password' : 'new-password';
+  $('pwHint').hidden = m !== 'register';
+  $('pwErr').hidden = true;
+}
+$('tabLogin').addEventListener('click', () => setMode('login'));
+$('tabRegister').addEventListener('click', () => setMode('register'));
+
 if(params.get('error') && ERRORS[params.get('error')]){
   $('loginErr').textContent = ERRORS[params.get('error')];
   $('loginErr').hidden = false;
 }
+
+function showInboxState(){
+  $('pwSection').hidden = true;
+  $('magicDivider').hidden = true;
+  $('magicForm').hidden = true;
+  $('oauthBlock').hidden = true;
+  $('loginErr').hidden = true;
+  $('inboxState').hidden = false;
+  startPolling();
+}
+function showForms(){
+  stopPolling();
+  $('inboxState').hidden = true;
+  $('pwSection').hidden = false;
+  $('magicDivider').hidden = false;
+  $('magicForm').hidden = false;
+  $('oauthBlock').hidden = false;
+}
+$('inboxBackBtn').addEventListener('click', showForms);
+
+// --- Verification auto-continue: poll /api/auth/me every ~2.5s.
+// The session cookie set by the verify click in another tab is browser-wide,
+// so this tab sees it as soon as verification lands. Stop after ~10 min.
+let pollTimer = null, pollCount = 0;
+function stopPolling(){ if(pollTimer){ clearInterval(pollTimer); pollTimer = null; } }
+async function checkVerified(){
+  try{
+    const r = await fetch('/api/auth/me', {credentials:'same-origin'});
+    if(!r.ok) return false;
+    const d = await r.json().catch(()=>null);
+    const u = (d && d.user) || d;
+    return !!(u && u.email);
+  }catch(e){ return false; }
+}
+function startPolling(){
+  stopPolling();
+  pollCount = 0;
+  pollTimer = setInterval(async () => {
+    pollCount++;
+    if(pollCount > 240){ stopPolling(); return; } // ~10 min
+    if(await checkVerified()){
+      stopPolling();
+      location.href = NEXT;
+    }
+  }, 2500);
+}
+$('recheckBtn').addEventListener('click', async () => {
+  $('recheckNote').hidden = true;
+  if(await checkVerified()){ location.href = NEXT; return; }
+  $('recheckNote').hidden = false;
+});
+
+// --- Page B: ?verified=1 — already verified here, no polling.
+if(isVerifiedPage){
+  $('pwSection').hidden = true;
+  $('magicDivider').hidden = true;
+  $('magicForm').hidden = true;
+  $('oauthBlock').hidden = true;
+  $('verifiedState').hidden = false;
+  $('verifiedContinueBtn').addEventListener('click', () => { location.href = NEXT; });
+} else {
+  // Already signed in? Skip straight to the destination (unless an error is shown).
+  if(!params.get('error')){
+    checkVerified().then(ok => { if(ok) location.href = NEXT; });
+  }
+}
+
 fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
   if(!cfg) return;
   if(cfg.email === false){
     $('magicEmail').disabled = true;
     $('magicBtn').disabled = true;
+    $('pwEmail').disabled = true;
+    $('pwPass').disabled = true;
+    $('pwBtn').disabled = true;
     $('emailNote').hidden = false;
   }
   if(cfg.providers){
@@ -80,6 +240,62 @@ fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
     if(!cfg.providers.github) $('oauthGithub').hidden = true;
   }
 }).catch(()=>{});
+
+// --- Email + password: log in / create account ---
+$('pwForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const email = $('pwEmail').value.trim();
+  const password = $('pwPass').value;
+  if(!email || !password) return;
+  $('pwErr').hidden = true;
+  $('pwBtn').disabled = true;
+  $('pwBtn').textContent = mode === 'login' ? 'Logging in…' : 'Creating account…';
+  try{
+    if(mode === 'login'){
+      const r = await fetch('/api/auth/login', {
+        method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
+        body: JSON.stringify({ email, password })
+      });
+      const d = await r.json().catch(()=>({}));
+      if(r.ok){ location.href = NEXT; return; }
+      if(d.error === 'email_not_verified'){
+        // Backend resends the verification email; wait for the click.
+        $('inboxText').textContent = 'Your email is not verified yet — we just sent you a fresh verification link. Click it in any tab and this page continues automatically.';
+        showInboxState();
+        return;
+      }
+      $('pwErr').textContent = errText(d.error, 'Login failed. Please try again.');
+      $('pwErr').hidden = false;
+    } else {
+      const r = await fetch('/api/auth/register', {
+        method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
+        body: JSON.stringify({ email, password, next: NEXT })
+      });
+      const d = await r.json().catch(()=>({}));
+      if(r.ok){
+        $('inboxText').textContent = 'We sent you a verification link. Click it in any tab — this page continues automatically once you verify.';
+        showInboxState();
+        return;
+      }
+      if(d.error === 'already_registered'){
+        setMode('login');
+        $('pwErr').textContent = errText('already_registered');
+        $('pwErr').hidden = false;
+        return;
+      }
+      $('pwErr').textContent = errText(d.error, 'Could not create the account. Please try again.');
+      $('pwErr').hidden = false;
+    }
+  }catch(err){
+    $('pwErr').textContent = 'Network error. Please try again.';
+    $('pwErr').hidden = false;
+  }finally{
+    $('pwBtn').disabled = false;
+    $('pwBtn').textContent = mode === 'login' ? 'Log in' : 'Create account';
+  }
+});
+
+// --- Magic link (secondary) ---
 $('magicForm').addEventListener('submit', async e => {
   e.preventDefault();
   const email = $('magicEmail').value.trim();
@@ -87,18 +303,18 @@ $('magicForm').addEventListener('submit', async e => {
   $('magicBtn').disabled = true; $('magicBtn').textContent = 'Sending…';
   try{
     await fetch('/api/auth/magic-link', {
-      method: 'POST', headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({ email })
+      method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
+      body: JSON.stringify({ email, next: NEXT })
     });
-    // Same message either way — never reveal whether the email exists.
-    $('magicForm').hidden = true;
-    $('magicSent').hidden = false;
-  }catch(err){
-    $('magicForm').hidden = true;
-    $('magicSent').hidden = false;
-  }
+  }catch(err){}
+  // Same message either way — never reveal whether the email exists.
+  $('magicBtn').disabled = false; $('magicBtn').textContent = 'Send sign-in link';
+  $('inboxText').textContent = 'We sent you a sign-in link. Click it in any tab — this page continues automatically once you sign in.';
+  showInboxState();
 });
-$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google');
-$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github');
+
+// --- OAuth ---
+$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT));
+$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT));
 </script>
 </body></html>

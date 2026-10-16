@@ -1,11 +1,13 @@
 // POST /api/auth/magic-link — request a sign-in email link.
-// Body: { email, turnstileToken }
+// Body: { email, turnstileToken, next? }
 // ALWAYS 200 { ok: true } even if the email is unknown (anti-enumeration).
 // 400 invalid email / failed Turnstile, 429 rate limited, 503 email login unavailable.
+// Optional `next` (same-origin path only) is embedded in the emailed link;
+// verify redirects to /login/?verified=1&next=<next>.
 import { json, sha256Hex } from '../../_lib/dynamic.js';
 import {
   appUrl, genToken, getClientIp, verifyTurnstile, checkRateLimit, upsertUser,
-  MAGIC_LINK_TTL_MS,
+  MAGIC_LINK_TTL_MS, validateNext,
 } from '../../_lib/auth.js';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -16,6 +18,7 @@ export async function onRequestPost({ request, env }) {
   try { body = await request.json(); } catch { return json({ error: 'Invalid JSON' }, 400); }
   const email = String(body.email || '').trim().toLowerCase();
   const turnstileToken = body.turnstileToken || '';
+  const next = validateNext(body.next);
   if (!email || email.length > 254 || !EMAIL_RE.test(email)) return json({ error: 'Invalid email' }, 400);
 
   // Turnstile (server-side siteverify; skipped with a warning when no secret is configured)
@@ -38,7 +41,7 @@ export async function onRequestPost({ request, env }) {
     'INSERT INTO email_tokens (token_hash, user_id, purpose, expires_at, used) VALUES (?, ?, ?, ?, 0)'
   ).bind(tokenHash, user.id, 'magic_login', Date.now() + MAGIC_LINK_TTL_MS).run();
 
-  const link = `${appUrl(env)}/api/auth/verify?token=${token}`;
+  const link = `${appUrl(env)}/api/auth/verify?token=${token}&next=${encodeURIComponent(next)}`;
   try {
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
