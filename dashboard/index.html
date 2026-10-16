@@ -201,7 +201,7 @@ $('exportBtn').addEventListener('click', () => {
   location.href = '/api/auth/export';
 });
 $('deleteBtn').addEventListener('click', async () => {
-  if(!confirm('Delete your account? Your codes will be released — NOT deleted — and their Edit Keys will still work. This cannot be undone.')){
+  if(!confirm('Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.')){
     return;
   }
   $('dangerErr').hidden = true;
