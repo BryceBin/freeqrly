@@ -315,7 +315,7 @@ function frameWrap(svgStr, px, style){
     `<rect width="${w}" height="${h}" rx="${radius}" fill="${bg}"/>` +
     `<rect x="2" y="2" width="${w-4}" height="${h-4}" rx="${Math.max(0,radius-2)}" fill="none" stroke="${style.fg}" stroke-width="2"/>` +
     `<image href="${qrUri}" xlink:href="${qrUri}" x="${pad}" y="${pad}" width="${px}" height="${px}"/>` +
-    (style.frame === 'cta' ? `<text x="${w/2}" y="${ctaY}" text-anchor="middle" dominant-baseline="middle" font-family="system-ui,sans-serif" font-size="${Math.round(px*0.055)}" font-weight="600" fill="${style.fg}">${esc2(style.frameText || 'Scan me')}</text>` : '') +
+    (style.frame === 'cta' ? `<text x="${w/2}" y="${ctaY}" text-anchor="middle" dominant-baseline="middle" font-family="system-ui,sans-serif" font-size="${Math.round(px*0.055)}" font-weight="600" fill="${style.fg}">${esc2(style.frameText || g('frameTextPh'))}</text>` : '') +
     `</svg>`;
 }
 

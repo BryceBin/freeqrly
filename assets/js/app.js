@@ -763,7 +763,7 @@ function frameWrap(svgStr, px){
   // Height: QR + padding top/bottom + CTA area (CTA text sits below QR)
   const w = px + pad * 2;
   const h = px + pad * 2 + ctaH;
-  const ctaText = ($("frameText") && $("frameText").value) || "Scan me";
+  const ctaText = ($("frameText") && $("frameText").value) || (I18N[lang] && I18N[lang].frameTextPh) || "Scan me";
   // Always rounded corners for a soft look (both Rounded and With text)
   const radius = Math.round(px * 0.05);
   const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
