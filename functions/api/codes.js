@@ -1,5 +1,5 @@
 // POST /api/codes — create a dynamic QR code. LOGIN REQUIRED.
-// Body: { type: string, payload: string }
+// Body: { type: string, payload: string, style?: {...} }
 // Returns: { code, shortUrl }. Codes are session-owned (user_id set).
 // Quota: COUNT codes WHERE user_id=? < code_limit,
 // else 403 { error: "quota_exceeded", hint: "upgrade" }.
@@ -7,6 +7,7 @@
 // redirecting, but cannot be edited — there is no EditKey or claim flow.
 import { genCode, json } from '../_lib/dynamic.js';
 import { getSessionUser, getCodeCount } from '../_lib/auth.js';
+import { sanitizeStyle } from '../_lib/style.js';
 
 const VALID_TYPES = new Set(['url','text','wifi','vcard','email','sms','phone','geo','event','bitcoin','coupon','appstore']);
 
@@ -40,6 +41,12 @@ export async function onRequestPost(context) {
   const used = await getCodeCount(env, sess.user.id);
   if (used >= sess.user.code_limit) return json({ error: 'quota_exceeded', hint: 'upgrade' }, 403);
 
+  // Optional per-code style (colors, dots, frame, logo). Invalid -> 400.
+  let style = null;
+  try {
+    style = sanitizeStyle(body.style, sess.user.id);
+  } catch { return json({ error: 'Invalid style' }, 400); }
+
   // Per-IP creation rate limit: ~10 codes/hour (unchanged abuse guard)
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
   const hour = new Date().toISOString().slice(0, 13);
@@ -59,8 +66,8 @@ export async function onRequestPost(context) {
     const candidate = genCode(7);
     try {
       await env.DB.prepare(
-        'INSERT INTO codes (code, destination, type, payload, created_at, total_scans, user_id) VALUES (?, ?, ?, ?, ?, 0, ?)'
-      ).bind(candidate, type === 'url' ? payload : '', type, payload, Date.now(), sess.user.id).run();
+        'INSERT INTO codes (code, destination, type, payload, created_at, total_scans, user_id, style) VALUES (?, ?, ?, ?, ?, 0, ?, ?)'
+      ).bind(candidate, type === 'url' ? payload : '', type, payload, Date.now(), sess.user.id, style ? JSON.stringify(style) : null).run();
       return json({ code: candidate, shortUrl: `${new URL(request.url).origin}/q/${candidate}` });
     } catch (e) {
       if (String(e.message || e).includes('UNIQUE')) continue;

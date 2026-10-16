@@ -6,3 +6,9 @@ pages_build_output_dir = "."
 binding = "DB"
 database_name = "freeqrly"
 database_id = "7c643833-dd76-4cb5-b528-0d6575b54362"
+
+# Custom logos uploaded for dynamic QR codes (functions/api/logos.js).
+# Served back via functions/api/logos/[key].js (capability URL, no auth).
+[[r2_buckets]]
+binding = "LOGOS"
+bucket_name = "freeqrly-logos"

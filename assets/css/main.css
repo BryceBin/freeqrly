@@ -185,9 +185,9 @@ input[type=range]{width:100%;accent-color:var(--coral)}
 .livenote{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:13.5px;color:var(--soft);text-align:center}
 .dlrow{display:flex;gap:10px;width:100%}
 .dlrow button{flex:1;border-radius:14px;padding:14px 0;font-family:inherit;font-size:14.5px;font-weight:700;cursor:pointer;transition:transform .15s,box-shadow .15s}
-#dlPng,#dlArrow{background:var(--deep);color:#fff;border:none;box-shadow:0 10px 24px rgba(47,74,98,.28)}
-[data-theme="dark"] #dlPng,[data-theme="dark"] #dlArrow{color:#16140F}
-#dlPng:hover,#dlArrow:hover{transform:translateY(-2px)}
+.dlMain,.dlArrow{background:var(--deep);color:#fff;border:none;box-shadow:0 10px 24px rgba(47,74,98,.28)}
+[data-theme="dark"] .dlMain,[data-theme="dark"] .dlArrow{color:#16140F}
+.dlMain:hover,#dlArrow:hover{transform:translateY(-2px)}
 /* principles — dopamine pastels */
 .prins{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:70px 0 10px}
 .prin{position:relative;border-radius:22px;padding:32px 30px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(190,145,60,.08)}

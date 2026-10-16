@@ -1068,6 +1068,31 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     refreshDynamicUI();
   });
 
+  // Current generator style (saved with each dynamic code so Manage can
+  // re-render the exact QR + prefill the editor). Custom uploaded logos
+  // are uploaded to R2 first (POST /api/logos) and stored as logoKey.
+  async function currentStyle(){
+    const preset = document.querySelector('#logoRow .logopick[data-preset].on');
+    const style = {
+      fg: $("fg").value, bg: $("bgc").value,
+      transparent: !!($("transp") && $("transp").checked),
+      dots: $("dots").value, ecc: $("ecc").value,
+      frame: (typeof getFrame === "function" ? getFrame() : "none"),
+      frameText: ($("frameText") && $("frameText").value) || "",
+      logoPreset: preset ? preset.dataset.preset : null,
+      logoKey: null
+    };
+    if(logoData && !style.logoPreset){
+      try{
+        const blob = await (await fetch(logoData)).blob();
+        const fd = new FormData(); fd.append("file", blob, "logo");
+        const r = await fetch("/api/logos", { method: "POST", credentials: "same-origin", body: fd });
+        const d = await r.json().catch(() => ({}));
+        if(r.ok && d.key) style.logoKey = d.key;
+      }catch(e){ /* logo upload failed: code still saves, just without the logo */ }
+    }
+    return style;
+  }
   // Create dynamic code from CURRENT generator state
   if(genBtn) genBtn.addEventListener("click", async () => {
     const payload = content();
@@ -1081,7 +1106,8 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     genBtn.disabled = true;
     genBtn.innerHTML = '<span class="spinner"></span>Generating…';
     try{
-      const r = await fetch("/api/codes", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type: cur, payload }) });
+      const style = await currentStyle();
+      const r = await fetch("/api/codes", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type: cur, payload, style }) });
       const d = await r.json();
       if(!r.ok){
         if(r.status === 401){ location.href = "/login/?next=" + encodeURIComponent(location.pathname + location.search); return; }

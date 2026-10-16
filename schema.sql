@@ -20,7 +20,10 @@ CREATE TABLE IF NOT EXISTS codes (
   total_scans INTEGER DEFAULT 0,
   type TEXT DEFAULT 'url',
   payload TEXT,
-  user_id TEXT
+  user_id TEXT,
+  -- Saved QR style (JSON): { fg, bg, transparent, dots, ecc, frame, frameText, logoPreset, logoKey }.
+  -- NULL for codes created before style saving; those render with defaults.
+  style TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_codes_user ON codes(user_id);
 
