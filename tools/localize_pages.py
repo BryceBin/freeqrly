@@ -89,6 +89,11 @@ def localize_page(key, lang, trans):
             extra += ' dir="rtl"'
         return f"<html{attrs}{extra}>"
     out = re.sub(r"<html([^>]*)>", html_tag, out, count=1)
+    # asset paths: EN sources use depth-relative ../assets/ (correct at their
+    # depth), but localized pages sit one level deeper, so ../assets would
+    # resolve to /<lang>/assets -> 404 (app.js/CSS never load). Rewrite to
+    # root-absolute. (EN pages untouched; bare assets/ only in root index.)
+    out = re.sub(r'((?:src|href)=["\'])(?:\.\./)+assets/', r'\1/assets/', out)
     # hreflang + canonical: skipped for 404 (error pages get neither)
     if key == "404":
         out_path = os.path.join(SITE, out_tmpl.format(lang=lang))
