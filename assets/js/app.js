@@ -1224,7 +1224,7 @@ function restoreDraft(){
       // New code: show Dashboard + Manage links (session-owned, no EditKey).
       const dashLink = $("dynDashLink");
       const mLink = $("dynManageLink");
-      if(mLink){ mLink.hidden = false; mLink.href = "/manage/?c=" + encodeURIComponent(d.code); }
+      if(mLink){ mLink.hidden = false; mLink.href = "/dashboard/?c=" + encodeURIComponent(d.code); }
       if(dashLink) dashLink.hidden = false;
       refreshDynamicUI();
     }catch(e){ alert("Network error"); }
@@ -1296,7 +1296,7 @@ function initAuthHeader(){
         area.appendChild(who);
         const dash = document.createElement("a");
         dash.className = "tbtn authLink";
-        dash.href = "/manage/";
+        dash.href = "/dashboard/";
         dash.textContent = "Dashboard";
         area.appendChild(dash);
       }

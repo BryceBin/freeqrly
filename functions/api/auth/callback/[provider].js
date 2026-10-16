@@ -2,7 +2,7 @@
 // Verifies state cookie, exchanges code server-side (PKCE for Google;
 // GitHub's OAuth web flow does NOT support PKCE), fetches the user email,
 // upserts the user, creates a session, redirects to the validated `next`
-// carried in the state cookie (default /manage/).
+// carried in the state cookie (default /dashboard/).
 // Failures redirect to /login/?error=<reason>.
 import { oauthProviderConfig, appUrl, getCookie, getClientIp,
   PKCE_COOKIE, OAUTH_STATE_COOKIE, createSession, sessionCookie,
@@ -27,7 +27,7 @@ export async function onRequestGet({ request, env, params }) {
   // still in flight during deploy — accept both).
   const stateCookieRaw = getCookie(request, OAUTH_STATE_COOKIE);
   let stateCookie = stateCookieRaw;
-  let next = '/manage/';
+  let next = '/dashboard/';
   try {
     const parsed = JSON.parse(stateCookieRaw);
     if (parsed && typeof parsed.s === 'string') {

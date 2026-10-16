@@ -154,11 +154,11 @@ function errText(key, fallback){
 const params = new URLSearchParams(location.search);
 // Only same-origin paths are valid redirect targets — never an absolute URL.
 function validNext(n){
-  if(!n) return '/manage/';
+  if(!n) return '/dashboard/';
   try{
     if(n.startsWith('/') && !n.startsWith('//') && !n.includes('\\') && !n.startsWith('/\\')) return n;
   }catch(e){}
-  return '/manage/';
+  return '/dashboard/';
 }
 const NEXT = validNext(params.get('next') || '');
 const isVerifiedPage = params.get('verified') === '1';

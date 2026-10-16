@@ -1,241 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Domain: freeqrly.com (pending purchase & Pages binding) -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://freeqrly.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://freeqrly.com/?lang=zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://freeqrly.com/zh/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freeqrly.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/hi/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/ar/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/pt/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/fr/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/de/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freeqrly.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/ja/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/"/>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/google-form-qr-code/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/google-form-qr-code/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/google-form-qr-code/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/wifi-qr-code/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/wifi-qr-code/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/wifi-qr-code/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/vcard-qr-code/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/vcard-qr-code/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/vcard-qr-code/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/batch-qr-code/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/batch-qr-code/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/batch-qr-code/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/do-qr-codes-expire/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/do-qr-codes-expire/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/do-qr-codes-expire/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/static-vs-dynamic-qr-codes/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/developers/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freeqrly.com/developers/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freeqrly.com/developers/"/>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/business-card-qr-code/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/google-review-qr-code/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/qr-code-with-logo/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/wedding-qr-code/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/instagram-qr-code/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/how-to-scan-a-qr-code/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/why-is-my-qr-code-not-working/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/qr-code-print-size-guide/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/qr-codes-for-restaurants/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/free-qr-codes-that-dont-expire/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/about/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/real-estate-qr-code/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/scan/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/scan-qr-code-online/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/scan-qr-code-from-image/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/qr-codes-for-events/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://freeqrly.com/blog/wedding-rsvp-qr-code/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://freeqrly.com/</loc></url>
+  <url><loc>https://freeqrly.com/about/</loc></url>
+  <url><loc>https://freeqrly.com/ar/</loc></url>
+  <url><loc>https://freeqrly.com/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/blog/</loc></url>
+  <url><loc>https://freeqrly.com/blog/do-qr-codes-expire/</loc></url>
+  <url><loc>https://freeqrly.com/blog/free-qr-codes-that-dont-expire/</loc></url>
+  <url><loc>https://freeqrly.com/blog/how-to-scan-a-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/blog/qr-code-print-size-guide/</loc></url>
+  <url><loc>https://freeqrly.com/blog/qr-codes-for-events/</loc></url>
+  <url><loc>https://freeqrly.com/blog/qr-codes-for-restaurants/</loc></url>
+  <url><loc>https://freeqrly.com/blog/scan-qr-code-from-image/</loc></url>
+  <url><loc>https://freeqrly.com/blog/scan-qr-code-online/</loc></url>
+  <url><loc>https://freeqrly.com/blog/static-vs-dynamic-qr-codes/</loc></url>
+  <url><loc>https://freeqrly.com/blog/wedding-rsvp-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/blog/why-is-my-qr-code-not-working/</loc></url>
+  <url><loc>https://freeqrly.com/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/de/</loc></url>
+  <url><loc>https://freeqrly.com/developers/</loc></url>
+  <url><loc>https://freeqrly.com/es/</loc></url>
+  <url><loc>https://freeqrly.com/fr/</loc></url>
+  <url><loc>https://freeqrly.com/google-form-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/google-review-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/hi/</loc></url>
+  <url><loc>https://freeqrly.com/instagram-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ja/</loc></url>
+  <url><loc>https://freeqrly.com/privacy/</loc></url>
+  <url><loc>https://freeqrly.com/pt/</loc></url>
+  <url><loc>https://freeqrly.com/qr-code-with-logo/</loc></url>
+  <url><loc>https://freeqrly.com/real-estate-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ru/</loc></url>
+  <url><loc>https://freeqrly.com/scan/</loc></url>
+  <url><loc>https://freeqrly.com/terms/</loc></url>
+  <url><loc>https://freeqrly.com/vcard-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/wedding-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/wifi-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/zh/</loc></url>
 </urlset>
