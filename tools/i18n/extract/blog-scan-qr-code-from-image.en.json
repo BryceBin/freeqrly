@@ -11,7 +11,6 @@
  "Crop tight around the code before uploading — decoders work faster and more reliably on a clean crop. If the photo is blurry or shot at an angle, no decoder can save it; retake it straight-on. More in <a href=\"/blog/why-is-my-qr-code-not-working/\">why your QR code won't scan</a>.",
  "Privacy note",
  "Screenshots often contain more than the QR code — chats, tickets, personal photos. Think twice before uploading them to a random decoder site. A <a href=\"/scan/\">local decoder</a> never sees anything but your own browser tab.",
- "<a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR Code Not Working? 7 Fixes That Help</b></a>",
  "<span>How do I scan a QR code from a screenshot on iPhone?</span>",
  "Open the screenshot in Photos and long-press the code — iOS reads it directly from the image.",
  "<span>How do I scan a QR code from an image on PC?</span>",

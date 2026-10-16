@@ -56,7 +56,7 @@
     <div class="devgrid">
       <div class="devcard">
         <h3>🧰 خادم MCP</h3>
-        <p><strong>color / bgcolor</strong> — ست عشري من 6 أرقام، بدون <code>#</code> (الافتراضيان <code>2F4A62</code> / <code>ffffff</code>).</p>
+        <p>أضف <code>https://freeqrly.com/mcp</code> إلى عميل MCP الخاص بك. أداة واحدة — <code>generate_qr</code> — بدون مصادقة. يعمل مع Claude Code وCursor وأي شيء يتحدث HTTP القابل للبث.</p>
       </div>
       <div class="devcard">
         <h3>🌐 HTTP API</h3>
@@ -64,18 +64,18 @@
       </div>
       <div class="devcard">
         <h3>📜 مهارة الوكيل</h3>
-        <p><strong>ecc</strong> — تصحيح الأخطاء <code>L</code>، <code>M</code>، <code>Q</code>، <code>H</code> (الافتراضي <code>M</code>). استخدم <code>Q</code>/<code>H</code> للطباعة أو الشعارات.</p>
+        <p>مهارة <code>SKILL.md</code> مع وصفات الحمولة تعيش في المستودع في <code>skills/qr-generator/</code>. وجّه وكيلك إليها وسيعرف الباقي.</p>
       </div>
       <div class="devcard">
         <h3>🤖 llms.txt</h3>
-        <p>مهارة <code>SKILL.md</code> مع وصفات الحمولة تعيش في المستودع في <code>skills/qr-generator/</code>. وجّه وكيلك إليها وسيعرف الباقي.</p>
+        <p><code>/llms.txt</code> يصف الموقع كاملًا للزواحف والمساعدين — نقاط النهاية وتنسيقات الحمولة وخريطة الصفحات في ملف واحد.</p>
       </div>
     </div>
 
     <div class="prose">
       <h2>HTTP API</h2>
       <div class="endpoint"><span class="m">GET</span> https://freeqrly.com/api/qr?data=TEXT&amp;size=1024&amp;margin=4&amp;color=2F4A62&amp;bgcolor=ffffff&amp;ecc=M</div>
-      <p>أضف <code>https://freeqrly.com/mcp</code> إلى عميل MCP الخاص بك. أداة واحدة — <code>generate_qr</code> — بدون مصادقة. يعمل مع Claude Code وCursor وأي شيء يتحدث HTTP القابل للبث.</p>
+      <p>يُرجع <code>image/svg+xml</code>. فقط <code>data</code> هو المطلوب؛ وكل شيء آخر له قيمة افتراضية معقولة. تعود الأخطاء كـ JSON مع حقل <code>error</code>.</p>
       <pre class="code">curl "https://freeqrly.com/api/qr?data=https://example.com&amp;size=1024" \
   -o qr.svg
 
@@ -88,13 +88,13 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
         <li><strong>data</strong> — النص المراد ترميزه (مطلوب، 2000 حرف كحد أقصى). روابط، سلاسل WiFi، بطاقات vCard، نص عادي.</li>
         <li><strong>size</strong> — حجم المخرجات بالبكسل، 128–2048 (الافتراضي 1024).</li>
         <li><strong>margin</strong> — المنطقة الهادئة بالوحدات، 0–10 (الافتراضي 4).</li>
-        <li>يُرجع <code>image/svg+xml</code>. فقط <code>data</code> هو المطلوب؛ وكل شيء آخر له قيمة افتراضية معقولة. تعود الأخطاء كـ JSON مع حقل <code>error</code>.</li>
-        <li>HTTP قابل للبث قياسي: <code>initialize</code>، ثم <code>tools/list</code> / <code>tools/call</code>. تأخذ أداة <code>generate_qr</code> <code>data</code>، <code>size</code>، <code>color</code>، <code>bgcolor</code>، <code>ecc</code> وتُرجع رابط SVG جاهزًا للتنزيل.</li>
+        <li><strong>color / bgcolor</strong> — ست عشري من 6 أرقام، بدون <code>#</code> (الافتراضيان <code>2F4A62</code> / <code>ffffff</code>).</li>
+        <li><strong>ecc</strong> — تصحيح الأخطاء <code>L</code>، <code>M</code>، <code>Q</code>، <code>H</code> (الافتراضي <code>M</code>). استخدم <code>Q</code>/<code>H</code> للطباعة أو الشعارات.</li>
       </ul>
 
       <h2>MCP</h2>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/mcp</div>
-      <p><code>/llms.txt</code> يصف الموقع كاملًا للزواحف والمساعدين — نقاط النهاية وتنسيقات الحمولة وخريطة الصفحات في ملف واحد.</p>
+      <p>HTTP قابل للبث قياسي: <code>initialize</code>، ثم <code>tools/list</code> / <code>tools/call</code>. تأخذ أداة <code>generate_qr</code> <code>data</code>، <code>size</code>، <code>color</code>، <code>bgcolor</code>، <code>ecc</code> وتُرجع رابط SVG جاهزًا للتنزيل.</p>
       <pre class="code">{
   "jsonrpc": "2.0", "id": 1, "method": "tools/call",
   "params": {

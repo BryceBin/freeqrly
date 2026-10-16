@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>So bearbeitest du einen QR-Code nach dem Druck | FreeQrly</title>
+<meta name="description" content="Falschen Link gedruckt? Fix es ohne Neudruck. Ziel, Typ oder Stil eines dynamischen QR-Codes im Dashboard bearbeiten — der gedruckte Code aktualisiert sich sofort.">
+<link rel="canonical" href="https://freeqrly.com/de/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/how-to-edit-a-qr-code-after-printing/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="So bearbeitest du einen QR-Code nach dem Druck | FreeQrly">
+<meta property="og:description" content="Falschen Link gedruckt? Fix es ohne Neudruck. Ziel, Typ oder Stil eines dynamischen QR-Codes im Dashboard bearbeiten — der gedruckte Code aktualisiert sich sofort.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/de/blog/how-to-edit-a-qr-code-after-printing/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"So bearbeitest du einen QR-Code nach dem Druck | FreeQrly","description":"Falschen Link gedruckt? Fix es ohne Neudruck. Ziel, Typ oder Stil eines dynamischen QR-Codes im Dashboard bearbeiten — der gedruckte Code aktualisiert sich sofort.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Muss ich einen QR-Code nach dem Bearbeiten neu drucken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Das gedruckte Muster hält einen kurzen Link; Bearbeiten ändert, wohin dieser Link zeigt. Jede gedruckte Kopie liefert sofort den neuen Inhalt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich einen dynamischen QR-Code auf einen anderen Typ umstellen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Im Dashboard Bearbeiten öffnen und einen neuen Typ wählen — ein Website-Code kann z. B. ein WLAN-Code werden. Das gedruckte Muster bleibt gültig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Setzt das Bearbeiten eines QR-Codes seine Scan-Statistiken zurück?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die Stats laufen auf demselben Code weiter. Einen Code zu löschen entfernt ihn und seine Stats endgültig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was, wenn ich einen dynamischen QR-Code aus Versehen lösche?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es gibt kein Undo — gedruckte Kopien funktionieren nicht mehr und der Platz wird frei. Lösch nur Codes, die wirklich außer Dienst sind."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"So bearbeitest du einen QR-Code nach dem Druck | FreeQrly","description":"Falschen Link gedruckt? Fix es ohne Neudruck. Ziel, Typ oder Stil eines dynamischen QR-Codes im Dashboard bearbeiten — der gedruckte Code aktualisiert sich sofort.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Anmelden",
+      "text": "Meld dich bei dem Konto an, dem der Code gehört."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Dashboard öffnen",
+      "text": "Deine Codes sind als Karten mit Thumbnails und Scan-Zahlen aufgelistet."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Bearbeiten öffnen",
+      "text": "Auf der Karte des Codes auf Bearbeiten klicken — der volle Generator öffnet sich mit deinem Inhalt vorausgefüllt."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Ändern, was du brauchst",
+      "text": "Ziel, Inhalt, Typ, Stil — alles ist änderbar."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Save",
+      "text": "Klick Änderungen speichern. Der gedruckte Code liefert sofort den neuen Inhalt — test es mit deinem Handy."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/de/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/de/#studio">Studio</a><a href="/de/blog/">Feldnotizen</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/error.webp" alt="Qly, das FreeQrly-Elefantenmaskottchen"></div>
+    <div class="kicker" style="text-align:center">Feldnotizen</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QR-Code <span class='hl hl-blush'>nach dem Druck</span> bearbeiten</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Die Flyer sind schon raus — und der Link ist falsch. Mit einem dynamischen Code ist das ein Zwei-Minuten-Fix, kein Neudruck.</p>
+    <p class="meta" style="text-align:center">16. Oktober 2026 · 4 Min. Lesezeit</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>Die Flyer sind schon raus — und der Link ist falsch. Oder das Menü ist umgezogen. Oder die Kampagnenseite war nicht final, als das Poster in den Druck ging. Mit einem statischen Code ist das ein Neudruck. Mit einem dynamischen ein Zwei-Minuten-Fix.</p>
+<p>Der Trick: Das Muster eines dynamischen Codes ändert sich nie. Es zeigt auf einen kurzen Link auf FreeQrlys Server, und du bestimmst, wohin dieser Link die Leute schickt. Bearbeitest du das Ziel, liefert jede gedruckte Kopie — schon an Wänden, Flyern, Verpackungen — sofort den neuen Inhalt. Kein Neudruck, keine Aufkleber über dem alten Code.</p>
+
+<ol>
+<li><b>Anmelden.</b> Öffne die <a href="/de/login/">Anmeldeseite</a> und meld dich bei dem Konto an, dem der Code gehört.</li>
+<li><b>Dashboard öffnen.</b> Geh zu <a href="/dashboard/">deinem Dashboard</a>. Jeder dynamische Code deines Kontos ist dort als Karte, mit QR-Thumbnail und Scan-Zahl.</li>
+<li><b>Bearbeiten öffnen.</b> Auf der Karte des Codes auf Bearbeiten klicken. Du siehst denselben Generator, mit dem du ihn erstellt hast — Typ, Inhalt, Stil, alles.</li>
+<li><b>Ändern, was du brauchst.</b> Ziel, Inhalt, sogar der Typ: Ein Website-Code kann ein WLAN-Code werden. Farben, Logo, Rahmen — alles ebenfalls änderbar.</li>
+<li><b>Speichern.</b> Klick Änderungen speichern. Fertig. Der gedruckte Code liefert jetzt den neuen Inhalt. Test es mit deiner Handykamera, um sicher zu gehen.</li>
+</ol>
+
+<h2>Was du ändern kannst — und was nicht</h2>
+<ul>
+<li><strong>Ziel und Inhalt:</strong> der Link, der Text, das WLAN-Passwort — alles, was der Code trägt.</li>
+<li><strong>Typ:</strong> einen Code von einem Inhaltstyp auf einen anderen umstellen. Dem Muster ist das egal; es hält nur den kurzen Link.</li>
+<li><strong>Stil:</strong> Farben, Punkte, Logo, Rahmen. Das Dashboard-Thumbnail aktualisiert sich entsprechend.</li>
+<li><strong>Was du nicht ändern kannst:</strong> das gedruckte Muster selbst — aber das musst du auch nie, weil das Muster nur den kurzen Link hält. Und du kannst einen Code nicht an ein anderes Konto übertragen.</li>
+</ul>
+
+<h2>Zwei Dinge, die man wissen sollte</h2>
+<p><strong>Bearbeitungen sind sofort und lautlos.</strong> Es gibt keinen „Erneut veröffentlichen"-Schritt und keine Verzögerung — der nächste Scan bekommt das neue Ziel. Wenn das alte Ziel eine Seite war, die du runtergenommen hast, fix erst den Code, dann nimm die Seite runter.</p>
+<p><strong>Löschen ist endgültig.</strong> Lösch einen Code und seine gedruckten Kopien funktionieren nicht mehr — es gibt kein Undo. Lösch nur, wenn der Code wirklich außer Dienst ist; der Platz wird für einen neuen Code frei. (Immer noch unsicher, ob dynamisch das Richtige für dich ist? <a href="/de/blog/static-vs-dynamic-qr-codes/">Statisch vs. dynamisch, ehrlich erklärt</a>. Willst du die komplette Erstellungs-Anleitung? <a href="/de/blog/how-to-create-a-dynamic-qr-code/">So erstellst du einen dynamischen QR-Code</a>.)</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly präsentiert einen QR-Code"></div>
+      <div>
+        <h3>Einen gedruckten Code fixen</h3>
+        <p>Anmelden, Dashboard öffnen, bearbeiten, speichern. Der gedruckte Code aktualisiert sich sofort.</p>
+        <a class="btn" href="/dashboard/">Dashboard öffnen</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Weiterlesen</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/de/blog/do-qr-codes-expire/"><b>Laufen QR-Codes ab? Die kurze Antwort: Nein — FreeQrly</b></a>
+        <a class="rel-card" href="/de/blog/how-to-scan-a-qr-code/"><b>So scannst du einen QR-Code (iPhone & Android)</b></a>
+        <a class="rel-card" href="/de/blog/qr-code-print-size-guide/"><b>QR-Code-Druckgrößen-Leitfaden: Wie groß sollte er sein?</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Gut zu wissen</h2>
+    <details><summary><span>Muss ich einen QR-Code nach dem Bearbeiten neu drucken?</span></summary><p>Nein. Das gedruckte Muster hält einen kurzen Link; Bearbeiten ändert, wohin dieser Link zeigt. Jede gedruckte Kopie liefert sofort den neuen Inhalt.</p></details>
+    <details><summary><span>Kann ich einen dynamischen QR-Code auf einen anderen Typ umstellen?</span></summary><p>Ja. Im Dashboard Bearbeiten öffnen und einen neuen Typ wählen — ein Website-Code kann z. B. ein WLAN-Code werden. Das gedruckte Muster bleibt gültig.</p></details>
+    <details><summary><span>Setzt das Bearbeiten eines QR-Codes seine Scan-Statistiken zurück?</span></summary><p>Nein. Die Stats laufen auf demselben Code weiter. Einen Code zu löschen entfernt ihn und seine Stats endgültig.</p></details>
+    <details><summary><span>Was, wenn ich einen dynamischen QR-Code aus Versehen lösche?</span></summary><p>Es gibt kein Undo — gedruckte Kopien funktionieren nicht mehr und der Platz wird frei. Lösch nur Codes, die wirklich außer Dienst sind.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/de/" style="color:inherit">FreeQrly</a> — leise gemacht, in deinem Browser.</div>
+    <p class="flinks"><a href="/de/scan/">QR-Scanner</a><a href="/de/blog/">Alle Feldnotizen</a><a href="/de/about/">Über uns</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

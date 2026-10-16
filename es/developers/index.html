@@ -56,7 +56,7 @@
     <div class="devgrid">
       <div class="devcard">
         <h3>🧰 Servidor MCP</h3>
-        <p><strong>color / bgcolor</strong> — hex de 6 dígitos, sin <code>#</code> (por defecto <code>2F4A62</code> / <code>ffffff</code>).</p>
+        <p>Añade <code>https://freeqrly.com/mcp</code> a tu cliente MCP. Una herramienta — <code>generate_qr</code> — sin autenticación. Funciona con Claude Code, Cursor y cualquier cosa que hable HTTP Streamable.</p>
       </div>
       <div class="devcard">
         <h3>🌐 API HTTP</h3>
@@ -64,18 +64,18 @@
       </div>
       <div class="devcard">
         <h3>📜 Skill de agente</h3>
-        <p><strong>ecc</strong> — corrección de errores <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (por defecto <code>M</code>). Usa <code>Q</code>/<code>H</code> para impresión o logos.</p>
+        <p>Un <code>SKILL.md</code> con recetas de payload vive en el repo en <code>skills/qr-generator/</code>. Apunta a tu agente hacia él y sabe el resto.</p>
       </div>
       <div class="devcard">
         <h3>🤖 llms.txt</h3>
-        <p>Un <code>SKILL.md</code> con recetas de payload vive en el repo en <code>skills/qr-generator/</code>. Apunta a tu agente hacia él y sabe el resto.</p>
+        <p><code>/llms.txt</code> describe todo el sitio para rastreadores y asistentes: endpoints, formatos de payload y mapa de páginas en un solo archivo.</p>
       </div>
     </div>
 
     <div class="prose">
       <h2>API HTTP</h2>
       <div class="endpoint"><span class="m">GET</span> https://freeqrly.com/api/qr?data=TEXT&amp;size=1024&amp;margin=4&amp;color=2F4A62&amp;bgcolor=ffffff&amp;ecc=M</div>
-      <p>Añade <code>https://freeqrly.com/mcp</code> a tu cliente MCP. Una herramienta — <code>generate_qr</code> — sin autenticación. Funciona con Claude Code, Cursor y cualquier cosa que hable HTTP Streamable.</p>
+      <p>Devuelve <code>image/svg+xml</code>. Solo <code>data</code> es obligatorio; todo lo demás tiene un valor por defecto sensato. Los errores vuelven como JSON con un campo <code>error</code>.</p>
       <pre class="code">curl "https://freeqrly.com/api/qr?data=https://example.com&amp;size=1024" \
   -o qr.svg
 
@@ -88,13 +88,13 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
         <li><strong>data</strong> — texto a codificar (obligatorio, máx. 2000 caracteres). URLs, cadenas WiFi, vCards, texto plano.</li>
         <li><strong>size</strong> — tamaño de salida en px, 128–2048 (por defecto 1024).</li>
         <li><strong>margin</strong> — zona de silencio en módulos, 0–10 (por defecto 4).</li>
-        <li>Devuelve <code>image/svg+xml</code>. Solo <code>data</code> es obligatorio; todo lo demás tiene un valor por defecto sensato. Los errores vuelven como JSON con un campo <code>error</code>.</li>
-        <li>HTTP Streamable estándar: <code>initialize</code>, luego <code>tools/list</code> / <code>tools/call</code>. La herramienta <code>generate_qr</code> toma <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> y devuelve una URL de SVG lista para descargar.</li>
+        <li><strong>color / bgcolor</strong> — hex de 6 dígitos, sin <code>#</code> (por defecto <code>2F4A62</code> / <code>ffffff</code>).</li>
+        <li><strong>ecc</strong> — corrección de errores <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (por defecto <code>M</code>). Usa <code>Q</code>/<code>H</code> para impresión o logos.</li>
       </ul>
 
       <h2>MCP</h2>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/mcp</div>
-      <p><code>/llms.txt</code> describe todo el sitio para rastreadores y asistentes: endpoints, formatos de payload y mapa de páginas en un solo archivo.</p>
+      <p>HTTP Streamable estándar: <code>initialize</code>, luego <code>tools/list</code> / <code>tools/call</code>. La herramienta <code>generate_qr</code> toma <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> y devuelve una URL de SVG lista para descargar.</p>
       <pre class="code">{
   "jsonrpc": "2.0", "id": 1, "method": "tools/call",
   "params": {

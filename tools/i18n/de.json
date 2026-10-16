@@ -53,7 +53,25 @@
   "Square": "Eckig",
   "Try it yourself — free": "Probier's selbst aus — kostenlos",
   "Your code appears instantly in the link tab.": "Dein Code erscheint sofort im Link-Tab.",
-  "✉️": "✉️"
+  "✉️": "✉️",
+  "October 16, 2026 · 4 min read": "16. Oktober 2026 · 4 Min. Lesezeit",
+  "<b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b>": "<b>Laufen QR-Codes ab? Die kurze Antwort: Nein — FreeQrly</b>",
+  "<b>Dynamic QR Code Statistics: What You Can Track</b>": "<b>Dynamische QR-Code-Statistiken: Was du tracken kannst</b>",
+  "<b>Free QR Codes That Never Expire</b>": "<b>Kostenlose QR-Codes, die nie ablaufen</b>",
+  "<b>How to Create a Dynamic QR Code (Free & Editable)</b>": "<b>So erstellst du einen dynamischen QR-Code (kostenlos & änderbar)</b>",
+  "<b>How to Edit a QR Code After Printing</b>": "<b>So bearbeitest du einen QR-Code nach dem Druck</b>",
+  "<b>How to Scan a QR Code (iPhone & Android)</b>": "<b>So scannst du einen QR-Code (iPhone & Android)</b>",
+  "<b>How to Scan a QR Code from a Picture</b>": "<b>So scannst du einen QR-Code aus einem Bild</b>",
+  "<b>QR Code Not Working? 7 Fixes That Help</b>": "<b>QR-Code funktioniert nicht? 7 Fixes, die helfen</b>",
+  "<b>QR Code Print Size Guide: How Big Should It Be?</b>": "<b>QR-Code-Druckgrößen-Leitfaden: Wie groß sollte er sein?</b>",
+  "<b>QR Codes for Events: Check-In, Tickets & More</b>": "<b>QR-Codes für Events: Check-in, Tickets & mehr</b>",
+  "<b>QR Codes for Restaurants — Free Guide</b>": "<b>QR-Codes für Restaurants — Kostenlose Anleitung</b>",
+  "<b>Scan QR Codes Online — Free, No App, No Upload</b>": "<b>QR-Codes online scannen — kostenlos, ohne App, ohne Upload</b>",
+  "<b>Static vs Dynamic QR Codes</b>": "<b>Statische vs. dynamische QR-Codes</b>",
+  "<b>Wedding RSVP QR Codes: A Complete Guide</b>": "<b>Hochzeits-RSVP-QR-Codes: Eine vollständige Anleitung</b>",
+  "Create a dynamic code": "Dynamischen Code erstellen",
+  "Make a QR code →": "QR-Code erstellen →",
+  "Open the studio": "Studio öffnen"
  },
  "404": {
   "Page not found | FreeQrly": "Seite nicht gefunden | FreeQrly",
@@ -63,7 +81,8 @@
   "This page doesn't exist — but the studio does, and it's free.": "Diese Seite gibt es nicht — aber das Studio schon, und es ist kostenlos.",
   "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">Back to the studio →</a>": "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">Zurück zum Studio →</a>",
   "<a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a><a href=\"/about/\">About</a>": "<a href=\"/scan/\">QR-Scanner</a><a href=\"/blog/\">Feldnotizen</a><a href=\"/about/\">Über uns</a>",
-  "<a href=\"/\">Free QR code generator</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a>": "<a href=\"/\">Kostenloser QR-Code-Generator</a><a href=\"/scan/\">QR-Scanner</a><a href=\"/blog/\">Feldnotizen</a>"
+  "<a href=\"/\">Free QR code generator</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a>": "<a href=\"/\">Kostenloser QR-Code-Generator</a><a href=\"/scan/\">QR-Scanner</a><a href=\"/blog/\">Feldnotizen</a>",
+  "Back to the studio →": "Zurück zum Studio →"
  },
  "login": {
   "Sign in — FreeQrly": "Anmelden — FreeQrly",
@@ -234,7 +253,8 @@
   "Does FreeQrly track my QR codes or my data?": "Trackt FreeQrly meine QR-Codes oder meine Daten?",
   "Static codes are generated locally in your browser using JavaScript; your content is never uploaded to a server, and there is no scan tracking. Dynamic codes store only the destination you set, so they can be edited later, plus anonymous scan counts.": "Statische Codes werden lokal in deinem Browser mit JavaScript erzeugt; deine Inhalte werden nie auf einen Server hochgeladen, und es gibt kein Scan-Tracking. Dynamische Codes speichern nur das Ziel, das du setzt, damit sie später bearbeitet werden können, plus anonyme Scan-Zählungen.",
   "What languages does FreeQrly support?": "Welche Sprachen unterstützt FreeQrly?",
-  "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "Zehn: Englisch, Chinesisch, Spanisch, Hindi, Arabisch (mit Rechts-nach-links-Layout), Portugiesisch, Französisch, Russisch, Deutsch und Japanisch."
+  "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "Zehn: Englisch, Chinesisch, Spanisch, Hindi, Arabisch (mit Rechts-nach-links-Layout), Portugiesisch, Französisch, Russisch, Deutsch und Japanisch.",
+  "Try the generator →": "Generator ausprobieren →"
  },
  "scan": {
   "Free QR Code Scanner — 100% Private | FreeQrly": "Kostenloser QR-Code-Scanner — 100 % privat | FreeQrly",
@@ -341,7 +361,14 @@
   "Static vs dynamic QR codes": "Statische vs. dynamische QR-Codes",
   "One is free forever, the other rents you your own code. Which one you actually need.": "Einer ist für immer kostenlos, der andere vermietet dir deinen eigenen Code. Welchen du wirklich brauchst.",
   "Field Notes — QR Code Guides & Tips": "Feldnotizen — QR-Code-Anleitungen & Tipps",
-  "Practical QR code guides from FreeQrly.": "Praktische QR-Code-Anleitungen von FreeQrly."
+  "Practical QR code guides from FreeQrly.": "Praktische QR-Code-Anleitungen von FreeQrly.",
+  "Practical QR code guides: dynamic codes you can edit after printing, how to scan, print sizes, troubleshooting, and why free codes don't have to expire.": "Praktische QR-Code-Anleitungen: dynamische Codes, die du nach dem Druck bearbeiten kannst, scannen, Druckgrößen, Troubleshooting und warum kostenlose Codes nicht ablaufen müssen.",
+  "How to create a dynamic QR code": "So erstellst du einen dynamischen QR-Code",
+  "Free sign-in, 8 codes, editable after printing. The full walkthrough, from sign-in to print.": "Kostenlose Anmeldung, 8 Codes, nach dem Druck änderbar. Die komplette Anleitung, von der Anmeldung bis zum Druck.",
+  "How to edit a QR code after printing": "So bearbeitest du einen QR-Code nach dem Druck",
+  "Wrong link on a printed flyer? Fix it in two minutes — no reprint, no stickers.": "Falscher Link auf einem gedruckten Flyer? In zwei Minuten fixen — kein Neudruck, keine Aufkleber.",
+  "What dynamic QR code statistics tell you": "Was dir dynamische QR-Code-Statistiken sagen",
+  "Total and unique scans, 7-day chart, country, city, device, OS — and what FreeQrly never collects.": "Scans gesamt und unique, 7-Tage-Diagramm, Land, Stadt, Gerät, Betriebssystem — und was FreeQrly nie sammelt."
  },
  "landing-wifi-qr-code": {
   "Free WiFi QR Code Generator | FreeQrly": "Kostenloser WLAN-QR-Code-Generator | FreeQrly",
@@ -686,7 +713,8 @@
   "<span>What's the catch with FreeQrly?</span>": "<span>Was ist der Haken bei FreeQrly?</span>",
   "There isn't one for static codes: they're generated entirely in your browser, so there's no server cost to pass on to you.": "Für statische Codes gibt es keinen: Sie werden vollständig in deinem Browser erzeugt, also gibt es keine Serverkosten, die an dich weitergegeben werden.",
   "How can I tell if my QR code will expire?": "Woran erkenne ich, ob mein QR-Code ablaufen wird?",
-  "What's the catch with FreeQrly?": "Was ist der Haken bei FreeQrly?"
+  "What's the catch with FreeQrly?": "Was ist der Haken bei FreeQrly?",
+  "<a class=\"rel-card\" href=\"/blog/scan-qr-code-from-image/\"><b>How to Scan a QR Code from a Picture</b></a> <a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a>": "<a class=\"rel-card\" href=\"/blog/scan-qr-code-from-image/\"><b>So scannst du einen QR-Code aus einem Bild</b></a> <a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Hochzeits-RSVP-QR-Codes: Eine vollständige Anleitung</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>So bearbeitest du einen QR-Code nach dem Druck</b></a>"
  },
  "blog-how-to-scan-a-qr-code": {
   "How to Scan a QR Code (iPhone & Android) | FreeQrly": "So scannst du einen QR-Code (iPhone & Android) | FreeQrly",
@@ -784,7 +812,8 @@
   "At minimum: check-in/registration, a shared photo album, and venue WiFi. Add-to-calendar codes on invitations are the high-ROI extra.": "Mindestens: Check-in/Registrierung, ein geteiltes Fotoalbum und Location-WLAN. Zum-Kalender-Hinzufügen-Codes auf Einladungen sind das Extra mit hohem ROI.",
   "How do I make a QR code for event check-in?": "Wie mache ich einen QR-Code für den Event-Check-in?",
   "Can a QR code add an event to my calendar?": "Kann ein QR-Code ein Event zu meinem Kalender hinzufügen?",
-  "What QR codes do I need for an event?": "Welche QR-Codes brauche ich für ein Event?"
+  "What QR codes do I need for an event?": "Welche QR-Codes brauche ich für ein Event?",
+  "<a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a>": "<a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>So erstellst du einen dynamischen QR-Code (kostenlos & änderbar)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamische QR-Code-Statistiken: Was du tracken kannst</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Statische vs. dynamische QR-Codes</b></a>"
  },
  "blog-qr-codes-for-restaurants": {
   "QR Codes for Restaurants — Free Guide | FreeQrly": "QR-Codes für Restaurants — Kostenlose Anleitung | FreeQrly",
@@ -810,7 +839,8 @@
   "Link a code directly to your Google review form and place it where happy customers look: receipts, table tents, takeout bags.": "Verlinke einen Code direkt auf dein Google-Bewertungsformular und platziere ihn, wo glückliche Kunden hinschauen: Kassenbons, Tischaufsteller, Takeaway-Tüten.",
   "What QR codes does a restaurant need?": "Welche QR-Codes braucht ein Restaurant?",
   "Should the menu QR link to a PDF or a webpage?": "Sollte der Menü-QR auf ein PDF oder eine Webseite verlinken?",
-  "How do I get more Google reviews with a QR code?": "Wie bekomme ich mehr Google-Bewertungen mit einem QR-Code?"
+  "How do I get more Google reviews with a QR code?": "Wie bekomme ich mehr Google-Bewertungen mit einem QR-Code?",
+  "<a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>Scan QR Codes Online — Free, No App, No Upload</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a>": "<a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>QR-Codes online scannen — kostenlos, ohne App, ohne Upload</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR-Codes für Events: Check-in, Tickets & mehr</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>So erstellst du einen dynamischen QR-Code (kostenlos & änderbar)</b></a>"
  },
  "blog-scan-qr-code-from-image": {
   "How to Scan a QR Code from a Picture | FreeQrly": "So scannst du einen QR-Code aus einem Bild | FreeQrly",
@@ -840,7 +870,8 @@
   "Upload it to a decoder": "In einen Decoder hochladen",
   "Use a free online decoder that reads the image — preferably one that works locally, so the picture is never uploaded.": "Einen kostenlosen Online-Decoder nutzen, der das Bild liest — am besten einen, der lokal arbeitet, damit das Bild nie hochgeladen wird.",
   "Read the result": "Ergebnis lesen",
-  "The decoded link or text appears instantly. Check the URL before opening, as always.": "Der dekodierte Link oder Text erscheint sofort. Wie immer die URL vor dem Öffnen prüfen."
+  "The decoded link or text appears instantly. Check the URL before opening, as always.": "Der dekodierte Link oder Text erscheint sofort. Wie immer die URL vor dem Öffnen prüfen.",
+  "<a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a>": "<a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Hochzeits-RSVP-QR-Codes: Eine vollständige Anleitung</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>So bearbeitest du einen QR-Code nach dem Druck</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Laufen QR-Codes ab? Die kurze Antwort: Nein — FreeQrly</b></a>"
  },
  "blog-scan-qr-code-online": {
   "Scan QR Codes Online — Free, No App, No Upload | FreeQrly": "QR-Codes online scannen — kostenlos, ohne App, ohne Upload | FreeQrly",
@@ -872,7 +903,8 @@
   "Use your camera or upload": "Kamera nutzen oder hochladen",
   "Point your camera at the code, or upload a photo or screenshot that contains one.": "Kamera auf den Code richten oder ein Foto oder einen Screenshot hochladen, der einen enthält.",
   "Get the result instantly": "Ergebnis sofort bekommen",
-  "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "Der dekodierte Text oder Link erscheint sofort. Links bekommen einen Öffnen-Button; alles andere bekommt Kopieren."
+  "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "Der dekodierte Text oder Link erscheint sofort. Links bekommen einen Öffnen-Button; alles andere bekommt Kopieren.",
+  "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a>": "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR-Codes für Events: Check-in, Tickets & mehr</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>So erstellst du einen dynamischen QR-Code (kostenlos & änderbar)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamische QR-Code-Statistiken: Was du tracken kannst</b></a>"
  },
  "blog-static-vs-dynamic-qr-codes": {
   "Static vs Dynamic QR Codes | FreeQrly": "Statische vs. dynamische QR-Codes | FreeQrly",
@@ -910,7 +942,8 @@
   "Because dynamic codes require their server, which justifies a subscription. Many 'free' generators create dynamic codes tied to a trial — the code stops working when the trial ends.": "Weil dynamische Codes ihren Server erfordern, was ein Abo rechtfertigt. Viele „kostenlose“ Generatoren erstellen dynamische Codes, die an eine Testphase gebunden sind — der Code hört auf zu funktionieren, wenn die Testphase endet.",
   "What is the difference between static and dynamic QR codes?": "Was ist der Unterschied zwischen statischen und dynamischen QR-Codes?",
   "Do I need a dynamic QR code?": "Brauche ich einen dynamischen QR-Code?",
-  "Why do free QR code generators push dynamic codes?": "Warum pushen kostenlose QR-Code-Generatoren dynamische Codes?"
+  "Why do free QR code generators push dynamic codes?": "Warum pushen kostenlose QR-Code-Generatoren dynamische Codes?",
+  "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrly macht beides. Statische Codes sind kostenlos, unbegrenzt, ohne Konto — und decken die meisten Alltagsfälle ab. Dynamische sind auch kostenlos: Anmelden (E-Mail, Google oder GitHub) und du bekommst 8 änderbare Codes mit Scan-Stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">So erstellst du einen</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">so bearbeitest du nach dem Druck</a> und <a href=\"/blog/dynamic-qr-code-statistics/\">was die Stats dir sagen</a>."
  },
  "blog-wedding-rsvp-qr-code": {
   "Wedding RSVP QR Codes: A Complete Guide | FreeQrly": "Hochzeits-RSVP-QR-Codes: Eine vollständige Anleitung | FreeQrly",
@@ -936,7 +969,8 @@
   "Static ones don't. Generate them months ahead; they'll scan on the day and for years after as a keepsake.": "Statische nicht. Monate vorher erzeugen; sie scannen am Tag selbst und danach jahrelang als Andenken.",
   "How do I create a QR code for my wedding RSVP?": "Wie erstelle ich einen QR-Code für meine Hochzeits-RSVP?",
   "Should the RSVP QR code link to a form or a website?": "Sollte der RSVP-QR-Code auf ein Formular oder eine Website verlinken?",
-  "Do wedding QR codes expire?": "Laufen Hochzeits-QR-Codes ab?"
+  "Do wedding QR codes expire?": "Laufen Hochzeits-QR-Codes ab?",
+  "<a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a>": "<a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>So bearbeitest du einen QR-Code nach dem Druck</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Laufen QR-Codes ab? Die kurze Antwort: Nein — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>So scannst du einen QR-Code (iPhone & Android)</b></a>"
  },
  "blog-why-is-my-qr-code-not-working": {
   "QR Code Not Working? 7 Fixes That Help | FreeQrly": "QR-Code funktioniert nicht? 7 Fixes, die helfen | FreeQrly",
@@ -977,5 +1011,137 @@
   "Re-export at higher resolution": "Mit höherer Auflösung neu exportieren",
   "Blurry edges from a low-res export fail at print size. Export PNG at 1024 px or higher, or use SVG.": "Verschwommene Kanten aus einem Low-Res-Export versagen in Druckgröße. PNG mit 1024 px oder höher exportieren oder SVG nutzen.",
   "Why won’t this thing <span class=\"hl hl-blush\">scan</span>?": "Warum will das Ding nicht <span class=\"hl hl-blush\">scannen</span>?"
+ },
+ "blog-dynamic-qr-code-statistics": {
+  "Dynamic QR Code Statistics: What You Can Track | FreeQrly": "Dynamische QR-Code-Statistiken: Was du tracken kannst | FreeQrly",
+  "What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.": "Was dir dynamische QR-Code-Statistiken sagen: Scans gesamt und unique, nach Tag, Land, Stadt, Gerät und Betriebssystem — und was FreeQrly nie trackt.",
+  "What dynamic QR <span class='hl hl-honey'>statistics</span> tell you": "Was dir dynamische QR-<span class='hl hl-honey'>Statistiken</span> sagen",
+  "A dynamic code reports home every time it's scanned. Here's what FreeQrly counts, how to read it, and what it never collects.": "Ein dynamischer Code meldet sich bei jedem Scan. Hier steht, was FreeQrly zählt, wie du es liest — und was es nie sammelt.",
+  "A static code is silent: it never reports home, so nobody — including you — knows how often it was scanned. A dynamic code reports every scan to your Dashboard. Here's what FreeQrly counts, how to read it, and what it deliberately never collects.": "Ein statischer Code ist still: Er meldet sich nie, also weiß niemand — du eingeschlossen —, wie oft er gescannt wurde. Ein dynamischer Code meldet jeden Scan an dein Dashboard. Hier steht, was FreeQrly zählt, wie du es liest — und was es bewusst nie sammelt.",
+  "The numbers on each card": "Die Zahlen auf jeder Karte",
+  "<strong>Total scans.</strong> Every scan of the code, all time.": "<strong>Scans gesamt.</strong> Jeder Scan des Codes, aller Zeiten.",
+  "<strong>Today.</strong> Scans so far today.": "<strong>Heute.</strong> Scans bisher heute.",
+  "<strong>Unique scans.</strong> Distinct scanners, counted once per day. Two scans by the same person on the same day count as one unique scan.": "<strong>Unique Scans.</strong> Unterschiedliche Scanner, einmal pro Tag gezählt. Zwei Scans derselben Person am selben Tag zählen als ein unique Scan.",
+  "<strong>Last 7 days.</strong> A daily bar chart covering today and the previous six days — always seven bars, with zero-height bars for quiet days, so you can see gaps at a glance.": "<strong>Letzte 7 Tage.</strong> Ein Tages-Balkendiagramm für heute und die sechs Tage davor — immer sieben Balken, mit Null-Balken an ruhigen Tagen, damit du Lücken auf einen Blick siehst.",
+  "The breakdowns": "Die Aufschlüsselungen",
+  "Open Stats on a code and you get four breakdowns, each with counts and percentages:": "Öffne die Stats eines Codes und du bekommst vier Aufschlüsselungen, jede mit Zahlen und Prozenten:",
+  "<strong>By country and by city.</strong> Where scans came from, from the scanner's approximate location.": "<strong>Nach Land und Stadt.</strong> Woher die Scans kamen — nach dem ungefähren Standort des Scanners.",
+  "<strong>By device.</strong> Phone, tablet, or desktop.": "<strong>Nach Gerät.</strong> Handy, Tablet oder Desktop.",
+  "<strong>By OS.</strong> iOS, Android, and the rest.": "<strong>Nach Betriebssystem.</strong> iOS, Android und der Rest.",
+  "Use them the way a campaign would: a flyer in two neighborhoods shows which one pulls; a poster that gets desktop scans at noon is probably being scanned from a screenshot, not the wall.": "Nutz sie wie eine Kampagne: Ein Flyer in zwei Vierteln zeigt, welches zieht; ein Poster, das mittags Desktop-Scans bekommt, wird wahrscheinlich von einem Screenshot gescannt, nicht von der Wand.",
+  "What FreeQrly never collects": "Was FreeQrly nie sammelt",
+  "Stats are aggregates — there is no per-visitor record to look at. A \"unique scan\" is a one-way hash of the scanner's IP address, browser, and date: enough to count distinct scanners per day, impossible to reverse into a person. No names, no emails, no exact locations, no cross-code tracking of individuals. And static codes track nothing at all — they never touch a server, so there's nothing to count.": "Stats sind Aggregate — es gibt keinen Datensatz pro Besucher zum Ansehen. Ein „unique Scan\" ist ein Einweg-Hash aus IP-Adresse, Browser und Datum des Scanners: genug, um unterschiedliche Scanner pro Tag zu zählen, unmöglich, daraus eine Person zu rekonstruieren. Keine Namen, keine E-Mails, keine exakten Standorte, kein codeübergreifendes Tracking von Einzelpersonen. Und statische Codes tracken gar nichts — sie berühren nie einen Server, also gibt es nichts zu zählen.",
+  "Reading the numbers honestly": "Die Zahlen ehrlich lesen",
+  "<strong>Scans are not customers.</strong> A scan is a glance. Compare codes against each other, not against a fantasy benchmark.": "<strong>Scans sind keine Kunden.</strong> Ein Scan ist ein Blick. Vergleich Codes miteinander, nicht mit einem Fantasie-Benchmark.",
+  "<strong>Zero is data.</strong> A code with no scans for a week is telling you the placement is wrong, not the code.": "<strong>Null ist auch ein Datum.</strong> Ein Code ohne Scans seit einer Woche sagt dir, dass die Platzierung falsch ist, nicht der Code.",
+  "<strong>Spikes need context.</strong> A burst of scans right after a post goes out is the post, not the poster. The 7-day chart makes this visible.": "<strong>Spitzen brauchen Kontext.</strong> Ein Scan-Schub direkt nach einem Post ist der Post, nicht das Poster. Das 7-Tage-Diagramm macht das sichtbar.",
+  "Ready to try it? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">Create your first dynamic code</a> — free sign-in, 8 codes — and check back after your first print run. Already printed and need a fix? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">How to edit a QR code after printing</a>.": "Bereit zum Ausprobieren? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">Erstell deinen ersten dynamischen Code</a> — kostenlose Anmeldung, 8 Codes — und schau nach deinem ersten Drucklauf wieder rein. Schon gedruckt und musst was fixen? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">So bearbeitest du einen QR-Code nach dem Druck</a>.",
+  "Try it with your next print run": "Probier es beim nächsten Drucklauf",
+  "Create a free dynamic code and watch the stats come in.": "Erstell einen kostenlosen dynamischen Code und schau zu, wie die Stats reinkommen.",
+  "<a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR Code Not Working? 7 Fixes That Help</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>QR Codes for Restaurants — Free Guide</b></a>": "<a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Statische vs. dynamische QR-Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR-Code funktioniert nicht? 7 Fixes, die helfen</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>QR-Codes für Restaurants — Kostenlose Anleitung</b></a>",
+  "<span>What counts as a unique scan?</span>": "<span>Was zählt als unique Scan?</span>",
+  "One scanner, once per day. FreeQrly counts distinct scanners using a one-way hash of IP address, browser, and date — the same person scanning twice in a day counts once.": "Ein Scanner, einmal pro Tag. FreeQrly zählt unterschiedliche Scanner über einen Einweg-Hash aus IP-Adresse, Browser und Datum — dieselbe Person, die zweimal am Tag scannt, zählt einmal.",
+  "<span>Do static QR codes track scans?</span>": "<span>Tracken statische QR-Codes Scans?</span>",
+  "No. Static codes never touch a server — the destination lives in the pattern — so there's nothing to count. Only dynamic codes report scans.": "Nein. Statische Codes berühren nie einen Server — das Ziel lebt im Muster —, also gibt es nichts zu zählen. Nur dynamische Codes melden Scans.",
+  "<span>Is visitor data private?</span>": "<span>Sind Besucherdaten privat?</span>",
+  "Yes. Stats are aggregates only: counts by day, country, city, device, and OS. No names, emails, exact locations, or per-visitor records. Unique scans use a non-reversible hash.": "Ja. Nur Aggregate: Zahlen nach Tag, Land, Stadt, Gerät und Betriebssystem. Keine Namen, E-Mails, exakte Standorte oder Datensätze pro Besucher. Unique Scans nutzen einen nicht umkehrbaren Hash.",
+  "<span>Can I see who scanned my QR code?</span>": "<span>Kann ich sehen, wer meinen QR-Code gescannt hat?</span>",
+  "No — and that's by design. FreeQrly counts scans; it doesn't identify scanners.": "Nein — und das ist Absicht. FreeQrly zählt Scans; es identifiziert keine Scanner.",
+  "What counts as a unique scan?": "Was zählt als unique Scan?",
+  "Do static QR codes track scans?": "Tracken statische QR-Codes Scans?",
+  "Is visitor data private?": "Sind Besucherdaten privat?",
+  "Can I see who scanned my QR code?": "Kann ich sehen, wer meinen QR-Code gescannt hat?"
+ },
+ "blog-how-to-create-a-dynamic-qr-code": {
+  "How to Create a Dynamic QR Code (Free & Editable) | FreeQrly": "So erstellst du einen dynamischen QR-Code (kostenlos & änderbar) | FreeQrly",
+  "Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 8 free codes.": "Erstell kostenlos einen dynamischen QR-Code: anmelden, Typ wählen, stylen, drucken. Ziel später ändern ohne Neudruck. 8 kostenlose Codes.",
+  "How to create a <span class='hl hl-mint'>dynamic</span> QR code": "So erstellst du einen <span class='hl hl-mint'>dynamischen</span> QR-Code",
+  "A dynamic QR code lets you change the destination after printing — and see how many people scanned. Here's how to make one, free, in about a minute.": "Ein dynamischer QR-Code lässt dich das Ziel nach dem Druck ändern — und sehen, wie viele Leute gescannt haben. So machst du einen, kostenlos, in etwa einer Minute.",
+  "Static codes are great — until the destination changes. The flyer is printed, the menu moved, the campaign URL wasn't final. A <strong>dynamic QR code</strong> fixes that: the printed pattern stays the same, but you can change where it points, any time, from your Dashboard. You also get scan counts, so you know whether anyone is actually scanning.": "Statische Codes sind super — bis sich das Ziel ändert. Der Flyer ist gedruckt, das Menü ist umgezogen, die Kampagnen-URL war nicht final. Ein <strong>dynamischer QR-Code</strong> fixt das: Das gedruckte Muster bleibt gleich, aber du kannst jederzeit ändern, wohin es zeigt — aus deinem Dashboard. Dazu kommen Scan-Zahlen, damit du weißt, ob überhaupt jemand scannt.",
+  "On FreeQrly, dynamic codes are free. Sign in (email, Google, or GitHub), and you get 8 of them. No trial, no card, no expiry games. Here's the whole process.": "Bei FreeQrly sind dynamische Codes kostenlos. Meld dich an (E-Mail, Google oder GitHub) und du bekommst 8 davon. Kein Trial, keine Karte, keine Ablaufspielchen. Hier der ganze Ablauf.",
+  "<b>Sign in — free.</b> Open the <a href=\"/login/\">sign-in page</a> and create an account with email + password, Google, or GitHub. Static codes never need this; dynamic codes do, because the code has to belong to someone.": "<b>Anmelden — kostenlos.</b> Öffne die <a href=\"/login/\">Anmeldeseite</a> und erstell ein Konto mit E-Mail + Passwort, Google oder GitHub. Statische Codes brauchen das nie; dynamische schon, weil der Code jemandem gehören muss.",
+  "<b>Switch to Dynamic.</b> In the <a href=\"/?mode=dynamic\">studio</a>, flip the toggle from Static to Dynamic. Everything else — types, styling, download — works exactly the same.": "<b>Zu Dynamisch wechseln.</b> Im <a href=\"/?mode=dynamic\">Studio</a> den Schalter von Statisch auf Dynamisch stellen. Alles andere — Typen, Styling, Download — funktioniert genau gleich.",
+  "<b>Pick a type and fill it in.</b> Website, WiFi, contact, event — all 12 content types work as dynamic codes. (Batch stays static: one dynamic code per generation.)": "<b>Typ wählen und ausfüllen.</b> Website, WLAN, Kontakt, Event — alle 12 Inhaltstypen funktionieren als dynamische Codes. (Stapel bleibt statisch: ein dynamischer Code pro Durchgang.)",
+  "<b>Style it if you want.</b> Dots, colors, logo, frame — the preview updates live. The style is saved with the code, so the Dashboard and the download match.": "<b>Stylen, wenn du willst.</b> Punkte, Farben, Logo, Rahmen — die Vorschau aktualisiert sich live. Der Stil wird mit dem Code gespeichert, damit Dashboard und Download übereinstimmen.",
+  "<b>Generate.</b> Hit Generate. You get a short link like <code>freeqrly.com/q/XXXXXXX</code> — that's what the QR pattern encodes. Print it, ship it, stick it on the wall.": "<b>Generieren.</b> Klick Generieren. Du bekommst einen kurzen Link wie <code>freeqrly.com/q/XXXXXXX</code> — genau den codiert das QR-Muster. Drucken, verschicken, an die Wand kleben.",
+  "<b>Manage it later.</b> Your codes live in the <a href=\"/dashboard/\">Dashboard</a>: edit, check stats, or delete one to free a slot.": "<b>Später verwalten.</b> Deine Codes leben im <a href=\"/dashboard/\">Dashboard</a>: bearbeiten, Stats checken oder einen löschen, um einen Platz freizumachen.",
+  "What the QR code actually contains": "Was der QR-Code wirklich enthält",
+  "A dynamic code does not hold your link directly. It holds a short FreeQrly link, and our server redirects scanners to your destination. That's the mechanism that makes editing and counting possible — and it's why dynamic codes need an account while static ones don't. If a service ever tells you its \"free\" codes need an account, this is the mechanism at work; the difference here is that the account is free and the codes don't die.": "Ein dynamischer Code hält deinen Link nicht direkt. Er hält einen kurzen FreeQrly-Link, und unser Server leitet Scanner zu deinem Ziel weiter. Dieser Mechanismus macht Bearbeiten und Zählen überhaupt erst möglich — und er ist der Grund, warum dynamische Codes ein Konto brauchen und statische nicht. Wenn dir ein Dienst je sagt, seine „kostenlosen\" Codes bräuchten ein Konto, ist das genau dieser Mechanismus; der Unterschied hier: Das Konto ist kostenlos und die Codes sterben nicht.",
+  "The limits, stated plainly": "Die Limits, klar gesagt",
+  "<strong>8 codes, free.</strong> That's the free quota. Delete a code and the slot frees up.": "<strong>8 Codes, kostenlos.</strong> Das ist die kostenlose Quote. Lösch einen Code und der Platz wird wieder frei.",
+  "<strong>One at a time.</strong> Dynamic codes are generated one by one; batch generation stays static.": "<strong>Einer nach dem anderen.</strong> Dynamische Codes werden einzeln generiert; Stapelgenerierung bleibt statisch.",
+  "<strong>Editing changes the destination, not the pattern.</strong> The printed code keeps working through every edit — which is the entire point.": "<strong>Bearbeiten ändert das Ziel, nicht das Muster.</strong> Der gedruckte Code funktioniert durch jede Bearbeitung weiter — genau darum geht es.",
+  "Not sure whether you need dynamic at all? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Static vs dynamic, explained honestly</a>. Already printed and need to fix a link? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">How to edit a QR code after printing</a>. Curious what the numbers look like? <a href=\"/blog/dynamic-qr-code-statistics/\">What dynamic QR code statistics tell you</a>.": "Nicht sicher, ob du überhaupt dynamisch brauchst? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Statisch vs. dynamisch, ehrlich erklärt</a>. Schon gedruckt und musst einen Link fixen? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">So bearbeitest du einen QR-Code nach dem Druck</a>. Neugierig, wie die Zahlen aussehen? <a href=\"/blog/dynamic-qr-code-statistics/\">Was dir dynamische QR-Code-Statistiken sagen</a>.",
+  "Make your first dynamic code": "Erstell deinen ersten dynamischen Code",
+  "Free sign-in, 8 codes, editable after printing. Start in the studio.": "Kostenlose Anmeldung, 8 Codes, nach dem Druck änderbar. Starte im Studio.",
+  "<a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR Code Not Working? 7 Fixes That Help</b></a>": "<a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamische QR-Code-Statistiken: Was du tracken kannst</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Statische vs. dynamische QR-Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR-Code funktioniert nicht? 7 Fixes, die helfen</b></a>",
+  "<span>Is creating a dynamic QR code really free?</span>": "<span>Ist das Erstellen eines dynamischen QR-Codes wirklich kostenlos?</span>",
+  "Yes. Sign in free, create up to 8 dynamic codes, edit them, see stats. No trial period, no card, no subscription. Static codes remain free and unlimited with no account at all.": "Ja. Kostenlos anmelden, bis zu 8 dynamische Codes erstellen, bearbeiten, Stats sehen. Keine Testphase, keine Karte, kein Abo. Statische Codes bleiben kostenlos und unbegrenzt, ganz ohne Konto.",
+  "<span>Do I need an account for a dynamic QR code?</span>": "<span>Brauche ich ein Konto für einen dynamischen QR-Code?</span>",
+  "Yes — the code has to belong to someone so only you can edit it. Email + password, Google, or GitHub. Static codes never need an account.": "Ja — der Code muss jemandem gehören, damit nur du ihn bearbeiten kannst. E-Mail + Passwort, Google oder GitHub. Statische Codes brauchen nie ein Konto.",
+  "<span>How many dynamic QR codes can I have?</span>": "<span>Wie viele dynamische QR-Codes kann ich haben?</span>",
+  "8 on the free account. Delete a code to free its slot.": "8 im kostenlosen Konto. Lösch einen Code, um seinen Platz freizumachen.",
+  "<span>What does a dynamic QR code link to?</span>": "<span>Wohin verlinkt ein dynamischer QR-Code?</span>",
+  "A short FreeQrly link (freeqrly.com/q/XXXXXXX) that redirects to your destination. Scanners land on your page; the redirect is what makes editing and stats possible.": "Ein kurzer FreeQrly-Link (freeqrly.com/q/XXXXXXX), der zu deinem Ziel weiterleitet. Scanner landen auf deiner Seite; die Weiterleitung macht Bearbeiten und Stats erst möglich.",
+  "Is creating a dynamic QR code really free?": "Ist das Erstellen eines dynamischen QR-Codes wirklich kostenlos?",
+  "Do I need an account for a dynamic QR code?": "Brauche ich ein Konto für einen dynamischen QR-Code?",
+  "How many dynamic QR codes can I have?": "Wie viele dynamische QR-Codes kann ich haben?",
+  "What does a dynamic QR code link to?": "Wohin verlinkt ein dynamischer QR-Code?",
+  "Sign in — free": "Anmelden — kostenlos",
+  "Create a free account with email + password, Google, or GitHub. Static codes skip this; dynamic codes need an owner.": "Erstell ein kostenloses Konto mit E-Mail + Passwort, Google oder GitHub. Statische Codes überspringen das; dynamische brauchen einen Besitzer.",
+  "Switch to Dynamic": "Zu Dynamisch wechseln",
+  "In the studio, flip the Static/Dynamic toggle to Dynamic.": "Im Studio den Statisch/Dynamisch-Schalter auf Dynamisch stellen.",
+  "Pick a type and fill it in": "Typ wählen und ausfüllen",
+  "Website, WiFi, contact, event — all 12 content types work. Batch stays static.": "Website, WLAN, Kontakt, Event — alle 12 Inhaltstypen funktionieren. Stapel bleibt statisch.",
+  "Style it": "Stylen",
+  "Dots, colors, logo, frame. The preview updates live and the style is saved with the code.": "Punkte, Farben, Logo, Rahmen. Die Vorschau aktualisiert sich live und der Stil wird mit dem Code gespeichert.",
+  "Hit Generate. You get a short link like freeqrly.com/q/XXXXXXX — that's what the pattern encodes.": "Klick Generieren. Du bekommst einen kurzen Link wie freeqrly.com/q/XXXXXXX — genau den codiert das Muster.",
+  "Manage it later": "Später verwalten",
+  "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot.": "Find deine Codes im Dashboard: bearbeiten, Stats checken oder einen löschen, um einen Platz freizumachen."
+ },
+ "blog-how-to-edit-a-qr-code-after-printing": {
+  "How to Edit a QR Code After Printing | FreeQrly": "So bearbeitest du einen QR-Code nach dem Druck | FreeQrly",
+  "Printed the wrong link? Fix it without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.": "Falschen Link gedruckt? Fix es ohne Neudruck. Ziel, Typ oder Stil eines dynamischen QR-Codes im Dashboard bearbeiten — der gedruckte Code aktualisiert sich sofort.",
+  "Edit a QR code <span class='hl hl-blush'>after printing</span>": "QR-Code <span class='hl hl-blush'>nach dem Druck</span> bearbeiten",
+  "The flyers are already out — and the link is wrong. With a dynamic code, that's a two-minute fix, not a reprint.": "Die Flyer sind schon raus — und der Link ist falsch. Mit einem dynamischen Code ist das ein Zwei-Minuten-Fix, kein Neudruck.",
+  "The flyers are already out — and the link is wrong. Or the menu moved. Or the campaign page wasn't final when the poster went to print. With a static code, that's a reprint. With a dynamic code, it's a two-minute fix.": "Die Flyer sind schon raus — und der Link ist falsch. Oder das Menü ist umgezogen. Oder die Kampagnenseite war nicht final, als das Poster in den Druck ging. Mit einem statischen Code ist das ein Neudruck. Mit einem dynamischen ein Zwei-Minuten-Fix.",
+  "The trick: a dynamic code's pattern never changes. It points at a short link on FreeQrly's server, and you control where that link sends people. Edit the destination, and every printed copy — already on walls, flyers, packaging — serves the new content instantly. No reprint, no stickers over the old code.": "Der Trick: Das Muster eines dynamischen Codes ändert sich nie. Es zeigt auf einen kurzen Link auf FreeQrlys Server, und du bestimmst, wohin dieser Link die Leute schickt. Bearbeitest du das Ziel, liefert jede gedruckte Kopie — schon an Wänden, Flyern, Verpackungen — sofort den neuen Inhalt. Kein Neudruck, keine Aufkleber über dem alten Code.",
+  "<b>Sign in.</b> Open the <a href=\"/login/\">sign-in page</a> and log in to the account that owns the code.": "<b>Anmelden.</b> Öffne die <a href=\"/login/\">Anmeldeseite</a> und meld dich bei dem Konto an, dem der Code gehört.",
+  "<b>Open the Dashboard.</b> Go to <a href=\"/dashboard/\">your Dashboard</a>. Every dynamic code on your account is there as a card, with its QR thumbnail and scan count.": "<b>Dashboard öffnen.</b> Geh zu <a href=\"/dashboard/\">deinem Dashboard</a>. Jeder dynamische Code deines Kontos ist dort als Karte, mit QR-Thumbnail und Scan-Zahl.",
+  "<b>Open Edit.</b> On the code's card, click Edit. You'll see the same generator you used to create it — type, content, style, all of it.": "<b>Bearbeiten öffnen.</b> Auf der Karte des Codes auf Bearbeiten klicken. Du siehst denselben Generator, mit dem du ihn erstellt hast — Typ, Inhalt, Stil, alles.",
+  "<b>Change what you need.</b> Destination, content, even the type: a Website code can become a WiFi code. Colors, logo, frame — all editable too.": "<b>Ändern, was du brauchst.</b> Ziel, Inhalt, sogar der Typ: Ein Website-Code kann ein WLAN-Code werden. Farben, Logo, Rahmen — alles ebenfalls änderbar.",
+  "<b>Save.</b> Hit Save changes. Done. The printed code now serves the new content. Test it with your phone camera to be sure.": "<b>Speichern.</b> Klick Änderungen speichern. Fertig. Der gedruckte Code liefert jetzt den neuen Inhalt. Test es mit deiner Handykamera, um sicher zu gehen.",
+  "What you can change — and what you can't": "Was du ändern kannst — und was nicht",
+  "<strong>Destination and content:</strong> the link, the text, the WiFi password — anything the code carries.": "<strong>Ziel und Inhalt:</strong> der Link, der Text, das WLAN-Passwort — alles, was der Code trägt.",
+  "<strong>Type:</strong> switch a code from one content type to another. The pattern doesn't care; it only holds the short link.": "<strong>Typ:</strong> einen Code von einem Inhaltstyp auf einen anderen umstellen. Dem Muster ist das egal; es hält nur den kurzen Link.",
+  "<strong>Style:</strong> colors, dots, logo, frame. The Dashboard thumbnail updates to match.": "<strong>Stil:</strong> Farben, Punkte, Logo, Rahmen. Das Dashboard-Thumbnail aktualisiert sich entsprechend.",
+  "<strong>What you can't change:</strong> the printed pattern itself — but you never need to, since the pattern only holds the short link. And you can't transfer a code to another account.": "<strong>Was du nicht ändern kannst:</strong> das gedruckte Muster selbst — aber das musst du auch nie, weil das Muster nur den kurzen Link hält. Und du kannst einen Code nicht an ein anderes Konto übertragen.",
+  "Two things worth knowing": "Zwei Dinge, die man wissen sollte",
+  "<strong>Edits are instant and silent.</strong> There's no \"republish\" step and no delay — the next scan gets the new destination. If the old destination was a page you took down, fix the code first, then take the page down.": "<strong>Bearbeitungen sind sofort und lautlos.</strong> Es gibt keinen „Erneut veröffentlichen\"-Schritt und keine Verzögerung — der nächste Scan bekommt das neue Ziel. Wenn das alte Ziel eine Seite war, die du runtergenommen hast, fix erst den Code, dann nimm die Seite runter.",
+  "<strong>Deleting is permanent.</strong> Delete a code and its printed copies stop working — there's no undo. Delete only when the code is truly retired; the slot frees up for a new code. (Still unsure whether dynamic is right for you? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Static vs dynamic, explained honestly</a>. Want the full creation walkthrough? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create a dynamic QR code</a>.)": "<strong>Löschen ist endgültig.</strong> Lösch einen Code und seine gedruckten Kopien funktionieren nicht mehr — es gibt kein Undo. Lösch nur, wenn der Code wirklich außer Dienst ist; der Platz wird für einen neuen Code frei. (Immer noch unsicher, ob dynamisch das Richtige für dich ist? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Statisch vs. dynamisch, ehrlich erklärt</a>. Willst du die komplette Erstellungs-Anleitung? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">So erstellst du einen dynamischen QR-Code</a>.)",
+  "Fix a printed code": "Einen gedruckten Code fixen",
+  "Sign in, open the Dashboard, edit, save. The printed code updates instantly.": "Anmelden, Dashboard öffnen, bearbeiten, speichern. Der gedruckte Code aktualisiert sich sofort.",
+  "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a>": "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Laufen QR-Codes ab? Die kurze Antwort: Nein — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>So scannst du einen QR-Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR-Code-Druckgrößen-Leitfaden: Wie groß sollte er sein?</b></a>",
+  "<span>Do I need to reprint a QR code after editing it?</span>": "<span>Muss ich einen QR-Code nach dem Bearbeiten neu drucken?</span>",
+  "No. The printed pattern holds a short link; editing changes where that link points. Every printed copy serves the new content immediately.": "Nein. Das gedruckte Muster hält einen kurzen Link; Bearbeiten ändert, wohin dieser Link zeigt. Jede gedruckte Kopie liefert sofort den neuen Inhalt.",
+  "<span>Can I change a dynamic QR code to a different type?</span>": "<span>Kann ich einen dynamischen QR-Code auf einen anderen Typ umstellen?</span>",
+  "Yes. In the Dashboard, open Edit and pick a new type — a Website code can become a WiFi code, for example. The printed pattern stays valid.": "Ja. Im Dashboard Bearbeiten öffnen und einen neuen Typ wählen — ein Website-Code kann z. B. ein WLAN-Code werden. Das gedruckte Muster bleibt gültig.",
+  "<span>Does editing a QR code reset its scan statistics?</span>": "<span>Setzt das Bearbeiten eines QR-Codes seine Scan-Statistiken zurück?</span>",
+  "No. Stats keep accumulating on the same code. Deleting a code removes it and its stats permanently.": "Nein. Die Stats laufen auf demselben Code weiter. Einen Code zu löschen entfernt ihn und seine Stats endgültig.",
+  "<span>What if I delete a dynamic QR code by mistake?</span>": "<span>Was, wenn ich einen dynamischen QR-Code aus Versehen lösche?</span>",
+  "There's no undo — printed copies stop working and the slot frees up. Only delete codes that are truly retired.": "Es gibt kein Undo — gedruckte Kopien funktionieren nicht mehr und der Platz wird frei. Lösch nur Codes, die wirklich außer Dienst sind.",
+  "Do I need to reprint a QR code after editing it?": "Muss ich einen QR-Code nach dem Bearbeiten neu drucken?",
+  "Can I change a dynamic QR code to a different type?": "Kann ich einen dynamischen QR-Code auf einen anderen Typ umstellen?",
+  "Does editing a QR code reset its scan statistics?": "Setzt das Bearbeiten eines QR-Codes seine Scan-Statistiken zurück?",
+  "What if I delete a dynamic QR code by mistake?": "Was, wenn ich einen dynamischen QR-Code aus Versehen lösche?",
+  "Sign in": "Anmelden",
+  "Log in to the account that owns the code.": "Meld dich bei dem Konto an, dem der Code gehört.",
+  "Open the Dashboard": "Dashboard öffnen",
+  "Your codes are listed as cards with thumbnails and scan counts.": "Deine Codes sind als Karten mit Thumbnails und Scan-Zahlen aufgelistet.",
+  "Open Edit": "Bearbeiten öffnen",
+  "On the code's card, click Edit — the full generator opens with your content prefilled.": "Auf der Karte des Codes auf Bearbeiten klicken — der volle Generator öffnet sich mit deinem Inhalt vorausgefüllt.",
+  "Change what you need": "Ändern, was du brauchst",
+  "Destination, content, type, style — everything is editable.": "Ziel, Inhalt, Typ, Stil — alles ist änderbar.",
+  "Hit Save changes. The printed code serves the new content instantly — test it with your phone.": "Klick Änderungen speichern. Der gedruckte Code liefert sofort den neuen Inhalt — test es mit deinem Handy."
  }
 }

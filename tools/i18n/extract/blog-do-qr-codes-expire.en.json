@@ -20,7 +20,6 @@
  "<strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Keep a list of where each code lives.",
  "The FreeQrly angle",
  "Every static code made here is free, and yours — no account, no redirect server, nothing to cancel. There is simply no mechanism by which it could expire. That's not a marketing claim; it's just how static codes work when nobody inserts themselves in the middle.",
- "<a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a> <a class=\"rel-card\" href=\"/blog/free-qr-codes-that-dont-expire/\"><b>Free QR Codes That Never Expire</b></a>",
  "No. A free static QR code lasts as long as the link it points to. Codes that 'expire' are dynamic codes tied to a paid subscription — the vendor switches them off when you stop paying.",
  "<span>Can a QR code stop working?</span>",
  "Yes, but not from expiry. The usual causes: the destination page was deleted, the code was printed too small or with low contrast, or it got physically damaged.",

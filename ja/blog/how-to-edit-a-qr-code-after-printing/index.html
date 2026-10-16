@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>印刷後にQRコードを編集する方法 | FreeQrly</title>
+<meta name="description" content="間違ったリンクを印刷した？再印刷なしで直しましょう。ダッシュボードで動的QRコードの行き先・種類・スタイルを編集 — 印刷したコードは即座に更新されます。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/how-to-edit-a-qr-code-after-printing/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/how-to-edit-a-qr-code-after-printing/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="印刷後にQRコードを編集する方法 | FreeQrly">
+<meta property="og:description" content="間違ったリンクを印刷した？再印刷なしで直しましょう。ダッシュボードで動的QRコードの行き先・種類・スタイルを編集 — 印刷したコードは即座に更新されます。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/how-to-edit-a-qr-code-after-printing/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"印刷後にQRコードを編集する方法 | FreeQrly","description":"間違ったリンクを印刷した？再印刷なしで直しましょう。ダッシュボードで動的QRコードの行き先・種類・スタイルを編集 — 印刷したコードは即座に更新されます。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "編集後にQRコードを再印刷する必要はある？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。印刷した模様は短いリンクを持っています。編集で変わるのは、そのリンクの指す先です。印刷済みのコピーすべてが、すぐに新しいコンテンツを出します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動的QRコードの種類を変更できる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ダッシュボードで「編集」を開いて新しい種類を選びます — たとえばWebサイトのコードがWiFiのコードになります。印刷した模様は有効なままです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコードの編集でスキャン統計はリセットされる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。統計は同じコードに蓄積し続けます。コードを削除すると、コードと統計は永遠に消えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動的QRコードを間違って削除したら？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "元に戻すことはできません — 印刷済みのコピーは動かなくなり、スロットが空きます。本当に引退したコードだけ削除しましょう。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"印刷後にQRコードを編集する方法 | FreeQrly","description":"間違ったリンクを印刷した？再印刷なしで直しましょう。ダッシュボードで動的QRコードの行き先・種類・スタイルを編集 — 印刷したコードは即座に更新されます。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "ログインする",
+      "text": "コードの所有者であるアカウントでログインします。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "ダッシュボードを開く",
+      "text": "コードはサムネイルとスキャン数付きのカードで一覧表示されます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "編集を開く",
+      "text": "コードのカードで「編集」をクリック — フルジェネレーターが、内容がすでに入力された状態で開きます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "必要なものを変更する",
+      "text": "行き先、内容、種類、スタイル — すべて編集できます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Save",
+      "text": "「変更を保存」を押します。印刷したコードは即座に新しいコンテンツを出します — スマホでテストしましょう。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/ja/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/ja/#studio">スタジオ</a><a href="/ja/blog/">フィールドノート</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/error.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QRコードを<span class='hl hl-blush'>印刷後に</span>編集する</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">チラシはすでに出回っている — なのにリンクが間違っている。動的コードなら、再印刷ではなく2分で直せます。</p>
+    <p class="meta" style="text-align:center">2026年10月16日 · 約4分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>チラシはすでに出回っている — なのにリンクが間違っている。あるいはメニューが移転した。あるいはポスターが印刷に回ったとき、キャンペーンページが確定していなかった。静的コードなら再印刷です。動的コードなら2分で直せます。</p>
+<p>コツはこうです。動的コードの模様は決して変わりません。FreeQrlyのサーバー上の短いリンクを指していて、そのリンクが人をどこに送るかはあなたが管理します。行き先を編集すれば、すでに壁やチラシやパッケージにある印刷済みのコピーすべてが、即座に新しいコンテンツを出します。再印刷なし、古いコードの上にシールを貼る必要もなし。</p>
+
+<ol>
+<li><b>ログインする。</b><a href="/ja/login/">ログインページ</a>を開き、コードの所有者であるアカウントでログインします。</li>
+<li><b>ダッシュボードを開く。</b><a href="/dashboard/">ダッシュボード</a>へ。あなたのアカウントの動的コードはすべて、QRサムネイルとスキャン数付きのカードで並んでいます。</li>
+<li><b>編集を開く。</b>コードのカードで「編集」をクリックします。作成時に使ったのと同じジェネレーター — 種類、内容、スタイル、全部 — が表示されます。</li>
+<li><b>必要なものを変更する。</b>行き先、内容、種類まで。WebサイトのコードがWiFiのコードになることもあります。色、ロゴ、フレームもすべて編集できます。</li>
+<li><b>保存する。</b>「変更を保存」を押します。完了です。印刷したコードは新しいコンテンツを出すようになります。念のためスマホのカメラでテストしましょう。</li>
+</ol>
+
+<h2>変更できるもの — できないもの</h2>
+<ul>
+<li><strong>行き先と内容：</strong>リンク、テキスト、WiFiパスワード — コードが持つものすべて。</li>
+<li><strong>種類：</strong>コードをあるコンテンツ種類から別の種類に切り替えます。模様は気にしません。短いリンクだけを持っているからです。</li>
+<li><strong>スタイル：</strong>色、ドット、ロゴ、フレーム。ダッシュボードのサムネイルもそれに合わせて更新されます。</li>
+<li><strong>変更できないもの：</strong>印刷した模様そのもの — でも変更する必要は決してありません。模様が持つのは短いリンクだけだからです。コードを別のアカウントに譲渡することもできません。</li>
+</ul>
+
+<h2>知っておきたい2つのこと</h2>
+<p><strong>編集は即座で静かです。</strong>「再公開」ステップも遅延もありません — 次のスキャンで新しい行き先が表示されます。古い行き先が取り下げたページだった場合は、まずコードを修正してから、ページを取り下げましょう。</p>
+<p><strong>削除は永遠です。</strong>コードを削除すると印刷済みのコピーは動かなくなります — 元に戻すことはできません。本当に引退したコードだけ削除しましょう。スロットは新しいコード用に空きます。（動的が自分に合っているかまだ分からない？<a href="/ja/blog/static-vs-dynamic-qr-codes/">静的と動的を正直に解説</a>。作成の完全な手順が知りたい？<a href="/ja/blog/how-to-create-a-dynamic-qr-code/">動的QRコードの作り方</a>。）</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>印刷したコードを直す</h3>
+        <p>ログインして、ダッシュボードを開いて、編集して、保存する。印刷したコードは即座に更新されます。</p>
+        <a class="btn" href="/dashboard/">ダッシュボードを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/do-qr-codes-expire/"><b>QRコードに期限はある？短い答えは「いいえ」 — FreeQrly</b></a>
+        <a class="rel-card" href="/ja/blog/how-to-scan-a-qr-code/"><b>QRコードのスキャン方法（iPhoneとAndroid）</b></a>
+        <a class="rel-card" href="/ja/blog/qr-code-print-size-guide/"><b>QRコード印刷サイズガイド：どれくらいの大きさにすべき？</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>編集後にQRコードを再印刷する必要はある？</span></summary><p>いいえ。印刷した模様は短いリンクを持っています。編集で変わるのは、そのリンクの指す先です。印刷済みのコピーすべてが、すぐに新しいコンテンツを出します。</p></details>
+    <details><summary><span>動的QRコードの種類を変更できる？</span></summary><p>はい。ダッシュボードで「編集」を開いて新しい種類を選びます — たとえばWebサイトのコードがWiFiのコードになります。印刷した模様は有効なままです。</p></details>
+    <details><summary><span>QRコードの編集でスキャン統計はリセットされる？</span></summary><p>いいえ。統計は同じコードに蓄積し続けます。コードを削除すると、コードと統計は永遠に消えます。</p></details>
+    <details><summary><span>動的QRコードを間違って削除したら？</span></summary><p>元に戻すことはできません — 印刷済みのコピーは動かなくなり、スロットが空きます。本当に引退したコードだけ削除しましょう。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/ja/" style="color:inherit">FreeQrly</a> — 静かに、ブラウザで作成。</div>
+    <p class="flinks"><a href="/ja/scan/">QRスキャナー</a><a href="/ja/blog/">フィールドノート一覧</a><a href="/ja/about/">FreeQrlyについて</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistiques des QR codes dynamiques : ce que vous pouvez suivre | FreeQrly</title>
+<meta name="description" content="Ce que les statistiques des QR codes dynamiques vous disent : scans totaux et uniques, par jour, pays, ville, appareil et système d’exploitation — et ce que FreeQrly ne suit jamais.">
+<link rel="canonical" href="https://freeqrly.com/fr/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Statistiques des QR codes dynamiques : ce que vous pouvez suivre | FreeQrly">
+<meta property="og:description" content="Ce que les statistiques des QR codes dynamiques vous disent : scans totaux et uniques, par jour, pays, ville, appareil et système d’exploitation — et ce que FreeQrly ne suit jamais.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/fr/blog/dynamic-qr-code-statistics/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Statistiques des QR codes dynamiques : ce que vous pouvez suivre | FreeQrly","description":"Ce que les statistiques des QR codes dynamiques vous disent : scans totaux et uniques, par jour, pays, ville, appareil et système d’exploitation — et ce que FreeQrly ne suit jamais.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu’est-ce qui compte comme un scan unique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un scanner, une fois par jour. FreeQrly compte les scanners distincts avec un hachage à sens unique de l’adresse IP, du navigateur et de la date — la même personne qui scanne deux fois dans la journée ne compte qu’une fois."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les QR codes statiques suivent-ils les scans ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Les codes statiques ne touchent jamais un serveur — la destination vit dans le motif — donc il n’y a rien à compter. Seuls les codes dynamiques signalent les scans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les données des visiteurs sont-elles privées ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Les statistiques sont uniquement des agrégats : des chiffres par jour, pays, ville, appareil et système d’exploitation. Pas de noms, pas d’e-mails, pas de positions exactes, pas d’enregistrements par visiteur. Les scans uniques utilisent un hachage irréversible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je voir qui a scanné mon QR code ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non — et c’est voulu. FreeQrly compte les scans ; il n’identifie pas ceux qui scannent."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/fr/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/fr/#studio">Studio</a><a href="/fr/blog/">Notes de terrain</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notes de terrain</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Ce que les <span class='hl hl-honey'>statistiques</span> du QR code dynamique vous disent</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un code dynamique signale chaque scan. Voici ce que FreeQrly compte, comment le lire, et ce qu’il ne collecte jamais.</p>
+    <p class="meta" style="text-align:center">16 octobre 2026 · 4 min de lecture</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>Un code statique est silencieux : il ne signale jamais, donc personne — pas même vous — ne sait combien de fois il a été scanné. Un code dynamique signale chaque scan à votre tableau de bord. Voici ce que FreeQrly compte, comment le lire, et ce qu’il ne collecte délibérément jamais.</p>
+
+<h2>Les chiffres sur chaque carte</h2>
+<ul>
+<li><strong>Total des scans.</strong> Tous les scans du code, depuis toujours.</li>
+<li><strong>Aujourd’hui.</strong> Les scans de la journée jusqu’ici.</li>
+<li><strong>Scans uniques.</strong> Des scanners distincts, comptés une fois par jour. Deux scans de la même personne le même jour comptent pour un seul scan unique.</li>
+<li><strong>7 derniers jours.</strong> Un graphique à barres quotidien couvrant aujourd’hui et les six jours précédents — toujours sept barres, avec des barres de hauteur zéro les jours calmes, pour voir les creux d’un coup d’œil.</li>
+</ul>
+
+<h2>Les répartitions</h2>
+<p>Ouvrez les Stats d’un code et vous obtenez quatre répartitions, chacune avec des chiffres et des pourcentages :</p>
+<ul>
+<li><strong>Par pays et par ville.</strong> D’où viennent les scans, d’après la position approximative de celui qui scanne.</li>
+<li><strong>Par appareil.</strong> Téléphone, tablette ou ordinateur.</li>
+<li><strong>Par système d’exploitation.</strong> iOS, Android et le reste.</li>
+</ul>
+<p>Utilisez-les comme le ferait une campagne : un dépliant dans deux quartiers montre celui qui attire ; une affiche qui reçoit des scans d’ordinateur à midi est probablement scannée depuis une capture d’écran, pas depuis le mur.</p>
+
+<h2>Ce que FreeQrly ne collecte jamais</h2>
+<p>Les statistiques sont des agrégats — il n’y a aucun enregistrement par visiteur à consulter. Un « scan unique » est un hachage à sens unique de l’adresse IP, du navigateur et de la date de celui qui scanne : suffisant pour compter les scanners distincts par jour, impossible à inverser pour retrouver une personne. Pas de noms, pas d’e-mails, pas de positions exactes, pas de suivi des individus d’un code à l’autre. Et les codes statiques ne suivent rien du tout — ils ne touchent jamais un serveur, donc il n’y a rien à compter.</p>
+
+<h2>Lire les chiffres honnêtement</h2>
+<ul>
+<li><strong>Les scans ne sont pas des clients.</strong> Un scan est un coup d’œil. Comparez les codes entre eux, pas à un repère imaginaire.</li>
+<li><strong>Zéro, c’est aussi une donnée.</strong> Un code sans scan pendant une semaine vous dit que l’emplacement est mauvais, pas le code.</li>
+<li><strong>Les pics ont besoin de contexte.</strong> Une rafale de scans juste après la publication d’un post, c’est le post, pas l’affiche. Le graphique sur 7 jours rend cela visible.</li>
+</ul>
+
+<p>Prêt à essayer ? <a href="/fr/blog/how-to-create-a-dynamic-qr-code/">Créez votre premier code dynamique</a> — connexion gratuite, 8 codes — et revenez après votre premier tirage. Déjà imprimé et besoin d’un correctif ? <a href="/fr/blog/how-to-edit-a-qr-code-after-printing/">Comment modifier un QR code après impression</a>.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly présentant un QR code"></div>
+      <div>
+        <h3>Essayez-le à votre prochain tirage</h3>
+        <p>Créez un code dynamique gratuit et regardez les statistiques arriver.</p>
+        <a class="btn" href="/fr/?mode=dynamic">Créez un code dynamique</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Continuer la lecture</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/fr/blog/static-vs-dynamic-qr-codes/"><b>QR codes statiques vs dynamiques</b></a>
+        <a class="rel-card" href="/fr/blog/why-is-my-qr-code-not-working/"><b>QR code qui ne fonctionne pas ? 7 correctifs qui aident</b></a>
+        <a class="rel-card" href="/fr/blog/qr-codes-for-restaurants/"><b>QR codes pour restaurants — Guide gratuit</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bon à savoir</h2>
+    <details><summary><span>Qu’est-ce qui compte comme un scan unique ?</span></summary><p>Un scanner, une fois par jour. FreeQrly compte les scanners distincts avec un hachage à sens unique de l’adresse IP, du navigateur et de la date — la même personne qui scanne deux fois dans la journée ne compte qu’une fois.</p></details>
+    <details><summary><span>Les QR codes statiques suivent-ils les scans ?</span></summary><p>Non. Les codes statiques ne touchent jamais un serveur — la destination vit dans le motif — donc il n’y a rien à compter. Seuls les codes dynamiques signalent les scans.</p></details>
+    <details><summary><span>Les données des visiteurs sont-elles privées ?</span></summary><p>Oui. Les statistiques sont uniquement des agrégats : des chiffres par jour, pays, ville, appareil et système d’exploitation. Pas de noms, pas d’e-mails, pas de positions exactes, pas d’enregistrements par visiteur. Les scans uniques utilisent un hachage irréversible.</p></details>
+    <details><summary><span>Puis-je voir qui a scanné mon QR code ?</span></summary><p>Non — et c’est voulu. FreeQrly compte les scans ; il n’identifie pas ceux qui scannent.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/fr/" style="color:inherit">FreeQrly</a> — fait discrètement, dans votre navigateur.</div>
+    <p class="flinks"><a href="/fr/scan/">Scanner QR</a><a href="/fr/blog/">Toutes les notes de terrain</a><a href="/fr/about/">À propos</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

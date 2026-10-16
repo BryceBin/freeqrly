@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic QR Code Statistics: What You Can Track | FreeQrly</title>
+<meta name="description" content="What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.">
+<link rel="canonical" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Dynamic QR Code Statistics: What You Can Track | FreeQrly">
+<meta property="og:description" content="What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Dynamic QR Code Statistics: What You Can Track | FreeQrly","description":"What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as a unique scan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One scanner, once per day. FreeQrly counts distinct scanners using a one-way hash of IP address, browser, and date — the same person scanning twice in a day counts once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do static QR codes track scans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Static codes never touch a server — the destination lives in the pattern — so there's nothing to count. Only dynamic codes report scans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is visitor data private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Stats are aggregates only: counts by day, country, city, device, and OS. No names, emails, exact locations, or per-visitor records. Unique scans use a non-reversible hash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see who scanned my QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — and that's by design. FreeQrly counts scans; it doesn't identify scanners."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">Studio</a><a href="/blog/">Field notes</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt="Qly the FreeQrly elephant mascot"></div>
+    <div class="kicker" style="text-align:center">Field notes</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">What dynamic QR <span class='hl hl-honey'>statistics</span> tell you</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">A dynamic code reports home every time it's scanned. Here's what FreeQrly counts, how to read it, and what it never collects.</p>
+    <p class="meta" style="text-align:center">October 16, 2026 · 4 min read</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>A static code is silent: it never reports home, so nobody — including you — knows how often it was scanned. A dynamic code reports every scan to your Dashboard. Here's what FreeQrly counts, how to read it, and what it deliberately never collects.</p>
+
+<h2>The numbers on each card</h2>
+<ul>
+<li><strong>Total scans.</strong> Every scan of the code, all time.</li>
+<li><strong>Today.</strong> Scans so far today.</li>
+<li><strong>Unique scans.</strong> Distinct scanners, counted once per day. Two scans by the same person on the same day count as one unique scan.</li>
+<li><strong>Last 7 days.</strong> A daily bar chart covering today and the previous six days — always seven bars, with zero-height bars for quiet days, so you can see gaps at a glance.</li>
+</ul>
+
+<h2>The breakdowns</h2>
+<p>Open Stats on a code and you get four breakdowns, each with counts and percentages:</p>
+<ul>
+<li><strong>By country and by city.</strong> Where scans came from, from the scanner's approximate location.</li>
+<li><strong>By device.</strong> Phone, tablet, or desktop.</li>
+<li><strong>By OS.</strong> iOS, Android, and the rest.</li>
+</ul>
+<p>Use them the way a campaign would: a flyer in two neighborhoods shows which one pulls; a poster that gets desktop scans at noon is probably being scanned from a screenshot, not the wall.</p>
+
+<h2>What FreeQrly never collects</h2>
+<p>Stats are aggregates — there is no per-visitor record to look at. A "unique scan" is a one-way hash of the scanner's IP address, browser, and date: enough to count distinct scanners per day, impossible to reverse into a person. No names, no emails, no exact locations, no cross-code tracking of individuals. And static codes track nothing at all — they never touch a server, so there's nothing to count.</p>
+
+<h2>Reading the numbers honestly</h2>
+<ul>
+<li><strong>Scans are not customers.</strong> A scan is a glance. Compare codes against each other, not against a fantasy benchmark.</li>
+<li><strong>Zero is data.</strong> A code with no scans for a week is telling you the placement is wrong, not the code.</li>
+<li><strong>Spikes need context.</strong> A burst of scans right after a post goes out is the post, not the poster. The 7-day chart makes this visible.</li>
+</ul>
+
+<p>Ready to try it? <a href="/blog/how-to-create-a-dynamic-qr-code/">Create your first dynamic code</a> — free sign-in, 8 codes — and check back after your first print run. Already printed and need a fix? <a href="/blog/how-to-edit-a-qr-code-after-printing/">How to edit a QR code after printing</a>.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
+      <div>
+        <h3>Try it with your next print run</h3>
+        <p>Create a free dynamic code and watch the stats come in.</p>
+        <a class="btn" href="/?mode=dynamic">Create a dynamic code</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Keep reading</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/static-vs-dynamic-qr-codes/"><b>Static vs Dynamic QR Codes</b></a>
+        <a class="rel-card" href="/blog/why-is-my-qr-code-not-working/"><b>QR Code Not Working? 7 Fixes That Help</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-restaurants/"><b>QR Codes for Restaurants — Free Guide</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Good to know</h2>
+    <details><summary><span>What counts as a unique scan?</span></summary><p>One scanner, once per day. FreeQrly counts distinct scanners using a one-way hash of IP address, browser, and date — the same person scanning twice in a day counts once.</p></details>
+    <details><summary><span>Do static QR codes track scans?</span></summary><p>No. Static codes never touch a server — the destination lives in the pattern — so there's nothing to count. Only dynamic codes report scans.</p></details>
+    <details><summary><span>Is visitor data private?</span></summary><p>Yes. Stats are aggregates only: counts by day, country, city, device, and OS. No names, emails, exact locations, or per-visitor records. Unique scans use a non-reversible hash.</p></details>
+    <details><summary><span>Can I see who scanned my QR code?</span></summary><p>No — and that's by design. FreeQrly counts scans; it doesn't identify scanners.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, in your browser.</div>
+    <p class="flinks"><a href="/scan/">QR scanner</a><a href="/blog/">All field notes</a><a href="/about/">About</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

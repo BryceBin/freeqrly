@@ -13,7 +13,6 @@
  "A static code lasts forever, but its destination might not: if you delete the page it links to, the code \"stops working\". Link to stable URLs you control, and your codes will outlive most of your marketing materials.",
  "Make yours",
  "Pick any type in the <a href=\"/\">free generator</a> — link, vCard, WiFi — download the PNG or SVG, and print it. No sign-up needed for a static code, no trial, no expiry date hiding in the fine print.",
- "<a class=\"rel-card\" href=\"/blog/scan-qr-code-from-image/\"><b>How to Scan a QR Code from a Picture</b></a> <a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a>",
  "Static ones don't — the destination is baked into the pattern. Dynamic ones from trial-based generators stop working when the subscription or trial ends.",
  "<span>How can I tell if my QR code will expire?</span>",
  "If the generator required an account or email, it's almost certainly dynamic and tied to a subscription. True static generators work with no sign-up.",

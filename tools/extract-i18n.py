@@ -79,7 +79,12 @@ class P(HTMLParser):
         raw = self.get_starttag_text()
         for f in self.stack:
             f[1].append(raw)
-        if tag in self.BLOCKS:
+        # CTA buttons + related-reading cards are <a> (inline), so their text
+        # would be lost inside a discarded parent div. Treat them as blocks
+        # so their innerHTML ("Open the studio", "<b>Title</b>") is collected.
+        is_block_anchor = tag == "a" and any(
+            c in ("btn", "rel-card") for c in dict(attrs).get("class", "").split())
+        if tag in self.BLOCKS or is_block_anchor:
             # mark parent frames as having a block child
             for f in self.stack:
                 f[2] = True
@@ -92,7 +97,7 @@ class P(HTMLParser):
         if tag in SKIP_TAGS:
             self.skip_depth = max(0, self.skip_depth - 1)
             return
-        if tag in self.BLOCKS and self.stack and self.stack[-1][0] == tag:
+        if (tag in self.BLOCKS or tag == "a") and self.stack and self.stack[-1][0] == tag:
             _, parts, has_child, has_i18n = self.stack.pop()
             raw = self.get_starttag_text()
             for f in self.stack:

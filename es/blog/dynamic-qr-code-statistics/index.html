@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estadísticas de códigos QR dinámicos: qué puedes seguir | FreeQrly</title>
+<meta name="description" content="Qué te dicen las estadísticas de códigos QR dinámicos: escaneos totales y únicos, por día, país, ciudad, dispositivo y sistema operativo, y qué nunca sigue FreeQrly.">
+<link rel="canonical" href="https://freeqrly.com/es/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Estadísticas de códigos QR dinámicos: qué puedes seguir | FreeQrly">
+<meta property="og:description" content="Qué te dicen las estadísticas de códigos QR dinámicos: escaneos totales y únicos, por día, país, ciudad, dispositivo y sistema operativo, y qué nunca sigue FreeQrly.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/es/blog/dynamic-qr-code-statistics/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Estadísticas de códigos QR dinámicos: qué puedes seguir | FreeQrly","description":"Qué te dicen las estadísticas de códigos QR dinámicos: escaneos totales y únicos, por día, país, ciudad, dispositivo y sistema operativo, y qué nunca sigue FreeQrly.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué cuenta como un escaneo único?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un escaneador, una vez al día. FreeQrly cuenta escaneadores distintos con un hash de una sola vía de la dirección IP, el navegador y la fecha: la misma persona escaneando dos veces en un día cuenta una."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Los códigos QR estáticos siguen escaneos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Los códigos estáticos nunca tocan un servidor — el destino vive en el patrón — así que no hay nada que contar. Solo los códigos dinámicos reportan escaneos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Los datos de visitantes son privados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Las estadísticas son solo agregados: conteos por día, país, ciudad, dispositivo y sistema operativo. Sin nombres, correos, ubicaciones exactas ni registros por visitante. Los escaneos únicos usan un hash no reversible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo ver quién escaneó mi código QR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, y es por diseño. FreeQrly cuenta escaneos; no identifica a quien escanea."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/es/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/es/#studio">Generador</a><a href="/es/blog/">Notas de campo</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notas de campo</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Qué te dicen las <span class='hl hl-honey'>estadísticas</span> de los códigos QR dinámicos</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un código dinámico avisa a casa cada vez que lo escanean. Esto es lo que cuenta FreeQrly, cómo leerlo y qué nunca recoge.</p>
+    <p class="meta" style="text-align:center">16 de octubre de 2026 · 4 min de lectura</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>Un código estático es silencioso: nunca avisa a casa, así que nadie — ni siquiera tú — sabe cuántas veces se escaneó. Un código dinámico reporta cada escaneo a tu Panel. Esto es lo que cuenta FreeQrly, cómo leerlo y qué deliberadamente nunca recoge.</p>
+
+<h2>Los números de cada tarjeta</h2>
+<ul>
+<li><strong>Escaneos totales.</strong> Cada escaneo del código, de todos los tiempos.</li>
+<li><strong>Hoy.</strong> Escaneos de hoy hasta ahora.</li>
+<li><strong>Escaneos únicos.</strong> Escaneadores distintos, contados una vez al día. Dos escaneos de la misma persona el mismo día cuentan como un escaneo único.</li>
+<li><strong>Últimos 7 días.</strong> Un gráfico de barras diario que cubre hoy y los seis días anteriores: siempre siete barras, con barras de altura cero para los días tranquilos, así ves los huecos de un vistazo.</li>
+</ul>
+
+<h2>Los desgloses</h2>
+<p>Abre Estadísticas en un código y tienes cuatro desgloses, cada uno con conteos y porcentajes:</p>
+<ul>
+<li><strong>Por país y por ciudad.</strong> De dónde vinieron los escaneos, según la ubicación aproximada de quien escanea.</li>
+<li><strong>Por dispositivo.</strong> Teléfono, tableta o escritorio.</li>
+<li><strong>Por sistema operativo.</strong> iOS, Android y el resto.</li>
+</ul>
+<p>Úsalos como lo haría una campaña: un folleto en dos barrios muestra cuál tira más; un cartel que recibe escaneos de escritorio al mediodía probablemente se está escaneando desde una captura de pantalla, no desde la pared.</p>
+
+<h2>Qué nunca recoge FreeQrly</h2>
+<p>Las estadísticas son agregados: no hay registro por visitante que mirar. Un «escaneo único» es un hash de una sola vía de la dirección IP, el navegador y la fecha de quien escanea: basta para contar escaneadores distintos por día, imposible de revertir hasta una persona. Sin nombres, sin correos, sin ubicaciones exactas, sin seguimiento de individuos entre códigos. Y los códigos estáticos no siguen nada en absoluto: nunca tocan un servidor, así que no hay nada que contar.</p>
+
+<h2>Leyendo los números con honestidad</h2>
+<ul>
+<li><strong>Los escaneos no son clientes.</strong> Un escaneo es un vistazo. Compara códigos entre sí, no contra un punto de referencia imaginario.</li>
+<li><strong>Cero es dato.</strong> Un código sin escaneos en una semana te dice que la ubicación está mal, no el código.</li>
+<li><strong>Los picos necesitan contexto.</strong> Una ráfaga de escaneos justo después de publicar un post es el post, no el cartel. El gráfico de 7 días lo hace visible.</li>
+</ul>
+
+<p>¿Listo para probarlo? <a href="/es/blog/how-to-create-a-dynamic-qr-code/">Crea tu primer código dinámico</a> — inicio de sesión gratis, 8 códigos — y vuelve después de tu primera tirada impresa. ¿Ya imprimiste y necesitas un arreglo? <a href="/es/blog/how-to-edit-a-qr-code-after-printing/">Cómo editar un código QR después de imprimir</a>.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presentando un código QR"></div>
+      <div>
+        <h3>Pruébalo con tu próxima tirada impresa</h3>
+        <p>Crea un código dinámico gratis y mira cómo llegan las estadísticas.</p>
+        <a class="btn" href="/es/?mode=dynamic">Crea un código dinámico</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Seguir leyendo</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/es/blog/static-vs-dynamic-qr-codes/"><b>Códigos QR estáticos vs dinámicos</b></a>
+        <a class="rel-card" href="/es/blog/why-is-my-qr-code-not-working/"><b>¿Código QR no funciona? 7 arreglos que ayudan</b></a>
+        <a class="rel-card" href="/es/blog/qr-codes-for-restaurants/"><b>Códigos QR para restaurantes — Guía gratis</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bueno saberlo</h2>
+    <details><summary><span>¿Qué cuenta como un escaneo único?</span></summary><p>Un escaneador, una vez al día. FreeQrly cuenta escaneadores distintos con un hash de una sola vía de la dirección IP, el navegador y la fecha: la misma persona escaneando dos veces en un día cuenta una.</p></details>
+    <details><summary><span>¿Los códigos QR estáticos siguen escaneos?</span></summary><p>No. Los códigos estáticos nunca tocan un servidor — el destino vive en el patrón — así que no hay nada que contar. Solo los códigos dinámicos reportan escaneos.</p></details>
+    <details><summary><span>¿Los datos de visitantes son privados?</span></summary><p>Sí. Las estadísticas son solo agregados: conteos por día, país, ciudad, dispositivo y sistema operativo. Sin nombres, correos, ubicaciones exactas ni registros por visitante. Los escaneos únicos usan un hash no reversible.</p></details>
+    <details><summary><span>¿Puedo ver quién escaneó mi código QR?</span></summary><p>No, y es por diseño. FreeQrly cuenta escaneos; no identifica a quien escanea.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/es/" style="color:inherit">FreeQrly</a> — hecho en silencio, en tu navegador.</div>
+    <p class="flinks"><a href="/es/scan/">Escáner QR</a><a href="/es/blog/">Todas las notas de campo</a><a href="/es/about/">Acerca de</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

@@ -115,7 +115,7 @@ POSTS = [
 </ul>
 
 <h2>Where FreeQrly stands</h2>
-<p>We make static codes — free, unlimited, no account. It covers most everyday needs. Dynamic codes with editable links and scan stats are available with a free sign-in, for people running campaigns.</p>
+<p>FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href="/blog/how-to-create-a-dynamic-qr-code/">How to create one</a>, <a href="/blog/how-to-edit-a-qr-code-after-printing/">how to edit after printing</a>, and <a href="/blog/dynamic-qr-code-statistics/">what the stats tell you</a>.</p>
 """,
   faq=[
     ("What is the difference between static and dynamic QR codes?",
@@ -600,6 +600,186 @@ POSTS += [{'body': '\n'
   'slug': 'wedding-rsvp-qr-code',
   'title': 'Wedding RSVP QR Codes: A Complete Guide | FreeQrly'}]
 
+
+POSTS += [
+ dict(
+  slug="how-to-create-a-dynamic-qr-code",
+  title="How to Create a Dynamic QR Code (Free & Editable) | FreeQrly",
+  desc="Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 8 free codes.",
+  h1="How to create a <span class='hl hl-mint'>dynamic</span> QR code",
+  lede="A dynamic QR code lets you change the destination after printing — and see how many people scanned. Here's how to make one, free, in about a minute.",
+  date="October 16, 2026",
+  datePublished="2026-10-16",
+  mascot="faq",
+  body="""
+<p>Static codes are great — until the destination changes. The flyer is printed, the menu moved, the campaign URL wasn't final. A <strong>dynamic QR code</strong> fixes that: the printed pattern stays the same, but you can change where it points, any time, from your Dashboard. You also get scan counts, so you know whether anyone is actually scanning.</p>
+<p>On FreeQrly, dynamic codes are free. Sign in (email, Google, or GitHub), and you get 8 of them. No trial, no card, no expiry games. Here's the whole process.</p>
+
+<ol>
+<li><b>Sign in — free.</b> Open the <a href="/login/">sign-in page</a> and create an account with email + password, Google, or GitHub. Static codes never need this; dynamic codes do, because the code has to belong to someone.</li>
+<li><b>Switch to Dynamic.</b> In the <a href="/?mode=dynamic">studio</a>, flip the toggle from Static to Dynamic. Everything else — types, styling, download — works exactly the same.</li>
+<li><b>Pick a type and fill it in.</b> Website, WiFi, contact, event — all 12 content types work as dynamic codes. (Batch stays static: one dynamic code per generation.)</li>
+<li><b>Style it if you want.</b> Dots, colors, logo, frame — the preview updates live. The style is saved with the code, so the Dashboard and the download match.</li>
+<li><b>Generate.</b> Hit Generate. You get a short link like <code>freeqrly.com/q/XXXXXXX</code> — that's what the QR pattern encodes. Print it, ship it, stick it on the wall.</li>
+<li><b>Manage it later.</b> Your codes live in the <a href="/dashboard/">Dashboard</a>: edit, check stats, or delete one to free a slot.</li>
+</ol>
+
+<h2>What the QR code actually contains</h2>
+<p>A dynamic code does not hold your link directly. It holds a short FreeQrly link, and our server redirects scanners to your destination. That's the mechanism that makes editing and counting possible — and it's why dynamic codes need an account while static ones don't. If a service ever tells you its "free" codes need an account, this is the mechanism at work; the difference here is that the account is free and the codes don't die.</p>
+
+<h2>The limits, stated plainly</h2>
+<ul>
+<li><strong>8 codes, free.</strong> That's the free quota. Delete a code and the slot frees up.</li>
+<li><strong>One at a time.</strong> Dynamic codes are generated one by one; batch generation stays static.</li>
+<li><strong>Editing changes the destination, not the pattern.</strong> The printed code keeps working through every edit — which is the entire point.</li>
+</ul>
+
+<p>Not sure whether you need dynamic at all? <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>. Already printed and need to fix a link? <a href="/blog/how-to-edit-a-qr-code-after-printing/">How to edit a QR code after printing</a>. Curious what the numbers look like? <a href="/blog/dynamic-qr-code-statistics/">What dynamic QR code statistics tell you</a>.</p>
+""",
+  howto=[
+    ("Sign in — free",
+     "Create a free account with email + password, Google, or GitHub. Static codes skip this; dynamic codes need an owner."),
+    ("Switch to Dynamic",
+     "In the studio, flip the Static/Dynamic toggle to Dynamic."),
+    ("Pick a type and fill it in",
+     "Website, WiFi, contact, event — all 12 content types work. Batch stays static."),
+    ("Style it",
+     "Dots, colors, logo, frame. The preview updates live and the style is saved with the code."),
+    ("Generate",
+     "Hit Generate. You get a short link like freeqrly.com/q/XXXXXXX — that's what the pattern encodes."),
+    ("Manage it later",
+     "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot."),
+  ],
+  faq=[
+    ("Is creating a dynamic QR code really free?",
+     "Yes. Sign in free, create up to 8 dynamic codes, edit them, see stats. No trial period, no card, no subscription. Static codes remain free and unlimited with no account at all."),
+    ("Do I need an account for a dynamic QR code?",
+     "Yes — the code has to belong to someone so only you can edit it. Email + password, Google, or GitHub. Static codes never need an account."),
+    ("How many dynamic QR codes can I have?",
+     "8 on the free account. Delete a code to free its slot."),
+    ("What does a dynamic QR code link to?",
+     "A short FreeQrly link (freeqrly.com/q/XXXXXXX) that redirects to your destination. Scanners land on your page; the redirect is what makes editing and stats possible."),
+  ],
+  cta=dict(title="Make your first dynamic code",
+           text="Free sign-in, 8 codes, editable after printing. Start in the studio.",
+           href="/?mode=dynamic", btn="Create a dynamic code"),
+ ),
+ dict(
+  slug="how-to-edit-a-qr-code-after-printing",
+  title="How to Edit a QR Code After Printing | FreeQrly",
+  desc="Printed the wrong link? Fix it without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.",
+  h1="Edit a QR code <span class='hl hl-blush'>after printing</span>",
+  lede="The flyers are already out — and the link is wrong. With a dynamic code, that's a two-minute fix, not a reprint.",
+  date="October 16, 2026",
+  datePublished="2026-10-16",
+  mascot="error",
+  body="""
+<p>The flyers are already out — and the link is wrong. Or the menu moved. Or the campaign page wasn't final when the poster went to print. With a static code, that's a reprint. With a dynamic code, it's a two-minute fix.</p>
+<p>The trick: a dynamic code's pattern never changes. It points at a short link on FreeQrly's server, and you control where that link sends people. Edit the destination, and every printed copy — already on walls, flyers, packaging — serves the new content instantly. No reprint, no stickers over the old code.</p>
+
+<ol>
+<li><b>Sign in.</b> Open the <a href="/login/">sign-in page</a> and log in to the account that owns the code.</li>
+<li><b>Open the Dashboard.</b> Go to <a href="/dashboard/">your Dashboard</a>. Every dynamic code on your account is there as a card, with its QR thumbnail and scan count.</li>
+<li><b>Open Edit.</b> On the code's card, click Edit. You'll see the same generator you used to create it — type, content, style, all of it.</li>
+<li><b>Change what you need.</b> Destination, content, even the type: a Website code can become a WiFi code. Colors, logo, frame — all editable too.</li>
+<li><b>Save.</b> Hit Save changes. Done. The printed code now serves the new content. Test it with your phone camera to be sure.</li>
+</ol>
+
+<h2>What you can change — and what you can't</h2>
+<ul>
+<li><strong>Destination and content:</strong> the link, the text, the WiFi password — anything the code carries.</li>
+<li><strong>Type:</strong> switch a code from one content type to another. The pattern doesn't care; it only holds the short link.</li>
+<li><strong>Style:</strong> colors, dots, logo, frame. The Dashboard thumbnail updates to match.</li>
+<li><strong>What you can't change:</strong> the printed pattern itself — but you never need to, since the pattern only holds the short link. And you can't transfer a code to another account.</li>
+</ul>
+
+<h2>Two things worth knowing</h2>
+<p><strong>Edits are instant and silent.</strong> There's no "republish" step and no delay — the next scan gets the new destination. If the old destination was a page you took down, fix the code first, then take the page down.</p>
+<p><strong>Deleting is permanent.</strong> Delete a code and its printed copies stop working — there's no undo. Delete only when the code is truly retired; the slot frees up for a new code. (Still unsure whether dynamic is right for you? <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>. Want the full creation walkthrough? <a href="/blog/how-to-create-a-dynamic-qr-code/">How to create a dynamic QR code</a>.)</p>
+""",
+  howto=[
+    ("Sign in",
+     "Log in to the account that owns the code."),
+    ("Open the Dashboard",
+     "Your codes are listed as cards with thumbnails and scan counts."),
+    ("Open Edit",
+     "On the code's card, click Edit — the full generator opens with your content prefilled."),
+    ("Change what you need",
+     "Destination, content, type, style — everything is editable."),
+    ("Save",
+     "Hit Save changes. The printed code serves the new content instantly — test it with your phone."),
+  ],
+  faq=[
+    ("Do I need to reprint a QR code after editing it?",
+     "No. The printed pattern holds a short link; editing changes where that link points. Every printed copy serves the new content immediately."),
+    ("Can I change a dynamic QR code to a different type?",
+     "Yes. In the Dashboard, open Edit and pick a new type — a Website code can become a WiFi code, for example. The printed pattern stays valid."),
+    ("Does editing a QR code reset its scan statistics?",
+     "No. Stats keep accumulating on the same code. Deleting a code removes it and its stats permanently."),
+    ("What if I delete a dynamic QR code by mistake?",
+     "There's no undo — printed copies stop working and the slot frees up. Only delete codes that are truly retired."),
+  ],
+  cta=dict(title="Fix a printed code",
+           text="Sign in, open the Dashboard, edit, save. The printed code updates instantly.",
+           href="/dashboard/", btn="Open the Dashboard"),
+ ),
+ dict(
+  slug="dynamic-qr-code-statistics",
+  title="Dynamic QR Code Statistics: What You Can Track | FreeQrly",
+  desc="What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.",
+  h1="What dynamic QR <span class='hl hl-honey'>statistics</span> tell you",
+  lede="A dynamic code reports home every time it's scanned. Here's what FreeQrly counts, how to read it, and what it never collects.",
+  date="October 16, 2026",
+  datePublished="2026-10-16",
+  mascot="batch",
+  body="""
+<p>A static code is silent: it never reports home, so nobody — including you — knows how often it was scanned. A dynamic code reports every scan to your Dashboard. Here's what FreeQrly counts, how to read it, and what it deliberately never collects.</p>
+
+<h2>The numbers on each card</h2>
+<ul>
+<li><strong>Total scans.</strong> Every scan of the code, all time.</li>
+<li><strong>Today.</strong> Scans so far today.</li>
+<li><strong>Unique scans.</strong> Distinct scanners, counted once per day. Two scans by the same person on the same day count as one unique scan.</li>
+<li><strong>Last 7 days.</strong> A daily bar chart covering today and the previous six days — always seven bars, with zero-height bars for quiet days, so you can see gaps at a glance.</li>
+</ul>
+
+<h2>The breakdowns</h2>
+<p>Open Stats on a code and you get four breakdowns, each with counts and percentages:</p>
+<ul>
+<li><strong>By country and by city.</strong> Where scans came from, from the scanner's approximate location.</li>
+<li><strong>By device.</strong> Phone, tablet, or desktop.</li>
+<li><strong>By OS.</strong> iOS, Android, and the rest.</li>
+</ul>
+<p>Use them the way a campaign would: a flyer in two neighborhoods shows which one pulls; a poster that gets desktop scans at noon is probably being scanned from a screenshot, not the wall.</p>
+
+<h2>What FreeQrly never collects</h2>
+<p>Stats are aggregates — there is no per-visitor record to look at. A "unique scan" is a one-way hash of the scanner's IP address, browser, and date: enough to count distinct scanners per day, impossible to reverse into a person. No names, no emails, no exact locations, no cross-code tracking of individuals. And static codes track nothing at all — they never touch a server, so there's nothing to count.</p>
+
+<h2>Reading the numbers honestly</h2>
+<ul>
+<li><strong>Scans are not customers.</strong> A scan is a glance. Compare codes against each other, not against a fantasy benchmark.</li>
+<li><strong>Zero is data.</strong> A code with no scans for a week is telling you the placement is wrong, not the code.</li>
+<li><strong>Spikes need context.</strong> A burst of scans right after a post goes out is the post, not the poster. The 7-day chart makes this visible.</li>
+</ul>
+
+<p>Ready to try it? <a href="/blog/how-to-create-a-dynamic-qr-code/">Create your first dynamic code</a> — free sign-in, 8 codes — and check back after your first print run. Already printed and need a fix? <a href="/blog/how-to-edit-a-qr-code-after-printing/">How to edit a QR code after printing</a>.</p>
+""",
+  faq=[
+    ("What counts as a unique scan?",
+     "One scanner, once per day. FreeQrly counts distinct scanners using a one-way hash of IP address, browser, and date — the same person scanning twice in a day counts once."),
+    ("Do static QR codes track scans?",
+     "No. Static codes never touch a server — the destination lives in the pattern — so there's nothing to count. Only dynamic codes report scans."),
+    ("Is visitor data private?",
+     "Yes. Stats are aggregates only: counts by day, country, city, device, and OS. No names, emails, exact locations, or per-visitor records. Unique scans use a non-reversible hash."),
+    ("Can I see who scanned my QR code?",
+     "No — and that's by design. FreeQrly counts scans; it doesn't identify scanners."),
+  ],
+  cta=dict(title="Try it with your next print run",
+           text="Create a free dynamic code and watch the stats come in.",
+           href="/?mode=dynamic", btn="Create a dynamic code"),
+ ),
+]
+
 REL_CSS = """<style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -646,6 +826,7 @@ def build(p, all_posts=None):
     faq_html = "\n".join(
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
         for q, a in p["faq"])
+    cta = p.get('cta') or {'title': 'Try it yourself — free', 'text': 'Everything in this article works in the FreeQrly studio right now. Static codes, ten content types, PNG and SVG export.', 'href': '/#studio', 'btn': 'Open the studio'}
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -668,7 +849,7 @@ def build(p, all_posts=None):
 <link rel="stylesheet" href="../../assets/css/main.css">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"2026-10-13","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
+{{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"{p.get('datePublished','2026-10-13')}","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
 </script>
 <script type="application/ld+json">
 {{
@@ -695,9 +876,9 @@ def build(p, all_posts=None):
 {sources_html}    <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
-        <h3>Try it yourself — free</h3>
-        <p>Everything in this article works in the FreeQrly studio right now. Static codes, ten content types, PNG and SVG export.</p>
-        <a class="btn" href="/#studio">Open the studio</a>
+        <h3>{cta['title']}</h3>
+        <p>{cta['text']}</p>
+        <a class="btn" href="{cta['href']}">{cta['btn']}</a>
       </div>
     </div>
     <div class="related">

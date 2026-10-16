@@ -56,7 +56,7 @@
     <div class="devgrid">
       <div class="devcard">
         <h3>🧰 MCP-сервер</h3>
-        <p><strong>color / bgcolor</strong> — 6-значный hex, без <code>#</code> (по умолчанию <code>2F4A62</code> / <code>ffffff</code>).</p>
+        <p>Добавьте <code>https://freeqrly.com/mcp</code> в ваш MCP-клиент. Один инструмент — <code>generate_qr</code> — без авторизации. Работает с Claude Code, Cursor и всем, что говорит по Streamable HTTP.</p>
       </div>
       <div class="devcard">
         <h3>🌐 HTTP API</h3>
@@ -64,18 +64,18 @@
       </div>
       <div class="devcard">
         <h3>📜 Навык для агента</h3>
-        <p><strong>ecc</strong> — коррекция ошибок <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (по умолчанию <code>M</code>). Для печати или логотипов используйте <code>Q</code>/<code>H</code>.</p>
+        <p>В репозитории лежит <code>SKILL.md</code> с рецептами полезных нагрузок: <code>skills/qr-generator/</code>. Направьте на него вашего агента — остальное он знает сам.</p>
       </div>
       <div class="devcard">
         <h3>🤖 llms.txt</h3>
-        <p>В репозитории лежит <code>SKILL.md</code> с рецептами полезных нагрузок: <code>skills/qr-generator/</code>. Направьте на него вашего агента — остальное он знает сам.</p>
+        <p><code>/llms.txt</code> описывает весь сайт для краулеров и ассистентов — эндпоинты, форматы полезных нагрузок и карта страниц в одном файле.</p>
       </div>
     </div>
 
     <div class="prose">
       <h2>HTTP API</h2>
       <div class="endpoint"><span class="m">GET</span> https://freeqrly.com/api/qr?data=TEXT&amp;size=1024&amp;margin=4&amp;color=2F4A62&amp;bgcolor=ffffff&amp;ecc=M</div>
-      <p>Добавьте <code>https://freeqrly.com/mcp</code> в ваш MCP-клиент. Один инструмент — <code>generate_qr</code> — без авторизации. Работает с Claude Code, Cursor и всем, что говорит по Streamable HTTP.</p>
+      <p>Возвращает <code>image/svg+xml</code>. Обязателен только <code>data</code>; у остального разумные значения по умолчанию. Ошибки возвращаются как JSON с полем <code>error</code>.</p>
       <pre class="code">curl "https://freeqrly.com/api/qr?data=https://example.com&amp;size=1024" \
   -o qr.svg
 
@@ -88,13 +88,13 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
         <li><strong>data</strong> — текст для кодирования (обязательно, макс. 2000 символов). URL, WiFi-строки, vCard, обычный текст.</li>
         <li><strong>size</strong> — размер вывода в px, 128–2048 (по умолчанию 1024).</li>
         <li><strong>margin</strong> — тихая зона в модулях, 0–10 (по умолчанию 4).</li>
-        <li>Возвращает <code>image/svg+xml</code>. Обязателен только <code>data</code>; у остального разумные значения по умолчанию. Ошибки возвращаются как JSON с полем <code>error</code>.</li>
-        <li>Стандартный Streamable HTTP: <code>initialize</code>, затем <code>tools/list</code> / <code>tools/call</code>. Инструмент <code>generate_qr</code> принимает <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> и возвращает готовую к скачиванию ссылку на SVG.</li>
+        <li><strong>color / bgcolor</strong> — 6-значный hex, без <code>#</code> (по умолчанию <code>2F4A62</code> / <code>ffffff</code>).</li>
+        <li><strong>ecc</strong> — коррекция ошибок <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (по умолчанию <code>M</code>). Для печати или логотипов используйте <code>Q</code>/<code>H</code>.</li>
       </ul>
 
       <h2>MCP</h2>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/mcp</div>
-      <p><code>/llms.txt</code> описывает весь сайт для краулеров и ассистентов — эндпоинты, форматы полезных нагрузок и карта страниц в одном файле.</p>
+      <p>Стандартный Streamable HTTP: <code>initialize</code>, затем <code>tools/list</code> / <code>tools/call</code>. Инструмент <code>generate_qr</code> принимает <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> и возвращает готовую к скачиванию ссылку на SVG.</p>
       <pre class="code">{
   "jsonrpc": "2.0", "id": 1, "method": "tools/call",
   "params": {

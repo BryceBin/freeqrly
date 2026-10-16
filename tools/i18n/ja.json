@@ -53,7 +53,25 @@
   "Square": "四角",
   "Try it yourself — free": "自分で試す — 無料",
   "Your code appears instantly in the link tab.": "リンクタブにコードがすぐに表示されます。",
-  "✉️": "✉️"
+  "✉️": "✉️",
+  "October 16, 2026 · 4 min read": "2026年10月16日 · 約4分で読めます",
+  "<b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b>": "<b>QRコードに期限はある？短い答えは「いいえ」 — FreeQrly</b>",
+  "<b>Dynamic QR Code Statistics: What You Can Track</b>": "<b>動的QRコードの統計：追跡できること</b>",
+  "<b>Free QR Codes That Never Expire</b>": "<b>期限のない無料QRコード</b>",
+  "<b>How to Create a Dynamic QR Code (Free & Editable)</b>": "<b>動的QRコードの作り方（無料・編集可能）</b>",
+  "<b>How to Edit a QR Code After Printing</b>": "<b>印刷後にQRコードを編集する方法</b>",
+  "<b>How to Scan a QR Code (iPhone & Android)</b>": "<b>QRコードのスキャン方法（iPhoneとAndroid）</b>",
+  "<b>How to Scan a QR Code from a Picture</b>": "<b>写真からQRコードをスキャンする方法</b>",
+  "<b>QR Code Not Working? 7 Fixes That Help</b>": "<b>QRコードが動作しない？役立つ7つの修正</b>",
+  "<b>QR Code Print Size Guide: How Big Should It Be?</b>": "<b>QRコード印刷サイズガイド：どれくらいの大きさにすべき？</b>",
+  "<b>QR Codes for Events: Check-In, Tickets & More</b>": "<b>イベント用QRコード：チェックイン、チケットなど</b>",
+  "<b>QR Codes for Restaurants — Free Guide</b>": "<b>飲食店向けQRコード — 無料ガイド</b>",
+  "<b>Scan QR Codes Online — Free, No App, No Upload</b>": "<b>オンラインでQRコードをスキャン — 無料、アプリ不要、アップロードなし</b>",
+  "<b>Static vs Dynamic QR Codes</b>": "<b>静的QRコードと動的QRコード</b>",
+  "<b>Wedding RSVP QR Codes: A Complete Guide</b>": "<b>結婚式の出欠確認QRコード：完全ガイド</b>",
+  "Create a dynamic code": "動的コードを作成",
+  "Make a QR code →": "QRコードを作成 →",
+  "Open the studio": "スタジオを開く"
  },
  "login": {
   "Sign in — FreeQrly": "ログイン — FreeQrly",
@@ -146,7 +164,8 @@
   "This page doesn't exist — but the studio does, and it's free.": "このページは存在しません — でもスタジオはあります。無料です。",
   "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">Back to the studio →</a>": "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">スタジオに戻る →</a>",
   "<a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a><a href=\"/about/\">About</a>": "<a href=\"/scan/\">QRスキャナー</a><a href=\"/blog/\">フィールドノート</a><a href=\"/about/\">FreeQrlyについて</a>",
-  "<a href=\"/\">Free QR code generator</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a>": "<a href=\"/\">無料QRコード生成</a><a href=\"/scan/\">QRスキャナー</a><a href=\"/blog/\">フィールドノート</a>"
+  "<a href=\"/\">Free QR code generator</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a>": "<a href=\"/\">無料QRコード生成</a><a href=\"/scan/\">QRスキャナー</a><a href=\"/blog/\">フィールドノート</a>",
+  "Back to the studio →": "スタジオに戻る →"
  },
  "privacy": {
   "Privacy Policy — FreeQrly": "プライバシーポリシー — FreeQrly",
@@ -234,7 +253,8 @@
   "Does FreeQrly track my QR codes or my data?": "FreeQrlyはQRコードやデータを追跡する？",
   "Static codes are generated locally in your browser using JavaScript; your content is never uploaded to a server, and there is no scan tracking. Dynamic codes store only the destination you set, so they can be edited later, plus anonymous scan counts.": "静的コードはJavaScriptでブラウザ内にローカルで生成されます。コンテンツがサーバーにアップロードされることはなく、スキャンの追跡もありません。動的コードは、後で編集できるよう設定した遷移先と、匿名のスキャン数のみを保存します。",
   "What languages does FreeQrly support?": "FreeQrlyはどの言語に対応している？",
-  "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "10言語：英語、中国語、スペイン語、ヒンディー語、アラビア語（右から左のレイアウト）、ポルトガル語、フランス語、ロシア語、ドイツ語、日本語。"
+  "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "10言語：英語、中国語、スペイン語、ヒンディー語、アラビア語（右から左のレイアウト）、ポルトガル語、フランス語、ロシア語、ドイツ語、日本語。",
+  "Try the generator →": "ジェネレーターを試す →"
  },
  "scan": {
   "Free QR Code Scanner — 100% Private | FreeQrly": "無料QRコードスキャナー — 100%プライベート | FreeQrly",
@@ -341,7 +361,14 @@
   "Static vs dynamic QR codes": "静的QRコードと動的QRコード",
   "One is free forever, the other rents you your own code. Which one you actually need.": "一方は永久に無料、もう一方は自分のコードをレンタルさせます。本当に必要なのはどちらか。",
   "Field Notes — QR Code Guides & Tips": "フィールドノート — QRコードガイドとヒント",
-  "Practical QR code guides from FreeQrly.": "FreeQrly発の実用的なQRコードガイド。"
+  "Practical QR code guides from FreeQrly.": "FreeQrly発の実用的なQRコードガイド。",
+  "Practical QR code guides: dynamic codes you can edit after printing, how to scan, print sizes, troubleshooting, and why free codes don't have to expire.": "実用的なQRコードガイド：印刷後に編集できる動的コード、スキャン方法、印刷サイズ、トラブルシューティング、無料コードが期限切れしなくていい理由。",
+  "How to create a dynamic QR code": "動的QRコードの作り方",
+  "Free sign-in, 8 codes, editable after printing. The full walkthrough, from sign-in to print.": "無料登録、8コード、印刷後に編集可能。ログインから印刷までの完全な手順。",
+  "How to edit a QR code after printing": "印刷後にQRコードを編集する方法",
+  "Wrong link on a printed flyer? Fix it in two minutes — no reprint, no stickers.": "印刷したチラシのリンクが間違っている？2分で直せます — 再印刷なし、シールなし。",
+  "What dynamic QR code statistics tell you": "動的QRコードの統計が教えてくれること",
+  "Total and unique scans, 7-day chart, country, city, device, OS — and what FreeQrly never collects.": "合計スキャン数とユニーク数、7日間グラフ、国、都市、デバイス、OS — そしてFreeQrlyが決して集めないもの。"
  },
  "landing-batch-qr-code": {
   "Free Batch QR Code Generator | FreeQrly": "無料一括QRコードジェネレーター | FreeQrly",
@@ -686,7 +713,8 @@
   "<span>What's the catch with FreeQrly?</span>": "<span>FreeQrlyの落とし穴は？</span>",
   "There isn't one for static codes: they're generated entirely in your browser, so there's no server cost to pass on to you.": "静的コードにはありません。完全にブラウザ内で生成されるので、転嫁すべきサーバーコストがありません。",
   "How can I tell if my QR code will expire?": "自分のQRコードが期限切れになるかどうか、どう見分ける？",
-  "What's the catch with FreeQrly?": "FreeQrlyの落とし穴は？"
+  "What's the catch with FreeQrly?": "FreeQrlyの落とし穴は？",
+  "<a class=\"rel-card\" href=\"/blog/scan-qr-code-from-image/\"><b>How to Scan a QR Code from a Picture</b></a> <a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a>": "<a class=\"rel-card\" href=\"/blog/scan-qr-code-from-image/\"><b>写真からQRコードをスキャンする方法</b></a> <a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>結婚式の出欠確認QRコード：完全ガイド</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>印刷後にQRコードを編集する方法</b></a>"
  },
  "blog-how-to-scan-a-qr-code": {
   "How to Scan a QR Code (iPhone & Android) | FreeQrly": "QRコードのスキャン方法（iPhoneとAndroid） | FreeQrly",
@@ -784,7 +812,8 @@
   "At minimum: check-in/registration, a shared photo album, and venue WiFi. Add-to-calendar codes on invitations are the high-ROI extra.": "最低限：チェックイン/登録、共有写真アルバム、会場WiFi。招待状のカレンダー登録コードはROIの高い追加です。",
   "How do I make a QR code for event check-in?": "イベントチェックイン用のQRコードはどう作る？",
   "Can a QR code add an event to my calendar?": "QRコードでイベントをカレンダーに追加できる？",
-  "What QR codes do I need for an event?": "イベントにはどんなQRコードが必要？"
+  "What QR codes do I need for an event?": "イベントにはどんなQRコードが必要？",
+  "<a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a>": "<a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>動的QRコードの作り方（無料・編集可能）</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>動的QRコードの統計：追跡できること</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>静的QRコードと動的QRコード</b></a>"
  },
  "blog-qr-codes-for-restaurants": {
   "QR Codes for Restaurants — Free Guide | FreeQrly": "飲食店向けQRコード — 無料ガイド | FreeQrly",
@@ -810,7 +839,8 @@
   "Link a code directly to your Google review form and place it where happy customers look: receipts, table tents, takeout bags.": "コードをGoogleレビューフォームに直接リンクし、満足したお客様が目にする場所に置きます。レシート、テーブルテント、持ち帰り袋。",
   "What QR codes does a restaurant need?": "飲食店にはどんなQRコードが必要？",
   "Should the menu QR link to a PDF or a webpage?": "メニューQRはPDFとウェブページのどちらにリンクすべき？",
-  "How do I get more Google reviews with a QR code?": "QRコードでGoogleレビューを増やすには？"
+  "How do I get more Google reviews with a QR code?": "QRコードでGoogleレビューを増やすには？",
+  "<a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>Scan QR Codes Online — Free, No App, No Upload</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a>": "<a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>オンラインでQRコードをスキャン — 無料、アプリ不要、アップロードなし</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>イベント用QRコード：チェックイン、チケットなど</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>動的QRコードの作り方（無料・編集可能）</b></a>"
  },
  "blog-scan-qr-code-from-image": {
   "How to Scan a QR Code from a Picture | FreeQrly": "写真からQRコードをスキャンする方法 | FreeQrly",
@@ -840,7 +870,8 @@
   "Upload it to a decoder": "デコーダーにアップロード",
   "Use a free online decoder that reads the image — preferably one that works locally, so the picture is never uploaded.": "画像を読み取る無料のオンラインデコーダーを使います — ローカルで動作するものが望ましく、写真がアップロードされることはありません。",
   "Read the result": "結果を読む",
-  "The decoded link or text appears instantly. Check the URL before opening, as always.": "デコードされたリンクやテキストがすぐに表示されます。いつものように、開く前にURLを確認してください。"
+  "The decoded link or text appears instantly. Check the URL before opening, as always.": "デコードされたリンクやテキストがすぐに表示されます。いつものように、開く前にURLを確認してください。",
+  "<a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a>": "<a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>結婚式の出欠確認QRコード：完全ガイド</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>印刷後にQRコードを編集する方法</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>QRコードに期限はある？短い答えは「いいえ」 — FreeQrly</b></a>"
  },
  "blog-scan-qr-code-online": {
   "Scan QR Codes Online — Free, No App, No Upload | FreeQrly": "オンラインでQRコードをスキャン — 無料、アプリ不要、アップロードなし | FreeQrly",
@@ -872,7 +903,8 @@
   "Use your camera or upload": "カメラを使うかアップロード",
   "Point your camera at the code, or upload a photo or screenshot that contains one.": "カメラをコードに向けるか、コードを含む写真やスクリーンショットをアップロードします。",
   "Get the result instantly": "結果をすぐに取得",
-  "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "デコードされたテキストやリンクがすぐに表示されます。リンクには開くボタン、それ以外にはコピーが付きます。"
+  "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "デコードされたテキストやリンクがすぐに表示されます。リンクには開くボタン、それ以外にはコピーが付きます。",
+  "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a>": "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>イベント用QRコード：チェックイン、チケットなど</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>動的QRコードの作り方（無料・編集可能）</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>動的QRコードの統計：追跡できること</b></a>"
  },
  "blog-static-vs-dynamic-qr-codes": {
   "Static vs Dynamic QR Codes | FreeQrly": "静的QRコードと動的QRコード | FreeQrly",
@@ -910,7 +942,8 @@
   "Because dynamic codes require their server, which justifies a subscription. Many 'free' generators create dynamic codes tied to a trial — the code stops working when the trial ends.": "動的コードは彼らのサーバーを必要とし、それがサブスクを正当化するからです。多くの「無料」ジェネレーターはトライアルに紐づいた動的コードを作成します — トライアルが終わるとコードは動作しなくなります。",
   "What is the difference between static and dynamic QR codes?": "静的QRコードと動的QRコードの違いは？",
   "Do I need a dynamic QR code?": "動的QRコードは必要？",
-  "Why do free QR code generators push dynamic codes?": "無料のQRコードジェネレーターはなぜ動的コードを推すのか？"
+  "Why do free QR code generators push dynamic codes?": "無料のQRコードジェネレーターはなぜ動的コードを推すのか？",
+  "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrlyは両方作ります。静的コードは無料、無制限、アカウント不要 — ほとんどの日常のニーズをカバーします。動的コードも無料です。ログイン（メール、Google、GitHub）すれば、スキャン統計付きの編集可能なコードを8個もらえます。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">作り方</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印刷後の編集方法</a>、<a href=\"/blog/dynamic-qr-code-statistics/\">統計が教えてくれること</a>。"
  },
  "blog-wedding-rsvp-qr-code": {
   "Wedding RSVP QR Codes: A Complete Guide | FreeQrly": "結婚式の出欠確認QRコード：完全ガイド | FreeQrly",
@@ -936,7 +969,8 @@
   "Static ones don't. Generate them months ahead; they'll scan on the day and for years after as a keepsake.": "静的なものにはありません。数ヶ月前に生成してください。当日も、その後何年も思い出としてスキャンできます。",
   "How do I create a QR code for my wedding RSVP?": "結婚式の出欠確認用QRコードはどう作る？",
   "Should the RSVP QR code link to a form or a website?": "出欠確認QRコードはフォームとウェブサイトのどちらにリンクすべき？",
-  "Do wedding QR codes expire?": "結婚式のQRコードに期限はある？"
+  "Do wedding QR codes expire?": "結婚式のQRコードに期限はある？",
+  "<a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a>": "<a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>印刷後にQRコードを編集する方法</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>QRコードに期限はある？短い答えは「いいえ」 — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>QRコードのスキャン方法（iPhoneとAndroid）</b></a>"
  },
  "blog-why-is-my-qr-code-not-working": {
   "QR Code Not Working? 7 Fixes That Help | FreeQrly": "QRコードが動作しない？役立つ7つの修正 | FreeQrly",
@@ -977,5 +1011,137 @@
   "If one phone reads it and another doesn't, the code is fine — it's the camera or lighting.": "1台のスマホが読み取り、別のスマホが読み取らない場合、コードは問題ありません — カメラか照明の問題です。",
   "Re-export at higher resolution": "より高い解像度で再書き出し",
   "Blurry edges from a low-res export fail at print size. Export PNG at 1024 px or higher, or use SVG.": "低解像度の書き出しによるぼやけたエッジは、印刷サイズで失敗します。1024px以上でPNGを書き出すか、SVGを使ってください。"
+ },
+ "blog-dynamic-qr-code-statistics": {
+  "Dynamic QR Code Statistics: What You Can Track | FreeQrly": "動的QRコードの統計：追跡できること | FreeQrly",
+  "What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.": "動的QRコードの統計が教えてくれること：合計スキャン数とユニーク数、日別・国別・都市別・デバイス別・OS別 — そしてFreeQrlyが決して追跡しないもの。",
+  "What dynamic QR <span class='hl hl-honey'>statistics</span> tell you": "動的QRコードの<span class='hl hl-honey'>統計</span>が教えてくれること",
+  "A dynamic code reports home every time it's scanned. Here's what FreeQrly counts, how to read it, and what it never collects.": "動的コードはスキャンされるたびに報告します。FreeQrlyが数えているもの、その読み方、そして決して集めないものはこちら。",
+  "A static code is silent: it never reports home, so nobody — including you — knows how often it was scanned. A dynamic code reports every scan to your Dashboard. Here's what FreeQrly counts, how to read it, and what it deliberately never collects.": "静的コードは無言です。報告することは決してないので、誰も — あなたも含め — どれくらいスキャンされたか知りません。動的コードはスキャンをすべてダッシュボードに報告します。FreeQrlyが数えているもの、その読み方、そして意図的に決して集めないものはこちら。",
+  "The numbers on each card": "各カードの数字",
+  "<strong>Total scans.</strong> Every scan of the code, all time.": "<strong>合計スキャン数。</strong>そのコードの全期間のスキャンすべて。",
+  "<strong>Today.</strong> Scans so far today.": "<strong>今日。</strong>今日ここまでのスキャン。",
+  "<strong>Unique scans.</strong> Distinct scanners, counted once per day. Two scans by the same person on the same day count as one unique scan.": "<strong>ユニークスキャン。</strong>1日1回だけ数えられる、異なるスキャナー。同じ人が同じ日に2回スキャンしても、ユニークは1回です。",
+  "<strong>Last 7 days.</strong> A daily bar chart covering today and the previous six days — always seven bars, with zero-height bars for quiet days, so you can see gaps at a glance.": "<strong>過去7日間。</strong>今日と前6日間の日別棒グラフ — 常に7本のバーで、静かな日は高さゼロのバーになるので、空白が一目で分かります。",
+  "The breakdowns": "内訳",
+  "Open Stats on a code and you get four breakdowns, each with counts and percentages:": "コードの統計を開くと、件数と割合付きの内訳が4つ出ます：",
+  "<strong>By country and by city.</strong> Where scans came from, from the scanner's approximate location.": "<strong>国別・都市別。</strong>スキャンがどこから来たか — スキャナーのおおよその位置から。",
+  "<strong>By device.</strong> Phone, tablet, or desktop.": "<strong>デバイス別。</strong>スマホ、タブレット、デスクトップ。",
+  "<strong>By OS.</strong> iOS, Android, and the rest.": "<strong>OS別。</strong>iOS、Android、その他。",
+  "Use them the way a campaign would: a flyer in two neighborhoods shows which one pulls; a poster that gets desktop scans at noon is probably being scanned from a screenshot, not the wall.": "キャンペーンのように使いましょう。2つのエリアにチラシを配れば、どちらが効くか分かります。昼にデスクトップからのスキャンが多いポスターは、壁ではなくスクリーンショットからスキャンされている可能性が高いです。",
+  "What FreeQrly never collects": "FreeQrlyが決して集めないもの",
+  "Stats are aggregates — there is no per-visitor record to look at. A \"unique scan\" is a one-way hash of the scanner's IP address, browser, and date: enough to count distinct scanners per day, impossible to reverse into a person. No names, no emails, no exact locations, no cross-code tracking of individuals. And static codes track nothing at all — they never touch a server, so there's nothing to count.": "統計は集計だけです — 見るべき訪問者ごとの記録はありません。「ユニークスキャン」とは、スキャナーのIPアドレス・ブラウザ・日付から作られる一方向ハッシュです。1日の異なるスキャナーを数えるには十分で、個人に逆算することはできません。名前も、メールも、正確な位置も、個人のコード横断トラッキングもありません。そして静的コードは一切追跡しません — サーバーに触れることがないので、数えるもの自体がありません。",
+  "Reading the numbers honestly": "数字を正直に読む",
+  "<strong>Scans are not customers.</strong> A scan is a glance. Compare codes against each other, not against a fantasy benchmark.": "<strong>スキャンは顧客ではありません。</strong>スキャンは一瞥です。コード同士を比較しましょう。空想のベンチマークと比べるのではなく。",
+  "<strong>Zero is data.</strong> A code with no scans for a week is telling you the placement is wrong, not the code.": "<strong>ゼロもデータです。</strong>1週間スキャンのないコードは、コードではなく置き場所が間違っていると教えてくれています。",
+  "<strong>Spikes need context.</strong> A burst of scans right after a post goes out is the post, not the poster. The 7-day chart makes this visible.": "<strong>急増には文脈が必要です。</strong>投稿直後のスキャンの急増は、ポスターではなく投稿のせいです。7日間のグラフでそれが見えます。",
+  "Ready to try it? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">Create your first dynamic code</a> — free sign-in, 8 codes — and check back after your first print run. Already printed and need a fix? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">How to edit a QR code after printing</a>.": "試してみますか？<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">最初の動的コードを作る</a> — 無料登録、8コード — 初めての印刷が終わったらまた見に来てください。すでに印刷して修正が必要なら、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印刷後にQRコードを編集する方法</a>。",
+  "Try it with your next print run": "次の印刷で試してみる",
+  "Create a free dynamic code and watch the stats come in.": "無料の動的コードを作って、統計が入ってくるのを見てみましょう。",
+  "<a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR Code Not Working? 7 Fixes That Help</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>QR Codes for Restaurants — Free Guide</b></a>": "<a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>静的QRコードと動的QRコード</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QRコードが動作しない？役立つ7つの修正</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>飲食店向けQRコード — 無料ガイド</b></a>",
+  "<span>What counts as a unique scan?</span>": "<span>ユニークスキャンとは？</span>",
+  "One scanner, once per day. FreeQrly counts distinct scanners using a one-way hash of IP address, browser, and date — the same person scanning twice in a day counts once.": "1人のスキャナー、1日1回。FreeQrlyはIPアドレス・ブラウザ・日付の一方向ハッシュで異なるスキャナーを数えます — 同じ人が1日に2回スキャンしても1回です。",
+  "<span>Do static QR codes track scans?</span>": "<span>静的QRコードはスキャンを追跡する？</span>",
+  "No. Static codes never touch a server — the destination lives in the pattern — so there's nothing to count. Only dynamic codes report scans.": "いいえ。静的コードはサーバーに決して触れません — 行き先は模様の中にあります — だから数えるものがありません。スキャンを報告するのは動的コードだけです。",
+  "<span>Is visitor data private?</span>": "<span>訪問者のデータはプライベート？</span>",
+  "Yes. Stats are aggregates only: counts by day, country, city, device, and OS. No names, emails, exact locations, or per-visitor records. Unique scans use a non-reversible hash.": "はい。統計は集計のみです。日別・国別・都市別・デバイス別・OS別の件数だけ。名前、メール、正確な位置、訪問者ごとの記録はありません。ユニークスキャンには元に戻せないハッシュを使います。",
+  "<span>Can I see who scanned my QR code?</span>": "<span>誰がQRコードをスキャンしたか見られる？</span>",
+  "No — and that's by design. FreeQrly counts scans; it doesn't identify scanners.": "いいえ — それが設計です。FreeQrlyはスキャンを数えます。スキャナーを特定しません。",
+  "What counts as a unique scan?": "ユニークスキャンとは？",
+  "Do static QR codes track scans?": "静的QRコードはスキャンを追跡する？",
+  "Is visitor data private?": "訪問者のデータはプライベート？",
+  "Can I see who scanned my QR code?": "誰がQRコードをスキャンしたか見られる？"
+ },
+ "blog-how-to-create-a-dynamic-qr-code": {
+  "How to Create a Dynamic QR Code (Free & Editable) | FreeQrly": "動的QRコードの作り方（無料・編集可能） | FreeQrly",
+  "Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 8 free codes.": "動的QRコードを無料で作成：ログイン、種類を選ぶ、スタイルを整える、印刷する。後から再印刷なしで行き先を変更。無料8コード。",
+  "How to create a <span class='hl hl-mint'>dynamic</span> QR code": "<span class='hl hl-mint'>動的</span>QRコードの作り方",
+  "A dynamic QR code lets you change the destination after printing — and see how many people scanned. Here's how to make one, free, in about a minute.": "動的QRコードなら、印刷後に行き先を変更できます — 何人にスキャンされたかも分かります。無料で、約1分で作る方法はこちら。",
+  "Static codes are great — until the destination changes. The flyer is printed, the menu moved, the campaign URL wasn't final. A <strong>dynamic QR code</strong> fixes that: the printed pattern stays the same, but you can change where it points, any time, from your Dashboard. You also get scan counts, so you know whether anyone is actually scanning.": "静的コードは素晴らしい — 行き先が変わるまでは。チラシは印刷済み、メニューは移転、キャンペーンのURLは確定していなかった。<strong>動的QRコード</strong>がそれを解決します。印刷した模様はそのままで、どこを指すかはいつでもダッシュボードから変更できます。スキャン数も分かるので、実際に誰かがスキャンしているかも分かります。",
+  "On FreeQrly, dynamic codes are free. Sign in (email, Google, or GitHub), and you get 8 of them. No trial, no card, no expiry games. Here's the whole process.": "FreeQrlyでは動的コードは無料です。ログイン（メール、Google、GitHub）すれば8個もらえます。試用期間なし、カードなし、期限の駆け引きなし。手順は全部こちら。",
+  "<b>Sign in — free.</b> Open the <a href=\"/login/\">sign-in page</a> and create an account with email + password, Google, or GitHub. Static codes never need this; dynamic codes do, because the code has to belong to someone.": "<b>ログイン — 無料。</b><a href=\"/login/\">ログインページ</a>を開き、メール＋パスワード、Google、GitHubでアカウントを作ります。静的コードにはこれが決して不要。動的コードには必要です。コードは誰かのものでなければならないからです。",
+  "<b>Switch to Dynamic.</b> In the <a href=\"/?mode=dynamic\">studio</a>, flip the toggle from Static to Dynamic. Everything else — types, styling, download — works exactly the same.": "<b>動的に切り替える。</b><a href=\"/?mode=dynamic\">スタジオ</a>で、トグルを静的から動的に切り替えます。それ以外 — 種類、スタイル、ダウンロード — はまったく同じです。",
+  "<b>Pick a type and fill it in.</b> Website, WiFi, contact, event — all 12 content types work as dynamic codes. (Batch stays static: one dynamic code per generation.)": "<b>種類を選んで入力する。</b>Webサイト、WiFi、連絡先、予定 — 12種類すべてが動的コードとして使えます。（一括は静的のままです。動的コードは1回に1個。）",
+  "<b>Style it if you want.</b> Dots, colors, logo, frame — the preview updates live. The style is saved with the code, so the Dashboard and the download match.": "<b>お好みでスタイルを整える。</b>ドット、色、ロゴ、フレーム — プレビューはライブで更新されます。スタイルはコードと一緒に保存されるので、ダッシュボードとダウンロードが一致します。",
+  "<b>Generate.</b> Hit Generate. You get a short link like <code>freeqrly.com/q/XXXXXXX</code> — that's what the QR pattern encodes. Print it, ship it, stick it on the wall.": "<b>生成する。</b>「生成」を押します。<code>freeqrly.com/q/XXXXXXX</code>のような短いリンクがもらえます — QRの模様がエンコードするのはこれです。印刷して、送って、壁に貼りましょう。",
+  "<b>Manage it later.</b> Your codes live in the <a href=\"/dashboard/\">Dashboard</a>: edit, check stats, or delete one to free a slot.": "<b>あとで管理する。</b>コードは<a href=\"/dashboard/\">ダッシュボード</a>にあります。編集、統計の確認、スロットを空けるための削除ができます。",
+  "What the QR code actually contains": "QRコードが実際に含んでいるもの",
+  "A dynamic code does not hold your link directly. It holds a short FreeQrly link, and our server redirects scanners to your destination. That's the mechanism that makes editing and counting possible — and it's why dynamic codes need an account while static ones don't. If a service ever tells you its \"free\" codes need an account, this is the mechanism at work; the difference here is that the account is free and the codes don't die.": "動的コードはあなたのリンクを直接持ちません。短いFreeQrlyリンクを持ち、私たちのサーバーがスキャナーをあなたの行き先にリダイレクトします。この仕組みがあるから編集と集計が可能になります — そして動的コードにアカウントが必要で、静的コードに不要な理由もこれです。どこかのサービスが「無料」コードにアカウントが必要だと言ったら、それはこの仕組みのこと。ここでの違いは、アカウントが無料で、コードが死なないことです。",
+  "The limits, stated plainly": "制限 — はっきりと",
+  "<strong>8 codes, free.</strong> That's the free quota. Delete a code and the slot frees up.": "<strong>8コード、無料。</strong>これが無料枠です。コードを削除すればスロットが空きます。",
+  "<strong>One at a time.</strong> Dynamic codes are generated one by one; batch generation stays static.": "<strong>1つずつ。</strong>動的コードは1つずつ生成します。一括生成は静的のままです。",
+  "<strong>Editing changes the destination, not the pattern.</strong> The printed code keeps working through every edit — which is the entire point.": "<strong>編集で変わるのは行き先で、模様ではありません。</strong>印刷したコードはどんな編集を経ても動き続けます — それがすべてです。",
+  "Not sure whether you need dynamic at all? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Static vs dynamic, explained honestly</a>. Already printed and need to fix a link? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">How to edit a QR code after printing</a>. Curious what the numbers look like? <a href=\"/blog/dynamic-qr-code-statistics/\">What dynamic QR code statistics tell you</a>.": "そもそも動的が必要か分からない？<a href=\"/blog/static-vs-dynamic-qr-codes/\">静的と動的を正直に解説</a>。すでに印刷してリンクの修正が必要？<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印刷後にQRコードを編集する方法</a>。数字がどう見えるか気になる？<a href=\"/blog/dynamic-qr-code-statistics/\">動的QRコードの統計が教えてくれること</a>。",
+  "Make your first dynamic code": "最初の動的コードを作る",
+  "Free sign-in, 8 codes, editable after printing. Start in the studio.": "無料登録、8コード、印刷後に編集可能。スタジオで始めましょう。",
+  "<a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR Code Not Working? 7 Fixes That Help</b></a>": "<a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>動的QRコードの統計：追跡できること</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>静的QRコードと動的QRコード</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QRコードが動作しない？役立つ7つの修正</b></a>",
+  "<span>Is creating a dynamic QR code really free?</span>": "<span>動的QRコードの作成は本当に無料？</span>",
+  "Yes. Sign in free, create up to 8 dynamic codes, edit them, see stats. No trial period, no card, no subscription. Static codes remain free and unlimited with no account at all.": "はい。無料でログインして、動的コードを最大8個作成し、編集し、統計を見られます。試用期間なし、カードなし、サブスクなし。静的コードはアカウントなしで無料・無制限のままです。",
+  "<span>Do I need an account for a dynamic QR code?</span>": "<span>動的QRコードにアカウントは必要？</span>",
+  "Yes — the code has to belong to someone so only you can edit it. Email + password, Google, or GitHub. Static codes never need an account.": "はい — コードは誰かのものでなければならず、編集できるのはあなただけです。メール＋パスワード、Google、GitHub。静的コードにアカウントは決して不要です。",
+  "<span>How many dynamic QR codes can I have?</span>": "<span>動的QRコードはいくつ持てる？</span>",
+  "8 on the free account. Delete a code to free its slot.": "無料アカウントで8個。コードを削除すればスロットが空きます。",
+  "<span>What does a dynamic QR code link to?</span>": "<span>動的QRコードは何にリンクする？</span>",
+  "A short FreeQrly link (freeqrly.com/q/XXXXXXX) that redirects to your destination. Scanners land on your page; the redirect is what makes editing and stats possible.": "あなたの行き先にリダイレクトする短いFreeQrlyリンク（freeqrly.com/q/XXXXXXX）です。スキャナーはあなたのページに着地します。リダイレクトがあるから編集と統計が可能になります。",
+  "Is creating a dynamic QR code really free?": "動的QRコードの作成は本当に無料？",
+  "Do I need an account for a dynamic QR code?": "動的QRコードにアカウントは必要？",
+  "How many dynamic QR codes can I have?": "動的QRコードはいくつ持てる？",
+  "What does a dynamic QR code link to?": "動的QRコードは何にリンクする？",
+  "Sign in — free": "ログイン — 無料",
+  "Create a free account with email + password, Google, or GitHub. Static codes skip this; dynamic codes need an owner.": "メール＋パスワード、Google、GitHubで無料アカウントを作ります。静的コードはこれをスキップします。動的コードには所有者が必要です。",
+  "Switch to Dynamic": "動的に切り替える",
+  "In the studio, flip the Static/Dynamic toggle to Dynamic.": "スタジオで、静的／動的トグルを動的に切り替えます。",
+  "Pick a type and fill it in": "種類を選んで入力する",
+  "Website, WiFi, contact, event — all 12 content types work. Batch stays static.": "Webサイト、WiFi、連絡先、予定 — 12種類すべて使えます。一括は静的のままです。",
+  "Style it": "スタイルを整える",
+  "Dots, colors, logo, frame. The preview updates live and the style is saved with the code.": "ドット、色、ロゴ、フレーム。プレビューはライブで更新され、スタイルはコードと一緒に保存されます。",
+  "Hit Generate. You get a short link like freeqrly.com/q/XXXXXXX — that's what the pattern encodes.": "「生成」を押します。freeqrly.com/q/XXXXXXXのような短いリンクがもらえます — 模様がエンコードするのはこれです。",
+  "Manage it later": "あとで管理する",
+  "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot.": "ダッシュボードでコードを探します。編集、統計の確認、スロットを空けるための削除ができます。"
+ },
+ "blog-how-to-edit-a-qr-code-after-printing": {
+  "How to Edit a QR Code After Printing | FreeQrly": "印刷後にQRコードを編集する方法 | FreeQrly",
+  "Printed the wrong link? Fix it without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.": "間違ったリンクを印刷した？再印刷なしで直しましょう。ダッシュボードで動的QRコードの行き先・種類・スタイルを編集 — 印刷したコードは即座に更新されます。",
+  "Edit a QR code <span class='hl hl-blush'>after printing</span>": "QRコードを<span class='hl hl-blush'>印刷後に</span>編集する",
+  "The flyers are already out — and the link is wrong. With a dynamic code, that's a two-minute fix, not a reprint.": "チラシはすでに出回っている — なのにリンクが間違っている。動的コードなら、再印刷ではなく2分で直せます。",
+  "The flyers are already out — and the link is wrong. Or the menu moved. Or the campaign page wasn't final when the poster went to print. With a static code, that's a reprint. With a dynamic code, it's a two-minute fix.": "チラシはすでに出回っている — なのにリンクが間違っている。あるいはメニューが移転した。あるいはポスターが印刷に回ったとき、キャンペーンページが確定していなかった。静的コードなら再印刷です。動的コードなら2分で直せます。",
+  "The trick: a dynamic code's pattern never changes. It points at a short link on FreeQrly's server, and you control where that link sends people. Edit the destination, and every printed copy — already on walls, flyers, packaging — serves the new content instantly. No reprint, no stickers over the old code.": "コツはこうです。動的コードの模様は決して変わりません。FreeQrlyのサーバー上の短いリンクを指していて、そのリンクが人をどこに送るかはあなたが管理します。行き先を編集すれば、すでに壁やチラシやパッケージにある印刷済みのコピーすべてが、即座に新しいコンテンツを出します。再印刷なし、古いコードの上にシールを貼る必要もなし。",
+  "<b>Sign in.</b> Open the <a href=\"/login/\">sign-in page</a> and log in to the account that owns the code.": "<b>ログインする。</b><a href=\"/login/\">ログインページ</a>を開き、コードの所有者であるアカウントでログインします。",
+  "<b>Open the Dashboard.</b> Go to <a href=\"/dashboard/\">your Dashboard</a>. Every dynamic code on your account is there as a card, with its QR thumbnail and scan count.": "<b>ダッシュボードを開く。</b><a href=\"/dashboard/\">ダッシュボード</a>へ。あなたのアカウントの動的コードはすべて、QRサムネイルとスキャン数付きのカードで並んでいます。",
+  "<b>Open Edit.</b> On the code's card, click Edit. You'll see the same generator you used to create it — type, content, style, all of it.": "<b>編集を開く。</b>コードのカードで「編集」をクリックします。作成時に使ったのと同じジェネレーター — 種類、内容、スタイル、全部 — が表示されます。",
+  "<b>Change what you need.</b> Destination, content, even the type: a Website code can become a WiFi code. Colors, logo, frame — all editable too.": "<b>必要なものを変更する。</b>行き先、内容、種類まで。WebサイトのコードがWiFiのコードになることもあります。色、ロゴ、フレームもすべて編集できます。",
+  "<b>Save.</b> Hit Save changes. Done. The printed code now serves the new content. Test it with your phone camera to be sure.": "<b>保存する。</b>「変更を保存」を押します。完了です。印刷したコードは新しいコンテンツを出すようになります。念のためスマホのカメラでテストしましょう。",
+  "What you can change — and what you can't": "変更できるもの — できないもの",
+  "<strong>Destination and content:</strong> the link, the text, the WiFi password — anything the code carries.": "<strong>行き先と内容：</strong>リンク、テキスト、WiFiパスワード — コードが持つものすべて。",
+  "<strong>Type:</strong> switch a code from one content type to another. The pattern doesn't care; it only holds the short link.": "<strong>種類：</strong>コードをあるコンテンツ種類から別の種類に切り替えます。模様は気にしません。短いリンクだけを持っているからです。",
+  "<strong>Style:</strong> colors, dots, logo, frame. The Dashboard thumbnail updates to match.": "<strong>スタイル：</strong>色、ドット、ロゴ、フレーム。ダッシュボードのサムネイルもそれに合わせて更新されます。",
+  "<strong>What you can't change:</strong> the printed pattern itself — but you never need to, since the pattern only holds the short link. And you can't transfer a code to another account.": "<strong>変更できないもの：</strong>印刷した模様そのもの — でも変更する必要は決してありません。模様が持つのは短いリンクだけだからです。コードを別のアカウントに譲渡することもできません。",
+  "Two things worth knowing": "知っておきたい2つのこと",
+  "<strong>Edits are instant and silent.</strong> There's no \"republish\" step and no delay — the next scan gets the new destination. If the old destination was a page you took down, fix the code first, then take the page down.": "<strong>編集は即座で静かです。</strong>「再公開」ステップも遅延もありません — 次のスキャンで新しい行き先が表示されます。古い行き先が取り下げたページだった場合は、まずコードを修正してから、ページを取り下げましょう。",
+  "<strong>Deleting is permanent.</strong> Delete a code and its printed copies stop working — there's no undo. Delete only when the code is truly retired; the slot frees up for a new code. (Still unsure whether dynamic is right for you? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Static vs dynamic, explained honestly</a>. Want the full creation walkthrough? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create a dynamic QR code</a>.)": "<strong>削除は永遠です。</strong>コードを削除すると印刷済みのコピーは動かなくなります — 元に戻すことはできません。本当に引退したコードだけ削除しましょう。スロットは新しいコード用に空きます。（動的が自分に合っているかまだ分からない？<a href=\"/blog/static-vs-dynamic-qr-codes/\">静的と動的を正直に解説</a>。作成の完全な手順が知りたい？<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">動的QRコードの作り方</a>。）",
+  "Fix a printed code": "印刷したコードを直す",
+  "Sign in, open the Dashboard, edit, save. The printed code updates instantly.": "ログインして、ダッシュボードを開いて、編集して、保存する。印刷したコードは即座に更新されます。",
+  "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a>": "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>QRコードに期限はある？短い答えは「いいえ」 — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>QRコードのスキャン方法（iPhoneとAndroid）</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QRコード印刷サイズガイド：どれくらいの大きさにすべき？</b></a>",
+  "<span>Do I need to reprint a QR code after editing it?</span>": "<span>編集後にQRコードを再印刷する必要はある？</span>",
+  "No. The printed pattern holds a short link; editing changes where that link points. Every printed copy serves the new content immediately.": "いいえ。印刷した模様は短いリンクを持っています。編集で変わるのは、そのリンクの指す先です。印刷済みのコピーすべてが、すぐに新しいコンテンツを出します。",
+  "<span>Can I change a dynamic QR code to a different type?</span>": "<span>動的QRコードの種類を変更できる？</span>",
+  "Yes. In the Dashboard, open Edit and pick a new type — a Website code can become a WiFi code, for example. The printed pattern stays valid.": "はい。ダッシュボードで「編集」を開いて新しい種類を選びます — たとえばWebサイトのコードがWiFiのコードになります。印刷した模様は有効なままです。",
+  "<span>Does editing a QR code reset its scan statistics?</span>": "<span>QRコードの編集でスキャン統計はリセットされる？</span>",
+  "No. Stats keep accumulating on the same code. Deleting a code removes it and its stats permanently.": "いいえ。統計は同じコードに蓄積し続けます。コードを削除すると、コードと統計は永遠に消えます。",
+  "<span>What if I delete a dynamic QR code by mistake?</span>": "<span>動的QRコードを間違って削除したら？</span>",
+  "There's no undo — printed copies stop working and the slot frees up. Only delete codes that are truly retired.": "元に戻すことはできません — 印刷済みのコピーは動かなくなり、スロットが空きます。本当に引退したコードだけ削除しましょう。",
+  "Do I need to reprint a QR code after editing it?": "編集後にQRコードを再印刷する必要はある？",
+  "Can I change a dynamic QR code to a different type?": "動的QRコードの種類を変更できる？",
+  "Does editing a QR code reset its scan statistics?": "QRコードの編集でスキャン統計はリセットされる？",
+  "What if I delete a dynamic QR code by mistake?": "動的QRコードを間違って削除したら？",
+  "Sign in": "ログインする",
+  "Log in to the account that owns the code.": "コードの所有者であるアカウントでログインします。",
+  "Open the Dashboard": "ダッシュボードを開く",
+  "Your codes are listed as cards with thumbnails and scan counts.": "コードはサムネイルとスキャン数付きのカードで一覧表示されます。",
+  "Open Edit": "編集を開く",
+  "On the code's card, click Edit — the full generator opens with your content prefilled.": "コードのカードで「編集」をクリック — フルジェネレーターが、内容がすでに入力された状態で開きます。",
+  "Change what you need": "必要なものを変更する",
+  "Destination, content, type, style — everything is editable.": "行き先、内容、種類、スタイル — すべて編集できます。",
+  "Hit Save changes. The printed code serves the new content instantly — test it with your phone.": "「変更を保存」を押します。印刷したコードは即座に新しいコンテンツを出します — スマホでテストしましょう。"
  }
 }

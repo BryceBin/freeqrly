@@ -53,7 +53,25 @@
   "Square": "方形",
   "Try it yourself — free": "自己试试——免费",
   "Your code appears instantly in the link tab.": "你的二维码会立刻出现在链接选项里。",
-  "✉️": "✉️"
+  "✉️": "✉️",
+  "October 16, 2026 · 4 min read": "2026 年 10 月 16 日 · 阅读约 4 分钟",
+  "<b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b>": "<b>二维码会过期吗？简短回答：不会 — FreeQrly</b>",
+  "<b>Dynamic QR Code Statistics: What You Can Track</b>": "<b>动态二维码统计：能看什么</b>",
+  "<b>Free QR Codes That Never Expire</b>": "<b>永不过期的免费二维码</b>",
+  "<b>How to Create a Dynamic QR Code (Free & Editable)</b>": "<b>怎么创建动态二维码（免费、可编辑）</b>",
+  "<b>How to Edit a QR Code After Printing</b>": "<b>印出来之后怎么改二维码</b>",
+  "<b>How to Scan a QR Code (iPhone & Android)</b>": "<b>怎么扫二维码（iPhone 与安卓）</b>",
+  "<b>How to Scan a QR Code from a Picture</b>": "<b>怎么从图片里扫二维码</b>",
+  "<b>QR Code Not Working? 7 Fixes That Help</b>": "<b>二维码不好用？7 个有用的修复</b>",
+  "<b>QR Code Print Size Guide: How Big Should It Be?</b>": "<b>二维码打印尺寸指南：应该印多大？</b>",
+  "<b>QR Codes for Events: Check-In, Tickets & More</b>": "<b>活动二维码：签到、门票及更多</b>",
+  "<b>QR Codes for Restaurants — Free Guide</b>": "<b>餐厅二维码 — 免费指南</b>",
+  "<b>Scan QR Codes Online — Free, No App, No Upload</b>": "<b>在线扫二维码 — 免费，不用 App，不上传</b>",
+  "<b>Static vs Dynamic QR Codes</b>": "<b>静态码 vs 动态码</b>",
+  "<b>Wedding RSVP QR Codes: A Complete Guide</b>": "<b>婚礼 RSVP 二维码：完整指南</b>",
+  "Create a dynamic code": "创建动态码",
+  "Make a QR code →": "生成二维码 →",
+  "Open the studio": "打开生成器"
  },
  "404": {
   "Page not found | FreeQrly": "页面不存在 | FreeQrly",
@@ -63,7 +81,8 @@
   "This page doesn't exist — but the studio does, and it's free.": "这个页面不存在——但生成器还在，而且免费。",
   "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">Back to the studio →</a>": "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">回到首页 →</a>",
   "<a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a><a href=\"/about/\">About</a>": "<a href=\"/scan/\">扫码器</a><a href=\"/blog/\">实战笔记</a><a href=\"/about/\">关于</a>",
-  "<a href=\"/\">Free QR code generator</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a>": "<a href=\"/\">免费二维码生成器</a><a href=\"/scan/\">扫码器</a><a href=\"/blog/\">实战笔记</a>"
+  "<a href=\"/\">Free QR code generator</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a>": "<a href=\"/\">免费二维码生成器</a><a href=\"/scan/\">扫码器</a><a href=\"/blog/\">实战笔记</a>",
+  "Back to the studio →": "返回生成器 →"
  },
  "login": {
   "Sign in — FreeQrly": "登录 — FreeQrly",
@@ -234,7 +253,8 @@
   "Does FreeQrly track my QR codes or my data?": "FreeQrly 会追踪我的二维码或数据吗？",
   "Static codes are generated locally in your browser using JavaScript; your content is never uploaded to a server, and there is no scan tracking. Dynamic codes store only the destination you set, so they can be edited later, plus anonymous scan counts.": "静态码用 JavaScript 在你的浏览器本地生成；你的内容永远不会上传到服务器，也没有扫码追踪。动态码只存储你设定的目标链接（方便以后修改）和匿名扫码计数。",
   "What languages does FreeQrly support?": "FreeQrly 支持哪些语言？",
-  "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "十种：英语、中文、西班牙语、印地语、阿拉伯语（从右到左排版）、葡萄牙语、法语、俄语、德语和日语。"
+  "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "十种：英语、中文、西班牙语、印地语、阿拉伯语（从右到左排版）、葡萄牙语、法语、俄语、德语和日语。",
+  "Try the generator →": "试试生成器 →"
  },
  "scan": {
   "Free QR Code Scanner — 100% Private | FreeQrly": "免费二维码扫码器 — 100% 隐私 | FreeQrly",
@@ -341,7 +361,14 @@
   "Static vs dynamic QR codes": "静态码 vs 动态码",
   "One is free forever, the other rents you your own code. Which one you actually need.": "一个永久免费，另一个是把你自己的码租给你。你真正需要哪个。",
   "Field Notes — QR Code Guides & Tips": "实战笔记 — 二维码指南与技巧",
-  "Practical QR code guides from FreeQrly.": "来自 FreeQrly 的实用二维码指南。"
+  "Practical QR code guides from FreeQrly.": "来自 FreeQrly 的实用二维码指南。",
+  "Free sign-in, 8 codes, editable after printing. The full walkthrough, from sign-in to print.": "免费登录，8 个码，打印后还能改。从登录到打印的完整流程。",
+  "How to create a dynamic QR code": "怎么创建动态二维码",
+  "How to edit a QR code after printing": "印出来之后怎么改二维码",
+  "Practical QR code guides: dynamic codes you can edit after printing, how to scan, print sizes, troubleshooting, and why free codes don't have to expire.": "实用二维码指南：打印后还能改的动态码、怎么扫、打印尺寸、故障排查，以及为什么免费码不用过期。",
+  "Total and unique scans, 7-day chart, country, city, device, OS — and what FreeQrly never collects.": "总扫码、独立扫码、7 天图表、国家、城市、设备、系统——以及 FreeQrly 永远不收集什么。",
+  "What dynamic QR code statistics tell you": "动态二维码统计能告诉你什么",
+  "Wrong link on a printed flyer? Fix it in two minutes — no reprint, no stickers.": "印好的传单上链接错了？两分钟修好——不用重印，不用贴纸。"
  },
  "landing-batch-qr-code": {
   "Free Batch QR Code Generator | FreeQrly": "免费批量二维码生成器 | FreeQrly",
@@ -686,7 +713,8 @@
   "<span>What's the catch with FreeQrly?</span>": "<span>FreeQrly 有什么猫腻？</span>",
   "There isn't one for static codes: they're generated entirely in your browser, so there's no server cost to pass on to you.": "静态码没有猫腻：它们完全在你的浏览器里生成，所以没有服务器成本要转嫁给你。",
   "How can I tell if my QR code will expire?": "怎么判断我的二维码会不会过期？",
-  "What's the catch with FreeQrly?": "FreeQrly 有什么猫腻？"
+  "What's the catch with FreeQrly?": "FreeQrly 有什么猫腻？",
+  "<a class=\"rel-card\" href=\"/blog/scan-qr-code-from-image/\"><b>How to Scan a QR Code from a Picture</b></a> <a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a>": "<a class=\"rel-card\" href=\"/blog/scan-qr-code-from-image/\"><b>怎么从图片里扫二维码</b></a> <a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>婚礼 RSVP 二维码：完整指南</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>印出来之后怎么改二维码</b></a>"
  },
  "blog-how-to-scan-a-qr-code": {
   "How to Scan a QR Code (iPhone & Android) | FreeQrly": "怎么扫二维码（iPhone 与安卓）| FreeQrly",
@@ -784,7 +812,8 @@
   "At minimum: check-in/registration, a shared photo album, and venue WiFi. Add-to-calendar codes on invitations are the high-ROI extra.": "至少：签到/注册、共享相册和场馆 WiFi。请柬上的添加到日历二维码是高回报的额外项。",
   "How do I make a QR code for event check-in?": "活动签到二维码怎么做？",
   "Can a QR code add an event to my calendar?": "二维码能把活动加到我的日历吗？",
-  "What QR codes do I need for an event?": "一场活动需要哪些二维码？"
+  "What QR codes do I need for an event?": "一场活动需要哪些二维码？",
+  "<a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a>": "<a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>怎么创建动态二维码（免费、可编辑）</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>动态二维码统计：能看什么</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>静态二维码 vs 动态二维码</b></a>"
  },
  "blog-qr-codes-for-restaurants": {
   "QR Codes for Restaurants — Free Guide | FreeQrly": "餐厅二维码 — 免费指南 | FreeQrly",
@@ -810,7 +839,8 @@
   "Link a code directly to your Google review form and place it where happy customers look: receipts, table tents, takeout bags.": "把二维码直接链接到你的谷歌评价表单，放在满意的顾客会看的地方：收据、桌牌、外卖袋。",
   "What QR codes does a restaurant need?": "餐厅需要哪些二维码？",
   "Should the menu QR link to a PDF or a webpage?": "菜单二维码应该链接到 PDF 还是网页？",
-  "How do I get more Google reviews with a QR code?": "怎么用二维码获得更多谷歌评价？"
+  "How do I get more Google reviews with a QR code?": "怎么用二维码获得更多谷歌评价？",
+  "<a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>Scan QR Codes Online — Free, No App, No Upload</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a>": "<a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>在线扫二维码 — 免费，不用 App，不上传</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>活动二维码：签到、门票及更多</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>怎么创建动态二维码（免费、可编辑）</b></a>"
  },
  "blog-scan-qr-code-from-image": {
   "How to Scan a QR Code from a Picture | FreeQrly": "怎么从图片里扫二维码 | FreeQrly",
@@ -840,7 +870,8 @@
   "Upload it to a decoder": "上传到解码器",
   "Use a free online decoder that reads the image — preferably one that works locally, so the picture is never uploaded.": "用免费在线解码器读取图片——最好是本地运行的，这样图片永远不会被上传。",
   "Read the result": "看结果",
-  "The decoded link or text appears instantly. Check the URL before opening, as always.": "解码出的链接或文本立刻出现。跟往常一样，打开前先检查链接。"
+  "The decoded link or text appears instantly. Check the URL before opening, as always.": "解码出的链接或文本立刻出现。跟往常一样，打开前先检查链接。",
+  "<a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>Wedding RSVP QR Codes: A Complete Guide</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a>": "<a class=\"rel-card\" href=\"/blog/wedding-rsvp-qr-code/\"><b>婚礼 RSVP 二维码：完整指南</b></a> <a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>印出来之后怎么改二维码</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>二维码会过期吗？简短回答：不会</b></a>"
  },
  "blog-scan-qr-code-online": {
   "Scan QR Codes Online — Free, No App, No Upload | FreeQrly": "在线扫二维码 — 免费，不用 App，不上传 | FreeQrly",
@@ -872,7 +903,8 @@
   "Use your camera or upload": "用摄像头或上传",
   "Point your camera at the code, or upload a photo or screenshot that contains one.": "把摄像头对准二维码，或上传一张包含二维码的照片或截图。",
   "Get the result instantly": "立刻得到结果",
-  "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "解码出的文本或链接立刻出现。链接有打开按钮；其他内容有复制按钮。"
+  "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "解码出的文本或链接立刻出现。链接有打开按钮；其他内容有复制按钮。",
+  "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a>": "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>活动二维码：签到、门票及更多</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>怎么创建动态二维码（免费、可编辑）</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>动态二维码统计：能看什么</b></a>"
  },
  "blog-static-vs-dynamic-qr-codes": {
   "Static vs Dynamic QR Codes | FreeQrly": "静态码 vs 动态码 | FreeQrly",
@@ -910,7 +942,8 @@
   "Because dynamic codes require their server, which justifies a subscription. Many 'free' generators create dynamic codes tied to a trial — the code stops working when the trial ends.": "因为动态码需要它们的服务器，这就给订阅提供了理由。很多“免费”生成器做的是绑了试用的动态码——试用结束，码就停止工作。",
   "What is the difference between static and dynamic QR codes?": "静态二维码和动态二维码有什么区别？",
   "Do I need a dynamic QR code?": "我需要动态二维码吗？",
-  "Why do free QR code generators push dynamic codes?": "为什么免费二维码生成器推动态码？"
+  "Why do free QR code generators push dynamic codes?": "为什么免费二维码生成器推动态码？",
+  "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrly 两种都做。静态码免费、无限量、不用账号——覆盖大多数日常需求。动态码也是免费的：登录（邮箱、Google 或 GitHub）就送 8 个可编辑、带扫码统计的码。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">怎么创建一个</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印出来之后怎么改</a>，以及<a href=\"/blog/dynamic-qr-code-statistics/\">统计能告诉你什么</a>。"
  },
  "blog-wedding-rsvp-qr-code": {
   "Wedding RSVP QR Codes: A Complete Guide | FreeQrly": "婚礼 RSVP 二维码：完整指南 | FreeQrly",
@@ -936,7 +969,8 @@
   "Static ones don't. Generate them months ahead; they'll scan on the day and for years after as a keepsake.": "静态的不会。提前几个月生成；当天能扫，多年后作为纪念也能扫。",
   "How do I create a QR code for my wedding RSVP?": "婚礼 RSVP 二维码怎么做？",
   "Should the RSVP QR code link to a form or a website?": "RSVP 二维码应该链接到表单还是网站？",
-  "Do wedding QR codes expire?": "婚礼二维码会过期吗？"
+  "Do wedding QR codes expire?": "婚礼二维码会过期吗？",
+  "<a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>How to Edit a QR Code After Printing</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a>": "<a class=\"rel-card\" href=\"/blog/how-to-edit-a-qr-code-after-printing/\"><b>印出来之后怎么改二维码</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>二维码会过期吗？简短回答：不会</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>怎么扫二维码（iPhone 与安卓）</b></a>"
  },
  "blog-why-is-my-qr-code-not-working": {
   "QR Code Not Working? 7 Fixes That Help | FreeQrly": "二维码不好用？7 个有用的修复 | FreeQrly",
@@ -977,5 +1011,137 @@
   "Re-export at higher resolution": "以更高分辨率重新导出",
   "Blurry edges from a low-res export fail at print size. Export PNG at 1024 px or higher, or use SVG.": "低分辨率导出的模糊边缘在打印尺寸下会失败。导出 1024 px 或更高的 PNG，或者用 SVG。",
   "Why won’t this thing <span class=\"hl hl-blush\">scan</span>?": "为什么这玩意儿<span class=\"hl hl-blush\">扫</span>不出来？"
+ },
+ "blog-dynamic-qr-code-statistics": {
+  "<a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR Code Not Working? 7 Fixes That Help</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>QR Codes for Restaurants — Free Guide</b></a>": "<a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>静态二维码 vs 动态二维码</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>二维码扫不出来？7 个管用的修复办法</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>餐厅二维码——免费指南</b></a>",
+  "<span>Can I see who scanned my QR code?</span>": "<span>我能看到谁扫了我的二维码吗？</span>",
+  "<span>Do static QR codes track scans?</span>": "<span>静态二维码统计扫码吗？</span>",
+  "<span>Is visitor data private?</span>": "<span>访客数据私密吗？</span>",
+  "<span>What counts as a unique scan?</span>": "<span>什么算一次独立扫码？</span>",
+  "<strong>By OS.</strong> iOS, Android, and the rest.": "<strong>按系统。</strong>iOS、Android 以及其他的。",
+  "<strong>By country and by city.</strong> Where scans came from, from the scanner's approximate location.": "<strong>按国家和城市。</strong>扫码来自哪里，根据扫码人的大概位置。",
+  "<strong>By device.</strong> Phone, tablet, or desktop.": "<strong>按设备。</strong>手机、平板还是电脑。",
+  "<strong>Last 7 days.</strong> A daily bar chart covering today and the previous six days — always seven bars, with zero-height bars for quiet days, so you can see gaps at a glance.": "<strong>最近 7 天。</strong>按天统计的柱状图，覆盖今天和前六天——永远是七根柱，没扫码的日子是零高度的柱，这样空缺一目了然。",
+  "<strong>Scans are not customers.</strong> A scan is a glance. Compare codes against each other, not against a fantasy benchmark.": "<strong>扫码不是顾客。</strong>一次扫码只是一瞥。拿码跟码比，不要跟想象中的基准比。",
+  "<strong>Spikes need context.</strong> A burst of scans right after a post goes out is the post, not the poster. The 7-day chart makes this visible.": "<strong>峰值需要背景。</strong>帖子发出去之后立刻来一波扫码，那是帖子的功劳，不是海报的。7 天图表能把这个看清楚。",
+  "<strong>Today.</strong> Scans so far today.": "<strong>今日。</strong>今天到目前为止的扫码。",
+  "<strong>Total scans.</strong> Every scan of the code, all time.": "<strong>总扫码。</strong>这个码有史以来的每一次扫码。",
+  "<strong>Unique scans.</strong> Distinct scanners, counted once per day. Two scans by the same person on the same day count as one unique scan.": "<strong>独立扫码。</strong>不同的扫码人，每天计一次。同一个人同一天扫两次，只算一次独立扫码。",
+  "<strong>Zero is data.</strong> A code with no scans for a week is telling you the placement is wrong, not the code.": "<strong>零也是数据。</strong>一个码一周没人扫，是在告诉你位置放错了，不是码错了。",
+  "A dynamic code reports home every time it's scanned. Here's what FreeQrly counts, how to read it, and what it never collects.": "动态码每次被扫都会回传一次。下面讲 FreeQrly 统计什么、怎么看，以及它永远不收集什么。",
+  "A static code is silent: it never reports home, so nobody — including you — knows how often it was scanned. A dynamic code reports every scan to your Dashboard. Here's what FreeQrly counts, how to read it, and what it deliberately never collects.": "静态码是沉默的：它从不回传，所以没人——包括你——知道它被扫过多少次。动态码每次扫码都会向你的 Dashboard 汇报。下面讲 FreeQrly 统计什么、怎么看，以及它刻意不收集什么。",
+  "Can I see who scanned my QR code?": "我能看到谁扫了我的二维码吗？",
+  "Create a free dynamic code and watch the stats come in.": "创建一个免费动态码，看着统计进来。",
+  "Do static QR codes track scans?": "静态二维码统计扫码吗？",
+  "Dynamic QR Code Statistics: What You Can Track | FreeQrly": "动态二维码统计：能看什么 | FreeQrly",
+  "Is visitor data private?": "访客数据私密吗？",
+  "No — and that's by design. FreeQrly counts scans; it doesn't identify scanners.": "不能——这是特意这样设计的。FreeQrly 只数扫码，不识别扫码的人。",
+  "No. Static codes never touch a server — the destination lives in the pattern — so there's nothing to count. Only dynamic codes report scans.": "不统计。静态码从不碰服务器——目标地址就在图案里——所以没什么可数的。只有动态码汇报扫码。",
+  "One scanner, once per day. FreeQrly counts distinct scanners using a one-way hash of IP address, browser, and date — the same person scanning twice in a day counts once.": "一个扫码人，每天一次。FreeQrly 用 IP 地址、浏览器和日期的单向哈希数不同的扫码人——同一个人一天扫两次只算一次。",
+  "Open Stats on a code and you get four breakdowns, each with counts and percentages:": "在码上打开统计，你会看到四组细分，每组都有数量和百分比：",
+  "Reading the numbers honestly": "老老实实看数字",
+  "Ready to try it? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">Create your first dynamic code</a> — free sign-in, 8 codes — and check back after your first print run. Already printed and need a fix? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">How to edit a QR code after printing</a>.": "准备试试？<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">创建你的第一个动态码</a>——免费登录，8 个码——第一次印出来之后回来看看。已经印出来了、需要修？<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印出来之后怎么改二维码</a>。",
+  "Stats are aggregates — there is no per-visitor record to look at. A \"unique scan\" is a one-way hash of the scanner's IP address, browser, and date: enough to count distinct scanners per day, impossible to reverse into a person. No names, no emails, no exact locations, no cross-code tracking of individuals. And static codes track nothing at all — they never touch a server, so there's nothing to count.": "统计都是汇总数据——没有任何按访客的记录可看。“独立扫码”是扫码人 IP 地址、浏览器和日期的单向哈希：足够按天数不同的扫码人，不可能反推出具体某个人。没有姓名，没有邮箱，没有精确位置，没有跨码追踪个人。静态码什么都不统计——它们从不碰服务器，所以没什么可数的。",
+  "The breakdowns": "细分数据",
+  "The numbers on each card": "每张卡片上的数字",
+  "Try it with your next print run": "下一次印刷时试试",
+  "Use them the way a campaign would: a flyer in two neighborhoods shows which one pulls; a poster that gets desktop scans at noon is probably being scanned from a screenshot, not the wall.": "像做活动一样用它们：传单发到两个街区，看哪个街区效果好；一张海报中午收到电脑端扫码，多半是有人在扫截图，不是扫墙上的。",
+  "What FreeQrly never collects": "FreeQrly 永远不收集什么",
+  "What counts as a unique scan?": "什么算一次独立扫码？",
+  "What dynamic QR <span class='hl hl-honey'>statistics</span> tell you": "动态二维码<span class='hl hl-honey'>统计</span>能告诉你什么",
+  "What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.": "动态二维码统计能告诉你什么：总扫码、独立扫码，按天、国家、城市、设备、系统分——以及 FreeQrly 永远不收集什么。",
+  "Yes. Stats are aggregates only: counts by day, country, city, device, and OS. No names, emails, exact locations, or per-visitor records. Unique scans use a non-reversible hash.": "私密。统计只有汇总数据：按天、国家、城市、设备、系统分的计数。没有姓名、邮箱、精确位置，也没有按访客的记录。独立扫码用的是不可逆哈希。"
+ },
+ "blog-how-to-create-a-dynamic-qr-code": {
+  "8 on the free account. Delete a code to free its slot.": "免费账号 8 个。删一个码就腾出一个位置。",
+  "<a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>Static vs Dynamic QR Codes</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>QR Code Not Working? 7 Fixes That Help</b></a>": "<a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>动态二维码统计：能看什么</b></a> <a class=\"rel-card\" href=\"/blog/static-vs-dynamic-qr-codes/\"><b>静态二维码 vs 动态二维码</b></a> <a class=\"rel-card\" href=\"/blog/why-is-my-qr-code-not-working/\"><b>二维码扫不出来？7 个管用的修复办法</b></a>",
+  "<b>Generate.</b> Hit Generate. You get a short link like <code>freeqrly.com/q/XXXXXXX</code> — that's what the QR pattern encodes. Print it, ship it, stick it on the wall.": "<b>生成。</b>点“生成”。你会得到一个短链接，比如 <code>freeqrly.com/q/XXXXXXX</code>——二维码图案编码的就是它。打印出来，发出去，贴墙上。",
+  "<b>Manage it later.</b> Your codes live in the <a href=\"/dashboard/\">Dashboard</a>: edit, check stats, or delete one to free a slot.": "<b>之后管理。</b>你的码都在<a href=\"/dashboard/\">Dashboard</a> 里：编辑、看统计，或者删一个腾个位置。",
+  "<b>Pick a type and fill it in.</b> Website, WiFi, contact, event — all 12 content types work as dynamic codes. (Batch stays static: one dynamic code per generation.)": "<b>选类型，填内容。</b>网址、WiFi、联系人、活动——12 种内容类型都能做动态码。（批量还是静态的：一次生成一个动态码。）",
+  "<b>Sign in — free.</b> Open the <a href=\"/login/\">sign-in page</a> and create an account with email + password, Google, or GitHub. Static codes never need this; dynamic codes do, because the code has to belong to someone.": "<b>登录——免费。</b>打开<a href=\"/login/\">登录页</a>，用邮箱 + 密码、Google 或 GitHub 创建账号。静态码永远不用这一步；动态码需要，因为码必须属于某个人。",
+  "<b>Style it if you want.</b> Dots, colors, logo, frame — the preview updates live. The style is saved with the code, so the Dashboard and the download match.": "<b>想做样式就做。</b>圆点、颜色、Logo、边框——预览实时更新。样式跟码一起保存，Dashboard 里看到的和下载下来的是一样的。",
+  "<b>Switch to Dynamic.</b> In the <a href=\"/?mode=dynamic\">studio</a>, flip the toggle from Static to Dynamic. Everything else — types, styling, download — works exactly the same.": "<b>切换到动态。</b>在<a href=\"/?mode=dynamic\">工作室</a>里，把开关从静态拨到动态。其他一切——类型、样式、下载——用法完全一样。",
+  "<span>Do I need an account for a dynamic QR code?</span>": "<span>动态二维码需要账号吗？</span>",
+  "<span>How many dynamic QR codes can I have?</span>": "<span>我能有多少个动态二维码？</span>",
+  "<span>Is creating a dynamic QR code really free?</span>": "<span>创建动态二维码真的免费吗？</span>",
+  "<span>What does a dynamic QR code link to?</span>": "<span>动态二维码链接到哪里？</span>",
+  "<strong>8 codes, free.</strong> That's the free quota. Delete a code and the slot frees up.": "<strong>免费 8 个码。</strong>这就是免费额度。删一个码，位置就腾出来了。",
+  "<strong>Editing changes the destination, not the pattern.</strong> The printed code keeps working through every edit — which is the entire point.": "<strong>编辑改的是目标地址，不是图案。</strong>印出来的码每次编辑后都照常能用——这就是它的意义所在。",
+  "<strong>One at a time.</strong> Dynamic codes are generated one by one; batch generation stays static.": "<strong>一次一个。</strong>动态码一个一个生成；批量生成还是静态的。",
+  "A dynamic QR code lets you change the destination after printing — and see how many people scanned. Here's how to make one, free, in about a minute.": "动态二维码打印后还能改目标地址，还能看到多少人扫过。下面讲怎么免费做一个，大约一分钟。",
+  "A dynamic code does not hold your link directly. It holds a short FreeQrly link, and our server redirects scanners to your destination. That's the mechanism that makes editing and counting possible — and it's why dynamic codes need an account while static ones don't. If a service ever tells you its \"free\" codes need an account, this is the mechanism at work; the difference here is that the account is free and the codes don't die.": "动态码并不直接装你的链接。它装的是一个 FreeQrly 短链接，服务器把扫码的人重定向到你的目标地址。正是这个机制让编辑和计数成为可能——也是动态码需要账号、静态码不需要的原因。如果哪家服务告诉你它的“免费”码需要账号，就是这个机制在起作用；这里的不同是，账号免费，码也不会死。",
+  "A short FreeQrly link (freeqrly.com/q/XXXXXXX) that redirects to your destination. Scanners land on your page; the redirect is what makes editing and stats possible.": "一个 FreeQrly 短链接（freeqrly.com/q/XXXXXXX），重定向到你的目标地址。扫码的人落在你的页面上；正是这个重定向让编辑和统计成为可能。",
+  "Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 8 free codes.": "免费创建动态二维码：登录、选类型、做样式、打印。之后改目标地址不用重印。免费 8 个码。",
+  "Create a free account with email + password, Google, or GitHub. Static codes skip this; dynamic codes need an owner.": "用邮箱 + 密码、Google 或 GitHub 创建免费账号。静态码跳过这一步；动态码需要一个主人。",
+  "Do I need an account for a dynamic QR code?": "动态二维码需要账号吗？",
+  "Dots, colors, logo, frame. The preview updates live and the style is saved with the code.": "圆点、颜色、Logo、边框。预览实时更新，样式跟码一起保存。",
+  "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot.": "在 Dashboard 里找到你的码：编辑、看统计，或者删一个腾位置。",
+  "Free sign-in, 8 codes, editable after printing. Start in the studio.": "免费登录，8 个码，打印后还能改。从工作室开始。",
+  "Hit Generate. You get a short link like freeqrly.com/q/XXXXXXX — that's what the pattern encodes.": "点“生成”。你会得到一个短链接，比如 freeqrly.com/q/XXXXXXX——图案编码的就是它。",
+  "How many dynamic QR codes can I have?": "我能有多少个动态二维码？",
+  "How to Create a Dynamic QR Code (Free & Editable) | FreeQrly": "怎么创建动态二维码（免费、可编辑）| FreeQrly",
+  "How to create a <span class='hl hl-mint'>dynamic</span> QR code": "怎么创建<span class='hl hl-mint'>动态</span>二维码",
+  "In the studio, flip the Static/Dynamic toggle to Dynamic.": "在工作室里，把静态/动态开关拨到动态。",
+  "Is creating a dynamic QR code really free?": "创建动态二维码真的免费吗？",
+  "Make your first dynamic code": "做你的第一个动态码",
+  "Manage it later": "之后管理",
+  "Not sure whether you need dynamic at all? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Static vs dynamic, explained honestly</a>. Already printed and need to fix a link? <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">How to edit a QR code after printing</a>. Curious what the numbers look like? <a href=\"/blog/dynamic-qr-code-statistics/\">What dynamic QR code statistics tell you</a>.": "不确定到底需不需要动态码？<a href=\"/blog/static-vs-dynamic-qr-codes/\">静态还是动态，老实讲清楚</a>。已经印出来了、需要改链接？<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印出来之后怎么改二维码</a>。好奇数据长什么样？<a href=\"/blog/dynamic-qr-code-statistics/\">动态二维码统计能告诉你什么</a>。",
+  "On FreeQrly, dynamic codes are free. Sign in (email, Google, or GitHub), and you get 8 of them. No trial, no card, no expiry games. Here's the whole process.": "在 FreeQrly，动态码免费。登录（邮箱、Google 或 GitHub）就送 8 个。没有试用期，不用绑卡，不玩过期套路。下面是完整流程。",
+  "Pick a type and fill it in": "选类型，填内容",
+  "Sign in — free": "登录——免费",
+  "Static codes are great — until the destination changes. The flyer is printed, the menu moved, the campaign URL wasn't final. A <strong>dynamic QR code</strong> fixes that: the printed pattern stays the same, but you can change where it points, any time, from your Dashboard. You also get scan counts, so you know whether anyone is actually scanning.": "静态码很好——直到目标地址变了。传单印好了，菜单搬了，活动链接还没定稿。<strong>动态二维码</strong>就是解决这个的：印出来的图案不变，但你可以随时在 Dashboard 里改它指向哪里。还能看扫码数，知道到底有没有人扫。",
+  "Style it": "做样式",
+  "Switch to Dynamic": "切换到动态",
+  "The limits, stated plainly": "限制，明明白白说清楚",
+  "Website, WiFi, contact, event — all 12 content types work. Batch stays static.": "网址、WiFi、联系人、活动——12 种内容类型都行。批量还是静态的。",
+  "What does a dynamic QR code link to?": "动态二维码链接到哪里？",
+  "What the QR code actually contains": "二维码里到底装了什么",
+  "Yes — the code has to belong to someone so only you can edit it. Email + password, Google, or GitHub. Static codes never need an account.": "需要——码必须属于某个人，这样只有你能编辑它。邮箱 + 密码、Google 或 GitHub 都行。静态码永远不需要账号。",
+  "Yes. Sign in free, create up to 8 dynamic codes, edit them, see stats. No trial period, no card, no subscription. Static codes remain free and unlimited with no account at all.": "真的。免费登录，最多创建 8 个动态码，随便编辑，看统计。没有试用期，不用绑卡，不用订阅。静态码依然完全免费、无限量，不用账号。"
+ },
+ "blog-how-to-edit-a-qr-code-after-printing": {
+  "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a>": "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>二维码会过期吗？简短回答：不会 | FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>怎么扫二维码（iPhone 与安卓）</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>二维码打印尺寸指南：印多大合适？</b></a>",
+  "<b>Change what you need.</b> Destination, content, even the type: a Website code can become a WiFi code. Colors, logo, frame — all editable too.": "<b>改你需要改的。</b>目标地址、内容，甚至类型：网址码可以变成 WiFi 码。颜色、Logo、边框——也都能改。",
+  "<b>Open Edit.</b> On the code's card, click Edit. You'll see the same generator you used to create it — type, content, style, all of it.": "<b>打开编辑。</b>在码的卡片上点“编辑”。你会看到创建时用的那个生成器——类型、内容、样式，全都在。",
+  "<b>Open the Dashboard.</b> Go to <a href=\"/dashboard/\">your Dashboard</a>. Every dynamic code on your account is there as a card, with its QR thumbnail and scan count.": "<b>打开 Dashboard。</b>去<a href=\"/dashboard/\">你的 Dashboard</a>。你账号下的每个动态码都在那里，以卡片形式展示，带二维码缩略图和扫码数。",
+  "<b>Save.</b> Hit Save changes. Done. The printed code now serves the new content. Test it with your phone camera to be sure.": "<b>保存。</b>点“保存修改”。搞定。印出来的码现在指向新内容了。用手机相机扫一下确认。",
+  "<b>Sign in.</b> Open the <a href=\"/login/\">sign-in page</a> and log in to the account that owns the code.": "<b>登录。</b>打开<a href=\"/login/\">登录页</a>，登录拥有这个码的账号。",
+  "<span>Can I change a dynamic QR code to a different type?</span>": "<span>动态二维码能换成别的类型吗？</span>",
+  "<span>Do I need to reprint a QR code after editing it?</span>": "<span>编辑之后需要重印二维码吗？</span>",
+  "<span>Does editing a QR code reset its scan statistics?</span>": "<span>编辑二维码会清零扫码统计吗？</span>",
+  "<span>What if I delete a dynamic QR code by mistake?</span>": "<span>不小心删了动态二维码怎么办？</span>",
+  "<strong>Deleting is permanent.</strong> Delete a code and its printed copies stop working — there's no undo. Delete only when the code is truly retired; the slot frees up for a new code. (Still unsure whether dynamic is right for you? <a href=\"/blog/static-vs-dynamic-qr-codes/\">Static vs dynamic, explained honestly</a>. Want the full creation walkthrough? <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create a dynamic QR code</a>.)": "<strong>删除是永久的。</strong>删了码，印出来的份就失效了——没有撤销。只在码真正退役时才删；位置会腾出来给新码。（还不确定动态码适不适合你？<a href=\"/blog/static-vs-dynamic-qr-codes/\">静态还是动态，老实讲清楚</a>。想要完整创建流程？<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">怎么创建动态二维码</a>。）",
+  "<strong>Destination and content:</strong> the link, the text, the WiFi password — anything the code carries.": "<strong>目标地址和内容：</strong>链接、文字、WiFi 密码——码里装的任何东西。",
+  "<strong>Edits are instant and silent.</strong> There's no \"republish\" step and no delay — the next scan gets the new destination. If the old destination was a page you took down, fix the code first, then take the page down.": "<strong>编辑立刻生效，不声不响。</strong>没有“重新发布”这一步，也没有延迟——下一次扫码就拿到新目标地址。如果旧目标地址是你准备下线的页面，先改码，再下线页面。",
+  "<strong>Style:</strong> colors, dots, logo, frame. The Dashboard thumbnail updates to match.": "<strong>样式：</strong>颜色、圆点、Logo、边框。Dashboard 缩略图会跟着更新。",
+  "<strong>Type:</strong> switch a code from one content type to another. The pattern doesn't care; it only holds the short link.": "<strong>类型：</strong>把码从一种内容类型换成另一种。图案无所谓；它只装短链接。",
+  "<strong>What you can't change:</strong> the printed pattern itself — but you never need to, since the pattern only holds the short link. And you can't transfer a code to another account.": "<strong>不能改的：</strong>印出来的图案本身——但你永远不需要改它，因为图案只装短链接。还有，不能把码转给另一个账号。",
+  "Can I change a dynamic QR code to a different type?": "动态二维码能换成别的类型吗？",
+  "Change what you need": "改你需要改的",
+  "Destination, content, type, style — everything is editable.": "目标地址、内容、类型、样式——全都能改。",
+  "Do I need to reprint a QR code after editing it?": "编辑之后需要重印二维码吗？",
+  "Does editing a QR code reset its scan statistics?": "编辑二维码会清零扫码统计吗？",
+  "Edit a QR code <span class='hl hl-blush'>after printing</span>": "二维码<span class='hl hl-blush'>印出来之后</span>再改",
+  "Fix a printed code": "修一个印出来的码",
+  "Hit Save changes. The printed code serves the new content instantly — test it with your phone.": "点“保存修改”。印出来的码立刻指向新内容——用手机扫一下确认。",
+  "How to Edit a QR Code After Printing | FreeQrly": "印出来之后怎么改二维码 | FreeQrly",
+  "Log in to the account that owns the code.": "登录拥有这个码的账号。",
+  "No. Stats keep accumulating on the same code. Deleting a code removes it and its stats permanently.": "不会。统计在同一个码上继续累积。删除码会连同它的统计一起永久删除。",
+  "No. The printed pattern holds a short link; editing changes where that link points. Every printed copy serves the new content immediately.": "不用。印出来的图案装的是短链接；编辑改的是这个链接指向哪里。每一份印出来的码立刻都指向新内容。",
+  "On the code's card, click Edit — the full generator opens with your content prefilled.": "在码的卡片上点“编辑”——完整生成器会打开，你的内容已经填好了。",
+  "Open Edit": "打开编辑",
+  "Open the Dashboard": "打开 Dashboard",
+  "Printed the wrong link? Fix it without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.": "印错链接了？不用重印就能修。在 Dashboard 里改动态二维码的目标地址、类型或样式——印出来的码立刻更新。",
+  "Sign in": "登录",
+  "Sign in, open the Dashboard, edit, save. The printed code updates instantly.": "登录，打开 Dashboard，编辑，保存。印出来的码立刻更新。",
+  "The flyers are already out — and the link is wrong. Or the menu moved. Or the campaign page wasn't final when the poster went to print. With a static code, that's a reprint. With a dynamic code, it's a two-minute fix.": "传单已经发出去了——链接却是错的。或者菜单搬了。或者海报送印时活动页面还没定稿。用静态码，这就得重印。用动态码，两分钟搞定。",
+  "The flyers are already out — and the link is wrong. With a dynamic code, that's a two-minute fix, not a reprint.": "传单已经发出去了——链接却是错的。用动态码，这就是两分钟的事，不用重印。",
+  "The trick: a dynamic code's pattern never changes. It points at a short link on FreeQrly's server, and you control where that link sends people. Edit the destination, and every printed copy — already on walls, flyers, packaging — serves the new content instantly. No reprint, no stickers over the old code.": "关键是：动态码的图案永远不变。它指向 FreeQrly 服务器上的一个短链接，而这个链接把人送到哪里，由你控制。改了目标地址，所有已经印出来的份——贴在墙上、印在传单上、印在包装上——立刻都指向新内容。不用重印，不用拿贴纸盖旧码。",
+  "There's no undo — printed copies stop working and the slot frees up. Only delete codes that are truly retired.": "没有撤销——印出来的份会失效，位置腾出来。只删真正退役的码。",
+  "Two things worth knowing": "两件值得知道的事",
+  "What if I delete a dynamic QR code by mistake?": "不小心删了动态二维码怎么办？",
+  "What you can change — and what you can't": "能改什么——不能改什么",
+  "Yes. In the Dashboard, open Edit and pick a new type — a Website code can become a WiFi code, for example. The printed pattern stays valid.": "能。在 Dashboard 里打开编辑，选个新类型——比如网址码可以变成 WiFi 码。印出来的图案依然有效。",
+  "Your codes are listed as cards with thumbnails and scan counts.": "你的码以卡片形式列出，带缩略图和扫码数。"
  }
 }

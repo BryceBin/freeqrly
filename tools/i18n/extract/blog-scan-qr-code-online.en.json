@@ -13,7 +13,6 @@
  "When it can't read your code",
  "Blurry photos, tiny codes, heavy glare — the usual suspects. The full fix list is in <a href=\"/blog/why-is-my-qr-code-not-working/\">why your QR code won't scan</a>. And if you need to <a href=\"/\">make your own QR code</a> instead, that's the main studio — also free, also private.",
  "<a href=\"https://github.com/cozmo/jsQR\">jsQR on GitHub</a> - A pure JavaScript QR code reading library. Takes in raw images and locates, extracts and parses any QR code found within.",
- "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a>",
  "<span>Is it safe to scan QR codes online?</span>",
  "It depends where the image goes. Many online scanners upload your image to their server. FreeQrly decodes it locally in your browser, so nothing is transmitted anywhere.",
  "<span>Do I need to download an app to scan QR codes?</span>",

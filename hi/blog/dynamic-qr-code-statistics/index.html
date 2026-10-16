@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hi" data-lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>डायनामिक QR कोड स्टैटिस्टिक्स: क्या ट्रैक कर सकते हैं | FreeQrly</title>
+<meta name="description" content="डायनामिक QR कोड स्टैटिस्टिक्स क्या बताते हैं: कुल और यूनिक स्कैन, दिन, देश, शहर, डिवाइस और OS के हिसाब से — और FreeQrly क्या कभी ट्रैक नहीं करता।">
+<link rel="canonical" href="https://freeqrly.com/hi/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/dynamic-qr-code-statistics/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/dynamic-qr-code-statistics/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="डायनामिक QR कोड स्टैटिस्टिक्स: क्या ट्रैक कर सकते हैं | FreeQrly">
+<meta property="og:description" content="डायनामिक QR कोड स्टैटिस्टिक्स क्या बताते हैं: कुल और यूनिक स्कैन, दिन, देश, शहर, डिवाइस और OS के हिसाब से — और FreeQrly क्या कभी ट्रैक नहीं करता।">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/hi/blog/dynamic-qr-code-statistics/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"डायनामिक QR कोड स्टैटिस्टिक्स: क्या ट्रैक कर सकते हैं | FreeQrly","description":"डायनामिक QR कोड स्टैटिस्टिक्स क्या बताते हैं: कुल और यूनिक स्कैन, दिन, देश, शहर, डिवाइस और OS के हिसाब से — और FreeQrly क्या कभी ट्रैक नहीं करता।","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "यूनिक स्कैन क्या गिना जाता है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "एक स्कैनर, दिन में एक बार। FreeQrly IP एड्रेस, ब्राउज़र और तारीख के एक तरफ़ा हैश से अलग-अलग स्कैनर गिनता है — एक ही व्यक्ति के एक दिन में दो स्कैन एक बार गिने जाते हैं।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "क्या स्टैटिक QR कोड स्कैन ट्रैक करते हैं?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नहीं। स्टैटिक कोड कभी सर्वर को छूते नहीं — डेस्टिनेशन पैटर्न में रहता है — इसलिए गिनने के लिए कुछ नहीं है। सिर्फ़ डायनामिक कोड स्कैन रिपोर्ट करते हैं।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "क्या विज़िटर डेटा प्राइवेट है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "हां। स्टैट्स सिर्फ़ एग्रीगेट हैं: दिन, देश, शहर, डिवाइस और OS के हिसाब से काउंट। कोई नाम, ईमेल, सटीक लोकेशन या प्रति-विज़िटर रिकॉर्ड नहीं। यूनिक स्कैन नॉन-रिवर्सिबल हैश इस्तेमाल करते हैं."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "क्या मैं देख सकता हूं कि मेरे QR कोड को किसने स्कैन किया?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नहीं — और यह जानबूझकर ऐसा है। FreeQrly स्कैन गिनता है; स्कैन करने वालों की पहचान नहीं करता।"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/hi/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/hi/#studio">स्टूडियो</a><a href="/hi/blog/">फ़ील्ड नोट्स</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt="Qly, FreeQrly का हाथी शुभंकर"></div>
+    <div class="kicker" style="text-align:center">फ़ील्ड नोट्स</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">डायनामिक QR कोड <span class='hl hl-honey'>स्टैटिस्टिक्स</span> क्या बताते हैं</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">डायनामिक कोड हर बार स्कैन होने पर घर रिपोर्ट करता है। FreeQrly क्या गिनता है, इसे कैसे पढ़ें, और वह क्या कभी इकट्ठा नहीं करता — यह रहा।</p>
+    <p class="meta" style="text-align:center">16 अक्टूबर, 2026 · 4 मिनट में पढ़ें</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>स्टैटिक कोड चुप रहता है: वह कभी घर रिपोर्ट नहीं करता, इसलिए किसी को — आपको भी नहीं — पता नहीं कि उसे कितनी बार स्कैन किया गया। डायनामिक कोड हर स्कैन को आपके डैशबोर्ड पर रिपोर्ट करता है। FreeQrly क्या गिनता है, इसे कैसे पढ़ें, और वह जानबूझकर क्या कभी इकट्ठा नहीं करता — यह रहा।</p>
+
+<h2>हर कार्ड पर नंबर</h2>
+<ul>
+<li><strong>कुल स्कैन।</strong> कोड के हर स्कैन, हमेशा के।</li>
+<li><strong>आज।</strong> आज अब तक के स्कैन।</li>
+<li><strong>यूनिक स्कैन।</strong> अलग-अलग स्कैनर, दिन में एक बार गिने गए। एक ही व्यक्ति के एक ही दिन के दो स्कैन एक यूनिक स्कैन गिने जाते हैं।</li>
+<li><strong>पिछले 7 दिन।</strong> आज और पिछले छह दिनों को कवर करने वाला रोज़ का बार चार्ट — हमेशा सात बार, शांत दिनों के लिए ज़ीरो-हाइट बार के साथ, ताकि गैप एक नज़र में दिखें।</li>
+</ul>
+
+<h2>ब्रेकडाउन</h2>
+<p>किसी कोड पर Stats खोलें और आपको चार ब्रेकडाउन मिलते हैं, हर एक काउंट और परसेंटेज के साथ:</p>
+<ul>
+<li><strong>देश और शहर के हिसाब से।</strong> स्कैन कहां से आए, स्कैनर की अनुमानित लोकेशन से।</li>
+<li><strong>डिवाइस के हिसाब से।</strong> फ़ोन, टैबलेट या डेस्कटॉप।</li>
+<li><strong>OS के हिसाब से।</strong> iOS, Android और बाकी।</li>
+</ul>
+<p>उन्हें वैसे इस्तेमाल करें जैसे कोई कैंपेन करेगा: दो मोहल्लों में फ़्लायर बताता है कि कौन सा ज़्यादा खींचता है; दोपहर में डेस्कटॉप स्कैन पाने वाला पोस्टर शायद स्क्रीनशॉट से स्कैन हो रहा है, दीवार से नहीं।</p>
+
+<h2>FreeQrly क्या कभी इकट्ठा नहीं करता</h2>
+<p>स्टैट्स एग्रीगेट हैं — देखने के लिए कोई प्रति-विज़िटर रिकॉर्ड नहीं है। "यूनिक स्कैन" स्कैनर के IP एड्रेस, ब्राउज़र और तारीख का एक तरफ़ा हैश है: दिन में अलग-अलग स्कैनर गिनने के लिए काफ़ी, किसी व्यक्ति तक वापस पहुंचने के लिए नामुमकिन। कोई नाम नहीं, कोई ईमेल नहीं, कोई सटीक लोकेशन नहीं, व्यक्तियों की कोई क्रॉस-कोड ट्रैकिंग नहीं। और स्टैटिक कोड कुछ भी ट्रैक नहीं करते — वे कभी सर्वर को छूते ही नहीं, इसलिए गिनने के लिए कुछ है ही नहीं।</p>
+
+<h2>नंबर ईमानदारी से पढ़ना</h2>
+<ul>
+<li><strong>स्कैन ग्राहक नहीं हैं।</strong> एक स्कैन एक नज़र है। कोड की तुलना एक-दूसरे से करें, किसी काल्पनिक बेंचमार्क से नहीं।</li>
+<li><strong>ज़ीरो भी डेटा है।</strong> एक हफ़्ते से बिना स्कैन वाला कोड बता रहा है कि प्लेसमेंट गलत है, कोड नहीं।</li>
+<li><strong>स्पाइक को कॉन्टेक्स्ट चाहिए।</strong> पोस्ट आउट होने के ठीक बाद स्कैन का झटका पोस्ट का है, पोस्टर का नहीं। 7-दिन का चार्ट इसे दिखा देता है।</li>
+</ul>
+
+<p>आज़माने के लिए तैयार हैं? <a href="/hi/blog/how-to-create-a-dynamic-qr-code/">अपना पहला डायनामिक कोड बनाएं</a> — मुफ़्त साइन-इन, 8 कोड — और अपनी पहली प्रिंट रन के बाद वापस देखें। पहले से प्रिंट हो चुका है और फ़िक्स चाहिए? <a href="/hi/blog/how-to-edit-a-qr-code-after-printing/">प्रिंट के बाद QR कोड कैसे एडिट करें</a>।</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly एक QR कोड दिखा रहा है"></div>
+      <div>
+        <h3>अपनी अगली प्रिंट रन के साथ आज़माएं</h3>
+        <p>मुफ़्त डायनामिक कोड बनाएं और स्टैट्स को आते हुए देखें।</p>
+        <a class="btn" href="/hi/?mode=dynamic">डायनामिक कोड बनाएँ</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">आगे पढ़ें</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/hi/blog/static-vs-dynamic-qr-codes/"><b>स्टैटिक बनाम डायनामिक QR कोड</b></a>
+        <a class="rel-card" href="/hi/blog/why-is-my-qr-code-not-working/"><b>QR कोड काम नहीं कर रहा? 7 फ़िक्स जो मदद करते हैं</b></a>
+        <a class="rel-card" href="/hi/blog/qr-codes-for-restaurants/"><b>रेस्टोरेंट के लिए QR कोड — मुफ़्त गाइड</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>जानना अच्छा रहेगा</h2>
+    <details><summary><span>यूनिक स्कैन क्या गिना जाता है?</span></summary><p>एक स्कैनर, दिन में एक बार। FreeQrly IP एड्रेस, ब्राउज़र और तारीख के एक तरफ़ा हैश से अलग-अलग स्कैनर गिनता है — एक ही व्यक्ति के एक दिन में दो स्कैन एक बार गिने जाते हैं।</p></details>
+    <details><summary><span>क्या स्टैटिक QR कोड स्कैन ट्रैक करते हैं?</span></summary><p>नहीं। स्टैटिक कोड कभी सर्वर को छूते नहीं — डेस्टिनेशन पैटर्न में रहता है — इसलिए गिनने के लिए कुछ नहीं है। सिर्फ़ डायनामिक कोड स्कैन रिपोर्ट करते हैं।</p></details>
+    <details><summary><span>क्या विज़िटर डेटा प्राइवेट है?</span></summary><p>हां। स्टैट्स सिर्फ़ एग्रीगेट हैं: दिन, देश, शहर, डिवाइस और OS के हिसाब से काउंट। कोई नाम, ईमेल, सटीक लोकेशन या प्रति-विज़िटर रिकॉर्ड नहीं। यूनिक स्कैन नॉन-रिवर्सिबल हैश इस्तेमाल करते हैं.</p></details>
+    <details><summary><span>क्या मैं देख सकता हूं कि मेरे QR कोड को किसने स्कैन किया?</span></summary><p>नहीं — और यह जानबूझकर ऐसा है। FreeQrly स्कैन गिनता है; स्कैन करने वालों की पहचान नहीं करता।</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/hi/" style="color:inherit">FreeQrly</a> — चुपचाप, आपके ब्राउज़र में बना।</div>
+    <p class="flinks"><a href="/hi/scan/">QR स्कैनर</a><a href="/hi/blog/">सभी फ़ील्ड नोट्स</a><a href="/hi/about/">हमारे बारे में</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>
