@@ -10,7 +10,7 @@
  "<strong>Links rot; codes don't.</strong> If the page behind the code is deleted, scanning leads nowhere. That's the destination dying, not the code. A QR code pointing at a dead link is a perfectly healthy code with nothing to say.",
  "<strong>Trial accounts get deactivated.</strong> Some services tie your codes to an account, then nudge you toward a subscription. The code didn't expire — the account did.",
  "Static vs. dynamic, in one paragraph",
- "A <strong>static</strong> code encodes the destination directly: or . Nothing to maintain, nothing to bill. A <strong>dynamic</strong> code encodes a redirect on someone's server, which lets the owner change the destination later and count scans. Useful for marketing campaigns — and a subscription forever.",
+ "A <strong>static</strong> code encodes the destination directly: <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> or <code>https://your-site.com/menu</code>. Nothing to maintain, nothing to bill. A <strong>dynamic</strong> code encodes a redirect on someone's server, which lets the owner change the destination later and count scans. Useful for marketing campaigns — and a subscription forever.",
  "Rule of thumb: if the destination will never change — your WiFi, your business card, your restaurant menu — static is not the cheap option. It's the <em>correct</em> option.",
  "What actually goes wrong with printed codes",
  "Since expiry isn't a thing, here's what to actually watch for:",

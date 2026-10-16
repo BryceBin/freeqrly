@@ -1,0 +1,14 @@
+{
+ "developers": {
+  "<strong>color / bgcolor</strong> — 6-digit hex, no (defaults / ).": "<strong>color / bgcolor</strong> — 6-digit hex, no <code>#</code> (defaults <code>2F4A62</code> / <code>ffffff</code>).",
+  "<strong>ecc</strong> — error correction , , , (default ). Use / for print or logos.": "<strong>ecc</strong> — error correction <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (default <code>M</code>). Use <code>Q</code>/<code>H</code> for print or logos.",
+  "A with payload recipes lives in the repo at . Point your agent at it and it knows the rest.": "A <code>SKILL.md</code> with payload recipes lives in the repo at <code>skills/qr-generator/</code>. Point your agent at it and it knows the rest.",
+  "Add to your MCP client. One tool — — no auth. Works with Claude Code, Cursor, and anything speaking Streamable HTTP.": "Add <code>https://freeqrly.com/mcp</code> to your MCP client. One tool — <code>generate_qr</code> — no auth. Works with Claude Code, Cursor, and anything speaking Streamable HTTP.",
+  "Returns . Only is required; everything else has a sane default. Errors come back as JSON with an field.": "Returns <code>image/svg+xml</code>. Only <code>data</code> is required; everything else has a sane default. Errors come back as JSON with an <code>error</code> field.",
+  "Standard Streamable HTTP: , then / . The tool takes , , , , and returns a ready-to-download SVG URL.": "Standard Streamable HTTP: <code>initialize</code>, then <code>tools/list</code> / <code>tools/call</code>. The <code>generate_qr</code> tool takes <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> and returns a ready-to-download SVG URL.",
+  "describes the whole site for crawlers and assistants — endpoints, payload formats, and page map in one file.": "<code>/llms.txt</code> describes the whole site for crawlers and assistants — endpoints, payload formats, and page map in one file."
+ },
+ "blog-do-qr-codes-expire": {
+  "A <strong>static</strong> code encodes the destination directly: or . Nothing to maintain, nothing to bill. A <strong>dynamic</strong> code encodes a redirect on someone's server, which lets the owner change the destination later and count scans. Useful for marketing campaigns — and a subscription forever.": "A <strong>static</strong> code encodes the destination directly: <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> or <code>https://your-site.com/menu</code>. Nothing to maintain, nothing to bill. A <strong>dynamic</strong> code encodes a redirect on someone's server, which lets the owner change the destination later and count scans. Useful for marketing campaigns — and a subscription forever."
+ }
+}

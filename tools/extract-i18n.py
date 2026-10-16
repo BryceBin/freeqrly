@@ -16,7 +16,7 @@ SITE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 OUT = os.path.join(SITE, "tools/i18n/extract")
 BLOCKS = {"p", "h1", "h2", "h3", "h4", "li", "button", "label", "title",
           "figcaption", "td", "th", "dt", "dd", "small", "summary", "a", "option"}
-SKIP_TAGS = {"script", "style", "code", "pre", "kbd", "samp"}
+SKIP_TAGS = {"script", "style", "pre"}
 
 def clean_ws(s):
     return " ".join(s.split())

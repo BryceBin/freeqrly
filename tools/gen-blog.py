@@ -263,7 +263,7 @@ POSTS += [{'body': '\n'
           ("My QR code scans but the link doesn't work — is the code broken?",
            'No, the code is doing its job. The destination is the problem: the page moved, the '
            'site is down, or a trial-based generator deactivated it.')],
-  'h1': 'Why won\\u2019t this thing <span class="hl hl-blush">scan</span>?',
+  'h1': 'Why won’t this thing <span class="hl hl-blush">scan</span>?',
   'howto': [('Check the size',
              'As a rule of thumb, printed codes need to be at least 2x2 cm. On screen, make it '
              'at least 2 cm wide on your display.'),
