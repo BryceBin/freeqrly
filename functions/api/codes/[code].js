@@ -1,7 +1,7 @@
 // PATCH /api/codes/:code — edit type + payload + style.
 // DELETE /api/codes/:code — delete the code (frees one quota slot).
-// SESSION-ONLY: the signed-in owner of the code. No EditKey channel —
-// anonymous codes cannot be edited (there is no claim flow anymore).
+// SESSION-ONLY: the signed-in owner of the code.
+// Codes created before login was required (user_id NULL) cannot be edited.
 // Delete also removes the code's stats rows. A custom uploaded logo in R2
 // is deleted too, but only when no other code of this user references it.
 import { json } from '../../_lib/dynamic.js';

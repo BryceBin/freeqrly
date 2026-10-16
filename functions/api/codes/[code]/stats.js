@@ -1,5 +1,5 @@
 // GET /api/codes/:code/stats — scan stats + current type/payload.
-// SESSION-ONLY: the signed-in owner of the code. No EditKey channel.
+// SESSION-ONLY: the signed-in owner of the code.
 import { json } from '../../../_lib/dynamic.js';
 import { getSessionUser } from '../../../_lib/auth.js';
 

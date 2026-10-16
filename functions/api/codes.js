@@ -4,7 +4,7 @@
 // Quota: COUNT codes WHERE user_id=? < code_limit,
 // else 403 { error: "quota_exceeded", hint: "upgrade" }.
 // Anonymous codes (user_id NULL, created before login was required) keep
-// redirecting, but cannot be edited — there is no EditKey or claim flow.
+// redirecting, but cannot be edited.
 import { genCode, json } from '../_lib/dynamic.js';
 import { getSessionUser, getCodeCount } from '../_lib/auth.js';
 import { sanitizeStyle } from '../_lib/style.js';
