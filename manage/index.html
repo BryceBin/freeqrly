@@ -128,7 +128,7 @@
 const $ = id => document.getElementById(id);
 const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
 const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
-const FALLBACK = {"ui": {"manageTitle": "Manage your codes", "backDashboard": "← Back to Dashboard", "codesUsed": "{n} of {limit} codes used", "newCode": "+ New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "dashboardMenu": "Dashboard", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account."}, "gen": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Manage your codes", "backDashboard": "← Back to Dashboard", "codesUsed": "{n} of {limit} codes used", "newCode": "+ New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "dashboardMenu": "Dashboard", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account."}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
 let I18N = null;
 let LANG = 'en';
 let ME = null;
@@ -148,7 +148,16 @@ const TYPE_EMOJI = {url:'🔗',text:'📝',wifi:'📶',vcard:'👤',email:'✉�
 
 function t(section, key){
   const src = I18N || FALLBACK;
-  return (src[section] && src[section][LANG] && src[section][LANG][key]) || (src[section] && src[section].en && src[section].en[key]) || key;
+  const sec = src[section] || {};
+  // Language-first (i18n.json / FALLBACK): sec[lang][key]
+  if(sec[LANG] && sec[LANG][key] !== undefined) return sec[LANG][key];
+  if(sec.en && sec.en[key] !== undefined) return sec.en[key];
+  // Key-first (legacy shape): sec[key][lang]
+  if(sec[key] && typeof sec[key] === 'object' && sec[key][LANG] !== undefined) return sec[key][LANG];
+  if(sec[key] && typeof sec[key] === 'object' && sec[key].en !== undefined) return sec[key].en;
+  // Flat (legacy shape): sec[key]
+  if(typeof sec[key] === 'string') return sec[key];
+  return key;
 }
 function g(key){
   const src = I18N || FALLBACK;
@@ -263,7 +272,7 @@ function qrOpts(px, data, style){
     image: logoURL(style) || undefined
   };
 }
-async function renderQRImage(imgEl, px, data, style){
+async function renderQRImage(imgEl, px, data, style, attempt){
   try{
     const qr = new QRCodeStyling(qrOpts(px, data, style));
     const blob = await qr.getRawData('png');
@@ -271,7 +280,11 @@ async function renderQRImage(imgEl, px, data, style){
     const url = URL.createObjectURL(blob);
     imgEl.dataset.objUrl = url;
     imgEl.src = url;
-  }catch(e){ /* keep previous image */ }
+  }catch(e){
+    // Transient failure (e.g. logo image not ready yet) left the thumbnail
+    // broken with no retry — retry once so it self-heals.
+    if(!attempt) setTimeout(() => renderQRImage(imgEl, px, data, style, 1), 800);
+  }
 }
 // Frame wrap (same look as the homepage: rounded border + optional CTA text)
 function frameWrap(svgStr, px, style){
@@ -413,8 +426,9 @@ function statsHTML(d){
     <div class="statBig"><div class="num">${fmtDate(d.createdAt)}</div><div class="lbl">${t('ui','created')}</div></div>
   </div>
   <div class="secTitle">${t('ui','last7')}</div>
-  <div class="chart">${last7.map(r => `<div class="bar ${r.date===today?'today':''}" style="height:${Math.max(6,r.scans/max*100)}%"><span>${r.scans}</span></div>`).join('')}</div>
-  <div class="chartLabels">${last7.map(r => { const dt = new Date(r.date+'T00:00:00'); return `<span>${r.date===today?t('ui','today'):dt.toLocaleDateString('en-US',{weekday:'short'})}</span>`; }).join('')}</div>
+  ${last7.length ? `<div class="chart">${last7.map(r => `<div class="bar ${r.date===today?'today':''}" style="height:${Math.max(6,r.scans/max*100)}%"><span>${r.scans}</span></div>`).join('')}</div>
+  <div class="chartLabels">${last7.map(r => { const dt = new Date(r.date+'T00:00:00'); return `<span>${r.date===today?t('ui','today'):dt.toLocaleDateString('en-US',{weekday:'short'})}</span>`; }).join('')}</div>`
+  : `<p style="font-size:13px;color:#8a7a5f;margin:4px 0 14px">${t('ui','noScans')}</p>`}
   <div class="two">
     <div><div class="secTitle">${t('ui','byCountry')}</div><div>${rows(d.byCountry, t('ui','noScans'))}</div></div>
     <div><div class="secTitle">${t('ui','byCity')}</div><div>${rows(d.byCity, t('ui','noCity'))}</div></div>
