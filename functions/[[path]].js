@@ -16,6 +16,7 @@ function isKnown(path) {
   if (path.startsWith('/assets/') || path.startsWith('/skills/')) return true;
   if (path.startsWith('/api/')) return true;
   if (path === '/mcp') return true;
+  if (path === '/manage/i18n.json') return true; // Manage page translations (static JSON)
   if (path === '/blog/' || path.startsWith('/blog/')) return true;
   const seg = path.replace(/\/$/, '').slice(1);
   if (!seg.includes('/') && TOP_LEVEL.has(seg)) return true;
