@@ -63,6 +63,15 @@ def localize_page(key, lang, trans):
     src = open(os.path.join(SITE, src_rel), encoding="utf-8").read()
     out = src
     missing = []
+    # JSON-LD: string values appear with \" escapes (json.dumps), so the plain
+    # EN string never matches inside <script type="application/ld+json">.
+    # FAQ answers with <a href="..."> links stayed English in localized pages
+    # for exactly this reason. Also replace the escaped variants.
+    for en in list(trans.keys()):
+        if '"' in en and trans[en] != en:
+            esc_en = en.replace('"', '\\"')
+            if esc_en not in trans:
+                trans[esc_en] = trans[en].replace('"', '\\"')
     # longest first so 'Email body' wins over 'Email'
     for en in sorted(trans.keys(), key=len, reverse=True):
         tr = trans[en]

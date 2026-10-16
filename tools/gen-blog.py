@@ -826,7 +826,7 @@ def build(p, all_posts=None):
     faq_html = "\n".join(
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
         for q, a in p["faq"])
-    cta = p.get('cta') or {'title': 'Try it yourself — free', 'text': 'Everything in this article works in the FreeQrly studio right now. Static codes, ten content types, PNG and SVG export.', 'href': '/#studio', 'btn': 'Open the studio'}
+    cta = p.get('cta') or {'title': 'Try it yourself — free', 'text': 'Everything in this article works in the FreeQrly studio right now. Static codes, thirteen content types, PNG and SVG export.', 'href': '/#studio', 'btn': 'Open the studio'}
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
