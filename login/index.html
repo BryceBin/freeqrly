@@ -82,6 +82,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
     </div>
     <button class="btn" id="magicBtn" type="submit">Send sign-in link</button>
   </form>
+  <div id="tsWidget" style="margin:14px 0 0"></div>
   <p class="note" id="emailNote" hidden>Email sign-in is not available right now.</p>
 
   <!-- Check-your-inbox state (after magic link / register / unverified login) -->
@@ -111,6 +112,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   <p class="note">We only use sign-in to tie your dynamic codes to your account. No tracking, no ads.</p>
 </div>
 <p class="foot"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 const $ = id => document.getElementById(id);
 const ERRORS = {
@@ -164,6 +166,7 @@ function showInboxState(){
   $('magicDivider').hidden = true;
   $('magicForm').hidden = true;
   $('oauthBlock').hidden = true;
+  $('tsWidget').hidden = true;
   $('loginErr').hidden = true;
   $('inboxState').hidden = false;
   startPolling();
@@ -175,6 +178,7 @@ function showForms(){
   $('magicDivider').hidden = false;
   $('magicForm').hidden = false;
   $('oauthBlock').hidden = false;
+  $('tsWidget').hidden = false;
 }
 $('inboxBackBtn').addEventListener('click', showForms);
 
@@ -216,6 +220,7 @@ if(isVerifiedPage){
   $('magicDivider').hidden = true;
   $('magicForm').hidden = true;
   $('oauthBlock').hidden = true;
+  $('tsWidget').hidden = true;
   $('verifiedState').hidden = false;
   $('verifiedContinueBtn').addEventListener('click', () => { location.href = NEXT; });
 } else {
@@ -225,8 +230,20 @@ if(isVerifiedPage){
   }
 }
 
+// --- Turnstile (bot check). One widget, shared by all three forms.
+// Token is single-use: reset after every submit for a fresh one.
+let tsWidgetId = null;
+function tsToken(){ try{ return (window.turnstile && tsWidgetId !== null) ? turnstile.getResponse(tsWidgetId) : ''; }catch(e){ return ''; } }
+function tsReset(){ try{ if(window.turnstile && tsWidgetId !== null) turnstile.reset(tsWidgetId); }catch(e){} }
+function tsRender(sitekey){
+  if(!sitekey || !window.turnstile) return;
+  try{ tsWidgetId = turnstile.render('#tsWidget', { sitekey, theme: 'light' }); }
+  catch(e){ /* widget failed (e.g. blocked) — backend decides */ }
+}
+const TS_ERR = 'Please complete the human check and try again.';
 fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
   if(!cfg) return;
+  tsRender(cfg.turnstileSitekey);
   if(cfg.email === false){
     $('magicEmail').disabled = true;
     $('magicBtn').disabled = true;
@@ -254,10 +271,11 @@ $('pwForm').addEventListener('submit', async e => {
     if(mode === 'login'){
       const r = await fetch('/api/auth/login', {
         method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password, turnstileToken: tsToken() })
       });
       const d = await r.json().catch(()=>({}));
       if(r.ok){ location.href = NEXT; return; }
+      if(d.error === 'turnstile_failed'){ $('pwErr').textContent = TS_ERR; $('pwErr').hidden = false; tsReset(); return; }
       if(d.error === 'email_not_verified'){
         // Backend resends the verification email; wait for the click.
         $('inboxText').textContent = 'Your email is not verified yet — we just sent you a fresh verification link. Click it in any tab and this page continues automatically.';
@@ -269,7 +287,7 @@ $('pwForm').addEventListener('submit', async e => {
     } else {
       const r = await fetch('/api/auth/register', {
         method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
-        body: JSON.stringify({ email, password, next: NEXT })
+        body: JSON.stringify({ email, password, next: NEXT, turnstileToken: tsToken() })
       });
       const d = await r.json().catch(()=>({}));
       if(r.ok){
@@ -290,6 +308,7 @@ $('pwForm').addEventListener('submit', async e => {
     $('pwErr').textContent = 'Network error. Please try again.';
     $('pwErr').hidden = false;
   }finally{
+    tsReset();
     $('pwBtn').disabled = false;
     $('pwBtn').textContent = mode === 'login' ? 'Log in' : 'Create account';
   }
@@ -301,14 +320,19 @@ $('magicForm').addEventListener('submit', async e => {
   const email = $('magicEmail').value.trim();
   if(!email) return;
   $('magicBtn').disabled = true; $('magicBtn').textContent = 'Sending…';
+  let tsFailed = false;
   try{
-    await fetch('/api/auth/magic-link', {
+    const r = await fetch('/api/auth/magic-link', {
       method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
-      body: JSON.stringify({ email, next: NEXT })
+      body: JSON.stringify({ email, next: NEXT, turnstileToken: tsToken() })
     });
+    const d = await r.json().catch(()=>({}));
+    tsFailed = (d.error === 'turnstile_failed');
   }catch(err){}
+  tsReset();
   // Same message either way — never reveal whether the email exists.
   $('magicBtn').disabled = false; $('magicBtn').textContent = 'Send sign-in link';
+  if(tsFailed){ $('loginErr').textContent = TS_ERR; $('loginErr').hidden = false; return; }
   $('inboxText').textContent = 'We sent you a sign-in link. Click it in any tab — this page continues automatically once you sign in.';
   showInboxState();
 });

@@ -42,6 +42,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
       <input id="forgotEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
     </div>
     <button class="btn" id="forgotBtn" type="submit">Send reset link</button>
+    <div id="tsWidget" style="margin:14px 0 0"></div>
     <p class="merror" id="forgotErr" hidden></p>
   </form>
 
@@ -75,6 +76,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   </div>
 </div>
 <p class="foot"><a href="/">Generator</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 const $ = id => document.getElementById(id);
 const ERRORS = {
@@ -88,6 +90,16 @@ const next = params.get('next') || '';
 if(next && next.startsWith('/') && !next.startsWith('//')){
   $('loginLink').href = '/login/?next=' + encodeURIComponent(next);
 }
+
+// --- Turnstile (bot check) for the forgot form.
+let tsWidgetId = null;
+function tsToken(){ try{ return (window.turnstile && tsWidgetId !== null) ? turnstile.getResponse(tsWidgetId) : ''; }catch(e){ return ''; } }
+function tsReset(){ try{ if(window.turnstile && tsWidgetId !== null) turnstile.reset(tsWidgetId); }catch(e){} }
+fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
+  if(cfg && cfg.turnstileSitekey && window.turnstile){
+    try{ tsWidgetId = turnstile.render('#tsWidget', { sitekey: cfg.turnstileSitekey, theme: 'light' }); }catch(e){}
+  }
+}).catch(()=>{});
 
 if(token){
   // Reset mode: set a new password.
@@ -135,10 +147,18 @@ if(token){
     $('forgotErr').hidden = true;
     $('forgotBtn').disabled = true; $('forgotBtn').textContent = 'Sending…';
     try{
-      await fetch('/api/auth/forgot', {
+      const r = await fetch('/api/auth/forgot', {
         method: 'POST', headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email, turnstileToken: tsToken() })
       });
+      const d = await r.json().catch(()=>({}));
+      tsReset();
+      if(d.error === 'turnstile_failed'){
+        $('forgotErr').textContent = 'Please complete the human check and try again.';
+        $('forgotErr').hidden = false;
+        $('forgotBtn').disabled = false; $('forgotBtn').textContent = 'Send reset link';
+        return;
+      }
     }catch(err){}
     // Same message either way — never reveal whether the email exists.
     $('forgotForm').hidden = true;
