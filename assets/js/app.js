@@ -1010,6 +1010,110 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
 })();
 
 
+/* Draft: preserve the generator state across the sign-in redirect.
+   Saved to sessionStorage (same-tab only) right before leaving for /login/;
+   restored on return when the URL carries ?draft=1 and the user is signed in. */
+const DRAFT_KEY = "freeqrly-draft";
+function saveDraft(){
+  if(cur === "batch") return;
+  try{
+    const fields = {};
+    document.querySelectorAll("#fields input, #fields textarea, #fields select").forEach(el => {
+      if(el.id) fields[el.id] = el.value;
+    });
+    const preset = document.querySelector('#logoRow .logopick[data-preset].on');
+    const draft = {
+      type: cur, fields,
+      dots: $("dots") ? $("dots").value : "square",
+      ecc: $("ecc") ? $("ecc").value : "M",
+      fg: $("fg") ? $("fg").value : "#22303F",
+      bgc: $("bgc") ? $("bgc").value : "#ffffff",
+      transp: !!($("transp") && $("transp").checked),
+      size: $("size") ? $("size").value : "1024",
+      frame: (typeof getFrame === "function" ? getFrame() : "none"),
+      frameText: ($("frameText") && $("frameText").value) || "",
+      logoPreset: preset ? preset.dataset.preset : null,
+      // Custom uploaded logos can be large — only keep small ones.
+      logoData: (typeof logoData !== "undefined" && logoData && logoData.length < 1024 * 1024) ? logoData : null,
+      ts: Date.now()
+    };
+    sessionStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+  }catch(e){ /* storage full/blocked: continue without a draft */ }
+}
+function loginNextUrl(){
+  const u = new URL(location.href);
+  u.searchParams.set("draft", "1");
+  return u.pathname + u.search;
+}
+function switchToDynamic(){
+  if(cur === "batch") return;
+  const btn = document.querySelector('#segMode button[data-mode="dynamic"]');
+  if(btn && !dynamicMode) btn.click();
+}
+function ensureCustomDot(boxId, hex, hiddenId, isFg){
+  const box = document.getElementById(boxId); if(!box) return;
+  const known = Array.from(box.querySelectorAll(".cdot[data-v]")).some(b => b.dataset.v.toLowerCase() === hex.toLowerCase());
+  if(known) return;
+  let custom = box.querySelector(".cdot.custom");
+  if(!custom){
+    custom = document.createElement("button");
+    custom.type = "button"; custom.className = "cdot custom";
+    custom.setAttribute("aria-label", "Custom color");
+    box.insertBefore(custom, box.querySelector(".cpick"));
+    custom.addEventListener("click", () => {
+      const hidden = $(hiddenId);
+      if(hidden){ hidden.value = custom.dataset.v; hidden.dispatchEvent(new Event("input", { bubbles: true })); }
+      dotsInit._mark(boxId, custom.dataset.v);
+      const transp = $("transp"); if(transp && !isFg) transp.checked = false;
+      draw();
+    });
+  }
+  custom.dataset.v = hex; custom.style.background = hex; custom.title = hex;
+}
+function restoreDraft(){
+  let draft;
+  try{ draft = JSON.parse(sessionStorage.getItem(DRAFT_KEY) || "null"); }catch(e){ draft = null; }
+  if(!draft || !ORDER.includes(draft.type) || draft.type === "batch") return false;
+  cur = draft.type; renderTabs(); renderFields();
+  // Fields (raw values, incl. date/time parts + hidden select/datetime inputs)
+  Object.keys(draft.fields || {}).forEach(id => {
+    const el = document.getElementById(id);
+    if(el){ el.value = draft.fields[id]; el.dispatchEvent(new Event("input", { bubbles: true })); }
+  });
+  // Select-type fields: sync the visible segmented buttons with the hidden select
+  (I18N[lang].fields[draft.type] || []).forEach(([id, , third]) => {
+    if(typeof third === "string" && third.startsWith("select:")){
+      const el = $("f_" + id);
+      if(el && el.previousElementSibling) el.previousElementSibling.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.v === el.value));
+    }
+  });
+  // Style controls: hidden value + visual state
+  const setSeg = (segId, val) => { const seg = $(segId); if(!seg) return; seg.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.v === val)); };
+  if($("dots")){ $("dots").value = draft.dots || "square"; setSeg("segDots", $("dots").value); }
+  if($("ecc")){ $("ecc").value = draft.ecc || "M"; setSeg("segEcc", $("ecc").value); }
+  if($("fg")) $("fg").value = draft.fg || "#22303F";
+  if($("bgc")) $("bgc").value = draft.bgc || "#ffffff";
+  if($("transp")) $("transp").checked = !!draft.transp;
+  ensureCustomDot("fgDots", $("fg").value, "fg", true);
+  if(!draft.transp) ensureCustomDot("bgDots", $("bgc").value, "bgc", false);
+  if(typeof dotsInit !== "undefined" && dotsInit._mark){
+    dotsInit._mark("fgDots", $("fg").value);
+    dotsInit._mark("bgDots", draft.transp ? "transparent" : $("bgc").value);
+  }
+  if($("size")){ $("size").value = draft.size || "1024"; setSeg("segSize", $("size").value); const sv = $("sizeVal"); if(sv) sv.textContent = $("size").value; }
+  if(typeof frameVal !== "undefined"){ frameVal = draft.frame || "none"; setSeg("segFrame", frameVal); const fe = $("frameExpand"); if(fe) fe.classList.toggle("show", frameVal === "cta"); }
+  if($("frameText")) $("frameText").value = draft.frameText || "";
+  // Logo
+  if(draft.logoPreset){
+    const b = document.querySelector('#logoRow .logopick[data-preset="' + draft.logoPreset + '"]');
+    if(b && !b.classList.contains("on")) b.click();
+  } else if(draft.logoData && typeof setLogo === "function"){
+    setLogo(draft.logoData, null);
+  }
+  draw();
+  return true;
+}
+
 /* --- Dynamic QR mode (preview-integrated) --- */
 /* Toggle lives at top of preview. Dynamic: preview blurs + download disabled
    + Generate button appears. After generation: QR clears, download enabled,
@@ -1042,7 +1146,7 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
         signinHint.hidden = !show;
         if(show){
           const l = $("dynSigninLink");
-          if(l) l.href = "/login/?next=" + encodeURIComponent(location.pathname + location.search);
+          if(l){ l.href = "/login/?next=" + encodeURIComponent(loginNextUrl()); l.onclick = () => { saveDraft(); }; }
         }
       }
     } else {
@@ -1101,7 +1205,7 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
     // then back here.
     {
       const st = await window.getAuthState();
-      if(!st.user){ location.href = "/login/?next=" + encodeURIComponent(location.pathname + location.search); return; }
+      if(!st.user){ saveDraft(); location.href = "/login/?next=" + encodeURIComponent(loginNextUrl()); return; }
     }
     genBtn.disabled = true;
     genBtn.innerHTML = '<span class="spinner"></span>Generating…';
@@ -1110,7 +1214,7 @@ $("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
       const r = await fetch("/api/codes", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type: cur, payload, style }) });
       const d = await r.json();
       if(!r.ok){
-        if(r.status === 401){ location.href = "/login/?next=" + encodeURIComponent(location.pathname + location.search); return; }
+        if(r.status === 401){ saveDraft(); location.href = "/login/?next=" + encodeURIComponent(loginNextUrl()); return; }
         alert(d.error || "Failed to create"); return;
       }
       dynamicShortUrl = d.shortUrl;
@@ -1207,5 +1311,22 @@ function initAuthHeader(){
 }
 initAuthHeader();
 
-detectLang().then(l=>{ lang = l; applyLang(); draw(); if(window.refreshDynamicUI) window.refreshDynamicUI(); });
+detectLang().then(async l => {
+  lang = l; applyLang(); draw();
+  if(window.refreshDynamicUI) window.refreshDynamicUI();
+  const params = new URLSearchParams(location.search);
+  if(params.get("draft") === "1"){
+    try{
+      const st = await window.getAuthState();
+      if(st.user && restoreDraft()){
+        switchToDynamic();
+        try{ sessionStorage.removeItem(DRAFT_KEY); }catch(e){}
+        const u = new URL(location.href); u.searchParams.delete("draft");
+        history.replaceState(null, "", u.pathname + u.search + u.hash);
+      }
+    }catch(e){}
+  } else if(params.get("mode") === "dynamic"){
+    switchToDynamic();
+  }
+});
 })();
