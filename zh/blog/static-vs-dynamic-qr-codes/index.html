@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>静态码 vs 动态码 | FreeQrly</title>
+<meta name="description" content="静态码 vs 动态码，实话实说：什么时候需要可编辑、可追踪的动态码——什么时候静态是更聪明、免费的选择。">
+<link rel="canonical" href="https://freeqrly.com/zh/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="静态码 vs 动态码 | FreeQrly">
+<meta property="og:description" content="静态码 vs 动态码，实话实说：什么时候需要可编辑、可追踪的动态码——什么时候静态是更聪明、免费的选择。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"静态码 vs 动态码 | FreeQrly","description":"静态码 vs 动态码，实话实说：什么时候需要可编辑、可追踪的动态码——什么时候静态是更聪明、免费的选择。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "静态二维码和动态二维码有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "静态二维码把目标链接直接编进图案——永久免费，不可编辑。动态二维码编码的是服务商服务器上的跳转，所以目标链接以后可以改，扫码也可以追踪——但需要持续订阅。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我需要动态二维码吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可能不需要。如果你的目标链接不会变——WiFi、名片、固定链接——静态是正确的选择。只有可编辑的目标链接或扫码分析才需要动态码，通常是在营销活动里。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么免费二维码生成器推动态码？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因为动态码需要它们的服务器，这就给订阅提供了理由。很多“免费”生成器做的是绑了试用的动态码——试用结束，码就停止工作。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">首页</a><a href="/blog/">实战笔记</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
+    <div class="kicker" style="text-align:center">实战笔记</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">静态码 vs <span class='hl hl-blush'>动态</span>码</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">一个永久免费。另一个是订阅。下面讲怎么判断你真正需要哪个。</p>
+    <p class="meta" style="text-align:center">2026 年 10 月 13 日 · 阅读约 4 分钟</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>每个二维码生成器都想跟你聊同一个话题：<em>考虑过动态码吗？</em>在回答之前，了解这两种码到底是什么——以及为什么行业这么用力推其中一种——会很有帮助。</p>
+
+<h2>区别，不带推销</h2>
+<p>一个<strong>静态二维码</strong>直接包含你的目标链接。扫一下，手机直接从图案里读出 WiFi 密码、vCard 或链接。没有中间人，没有服务器，没有账号。</p>
+<p>一个<strong>动态二维码</strong>包含服务商服务器上的一个短链接。扫一下，你的手机访问他们的服务器，他们的服务器再把你重定向到真正的目标链接。因为目标链接在他们的服务器上，服务商以后可以改它——还能统计每次扫码。</p>
+<p>区别就这么多。剩下的都是后果。</p>
+
+<h2>动态码真正合理的时候</h2>
+<ul>
+<li><strong>你做营销活动。</strong>海报下周要印，但落地页还没定。动态码让你现在先指一个地方，以后再改。</li>
+<li><strong>你需要扫码分析。</strong>多少人扫了、从哪扫、用什么扫。静态码一声不吭；动态码会回传。</li>
+<li><strong>你做 A/B 测试目标链接。</strong>不用重印，换掉印好的码背后的链接。</li>
+</ul>
+
+<h2>静态码胜出的时候</h2>
+<ul>
+<li><strong>目标链接不会变。</strong>WiFi 密码、名片、App 下载链接、餐厅菜单、博物馆标签。野外的大多数二维码都是这样。</li>
+<li><strong>你不想要订阅。</strong>动态意味着永远付费——停了，码就死了。静态是一次性的事。</li>
+<li><strong>隐私重要。</strong>每次动态扫码都会 ping 服务商的服务器。静态扫码除了目标链接，什么都不碰。</li>
+</ul>
+
+<blockquote>不舒服的真相是：大多数生成器推动态码，是因为它是持续收入，不是因为你需要它。如果某个人的“免费”码要求账号，你看的是一个带试用倒计时的动态码。</blockquote>
+
+<h2>快速决策指南</h2>
+<ul>
+<li>给客人用的 WiFi？<strong>静态。</strong></li>
+<li>名片上的联系方式？<strong>静态。</strong></li>
+<li>随季节变的菜单？<strong>静态</strong>——指向你的菜单页，更新页面，不用动码。</li>
+<li>产品发布广告牌，链接还没定？<strong>动态</strong>——它就是干这个的。</li>
+<li>需要向客户汇报扫码数？<strong>动态。</strong></li>
+</ul>
+
+<h2>FreeQrly 的立场</h2>
+<p>我们做静态码——免费、无限量、不用账号。覆盖大多数日常需求。带可编辑链接和扫码统计的动态码，免费登录即可用，适合做营销活动的人。</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly 举着二维码"></div>
+      <div>
+        <h3>自己试试——免费</h3>
+        <p>这篇文章里的每样东西，现在都能在 FreeQrly 首页里用。静态码、十种内容类型、PNG 和 SVG 导出。</p>
+        <a class="btn" href="/#studio">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">继续读</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/why-is-my-qr-code-not-working/"><b>QR Code Not Working? 7 Fixes That Help</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-restaurants/"><b>QR Codes for Restaurants — Free Guide</b></a>
+        <a class="rel-card" href="/blog/scan-qr-code-online/"><b>Scan QR Codes Online — Free, No App, No Upload</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>小提示</h2>
+    <details><summary><span>静态二维码和动态二维码有什么区别？</span></summary><p>静态二维码把目标链接直接编进图案——永久免费，不可编辑。动态二维码编码的是服务商服务器上的跳转，所以目标链接以后可以改，扫码也可以追踪——但需要持续订阅。</p></details>
+    <details><summary><span>我需要动态二维码吗？</span></summary><p>可能不需要。如果你的目标链接不会变——WiFi、名片、固定链接——静态是正确的选择。只有可编辑的目标链接或扫码分析才需要动态码，通常是在营销活动里。</p></details>
+    <details><summary><span>为什么免费二维码生成器推动态码？</span></summary><p>因为动态码需要它们的服务器，这就给订阅提供了理由。很多“免费”生成器做的是绑了试用的动态码——试用结束，码就停止工作。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> —— 在你的浏览器里生成。</div>
+    <p class="flinks"><a href="/scan/">扫码器</a><a href="/blog/">全部实战笔记</a><a href="/about/">关于</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

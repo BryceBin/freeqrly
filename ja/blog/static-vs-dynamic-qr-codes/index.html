@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>静的QRコードと動的QRコード | FreeQrly</title>
+<meta name="description" content="静的QRコードと動的QRコードを正直に解説：編集可能で追跡可能な動的コードが必要なときと、静的が賢く無料の選択肢になるとき。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="静的QRコードと動的QRコード | FreeQrly">
+<meta property="og:description" content="静的QRコードと動的QRコードを正直に解説：編集可能で追跡可能な動的コードが必要なときと、静的が賢く無料の選択肢になるとき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"静的QRコードと動的QRコード | FreeQrly","description":"静的QRコードと動的QRコードを正直に解説：編集可能で追跡可能な動的コードが必要なときと、静的が賢く無料の選択肢になるとき。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "静的QRコードと動的QRコードの違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "静的QRコードは遷移先を模様に直接記録します — 永久に無料、編集不可。動的QRコードは業者のサーバー上のリダイレクトを記録するので、遷移先は後で変更でき、スキャンも追跡できます — ただし継続的なサブスクが必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動的QRコードは必要？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "おそらく不要です。遷移先が変わらないなら — WiFi、名刺、固定リンク — 静的が正しい選択です。動的が必要なのは、編集可能な遷移先やスキャン分析のためだけで、たいていマーケティングキャンペーンです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料のQRコードジェネレーターはなぜ動的コードを推すのか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "動的コードは彼らのサーバーを必要とし、それがサブスクを正当化するからです。多くの「無料」ジェネレーターはトライアルに紐づいた動的コードを作成します — トライアルが終わるとコードは動作しなくなります。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">スタジオ</a><a href="/blog/">フィールドノート</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">静的 vs <span class='hl hl-blush'>動的</span> QRコード</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">一方は永久に無料。もう一方はサブスクです。本当に必要なのはどちらか、その見分け方を紹介します。</p>
+    <p class="meta" style="text-align:center">2026年10月13日 · 約4分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>すべてのQRコードジェネレーターは、あなたと同じ会話をしたがります。<em>動的を検討しましたか？</em> 答える前に、2種類が実際に何なのか — そして業界がなぜ一方をこれほど強く推すのか — を知っておくと役立ちます。</p>
+
+<h2>違い — 売り込みなしで</h2>
+<p><strong>静的QRコード</strong>は遷移先を直接含みます。スキャンすると、スマホはWiFiパスワード、vCard、URLを模様から直接読み取ります。仲介者なし、サーバーなし、アカウントなし。</p>
+<p><strong>動的QRコード</strong>は業者のサーバー上の短いリンクを含みます。スキャンすると、スマホは彼らのサーバーを訪れ、サーバーが本当の遷移先にリダイレクトします。遷移先が彼らのサーバー上にあるため、業者は後でそれを変更でき、すべてのスキャンを数えることができます。</p>
+<p>違いはこれだけです。あとはすべて結果です。</p>
+
+<h2>動的が実際に意味を持つとき</h2>
+<ul>
+<li><strong>キャンペーンを実施する。</strong>ポスターは来週印刷に出るのに、ランディングページがまだ最終ではありません。動的なら今どこかを指して、後で修正できます。</li>
+<li><strong>スキャン分析が必要。</strong>何人が、どこから、何でスキャンしたか。静的コードは無言です。動的コードは本部に報告します。</li>
+<li><strong>遷移先をA/Bテストする。</strong>印刷されたコードの裏のリンクを、再印刷なしに差し替えます。</li>
+</ul>
+
+<h2>静的が勝つとき</h2>
+<ul>
+<li><strong>遷移先が変わらない。</strong>WiFiパスワード、名刺、アプリのダウンロードリンク、レストランのメニュー、博物館のラベル。世の中のほとんどのQRコードはこうです。</li>
+<li><strong>サブスクは要らない。</strong>動的は永久に支払うことを意味します — 止めればコードは死にます。静的は一度きりの行為です。</li>
+<li><strong>プライバシーが重要。</strong>動的なスキャンは毎回業者のサーバーにpingします。静的なスキャンは遷移先以外何にも触れません。</li>
+</ul>
+
+<blockquote>ここが気まずい部分です。ほとんどのジェネレーターは、あなたが必要だからではなく、継続課金になるから動的を推します。誰かの「無料」コードがアカウントを要求するなら、それはトライアルタイマー付きの動的コードです。</blockquote>
+
+<h2>素早い判断ガイド</h2>
+<ul>
+<li>ゲスト用WiFi？<strong>静的。</strong></li>
+<li>名刺の連絡先？<strong>静的。</strong></li>
+<li>季節で変わるメニュー？<strong>静的</strong> — メニューページに向け、コードではなくページを更新します。</li>
+<li>未確定のURLの製品発表用ビルボード？<strong>動的</strong> — それこそ動的のためです。</li>
+<li>クライアントにスキャン数を報告する必要がある？<strong>動的。</strong></li>
+</ul>
+
+<h2>FreeQrlyの立場</h2>
+<p>私たちは静的コードを作ります — 無料、無制限、アカウント不要。日常のニーズのほとんどをカバーします。編集可能なリンクとスキャン統計付きの動的コードは、無料登録で利用でき、キャンペーンを実施する人向けです。</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>自分で試す — 無料</h3>
+        <p>この記事の内容はすべて、今すぐFreeQrlyのスタジオで使えます。静的コード、10種類のコンテンツタイプ、PNGとSVGの書き出し。</p>
+        <a class="btn" href="/#studio">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/why-is-my-qr-code-not-working/"><b>QR Code Not Working? 7 Fixes That Help</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-restaurants/"><b>QR Codes for Restaurants — Free Guide</b></a>
+        <a class="rel-card" href="/blog/scan-qr-code-online/"><b>Scan QR Codes Online — Free, No App, No Upload</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>静的QRコードと動的QRコードの違いは？</span></summary><p>静的QRコードは遷移先を模様に直接記録します — 永久に無料、編集不可。動的QRコードは業者のサーバー上のリダイレクトを記録するので、遷移先は後で変更でき、スキャンも追跡できます — ただし継続的なサブスクが必要です。</p></details>
+    <details><summary><span>動的QRコードは必要？</span></summary><p>おそらく不要です。遷移先が変わらないなら — WiFi、名刺、固定リンク — 静的が正しい選択です。動的が必要なのは、編集可能な遷移先やスキャン分析のためだけで、たいていマーケティングキャンペーンです。</p></details>
+    <details><summary><span>無料のQRコードジェネレーターはなぜ動的コードを推すのか？</span></summary><p>動的コードは彼らのサーバーを必要とし、それがサブスクを正当化するからです。多くの「無料」ジェネレーターはトライアルに紐づいた動的コードを作成します — トライアルが終わるとコードは動作しなくなります。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — 静かに、ブラウザで作成。</div>
+    <p class="flinks"><a href="/scan/">QRスキャナー</a><a href="/blog/">フィールドノート一覧</a><a href="/about/">FreeQrlyについて</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

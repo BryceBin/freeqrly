@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRコードが動作しない？役立つ7つの修正 | FreeQrly</title>
+<meta name="description" content="QRコードがスキャンできない？7つの本当の修正：サイズ、コントラスト、破損、クワイエットゾーン、期限切れリンクの罠 — さらに、印刷前にテストする方法。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/why-is-my-qr-code-not-working/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QRコードが動作しない？役立つ7つの修正 | FreeQrly">
+<meta property="og:description" content="QRコードがスキャンできない？7つの本当の修正：サイズ、コントラスト、破損、クワイエットゾーン、期限切れリンクの罠 — さらに、印刷前にテストする方法。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/why-is-my-qr-code-not-working/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QRコードが動作しない？役立つ7つの修正 | FreeQrly","description":"QRコードがスキャンできない？7つの本当の修正：サイズ、コントラスト、破損、クワイエットゾーン、期限切れリンクの罠 — さらに、印刷前にテストする方法。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "QRコードが1台のスマホではスキャンできるのに、別のスマホではできないのはなぜ？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それならコード自体は問題ありません — 失敗するスマホのカメラ、照明、角度の問題です。レンズを拭いて、より明るい場所で試してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "破損したQRコードでも動作する？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes, thanks to error correction — <a href=\"http://www.iso.org/standard/83389.html\">up to 30% damage can be tolerated at the High setting</a>, as defined in ISO/IEC 18004. But heavy damage, fading, or missing finder patterns will kill it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコードはスキャンできるけどリンクが動作しない — コードは壊れている？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、コードは仕事をしています。問題は遷移先です。ページが移動した、サイトがダウンしている、またはトライアル型ジェネレーターが無効化した、のいずれかです。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"QRコードが動作しない？役立つ7つの修正 | FreeQrly","description":"QRコードがスキャンできない？7つの本当の修正：サイズ、コントラスト、破損、クワイエットゾーン、期限切れリンクの罠 — さらに、印刷前にテストする方法。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "サイズを確認",
+      "text": "目安として、印刷されたコードは最低2×2cm必要です。画面上では、ディスプレイ上で最低2cmの幅にしてください。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "コントラストを確認",
+      "text": "明るい背景に暗いコード。おしゃれな低コントラストの色の組み合わせは、デザインの最大の殺し屋です。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "2台目のスマホでテスト",
+      "text": "1台のスマホが読み取り、別のスマホが読み取らない場合、コードは問題ありません — カメラか照明の問題です。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "より高い解像度で再書き出し",
+      "text": "低解像度の書き出しによるぼやけたエッジは、印刷サイズで失敗します。1024px以上でPNGを書き出すか、SVGを使ってください。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">スタジオ</a><a href="/blog/">フィールドノート</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/error.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">なぜこいつは<span class="hl hl-blush">スキャン</span>できないのか？</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">スキャンできないQRコードは、ほとんど謎ではありません。これら7つのチェックを順番に実行すれば、約2分で犯人が見つかります。</p>
+    <p class="meta" style="text-align:center">2026年10月14日 · 約4分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+
+<h2>1. 小さすぎる</h2>
+<p>古典的なパターンです。名刺の隅に幅1cmで押し込まれたコードは、確実にスキャンできません。印刷の最小サイズの目安は<b>2×2cm</b>（約0.8インチ）で、大きい方が常に安全です。完全な内訳は<a href="/blog/qr-code-print-size-guide/">印刷サイズガイド</a>にあります。</p>
+<h2>2. 低コントラストが原因</h2>
+<p>QRリーダーは明るい背景上の暗いモジュールを探します。白の上の薄いグレー、ブランドのパステル、忙しい写真の上のコードは失敗します — 特に暗い光では。迷ったら、白の上の黒は常に動作します。</p>
+<h2>3. 破損または色褪せ</h2>
+<p>折れたチラシ、日焼けしたポスター、引っかいたステッカー。誤り訂正はある程度の破損に耐えられます（だから<a href="/qr-code-with-logo/">ロゴの追加</a>が機能します）が、限界があります。コードの4分の1が消えたら、再印刷してください。</p>
+<h2>4. クワイエットゾーンなし</h2>
+<p>コードの周りの空白の余白は装飾ではありません — スキャナーはそれを使って端を見つけます。ISO/IEC 18004の規定通り、4辺すべてに<a href="http://www.iso.org/standard/83389.html">最低4モジュール分の明確な境界</a>を保ってください。テキストやデザイン要素で詰め込まないでください。</p>
+<h2>5. グレア、曲面、角度</h2>
+<p>明るい光の下での光沢ラミネート、ボトルに巻かれたコード、急な角度での撮影。平らにして、グレアを消して、正面から撮影してください。</p>
+<h2>6. コンテンツが死んでいる</h2>
+<p>コードは正常にスキャンできます — でもリンクが壊れている、ページが移動した、または「無料」ジェネレーターのトライアルが期限切れになり、コードも一緒に持って行かれた、のいずれかです。これが期限切れリンクの罠です。<a href="/blog/do-qr-codes-expire/">QRコードに期限はある？</a>では、どれに期限があり、どう避けるかを説明しています。</p>
+<h2>7. あなたのカメラ</h2>
+<p>レンズを拭いてください。本気です — 曇ったレンズは、恥ずかしいほど多くの「壊れた」コードの背後にあります。次に2台目のスマホでテストしてください。スマホBが読み取れば、コードは決して問題ではありませんでした。</p>
+<h2>印刷前にテスト</h2>
+<p>印刷に送る前に、2台の異なるスマホ（できればiPhone 1台とAndroid 1台）でコードをスキャンしてください。今の30秒が、後の再印刷を防ぎます。<a href="/">無料ジェネレーター</a>でテストコードを生成して試してください。</p>
+
+    </div>
+
+    <section class="sources">
+      <h2>出典</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - QRコードのシンボル仕様。4つの誤り訂正レベル（L 7%、M 15%、Q 25%、H 30%）と4モジュールのクワイエットゾーンを定義。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>自分で試す — 無料</h3>
+        <p>この記事の内容はすべて、今すぐFreeQrlyのスタジオで使えます。静的コード、10種類のコンテンツタイプ、PNGとSVGの書き出し。</p>
+        <a class="btn" href="/#studio">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/qr-codes-for-restaurants/"><b>QR Codes for Restaurants — Free Guide</b></a>
+        <a class="rel-card" href="/blog/scan-qr-code-online/"><b>Scan QR Codes Online — Free, No App, No Upload</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-events/"><b>QR Codes for Events: Check-In, Tickets & More</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>QRコードが1台のスマホではスキャンできるのに、別のスマホではできないのはなぜ？</span></summary><p>それならコード自体は問題ありません — 失敗するスマホのカメラ、照明、角度の問題です。レンズを拭いて、より明るい場所で試してください。</p></details>
+    <details><summary><span>破損したQRコードでも動作する？</span></summary><p>多くの場合、はい。誤り訂正のおかげです — ISO/IEC 18004で定義されているように、High設定では<a href="http://www.iso.org/standard/83389.html">最大30%の破損まで許容できます</a>。でも、大きな破損、色褪せ、ファインダーパターンの欠落はコードをダメにします。</p></details>
+    <details><summary><span>QRコードはスキャンできるけどリンクが動作しない — コードは壊れている？</span></summary><p>いいえ、コードは仕事をしています。問題は遷移先です。ページが移動した、サイトがダウンしている、またはトライアル型ジェネレーターが無効化した、のいずれかです。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — 静かに、ブラウザで作成。</div>
+    <p class="flinks"><a href="/scan/">QRスキャナー</a><a href="/blog/">フィールドノート一覧</a><a href="/about/">FreeQrlyについて</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

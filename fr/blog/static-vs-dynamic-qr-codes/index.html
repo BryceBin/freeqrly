@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR codes statiques vs dynamiques | FreeQrly</title>
+<meta name="description" content="QR codes statiques vs dynamiques expliqués honnêtement : quand vous avez besoin d’un code dynamique modifiable et suivi — et quand le statique est le choix plus intelligent et gratuit.">
+<link rel="canonical" href="https://freeqrly.com/fr/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/static-vs-dynamic-qr-codes/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QR codes statiques vs dynamiques | FreeQrly">
+<meta property="og:description" content="QR codes statiques vs dynamiques expliqués honnêtement : quand vous avez besoin d’un code dynamique modifiable et suivi — et quand le statique est le choix plus intelligent et gratuit.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/static-vs-dynamic-qr-codes/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QR codes statiques vs dynamiques | FreeQrly","description":"QR codes statiques vs dynamiques expliqués honnêtement : quand vous avez besoin d’un code dynamique modifiable et suivi — et quand le statique est le choix plus intelligent et gratuit.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre les QR codes statiques et dynamiques ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un QR code statique encode la destination directement dans le motif — gratuit pour toujours, non modifiable. Un QR code dynamique encode une redirection sur le serveur du fournisseur, pour que la destination puisse être changée plus tard et les scans suivis — mais il nécessite un abonnement continu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ai-je besoin d’un QR code dynamique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Probablement pas. Si votre destination ne changera pas — WiFi, cartes de visite, liens fixes — le statique est le bon choix. Vous n’avez besoin du dynamique que pour les destinations modifiables ou les analyses de scans, généralement dans les campagnes marketing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi les générateurs de QR code gratuits poussent-ils les codes dynamiques ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parce que les codes dynamiques nécessitent leur serveur, ce qui justifie un abonnement. Beaucoup de générateurs « gratuits » créent des codes dynamiques liés à un essai — le code cesse de fonctionner quand l’essai se termine."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">Studio</a><a href="/blog/">Notes de terrain</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notes de terrain</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QR codes statiques vs <span class='hl hl-blush'>dynamiques</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">L’un est gratuit pour toujours. L’autre est un abonnement. Voici comment savoir celui dont vous avez vraiment besoin.</p>
+    <p class="meta" style="text-align:center">13 octobre 2026 · 4 min de lecture</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>Chaque générateur de QR code veut avoir la même conversation avec vous : <em>avez-vous envisagé le dynamique ?</em> Avant de répondre, il aide de savoir ce que sont vraiment les deux types — et pourquoi l’industrie pousse l’un d’eux si fort.</p>
+
+<h2>La différence, sans le discours de vente</h2>
+<p>Un <strong>QR code statique</strong> contient votre destination directement. Scannez-le et votre téléphone lit le mot de passe WiFi, la vCard ou l’URL directement dans le motif. Pas d’intermédiaire, pas de serveur, pas de compte.</p>
+<p>Un <strong>QR code dynamique</strong> contient un lien court sur le serveur du fournisseur. Scannez-le, votre téléphone visite leur serveur, et leur serveur vous redirige vers la vraie destination. Parce que la destination vit sur leur serveur, le fournisseur peut la changer plus tard — et compter chaque scan.</p>
+<p>C’est toute la différence. Tout le reste n’est que conséquences.</p>
+
+<h2>Quand le dynamique a vraiment du sens</h2>
+<ul>
+<li><strong>Vous menez des campagnes.</strong> Une affiche part à l’impression la semaine prochaine mais la page de destination n’est pas finale. Le dynamique vous permet de la pointer quelque part maintenant et de corriger plus tard.</li>
+<li><strong>Vous avez besoin d’analyses de scans.</strong> Combien de personnes ont scanné, d’où, sur quoi. Les codes statiques sont silencieux ; les codes dynamiques rapportent à la maison.</li>
+<li><strong>Vous testez A/B des destinations.</strong> Échangez le lien derrière un code imprimé sans réimprimer.</li>
+</ul>
+
+<h2>Quand le statique gagne</h2>
+<ul>
+<li><strong>La destination ne changera pas.</strong> Mots de passe WiFi, cartes de visite, liens de téléchargement d’app, menus de restaurant, étiquettes de musée. La plupart des QR codes dans la nature sont comme ça.</li>
+<li><strong>Vous ne voulez pas d’abonnement.</strong> Dynamique signifie payer pour toujours — arrêtez, et les codes meurent. Statique est un acte unique.</li>
+<li><strong>La confidentialité compte.</strong> Chaque scan dynamique ping le serveur du fournisseur. Les scans statiques ne touchent rien d’autre que la destination.</li>
+</ul>
+
+<blockquote>Voici le point inconfortable : la plupart des générateurs poussent le dynamique parce que c’est un revenu récurrent, pas parce que vous en avez besoin. Si le code « gratuit » de quelqu’un exige un compte, vous regardez un code dynamique avec un minuteur d’essai.</blockquote>
+
+<h2>Un guide de décision rapide</h2>
+<ul>
+<li>WiFi pour les invités ? <strong>Statique.</strong></li>
+<li>Coordonnées sur une carte de visite ? <strong>Statique.</strong></li>
+<li>Menu qui change selon les saisons ? <strong>Statique</strong> — pointez-le vers votre page de menu et mettez à jour la page, pas le code.</li>
+<li>Panneau pour un lancement de produit avec des URL non finalisées ? <strong>Dynamique</strong> — c’est fait pour ça.</li>
+<li>Besoin de rapporter des chiffres de scans à un client ? <strong>Dynamique.</strong></li>
+</ul>
+
+<h2>La position de FreeQrly</h2>
+<p>Nous créons des codes statiques — gratuits, illimités, sans compte. Ça couvre la plupart des besoins quotidiens. Les codes dynamiques avec liens modifiables et statistiques de scan sont disponibles avec une connexion gratuite, pour les gens qui mènent des campagnes.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly présentant un QR code"></div>
+      <div>
+        <h3>Essayez vous-même — c’est gratuit</h3>
+        <p>Tout ce que décrit cet article fonctionne dès maintenant dans le studio FreeQrly. Codes statiques, dix types de contenu, export PNG et SVG.</p>
+        <a class="btn" href="/#studio">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Continuer la lecture</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/why-is-my-qr-code-not-working/"><b>QR Code Not Working? 7 Fixes That Help</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-restaurants/"><b>QR Codes for Restaurants — Free Guide</b></a>
+        <a class="rel-card" href="/blog/scan-qr-code-online/"><b>Scan QR Codes Online — Free, No App, No Upload</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bon à savoir</h2>
+    <details><summary><span>Quelle est la différence entre les QR codes statiques et dynamiques ?</span></summary><p>Un QR code statique encode la destination directement dans le motif — gratuit pour toujours, non modifiable. Un QR code dynamique encode une redirection sur le serveur du fournisseur, pour que la destination puisse être changée plus tard et les scans suivis — mais il nécessite un abonnement continu.</p></details>
+    <details><summary><span>Ai-je besoin d’un QR code dynamique ?</span></summary><p>Probablement pas. Si votre destination ne changera pas — WiFi, cartes de visite, liens fixes — le statique est le bon choix. Vous n’avez besoin du dynamique que pour les destinations modifiables ou les analyses de scans, généralement dans les campagnes marketing.</p></details>
+    <details><summary><span>Pourquoi les générateurs de QR code gratuits poussent-ils les codes dynamiques ?</span></summary><p>Parce que les codes dynamiques nécessitent leur serveur, ce qui justifie un abonnement. Beaucoup de générateurs « gratuits » créent des codes dynamiques liés à un essai — le code cesse de fonctionner quand l’essai se termine.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — fait discrètement, dans votre navigateur.</div>
+    <p class="flinks"><a href="/scan/">Scanner QR</a><a href="/blog/">Toutes les notes de terrain</a><a href="/about/">À propos</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

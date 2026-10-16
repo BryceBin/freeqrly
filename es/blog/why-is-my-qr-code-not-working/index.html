@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Código QR no funciona? 7 arreglos que ayudan | FreeQrly</title>
+<meta name="description" content="¿Código QR no escanea? Siete arreglos reales: tamaño, contraste, daño, zona de silencio y la trampa del enlace caducado, más cómo probar antes de imprimir.">
+<link rel="canonical" href="https://freeqrly.com/es/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/why-is-my-qr-code-not-working/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/why-is-my-qr-code-not-working/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="¿Código QR no funciona? 7 arreglos que ayudan | FreeQrly">
+<meta property="og:description" content="¿Código QR no escanea? Siete arreglos reales: tamaño, contraste, daño, zona de silencio y la trampa del enlace caducado, más cómo probar antes de imprimir.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/why-is-my-qr-code-not-working/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"¿Código QR no funciona? 7 arreglos que ayudan | FreeQrly","description":"¿Código QR no escanea? Siete arreglos reales: tamaño, contraste, daño, zona de silencio y la trampa del enlace caducado, más cómo probar antes de imprimir.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué mi código QR se escanea en un teléfono pero no en otro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entonces el código en sí está bien: es la cámara, la luz o el ángulo en el teléfono que falla. Limpia el lente e inténtalo con mejor luz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un código QR dañado todavía puede funcionar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes, thanks to error correction — <a href=\"http://www.iso.org/standard/83389.html\">up to 30% damage can be tolerated at the High setting</a>, as defined in ISO/IEC 18004. But heavy damage, fading, or missing finder patterns will kill it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mi código QR se escanea pero el enlace no funciona: ¿el código está roto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, el código está haciendo su trabajo. El destino es el problema: la página se mudó, el sitio está caído o un generador basado en prueba lo desactivó."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"¿Código QR no funciona? 7 arreglos que ayudan | FreeQrly","description":"¿Código QR no escanea? Siete arreglos reales: tamaño, contraste, daño, zona de silencio y la trampa del enlace caducado, más cómo probar antes de imprimir.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Revisa el tamaño",
+      "text": "Como regla práctica, los códigos impresos necesitan al menos 2x2 cm. En pantalla, hazlo de al menos 2 cm de ancho en tu pantalla."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Revisa el contraste",
+      "text": "Código oscuro sobre fondo claro. Las combinaciones de colores elegantes de bajo contraste son el asesino de diseño #1."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Prueba en un segundo teléfono",
+      "text": "Si un teléfono lo lee y otro no, el código está bien: es la cámara o la luz."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Reexporta a mayor resolución",
+      "text": "Los bordes borrosos de una exportación en baja resolución fallan a tamaño de impresión. Exporta PNG a 1024 px o más, o usa SVG."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">Generador</a><a href="/blog/">Notas de campo</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/error.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notas de campo</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">¿Por qué esta cosa <span class="hl hl-blush">no escanea</span>?</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un código QR que no escanea casi nunca es un misterio. Repasa estas siete revisiones, en orden, y encontrarás al culpable en unos dos minutos.</p>
+    <p class="meta" style="text-align:center">14 de octubre de 2026 · 4 min de lectura</p>
+    <div class="prose" style="margin-top:40px">
+
+<h2>1. Es demasiado pequeño</h2>
+<p>El clásico. Un código apretado en la esquina de una tarjeta de visita de 1 cm de ancho no se escanea de forma confiable. Mínimo para impresión, como regla práctica: <b>2x2 cm</b> (unas 0.8 pulgadas), y más grande siempre es más seguro. Hay un desglose completo en la <a href="/blog/qr-code-print-size-guide/">guía de tamaño de impresión</a>.</p>
+<h2>2. El bajo contraste lo mató</h2>
+<p>Los lectores QR buscan módulos oscuros sobre fondo claro. Gris claro sobre blanco, pasteles de marca o un código sobre una foto cargada fallarán, sobre todo con poca luz. En caso de duda: negro sobre blanco siempre funciona.</p>
+<h2>3. Está dañado o desteñido</h2>
+<p>Volantes arrugados, carteles desteñidos por el sol, pegatinas rayadas. La corrección de errores puede sobrevivir a algo de daño (por eso funciona <a href="/qr-code-with-logo/">añadir un logo</a>), pero hay un límite. Si falta un cuarto del código, reimprime.</p>
+<h2>4. Sin zona de silencio</h2>
+<p>El margen en blanco alrededor del código no es decoración: los escáneres lo necesitan para encontrar los bordes. Mantén un borde claro <a href="http://www.iso.org/standard/83389.html">de al menos 4 módulos de ancho</a> en los cuatro lados, como especifica ISO/IEC 18004. No dejes que texto o elementos de diseño lo amontonen.</p>
+<h2>5. Brillo, curva o ángulo</h2>
+<p>Laminado brillante bajo luz fuerte, un código envuelto alrededor de una botella o tomado en un ángulo pronunciado. Aplánalo, elimina el brillo, dispara de frente.</p>
+<h2>6. El contenido está muerto</h2>
+<p>El código escanea bien, pero el enlace está roto, la página se mudó o la prueba del generador "gratis" caducó y se llevó tu código consigo. Esta es la trampa del enlace caducado: <a href="/blog/do-qr-codes-expire/">¿caducan los códigos QR?</a> explica cuáles sí y cómo evitarlos.</p>
+<h2>7. Tu cámara</h2>
+<p>Limpia el lente. En serio: un lente manchado está detrás de una cantidad vergonzosa de códigos "rotos". Luego prueba en un segundo teléfono: si el teléfono B lo lee, el código nunca fue el problema.</p>
+<h2>Prueba antes de imprimir</h2>
+<p>Escanea el código en dos teléfonos distintos (un iPhone y un Android si puedes) antes de mandar nada a imprimir. Treinta segundos ahora te ahorran una reimpresión después. Genera un código de prueba en el <a href="/">generador gratuito</a> y pruébalo.</p>
+
+    </div>
+
+    <section class="sources">
+      <h2>Fuentes</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La especificación de simbología del código QR. Define los cuatro niveles de corrección de errores (L 7%, M 15%, Q 25%, H 30%) y la zona de silencio de 4 módulos.</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presentando un código QR"></div>
+      <div>
+        <h3>Pruébalo tú mismo — gratis</h3>
+        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, diez tipos de contenido, exportación a PNG y SVG.</p>
+        <a class="btn" href="/#studio">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Seguir leyendo</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/qr-codes-for-restaurants/"><b>QR Codes for Restaurants — Free Guide</b></a>
+        <a class="rel-card" href="/blog/scan-qr-code-online/"><b>Scan QR Codes Online — Free, No App, No Upload</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-events/"><b>QR Codes for Events: Check-In, Tickets & More</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bueno saberlo</h2>
+    <details><summary><span>¿Por qué mi código QR se escanea en un teléfono pero no en otro?</span></summary><p>Entonces el código en sí está bien: es la cámara, la luz o el ángulo en el teléfono que falla. Limpia el lente e inténtalo con mejor luz.</p></details>
+    <details><summary><span>¿Un código QR dañado todavía puede funcionar?</span></summary><p>A menudo sí, gracias a la corrección de errores: <a href="http://www.iso.org/standard/83389.html">hasta un 30% de daño se tolera en el ajuste Alto</a>, como define ISO/IEC 18004. Pero daño grave, desteñido o patrones de búsqueda faltantes lo matarán.</p></details>
+    <details><summary><span>Mi código QR se escanea pero el enlace no funciona: ¿el código está roto?</span></summary><p>No, el código está haciendo su trabajo. El destino es el problema: la página se mudó, el sitio está caído o un generador basado en prueba lo desactivó.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — hecho en silencio, en tu navegador.</div>
+    <p class="flinks"><a href="/scan/">Escáner QR</a><a href="/blog/">Todas las notas de campo</a><a href="/about/">Acerca de</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>
