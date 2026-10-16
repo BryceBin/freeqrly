@@ -1,0 +1,402 @@
+{
+ "title": "FreeQrly — Generador de códigos QR gratis",
+ "metaDesc": "Crea códigos QR gratis en tu navegador. Los estáticos no necesitan registro. Web, WiFi, contactos y más. Descarga en PNG o SVG, no caducan.",
+ "navStudio": "Inicio",
+ "navWhy": "Por qué gratis",
+ "navFaq": "Preguntas",
+ "kicker": "Gratis · Los estáticos no necesitan registro · Privacidad por diseño",
+ "h1a": "Convierte",
+ "h1b": "cualquier cosa",
+ "h1c": "en un QR.",
+ "lede": "Los códigos estáticos no necesitan registro: se hacen en tu navegador y son tuyos para siempre. Los dinámicos necesitan una cuenta gratuita, para editarlos después de imprimirlos.",
+ "hc1": "Tipos de contenido",
+ "hc2": "Exportar",
+ "hc3": "Tus datos",
+ "hc3v": "Privacidad por diseño",
+ "hc4": "Precio",
+ "hc4v": "Gratis siempre",
+ "sOver": "Empieza",
+ "sTitle": "Crea tu código QR",
+ "appearance": "Apariencia",
+ "ink": "Tinta",
+ "paper": "Papel",
+ "background": "Fondo",
+ "dots": "Estilo",
+ "ecc": "Corrección de errores",
+ "dSquare": "Cuadrado",
+ "dRound": "Redondo",
+ "dSoft": "Suave",
+ "dPebble": "Guijarro",
+ "eL": "Bajo",
+ "eM": "Medio",
+ "eQ": "Alto",
+ "eH": "Máximo",
+ "eccHint": "Más corrección = aguanta logos y partes tapadas.",
+ "dotsSub": "Forma de los puntos",
+ "eccSub": "Aunque se tape, se lee",
+ "colors": "Colores",
+ "colorsSub": "Toca o personaliza",
+ "transparentSub": "Fondo transparente",
+ "size": "Tamaño de descarga",
+ "logo": "Añade tu logo",
+ "logoSub": "En el centro del código",
+ "privnote": "Los códigos estáticos se hacen por completo en tu navegador.",
+ "live": "Escribe y se crea al momento",
+ "bLabel": "Un enlace por línea",
+ "bType": "Tipo",
+ "bUpload": "Subir CSV / Excel",
+ "bTemplate": "Descargar plantilla",
+ "bGo": "Generar todos",
+ "bZip": "Descargar ZIP",
+ "bEmpty": "Pega al menos un enlace arriba",
+ "featsK": "Más allá del código",
+ "featsT": "Todo lo que rodea al QR",
+ "featsS": "Generar es solo el principio. Esto también vive en FreeQrly.",
+ "f1t": "Escáner integrado",
+ "f1d": "Apunta tu cámara o sube una imagen — los códigos se decodifican en tu navegador y nunca se suben a ningún servidor. Funciona sin conexión.",
+ "f1l": "Abrir el escáner →",
+ "f2t": "13 tipos de código",
+ "f2d": "Web, texto, WiFi, tarjetas de contacto, correo, SMS, llamadas, ubicaciones, eventos de calendario. Cada tipo genera el formato correcto — sin memorizar sintaxis.",
+ "f2l": "Probarlos todos →",
+ "f3t": "Generación en lote",
+ "f3d": "Pega hasta 50 enlaces y obtén 50 códigos listos para imprimir en un clic. Descárgalos uno por uno o todo en un ZIP.",
+ "f3l": "Modo lote →",
+ "f4t": "Códigos de evento",
+ "f4d": "Un escaneo y tu evento — título, hora, lugar — entra directo al calendario del invitado. Hecho para invitaciones.",
+ "f4l": "Crear código de evento →",
+ "f5t": "Logo y estilo",
+ "f5d": "Pon tu logo en el centro y la corrección de errores sube sola para que siga escaneándose. Cambia puntos, tinta y papel — o usa fondo transparente.",
+ "f5l": "Códigos con logo →",
+ "f6t": "Historial privado",
+ "f6d": "Cada descarga se recuerda solo en este dispositivo — tus doce más recientes, un clic para recuperar. Bórralo cuando quieras.",
+ "casesK": "En acción",
+ "casesT": "Hecho para momentos reales",
+ "casesS": "Elige tu escenario — la configuración ya está resuelta.",
+ "c1t": "Tarjetas de visita",
+ "c1d": "Tus datos de contacto en un escaneo — directo a su teléfono.",
+ "c2t": "Bodas",
+ "c2d": "RSVP, fotos compartidas, añadir al calendario. El papeleo, sin papel.",
+ "c3t": "Inmobiliaria",
+ "c3d": "Anuncios en el cartel. Reserva una visita en un escaneo.",
+ "c4t": "Eventos",
+ "c4d": "Registro, validación de entradas, álbumes compartidos.",
+ "c5t": "Compartir WiFi",
+ "c5d": "Invitados conectados en un escaneo. Nunca más deletrees una contraseña.",
+ "c6t": "Reseñas de Google",
+ "c6d": "Convierte clientes felices en cinco estrellas, en el mostrador.",
+ "p1n": "1",
+ "p1t": "Tus datos no salen de aquí",
+ "p1p": "Los códigos estáticos se dibujan en tu dispositivo. Nada se sube, nada se rastrea, sin cuenta. Sin internet también funciona.",
+ "p2n": "2",
+ "p2t": "Hecho una vez, vale para siempre",
+ "p2p": "El destino va dentro del dibujo. Imprímelo hoy y se leerá en diez años. Sin renovar nada.",
+ "p3n": "3",
+ "p3t": "Gratis es gratis",
+ "p3p": "Sin marca de agua, sin letra pequeña. Los códigos estáticos no necesitan registro. Todo gratis.",
+ "faqT": "Preguntas",
+ "q1": "¿Caduca un código QR gratuito?",
+ "a1": "No. El destino va en el dibujo; mientras el destino exista, funciona.",
+ "q2": "¿Mi contraseña WiFi está segura aquí?",
+ "a2": "En un código estático, sí: nunca sale de tu navegador. Si dudas, desconéctate y escríbela.",
+ "q3": "¿Estático o dinámico?",
+ "a3": "Si el destino no cambia, estático: WiFi, tarjetas, enlaces fijos.",
+ "q4": "¿Puedo usarlos comercialmente?",
+ "a4": "Claro. Lo que crees es tuyo — úsalo donde quieras, sin mencionar nada.",
+ "q5": "¿De verdad es gratis?",
+ "a5": "Sí. Todo gratis, sin marca de agua. Los códigos estáticos no necesitan cuenta.",
+ "q6": "¿Necesito una cuenta?",
+ "a6": "Para los estáticos, no: abre y crea. Los dinámicos necesitan una cuenta gratuita, para editarlos después de imprimirlos.",
+ "q7": "¿Puedo poner mi logo?",
+ "a7": "Sí. Sube un logo cuadrado, va al centro y la corrección sube sola para que se siga leyendo.",
+ "fin": "Códigos estáticos, hechos en tu navegador.",
+ "dl": "Descargar",
+ "navScan": "Escáner",
+ "history": "Recientes",
+ "histClear": "Borrar",
+ "transparent": "Fondo transparente",
+ "frame": "Marco",
+ "frameSub": "Borde alrededor del código",
+ "frameTextLabel": "Texto del marco",
+ "frameNone": "Ninguno",
+ "frameRounded": "Redondeado",
+ "frameCta": "Con texto",
+ "frameTextPh": "Escanea",
+ "scanGood": "Buen contraste",
+ "scanBad": "Contraste bajo — puede no leerse",
+ "types": {
+  "url": [
+   "Sitio web",
+   "enlace, página, video"
+  ],
+  "text": [
+   "Texto",
+   "cualquier palabra"
+  ],
+  "wifi": [
+   "WiFi",
+   "conexión instantánea"
+  ],
+  "vcard": [
+   "Contacto",
+   "vCard"
+  ],
+  "email": [
+   "Correo",
+   "prellenado"
+  ],
+  "sms": [
+   "SMS",
+   "texto prellenado"
+  ],
+  "phone": [
+   "Llamada",
+   "tocar para llamar"
+  ],
+  "geo": [
+   "Lugar",
+   "pin de mapa"
+  ],
+  "event": [
+   "Evento",
+   "añadir al calendario"
+  ],
+  "bitcoin": [
+   "Bitcoin",
+   "pago cripto"
+  ],
+  "coupon": [
+   "Cupón",
+   "código promo"
+  ],
+  "appstore": [
+   "Tienda de apps",
+   "iOS + Android"
+  ],
+  "batch": [
+   "Lote",
+   "muchos a la vez"
+  ]
+ },
+ "fields": {
+  "url": [
+   [
+    "url",
+    "Destino",
+    "https://example.com"
+   ]
+  ],
+  "text": [
+   [
+    "text",
+    "Mensaje",
+    "textarea",
+    "¡Hola, mundo!"
+   ]
+  ],
+  "wifi": [
+   [
+    "ssid",
+    "Nombre de red",
+    "MiWiFi"
+   ],
+   [
+    "pass",
+    "Contraseña",
+    "",
+    "Contraseña WiFi"
+   ],
+   [
+    "enc",
+    "Seguridad",
+    "select:WPA,WPA2,WEP,nopass"
+   ]
+  ],
+  "vcard": [
+   [
+    "name",
+    "Nombre completo",
+    "María García"
+   ],
+   [
+    "phone",
+    "Teléfono",
+    "+34 600 000 000"
+   ],
+   [
+    "email",
+    "Correo",
+    "maria@example.com"
+   ],
+   [
+    "vcorg",
+    "Empresa",
+    "",
+    "Acme"
+   ],
+   [
+    "vctitle",
+    "Cargo",
+    "",
+    "Diseñadora"
+   ],
+   [
+    "vcurl",
+    "Sitio web",
+    "https://example.com"
+   ],
+   [
+    "vcadr",
+    "Dirección",
+    "",
+    "Calle Mayor 123"
+   ],
+   [
+    "vcnote",
+    "Nota",
+    "",
+    ""
+   ]
+  ],
+  "email": [
+   [
+    "to",
+    "Para",
+    "hola@example.com"
+   ],
+   [
+    "subject",
+    "Asunto",
+    "Hola"
+   ],
+   [
+    "body",
+    "Cuerpo",
+    "textarea",
+    "Cuerpo del correo…"
+   ]
+  ],
+  "sms": [
+   [
+    "phone",
+    "Teléfono",
+    "+34 600 000 000"
+   ],
+   [
+    "body",
+    "Mensaje",
+    "",
+    "Escribe tu mensaje…"
+   ]
+  ],
+  "phone": [
+   [
+    "phone",
+    "Teléfono",
+    "+34 600 000 000"
+   ]
+  ],
+  "geo": [
+   [
+    "lat",
+    "Latitud",
+    "40.4168"
+   ],
+   [
+    "lng",
+    "Longitud",
+    "-3.7038"
+   ]
+  ],
+  "event": [
+   [
+    "etitle",
+    "Título",
+    "",
+    "p. ej. Cumpleaños"
+   ],
+   [
+    "estart",
+    "Inicio",
+    "datetime-local"
+   ],
+   [
+    "eend",
+    "Fin",
+    "datetime-local"
+   ],
+   [
+    "eloc",
+    "Ubicación",
+    "",
+    "p. ej. Parque Central"
+   ],
+   [
+    "edesc",
+    "Detalles",
+    "textarea",
+    "Detalles del evento…"
+   ]
+  ],
+  "bitcoin": [
+   [
+    "btcaddr",
+    "Dirección de billetera",
+    "bc1q..."
+   ],
+   [
+    "btcamt",
+    "Cantidad (BTC)",
+    "0.001"
+   ],
+   [
+    "btclabel",
+    "Etiqueta",
+    "",
+    "p. ej. Café"
+   ],
+   [
+    "btcmsg",
+    "Mensaje",
+    "",
+    "p. ej. Gracias"
+   ]
+  ],
+  "coupon": [
+   [
+    "cpcode",
+    "Código de cupón",
+    "AHORRA20"
+   ],
+   [
+    "cpdesc",
+    "Descripción",
+    "",
+    "p. ej. 20% de descuento"
+   ]
+  ],
+  "appstore": [
+   [
+    "appios",
+    "Enlace App Store",
+    "https://apps.apple.com/app/..."
+   ],
+   [
+    "appand",
+    "Enlace Google Play",
+    "https://play.google.com/store/apps/..."
+   ]
+  ]
+ },
+ "modeStatic": "Estático",
+ "modeDynamic": "Dinámico",
+ "modeHint": "Los códigos estáticos no caducan. Los dinámicos se pueden editar tras imprimir y cuentan escaneos.",
+ "dynDest": "URL de destino",
+ "dynCreate": "Generar QR dinámico",
+ "dynShort": "Tu enlace dinámico:",
+ "copy": "Copiar",
+ "dynIntro": "Diseña tu QR: elige un tipo, rellena el contenido y dale estilo. Luego crea un código dinámico: el QR impreso no cambia, pero puedes modificar su contenido cuando quieras.",
+ "dynHint": "Rellena tu contenido y pulsa Generar.",
+ "dynReady": "Tu código dinámico está listo. Imprímelo: el contenido puede cambiar cuando quieras.",
+ "dynBlurHint": "Rellena tu contenido y pulsa Generar",
+ "modeTip": "Los códigos dinámicos se pueden editar tras imprimir y cuentan escaneos. El QR impreso no cambia."
+}

@@ -17,10 +17,10 @@ PAGES = [
   desc="Turn any Google Form link into a QR code in seconds. Free, no sign-up for static codes, no watermark. Paste your form URL and download a printable PNG or SVG.",
   kw="qr code generator for google form",
   h1="QR codes for Google Forms, without the fine print.",
-  lede="Paste your form's responder link below and get a crisp, printable QR code — no account needed for static codes, no watermark, no expiry. Put it on a poster and watch the responses roll in.",
+  lede="Paste your form's responder link and get a crisp, printable QR code — no account needed for static codes, no watermark, no expiry. Put it on a poster and watch the responses roll in.",
   steps=[
     ("Copy your form link", "In Google Forms, click <b>Send</b> and copy the responder link (the short one works best)."),
-    ("Paste it above", "Drop the link into the Website field — your code appears instantly in the preview."),
+    ("Paste your link", "Drop the link into the Website field — your code appears instantly in the preview."),
     ("Download and print", "Grab a high-resolution PNG or SVG. It scans straight to your form, forever."),
   ],
   studio_h2="Make your Google Form QR code",
@@ -91,7 +91,7 @@ PAGES = [
   h1="Dozens of QR codes. One download.",
   lede="Paste your links — one per line — hit generate, and download every code as a tidy ZIP. The batch feature other tools put behind a paywall, free here.",
   steps=[
-    ("Paste your links", "One URL per line in the batch box below. Up to 50 at a time."),
+    ("Paste your links", "One URL per line in the batch box. Up to 50 at a time."),
     ("Hit Generate all", "Every link becomes its own QR code, previewed in a grid."),
     ("Download the ZIP", "One click packs them all as print-ready PNGs, named qr-1, qr-2, and so on."),
   ],
@@ -146,7 +146,7 @@ dict(slug="google-review-qr-code", dtype="url",
   h1='More five-star reviews, <span class="hl hl-blush">one scan away</span>.',
   lede="Paste your Google review link and get a printable QR code. Counter, receipt, takeout bag, table tent \u2014 make leaving a review effortless.",
   steps=[("Copy your review link","In your Google Business Profile, open Share review form and copy the link."),
-         ("Paste it above","The generator pre-fills the link tab \u2014 your code appears instantly."),
+         ("Paste your link","The generator pre-fills the link tab \u2014 your code appears instantly."),
          ("Print it where customers see it","Counter cards, receipts, packaging. 1024 px export for crisp print.")],
   studio_h2="Make your Google review QR code",
   faq=[("Where do I find my Google review link?","In Google Business Profile: open your listing, click Ask for reviews or Share review form, and copy the short link."),
@@ -159,7 +159,7 @@ dict(slug="qr-code-with-logo", dtype="url",
   kw="qr code with logo",
   h1='Your logo, <span class="hl hl-honey">right in the middle</span>.',
   lede="Upload your logo and it lands dead center, with error correction cranked up automatically so the code still scans perfectly. Free, no watermark, no account needed for static codes.",
-  steps=[("Make your code","Any type above \u2014 link, vCard, WiFi. The logo step works with all of them."),
+  steps=[("Make your code","Any type \u2014 link, vCard, WiFi. The logo step works with all of them."),
          ("Upload your logo","Square PNG with transparency works best. Keep it under ~30% of the code area as a rule of thumb."),
          ("Download print-ready","PNG up to 2048 px or infinitely scalable SVG \u2014 crisp on cards and banners alike.")],
   studio_h2="Make your logo QR code",
@@ -188,7 +188,7 @@ dict(slug="instagram-qr-code", dtype="url",
   h1='Your profile, <span class="hl hl-blush">off the screen</span>.',
   lede="Paste your Instagram URL and get a scannable code for packaging, flyers, receipts, and the shop window. New followers, minus the username spelling.",
   steps=[("Copy your profile link","From your profile: instagram.com/yourname \u2014 or any post or Reel URL."),
-         ("Paste it above","Your code appears instantly in the link tab."),
+         ("Paste your link","Your code appears instantly in the link tab."),
          ("Print it where people look","Packaging inserts, counter cards, flyers. Export 1024 px for print.")],
   studio_h2="Make your Instagram QR code",
   faq=[("Profile link or a specific post?","Profile link for general follows. Linking a Reel or post works too \u2014 handy for campaigns and packaging inserts."),
@@ -205,7 +205,7 @@ dict(slug="real-estate-qr-code", dtype="url",
   h1='Every listing, <span class="hl hl-mint">one scan away</span>.',
   lede="Link listings, virtual tours, and open-house details to scannable codes. Print them for yard signs, brochures, and window displays \u2014 free forever, no account needed for static codes.",
   steps=[("Copy your listing URL","Your MLS page, Zillow/Redfin link, or virtual tour \u2014 any URL works."),
-         ("Paste it above","Your code appears instantly in the link tab."),
+         ("Paste your link","Your code appears instantly in the link tab."),
          ("Print for signs & flyers","SVG for the sign printer, PNG for flyers. Yard signs need 10+ cm \u2014 see the 1:10 rule of thumb.")],
   studio_h2="Make your real estate QR code",
   faq=[("What do agents usually link to?","Listing pages, virtual tours, open-house schedules, mortgage calculators, and the agent\u2019s contact card."),
@@ -331,7 +331,7 @@ def build(p):
     <div class="rule"></div>
     <div class="lplinks">{foot_links}</div>
     <div class="lplinks"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>
-    <div class="tiny">FreeQrly · MMXXVI</div>
+    <div class="tiny">© 2026 FreeQrly</div>
   </footer>
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>

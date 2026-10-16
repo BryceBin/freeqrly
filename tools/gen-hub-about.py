@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Generate /blog/ hub and /about/ page for FreeQrly."""
+"""Generate /blog/ hub and /about/ page for FreeQrly.
+
+STALE — DO NOT RUN without syncing: about/index.html and blog/index.html have
+been hand-edited since (copy calibration 2026-10-16). Running this would
+revert those edits. The generated files are the source of truth now."""
 import os
 SITE = os.path.dirname(os.path.abspath("/home/hatch/workspace/qr-site/")) + "/qr-site"
 
@@ -29,7 +33,7 @@ FOOT = '''<footer>
     <p class="flinks"><a href="/google-form-qr-code/">Google Form QR codes</a><a href="/wifi-qr-code/">WiFi QR codes</a><a href="/vcard-qr-code/">vCard QR codes</a><a href="/batch-qr-code/">Batch QR codes</a></p>
     <p class="flinks"><a href="/business-card-qr-code/">Business card QR codes</a><a href="/google-review-qr-code/">Google review QR codes</a><a href="/qr-code-with-logo/">QR codes with logo</a><a href="/wedding-qr-code/">Wedding QR codes</a><a href="/instagram-qr-code/">Instagram QR codes</a></p>
     <p class="flinks"><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About FreeQrly</a><a href="/developers/">API &amp; MCP for agents</a></p>
-    <p class="fmeta">FREEQRLY &middot; MMXXVI</p>
+    <p class="fmeta">© 2026 FreeQrly</p>
   </footer>'''
 
 HUB_CSS = '''<style>

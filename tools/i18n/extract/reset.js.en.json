@@ -1,0 +1,15 @@
+[
+ "The passwords don't match.",
+ "That reset link is expired or already used. Request a new one.",
+ "Please choose a stronger password (at least 8 characters, with letters and numbers).",
+ "Too many attempts. Please wait a bit and try again.",
+ "Choose a new password",
+ "Pick a new password for your account.",
+ "Updating…",
+ "Could not update your password. Please try again.",
+ "Network error. Please try again.",
+ "Update password",
+ "Sending…",
+ "Please complete the human check and try again.",
+ "Send reset link"
+]

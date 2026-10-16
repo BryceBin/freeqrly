@@ -1,0 +1,18 @@
+[
+ "Reset password — FreeQrly",
+ "Reset your FreeQrly password.",
+ "Reset password",
+ "Enter your email and we'll send you a reset link.",
+ "Send reset link",
+ "New password",
+ "Confirm new password",
+ "Repeat new password",
+ "Update password",
+ "<a href=\"/reset/\" style=\"color:#2F4A62;font-weight:600;text-decoration:none\">Request a new reset link</a>",
+ "If an account exists for that email, we sent it a password reset link.",
+ "<a href=\"/login/\" style=\"color:#2F4A62;font-weight:600;text-decoration:none\">Back to sign in</a>",
+ "Password updated",
+ "Your password has been changed.",
+ "<a href=\"/login/\" id=\"loginLink\" style=\"color:#2F4A62;font-weight:600;text-decoration:none\">Log in →</a>",
+ "<a href=\"/\">← Back to generator</a>"
+]

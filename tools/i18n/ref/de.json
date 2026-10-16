@@ -1,0 +1,402 @@
+{
+ "title": "FreeQrly — Kostenloser QR-Code-Generator | Statische ohne Anmeldung",
+ "metaDesc": "QR-Codes kostenlos im Browser erstellen – sogar mit deinem Logo. Statische ohne Anmeldung, ohne Tracking, ohne Ablauf. Export als PNG & SVG.",
+ "navStudio": "Studio",
+ "navWhy": "Prinzipien",
+ "navFaq": "Fragen",
+ "kicker": "Kostenlos · Statische ohne Anmeldung · Privat per Design",
+ "h1a": "Verwandle",
+ "h1b": "alles",
+ "h1c": "in einen QR-Code.",
+ "lede": "Statische Codes ohne Anmeldung. Im Browser erstellt – für immer deiner. Dynamische brauchen ein kostenloses Konto, damit du sie nach dem Druck noch ändern kannst.",
+ "hc1": "Inhaltstypen",
+ "hc2": "Export",
+ "hc3": "Deine Daten",
+ "hc3v": "Privat per Design",
+ "hc4": "Preis",
+ "hc4v": "Für immer gratis",
+ "sOver": "Das Studio",
+ "sTitle": "QR-Code erstellen",
+ "appearance": "Darstellung",
+ "ink": "Tinte",
+ "paper": "Papier",
+ "background": "Hintergrund",
+ "dots": "Punktstil",
+ "ecc": "Fehlerkorrektur",
+ "dSquare": "Eckig",
+ "dRound": "Rund",
+ "dSoft": "Weich",
+ "dPebble": "Kiesel",
+ "eL": "Niedrig",
+ "eM": "Mittel",
+ "eQ": "Hoch",
+ "eH": "Maximal",
+ "eccHint": "Höher = robuster gegen Logos und Verschleiß.",
+ "dotsSub": "Punktform",
+ "eccSub": "Höher = robuster",
+ "colors": "Farben",
+ "colorsSub": "Tippen oder anpassen",
+ "transparentSub": "Ohne weißen Hintergrund",
+ "size": "Exportgröße",
+ "logo": "Logo hinzufügen",
+ "logoSub": "Marke oder eigen",
+ "privnote": "Statische Codes werden komplett in deinem Browser erzeugt.",
+ "live": "Live-Vorschau — ändert sich beim Tippen",
+ "bLabel": "Ein Link pro Zeile",
+ "bType": "Typ",
+ "bUpload": "CSV / Excel hochladen",
+ "bTemplate": "Vorlage herunterladen",
+ "bGo": "Alle erzeugen",
+ "bZip": "ZIP laden",
+ "bEmpty": "Gib oben mindestens einen Link ein",
+ "featsK": "Mehr als Code",
+ "featsT": "Alles rund um den QR",
+ "featsS": "Generieren ist nur der Anfang. Das steckt auch in FreeQrly.",
+ "f1t": "Scanner eingebaut",
+ "f1d": "Kamera draufhalten oder Bild hochladen — Codes werden direkt in deinem Browser entschlüsselt und nirgends hochgeladen. Funktioniert sogar offline.",
+ "f1l": "Scanner öffnen →",
+ "f2t": "10 Code-Typen",
+ "f2d": "Website, Text, WLAN, Visitenkarten, E-Mail, SMS, Anrufe, Orte, Kalenderevents. Jeder Typ baut automatisch das richtige Format — keine Syntax pauken.",
+ "f2l": "Alle ausprobieren →",
+ "f3t": "Stapelverarbeitung",
+ "f3d": "Bis zu 50 Links einfügen, 50 druckfertige Codes mit einem Klick. Einzeln laden oder alles als ZIP.",
+ "f3l": "Stapelmodus →",
+ "f4t": "Kalender-Event-Codes",
+ "f4d": "Ein Scan und deine Veranstaltung — Titel, Zeit, Ort — landet direkt im Kalender des Gastes. Gemacht für Einladungen.",
+ "f4l": "Event-Code erstellen →",
+ "f5t": "Logo & Styling",
+ "f5d": "Logo in die Mitte setzen — die Fehlerkorrektur steigt automatisch, damit es scanbar bleibt. Punkte, Tinte, Papier anpassen — oder transparent.",
+ "f5l": "Codes mit Logo →",
+ "f6t": "Privater Verlauf",
+ "f6d": "Jeder Download wird nur auf diesem Gerät gemerkt — deine zwölf neuesten, ein Klick zum Wiederherstellen. Jederzeit löschbar.",
+ "casesK": "In freier Wildbahn",
+ "casesT": "Für echte Momente gemacht",
+ "casesS": "Wähl dein Szenario — das Setup steht schon.",
+ "c1t": "Visitenkarten",
+ "c1d": "Deine Kontaktdaten in einem Scan — direkt aufs Handy.",
+ "c2t": "Hochzeiten",
+ "c2d": "RSVP, Fotoalben, Kalender-Eintrag. Der Papierkram, ohne Papier.",
+ "c3t": "Immobilien",
+ "c3d": "Exposés am Schild. Besichtigung in einem Scan buchen.",
+ "c4t": "Events",
+ "c4d": "Check-in, Ticketprüfung, geteilte Alben.",
+ "c5t": "WLAN teilen",
+ "c5d": "Gäste in einem Scan online. Nie wieder Passwörter buchstabieren.",
+ "c6t": "Google-Bewertungen",
+ "c6d": "Aus zufriedenen Kunden Fünf-Sterne direkt an der Theke machen.",
+ "p1n": "Nr. 1",
+ "p1t": "Deine Daten gehen nirgendwo hin",
+ "p1p": "Jeder statische Code wird auf deinem Gerät gezeichnet — keine Uploads, kein Tracking, kein Konto. Seite laden, Stecker ziehen, alles läuft weiter.",
+ "p2n": "Nr. 2",
+ "p2t": "Gemacht für die Dauer",
+ "p2p": "Ein statischer Code trägt sein Ziel im Muster. Heute drucken, in zehn Jahren scannen. Keine Verlängerung, keine Plattform, die verschwindet.",
+ "p3n": "Nr. 3",
+ "p3t": "Gratis heißt gratis",
+ "p3p": "Kein Wasserzeichen, kein Kleingedrucktes. Statische ohne Anmeldung. Kein Pro-Tarif, keine versteckten Kosten — gute Werkzeuge sollten einfach gratis sein.",
+ "faqT": "Gut zu wissen",
+ "q1": "Laufen kostenlose QR-Codes ab?",
+ "a1": "Nie. Das Ziel ist direkt im Muster codiert — der Code funktioniert, solange das Ziel existiert. Bezahlte dynamische Codes laufen über Server des Anbieters und können sterben, wenn du nicht mehr zahlst — ein Grund mehr für statisch.",
+ "q2": "Ist mein WLAN-Passwort hier sicher?",
+ "a2": "Bei einem statischen Code ja. Dein Passwort verlässt nie deinen Browser — nichts wird irgendwohin gesendet. Vorsichtig? Seite laden, offline gehen, dann tippen.",
+ "q3": "Statisch oder dynamisch?",
+ "a3": "Wenn sich das Ziel nicht ändert: statisch — WLAN, Visitenkarten, feste Links. Dynamische Codes (änderbare Links + Statistiken) sind für Kampagnen — stehen auf unserer Roadmap.",
+ "q4": "Darf ich sie kommerziell nutzen?",
+ "a4": "Absolut. Alles, was du hier erstellst, gehört dir — Verpackungen, Speisekarten, Karten, ohne Namensnennung.",
+ "q5": "Ist FreeQrly wirklich kostenlos?",
+ "a5": "Ja — alles auf dieser Seite ist gratis, ohne Wasserzeichen. Statische ohne Konto. Wir verkaufen keine Abos; das hier ist ein Werkzeug, kein Trichter.",
+ "q6": "Brauche ich ein Konto?",
+ "a6": "Für statische nicht. Es gibt nichts anzumelden — Seite öffnen, Code erstellen. Dynamische brauchen ein kostenloses Konto, damit du sie nach dem Druck noch ändern kannst.",
+ "q7": "Kann ich mein Logo in den QR-Code setzen?",
+ "a7": "Ja — lade ein quadratisches Logo hoch, wir setzen es in die Mitte und erhöhen automatisch die Fehlerkorrektur, damit er scanbar bleibt. Für Druck: Q oder H.",
+ "fin": "Statische Codes, im Browser erstellt.",
+ "dl": "Herunterladen",
+ "navScan": "Scanner",
+ "history": "Zuletzt",
+ "histClear": "Löschen",
+ "transparent": "Transparenter Hintergrund",
+ "frame": "Rahmen",
+ "frameSub": "Rahmen um den Code",
+ "frameTextLabel": "Rahmentext",
+ "frameNone": "Keiner",
+ "frameRounded": "Abgerundet",
+ "frameCta": "Mit Text",
+ "frameTextPh": "Scannen",
+ "scanGood": "Guter Kontrast",
+ "scanBad": "Niedriger Kontrast — evtl. nicht lesbar",
+ "types": {
+  "url": [
+   "Webseite",
+   "Link, Seite, Video"
+  ],
+  "text": [
+   "Text",
+   "beliebige Wörter"
+  ],
+  "wifi": [
+   "WLAN",
+   "sofort verbinden"
+  ],
+  "vcard": [
+   "Kontakt",
+   "vCard"
+  ],
+  "email": [
+   "E-Mail",
+   "vorausgefüllt"
+  ],
+  "sms": [
+   "SMS",
+   "vorausgefüllter Text"
+  ],
+  "phone": [
+   "Anruf",
+   "tippen zum Wählen"
+  ],
+  "geo": [
+   "Ort",
+   "Karten-Pin"
+  ],
+  "event": [
+   "Termin",
+   "zum Kalender"
+  ],
+  "bitcoin": [
+   "Bitcoin",
+   "crypto payment"
+  ],
+  "coupon": [
+   "Coupon",
+   "promo code"
+  ],
+  "appstore": [
+   "App Store",
+   "iOS + Android"
+  ],
+  "batch": [
+   "Stapel",
+   "viele auf einmal"
+  ]
+ },
+ "fields": {
+  "url": [
+   [
+    "url",
+    "Ziel",
+    "https://example.com"
+   ]
+  ],
+  "text": [
+   [
+    "text",
+    "Nachricht",
+    "textarea",
+    "Hallo, Welt!"
+   ]
+  ],
+  "wifi": [
+   [
+    "ssid",
+    "Netzwerkname",
+    "MeinWLAN"
+   ],
+   [
+    "pass",
+    "Passwort",
+    "",
+    "WLAN-Passwort"
+   ],
+   [
+    "enc",
+    "Verschlüsselung",
+    "select:WPA,WPA2,WEP,nopass"
+   ]
+  ],
+  "vcard": [
+   [
+    "name",
+    "Vollständiger Name",
+    "Max Mustermann"
+   ],
+   [
+    "phone",
+    "Telefon",
+    "+49 170 000000"
+   ],
+   [
+    "email",
+    "E-Mail",
+    "max@example.com"
+   ],
+   [
+    "vcorg",
+    "Firma",
+    "",
+    "Acme"
+   ],
+   [
+    "vctitle",
+    "Berufsbezeichnung",
+    "",
+    "Designer"
+   ],
+   [
+    "vcurl",
+    "Webseite",
+    "https://example.com"
+   ],
+   [
+    "vcadr",
+    "Adresse",
+    "",
+    "Hauptstraße 123"
+   ],
+   [
+    "vcnote",
+    "Notiz",
+    "",
+    ""
+   ]
+  ],
+  "email": [
+   [
+    "to",
+    "An",
+    "hallo@example.com"
+   ],
+   [
+    "subject",
+    "Betreff",
+    "Hallo"
+   ],
+   [
+    "body",
+    "Text",
+    "textarea",
+    "E-Mail-Text…"
+   ]
+  ],
+  "sms": [
+   [
+    "phone",
+    "Telefon",
+    "+49 170 000000"
+   ],
+   [
+    "body",
+    "Nachricht",
+    "",
+    "Nachricht eingeben…"
+   ]
+  ],
+  "phone": [
+   [
+    "phone",
+    "Telefon",
+    "+49 170 000000"
+   ]
+  ],
+  "geo": [
+   [
+    "lat",
+    "Breitengrad",
+    "52.5200"
+   ],
+   [
+    "lng",
+    "Längengrad",
+    "13.4050"
+   ]
+  ],
+  "event": [
+   [
+    "etitle",
+    "Titel",
+    "",
+    "z. B. Geburtstagsparty"
+   ],
+   [
+    "estart",
+    "Beginn",
+    "datetime-local"
+   ],
+   [
+    "eend",
+    "Ende",
+    "datetime-local"
+   ],
+   [
+    "eloc",
+    "Ort",
+    "",
+    "z. B. Central Park"
+   ],
+   [
+    "edesc",
+    "Details",
+    "textarea",
+    "Veranstaltungsdetails…"
+   ]
+  ],
+  "bitcoin": [
+   [
+    "btcaddr",
+    "Wallet address",
+    "bc1q..."
+   ],
+   [
+    "btcamt",
+    "Amount (BTC)",
+    "0.001"
+   ],
+   [
+    "btclabel",
+    "Label",
+    "",
+    "e.g. Coffee"
+   ],
+   [
+    "btcmsg",
+    "Message",
+    "",
+    "e.g. Thanks"
+   ]
+  ],
+  "coupon": [
+   [
+    "cpcode",
+    "Coupon code",
+    "SAVE20"
+   ],
+   [
+    "cpdesc",
+    "Description",
+    "",
+    "e.g. 20% off"
+   ]
+  ],
+  "appstore": [
+   [
+    "appios",
+    "App Store link",
+    "https://apps.apple.com/app/..."
+   ],
+   [
+    "appand",
+    "Google Play link",
+    "https://play.google.com/store/apps/..."
+   ]
+  ]
+ },
+ "modeStatic": "Statisch",
+ "modeDynamic": "Dynamisch",
+ "modeHint": "Statische Codes laufen nie ab. Dynamische Codes lassen sich nach dem Druck ändern und zählen Scans.",
+ "dynDest": "Ziel-URL",
+ "dynCreate": "Dynamischen QR generieren",
+ "dynShort": "Ihr dynamischer Link:",
+ "copy": "Kopieren",
+ "dynIntro": "Gestalten Sie Ihren QR: Typ wählen, Inhalt eingeben, stylen. Erstellen Sie dann einen dynamischen Code: Der gedruckte QR bleibt gleich, aber Sie können seinen Inhalt jederzeit ändern.",
+ "dynHint": "Füllen Sie Ihren Inhalt aus und klicken Sie auf Generieren.",
+ "dynReady": "Ihr dynamischer QR ist fertig. Drucken Sie ihn — der Inhalt kann jederzeit geändert werden.",
+ "dynBlurHint": "Füllen Sie Ihren Inhalt aus und klicken Sie auf Generieren",
+ "modeTip": "Dynamische Codes lassen sich nach dem Druck ändern und zählen Scans. Der gedruckte QR bleibt gleich."
+}
