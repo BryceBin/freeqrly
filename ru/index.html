@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreeQrly — бесплатный генератор QR-кодов | Без регистрации</title>
-<meta name="description" content="Создавайте QR-коды бесплатно прямо в браузере — даже с вашим логотипом. Без регистрации, без слежки, без срока действия. Экспорт в PNG и SVG.">
+<title>FreeQrly — бесплатный генератор QR-кодов | Статические без регистрации</title>
+<meta name="description" content="Создавайте QR-коды бесплатно прямо в браузере — даже с вашим логотипом. Статические без регистрации, без слежки, без срока действия. Экспорт в PNG и SVG.">
 <link rel="canonical" href="https://freeqrly.com/ru/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/">
@@ -23,7 +23,7 @@
 <link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
 <meta property="og:title" content="FreeQrly — QR Code Generator, Private by Design">
-<meta property="og:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
+<meta property="og:description" content="Beautiful QR codes in your browser. Free forever — static codes need no sign-up, nothing uploaded.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
@@ -41,11 +41,11 @@
 <meta property="og:locale:alternate" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
-<meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever, no sign-up, nothing uploaded.">
+<meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever — static codes need no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261016">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3v-20261016">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
+{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. Static codes are 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
 <script type="application/ld+json">
 {
@@ -65,7 +65,7 @@
       "name": "Is my WiFi password safe here?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Your password never leaves your browser — nothing is sent anywhere. Extra careful? Load the page, disconnect, then type."
+        "text": "For a static code, yes. Your password never leaves your browser — nothing is sent anywhere. Extra careful? Load the page, disconnect, then type."
       }
     },
     {
@@ -89,7 +89,7 @@
       "name": "Is FreeQrly really free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — everything on this page is free, with no watermark and no account. We do not sell subscriptions; this is a tool, not a funnel."
+        "text": "Yes — everything on this page is free, with no watermark. Static codes need no account. We do not sell subscriptions; this is a tool, not a funnel."
       }
     },
     {
@@ -97,7 +97,7 @@
       "name": "Do I need an account?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. There is nothing to sign up for — open the page and make your code."
+        "text": "Not for static codes — open the page and make your code. Dynamic codes need a free sign-in, so you can edit them after they're printed."
       }
     },
     {
@@ -129,9 +129,9 @@
   <div class="topline"></div>
 
   <section class="hero hero-slim">
-    <div class="kicker" data-i18n="kicker">Бесплатно · Без регистрации · Приватность по дизайну</div>
+    <div class="kicker" data-i18n="kicker">Бесплатно · Статические без регистрации · Приватность по дизайну</div>
     <h1><span data-i18n="h1a">Превратите</span> <em class="hl" data-i18n="h1b">что угодно</em> <span data-i18n="h1c">в QR-код.</span></h1>
-    <p class="lede" data-i18n="lede">Без регистрации, без водяных знаков. Создаётся в вашем браузере — навсегда ваш.</p>
+    <p class="lede" data-i18n="lede">Статические коды без регистрации. Создаются в вашем браузере — навсегда ваши. Динамические требуют бесплатный аккаунт, чтобы менять их после печати.</p>
   </section>
 
   <main class="studio" id="studio">
@@ -237,7 +237,7 @@
         </div>
       </div>
     </div>
-    <p class="privnote-foot" data-i18n="privnote">Всё генерируется локально в вашем браузере.</p>
+    <p class="privnote-foot" data-i18n="privnote">Статические коды генерируются полностью в вашем браузере.</p>
   </main>
 
   <section class="feats" id="features">
@@ -295,25 +295,25 @@
   </section>
 
   <section class="prins" id="why">
-    <div class="prin"><div class="mascot m-prin" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/privacy.webp" alt="Qly protecting your privacy with a shield"></div><div class="no" data-i18n="p1n">№ 1</div><h3 data-i18n="p1t">Ваши данные никуда не уходят</h3><p data-i18n="p1p">Каждый код рисуется на вашем устройстве — без загрузок, без слежки, без аккаунтов. Загрузите страницу, выдерните кабель — всё продолжит работать.</p></div>
+    <div class="prin"><div class="mascot m-prin" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/privacy.webp" alt="Qly protecting your privacy with a shield"></div><div class="no" data-i18n="p1n">№ 1</div><h3 data-i18n="p1t">Ваши данные никуда не уходят</h3><p data-i18n="p1p">Каждый статический код рисуется на вашем устройстве — без загрузок, без слежки, без аккаунтов. Загрузите страницу, выдерните кабель — всё продолжит работать.</p></div>
     <div class="prin"><div class="no" data-i18n="p2n">№ 2</div><h3 data-i18n="p2t">Сделаны надолго</h3><p data-i18n="p2p">Статический код несёт адрес внутри узора. Напечатайте сегодня — отсканируется и через десять лет. Без продлений и исчезающих платформ.</p></div>
-    <div class="prin"><div class="no" data-i18n="p3n">№ 3</div><h3 data-i18n="p3t">Бесплатно значит бесплатно</h3><p data-i18n="p3p">Без водяных знаков, без стены регистрации, без срока действия. Без Pro-тарифа и скрытых платежей — хорошие инструменты должны быть бесплатными.</p></div>
+    <div class="prin"><div class="no" data-i18n="p3n">№ 3</div><h3 data-i18n="p3t">Бесплатно значит бесплатно</h3><p data-i18n="p3p">Без водяных знаков, без мелкого шрифта. Статические без регистрации. Без Pro-тарифа и скрытых платежей — хорошие инструменты должны быть бесплатными.</p></div>
   </section>
 
   <section class="faq" id="faq">
     <h2><span class="mascot m-head" aria-hidden="true"><img loading="lazy" decoding="async" width="128" height="128" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt=""></span><span data-i18n="faqT">Полезно знать</span></h2>
     <details><summary><span data-i18n="q1">Бесплатные QR-коды истекают?</span></summary><p data-i18n="a1">Никогда. Адрес закодирован прямо в узоре, поэтому код работает, пока работает адрес. Платные динамические коды идут через серверы поставщика и могут умереть, если перестать платить, — ещё одна причина любить статику.</p></details>
-    <details><summary><span data-i18n="q2">Мой пароль от WiFi здесь в безопасности?</span></summary><p data-i18n="a2">Да. Пароль никогда не покидает ваш браузер — ничего никуда не отправляется. Перестраховаться? Загрузите страницу, отключитесь и вводите.</p></details>
+    <details><summary><span data-i18n="q2">Мой пароль от WiFi здесь в безопасности?</span></summary><p data-i18n="a2">Для статического кода — да. Пароль никогда не покидает ваш браузер — ничего никуда не отправляется. Перестраховаться? Загрузите страницу, отключитесь и вводите.</p></details>
     <details><summary><span data-i18n="q3">Статический или динамический?</span></summary><p data-i18n="a3">Если адрес не изменится — статический: WiFi, визитки, постоянные ссылки. Динамические (изменяемые ссылки + статистика) — для кампаний, они в нашей дорожной карте.</p></details>
     <details><summary><span data-i18n="q4">Можно использовать в коммерческих целях?</span></summary><p data-i18n="a4">Конечно. Всё созданное здесь — ваше: упаковка, меню, визитки, без указания авторства.</p></details>
-    <details><summary><span data-i18n="q5">FreeQrly правда бесплатный?</span></summary><p data-i18n="a5">Да — всё на этой странице бесплатно, без водяных знаков и аккаунта. Мы не продаём подписки; это инструмент, а не воронка.</p></details>
-    <details><summary><span data-i18n="q6">Нужен аккаунт?</span></summary><p data-i18n="a6">Нет. Регистрироваться негде — откройте страницу и создайте код.</p></details>
+    <details><summary><span data-i18n="q5">FreeQrly правда бесплатный?</span></summary><p data-i18n="a5">Да — всё на этой странице бесплатно, без водяных знаков. Статические без аккаунта. Мы не продаём подписки; это инструмент, а не воронка.</p></details>
+    <details><summary><span data-i18n="q6">Нужен аккаунт?</span></summary><p data-i18n="a6">Для статических — нет. Регистрироваться негде — откройте страницу и создайте код. Динамические требуют бесплатный аккаунт, чтобы менять их после печати.</p></details>
     <details><summary><span data-i18n="q7">Можно добавить логотип в QR-код?</span></summary><p data-i18n="a7">Да — загрузите квадратный логотип, мы разместим его в центре и автоматически повысим коррекцию ошибок, чтобы код сканировался. Для печати выбирайте Q или H.</p></details>
   </section>
 
   <footer>
     <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly the elephant waving hello"></div>
-    <div class="fin" data-i18n="fin">Сделано в вашем браузере.</div>
+    <div class="fin" data-i18n="fin">Статические коды, сделаны в вашем браузере.</div>
     <div class="fgroups">
       <div class="fgroup"><span class="fglabel">Generators</span><a href="/google-form-qr-code/">Google Form</a><a href="/wifi-qr-code/">WiFi</a><a href="/vcard-qr-code/">vCard</a><a href="/business-card-qr-code/">Business card</a><a href="/google-review-qr-code/">Google review</a><a href="/qr-code-with-logo/">With logo</a><a href="/wedding-qr-code/">Wedding</a><a href="/instagram-qr-code/">Instagram</a><a href="/real-estate-qr-code/">Real estate</a><a href="/batch-qr-code/">Batch</a></div>
       <div class="fgroup"><span class="fglabel">More</span><a href="/scan/">QR scanner</a><a href="/blog/">Field notes</a><a href="/about/">About</a><a href="/developers/">API & MCP</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
@@ -329,8 +329,8 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3t-20261016"></script>
-<script src="/assets/js/app.js?v=b3t-20261016"></script>
+<script src="/assets/js/vcard.js?v=b3v-20261016"></script>
+<script src="/assets/js/app.js?v=b3v-20261016"></script>
 </body>
 </html>
 

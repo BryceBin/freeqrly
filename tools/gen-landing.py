@@ -14,10 +14,10 @@ PAGES = [
  dict(
   slug="google-form-qr-code", dtype="url",
   title="Free Google Form QR Code Generator | FreeQrly",
-  desc="Turn any Google Form link into a QR code in seconds. Free, no sign-up, no watermark. Paste your form URL and download a printable PNG or SVG.",
+  desc="Turn any Google Form link into a QR code in seconds. Free, no sign-up for static codes, no watermark. Paste your form URL and download a printable PNG or SVG.",
   kw="qr code generator for google form",
   h1="QR codes for Google Forms, without the fine print.",
-  lede="Paste your form's responder link below and get a crisp, printable QR code — no account, no watermark, no expiry. Put it on a poster and watch the responses roll in.",
+  lede="Paste your form's responder link below and get a crisp, printable QR code — no account needed for static codes, no watermark, no expiry. Put it on a poster and watch the responses roll in.",
   steps=[
     ("Copy your form link", "In Google Forms, click <b>Send</b> and copy the responder link (the short one works best)."),
     ("Paste it above", "Drop the link into the Website field — your code appears instantly in the preview."),
@@ -30,7 +30,7 @@ PAGES = [
     ("Will this QR code expire?",
      "Never. It is a static code: the link lives inside the pattern itself, so it works as long as your form does. No renewals, no vendor to disappear."),
     ("Is it really free? Any watermark?",
-     "Completely free, no watermark, no account. Some tools in the search results add watermarks or paywalls — this one doesn't."),
+     "Completely free, no watermark, no account needed for static codes. Some tools in the search results add watermarks or paywalls — this one doesn't."),
     ("Can I track how many people scanned it?",
      "Static codes don't phone home, which is exactly why they're private. For response counts, use your form's Responses tab — it already tracks everything."),
   ],
@@ -38,7 +38,7 @@ PAGES = [
  dict(
   slug="wifi-qr-code", dtype="wifi",
   title="Free WiFi QR Code Generator | FreeQrly",
-  desc="Create a free WiFi QR code so guests join your network with one scan. No app needed, no sign-up. Your password never leaves your browser.",
+  desc="Create a free WiFi QR code so guests join your network with one scan. No app needed, no sign-up for static codes. For a static code, your password never leaves your browser.",
   kw="wifi qr code generator",
   h1="Share your WiFi without spelling the password.",
   lede="Type your network name and password once, print the code, stick it on the fridge. Guests scan and they're online — no more shouting the password across the room.",
@@ -50,7 +50,7 @@ PAGES = [
   studio_h2="Make your WiFi QR code",
   faq=[
     ("Is my WiFi password safe here?",
-     "Yes. The code is drawn entirely in your browser — your password is never uploaded or stored anywhere. For extra peace of mind, load the page, disconnect from the internet, then type."),
+     "For a static code, yes. The code is drawn entirely in your browser — your password is never uploaded or stored anywhere. For extra peace of mind, load the page, disconnect from the internet, then type."),
     ("Which phones can scan a WiFi QR code?",
      "iPhones on iOS 11+ join straight from the Camera app; most Android phones on Android 10+ do the same from the camera or WiFi settings. No extra app needed."),
     ("Does it work with WPA3 or hidden networks?",
@@ -62,7 +62,7 @@ PAGES = [
  dict(
   slug="vcard-qr-code", dtype="vcard",
   title="Free vCard QR Code Generator — Contact QR Codes | FreeQrly",
-  desc="Turn your contact details into a scannable vCard QR code. Free, no sign-up. One scan saves you straight to their phone.",
+  desc="Turn your contact details into a scannable vCard QR code. Free, no sign-up for static codes. One scan saves you straight to their phone.",
   kw="vcard qr code generator",
   h1="Your contact card, one scan away.",
   lede="Name, number, email — encoded into a vCard QR code. Print it on your business card and new contacts save you with a single scan instead of typing.",
@@ -86,7 +86,7 @@ PAGES = [
  dict(
   slug="batch-qr-code", dtype="batch",
   title="Free Batch QR Code Generator | FreeQrly",
-  desc="Generate dozens of QR codes at once and download them as a ZIP. Free, no sign-up, no limits games. One link per line — done.",
+  desc="Generate dozens of QR codes at once and download them as a ZIP. Free, no sign-up for static codes, no limits games. One link per line — done.",
   kw="batch qr code generator",
   h1="Dozens of QR codes. One download.",
   lede="Paste your links — one per line — hit generate, and download every code as a tidy ZIP. The batch feature other tools put behind a paywall, free here.",
@@ -100,7 +100,7 @@ PAGES = [
     ("How many QR codes can I make at once?",
      "Up to 50 per batch. Need more? Run another batch — there's no daily cap or account to hit."),
     ("Is batch generation really free?",
-     "Yes. Many generators charge a subscription for bulk export; here it's the same free tool, no watermark, no sign-up."),
+     "Yes. Many generators charge a subscription for bulk export; here it's the same free tool, no watermark, no sign-up for static codes."),
     ("What format do the downloads come in?",
      "A single ZIP containing high-resolution PNGs (1024 px), each named qr-1.png, qr-2.png, and so on — ready for print."),
     ("Can I add my logo to batch codes?",
@@ -127,7 +127,7 @@ STUDIO_H2_RE = re.compile(r'<div class="shead"><div class="over" data-i18n="sOve
 PAGES += [
 dict(slug="business-card-qr-code", dtype="vcard",
   title="Free Business Card QR Code Generator | FreeQrly",
-  desc="Put a scannable vCard QR code on your business card. Free, no sign-up \u2014 one scan saves your contact straight to their phone.",
+  desc="Put a scannable vCard QR code on your business card. Free, no sign-up for static codes \u2014 one scan saves your contact straight to their phone.",
   kw="qr code for business cards",
   h1='Your business card, <span class="hl hl-mint">but it introduces itself</span>.',
   lede="Encode your details as a vCard QR code. Print it on your card and new contacts save you with one scan \u2014 no typing, no lost cards.",
@@ -141,7 +141,7 @@ dict(slug="business-card-qr-code", dtype="vcard",
        ("Does it expire or need an account?","No. It is a static code: your details live inside the pattern. Print it today, it scans in ten years.")]),
 dict(slug="google-review-qr-code", dtype="url",
   title="Free Google Review QR Code Generator | FreeQrly",
-  desc="Turn your Google review link into a printable QR code. Free, no sign-up. Put it on the counter and watch the reviews come in.",
+  desc="Turn your Google review link into a printable QR code. Free, no sign-up for static codes. Put it on the counter and watch the reviews come in.",
   kw="qr code for google review",
   h1='More five-star reviews, <span class="hl hl-blush">one scan away</span>.',
   lede="Paste your Google review link and get a printable QR code. Counter, receipt, takeout bag, table tent \u2014 make leaving a review effortless.",
@@ -155,10 +155,10 @@ dict(slug="google-review-qr-code", dtype="url",
        ("Does the code expire?","No. Static codes never expire and need no account, so your counter card works forever.")]),
 dict(slug="qr-code-with-logo", dtype="url",
   title="QR Code Generator with Logo \u2014 Free | FreeQrly",
-  desc="Add your logo to the center of any QR code. Free, no sign-up, no watermark. Error correction adjusts automatically so it always scans.",
+  desc="Add your logo to the center of any QR code. Free, no sign-up for static codes, no watermark. Error correction adjusts automatically so it always scans.",
   kw="qr code with logo",
   h1='Your logo, <span class="hl hl-honey">right in the middle</span>.',
-  lede="Upload your logo and it lands dead center, with error correction cranked up automatically so the code still scans perfectly. Free, no watermark, no account.",
+  lede="Upload your logo and it lands dead center, with error correction cranked up automatically so the code still scans perfectly. Free, no watermark, no account needed for static codes.",
   steps=[("Make your code","Any type above \u2014 link, vCard, WiFi. The logo step works with all of them."),
          ("Upload your logo","Square PNG with transparency works best. Keep it under ~30% of the code area as a rule of thumb."),
          ("Download print-ready","PNG up to 2048 px or infinitely scalable SVG \u2014 crisp on cards and banners alike.")],
@@ -166,10 +166,10 @@ dict(slug="qr-code-with-logo", dtype="url",
   faq=[("Will the code still scan with a logo on it?","Yes. Uploading a logo automatically raises error correction to High, which reserves <a href=\"http://www.iso.org/standard/83389.html\">up to 30% of the pattern for recovery</a> under ISO/IEC 18004 \u2014 that is where your logo sits."),
        ("What logo file works best?","A square PNG with a transparent background. Avoid fine text inside the logo \u2014 bold shapes read better at small sizes."),
        ("What size should I print it?","At least 2x2 cm, at 1024 px export or higher. Bigger is safer when a logo covers the center."),
-       ("Is there a watermark or a fee?","No. Logo upload is free and unlimited, and your files never leave your browser.")]),
+       ("Is there a watermark or a fee?","No. Logo upload is free and unlimited, and for static codes your files never leave your browser.")]),
 dict(slug="wedding-qr-code", dtype="url",
   title="Free Wedding QR Code Generator | FreeQrly",
-  desc="QR codes for weddings: RSVP forms, photo sharing, menus, seating charts. Free, no sign-up \u2014 one scan for your guests.",
+  desc="QR codes for weddings: RSVP forms, photo sharing, menus, seating charts. Free, no sign-up for static codes \u2014 one scan for your guests.",
   kw="qr code wedding",
   h1='One scan, <span class="hl hl-honey">zero wedding-day questions</span>.',
   lede="RSVP form, photo album, menu, seating chart \u2014 turn every wedding link into a pretty QR code for invitations and table cards. Free forever, styled to match your theme.",
@@ -183,7 +183,7 @@ dict(slug="wedding-qr-code", dtype="url",
        ("Will they still work on the day?","Yes \u2014 static codes never expire. Make them months ahead; they will scan on the day and for years after as a keepsake.")]),
 dict(slug="instagram-qr-code", dtype="url",
   title="Free Instagram QR Code Generator | FreeQrly",
-  desc="Turn your Instagram profile or post into a scannable QR code. Free, no sign-up. Print it for packaging, flyers, and shop windows.",
+  desc="Turn your Instagram profile or post into a scannable QR code. Free, no sign-up for static codes. Print it for packaging, flyers, and shop windows.",
   kw="qr code for instagram",
   h1='Your profile, <span class="hl hl-blush">off the screen</span>.',
   lede="Paste your Instagram URL and get a scannable code for packaging, flyers, receipts, and the shop window. New followers, minus the username spelling.",
@@ -200,10 +200,10 @@ dict(slug="instagram-qr-code", dtype="url",
 PAGES += [
 dict(slug="real-estate-qr-code", dtype="url",
   title="Free Real Estate QR Code Generator | FreeQrly",
-  desc="QR codes for real estate: listings, virtual tours, flyers, and yard signs. Free, no sign-up \u2014 one scan takes buyers to the listing.",
+  desc="QR codes for real estate: listings, virtual tours, flyers, and yard signs. Free, no sign-up for static codes \u2014 one scan takes buyers to the listing.",
   kw="qr code for real estate",
   h1='Every listing, <span class="hl hl-mint">one scan away</span>.',
-  lede="Link listings, virtual tours, and open-house details to scannable codes. Print them for yard signs, brochures, and window displays \u2014 free forever, no account.",
+  lede="Link listings, virtual tours, and open-house details to scannable codes. Print them for yard signs, brochures, and window displays \u2014 free forever, no account needed for static codes.",
   steps=[("Copy your listing URL","Your MLS page, Zillow/Redfin link, or virtual tour \u2014 any URL works."),
          ("Paste it above","Your code appears instantly in the link tab."),
          ("Print for signs & flyers","SVG for the sign printer, PNG for flyers. Yard signs need 10+ cm \u2014 see the 1:10 rule of thumb.")],
@@ -311,7 +311,7 @@ def build(p):
 {HEADER}
   <section class="hero lp-hero">
     <div>
-      <div class="kicker">Free · No sign-up · No watermark</div>
+      <div class="kicker">Free · Static codes need no sign-up · No watermark</div>
       <h1>{p["h1"]}</h1>
       <p class="lede">{p["lede"]}</p>
     </div>
@@ -327,7 +327,7 @@ def build(p):
   </section>
 
   <footer>
-    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, in your browser.</div>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, static codes in your browser.</div>
     <div class="rule"></div>
     <div class="lplinks">{foot_links}</div>
     <div class="lplinks"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>

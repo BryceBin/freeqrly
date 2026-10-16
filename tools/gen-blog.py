@@ -61,7 +61,7 @@ POSTS = [
 </ul>
 
 <h2>The FreeQrly angle</h2>
-<p>Every code made here is static, free, and yours — no account, no redirect server, nothing to cancel. There is simply no mechanism by which it could expire. That's not a marketing claim; it's just how static codes work when nobody inserts themselves in the middle.</p>
+<p>Every static code made here is free, and yours — no account, no redirect server, nothing to cancel. There is simply no mechanism by which it could expire. That's not a marketing claim; it's just how static codes work when nobody inserts themselves in the middle.</p>
 """,
   faq=[
     ("Do free QR codes expire?",
@@ -115,7 +115,7 @@ POSTS = [
 </ul>
 
 <h2>Where FreeQrly stands</h2>
-<p>We make static codes — free, unlimited, no account. It covers most everyday needs. Dynamic codes with editable links and analytics are on our roadmap for people running campaigns; until then, we'd rather tell you the truth than sell you the subscription.</p>
+<p>We make static codes — free, unlimited, no account. It covers most everyday needs. Dynamic codes with editable links and scan stats are available with a free sign-in, for people running campaigns.</p>
 """,
   faq=[
     ("What is the difference between static and dynamic QR codes?",
@@ -358,7 +358,7 @@ POSTS += [{'body': '\n'
           'pitch.</p>\n',
   'date': '2026-10-14',
   'desc': 'How restaurants use QR codes: digital menus, Google reviews, and guest WiFi. Free setup '
-          'guide with printable codes — no sign-up, no fees.',
+          'guide with printable codes — no fees.',
   'faq': [('What QR codes does a restaurant need?',
            'Three: a menu link, a Google review link, and the WiFi credentials. That covers nearly '
            'every guest interaction.'),
@@ -388,8 +388,7 @@ POSTS += [{'body': '\n'
           'or talks about "campaigns". A truly free static generator needs none of that.</p>\n'
           '<h2>The 30-second test</h2>\n'
           '<p>Before you trust a generator with your print run: generate a code <b>without '
-          "creating an account</b>. If it works, it's static. FreeQrly only makes static codes — "
-          "no accounts exist, so there's nothing to expire. That's also why <a "
+          "creating an account</b>. If it works, it's static. Static codes from FreeQrly need no account, so there's nothing to expire. That's also why <a "
           'href="/blog/do-qr-codes-expire/">QR codes don\'t have to expire</a>.</p>\n'
           "<h2>What can still break (it's not the code)</h2>\n"
           '<p>A static code lasts forever, but its destination might not: if you delete the page '
@@ -397,7 +396,7 @@ POSTS += [{'body': '\n'
           'will outlive most of your marketing materials.</p>\n'
           '<h2>Make yours</h2>\n'
           '<p>Pick any type in the <a href="/">free generator</a> — link, vCard, WiFi — download '
-          'the PNG or SVG, and print it. No sign-up, no trial, no expiry date hiding in the fine '
+          'the PNG or SVG, and print it. No sign-up needed for a static code, no trial, no expiry date hiding in the fine '
           'print.</p>\n',
   'date': '2026-10-14',
   'desc': "Free QR codes that don't expire do exist — they're called static codes. How to spot "
@@ -543,7 +542,7 @@ POSTS += [{'body': '\n'
           "cards. Static codes never expire, so last year's signage template still works.</p>\n",
   'date': '2026-10-14',
   'desc': 'How to use QR codes for events: check-in, registration, tickets, photo sharing, and '
-          'add-to-calendar codes. Free generator, no sign-up.',
+          'add-to-calendar codes. Free generator.',
   'faq': [('How do I make a QR code for event check-in?',
            'Link the code to your check-in form or registration page, print it for the entrance, '
            'and guests scan on arrival instead of queueing at a desk.'),
@@ -584,7 +583,7 @@ POSTS += [{'body': '\n'
           'href="/">free QR code</a>, zero postage.</p>\n',
   'date': '2026-10-14',
   'desc': 'How to use QR codes for wedding RSVPs: link your RSVP form, print on invitations, track '
-          'responses. Free generator — no sign-up.',
+          'responses. Free generator.',
   'faq': [('How do I create a QR code for my wedding RSVP?',
            'Make your RSVP form (Google Forms works great), paste its link into a free QR '
            'generator, and print the code on your invitations at 2x2 cm or larger.'),
@@ -696,7 +695,7 @@ def build(p, all_posts=None):
 {sources_html}    <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
-        <h3>Try it yourself — free, no sign-up</h3>
+        <h3>Try it yourself — free</h3>
         <p>Everything in this article works in the FreeQrly studio right now. Static codes, ten content types, PNG and SVG export.</p>
         <a class="btn" href="/#studio">Open the studio</a>
       </div>

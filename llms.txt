@@ -1,8 +1,8 @@
 # FreeQrly
 
-> FreeQrly is a free QR code generator: no sign-up, no tracking, no expiry.
-> Every code is generated locally — on this website in your browser, or via the
-> API/MCP below for agents. Static codes never expire.
+> FreeQrly is a free QR code generator: static codes need no sign-up, no tracking, no expiry.
+> Static codes are generated locally — on this website in your browser, or via the
+> API/MCP below for agents. Dynamic codes need a free sign-in, so they can be edited after printing.
 
 ## For AI agents
 
