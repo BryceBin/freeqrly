@@ -89,7 +89,12 @@ def localize_page(key, lang, trans):
             extra += ' dir="rtl"'
         return f"<html{attrs}{extra}>"
     out = re.sub(r"<html([^>]*)>", html_tag, out, count=1)
-    # hreflang: replace existing block, else insert after charset meta
+    # hreflang + canonical: skipped for 404 (error pages get neither)
+    if key == "404":
+        out_path = os.path.join(SITE, out_tmpl.format(lang=lang))
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        open(out_path, "w", encoding="utf-8").write(out)
+        return missing
     block = hreflang_block(key)
     if "hreflang=" in out:
         out = re.sub(r'(<link rel="alternate" hreflang="[^"]*"[^>]*>\n?)+', block + "\n", out, count=1)
@@ -126,11 +131,7 @@ def main():
             if key in JS_PAGES:
                 trans.update(data.get(JS_PAGES[key], {}))
             missing = localize_page(key, lang, trans)
-            if missing:
-                total_missing += len(missing)
-                print(f"  {lang}/{key}: {len(missing)} EN strings not found in source")
-                for m in missing[:5]:
-                    print(f"    - {m[:90]}")
+            total_missing += len(missing)
         print(f"{lang}: done, {total_missing} missing total")
 
 if __name__ == "__main__":

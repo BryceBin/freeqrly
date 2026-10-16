@@ -17,7 +17,7 @@
  "Is FreeQrly really free?",
  "Yes — every feature is free, with no watermarks. Static codes need no sign-up and cost nothing to serve once generated in your browser, so there's nothing to charge for.",
  "Do the QR codes expire?",
- "No. FreeQrly generates static codes only; the destination lives inside the pattern itself. Details: <a href=\"/blog/do-qr-codes-expire/\">do QR codes expire?</a>",
+ "No. Static codes never expire — the destination lives inside the pattern itself. Details: <a href=\"/blog/do-qr-codes-expire/\">do QR codes expire?</a>",
  "Can I use it for my business?",
  "Yes — commercial use is free. Restaurants use it for <a href=\"/blog/qr-codes-for-restaurants/\">menus and reviews</a>, shops for <a href=\"/google-review-qr-code/\">review codes</a> and <a href=\"/wifi-qr-code/\">WiFi codes</a>.",
  "Who is behind FreeQrly?",

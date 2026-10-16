@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Développeurs — API et MCP FreeQrly</title>
+<meta name="description" content="FreeQrly pour les agents : une API de QR code gratuite et un serveur MCP. Générez des QR codes statiques par programme — sans clé, sans inscription.">
+<link rel="canonical" href="https://freeqrly.com/fr/developers/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/developers/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/developers/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/developers/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/developers/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/developers/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/developers/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/developers/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/developers/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/developers/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/developers/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/developers/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Développeurs — API et MCP FreeQrly">
+<meta property="og:description" content="Une API de QR code gratuite et un serveur MCP pour les agents. Sans clé, sans inscription.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/developers/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../assets/css/main.css?v=qly2-20261014">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"API et MCP FreeQrly","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/developers/","description":"API de QR code gratuite et serveur MCP pour les agents. Sans clé, sans inscription."}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">Studio</a><a href="/blog/do-qr-codes-expire/">Notes de terrain</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <section class="hero" style="grid-template-columns:1fr;gap:0">
+    <div>
+      <div class="kicker">Pour les agents</div>
+      <h1>QR codes, <span class="hl hl-mint">sans</span> le navigateur.</h1>
+      <p class="lede">FreeQrly parle HTTP et MCP. Générez des QR codes statiques depuis n’importe quel agent, script ou flux de travail — sans clé, sans inscription, sans expiration. Si vous pouvez faire une requête, vous pouvez faire un code.</p>
+    </div>
+  </section>
+
+  <div class="article" style="padding-top:0">
+    <h2>Façons de se connecter</h2>
+    <div class="devgrid">
+      <div class="devcard">
+        <h3>🧰 Serveur MCP</h3>
+        <p>Ajoutez <code>https://freeqrly.com/mcp</code> à votre client MCP. Un outil — <code>generate_qr</code> — sans authentification. Fonctionne avec Claude Code, Cursor et tout ce qui parle HTTP Streamable.</p>
+      </div>
+      <div class="devcard">
+        <h3>🌐 API HTTP</h3>
+        <p>Un endpoint GET simple qui renvoie du SVG. CORS est grand ouvert, donc navigateurs, curl et fonctions serverless peuvent tous l’appeler directement.</p>
+      </div>
+      <div class="devcard">
+        <h3>📜 Compétence d’agent</h3>
+        <p>Un <code>SKILL.md</code> avec des recettes de payload vit dans le dépôt à <code>skills/qr-generator/</code>. Pointez votre agent dessus et il connaît la suite.</p>
+      </div>
+      <div class="devcard">
+        <h3>🤖 llms.txt</h3>
+        <p><code>/llms.txt</code> décrit tout le site pour les robots et les assistants — endpoints, formats de payload et plan des pages dans un seul fichier.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>API HTTP</h2>
+      <div class="endpoint"><span class="m">GET</span> https://freeqrly.com/api/qr?data=TEXT&amp;size=1024&amp;margin=4&amp;color=2F4A62&amp;bgcolor=ffffff&amp;ecc=M</div>
+      <p>Renvoie <code>image/svg+xml</code>. Seul <code>data</code> est requis ; tout le reste a une valeur par défaut raisonnable. Les erreurs reviennent en JSON avec un champ <code>error</code>.</p>
+      <pre class="code">curl "https://freeqrly.com/api/qr?data=https://example.com&amp;size=1024" \
+  -o qr.svg
+
+# WiFi QR code for guests
+curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
+  -o wifi.svg</pre>
+
+      <h2>Paramètres</h2>
+      <ul>
+        <li><strong>data</strong> — texte à encoder (requis, max 2000 caractères). URL, chaînes WiFi, vCards, texte brut.</li>
+        <li><strong>size</strong> — taille de sortie en px, 128–2048 (par défaut 1024).</li>
+        <li><strong>margin</strong> — zone de silence en modules, 0–10 (par défaut 4).</li>
+        <li><strong>color / bgcolor</strong> — hexadécimal à 6 chiffres, sans <code>#</code> (par défaut <code>2F4A62</code> / <code>ffffff</code>).</li>
+        <li><strong>ecc</strong> — correction d’erreur <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (par défaut <code>M</code>). Utilisez <code>Q</code>/<code>H</code> pour l’impression ou les logos.</li>
+      </ul>
+
+      <h2>MCP</h2>
+      <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/mcp</div>
+      <p>HTTP Streamable standard : <code>initialize</code>, puis <code>tools/list</code> / <code>tools/call</code>. L’outil <code>generate_qr</code> prend <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> et renvoie une URL SVG prête à télécharger.</p>
+      <pre class="code">{
+  "jsonrpc": "2.0", "id": 1, "method": "tools/call",
+  "params": {
+    "name": "generate_qr",
+    "arguments": { "data": "https://example.com", "size": 1024 }
+  }
+}</pre>
+
+      <h2>Recettes de payload</h2>
+      <pre class="code">Website : https://example.com/menu
+WiFi    : WIFI:T:WPA;S:CafeNet;P:s3cret;;
+Contact : BEGIN:VCARD\nVERSION:3.0\nN:Ada Lovelace\nTEL:+15550100\nEND:VCARD
+Place   : geo:37.7749,-122.4194
+SMS     : sms:+15550100?body=Hello</pre>
+
+      <h2>Usage équitable</h2>
+      <p>C’est gratuit, mais soyez aimable : mettez les résultats en cache au lieu de redemander le même code, et gardez le trafic automatisé raisonnable. Des limites de débit par IP s’appliquent. Les codes statiques sont déterministes — la même entrée donne toujours la même sortie, donc la mise en cache est triviale.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — fait discrètement, dans votre navigateur. Et dans celui de votre agent.</div>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

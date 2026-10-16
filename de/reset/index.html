@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de"><head>
+<meta charset="UTF-8"><link rel="alternate" hreflang="en" href="https://freeqrly.com/reset/">
+<link rel="canonical" href="https://freeqrly.com/de/reset/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/reset/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/reset/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/reset/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/reset/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/reset/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/reset/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/reset/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/reset/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/reset/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/reset/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Passwort zurücksetzen — FreeQrly</title>
+<meta name="description" content="Setz dein FreeQrly-Passwort zurück.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#F5EFE3;color:#22303F;padding:0}
+.top{max-width:520px;margin:0 auto;padding:48px 20px 24px;text-align:center}
+.top h1{font-size:28px;margin-bottom:8px}
+.top p{font-size:14px;color:#8a7a5f;line-height:1.6}
+.top a{color:#2F4A62;text-decoration:none;font-weight:600}
+.card{background:#fff;border:1px solid #E8DFC8;border-radius:20px;padding:28px;max-width:520px;margin:0 auto 24px;box-shadow:0 8px 28px rgba(190,145,60,.10)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input{width:100%;padding:12px 14px;border:1.5px solid #E8DFC8;border-radius:10px;font-size:15px;background:#FBF6EC;outline:none}
+.field input:focus{border-color:#2F4A62;background:#fff}
+.btn{width:100%;border:0;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;background:#2F4A62;color:#fff}
+.btn:disabled{opacity:.6}
+.merror{color:#b45309;font-size:13px;margin-top:10px;text-align:center}
+.mok{color:#2F6B4F;font-size:13px;margin-top:10px;text-align:center}
+.note{font-size:12px;color:#8a7a5f;line-height:1.6;margin-top:14px;text-align:center}
+.foot{font-size:13px;color:#8a7a5f;text-align:center;padding-bottom:40px}
+.foot a{color:#2F4A62;text-decoration:none;font-weight:600}
+.legal{font-size:12px;color:#a89a7e;text-align:center;margin:18px 0 0;line-height:1.6}
+.legal a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.inboxIcon{font-size:36px;text-align:center;margin-bottom:12px}
+.state h2{font-size:20px;text-align:center;margin-bottom:8px}
+.state p{font-size:14px;color:#8a7a5f;line-height:1.6;text-align:center}
+.linkbtn{background:none;border:0;color:#2F4A62;font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-family:inherit}
+</style>
+</head>
+<body>
+<div class="top">
+  <h1 id="pageTitle">Passwort zurücksetzen</h1>
+  <p id="pageSub">Gib deine E-Mail ein und wir schicken dir einen Link zum Zurücksetzen.</p>
+</div>
+
+<div class="card">
+  <!-- Forgot mode: no token — request a reset link -->
+  <form id="forgotForm">
+    <div class="field"><label for="forgotEmail">E-Mail</label>
+      <input id="forgotEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+    </div>
+    <button class="btn" id="forgotBtn" type="submit">Link zum Zurücksetzen senden</button>
+    <div id="tsWidget" style="margin:14px 0 0"></div>
+    <p class="merror" id="forgotErr" hidden></p>
+  </form>
+
+  <!-- Reset mode: ?token=... — set a new password -->
+  <form id="resetForm" hidden>
+    <div class="field"><label for="newPass">Neues Passwort</label>
+      <input id="newPass" type="password" placeholder="Neues Passwort" autocomplete="new-password" required>
+    </div>
+    <div class="field"><label for="confirmPass">Neues Passwort bestätigen</label>
+      <input id="confirmPass" type="password" placeholder="Neues Passwort wiederholen" autocomplete="new-password" required>
+    </div>
+    <button class="btn" id="resetBtn" type="submit">Passwort aktualisieren</button>
+    <p class="merror" id="resetErr" hidden></p>
+    <p class="note"><a href="/reset/" style="color:#2F4A62;font-weight:600;text-decoration:none">Neuen Link zum Zurücksetzen anfordern</a></p>
+  </form>
+
+  <!-- Forgot: check-your-inbox state -->
+  <div class="state" id="forgotSent" hidden>
+    <div class="inboxIcon">✉️</div>
+    <h2>Prüf dein Postfach</h2>
+    <p>Wenn es ein Konto für diese E-Mail gibt, haben wir ihm einen Link zum Zurücksetzen des Passworts geschickt.</p>
+    <p style="margin-top:14px"><a href="/login/" style="color:#2F4A62;font-weight:600;text-decoration:none">Zurück zur Anmeldung</a></p>
+  </div>
+
+  <!-- Reset: success state -->
+  <div class="state" id="resetDone" hidden>
+    <div class="inboxIcon">✅</div>
+    <h2>Passwort aktualisiert</h2>
+    <p>Dein Passwort wurde geändert.</p>
+    <p style="margin-top:18px"><a href="/login/" id="loginLink" style="color:#2F4A62;font-weight:600;text-decoration:none">Anmelden →</a></p>
+  </div>
+  <p class="legal">Mit dem Fortfahren stimmst du unseren <a href="/terms/">Nutzungsbedingungen</a> und unserer <a href="/privacy/">Datenschutzerklärung</a> zu.</p>
+</div>
+<p class="foot"><a href="/">&larr; Back to generator</a></p>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+const $ = id => document.getElementById(id);
+const ERRORS = {
+  invalid_link: 'Dieser Link zum Zurücksetzen ist abgelaufen oder wurde bereits verwendet. Fordere einen neuen an.',
+  weak_password: 'Bitte wähl ein stärkeres Passwort (mindestens 8 Zeichen, mit Buchstaben und Zahlen).',
+  rate_limited: 'Zu viele Versuche. Bitte warte kurz und versuch es nochmal.'
+};
+const params = new URLSearchParams(location.search);
+const token = params.get('token') || '';
+const next = params.get('next') || '';
+if(next && next.startsWith('/') && !next.startsWith('//')){
+  $('loginLink').href = '/login/?next=' + encodeURIComponent(next);
+}
+
+// --- Turnstile (bot check) for the forgot form.
+let tsWidgetId = null;
+function tsToken(){ try{ return (window.turnstile && tsWidgetId !== null) ? turnstile.getResponse(tsWidgetId) : ''; }catch(e){ return ''; } }
+function tsReset(){ try{ if(window.turnstile && tsWidgetId !== null) turnstile.reset(tsWidgetId); }catch(e){} }
+fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
+  if(cfg && cfg.turnstileSitekey && window.turnstile){
+    try{ tsWidgetId = turnstile.render('#tsWidget', { sitekey: cfg.turnstileSitekey, theme: 'light' }); }catch(e){}
+  }
+}).catch(()=>{});
+
+if(token){
+  // Reset mode: set a new password.
+  $('pageTitle').textContent = 'Wähl ein neues Passwort';
+  $('pageSub').textContent = 'Wähl ein neues Passwort für dein Konto.';
+  $('forgotForm').hidden = true;
+  $('resetForm').hidden = false;
+  $('resetForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const pw = $('newPass').value;
+    const confirm = $('confirmPass').value;
+    $('resetErr').hidden = true;
+    if(pw !== confirm){
+      $('resetErr').textContent = "Die Passwörter stimmen nicht überein.";
+      $('resetErr').hidden = false;
+      return;
+    }
+    $('resetBtn').disabled = true; $('resetBtn').textContent = 'Wird aktualisiert…';
+    try{
+      const r = await fetch('/api/auth/reset', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ token, newPassword: pw })
+      });
+      const d = await r.json().catch(()=>({}));
+      if(r.ok){
+        $('resetForm').hidden = true;
+        $('resetDone').hidden = false;
+        return;
+      }
+      $('resetErr').textContent = ERRORS[d.error] || 'Passwort konnte nicht aktualisiert werden. Bitte versuch es nochmal.';
+      $('resetErr').hidden = false;
+    }catch(err){
+      $('resetErr').textContent = 'Netzwerkfehler. Bitte versuch es nochmal.';
+      $('resetErr').hidden = false;
+    }finally{
+      $('resetBtn').disabled = false; $('resetBtn').textContent = 'Passwort aktualisieren';
+    }
+  });
+} else {
+  // Forgot mode: request a reset link.
+  $('forgotForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const email = $('forgotEmail').value.trim();
+    if(!email) return;
+    $('forgotErr').hidden = true;
+    $('forgotBtn').disabled = true; $('forgotBtn').textContent = 'Wird gesendet…';
+    try{
+      const r = await fetch('/api/auth/forgot', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ email, turnstileToken: tsToken() })
+      });
+      const d = await r.json().catch(()=>({}));
+      tsReset();
+      if(d.error === 'turnstile_failed'){
+        $('forgotErr').textContent = 'Bitte bestätige, dass du kein Roboter bist, und versuch es nochmal.';
+        $('forgotErr').hidden = false;
+        $('forgotBtn').disabled = false; $('forgotBtn').textContent = 'Link zum Zurücksetzen senden';
+        return;
+      }
+    }catch(err){}
+    // Same message either way — never reveal whether the email exists.
+    $('forgotForm').hidden = true;
+    $('forgotSent').hidden = false;
+  });
+}
+</script>
+</body></html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="hi" data-lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>डेवलपर्स — FreeQrly API और MCP</title>
+<meta name="description" content="एजेंट्स के लिए FreeQrly: एक मुफ़्त QR कोड API और MCP सर्वर। प्रोग्राम के ज़रिए स्टैटिक QR कोड बनाएं — न की, न साइन-अप।">
+<link rel="canonical" href="https://freeqrly.com/hi/developers/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/developers/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/developers/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/developers/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/developers/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/developers/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/developers/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/developers/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/developers/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/developers/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/developers/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/developers/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="डेवलपर्स — FreeQrly API और MCP">
+<meta property="og:description" content="एजेंट्स के लिए मुफ़्त QR कोड API और MCP सर्वर। न की, न साइन-अप।">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/developers/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../assets/css/main.css?v=qly2-20261014">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly API और MCP","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/developers/","description":"एजेंट्स के लिए मुफ़्त QR कोड API और MCP सर्वर। न की, न साइन-अप।"}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">स्टूडियो</a><a href="/blog/do-qr-codes-expire/">फ़ील्ड नोट्स</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <section class="hero" style="grid-template-columns:1fr;gap:0">
+    <div>
+      <div class="kicker">एजेंट्स के लिए</div>
+      <h1>QR कोड, <span class="hl hl-mint">बिना</span> ब्राउज़र के।</h1>
+      <p class="lede">FreeQrly HTTP और MCP बोलता है। किसी भी एजेंट, स्क्रिप्ट या वर्कफ़्लो से स्टैटिक QR कोड बनाएं — न की, न साइन-अप, न एक्सपायरी। अगर आप रिक्वेस्ट कर सकते हैं, तो कोड बना सकते हैं।</p>
+    </div>
+  </section>
+
+  <div class="article" style="padding-top:0">
+    <h2>कनेक्ट करने के तरीके</h2>
+    <div class="devgrid">
+      <div class="devcard">
+        <h3>🧰 MCP सर्वर</h3>
+        <p><strong>color / bgcolor</strong> — 6-अंकीय hex, बिना <code>#</code> (डिफ़ॉल्ट <code>2F4A62</code> / <code>ffffff</code>)।</p>
+      </div>
+      <div class="devcard">
+        <h3>🌐 HTTP API</h3>
+        <p>SVG लौटाने वाला एक सीधा GET एंडपॉइंट। CORS पूरी तरह खुला है, इसलिए ब्राउज़र, curl और सर्वरलेस फंक्शन सब इसे सीधे कॉल कर सकते हैं।</p>
+      </div>
+      <div class="devcard">
+        <h3>📜 एजेंट स्किल</h3>
+        <p><strong>ecc</strong> — एरर करेक्शन <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (डिफ़ॉल्ट <code>M</code>)। प्रिंट या लोगो के लिए <code>Q</code>/<code>H</code> इस्तेमाल करें।</p>
+      </div>
+      <div class="devcard">
+        <h3>🤖 llms.txt</h3>
+        <p>पेलोड रेसिपी वाली एक <code>SKILL.md</code> रेपो में <code>skills/qr-generator/</code> पर रहती है। अपने एजेंट को उसकी तरफ़ इशारा करें और वह बाकी जान जाएगा।</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>HTTP API</h2>
+      <div class="endpoint"><span class="m">GET</span> https://freeqrly.com/api/qr?data=TEXT&amp;size=1024&amp;margin=4&amp;color=2F4A62&amp;bgcolor=ffffff&amp;ecc=M</div>
+      <p><code>https://freeqrly.com/mcp</code> को अपने MCP क्लाइंट में जोड़ें। एक टूल — <code>generate_qr</code> — कोई ऑथ नहीं। Claude Code, Cursor और Streamable HTTP बोलने वाली हर चीज़ के साथ काम करता है।</p>
+      <pre class="code">curl "https://freeqrly.com/api/qr?data=https://example.com&amp;size=1024" \
+  -o qr.svg
+
+# WiFi QR code for guests
+curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
+  -o wifi.svg</pre>
+
+      <h2>पैरामीटर</h2>
+      <ul>
+        <li><strong>data</strong> — एनकोड करने वाला टेक्स्ट (ज़रूरी, अधिकतम 2000 अक्षर)। URL, WiFi स्ट्रिंग, vCard, सादा टेक्स्ट।</li>
+        <li><strong>size</strong> — आउटपुट साइज़ px में, 128–2048 (डिफ़ॉल्ट 1024)।</li>
+        <li><strong>margin</strong> — मॉड्यूल में क्वाइट ज़ोन, 0–10 (डिफ़ॉल्ट 4)।</li>
+        <li><code>image/svg+xml</code> लौटाता है। सिर्फ़ <code>data</code> ज़रूरी है; बाकी सबका समझदार डिफ़ॉल्ट है। एरर JSON में <code>error</code> फ़ील्ड के साथ वापस आते हैं।</li>
+        <li>स्टैंडर्ड Streamable HTTP: <code>initialize</code>, फिर <code>tools/list</code> / <code>tools/call</code>। <code>generate_qr</code> टूल <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> लेता है और डाउनलोड के लिए तैयार SVG URL लौटाता है।</li>
+      </ul>
+
+      <h2>MCP</h2>
+      <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/mcp</div>
+      <p><code>/llms.txt</code> क्रॉलर और असिस्टेंट के लिए पूरी साइट का वर्णन करता है — एंडपॉइंट, पेलोड फॉर्मेट और पेज मैप, एक ही फ़ाइल में।</p>
+      <pre class="code">{
+  "jsonrpc": "2.0", "id": 1, "method": "tools/call",
+  "params": {
+    "name": "generate_qr",
+    "arguments": { "data": "https://example.com", "size": 1024 }
+  }
+}</pre>
+
+      <h2>पेलोड रेसिपी</h2>
+      <pre class="code">Website : https://example.com/menu
+WiFi    : WIFI:T:WPA;S:CafeNet;P:s3cret;;
+Contact : BEGIN:VCARD\nVERSION:3.0\nN:Ada Lovelace\nTEL:+15550100\nEND:VCARD
+Place   : geo:37.7749,-122.4194
+SMS     : sms:+15550100?body=Hello</pre>
+
+      <h2>उचित उपयोग</h2>
+      <p>यह मुफ़्त है, लेकिन दयालु बनें: एक ही कोड को बार-बार मांगने के बजाय रिज़ल्ट कैश करें, और ऑटोमेटेड ट्रैफ़िक को उचित रखें। प्रति-IP रेट लिमिट लागू होती है। स्टैटिक कोड डिटरमिनिस्टिक हैं — एक ही इनपुट हमेशा एक ही आउटपुट देता है, इसलिए कैशिंग आसान है।</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — चुपचाप, आपके ब्राउज़र में बना। और आपके एजेंट के भी।</div>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

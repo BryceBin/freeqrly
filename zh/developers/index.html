@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开发者 — FreeQrly API 与 MCP</title>
+<meta name="description" content="FreeQrly 给智能体：免费二维码 API 和 MCP 服务器。用程序生成静态二维码——不用密钥，不用注册。">
+<link rel="canonical" href="https://freeqrly.com/zh/developers/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/developers/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/developers/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/developers/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/developers/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/developers/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/developers/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/developers/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/developers/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/developers/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/developers/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/developers/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="开发者 — FreeQrly API 与 MCP">
+<meta property="og:description" content="给智能体的免费二维码 API 和 MCP 服务器。不用密钥，不用注册。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/developers/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="../assets/css/main.css?v=qly2-20261014">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly API 与 MCP","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/developers/","description":"给智能体的免费二维码 API 和 MCP 服务器。不用密钥，不用注册。"}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/#studio">首页</a><a href="/blog/do-qr-codes-expire/">实战笔记</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <section class="hero" style="grid-template-columns:1fr;gap:0">
+    <div>
+      <div class="kicker">给智能体</div>
+      <h1>二维码，<span class="hl hl-mint">不用</span>浏览器。</h1>
+      <p class="lede">FreeQrly 讲 HTTP 和 MCP。从任何智能体、脚本或工作流生成静态二维码——不用密钥，不用注册，不过期。能发请求，就能做二维码。</p>
+    </div>
+  </section>
+
+  <div class="article" style="padding-top:0">
+    <h2>接入方式</h2>
+    <div class="devgrid">
+      <div class="devcard">
+        <h3>🧰 MCP 服务器</h3>
+        <p>把 <code>https://freeqrly.com/mcp</code> 加到你的 MCP 客户端。一个工具——<code>generate_qr</code>——无需认证。支持 Claude Code、Cursor 和任何讲 Streamable HTTP 的工具。</p>
+      </div>
+      <div class="devcard">
+        <h3>🌐 HTTP API</h3>
+        <p>一个返回 SVG 的普通 GET 接口。CORS 完全开放，浏览器、curl 和无服务器函数都能直接调用。</p>
+      </div>
+      <div class="devcard">
+        <h3>📜 智能体技能</h3>
+        <p>一个带载荷配方的 <code>SKILL.md</code> 放在仓库的 <code>skills/qr-generator/</code>。把你的智能体指向它，剩下的它都知道。</p>
+      </div>
+      <div class="devcard">
+        <h3>🤖 llms.txt</h3>
+        <p><code>/llms.txt</code> 给爬虫和助手描述整个网站——接口、载荷格式和页面地图，都在一个文件里。</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>HTTP API</h2>
+      <div class="endpoint"><span class="m">GET</span> https://freeqrly.com/api/qr?data=TEXT&amp;size=1024&amp;margin=4&amp;color=2F4A62&amp;bgcolor=ffffff&amp;ecc=M</div>
+      <p>返回 <code>image/svg+xml</code>。只有 <code>data</code> 是必填的；其他都有合理的默认值。错误以 JSON 返回，带一个 <code>error</code> 字段。</p>
+      <pre class="code">curl "https://freeqrly.com/api/qr?data=https://example.com&amp;size=1024" \
+  -o qr.svg
+
+# WiFi QR code for guests
+curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
+  -o wifi.svg</pre>
+
+      <h2>参数</h2>
+      <ul>
+        <li><strong>data</strong> —— 要编码的文本（必填，最多 2000 个字符）。链接、WiFi 字符串、vCard、纯文本。</li>
+        <li><strong>size</strong> —— 输出尺寸，单位 px，128–2048（默认 1024）。</li>
+        <li><strong>margin</strong> —— 静区，单位模块，0–10（默认 4）。</li>
+        <li><strong>color / bgcolor</strong> —— 6 位十六进制，没有 <code>#</code>（默认 <code>2F4A62</code> / <code>ffffff</code>）。</li>
+        <li><strong>ecc</strong> —— 纠错等级 <code>L</code>、<code>M</code>、<code>Q</code>、<code>H</code>（默认 <code>M</code>）。打印或加 Logo 时用 <code>Q</code>/<code>H</code>。</li>
+      </ul>
+
+      <h2>MCP</h2>
+      <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/mcp</div>
+      <p>标准 Streamable HTTP：<code>initialize</code>，然后 <code>tools/list</code> / <code>tools/call</code>。<code>generate_qr</code> 工具接受 <code>data</code>、<code>size</code>、<code>color</code>、<code>bgcolor</code>、<code>ecc</code>，返回一个可直接下载的 SVG 链接。</p>
+      <pre class="code">{
+  "jsonrpc": "2.0", "id": 1, "method": "tools/call",
+  "params": {
+    "name": "generate_qr",
+    "arguments": { "data": "https://example.com", "size": 1024 }
+  }
+}</pre>
+
+      <h2>载荷配方</h2>
+      <pre class="code">Website : https://example.com/menu
+WiFi    : WIFI:T:WPA;S:CafeNet;P:s3cret;;
+Contact : BEGIN:VCARD\nVERSION:3.0\nN:Ada Lovelace\nTEL:+15550100\nEND:VCARD
+Place   : geo:37.7749,-122.4194
+SMS     : sms:+15550100?body=Hello</pre>
+
+      <h2>合理使用</h2>
+      <p>免费，但请善待它：缓存结果，不要重复请求同一个码；自动化流量保持合理。每个 IP 有速率限制。静态码是确定性的——同样的输入永远得到同样的输出，所以缓存很简单。</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> —— 在你的浏览器里生成。也在你的智能体的浏览器里。</div>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

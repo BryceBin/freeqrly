@@ -53,7 +53,6 @@
   "Square": "Eckig",
   "Try it yourself — free": "Probier's selbst aus — kostenlos",
   "Your code appears instantly in the link tab.": "Dein Code erscheint sofort im Link-Tab.",
-  "article": "article",
   "✉️": "✉️"
  },
  "404": {
@@ -65,8 +64,7 @@
   "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">Back to the studio →</a>": "<a class=\"btn\" href=\"/\" style=\"text-decoration:none\">Zurück zum Studio →</a>",
   "<a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a><a href=\"/about/\">About</a>": "<a href=\"/scan/\">QR-Scanner</a><a href=\"/blog/\">Feldnotizen</a><a href=\"/about/\">Über uns</a>",
   "<a href=\"/\">Free QR code generator</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a>": "<a href=\"/\">Kostenloser QR-Code-Generator</a><a href=\"/scan/\">QR-Scanner</a><a href=\"/blog/\">Feldnotizen</a>"
- }
-,
+ },
  "login": {
   "Sign in — FreeQrly": "Anmelden — FreeQrly",
   "Sign in to FreeQrly to manage your dynamic QR codes.": "Bei FreeQrly anmelden, um deine dynamischen QR-Codes zu verwalten.",
@@ -149,8 +147,7 @@
   "Sending…": "Wird gesendet…",
   "Please complete the human check and try again.": "Bitte bestätige, dass du kein Roboter bist, und versuch es nochmal.",
   "Send reset link": "Link zum Zurücksetzen senden"
- }
-,
+ },
  "privacy": {
   "Privacy Policy — FreeQrly": "Datenschutzerklärung — FreeQrly",
   "FreeQrly Privacy Policy: what we collect, why, how long we keep it, and your rights.": "FreeQrly-Datenschutzerklärung: Was wir erheben, warum, wie lange wir es aufbewahren und welche Rechte du hast.",
@@ -201,8 +198,7 @@
   "The service is provided \"as is\", without warranties of any kind. To the fullest extent permitted by law, we are not liable for any damages arising from your use of the service.": "Der Dienst wird „wie besehen“ bereitgestellt, ohne Garantien jeglicher Art. Im größtmöglichen gesetzlich zulässigen Umfang haften wir nicht für Schäden, die aus deiner Nutzung des Dienstes entstehen.",
   "We may update these terms as the service evolves. Updated terms will be posted here with a new date. Continued use after changes means you accept the updated terms.": "Wir können diese Bedingungen aktualisieren, während sich der Dienst weiterentwickelt. Aktualisierte Bedingungen werden hier mit einem neuen Datum veröffentlicht. Die fortgesetzte Nutzung nach Änderungen bedeutet, dass du die aktualisierten Bedingungen akzeptierst.",
   "<a href=\"/\">Generator</a> · <a href=\"/privacy/\">Privacy</a>": "<a href=\"/\">Generator</a> · <a href=\"/privacy/\">Datenschutz</a>"
- }
-,
+ },
  "about": {
   "About FreeQrly — Free QR Codes, Static Codes Need No Sign-Up": "Über FreeQrly — Kostenlose QR-Codes, statische Codes ohne Anmeldung",
   "FreeQrly is a free QR code generator. Static codes run 100% in your browser, no sign-up, no tracking, no expiry. Learn what it is and how it works.": "FreeQrly ist ein kostenloser QR-Code-Generator. Statische Codes laufen zu 100 % in deinem Browser, ohne Anmeldung, ohne Tracking, ohne Ablauf. Erfahre, was es ist und wie es funktioniert.",
@@ -222,7 +218,7 @@
   "Is FreeQrly really free?": "Ist FreeQrly wirklich kostenlos?",
   "Yes — every feature is free, with no watermarks. Static codes need no sign-up and cost nothing to serve once generated in your browser, so there's nothing to charge for.": "Ja — jedes Feature ist kostenlos, ohne Wasserzeichen. Statische Codes brauchen keine Anmeldung und kosten nach dem Erzeugen in deinem Browser nichts, also gibt es nichts abzurechnen.",
   "Do the QR codes expire?": "Laufen die QR-Codes ab?",
-  "No. FreeQrly generates static codes only; the destination lives inside the pattern itself. Details: <a href=\"/blog/do-qr-codes-expire/\">do QR codes expire?</a>": "Nein. FreeQrly erzeugt nur statische Codes; das Ziel steckt im Muster selbst. Details: <a href=\"/blog/do-qr-codes-expire/\">Laufen QR-Codes ab?</a>",
+  "No. Static codes never expire — the destination lives inside the pattern itself. Details: <a href=\"/blog/do-qr-codes-expire/\">do QR codes expire?</a>": "Nein. Statische Codes laufen nie ab — das Ziel steckt im Muster selbst. Details: <a href=\"/blog/do-qr-codes-expire/\">Laufen QR-Codes ab?</a>",
   "Can I use it for my business?": "Kann ich es für mein Geschäft nutzen?",
   "Yes — commercial use is free. Restaurants use it for <a href=\"/blog/qr-codes-for-restaurants/\">menus and reviews</a>, shops for <a href=\"/google-review-qr-code/\">review codes</a> and <a href=\"/wifi-qr-code/\">WiFi codes</a>.": "Ja — kommerzielle Nutzung ist kostenlos. Restaurants nutzen es für <a href=\"/blog/qr-codes-for-restaurants/\">Menüs und Bewertungen</a>, Läden für <a href=\"/google-review-qr-code/\">Bewertungs-Codes</a> und <a href=\"/wifi-qr-code/\">WLAN-Codes</a>.",
   "Who is behind FreeQrly?": "Wer steckt hinter FreeQrly?",
@@ -278,8 +274,7 @@
  },
  "scan.js": {
   "Camera unavailable: ": "Kamera nicht verfügbar: "
- }
-,
+ },
  "developers": {
   "Developers — FreeQrly API & MCP": "Entwickler — FreeQrly-API & MCP",
   "FreeQrly for agents: a free QR code API and MCP server. Generate static QR codes programmatically — no key, no sign-up.": "FreeQrly für Agents: eine kostenlose QR-Code-API und ein MCP-Server. Statische QR-Codes programmatisch erzeugen — ohne Key, ohne Anmeldung.",
@@ -290,31 +285,31 @@
   "FreeQrly speaks HTTP and MCP. Generate static QR codes from any agent, script, or workflow — no key, no sign-up, no expiry. If you can make a request, you can make a code.": "FreeQrly spricht HTTP und MCP. Statische QR-Codes aus jedem Agent, Skript oder Workflow erzeugen — ohne Key, ohne Anmeldung, ohne Ablauf. Wer eine Anfrage stellen kann, kann einen Code machen.",
   "Ways to connect": "Verbindungsmöglichkeiten",
   "🧰 MCP server": "🧰 MCP-Server",
-  "Add to your MCP client. One tool — — no auth. Works with Claude Code, Cursor, and anything speaking Streamable HTTP.": "Zu deinem MCP-Client hinzufügen. Ein Tool — — ohne Auth. Funktioniert mit Claude Code, Cursor und allem, was Streamable HTTP spricht.",
   "🌐 HTTP API": "🌐 HTTP-API",
   "A plain GET endpoint returning SVG. CORS is wide open, so browsers, curl, and serverless functions can all call it directly.": "Ein simpler GET-Endpunkt, der SVG liefert. CORS ist weit offen, sodass Browser, curl und Serverless-Funktionen ihn direkt aufrufen können.",
   "📜 Agent skill": "📜 Agent-Skill",
-  "A with payload recipes lives in the repo at . Point your agent at it and it knows the rest.": "Eine mit Payload-Rezepten liegt im Repo unter . Zeig deinen Agent darauf und er kennt den Rest.",
   "🤖 llms.txt": "🤖 llms.txt",
-  "describes the whole site for crawlers and assistants — endpoints, payload formats, and page map in one file.": "beschreibt die ganze Seite für Crawler und Assistenten — Endpunkte, Payload-Formate und Seitenübersicht in einer Datei.",
   "HTTP API": "HTTP-API",
   "<span class=\"m\">GET</span> https://freeqrly.com/api/qr?data=TEXT&size=1024&margin=4&color=2F4A62&bgcolor=ffffff&ecc=M": "<span class=\"m\">GET</span> https://freeqrly.com/api/qr?data=TEXT&size=1024&margin=4&color=2F4A62&bgcolor=ffffff&ecc=M",
-  "Returns . Only is required; everything else has a sane default. Errors come back as JSON with an field.": "Liefert . Nur ist erforderlich; alles andere hat einen sinnvollen Standardwert. Fehler kommen als JSON mit einem -Feld zurück.",
   "Parameters": "Parameter",
   "<strong>data</strong> — text to encode (required, max 2000 chars). URLs, WiFi strings, vCards, plain text.": "<strong>data</strong> — zu kodierender Text (erforderlich, max. 2000 Zeichen). URLs, WLAN-Strings, vCards, Klartext.",
   "<strong>size</strong> — output size in px, 128–2048 (default 1024).": "<strong>size</strong> — Ausgabegröße in px, 128–2048 (Standard 1024).",
   "<strong>margin</strong> — quiet zone in modules, 0–10 (default 4).": "<strong>margin</strong> — Ruhezone in Modulen, 0–10 (Standard 4).",
-  "<strong>color / bgcolor</strong> — 6-digit hex, no (defaults / ).": "<strong>color / bgcolor</strong> — 6-stelliges Hex, kein (Standards / ).",
-  "<strong>ecc</strong> — error correction , , , (default ). Use / for print or logos.": "<strong>ecc</strong> — Fehlerkorrektur , , , (Standard ). Für Druck oder Logos / nutzen.",
   "MCP": "MCP",
   "<span class=\"m\">POST</span> https://freeqrly.com/mcp": "<span class=\"m\">POST</span> https://freeqrly.com/mcp",
-  "Standard Streamable HTTP: , then / . The tool takes , , , , and returns a ready-to-download SVG URL.": "Standard-Streamable-HTTP: , dann / . Das Tool nimmt , , , , und liefert eine direkt herunterladbare SVG-URL.",
   "Payload recipes": "Payload-Rezepte",
   "Fair use": "Faire Nutzung",
   "It's free, but be kind: cache results instead of re-requesting the same code, and keep automated traffic reasonable. Per-IP rate limits apply. Static codes are deterministic — the same input always yields the same output, so caching is trivial.": "Es ist kostenlos, aber sei nett: Cache Ergebnisse, statt denselben Code neu anzufordern, und halt automatisierten Traffic in vernünftigem Rahmen. Pro-IP-Ratenbegrenzungen gelten. Statische Codes sind deterministisch — derselbe Input ergibt immer denselben Output, also ist Caching trivial.",
-  "<a href=\"/\">FreeQrly</a> — made quietly, in your browser. And your agent's.": "<a href=\"/\">FreeQrly</a> — leise gemacht, in deinem Browser. Und in dem deines Agents.",
   "FreeQrly API & MCP": "FreeQrly-API & MCP",
-  "Free QR code API and MCP server for agents. No key, no sign-up.": "Kostenlose QR-Code-API und MCP-Server für Agents. Ohne Key, ohne Anmeldung."
+  "Free QR code API and MCP server for agents. No key, no sign-up.": "Kostenlose QR-Code-API und MCP-Server für Agents. Ohne Key, ohne Anmeldung.",
+  "Add <code>https://freeqrly.com/mcp</code> to your MCP client. One tool — <code>generate_qr</code> — no auth. Works with Claude Code, Cursor, and anything speaking Streamable HTTP.": "Füge <code>https://freeqrly.com/mcp</code> zu deinem MCP-Client hinzu. Ein Tool — <code>generate_qr</code> — ohne Auth. Funktioniert mit Claude Code, Cursor und allem, was Streamable HTTP spricht.",
+  "A <code>SKILL.md</code> with payload recipes lives in the repo at <code>skills/qr-generator/</code>. Point your agent at it and it knows the rest.": "Eine <code>SKILL.md</code> mit Payload-Rezepten liegt im Repo unter <code>skills/qr-generator/</code>. Zeig deinen Agent darauf und er kennt den Rest.",
+  "<code>/llms.txt</code> describes the whole site for crawlers and assistants — endpoints, payload formats, and page map in one file.": "<code>/llms.txt</code> beschreibt die ganze Seite für Crawler und Assistenten — Endpunkte, Payload-Formate und Seitenübersicht in einer Datei.",
+  "Returns <code>image/svg+xml</code>. Only <code>data</code> is required; everything else has a sane default. Errors come back as JSON with an <code>error</code> field.": "Liefert <code>image/svg+xml</code>. Nur <code>data</code> ist erforderlich; alles andere hat einen sinnvollen Standardwert. Fehler kommen als JSON mit einem <code>error</code>-Feld zurück.",
+  "<strong>color / bgcolor</strong> — 6-digit hex, no <code>#</code> (defaults <code>2F4A62</code> / <code>ffffff</code>).": "<strong>color / bgcolor</strong> — 6-stelliges Hex, kein <code>#</code> (Standards <code>2F4A62</code> / <code>ffffff</code>).",
+  "<strong>ecc</strong> — error correction <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (default <code>M</code>). Use <code>Q</code>/<code>H</code> for print or logos.": "<strong>ecc</strong> — Fehlerkorrektur <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (Standard <code>M</code>). Für Druck oder Logos <code>Q</code>/<code>H</code> nutzen.",
+  "Standard Streamable HTTP: <code>initialize</code>, then <code>tools/list</code> / <code>tools/call</code>. The <code>generate_qr</code> tool takes <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> and returns a ready-to-download SVG URL.": "Standard-Streamable-HTTP: <code>initialize</code>, dann <code>tools/list</code> / <code>tools/call</code>. Das <code>generate_qr</code>-Tool nimmt <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> und liefert eine direkt herunterladbare SVG-URL.",
+  "<a href=\"/\" style=\"color:inherit\">FreeQrly</a> — made quietly, in your browser. And your agent's.": "<a href=\"/\" style=\"color:inherit\">FreeQrly</a> — leise gemacht, in deinem Browser. Und in dem deines Agents."
  },
  "blog-index": {
   "Field Notes — QR Code Guides & Tips | FreeQrly": "Feldnotizen — QR-Code-Anleitungen & Tipps | FreeQrly",
@@ -347,8 +342,7 @@
   "One is free forever, the other rents you your own code. Which one you actually need.": "Einer ist für immer kostenlos, der andere vermietet dir deinen eigenen Code. Welchen du wirklich brauchst.",
   "Field Notes — QR Code Guides & Tips": "Feldnotizen — QR-Code-Anleitungen & Tipps",
   "Practical QR code guides from FreeQrly.": "Praktische QR-Code-Anleitungen von FreeQrly."
- }
-,
+ },
  "landing-wifi-qr-code": {
   "Free WiFi QR Code Generator | FreeQrly": "Kostenloser WLAN-QR-Code-Generator | FreeQrly",
   "Create a free WiFi QR code so guests join your network with one scan. No app needed, no sign-up for static codes. For a static code, your password never leaves your browser.": "Erstell einen kostenlosen WLAN-QR-Code, damit Gäste mit einem Scan in deinem Netzwerk sind. Keine App nötig, keine Anmeldung für statische Codes. Bei einem statischen Code verlässt dein Passwort nie deinen Browser.",
@@ -408,8 +402,7 @@
   "Every link becomes its own QR code, previewed in a grid.": "Jeder Link wird zu seinem eigenen QR-Code, in einem Raster vorgeschaut.",
   "Download the ZIP": "ZIP herunterladen",
   "One click packs them all as print-ready PNGs, named qr-1, qr-2, and so on.": "Ein Klick packt alle als druckfertige PNGs, benannt qr-1, qr-2 usw."
- }
-,
+ },
  "landing-business-card-qr-code": {
   "Free Business Card QR Code Generator | FreeQrly": "Kostenloser Visitenkarten-QR-Code-Generator | FreeQrly",
   "Put a scannable vCard QR code on your business card. Free, no sign-up for static codes — one scan saves your contact straight to their phone.": "Setz einen scanbaren vCard-QR-Code auf deine Visitenkarte. Kostenlos, ohne Anmeldung für statische Codes — ein Scan speichert deinen Kontakt direkt auf ihrem Handy.",
@@ -467,8 +460,7 @@
   "Drop the link into the Website field — your code appears instantly in the preview.": "Link ins Website-Feld werfen — dein Code erscheint sofort in der Vorschau.",
   "Download and print": "Herunterladen und drucken",
   "Grab a high-resolution PNG or SVG. It scans straight to your form, forever.": "Hochauflösendes PNG oder SVG schnappen. Es scannt direkt zu deinem Formular, für immer."
- }
-,
+ },
  "landing-google-review-qr-code": {
   "Free Google Review QR Code Generator | FreeQrly": "Kostenloser Google-Bewertungs-QR-Code-Generator | FreeQrly",
   "Turn your Google review link into a printable QR code. Free, no sign-up for static codes. Put it on the counter and watch the reviews come in.": "Mach aus deinem Google-Bewertungslink einen druckfertigen QR-Code. Kostenlos, ohne Anmeldung für statische Codes. Auf die Theke damit und schau zu, wie die Bewertungen eintrudeln.",
@@ -524,8 +516,7 @@
   "From your profile: instagram.com/yourname — or any post or Reel URL.": "Aus deinem Profil: instagram.com/deinname — oder jede Beitrags- oder Reel-URL.",
   "Print it where people look": "Drucken, wo Leute hinschauen",
   "Packaging inserts, counter cards, flyers. Export 1024 px for print.": "Verpackungsbeilagen, Thekenkarten, Flyer. 1024-px-Export für den Druck."
- }
-,
+ },
  "landing-qr-code-with-logo": {
   "QR Code Generator with Logo — Free | FreeQrly": "QR-Code-Generator mit Logo — Kostenlos | FreeQrly",
   "Add your logo to the center of any QR code. Free, no sign-up for static codes, no watermark. Error correction adjusts automatically so it always scans.": "Füg dein Logo in die Mitte eines jeden QR-Codes ein. Kostenlos, ohne Anmeldung für statische Codes, ohne Wasserzeichen. Die Fehlerkorrektur passt sich automatisch an, damit er immer scannt.",
@@ -582,8 +573,7 @@
   "Your MLS page, Zillow/Redfin link, or virtual tour — any URL works.": "Deine MLS-Seite, Zillow-/Redfin-Link oder virtueller Rundgang — jede URL funktioniert.",
   "Print for signs & flyers": "Für Schilder & Flyer drucken",
   "SVG for the sign printer, PNG for flyers. Yard signs need 10+ cm — see the 1:10 rule of thumb.": "SVG für den Schilderdrucker, PNG für Flyer. Gartenschilder brauchen 10+ cm — siehe die 1:10-Faustregel."
- }
-,
+ },
  "landing-vcard-qr-code": {
   "Free vCard QR Code Generator — Contact QR Codes | FreeQrly": "Kostenloser vCard-QR-Code-Generator — Kontakt-QR-Codes | FreeQrly",
   "Turn your contact details into a scannable vCard QR code. Free, no sign-up for static codes. One scan saves you straight to their phone.": "Mach aus deinen Kontaktdaten einen scanbaren vCard-QR-Code. Kostenlos, ohne Anmeldung für statische Codes. Ein Scan speichert dich direkt auf ihrem Handy.",
@@ -642,8 +632,7 @@
   "Your wedding colors, your logo or monogram in the center.": "Deine Hochzeitsfarben, dein Logo oder Monogramm in der Mitte.",
   "Print for invites & tables": "Für Einladungen & Tische drucken",
   "SVG for the stationer, PNG for table cards. They never expire.": "SVG für die Druckerei, PNG für Tischkarten. Sie laufen nie ab."
- }
-,
+ },
  "blog-do-qr-codes-expire": {
   "Do QR Codes Expire? The Short Answer Is No — FreeQrly": "Laufen QR-Codes ab? Die kurze Antwort: Nein — FreeQrly",
   "Do QR codes expire? Static QR codes never expire — the pattern holds your link forever. Learn what actually stops working (and why paid codes die).": "Laufen QR-Codes ab? Statische QR-Codes laufen nie ab — das Muster hält deinen Link für immer. Erfahre, was wirklich aufhört zu funktionieren (und warum bezahlte Codes sterben).",
@@ -656,7 +645,6 @@
   "<strong>Links rot; codes don't.</strong> If the page behind the code is deleted, scanning leads nowhere. That's the destination dying, not the code. A QR code pointing at a dead link is a perfectly healthy code with nothing to say.": "<strong>Links verrotten; Codes nicht.</strong> Wenn die Seite hinter dem Code gelöscht wird, führt das Scannen ins Nichts. Das ist das Ziel, das stirbt, nicht der Code. Ein QR-Code, der auf einen toten Link zeigt, ist ein kerngesunder Code ohne etwas zu sagen.",
   "<strong>Trial accounts get deactivated.</strong> Some services tie your codes to an account, then nudge you toward a subscription. The code didn't expire — the account did.": "<strong>Testkonten werden deaktiviert.</strong> Manche Dienste binden deine Codes an ein Konto und schubsen dich dann Richtung Abo. Der Code ist nicht abgelaufen — das Konto schon.",
   "Static vs. dynamic, in one paragraph": "Statisch vs. dynamisch, in einem Absatz",
-  "A <strong>static</strong> code encodes the destination directly: or . Nothing to maintain, nothing to bill. A <strong>dynamic</strong> code encodes a redirect on someone's server, which lets the owner change the destination later and count scans. Useful for marketing campaigns — and a subscription forever.": "Ein <strong>statischer</strong> Code kodiert das Ziel direkt: oder . Nichts zu pflegen, nichts abzurechnen. Ein <strong>dynamischer</strong> Code kodiert eine Weiterleitung auf jemandes Server, die es dem Besitzer erlaubt, das Ziel später zu ändern und Scans zu zählen. Nützlich für Marketingkampagnen — und ein Abo für immer.",
   "Rule of thumb: if the destination will never change — your WiFi, your business card, your restaurant menu — static is not the cheap option. It's the <em>correct</em> option.": "Faustregel: Wenn sich das Ziel nie ändern wird — dein WLAN, deine Visitenkarte, dein Restaurantmenü — ist statisch nicht die billige Option. Es ist die <em>richtige</em> Option.",
   "What actually goes wrong with printed codes": "Was bei gedruckten Codes wirklich schiefgeht",
   "Since expiry isn't a thing, here's what to actually watch for:": "Da Ablauf kein Thema ist, hier worauf du wirklich achten solltest:",
@@ -673,7 +661,8 @@
   "<span>How long do static QR codes last?</span>": "<span>Wie lange halten statische QR-Codes?</span>",
   "Indefinitely. The pattern encodes your data directly with no server involved, so there's nothing to maintain or renew.": "Unbegrenzt. Das Muster kodiert deine Daten direkt, ohne Server dazwischen, also gibt es nichts zu pflegen oder zu erneuern.",
   "Can a QR code stop working?": "Kann ein QR-Code aufhören zu funktionieren?",
-  "How long do static QR codes last?": "Wie lange halten statische QR-Codes?"
+  "How long do static QR codes last?": "Wie lange halten statische QR-Codes?",
+  "A <strong>static</strong> code encodes the destination directly: <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> or <code>https://your-site.com/menu</code>. Nothing to maintain, nothing to bill. A <strong>dynamic</strong> code encodes a redirect on someone's server, which lets the owner change the destination later and count scans. Useful for marketing campaigns — and a subscription forever.": "Ein <strong>statischer</strong> Code kodiert das Ziel direkt: <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> oder <code>https://your-site.com/menu</code>. Nichts zu pflegen, nichts abzurechnen. Ein <strong>dynamischer</strong> Code kodiert eine Weiterleitung auf jemandes Server, die es dem Besitzer erlaubt, das Ziel später zu ändern und Scans zu zählen. Nützlich für Marketingkampagnen — und ein Abo für immer."
  },
  "blog-free-qr-codes-that-dont-expire": {
   "Free QR Codes That Never Expire | FreeQrly": "Kostenlose QR-Codes, die nie ablaufen | FreeQrly",
@@ -698,8 +687,7 @@
   "There isn't one for static codes: they're generated entirely in your browser, so there's no server cost to pass on to you.": "Für statische Codes gibt es keinen: Sie werden vollständig in deinem Browser erzeugt, also gibt es keine Serverkosten, die an dich weitergegeben werden.",
   "How can I tell if my QR code will expire?": "Woran erkenne ich, ob mein QR-Code ablaufen wird?",
   "What's the catch with FreeQrly?": "Was ist der Haken bei FreeQrly?"
- }
-,
+ },
  "blog-how-to-scan-a-qr-code": {
   "How to Scan a QR Code (iPhone & Android) | FreeQrly": "So scannst du einen QR-Code (iPhone & Android) | FreeQrly",
   "How to scan a QR code on iPhone and Android — no app needed. Use the built-in camera, Control Center, or Google Lens, and fix it when it won't scan.": "So scannst du einen QR-Code auf iPhone und Android — keine App nötig. Nutz die eingebaute Kamera, das Kontrollzentrum oder Google Lens, und repariere ihn, wenn er nicht scannt.",
@@ -769,8 +757,7 @@
   "What is the minimum size for a printed QR code?": "Was ist die Mindestgröße für einen gedruckten QR-Code?",
   "How big should a QR code be on a poster?": "Wie groß sollte ein QR-Code auf einem Poster sein?",
   "PNG or SVG for print?": "PNG oder SVG für den Druck?"
- }
-,
+ },
  "blog-qr-codes-for-events": {
   "QR Codes for Events: Check-In, Tickets & More | FreeQrly": "QR-Codes für Events: Check-in, Tickets & mehr | FreeQrly",
   "How to use QR codes for events: check-in, registration, tickets, photo sharing, and add-to-calendar codes. Free generator.": "So nutzt du QR-Codes für Events: Check-in, Registrierung, Tickets, Fototeilen und Zum-Kalender-Hinzufügen-Codes. Kostenloser Generator.",
@@ -824,8 +811,7 @@
   "What QR codes does a restaurant need?": "Welche QR-Codes braucht ein Restaurant?",
   "Should the menu QR link to a PDF or a webpage?": "Sollte der Menü-QR auf ein PDF oder eine Webseite verlinken?",
   "How do I get more Google reviews with a QR code?": "Wie bekomme ich mehr Google-Bewertungen mit einem QR-Code?"
- }
-,
+ },
  "blog-scan-qr-code-from-image": {
   "How to Scan a QR Code from a Picture | FreeQrly": "So scannst du einen QR-Code aus einem Bild | FreeQrly",
   "How to scan a QR code from a picture, photo, or screenshot — on iPhone, Android, and PC. Free online decoder, no app needed.": "So scannst du einen QR-Code aus einem Bild, Foto oder Screenshot — auf iPhone, Android und PC. Kostenloser Online-Decoder, keine App nötig.",
@@ -887,8 +873,7 @@
   "Point your camera at the code, or upload a photo or screenshot that contains one.": "Kamera auf den Code richten oder ein Foto oder einen Screenshot hochladen, der einen enthält.",
   "Get the result instantly": "Ergebnis sofort bekommen",
   "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "Der dekodierte Text oder Link erscheint sofort. Links bekommen einen Öffnen-Button; alles andere bekommt Kopieren."
- }
-,
+ },
  "blog-static-vs-dynamic-qr-codes": {
   "Static vs Dynamic QR Codes | FreeQrly": "Statische vs. dynamische QR-Codes | FreeQrly",
   "Static vs dynamic QR codes explained honestly: when you need an editable, trackable dynamic code — and when static is the smarter, free choice.": "Statische vs. dynamische QR-Codes ehrlich erklärt: Wann du einen änderbaren, trackbaren dynamischen Code brauchst — und wann statisch die klügere, kostenlose Wahl ist.",
@@ -952,4 +937,45 @@
   "How do I create a QR code for my wedding RSVP?": "Wie erstelle ich einen QR-Code für meine Hochzeits-RSVP?",
   "Should the RSVP QR code link to a form or a website?": "Sollte der RSVP-QR-Code auf ein Formular oder eine Website verlinken?",
   "Do wedding QR codes expire?": "Laufen Hochzeits-QR-Codes ab?"
+ },
+ "blog-why-is-my-qr-code-not-working": {
+  "QR Code Not Working? 7 Fixes That Help | FreeQrly": "QR-Code funktioniert nicht? 7 Fixes, die helfen | FreeQrly",
+  "QR code not scanning? Seven real fixes: size, contrast, damage, quiet zone, and the expired-link trap — plus how to test before you print.": "QR-Code scannt nicht? Sieben echte Fixes: Größe, Kontrast, Schaden, Ruhezone und die Abgelaufener-Link-Falle — plus wie du vor dem Druck testest.",
+  "A QR code that won't scan is almost never a mystery. Run through these seven checks — in order — and you'll find the culprit in about two minutes.": "Ein QR-Code, der nicht scannt, ist fast nie ein Rätsel. Geh diese sieben Checks durch — in der Reihenfolge — und du findest den Übeltäter in etwa zwei Minuten.",
+  "1. It's too small": "1. Zu klein",
+  "The classic. A code squeezed into the corner of a business card at 1 cm wide won't scan reliably. Minimum for print, as a rule of thumb: <b>2x2 cm</b> (about 0.8 inches), and bigger is always safer. There's a full breakdown in the <a href=\"/blog/qr-code-print-size-guide/\">print size guide</a>.": "Der Klassiker. Ein Code, der mit 1 cm Breite in die Ecke einer Visitenkarte gequetscht wurde, scannt nicht zuverlässig. Minimum für den Druck, als Faustregel: <b>2×2 cm</b>, und größer ist immer sicherer. Die vollständige Aufschlüsselung steht im <a href=\"/blog/qr-code-print-size-guide/\">Druckgrößen-Leitfaden</a>.",
+  "2. Low contrast killed it": "2. Niedriger Kontrast hat ihn gekillt",
+  "QR readers look for dark modules on a light background. Light gray on white, brand pastels, or a code over a busy photo will fail — especially in dim light. When in doubt: black on white always works.": "QR-Leser suchen dunkle Module auf hellem Hintergrund. Hellgrau auf Weiß, Marken-Pastell oder ein Code über einem unruhigen Foto werden versagen — besonders bei dunklem Licht. Im Zweifel: Schwarz auf Weiß funktioniert immer.",
+  "3. It's damaged or faded": "3. Er ist beschädigt oder verblasst",
+  "Creased flyers, sun-faded posters, scratched stickers. Error correction can survive some damage (that's why <a href=\"/qr-code-with-logo/\">adding a logo</a> works), but there's a limit. If a quarter of the code is gone, reprint.": "Geknickte Flyer, sonnenverblasste Poster, verkratzte Aufkleber. Fehlerkorrektur kann etwas Schaden überleben (deshalb funktioniert <a href=\"/qr-code-with-logo/\">das Hinzufügen eines Logos</a>), aber es gibt eine Grenze. Wenn ein Viertel des Codes weg ist, neu drucken.",
+  "4. No quiet zone": "4. Keine Ruhezone",
+  "The blank margin around the code isn't decoration — scanners need it to find the edges. Keep a clear border <a href=\"http://www.iso.org/standard/83389.html\">at least 4 modules wide</a> on all four sides, as specified in ISO/IEC 18004. Don't let text or design elements crowd it.": "Der leere Rand um den Code ist keine Deko — Scanner brauchen ihn, um die Kanten zu finden. Halt eine klare Umrandung <a href=\"http://www.iso.org/standard/83389.html\">mindestens 4 Module breit</a> auf allen vier Seiten, wie in ISO/IEC 18004 festgelegt. Lass Text oder Designelemente ihn nicht zupacken.",
+  "5. Glare, curve, or angle": "5. Blendung, Krümmung oder Winkel",
+  "Glossy lamination under bright light, a code wrapped around a bottle, or shot at a steep angle. Flatten it, kill the glare, shoot straight on.": "Glänzende Laminierung unter hellem Licht, ein Code um eine Flasche gewickelt oder aus steilem Winkel aufgenommen. Flach machen, Blendung killen, frontal aufnehmen.",
+  "6. The content is dead": "6. Der Inhalt ist tot",
+  "The code scans fine — but the link is broken, the page moved, or the \"free\" generator's trial expired and took your code with it. This is the expired-link trap: <a href=\"/blog/do-qr-codes-expire/\">do QR codes expire?</a> explains which ones do and how to avoid them.": "Der Code scannt gut — aber der Link ist kaputt, die Seite ist umgezogen, oder die Testphase des „kostenlosen“ Generators ist abgelaufen und hat deinen Code mitgenommen. Das ist die Abgelaufener-Link-Falle: <a href=\"/blog/do-qr-codes-expire/\">Laufen QR-Codes ab?</a> erklärt, welche es tun und wie du sie vermeidest.",
+  "7. Your camera": "7. Deine Kamera",
+  "Wipe the lens. Seriously — a smudged lens is behind an embarrassing number of \"broken\" codes. Then test on a second phone: if phone B reads it, the code was never the problem.": "Linse abwischen. Ernsthaft — eine verschmierte Linse steckt hinter einer peinlich hohen Zahl von „kaputten“ Codes. Dann auf einem zweiten Handy testen: Wenn Handy B ihn liest, war der Code nie das Problem.",
+  "Test before you print": "Vor dem Druck testen",
+  "Scan the code on two different phones (one iPhone, one Android if you can) before sending anything to print. Thirty seconds now saves a reprint later. Generate a test code in the <a href=\"/\">free generator</a> and try it.": "Den Code auf zwei verschiedenen Handys scannen (einem iPhone, einem Android, wenn du kannst), bevor du etwas in den Druck schickst. Dreißig Sekunden jetzt sparen später einen Neudruck. Erzeug einen Test-Code im <a href=\"/\">kostenlosen Generator</a> und probiere ihn aus.",
+  "<a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>QR Codes for Restaurants — Free Guide</b></a> <a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>Scan QR Codes Online — Free, No App, No Upload</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a>": "<a class=\"rel-card\" href=\"/blog/qr-codes-for-restaurants/\"><b>QR-Codes für Restaurants — Kostenlose Anleitung</b></a> <a class=\"rel-card\" href=\"/blog/scan-qr-code-online/\"><b>QR-Codes online scannen — kostenlos, ohne App, ohne Upload</b></a> <a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR-Codes für Events: Check-in, Tickets & mehr</b></a>",
+  "<span>Why does my QR code scan on one phone but not another?</span>": "<span>Warum scannt mein QR-Code auf einem Handy, aber nicht auf einem anderen?</span>",
+  "Then the code itself is fine — it's the camera, lighting, or angle on the failing phone. Wipe the lens and try in better light.": "Dann ist der Code selbst in Ordnung — es ist die Kamera, das Licht oder der Winkel auf dem versagenden Handy. Linse abwischen und bei besserem Licht versuchen.",
+  "<span>Can a damaged QR code still work?</span>": "<span>Kann ein beschädigter QR-Code noch funktionieren?</span>",
+  "Often yes, thanks to error correction — <a href=\"http://www.iso.org/standard/83389.html\">up to 30% damage can be tolerated at the High setting</a>, as defined in ISO/IEC 18004. But heavy damage, fading, or missing finder patterns will kill it.": "Oft ja, dank Fehlerkorrektur — <a href=\"http://www.iso.org/standard/83389.html\">bis zu 30 % Schaden können auf der High-Stufe toleriert werden</a>, wie in ISO/IEC 18004 definiert. Aber starker Schaden, Verblassen oder fehlende Finder-Patterns killen ihn.",
+  "<span>My QR code scans but the link doesn't work — is the code broken?</span>": "<span>Mein QR-Code scannt, aber der Link funktioniert nicht — ist der Code kaputt?</span>",
+  "No, the code is doing its job. The destination is the problem: the page moved, the site is down, or a trial-based generator deactivated it.": "Nein, der Code macht seinen Job. Das Ziel ist das Problem: Die Seite ist umgezogen, die Seite ist down, oder ein testphasenbasierter Generator hat ihn deaktiviert.",
+  "Why does my QR code scan on one phone but not another?": "Warum scannt mein QR-Code auf einem Handy, aber nicht auf einem anderen?",
+  "Can a damaged QR code still work?": "Kann ein beschädigter QR-Code noch funktionieren?",
+  "My QR code scans but the link doesn't work — is the code broken?": "Mein QR-Code scannt, aber der Link funktioniert nicht — ist der Code kaputt?",
+  "Check the size": "Größe prüfen",
+  "As a rule of thumb, printed codes need to be at least 2x2 cm. On screen, make it at least 2 cm wide on your display.": "Als Faustregel müssen gedruckte Codes mindestens 2×2 cm sein. Auf dem Bildschirm mach ihn mindestens 2 cm breit auf deinem Display.",
+  "Check the contrast": "Kontrast prüfen",
+  "Dark code on a light background. Fancy low-contrast color pairs are the #1 design killer.": "Dunkler Code auf hellem Hintergrund. Schicke kontrastarme Farbpaare sind der Design-Killer Nr. 1.",
+  "Test on a second phone": "Auf einem zweiten Handy testen",
+  "If one phone reads it and another doesn't, the code is fine — it's the camera or lighting.": "Wenn ein Handy ihn liest und ein anderes nicht, ist der Code in Ordnung — es ist die Kamera oder das Licht.",
+  "Re-export at higher resolution": "Mit höherer Auflösung neu exportieren",
+  "Blurry edges from a low-res export fail at print size. Export PNG at 1024 px or higher, or use SVG.": "Verschwommene Kanten aus einem Low-Res-Export versagen in Druckgröße. PNG mit 1024 px oder höher exportieren oder SVG nutzen.",
+  "Why won’t this thing <span class=\"hl hl-blush\">scan</span>?": "Warum will das Ding nicht <span class=\"hl hl-blush\">scannen</span>?"
  }
+}

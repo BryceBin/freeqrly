@@ -60,7 +60,7 @@ class P(HTMLParser):
             return
         if tag == "meta":
             ad = dict(attrs)
-            if ad.get("name") == "description" or (ad.get("property", "").startswith(("og:", "twitter:"))):
+            if ad.get("name") == "description" or ad.get("property") in ("og:title", "og:description", "twitter:title", "twitter:description"):
                 if ad.get("content"):
                     self.strings.append(ad["content"].strip())
             return

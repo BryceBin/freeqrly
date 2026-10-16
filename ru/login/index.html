@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru"><head>
+<meta charset="UTF-8"><link rel="alternate" hreflang="en" href="https://freeqrly.com/login/">
+<link rel="canonical" href="https://freeqrly.com/ru/login/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/login/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/login/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/login/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/login/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/login/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/login/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/login/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/login/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/login/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/login/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вход — FreeQrly</title>
+<meta name="description" content="Войдите в FreeQrly, чтобы управлять динамическими QR-кодами.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:#FBF6EC;color:#22303F;padding:0}
+.topbar{max-width:980px;margin:0 auto;padding:20px 20px 0;display:flex;justify-content:space-between;align-items:center}
+.wordmark{font-size:21px;font-weight:800;letter-spacing:-.02em;color:#22303F;text-decoration:none}
+.wordmark span{color:#D9A441}
+.topbar a.back{font-size:13px;font-weight:600;color:#2F4A62;text-decoration:none}
+.shell{max-width:980px;margin:28px auto 24px;display:flex;background:#fff;border:1px solid #E8DFC8;border-radius:24px;overflow:hidden;box-shadow:0 12px 32px rgba(190,145,60,.12)}
+.brand{flex:0 0 42%;background:#F7E8B8;padding:40px 36px;display:flex;flex-direction:column;justify-content:center}
+.brand img.mascot{width:190px;height:auto;display:block;margin-bottom:20px}
+.brand h1{font-size:28px;line-height:1.25;margin-bottom:12px}
+.brand p.lede{font-size:14px;color:#6b5d43;line-height:1.6;margin-bottom:22px}
+.brand ul{list-style:none}
+.brand li{font-size:14px;font-weight:600;margin-bottom:12px;padding-left:24px;position:relative}
+.brand li::before{content:"✓";position:absolute;left:0;color:#2F6B4F;font-weight:800}
+.brand .small{margin-top:26px;font-size:12px;color:#8a7a5f;line-height:1.6}
+.formside{flex:1;padding:36px 32px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input{width:100%;padding:12px 14px;border:1.5px solid #E8DFC8;border-radius:10px;font-size:15px;background:#FBF6EC;outline:none}
+.field input:focus{border-color:#2F4A62;background:#fff}
+.btn{width:100%;border:0;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;background:#2F4A62;color:#fff}
+.btn:disabled{opacity:.6}
+.btnGhost{width:100%;border:1.5px solid #E8DFC8;border-radius:12px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;background:#fff;color:#22303F}
+.divider{display:flex;align-items:center;gap:12px;margin:22px 0;font-size:12px;color:#8a7a5f;text-transform:uppercase;letter-spacing:.08em}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:#E8DFC8}
+.oauth{width:100%;border:1.5px solid #E8DFC8;border-radius:12px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;background:#fff;color:#22303F;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:inherit}
+.oauth:hover{border-color:#2F4A62}
+.oauth:disabled{opacity:.5;cursor:not-allowed}
+.oauth .mark{font-size:16px}
+.oauth .mark svg{display:block;width:18px;height:18px}
+.merror{color:#b45309;font-size:13px;margin-top:10px;text-align:center}
+.mok{color:#2F6B4F;font-size:13px;margin-top:10px;text-align:center}
+.note{font-size:12px;color:#8a7a5f;line-height:1.6;margin-top:14px;text-align:center}
+.legal{font-size:12px;color:#a89a7e;text-align:center;margin:16px 0 0;line-height:1.6}
+.legal a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.segToggle{display:flex;background:#FBF6EC;border:1.5px solid #E8DFC8;border-radius:12px;padding:4px;margin-bottom:18px}
+.segToggle button{flex:1;border:0;border-radius:9px;padding:10px;font-size:14px;font-weight:700;cursor:pointer;background:transparent;color:#8a7a5f;font-family:inherit}
+.segToggle button.on{background:#2F4A62;color:#fff}
+.rowBetween{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.rowBetween a{font-size:13px;color:#2F4A62;text-decoration:none;font-weight:600}
+.inboxIcon{font-size:36px;text-align:center;margin-bottom:12px}
+.inboxState h2{font-size:20px;text-align:center;margin-bottom:8px}
+.inboxState p{font-size:14px;color:#8a7a5f;line-height:1.6;text-align:center}
+.linkbtn{background:none;border:0;color:#2F4A62;font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-family:inherit}
+@media(max-width:760px){
+  .shell{flex-direction:column;margin:16px 12px 20px}
+  .brand{flex:none;padding:28px 24px;text-align:center}
+  .brand img.mascot{width:120px;margin:0 auto 12px}
+  .brand h1{font-size:24px}
+  .brand ul{text-align:left;max-width:340px;margin:0 auto}
+  .brand .small{margin-top:18px}
+  .formside{padding:28px 20px}
+  .topbar{padding:16px 16px 0}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="wordmark" href="/">Free<span>Qrly</span></a>
+  <a class="back" href="/">&larr; Back to generator</a>
+</div>
+<div class="shell">
+  <div class="brand">
+    <img class="mascot" src="/assets/img/mascots/qly-url.webp" alt="Qly держит QR-код">
+    <h1>Your codes,<br>all in one place.</h1>
+    <p class="lede">Sign in to manage the dynamic codes on your account &mdash; edit them any time, even after they&rsquo;re printed.</p>
+    <ul>
+      <li>Все динамические коды в одном списке</li>
+      <li>Edit a code even after it&rsquo;s printed</li>
+      <li>Сканы по дням, городам и устройствам</li>
+    </ul>
+    <p class="small">Статические коды никогда не требуют аккаунта. Вход нужен только для динамических кодов.</p>
+  </div>
+  <div class="formside">
+  <p class="merror" id="loginErr" hidden></p>
+
+  <!-- Password form (primary) -->
+  <div id="pwSection">
+    <div class="segToggle" role="tablist" aria-label="Sign in or create account">
+      <button type="button" id="tabLogin" class="on" role="tab" aria-selected="true">Войти</button>
+      <button type="button" id="tabRegister" role="tab" aria-selected="false">Создать аккаунт</button>
+    </div>
+    <form id="pwForm">
+      <div class="field"><label for="pwEmail">Почта</label>
+        <input id="pwEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div class="field"><label for="pwPass">Пароль</label>
+        <input id="pwPass" type="password" placeholder="Ваш пароль" autocomplete="current-password" required>
+      </div>
+      <button class="btn" id="pwBtn" type="submit">Войти</button>
+      <p class="merror" id="pwErr" hidden></p>
+      <p class="note" id="pwHint" hidden>We'll email you a verification link &mdash; click it and you're in.</p>
+      <div class="rowBetween">
+        <span></span>
+        <a href="/reset/" id="forgotLink">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+
+  <div id="tsWidget" style="margin:14px 0 0"></div>
+
+  <!-- Check-your-inbox state (after register / unverified login) -->
+  <div class="inboxState" id="inboxState" hidden>
+    <div class="inboxIcon">✉️</div>
+    <h2>Проверьте почту</h2>
+    <p id="inboxText">We sent you a link. Click it in any tab &mdash; this page continues automatically once you're verified.</p>
+    <button class="btn" id="recheckBtn" style="margin-top:18px">Уже подтвердили? Проверить снова</button>
+    <p class="mok" id="recheckNote" hidden>Not verified yet &mdash; check your inbox for the link.</p>
+    <p style="margin-top:14px"><button class="linkbtn" id="inboxBackBtn" type="button">Использовать другую почту</button></p>
+  </div>
+
+  <!-- Verified landing (Page B): ?verified=1 — no polling here -->
+  <div class="inboxState" id="verifiedState" hidden>
+    <div class="inboxIcon">✅</div>
+    <h2>Подтверждено</h2>
+    <p>You're signed in. If you started from another tab, return to your original tab &mdash; it continues automatically.</p>
+    <button class="btn" id="verifiedContinueBtn" style="margin-top:18px">Перейти в панель</button>
+  </div>
+
+  <div id="oauthBlock">
+    <div class="divider" id="oauthDivider">или продолжить через</div>
+    <button class="oauth" id="oauthGoogle"><span class="mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></span> Продолжить через Google</button>
+    <button class="oauth" id="oauthGithub"><span class="mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> Продолжить через GitHub</button>
+  </div>
+
+  <p class="note">Вход нужен только чтобы привязать динамические коды к вашему аккаунту. Без слежки, без рекламы.</p>
+  <p class="legal">Продолжая, вы соглашаетесь с нашими <a href="/terms/">Условиями</a> и <a href="/privacy/">Политикой конфиденциальности</a>.</p>
+  </div>
+</div>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+const $ = id => document.getElementById(id);
+const ERRORS = {
+  invalid_link: 'Ссылка истекла или уже использована. Запросите новую.',
+  provider_unavailable: 'Этот способ входа сейчас недоступен.',
+  csrf: 'Что-то пошло не так. Попробуйте ещё раз.',
+  no_verified_email: "Не удалось получить подтверждённую почту из этого аккаунта.",
+  invalid_credentials: 'Неверная почта или пароль. Попробуйте ещё раз.',
+  email_not_verified: 'Сначала подтвердите почту — мы только что отправили вам новую ссылку для подтверждения.',
+  already_registered: 'Аккаунт с такой почтой уже существует — попробуйте войти.',
+  weak_password: 'Выберите пароль надёжнее (минимум 8 символов, буквы и цифры).',
+  rate_limited: 'Слишком много попыток. Подождите немного и попробуйте ещё раз.'
+};
+function errText(key, fallback){
+  return ERRORS[key] || fallback || 'Что-то пошло не так. Попробуйте ещё раз.';
+}
+const params = new URLSearchParams(location.search);
+// Only same-origin paths are valid redirect targets — never an absolute URL.
+function validNext(n){
+  if(!n) return '/dashboard/';
+  try{
+    if(n.startsWith('/') && !n.startsWith('//') && !n.includes('\\') && !n.startsWith('/\\')) return n;
+  }catch(e){}
+  return '/dashboard/';
+}
+const NEXT = validNext(params.get('next') || '');
+const isVerifiedPage = params.get('verified') === '1';
+
+let mode = 'login'; // 'login' | 'register'
+function setMode(m){
+  mode = m;
+  $('tabLogin').classList.toggle('on', m === 'login');
+  $('tabRegister').classList.toggle('on', m === 'register');
+  $('tabLogin').setAttribute('aria-selected', m === 'login' ? 'true' : 'false');
+  $('tabRegister').setAttribute('aria-selected', m === 'register' ? 'true' : 'false');
+  $('pwBtn').textContent = m === 'login' ? 'Войти' : 'Создать аккаунт';
+  $('pwPass').autocomplete = m === 'login' ? 'current-password' : 'new-password';
+  $('pwHint').hidden = m !== 'register';
+  $('pwErr').hidden = true;
+}
+$('tabLogin').addEventListener('click', () => setMode('login'));
+$('tabRegister').addEventListener('click', () => setMode('register'));
+
+if(params.get('error') && ERRORS[params.get('error')]){
+  $('loginErr').textContent = ERRORS[params.get('error')];
+  $('loginErr').hidden = false;
+}
+
+function showInboxState(){
+  $('pwSection').hidden = true;
+  $('oauthBlock').hidden = true;
+  $('tsWidget').hidden = true;
+  $('loginErr').hidden = true;
+  $('inboxState').hidden = false;
+  startPolling();
+}
+function showForms(){
+  stopPolling();
+  $('inboxState').hidden = true;
+  $('pwSection').hidden = false;
+  $('oauthBlock').hidden = false;
+  $('tsWidget').hidden = false;
+}
+$('inboxBackBtn').addEventListener('click', showForms);
+
+// --- Verification auto-continue: poll /api/auth/me every ~2.5s.
+// The session cookie set by the verify click in another tab is browser-wide,
+// so this tab sees it as soon as verification lands. Stop after ~10 min.
+let pollTimer = null, pollCount = 0;
+function stopPolling(){ if(pollTimer){ clearInterval(pollTimer); pollTimer = null; } }
+async function checkVerified(){
+  try{
+    const r = await fetch('/api/auth/me', {credentials:'same-origin'});
+    if(!r.ok) return false;
+    const d = await r.json().catch(()=>null);
+    const u = (d && d.user) || d;
+    return !!(u && u.email);
+  }catch(e){ return false; }
+}
+function startPolling(){
+  stopPolling();
+  pollCount = 0;
+  pollTimer = setInterval(async () => {
+    pollCount++;
+    if(pollCount > 240){ stopPolling(); return; } // ~10 min
+    if(await checkVerified()){
+      stopPolling();
+      location.href = NEXT;
+    }
+  }, 2500);
+}
+$('recheckBtn').addEventListener('click', async () => {
+  $('recheckNote').hidden = true;
+  if(await checkVerified()){ location.href = NEXT; return; }
+  $('recheckNote').hidden = false;
+});
+
+// --- Page B: ?verified=1 — already verified here, no polling.
+if(isVerifiedPage){
+  $('pwSection').hidden = true;
+  $('oauthBlock').hidden = true;
+  $('tsWidget').hidden = true;
+  $('verifiedState').hidden = false;
+  $('verifiedContinueBtn').addEventListener('click', () => { location.href = NEXT; });
+} else {
+  // Already signed in? Skip straight to the destination (unless an error is shown).
+  if(!params.get('error')){
+    checkVerified().then(ok => { if(ok) location.href = NEXT; });
+  }
+}
+
+// --- Turnstile (bot check) for the login/register form.
+// Token is single-use: reset after every submit for a fresh one.
+let tsWidgetId = null;
+function tsToken(){ try{ return (window.turnstile && tsWidgetId !== null) ? turnstile.getResponse(tsWidgetId) : ''; }catch(e){ return ''; } }
+function tsReset(){ try{ if(window.turnstile && tsWidgetId !== null) turnstile.reset(tsWidgetId); }catch(e){} }
+function tsRender(sitekey){
+  if(!sitekey || !window.turnstile) return;
+  try{ tsWidgetId = turnstile.render('#tsWidget', { sitekey, theme: 'light' }); }
+  catch(e){ /* widget failed (e.g. blocked) — backend decides */ }
+}
+const TS_ERR = 'Пройдите проверку «я не робот» и попробуйте ещё раз.';
+fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
+  if(!cfg) return;
+  tsRender(cfg.turnstileSitekey);
+  if(cfg.providers){
+    if(!cfg.providers.google) $('oauthGoogle').hidden = true;
+    if(!cfg.providers.github) $('oauthGithub').hidden = true;
+  }
+}).catch(()=>{});
+
+// --- Email + password: log in / create account ---
+$('pwForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const email = $('pwEmail').value.trim();
+  const password = $('pwPass').value;
+  if(!email || !password) return;
+  $('pwErr').hidden = true;
+  $('pwBtn').disabled = true;
+  $('pwBtn').textContent = mode === 'login' ? 'Вход…' : 'Создание аккаунта…';
+  try{
+    if(mode === 'login'){
+      const r = await fetch('/api/auth/login', {
+        method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
+        body: JSON.stringify({ email, password, turnstileToken: tsToken() })
+      });
+      const d = await r.json().catch(()=>({}));
+      if(r.ok){ location.href = NEXT; return; }
+      if(d.error === 'turnstile_failed'){ $('pwErr').textContent = TS_ERR; $('pwErr').hidden = false; tsReset(); return; }
+      if(d.error === 'email_not_verified'){
+        // Backend resends the verification email; wait for the click.
+        $('inboxText').textContent = 'Ваша почта ещё не подтверждена — мы только что отправили вам новую ссылку для подтверждения. Нажмите её в любой вкладке, и страница продолжит автоматически.';
+        showInboxState();
+        return;
+      }
+      $('pwErr').textContent = errText(d.error, 'Не удалось войти. Попробуйте ещё раз.');
+      $('pwErr').hidden = false;
+    } else {
+      const r = await fetch('/api/auth/register', {
+        method: 'POST', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
+        body: JSON.stringify({ email, password, next: NEXT, turnstileToken: tsToken() })
+      });
+      const d = await r.json().catch(()=>({}));
+      if(r.ok){
+        $('inboxText').textContent = 'Мы отправили ссылку для подтверждения. Нажмите её в любой вкладке — страница продолжит автоматически после подтверждения.';
+        showInboxState();
+        return;
+      }
+      if(d.error === 'already_registered'){
+        setMode('login');
+        $('pwErr').textContent = errText('already_registered');
+        $('pwErr').hidden = false;
+        return;
+      }
+      $('pwErr').textContent = errText(d.error, 'Не удалось создать аккаунт. Попробуйте ещё раз.');
+      $('pwErr').hidden = false;
+    }
+  }catch(err){
+    $('pwErr').textContent = 'Ошибка сети. Попробуйте ещё раз.';
+    $('pwErr').hidden = false;
+  }finally{
+    tsReset();
+    $('pwBtn').disabled = false;
+    $('pwBtn').textContent = mode === 'login' ? 'Войти' : 'Создать аккаунт';
+  }
+});
+
+// --- OAuth ---
+$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT));
+$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT));
+</script>
+</body></html>
