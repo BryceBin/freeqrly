@@ -6,12 +6,21 @@
 <meta name="robots" content="noindex, nofollow">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#F5EFE3;color:#22303F;padding:0}
-.top{max-width:520px;margin:0 auto;padding:48px 20px 24px;text-align:center}
-.top h1{font-size:28px;margin-bottom:8px}
-.top p{font-size:14px;color:#8a7a5f;line-height:1.6}
-.top a{color:#2F4A62;text-decoration:none;font-weight:600}
-.card{background:#fff;border:1px solid #E8DFC8;border-radius:20px;padding:28px;max-width:520px;margin:0 auto 24px;box-shadow:0 8px 28px rgba(190,145,60,.10)}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:#FBF6EC;color:#22303F;padding:0}
+.topbar{max-width:980px;margin:0 auto;padding:20px 20px 0;display:flex;justify-content:space-between;align-items:center}
+.wordmark{font-size:21px;font-weight:800;letter-spacing:-.02em;color:#22303F;text-decoration:none}
+.wordmark span{color:#2F6B4F}
+.topbar a.back{font-size:13px;font-weight:600;color:#2F4A62;text-decoration:none}
+.shell{max-width:980px;margin:28px auto 24px;display:flex;background:#fff;border:1px solid #E8DFC8;border-radius:24px;overflow:hidden;box-shadow:0 12px 32px rgba(190,145,60,.12)}
+.brand{flex:0 0 42%;background:#F7E8B8;padding:40px 36px;display:flex;flex-direction:column;justify-content:center}
+.brand img.mascot{width:190px;height:auto;display:block;margin-bottom:20px}
+.brand h1{font-size:28px;line-height:1.25;margin-bottom:12px}
+.brand p.lede{font-size:14px;color:#6b5d43;line-height:1.6;margin-bottom:22px}
+.brand ul{list-style:none}
+.brand li{font-size:14px;font-weight:600;margin-bottom:12px;padding-left:24px;position:relative}
+.brand li::before{content:"¹3";position:absolute;left:0;color:#2F6B4F;font-weight:800}
+.brand .small{margin-top:26px;font-size:12px;color:#8a7a5f;line-height:1.6}
+.formside{flex:1;padding:36px 32px}
 .field{margin-bottom:14px}
 .field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
 .field input{width:100%;padding:12px 14px;border:1.5px solid #E8DFC8;border-radius:10px;font-size:15px;background:#FBF6EC;outline:none}
@@ -39,15 +48,36 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .inboxState h2{font-size:20px;text-align:center;margin-bottom:8px}
 .inboxState p{font-size:14px;color:#8a7a5f;line-height:1.6;text-align:center}
 .linkbtn{background:none;border:0;color:#2F4A62;font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-family:inherit}
+@media(max-width:760px){
+  .shell{flex-direction:column;margin:16px 12px 20px}
+  .brand{flex:none;padding:28px 24px;text-align:center}
+  .brand img.mascot{width:120px;margin:0 auto 12px}
+  .brand h1{font-size:24px}
+  .brand ul{text-align:left;max-width:340px;margin:0 auto}
+  .brand .small{margin-top:18px}
+  .formside{padding:28px 20px}
+  .topbar{padding:16px 16px 0}
+}
 </style>
 </head>
 <body>
-<div class="top">
-  <h1>Sign in</h1>
-  <p>Sign in to manage your dynamic QR codes. Static codes never need an account — <a href="/">back to the generator</a>.</p>
+<div class="topbar">
+  <a class="wordmark" href="/">Free<span>Qrly</span></a>
+  <a class="back" href="/">&larr; Back to generator</a>
 </div>
-
-<div class="card">
+<div class="shell">
+  <div class="brand">
+    <img class="mascot" src="/assets/img/mascots/qly-url.webp" alt="Qly holding a QR code">
+    <h1>Your codes,<br>all in one place.</h1>
+    <p class="lede">Sign in to manage the dynamic codes on your account &mdash; edit them any time, even after they&rsquo;re printed.</p>
+    <ul>
+      <li>All your dynamic codes in one list</li>
+      <li>Edit a code even after it&rsquo;s printed</li>
+      <li>See scans by day, city and device</li>
+    </ul>
+    <p class="small">Static codes never need an account. Sign-in is only for dynamic codes.</p>
+  </div>
+  <div class="formside">
   <p class="merror" id="loginErr" hidden></p>
 
   <!-- Password form (primary) -->
@@ -65,7 +95,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
       </div>
       <button class="btn" id="pwBtn" type="submit">Log in</button>
       <p class="merror" id="pwErr" hidden></p>
-      <p class="note" id="pwHint" hidden>We'll email you a verification link — click it and you're in.</p>
+      <p class="note" id="pwHint" hidden>We'll email you a verification link &mdash; click it and you're in.</p>
       <div class="rowBetween">
         <span></span>
         <a href="/reset/" id="forgotLink">Forgot password?</a>
@@ -89,9 +119,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   <div class="inboxState" id="inboxState" hidden>
     <div class="inboxIcon">✉️</div>
     <h2>Check your inbox</h2>
-    <p id="inboxText">We sent you a link. Click it in any tab — this page continues automatically once you're verified.</p>
+    <p id="inboxText">We sent you a link. Click it in any tab &mdash; this page continues automatically once you're verified.</p>
     <button class="btn" id="recheckBtn" style="margin-top:18px">Already verified? Check again</button>
-    <p class="mok" id="recheckNote" hidden>Not verified yet — check your inbox for the link.</p>
+    <p class="mok" id="recheckNote" hidden>Not verified yet &mdash; check your inbox for the link.</p>
     <p style="margin-top:14px"><button class="linkbtn" id="inboxBackBtn" type="button">Use a different email</button></p>
   </div>
 
@@ -99,7 +129,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   <div class="inboxState" id="verifiedState" hidden>
     <div class="inboxIcon">✅</div>
     <h2>Verified</h2>
-    <p>You're signed in. If you started from another tab, return to your original tab — it continues automatically.</p>
+    <p>You're signed in. If you started from another tab, return to your original tab &mdash; it continues automatically.</p>
     <button class="btn" id="verifiedContinueBtn" style="margin-top:18px">Continue to dashboard</button>
   </div>
 
@@ -110,8 +140,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   </div>
 
   <p class="note">We only use sign-in to tie your dynamic codes to your account. No tracking, no ads.</p>
+  </div>
 </div>
-<p class="foot"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+<p class="foot"><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 const $ = id => document.getElementById(id);
