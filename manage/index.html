@@ -12,7 +12,7 @@
 /* Top bar: brand + account + language (transparent, matches the page) */
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0 18px;flex-wrap:wrap}
 .brand{font-family:inherit;font-size:21px;font-weight:800;letter-spacing:-.02em;color:#22303F;text-decoration:none}
-.brand span{color:#2F6B4F}
+.brand span{color:#D9A441}
 .acct{display:flex;align-items:center;gap:10px;font-size:13px;flex-wrap:nowrap}
 .acctWrap{position:relative}
 .acctTrigger{display:flex;align-items:center;gap:10px;border:0;background:none;font-family:inherit;cursor:pointer;padding:4px 6px;border-radius:99px}
@@ -26,6 +26,7 @@
 .acctMenu a:hover,.acctMenu button:hover{background:#FBF6EC}
 .acctMenu .menuSep{height:1px;background:#F1EAD9;margin:6px 0}
 .acctMenu .logoutItem{color:#B4563C}
+.acctMenu .dangerItem{color:#B4563C}
 /* Page header */
 .pageHead{margin-bottom:20px}
 .backLink{display:inline-block;color:#2F4A62;text-decoration:none;font-size:13px;font-weight:600}
@@ -42,9 +43,9 @@
 .info .dest{font-size:13px;color:#8a7a5f;margin-top:4px;word-break:break-all}
 .info .meta{font-size:12px;color:#8a7a5f;margin-top:6px}
 .cardActions{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex:0 0 auto}
-.liveBtn{border:0;font-family:inherit;cursor:pointer}
+.liveBtn{border:0;font-family:inherit;cursor:pointer;background:#DCE5DD;color:#2F6B4F;font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;white-space:nowrap}
 .delBtn{background:none;border:0;color:#B4563C;font-size:12px;font-weight:600;cursor:pointer;padding:2px 4px;font-family:inherit;opacity:0;pointer-events:none;transition:opacity .15s}
-.codeCard:hover .delBtn,.cardActions.showDel .delBtn{opacity:1;pointer-events:auto}
+.cardActions:hover .delBtn,.cardActions.showDel .delBtn{opacity:1;pointer-events:auto}
 .delConfirm{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#FDF2EF;border:1px solid #E8C4B8;border-radius:12px;padding:12px 16px;margin-top:14px;font-size:13px}
 .delConfirm[hidden]{display:none}
 .delConfirm .delText{flex:1;min-width:200px}
@@ -65,6 +66,7 @@
 .chart{display:flex;align-items:flex-end;gap:10px;height:72px;padding:0 4px}
 .chart .bar{flex:1;background:#DCE5DD;border-radius:6px 6px 0 0;min-height:4px;position:relative}
 .chart .bar.today{background:#2F4A62}
+.chart .bar.zero{min-height:0}
 .chart .bar span{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:10px;color:#8a7a5f}
 .chartLabels{display:flex;gap:10px;font-size:11px;color:#8a7a5f;padding:0 4px;margin-top:6px}
 .chartLabels span{flex:1;text-align:center}
@@ -88,12 +90,6 @@
 .acctMenuHead{padding:10px 12px 8px}
 .acctMenuHead .mEmail{font-size:13px;font-weight:700;color:#22303F;word-break:break-all}
 .acctMenuHead .mProv{font-size:12px;color:#8a7a5f;margin-top:2px}
-/* Small data bar: export / delete account (was the Dashboard "Your data" card) */
-.dataBar{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:8px;padding:14px 4px;font-size:12px;color:#8a7a5f}
-.dataBar .dataLabel{font-weight:600}
-.dataBar button{border:0;background:none;padding:0;font-family:inherit;font-size:12px;font-weight:600;color:#2F4A62;cursor:pointer}
-.dataBar .dangerBtn{color:#B4563C}
-.dataBar .dataErr{width:100%}
 /* Empty / error states */
 .emptyCard{background:#fff;border:1px solid #E8DFC8;border-radius:20px;padding:40px 28px;text-align:center;box-shadow:0 8px 28px rgba(190,145,60,.10)}
 .emptyCard h2{font-size:18px;margin-bottom:8px}
@@ -111,12 +107,13 @@
     <div class="acct">
       <div class="acctWrap" id="acctWrap">
         <button class="acctTrigger" type="button" id="acctTrigger"><span class="avatar" id="acctAvatar">?</span><span class="acctEmail" id="acctEmail"></span><span class="chev">▾</span></button>
-        <div class="acctMenu"><div class="acctMenuHead"><div class="mEmail" id="menuEmail"></div><div class="mProv" id="menuProvider"></div></div><div class="menuSep"></div><button class="logoutItem" type="button" id="logoutBtn" data-t="logoutMenu">Log out</button></div>
+        <div class="acctMenu"><div class="acctMenuHead"><div class="mEmail" id="menuEmail"></div><div class="mProv" id="menuProvider"></div></div><div class="menuSep"></div><button type="button" id="exportMenuBtn" data-t="exportData">Export my data</button><button type="button" id="deleteAcctMenuBtn" class="dangerItem" data-t="deleteAccount">Delete account</button><div class="menuSep"></div><button class="logoutItem" type="button" id="logoutBtn" data-t="logoutMenu">Log out</button></div>
       </div>
       <select class="tbtn langsel" id="langSel" aria-label="Language"></select>
     </div>
   </div>
 
+  <p class="merror" id="acctErr" hidden style="margin:0 0 12px"></p>
   <div class="pageHead">
     <a class="backLink" href="/" data-t="backGenerator">← Back to generator</a>
     <div class="headRow">
@@ -133,19 +130,13 @@
     <p data-t="noCodesHint">Create your first dynamic code — it stays editable after printing.</p>
     <a class="newBtn" href="/" data-t="newCode">+ New dynamic code</a>
   </div>
-  <div class="dataBar" id="dataBar">
-    <span class="dataLabel" data-t="yourData">Your data</span>
-    <button type="button" id="exportBtn" data-t="exportData">Export my data</button>
-    <button type="button" id="deleteAcctBtn" class="dangerBtn" data-t="deleteAccount">Delete account</button>
-    <span class="merror dataErr" id="dataErr" hidden></span>
-  </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script>
 const $ = id => document.getElementById(id);
 const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
 const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
-const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "newCode": "+ New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "yourData": "Your data", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account."}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "newCode": "+ New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account."}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
 let I18N = null;
 let LANG = 'en';
 let ME = null;
@@ -428,7 +419,15 @@ async function openStats(cardEl, code){
 function statsHTML(d){
   const today = new Date().toISOString().slice(0,10);
   const todayRow = (d.byDate||[]).find(r => r.date === today);
-  const last7 = (d.byDate||[]).slice(0,7).reverse();
+  // Fixed 7-day window (today + previous 6 days); days without scans are 0.
+  const byDateMap = Object.fromEntries((d.byDate||[]).map(r => [r.date, r.scans]));
+  const utcToday = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate()));
+  const last7 = [];
+  for(let i = 6; i >= 0; i--){
+    const dt = new Date(utcToday); dt.setUTCDate(dt.getUTCDate() - i);
+    const iso = dt.toISOString().slice(0,10);
+    last7.push({ date: iso, scans: byDateMap[iso] || 0 });
+  }
   const max = Math.max(1, ...last7.map(r => r.scans));
   const rows = (arr, empty) => {
     if(!arr || !arr.length) return `<div class="breakRow"><span>${empty}</span><span class="breakVal">—</span></div>`;
@@ -443,9 +442,8 @@ function statsHTML(d){
     <div class="statBig"><div class="num">${fmtDate(d.createdAt)}</div><div class="lbl">${t('ui','created')}</div></div>
   </div>
   <div class="secTitle">${t('ui','last7')}</div>
-  ${last7.length ? `<div class="chart">${last7.map(r => `<div class="bar ${r.date===today?'today':''}" style="height:${Math.max(6,r.scans/max*100)}%"><span>${r.scans}</span></div>`).join('')}</div>
-  <div class="chartLabels">${last7.map(r => { const dt = new Date(r.date+'T00:00:00'); return `<span>${r.date===today?t('ui','today'):dt.toLocaleDateString('en-US',{weekday:'short'})}</span>`; }).join('')}</div>`
-  : `<p style="font-size:13px;color:#8a7a5f;margin:4px 0 14px">${t('ui','noScans')}</p>`}
+  <div class="chart">${last7.map(r => `<div class="bar ${r.date===today?'today':''}${r.scans===0?' zero':''}" style="height:${r.scans===0?0:Math.max(6,r.scans/max*100)}%"><span>${r.scans}</span></div>`).join('')}</div>
+  <div class="chartLabels">${last7.map(r => { const dt = new Date(r.date+'T00:00:00'); return `<span>${r.date===today?t('ui','today'):dt.toLocaleDateString('en-US',{weekday:'short'})}</span>`; }).join('')}</div>
   <div class="two">
     <div><div class="secTitle">${t('ui','byCountry')}</div><div>${rows(d.byCountry, t('ui','noScans'))}</div></div>
     <div><div class="secTitle">${t('ui','byCity')}</div><div>${rows(d.byCity, t('ui','noCity'))}</div></div>
@@ -817,10 +815,10 @@ async function boot(){
   $('acctTrigger').addEventListener('click', e => { e.stopPropagation(); wrap.classList.toggle('open'); });
   document.addEventListener('click', e => { if(!e.target.closest('.acctWrap')) wrap.classList.remove('open'); });
   document.addEventListener('click', e => { if(!e.target.closest('.cardActions')) document.querySelectorAll('.cardActions.showDel').forEach(a => a.classList.remove('showDel')); });
-  $('exportBtn').addEventListener('click', () => { location.href = '/api/auth/export'; });
-  $('deleteAcctBtn').addEventListener('click', async () => {
+  $('exportMenuBtn').addEventListener('click', () => { location.href = '/api/auth/export'; });
+  $('deleteAcctMenuBtn').addEventListener('click', async () => {
     if(!confirm(t('ui','deleteAccountConfirm'))) return;
-    const errEl = $('dataErr'); errEl.hidden = true;
+    const errEl = $('acctErr'); errEl.hidden = true;
     try{
       const r = await fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'});
       const d = await r.json().catch(()=>({}));
