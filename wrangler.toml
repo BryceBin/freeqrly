@@ -2,6 +2,12 @@
 name = "qrforge"
 pages_build_output_dir = "."
 
+# Opt into current Workers runtime behavior. REQUIRED for request.formData()
+# to parse file uploads as File objects (formdata_parsing_supports_file);
+# without this, Pages defaults to the oldest compat date and file parts
+# come back as strings.
+compatibility_date = "2026-10-16"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "freeqrly"
