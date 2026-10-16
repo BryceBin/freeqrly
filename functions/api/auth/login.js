@@ -47,7 +47,7 @@ export async function onRequestPost({ request, env }) {
   if (!user.email_verified) {
     if (await checkRateLimit(env, 'verify-resend:email:' + (await sha256Hex(email)), 5)) {
       const token = await createEmailToken(env, user.id, 'verify', VERIFY_TOKEN_TTL_MS);
-      const link = `${appUrl(env)}/api/auth/verify?token=${token}&next=${encodeURIComponent('/dashboard/')}`;
+      const link = `${appUrl(env)}/api/auth/verify?token=${token}&next=${encodeURIComponent('/manage/')}`;
       await sendResendEmail(env, {
         to: email,
         subject: 'Verify your FreeQrly email',

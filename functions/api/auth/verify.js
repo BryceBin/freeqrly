@@ -1,7 +1,7 @@
 // GET /api/auth/verify?token=...&next=... — consume a one-time email token.
 // Only purpose: 'verify' (email-verification link from registration, 24 h).
 // Sets email_verified=1, marks the token used, creates a session.
-// Success → redirect /login/?verified=1&next=<validated next or /dashboard/>
+// Success → redirect /login/?verified=1&next=<validated next or /manage/>
 // (the frontend shows the verified state, then continues to `next`).
 // Invalid/expired/used → redirect /login/?error=invalid_link.
 import { sha256Hex } from '../../_lib/dynamic.js';

@@ -1192,7 +1192,7 @@ function initAuthHeader(){
         area.appendChild(who);
         const dash = document.createElement("a");
         dash.className = "tbtn authLink";
-        dash.href = "/dashboard/";
+        dash.href = "/manage/";
         dash.textContent = "Dashboard";
         area.appendChild(dash);
       }

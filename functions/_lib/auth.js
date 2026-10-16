@@ -198,7 +198,7 @@ export function redirectTo(url, extraHeaders = {}) {
 // Only a same-origin path is allowed: must start with a SINGLE '/'; rejects
 // '//', backslashes, and scheme-like prefixes ('/http:', '/javascript:', ...).
 // Anything invalid → fallback. Used for email-link ?next= and OAuth state.
-export function validateNext(next, fallback = '/dashboard/') {
+export function validateNext(next, fallback = '/manage/') {
   if (typeof next !== 'string' || !next) return fallback;
   if (next.includes('\\') || next.includes('\n') || next.includes('\r') || next.includes('\0')) return fallback;
   if (!next.startsWith('/') || next.startsWith('//')) return fallback;
