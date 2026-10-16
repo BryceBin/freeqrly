@@ -57,7 +57,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
   <h2>Account</h2>
   <div class="who">
     <img id="dashAvatar" hidden alt="">
-    <div><div class="email" id="dashEmail">—</div><div class="sub">Signed in with FreeQrly</div></div>
+    <div><div class="email" id="dashEmail">—</div><div class="sub" id="dashProvider">Signed in with FreeQrly</div></div>
     <div class="spacer"></div>
     <button class="signout" id="signOutBtn">Sign out</button>
   </div>
@@ -173,6 +173,9 @@ loadMe().then(me => {
   if(!me) return;
   const u = me.user || me; // /api/auth/me returns {user:{...}}
   $('dashEmail').textContent = u.email || '—';
+  // Real sign-in channel for THIS session (Email = password or email link).
+  const providerLabel = { password: 'Email', email: 'Email', google: 'Google', github: 'GitHub' };
+  $('dashProvider').textContent = 'Signed in with ' + (providerLabel[u.authMethod] || 'Email');
   const avatar = u.avatar || u.avatar_url;
   if(avatar){
     const img = $('dashAvatar');

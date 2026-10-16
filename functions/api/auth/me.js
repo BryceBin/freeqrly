@@ -1,5 +1,8 @@
 // GET /api/auth/me — current session user + quota.
-// 200 { user: { id, email, name, avatar_url, plan, codeLimit, codeCount } }
+// 200 { user: { id, email, name, avatar_url, plan, codeLimit, codeCount, authMethod } }
+// authMethod: how THIS session signed in ('password' | 'email' | 'google' |
+// 'github'); falls back to the account's auth_provider for sessions created
+// before auth_method existed.
 // 401 { error: "unauthorized" }
 import { json } from '../../_lib/dynamic.js';
 import { getSessionUser, getCodeCount } from '../../_lib/auth.js';
@@ -17,6 +20,7 @@ export async function onRequestGet({ request, env }) {
       plan: sess.user.plan,
       codeLimit: sess.user.code_limit,
       codeCount,
+      authMethod: sess.session.auth_method || sess.user.auth_provider || 'email',
     },
   });
 }

@@ -22,7 +22,7 @@ export async function onRequestGet({ request, env }) {
 
   await env.DB.prepare('UPDATE email_tokens SET used = 1 WHERE token_hash = ?').bind(hash).run();
   await env.DB.prepare('UPDATE users SET email_verified = 1, last_login_at = ? WHERE id = ?').bind(Date.now(), row.user_id).run();
-  const sessionToken = await createSession(env, row.user_id, request);
+  const sessionToken = await createSession(env, row.user_id, request, 'email');
   return redirectTo(loginVerifiedUrl(url.origin, next), {
     'Set-Cookie': sessionCookie(sessionToken),
   });

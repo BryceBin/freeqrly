@@ -71,16 +71,20 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- Sessions store only the SHA-256 hash of the opaque fq_session cookie token.
+-- auth_method records HOW this session signed in ('password' | 'email' |
+-- 'google' | 'github') so the UI can show the real sign-in channel.
+-- NULL = session predates the column; callers fall back to users.auth_provider.
 CREATE TABLE IF NOT EXISTS sessions (
   token_hash TEXT PRIMARY KEY,
   user_id TEXT NOT NULL REFERENCES users(id),
   created_at INTEGER NOT NULL,
   expires_at INTEGER NOT NULL,
   user_agent TEXT,
-  ip TEXT
+  ip TEXT,
+  auth_method TEXT
 );
 
--- One-time email tokens (magic links, email verification, password reset).
+-- One-time email tokens (email verification, password reset).
 -- Only SHA-256 hashes are stored. Single-use (used=1 after consume).
 CREATE TABLE IF NOT EXISTS email_tokens (
   token_hash TEXT PRIMARY KEY,

@@ -72,14 +72,14 @@ export function clearTempCookie(name) {
 }
 
 // ---- Sessions ----
-export async function createSession(env, userId, request) {
+export async function createSession(env, userId, request, authMethod) {
   const token = genToken(32);
   const hash = await sha256Hex(token);
   const now = Date.now();
   await env.DB.prepare(
-    'INSERT INTO sessions (token_hash, user_id, created_at, expires_at, user_agent, ip) VALUES (?, ?, ?, ?, ?, ?)'
+    'INSERT INTO sessions (token_hash, user_id, created_at, expires_at, user_agent, ip, auth_method) VALUES (?, ?, ?, ?, ?, ?, ?)'
   ).bind(hash, userId, now, now + SESSION_MAX_AGE * 1000,
-    request ? (request.headers.get('User-Agent') || '') : '', request ? getClientIp(request) : '').run();
+    request ? (request.headers.get('User-Agent') || '') : '', request ? getClientIp(request) : '', authMethod || null).run();
   return token;
 }
 
@@ -96,9 +96,9 @@ export async function getSessionUser(env, request) {
   const hash = await sha256Hex(token);
   const row = await env.DB.prepare(
     `SELECT s.token_hash AS token_hash, s.user_id AS user_id, s.created_at AS created_at,
-            s.expires_at AS expires_at,
+            s.expires_at AS expires_at, s.auth_method AS auth_method,
             u.id AS id, u.email AS email, u.name AS name, u.avatar_url AS avatar_url,
-            u.plan AS plan, u.code_limit AS code_limit
+            u.plan AS plan, u.code_limit AS code_limit, u.auth_provider AS auth_provider
      FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token_hash = ?`
   ).bind(hash).first();
   if (!row) return null;
@@ -107,8 +107,8 @@ export async function getSessionUser(env, request) {
     return null;
   }
   return {
-    session: { token_hash: row.token_hash, user_id: row.user_id, created_at: row.created_at, expires_at: row.expires_at },
-    user: { id: row.id, email: row.email, name: row.name, avatar_url: row.avatar_url, plan: row.plan, code_limit: row.code_limit },
+    session: { token_hash: row.token_hash, user_id: row.user_id, created_at: row.created_at, expires_at: row.expires_at, auth_method: row.auth_method },
+    user: { id: row.id, email: row.email, name: row.name, avatar_url: row.avatar_url, plan: row.plan, code_limit: row.code_limit, auth_provider: row.auth_provider },
   };
 }
 

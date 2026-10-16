@@ -62,7 +62,7 @@ export async function onRequestPost({ request, env }) {
 
   await clearLoginFailures(env, lockKey);
   await env.DB.prepare('UPDATE users SET last_login_at = ? WHERE id = ?').bind(Date.now(), user.id).run();
-  const sessionToken = await createSession(env, user.id, request);
+  const sessionToken = await createSession(env, user.id, request, 'password');
   return new Response(JSON.stringify({ ok: true, user: { id: user.id, email: user.email } }), {
     status: 200,
     headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Set-Cookie': sessionCookie(sessionToken) },

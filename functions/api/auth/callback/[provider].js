@@ -99,7 +99,7 @@ export async function onRequestGet({ request, env, params }) {
   } catch { return login('profile_fetch_failed'); }
 
   const user = await upsertUser(env, { email, name, avatar_url: avatarUrl, auth_provider: provider });
-  const sessionToken = await createSession(env, user.id, request);
+  const sessionToken = await createSession(env, user.id, request, provider);
   const headers = new Headers();
   headers.append('Set-Cookie', sessionCookie(sessionToken));
   headers.append('Set-Cookie', clearTempCookie(PKCE_COOKIE));
