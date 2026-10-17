@@ -9,6 +9,8 @@ const LANG_SLUGS = new Set([
   'google-form-qr-code', 'wifi-qr-code', 'vcard-qr-code', 'batch-qr-code',
   'business-card-qr-code', 'google-review-qr-code', 'qr-code-with-logo',
   'wedding-qr-code', 'instagram-qr-code', 'real-estate-qr-code',
+  'pdf-qr-code', 'multi-link-qr-code', 'menu-qr-code',
+  'payment-qr-code', 'youtube-qr-code', 'whatsapp-qr-code',
   'about', 'privacy', 'terms', 'developers', 'scan', 'login', 'reset',
 ]);
 
@@ -18,7 +20,9 @@ const TOP_LEVEL = new Set([
   'sitemap.xml', 'robots.txt', 'llms.txt', 'og.png', 'favicon.ico', '404.html',
   'google-form-qr-code', 'wifi-qr-code', 'vcard-qr-code', 'batch-qr-code',
   'business-card-qr-code', 'google-review-qr-code', 'qr-code-with-logo',
-  'wedding-qr-code', 'instagram-qr-code', 'real-estate-qr-code']);
+  'wedding-qr-code', 'instagram-qr-code', 'real-estate-qr-code',
+  'pdf-qr-code', 'multi-link-qr-code', 'menu-qr-code',
+  'payment-qr-code', 'youtube-qr-code', 'whatsapp-qr-code']);
 
 function isKnown(path) {
   if (path === '/') return true;
