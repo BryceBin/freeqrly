@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR-код или штрихкод: в чём разница? | FreeQrly</title>
+<meta name="description" content="QR-коды и штрихкоды: что каждый из них хранит, сколько данных помещается и когда какой использовать. Штрихкоды — для кассы, QR-коды — для всего остального.">
+<link rel="canonical" href="https://freeqrly.com/ru/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-vs-barcode/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QR-код или штрихкод: в чём разница? | FreeQrly">
+<meta property="og:description" content="QR-коды и штрихкоды: что каждый из них хранит, сколько данных помещается и когда какой использовать. Штрихкоды — для кассы, QR-коды — для всего остального.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ru/blog/qr-code-vs-barcode/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QR-код или штрихкод: в чём разница? | FreeQrly","description":"QR-коды и штрихкоды: что каждый из них хранит, сколько данных помещается и когда какой использовать. Штрихкоды — для кассы, QR-коды — для всего остального.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Может ли QR-код содержать то же число, что и штрихкод?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да — QR-код может закодировать число любого штрихкода (UPC, EAN, Code 128) как обычный текст. Но телефон, сканирующий его, покажет число, а не найдёт его, если код не указывает на страницу, выполняющую поиск."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Почему штрихкоды всё ещё существуют, если QR-коды вмещают больше?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Устаревшее оборудование. Миллионы кассовых линий и складов работают на лазерных сканерах, читающих только 1D-штрихкоды. Пока это оборудование не обновится, штрихкоды останутся для касс — QR-коды заберут всё остальное."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что лучше для этикетки товара?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для кассы: штрихкод (или оба). Для клиентов: QR-код со ссылкой на инструкцию, гарантию или страницу повторного заказа. Многие бренды теперь печатают оба на одной упаковке."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Истекает ли срок у QR-кодов, а у штрихкодов — нет?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сам по себе не истекает ни один. Статический QR-код работает, пока существует его назначение, — как и номер штрихкода остаётся действительным. Перестать работать могут только динамические коды, если сервис за ними закроется."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/ru/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/ru/#studio">Студия</a><a href="/ru/blog/">Заметки</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="Qly — слон, талисман FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Заметки</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QR-код против <span class='hl hl-mint'>штрихкода</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Штрихкоды идентифицируют товары на кассе. QR-коды несут ссылки, меню, пароли WiFi, визитки. Одна идея, совсем разные задачи.</p>
+    <p class="meta" style="text-align:center">17 октября 2026 г. · 4 мин чтения</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>Они выглядят как двоюродные братья, но штрихкод и QR-код решают разные задачи. Штрихкод — это ряд вертикальных линий, шифрующих короткое число, обычно ID товара. QR-код — квадратная сетка, шифрующая текст, ссылки или целые визитки. Если запомнить одну строку: <strong>штрихкоды указывают на запись в базе данных; QR-коды несут само содержимое.</strong></p>
+
+<h2>Отличия, которые важны</h2>
+<table>
+<tr><th></th><th>Штрихкод (1D)</th><th>QR-код (2D)</th></tr>
+<tr><td><strong>Что хранит</strong></td><td>Короткое число (обычно 8–13 цифр)</td><td>Текст, URL, данные WiFi, контакты — до ~4 000 символов</td></tr>
+<tr><td><strong>Как сканируется</strong></td><td>Лазерные сканеры читают в одном направлении; нужно выравнивание</td><td>Любая камера телефона, с любого угла, за долю секунды</td></tr>
+<tr><td><strong>Устойчивость к повреждениям</strong></td><td>Низкая — царапина на линии может его убить</td><td>Высокая — коррекция ошибок восстанавливает до 30% повреждённого кода</td></tr>
+<tr><td><strong>Нужна база данных?</strong></td><td>Да — без поиска по базе число бесполезно</td><td>Нет — содержимое живёт внутри узора</td></tr>
+<tr><td><strong>Типичное применение</strong></td><td>Розничная касса, склад, книги в библиотеке</td><td>Меню, билеты, платежи, WiFi, маркетинг, визитки</td></tr>
+</table>
+
+<h2>Когда штрихкод всё ещё правильный выбор</h2>
+<p>Розничная касса, складской учёт и всё, что сканируется специальным лазерным сканером с близкого расстояния. Штрихкоды дёшевы в печати, быстры на лазерном оборудовании, и весь розничный мир уже говорит на UPC/EAN. Если ваш процесс — «отсканировать товар, найти его запись», штрихкод — ваш инструмент.</p>
+
+<h2>Когда побеждает QR-код</h2>
+<p>Всё, что сканирует <em>человек</em> телефоном: меню, билеты, платёжные ссылки, коды подключения к WiFi, визитки, страницы товаров, формы обратной связи. QR-коды вмещают гораздо больше, переживают повреждения и не требуют специального оборудования. Они также могут нести ссылку на товар — QR-код на упаковке, открывающий инструкцию, страницу гарантии или страницу повторного заказа, выполняет работу штрихкода лучше.</p>
+
+<h2>Может ли QR-код заменить штрихкод на товарах?</h2>
+<p>Для потребительских применений — да, и розница движется в эту сторону с GS1 Digital Link, который размещает на упаковке QR-код, несущий ту же идентичность товара, что и штрихкод, плюс ссылку на веб-контент. Для кассовых линий с лазерными сканерами штрихкоды пока остаются: лазерные сканеры не читают 2D-коды. Практическое правило: штрихкод там, где правят лазерные сканеры, QR-код — везде, где участвует телефон.</p>
+
+<p>Нужна сторона QR? <a href="/ru/#studio">Создайте QR-код</a> — бесплатно, без регистрации для статических кодов. Интересен редактируемый вид? <a href="/ru/blog/static-vs-dynamic-qr-codes/">Статические и динамические — честное объяснение</a>.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly представляет QR-код"></div>
+      <div>
+        <h3>Создайте QR-код</h3>
+        <p>Штрихкоды — для кассы, QR-коды — для всего остального. Сделайте свой бесплатно.</p>
+        <a class="btn" href="/ru/#studio">Открыть студию</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Читать дальше</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ru/blog/do-qr-codes-expire/"><b>Истекают ли QR-коды? Короткий ответ — нет — FreeQrly</b></a>
+        <a class="rel-card" href="/ru/blog/how-to-scan-a-qr-code/"><b>Как сканировать QR-код (iPhone и Android)</b></a>
+        <a class="rel-card" href="/ru/blog/qr-code-print-size-guide/"><b>Руководство по размеру QR-кода для печати: каким он должен быть?</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Полезно знать</h2>
+    <details><summary><span>Может ли QR-код содержать то же число, что и штрихкод?</span></summary><p>Да — QR-код может закодировать число любого штрихкода (UPC, EAN, Code 128) как обычный текст. Но телефон, сканирующий его, покажет число, а не найдёт его, если код не указывает на страницу, выполняющую поиск.</p></details>
+    <details><summary><span>Почему штрихкоды всё ещё существуют, если QR-коды вмещают больше?</span></summary><p>Устаревшее оборудование. Миллионы кассовых линий и складов работают на лазерных сканерах, читающих только 1D-штрихкоды. Пока это оборудование не обновится, штрихкоды останутся для касс — QR-коды заберут всё остальное.</p></details>
+    <details><summary><span>Что лучше для этикетки товара?</span></summary><p>Для кассы: штрихкод (или оба). Для клиентов: QR-код со ссылкой на инструкцию, гарантию или страницу повторного заказа. Многие бренды теперь печатают оба на одной упаковке.</p></details>
+    <details><summary><span>Истекает ли срок у QR-кодов, а у штрихкодов — нет?</span></summary><p>Сам по себе не истекает ни один. Статический QR-код работает, пока существует его назначение, — как и номер штрихкода остаётся действительным. Перестать работать могут только динамические коды, если сервис за ними закроется.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/ru/" style="color:inherit">FreeQrly</a> — сделано тихо, в вашем браузере.</div>
+    <p class="flinks"><a href="/ru/scan/">Сканер QR-кодов</a><a href="/ru/blog/">Все заметки</a><a href="/ru/about/">О проекте</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

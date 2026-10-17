@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRコード vs バーコード：何が違う？ | FreeQrly</title>
+<meta name="description" content="QRコード vs バーコード：何を持てるか、どれだけデータが入るか、どちらを使うべきか。バーコードはレジ用、QRコードはそれ以外すべてに。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-vs-barcode/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-vs-barcode/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QRコード vs バーコード：何が違う？ | FreeQrly">
+<meta property="og:description" content="QRコード vs バーコード：何を持てるか、どれだけデータが入るか、どちらを使うべきか。バーコードはレジ用、QRコードはそれ以外すべてに。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/qr-code-vs-barcode/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QRコード vs バーコード：何が違う？ | FreeQrly","description":"QRコード vs バーコード：何を持てるか、どれだけデータが入るか、どちらを使うべきか。バーコードはレジ用、QRコードはそれ以外すべてに。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "QRコードはバーコードと同じ数字を持てる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい — QRコードはどのバーコードの数字（UPC、EAN、Code 128）もプレーンテキストとして記録できます。ただし、スマホでスキャンすると数字が表示されるだけで、照合はされません。照合するページを指す場合を除きます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコードの方が多く持てるのに、なぜバーコードは残っている？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "既存のハードウェアです。何百万ものレジや倉庫が、1Dバーコードしか読めないレーザースキャナーで動いています。そのハードウェアが置き換わるまで、バーコードはレジに残ります — QRコードはそれ以外すべてを担います。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "商品ラベルにはどっちがいい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "レジ用にはバーコード（または両方）。お客様向けには説明書、保証、再注文ページへつなぐQRコード。多くのブランドが今、同じパッケージに両方を印刷しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "バーコードに期限はないのに、QRコードにはある？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "どちらも単独では期限切れになりません。静的QRコードは行き先がある限り使えます — バーコードの数字が有効であり続けるのと同じです。使えなくなる可能性があるのは動的コードだけで、背後のサービスが終了した場合です。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/ja/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/ja/#studio">スタジオ</a><a href="/ja/blog/">フィールドノート</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/faq.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QRコード vs <span class='hl hl-mint'>バーコード</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">バーコードはレジで商品を識別します。QRコードはリンク、メニュー、WiFiパスワード、連絡先を運びます。発想は同じ、役割はまったく違います。</p>
+    <p class="meta" style="text-align:center">2026年10月17日 · 約4分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>見た目は親戚のようですが、バーコードとQRコードが解く問題は違います。バーコードは短い数字 — 通常は商品ID — を記録した縦線の列です。QRコードはテキスト、リンク、連絡先全体を記録する四角い格子です。1行だけ覚えるなら：<strong>バーコードはデータベースの項目を指し示し、QRコードは内容そのものを運びます。</strong></p>
+
+<h2>重要な違い</h2>
+<table>
+<tr><th></th><th>バーコード（1D）</th><th>QRコード（2D）</th></tr>
+<tr><td><strong>持てるもの</strong></td><td>短い数字（通常8〜13桁）</td><td>テキスト、URL、WiFi情報、連絡先 — 最大約4,000文字</td></tr>
+<tr><td><strong>読み取り方</strong></td><td>レーザースキャナーが一方向から読み取る。位置合わせが必要</td><td>どのスマホのカメラでも、どの角度からでも、一瞬で</td></tr>
+<tr><td><strong>傷への強さ</strong></td><td>低い — 線が1本傷つくと読めなくなる</td><td>高い — 誤り訂正で傷んだコードの最大30%を復元</td></tr>
+<tr><td><strong>データベースは必要？</strong></td><td>はい — 照合がなければ数字は無意味</td><td>いいえ — 内容は模様の中にある</td></tr>
+<tr><td><strong>典型的な用途</strong></td><td>レジ、在庫管理、図書館の本</td><td>メニュー、チケット、決済、WiFi、マーケティング、連絡先</td></tr>
+</table>
+
+<h2>バーコードが今も正解な場面</h2>
+<p>レジ、倉庫の在庫管理、専用レーザースキャナーで近距離から読み取るものすべて。バーコードは印刷が安く、レーザーハードウェアでは高速で、小売の世界はすでにUPC/EANを話します。「商品をスキャンして、記録を照合する」という流れなら、バーコードが正解です。</p>
+
+<h2>QRコードが勝つ場面</h2>
+<p><em>人</em>がスマホでスキャンするものすべて：メニュー、チケット、決済リンク、WiFi接続コード、連絡先、商品ページ、フィードバックフォーム。QRコードははるかに多くを持てて、傷に強く、専用ハードウェアも不要です。商品リンクも運べます — パッケージのQRコードが説明書、保証ページ、再注文ページを開くのは、バーコードの仕事をより良くこなす例です。</p>
+
+<h2>QRコードは商品のバーコードを置き換えられる？</h2>
+<p>消費者向けの用途なら、はい — 小売はGS1 Digital Linkでそちらに動きつつあります。これはパッケージにQRコードを載せ、バーコードと同じ商品識別情報にWebコンテンツへのリンクを加えたものです。レーザーのみ対応のスキャナーを使うレジでは、当面バーコードが残ります。レーザースキャナーは2Dコードを読めないからです。実用的なルール：レーザースキャナーが主役の場所ではバーコード、スマホが関わる場所ではすべてQRコード。</p>
+
+<p>QRコード側を試す？<a href="/ja/#studio">QRコードを作る</a> — 無料、静的コードは登録不要。書き換え可能なタイプが気になる？<a href="/ja/blog/static-vs-dynamic-qr-codes/">静的 vs 動的、正直に解説</a>。</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>QRコードを作る</h3>
+        <p>バーコードはレジ用、QRコードはそれ以外すべてに。あなたのものを無料で作ろう。</p>
+        <a class="btn" href="/ja/#studio">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/do-qr-codes-expire/"><b>QRコードに期限はある？短い答えは「いいえ」 — FreeQrly</b></a>
+        <a class="rel-card" href="/ja/blog/how-to-scan-a-qr-code/"><b>QRコードのスキャン方法（iPhoneとAndroid）</b></a>
+        <a class="rel-card" href="/ja/blog/qr-code-print-size-guide/"><b>QRコード印刷サイズガイド：どれくらいの大きさにすべき？</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>QRコードはバーコードと同じ数字を持てる？</span></summary><p>はい — QRコードはどのバーコードの数字（UPC、EAN、Code 128）もプレーンテキストとして記録できます。ただし、スマホでスキャンすると数字が表示されるだけで、照合はされません。照合するページを指す場合を除きます。</p></details>
+    <details><summary><span>QRコードの方が多く持てるのに、なぜバーコードは残っている？</span></summary><p>既存のハードウェアです。何百万ものレジや倉庫が、1Dバーコードしか読めないレーザースキャナーで動いています。そのハードウェアが置き換わるまで、バーコードはレジに残ります — QRコードはそれ以外すべてを担います。</p></details>
+    <details><summary><span>商品ラベルにはどっちがいい？</span></summary><p>レジ用にはバーコード（または両方）。お客様向けには説明書、保証、再注文ページへつなぐQRコード。多くのブランドが今、同じパッケージに両方を印刷しています。</p></details>
+    <details><summary><span>バーコードに期限はないのに、QRコードにはある？</span></summary><p>どちらも単独では期限切れになりません。静的QRコードは行き先がある限り使えます — バーコードの数字が有効であり続けるのと同じです。使えなくなる可能性があるのは動的コードだけで、背後のサービスが終了した場合です。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/ja/" style="color:inherit">FreeQrly</a> — 静かに、ブラウザで作成。</div>
+    <p class="flinks"><a href="/ja/scan/">QRスキャナー</a><a href="/ja/blog/">フィールドノート一覧</a><a href="/ja/about/">FreeQrlyについて</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

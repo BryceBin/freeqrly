@@ -16,6 +16,8 @@ CONTENT = {
     "", "google-form-qr-code", "wifi-qr-code", "vcard-qr-code", "batch-qr-code",
     "business-card-qr-code", "google-review-qr-code", "qr-code-with-logo",
     "wedding-qr-code", "instagram-qr-code", "real-estate-qr-code",
+    "pdf-qr-code", "multi-link-qr-code", "menu-qr-code",
+    "payment-qr-code", "youtube-qr-code", "whatsapp-qr-code",
     "about", "privacy", "terms", "developers", "scan",
 }
 EXCLUDE_DIRS = {"assets", "skills", "api", "functions", "tools", "login", "reset",

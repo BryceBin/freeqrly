@@ -793,6 +793,119 @@ SOURCES_CSS = """<style>
 .sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
 .sources a{color:inherit;text-decoration:underline}
 </style>"""
+POSTS += [
+ dict(
+  slug="qr-code-vs-barcode",
+  title="QR Code vs Barcode: What's the Difference? | FreeQrly",
+  desc="QR codes vs barcodes: what each holds, how much data fits, and when to use which. Barcodes for checkout, QR codes for everything else.",
+  h1="QR code vs <span class='hl hl-mint'>barcode</span>",
+  lede="Barcodes identify products at checkout. QR codes carry links, menus, WiFi passwords, contact cards. Same idea, very different jobs.",
+  date="October 17, 2026",
+  datePublished="2026-10-17",
+  mascot="faq",
+  body="""
+<p>They look like cousins, but a barcode and a QR code solve different problems. A barcode is a row of vertical lines that encodes a short number — usually a product ID. A QR code is a square grid that encodes text, links, or whole contact cards. If you only remember one line: <strong>barcodes point at a database entry; QR codes carry the content itself.</strong></p>
+
+<h2>The differences that matter</h2>
+<table>
+<tr><th></th><th>Barcode (1D)</th><th>QR code (2D)</th></tr>
+<tr><td><strong>What it holds</strong></td><td>A short number (typically 8–13 digits)</td><td>Text, URLs, WiFi details, contacts — up to ~4,000 characters</td></tr>
+<tr><td><strong>How it scans</strong></td><td>Laser scanners read it in one direction; needs to be aligned</td><td>Any phone camera, from any angle, in a fraction of a second</td></tr>
+<tr><td><strong>Damage tolerance</strong></td><td>Low — a scratched line can kill it</td><td>High — error correction recovers up to 30% of a damaged code</td></tr>
+<tr><td><strong>Needs a database?</strong></td><td>Yes — the number is useless without the lookup</td><td>No — the content lives inside the pattern</td></tr>
+<tr><td><strong>Typical use</strong></td><td>Retail checkout, inventory, library books</td><td>Menus, tickets, payments, WiFi, marketing, contact cards</td></tr>
+</table>
+
+<h2>When a barcode is still the right call</h2>
+<p>Retail checkout, warehouse inventory, and anything scanned by a dedicated laser scanner at close range. Barcodes are cheap to print, fast on laser hardware, and the whole retail world already speaks UPC/EAN. If your workflow is "scan a product, look up its record," a barcode is the tool.</p>
+
+<h2>When a QR code wins</h2>
+<p>Anything a <em>person</em> scans with a phone: menus, tickets, payment links, WiFi join codes, contact cards, product pages, feedback forms. QR codes hold far more, survive damage, and need no special hardware. They can also carry a product link — a QR code on packaging that opens the manual, the warranty page, or the reorder page is a barcode's job done better.</p>
+
+<h2>Can a QR code replace a barcode on products?</h2>
+<p>For consumer-facing uses, yes — and retail is moving that way with GS1 Digital Link, which puts a QR code on pack that carries the same product identity a barcode does, plus a link to web content. For checkout lanes with laser-only scanners, barcodes stay for now: laser scanners cannot read 2D codes. The practical rule: barcode where laser scanners rule, QR code everywhere a phone is involved.</p>
+
+<p>Want the QR side? <a href="/#studio">Make a QR code</a> — free, no sign-up for static codes. Curious about the editable kind? <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>.</p>
+""",
+  faq=[
+    ("Can a QR code hold the same number as a barcode?",
+     "Yes — a QR code can encode any barcode's number (UPC, EAN, Code 128) as plain text. But a phone scanning it will show the number, not look it up, unless the code points at a page that does the lookup."),
+    ("Why do barcodes still exist if QR codes hold more?",
+     "Legacy hardware. Millions of checkout lanes and warehouses run laser scanners that read only 1D barcodes. Until that hardware turns over, barcodes stay for checkout — QR codes take everything else."),
+    ("Which is better for a product label?",
+     "For checkout: a barcode (or both). For customers: a QR code linking to the manual, warranty, or reorder page. Many brands now print both on the same pack."),
+    ("Do QR codes expire while barcodes don't?",
+     "Neither expires on its own. A static QR code works as long as its destination exists — same as a barcode's number staying valid. Only dynamic codes can stop working, if the service behind them shuts down."),
+  ],
+  cta=dict(title="Make a QR code",
+           text="Barcodes for checkout, QR codes for everything else. Make yours free.",
+           href="/#studio", btn="Open the studio"),
+ ),
+ dict(
+  slug="make-qr-code-in-canva-excel-word",
+  title="How to Make a QR Code in Canva, Excel & Word | FreeQrly",
+  desc="No built-in QR tool in Canva, Excel, or Word? Make the code in FreeQrly (free, no sign-up), download PNG, and drop it into your design or document.",
+  h1="QR codes in <span class='hl hl-honey'>Canva, Excel & Word</span>",
+  lede="None of these apps has a good built-in QR maker. The fast route: generate the code in FreeQrly, download a PNG, and drop it in. Two minutes, every time.",
+  date="October 17, 2026",
+  datePublished="2026-10-17",
+  mascot="batch",
+  body="""
+<p>Canva has a QR app buried in its marketplace. Excel has none. Word has none. Google Docs and Sheets have none either. Every one of them, though, lets you insert an image — and a QR code is just an image. So the reliable workflow is the same everywhere: <strong>make the code in a real generator, download a PNG, insert it.</strong></p>
+
+<h2>The workflow (works in all four)</h2>
+<ol>
+<li><b>Make the code.</b> In the <a href="/#studio">FreeQrly studio</a>, pick the type (Website for a link, WiFi for a network, vCard for a contact), fill it in, style it if you want.</li>
+<li><b>Download PNG.</b> Use the PNG download at 1024 px or higher. PNG keeps the edges crisp in print and on screen; SVG is better if your app accepts it (Word and Docs do not, Canva does).</li>
+<li><b>Insert it.</b> Canva: Uploads → Upload files. Excel: Insert → Pictures. Word: Insert → Pictures. Google Docs/Sheets: Insert → Image → Upload from computer.</li>
+<li><b>Test it.</b> Point your phone camera at the screen (or a test print). If it scans on the first try, ship it.</li>
+</ol>
+
+<h2>Canva</h2>
+<p>Canva's own QR app works, but it locks the style and the code lives inside Canva. A FreeQrly PNG gives you full control — logo, colors, frame — and the same file works in your flyer, your Instagram post, and your PDF export. Upload once, reuse everywhere. Size it to at least 2 × 2 cm on the final design so phones read it at arm's length.</p>
+
+<h2>Excel</h2>
+<p>Excel has no QR function. The IMAGE function (newer Excel) can display a QR code from a URL, but it needs the image hosted somewhere and breaks in older versions and in print. A pasted PNG is the dependable route: it prints, it survives file sharing, and it works in every Excel version. Place it in a cell corner or floating over the sheet — either way, keep the quiet margin around it clear.</p>
+
+<h2>Word</h2>
+<p>Word has no QR tool either. Insert → Pictures, then set text wrapping to Square or Tight so the paragraph flows around it. For letterheads and invoices, pin the code to a fixed spot (a header, a footer, or a text box) so it lands in the same place on every page. For print, export the document as PDF — the code stays sharp.</p>
+
+<h2>Google Docs & Sheets</h2>
+<p>Same pattern: Insert → Image → Upload from computer. In Docs, use "Wrap text" so the code sits beside the paragraph. In Sheets, float it over a corner cell range. One extra tip: Docs compresses large images on export, so start from a 1024 px PNG and keep the code at a reasonable size — a tiny code on a big page is the most common reason scans fail.</p>
+
+<h2>Three mistakes that break scans</h2>
+<ul>
+<li><strong>Too small.</strong> Under 2 × 2 cm on print, or under ~150 px on screen, phones struggle. When in doubt, go bigger.</li>
+<li><strong>Low contrast.</strong> Fancy colors look great and fail quietly. Dark code on a light background, always. See the <a href="/blog/qr-code-print-size-guide/">print size guide</a> for the distance rule.</li>
+<li><strong>Stretching.</strong> Dragging a corner distorts the grid. Resize proportionally (hold Shift in most apps) so the squares stay square.</li>
+</ul>
+""",
+  howto=[
+    ("Make the code",
+     "In the FreeQrly studio, pick the type, fill it in, style it if you want."),
+    ("Download PNG",
+     "PNG at 1024 px or higher. SVG if your app accepts it; Word and Docs do not."),
+    ("Insert it",
+     "Canva: Uploads. Excel/Word: Insert → Pictures. Docs/Sheets: Insert → Image."),
+    ("Test it",
+     "Scan with your phone camera. If it reads on the first try, ship it."),
+  ],
+  faq=[
+    ("Does Canva have a built-in QR code generator?",
+     "Canva has a QR app in its marketplace, but it locks the style and keeps the code inside Canva. A FreeQrly PNG gives you full control and works everywhere."),
+    ("Can Excel generate QR codes natively?",
+     "No. Excel has no QR function. Paste a PNG — it prints, survives file sharing, and works in every version."),
+    ("PNG or SVG for Word and Docs?",
+     "PNG. Word and Google Docs handle PNG images natively; SVG support is inconsistent. Export at 1024 px or higher for print."),
+    ("Will the code stay sharp when I export to PDF?",
+     "Yes, if you start from a 1024 px PNG and don't shrink it tiny. Test-scan the exported PDF before sending it out."),
+  ],
+  cta=dict(title="Make your QR code",
+           text="Free, no sign-up for static codes. PNG and SVG export.",
+           href="/#studio", btn="Open the studio"),
+ ),
+]
+
 def faq_json(faq):
     return ",\n    ".join(
         '{\n      "@type": "Question",\n      "name": "%s",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "%s"\n      }\n    }' % (q.replace('"', '\\"'), a.replace('"', '\\"'))
