@@ -87,6 +87,29 @@ for lang in LANGS:
     # Fix asset paths: relative -> absolute (page lives in /{lang}/)
     h = re.sub(r'((?:href|src)=")assets/', r'\1/assets/', h)
 
+    # Translate the FAQPage JSON-LD (name/text) — the data-i18n pass above
+    # only touches visible elements, so without this the localized pages
+    # keep the English FAQPage block. Map by position: mainEntity[i]
+    # corresponds to q{i+1}/a{i+1} (same order as the visible FAQ).
+    def _faq_ld(m):
+        block = m.group(1)
+        try:
+            obj = json.loads(block)
+        except Exception:
+            return m.group(0)
+        if not isinstance(obj, dict) or obj.get("@type") != "FAQPage":
+            return m.group(0)
+        ents = obj.get("mainEntity") or []
+        if len(ents) != 7:
+            return m.group(0)
+        for i, ent in enumerate(ents):
+            ent["name"] = tr.get(f"q{i+1}", ent.get("name", ""))
+            ans = ent.get("acceptedAnswer") or {}
+            ans["text"] = tr.get(f"a{i+1}", ans.get("text", ""))
+            ent["acceptedAnswer"] = ans
+        return "<script type=\"application/ld+json\">\n" + json.dumps(obj, ensure_ascii=False, indent=2) + "\n</script>"
+    h = re.sub(r'<script type="application/ld\+json">\n(.*?)</script>', _faq_ld, h, flags=re.S)
+
     # Write to /{lang}/index.html
     outdir = os.path.join(SITE, lang)
     os.makedirs(outdir, exist_ok=True)

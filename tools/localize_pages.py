@@ -146,6 +146,14 @@ def localize_page(key, lang, trans):
         out = re.sub(r'<link rel="canonical"[^>]*>', f'<link rel="canonical" href="{canon}">', out, count=1)
     else:
         out = out.replace(block.split("\n")[0], block.split("\n")[0] + f'\n<link rel="canonical" href="{canon}">', 1)
+    # og:locale: EN templates ship en_US + alternates; localized pages must
+    # carry their own locale as primary (same rule as build-home-i18n.py),
+    # otherwise they'd inherit en_US verbatim.
+    _LOCALES = {'en':'en_US','zh':'zh_CN','es':'es_ES','hi':'hi_IN','ar':'ar_AR','pt':'pt_BR','fr':'fr_FR','ru':'ru_RU','de':'de_DE','ja':'ja_JP'}
+    _alts = ''.join(f'<meta property="og:locale:alternate" content="{v}">\n' for k, v in _LOCALES.items() if k != lang)
+    if 'property="og:locale"' in out:
+        out = re.sub(r'<meta property="og:locale" content="[^"]*">\n(?:<meta property="og:locale:alternate" content="[^"]*">\n)*',
+                     f'<meta property="og:locale" content="{_LOCALES[lang]}">\n{_alts}', out, count=1)
     out_path = os.path.join(SITE, out_tmpl.format(lang=lang))
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     open(out_path, "w", encoding="utf-8").write(out)
