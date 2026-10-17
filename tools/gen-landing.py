@@ -485,7 +485,7 @@ def build(p):
     <div class="fin"><a href="/" style="color:inherit">FreeQrly</a> — made quietly, static codes in your browser.</div>
     <div class="rule"></div>
     <div class="lplinks">{foot_links}</div>
-    <div class="lplinks"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>
+    <div class="lplinks"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
     <div class="tiny">© 2026 FreeQrly</div>
   </footer>
 </div>
