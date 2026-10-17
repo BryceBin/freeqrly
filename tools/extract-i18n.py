@@ -182,6 +182,7 @@ PAGES = {
     "terms": "terms/index.html",
     "about": "about/index.html",
     "scan": "scan/index.html",
+    "barcode-generator": "barcode-generator/index.html",
     "developers": "developers/index.html",
     "blog-index": "blog/index.html",
 }

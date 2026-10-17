@@ -25,6 +25,7 @@ PAGES = {
     "terms": ("terms/index.html", "{lang}/terms/index.html"),
     "about": ("about/index.html", "{lang}/about/index.html"),
     "scan": ("scan/index.html", "{lang}/scan/index.html"),
+    "barcode-generator": ("barcode-generator/index.html", "{lang}/barcode-generator/index.html"),
     "developers": ("developers/index.html", "{lang}/developers/index.html"),
     "blog-index": ("blog/index.html", "{lang}/blog/index.html"),
 }
@@ -119,7 +120,7 @@ def localize_page(key, lang, trans):
         "menu-qr-code", "payment-qr-code", "youtube-qr-code",
         "whatsapp-qr-code", "tiktok-qr-code", "spotify-qr-code",
         "facebook-qr-code", "google-maps-qr-code", "about", "privacy", "terms", "developers",
-        "scan", "login", "reset", "blog"])
+        "scan", "barcode-generator", "login", "reset", "blog"])
     def _loc_url(m):
         pre, url = m.group(1), m.group(2)
         mm = re.match(r'^(https://freeqrly\.com)?(/[^?#]*)([?#].*)?$', url)

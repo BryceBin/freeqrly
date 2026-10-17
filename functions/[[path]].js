@@ -13,11 +13,11 @@ const LANG_SLUGS = new Set([
   'payment-qr-code', 'youtube-qr-code', 'whatsapp-qr-code',
   'tiktok-qr-code', 'spotify-qr-code', 'facebook-qr-code',
   'google-maps-qr-code',
-  'about', 'privacy', 'terms', 'developers', 'scan', 'login', 'reset',
+  'about', 'privacy', 'terms', 'developers', 'scan', 'barcode-generator', 'login', 'reset',
 ]);
 
 const TOP_LEVEL = new Set([
-  'scan', 'about', 'developers', 'login', 'dashboard', 'privacy', 'terms', 'reset',
+  'scan', 'barcode-generator', 'about', 'developers', 'login', 'dashboard', 'privacy', 'terms', 'reset',
   'zh', 'es', 'hi', 'ar', 'pt', 'fr', 'ru', 'de', 'ja',
   'sitemap.xml', 'robots.txt', 'llms.txt', 'og.png', 'favicon.ico', '404.html',
   'google-form-qr-code', 'wifi-qr-code', 'vcard-qr-code', 'batch-qr-code',

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de códigos de barras gratis | FreeQrly</title>
+<meta name="description" content="Genera códigos de barras gratis: Code 128, EAN-13, UPC-A, Code 39, ITF-14. Sin registro, sin marca de agua. Descarga en PNG o SVG para empaques y etiquetas.">
+<link rel="canonical" href="https://freeqrly.com/es/barcode-generator/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/barcode-generator/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/barcode-generator/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/barcode-generator/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/barcode-generator/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/barcode-generator/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/barcode-generator/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/barcode-generator/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/barcode-generator/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/barcode-generator/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/barcode-generator/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/barcode-generator/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Generador de códigos de barras gratis | FreeQrly">
+<meta property="og:description" content="Code 128, EAN-13, UPC-A, Code 39, ITF-14 — generados en tu navegador, gratis, sin marca de agua.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/es/barcode-generator/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3l-20261017">
+<style>
+.bc-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;max-width:640px;margin:26px auto 0;text-align:left}
+.bc-row{margin-bottom:16px}
+.bc-label{display:block;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--ink)}
+.bc-hint{font-size:13px;color:var(--soft);margin:8px 0 0;line-height:1.5}
+.bc-err{font-size:13.5px;color:#b3452e;margin:10px 0 0;line-height:1.5}
+.bc-check{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--ink);cursor:pointer}
+.bc-check input{width:18px;height:18px;accent-color:var(--coral);cursor:pointer}
+.bc-preview{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 14px;margin:18px 0 0;text-align:center;overflow-x:auto}
+.bc-preview svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.bc-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
+@media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"Generador de códigos de barras FreeQrly","url":"https://freeqrly.com/es/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Genera códigos de barras Code 128, EAN-13, UPC-A, Code 39 e ITF-14 gratis, en el navegador. Descarga en PNG o SVG."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"¿Qué formato de código de barras debo usar?","acceptedAnswer":{"@type":"Answer","text":"Code 128 para uso general: admite cualquier texto. EAN-13 para productos de venta internacional, UPC-A para venta en EE. UU., Code 39 cuando el escáner es viejo o el código debe leerse a simple vista, ITF-14 para cajas de envío."}},
+  {"@type":"Question","name":"¿Necesito un dígito de control?","acceptedAnswer":{"@type":"Answer","text":"No: para EAN-13, UPC-A e ITF-14, escribe un dígito menos y el dígito de control se calcula por ti. Code 128 y Code 39 no necesitan ninguno."}},
+  {"@type":"Question","name":"¿PNG o SVG para imprimir?","acceptedAnswer":{"@type":"Answer","text":"SVG para empaques e impresión profesional: escala sin límite y sin borrosidad. PNG para impresión de oficina y apps que no aceptan SVG."}},
+  {"@type":"Question","name":"¿De verdad es gratis? ¿Sin marca de agua?","acceptedAnswer":{"@type":"Answer","text":"Gratis, sin marca de agua, sin registro. El código se dibuja en tu navegador: nada se sube."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Crea un código de barras","description":"Genera un código de barras gratis, en tu navegador.","step":[
+  {"@type":"HowToStep","name":"Elige un formato","text":"Code 128 para uso general, EAN-13 para productos de venta, UPC-A para venta en EE. UU., Code 39 para escáneres antiguos, ITF-14 para cajas de envío."},
+  {"@type":"HowToStep","name":"Escribe el valor","text":"Escribe el número o el texto. Para EAN-13, UPC-A e ITF-14, omite el dígito de control: se añade automáticamente."},
+  {"@type":"HowToStep","name":"Personalízalo","text":"Ancho de barras, altura y si el valor se muestra debajo de las barras."},
+  {"@type":"HowToStep","name":"Download","text":"PNG para impresión de oficina, SVG para empaques e impresión profesional."}
+]}
+</script>
+<link rel="preconnect" href="https://assets.freeqrly.com">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/es/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/es/#studio">Generador</a><a href="/es/blog/">Notas de campo</a><a href="/es/about/">Acerca de</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="themeBtn" aria-label="theme">&#9681;</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <article class="article scanwrap">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt="Qly con una pila de cajas"></div>
+    <div class="kicker" style="text-align:center">Generador de códigos de barras</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Códigos de barras, <span class="hl hl-honey">sin software</span>.</h1>
+    <p class="lede">Code 128, EAN-13, UPC-A, Code 39, ITF-14 — generados en tu navegador, gratis, sin registro, sin marca de agua. Descarga en PNG o SVG para empaques y etiquetas.</p>
+
+    <div class="bc-card">
+      <div class="bc-row">
+        <label class="bc-label">Formato</label>
+        <div class="seg" id="bcFormatSeg">
+          <button type="button" data-format="CODE128">Code 128</button>
+          <button type="button" data-format="EAN13" class="on">EAN-13</button>
+          <button type="button" data-format="UPC">UPC-A</button>
+          <button type="button" data-format="CODE39">Code 39</button>
+          <button type="button" data-format="ITF14">ITF-14</button>
+        </div>
+      </div>
+      <div class="bc-row">
+        <label class="bc-label" for="bcValue">Valor</label>
+        <input type="text" id="bcValue" value="5901234123457" placeholder="e.g. 5901234123457" autocomplete="off" spellcheck="false">
+        <p class="bc-hint" data-hint="CODE128" hidden>Cualquier letra, número y símbolo. Las letras distinguen mayúsculas y minúsculas.</p>
+        <p class="bc-hint" data-hint="EAN13">12 o 13 dígitos: el último es el dígito de control, que se añade automáticamente si escribes 12.</p>
+        <p class="bc-hint" data-hint="UPC" hidden>11 o 12 dígitos: el dígito de control se añade automáticamente si escribes 11.</p>
+        <p class="bc-hint" data-hint="CODE39" hidden>Letras mayúsculas, dígitos y espacio . - $ / + % — las minúsculas se convierten a mayúsculas.</p>
+        <p class="bc-hint" data-hint="ITF14" hidden>13 o 14 dígitos: el dígito de control se añade automáticamente si escribes 13.</p>
+      </div>
+      <div class="bc-row">
+        <label class="bc-label">Ancho de barras</label>
+        <div class="seg" id="bcWidthSeg">
+          <button type="button" data-width="1">Fino</button>
+          <button type="button" data-width="2" class="on">Normal</button>
+          <button type="button" data-width="3">Ancho</button>
+        </div>
+      </div>
+      <div class="bc-row">
+        <label class="bc-label">Altura</label>
+        <div class="seg" id="bcHeightSeg">
+          <button type="button" data-height="60">Bajo</button>
+          <button type="button" data-height="100" class="on">Medio</button>
+          <button type="button" data-height="140">Alto</button>
+        </div>
+      </div>
+      <div class="bc-row">
+        <label class="bc-check"><input type="checkbox" id="bcShow" checked> Mostrar el valor debajo del código</label>
+      </div>
+      <div class="bc-preview">
+        <svg id="bcSvg" role="img" aria-label="Barcode preview"></svg>
+      </div>
+      <p class="bc-err" id="bcErrEmpty" hidden>Primero escribe un valor.</p>
+      <p class="bc-err" id="bcErrInvalid" hidden>Ese valor no funciona con este formato. Revisa la pista.</p>
+      <div class="bc-btns">
+        <button class="btn-solid" id="bcPng" type="button">Descargar PNG</button>
+        <button class="btn-ghost" id="bcSvgBtn" type="button">Descargar SVG</button>
+      </div>
+    </div>
+    <p class="privnote" style="text-align:center">Renderizado localmente con JsBarcode: tus valores nunca salen de esta página.</p>
+
+    <h2 style="text-align:center;margin-top:44px">Bueno saberlo</h2>
+    <details><summary><span>¿Qué formato de código de barras debo usar?</span></summary><p>Code 128 para uso general: admite cualquier texto. EAN-13 para productos de venta internacional, UPC-A para venta en EE. UU., Code 39 cuando el escáner es viejo o el código debe leerse a simple vista, ITF-14 para cajas de envío.</p></details>
+    <details><summary><span>¿Necesito un dígito de control?</span></summary><p>No: para EAN-13, UPC-A e ITF-14, escribe un dígito menos y el dígito de control se calcula por ti. Code 128 y Code 39 no necesitan ninguno.</p></details>
+    <details><summary><span>¿PNG o SVG para imprimir?</span></summary><p>SVG para empaques e impresión profesional: escala sin límite y sin borrosidad. PNG para impresión de oficina y apps que no aceptan SVG.</p></details>
+    <details><summary><span>¿De verdad es gratis? ¿Sin marca de agua?</span></summary><p>Gratis, sin marca de agua, sin registro. El código se dibuja en tu navegador: nada se sube.</p></details>
+
+    <p style="text-align:center;margin-top:26px"><a class="btn" href="/es/#studio" style="text-decoration:none">Crea un código QR →</a></p>
+  </article>
+
+<footer>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly, el elefante, saludando"></div>
+    <p class="fline">Hecho en silencio, en tu navegador.</p>
+    <p class="flinks"><a href="/es/#studio">Studio</a><a href="/es/scan/">QR scanner</a><a href="/es/blog/">Notas de campo</a><a href="/es/about/">About FreeQrly</a><a href="/es/developers/">API &amp; MCP for agents</a></p>
+    <p class="fmeta">© 2026 FreeQrly</p>
+  </footer>
+</div>
+<script src="/assets/lib/jsbarcode.min.js"></script>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+(function(){
+  const svg=document.getElementById("bcSvg"),
+        input=document.getElementById("bcValue"),
+        errEmpty=document.getElementById("bcErrEmpty"),
+        errInvalid=document.getElementById("bcErrInvalid");
+  let format="EAN13", width=2, height=100, show=true;
+  function pick(seg, attr, cb){
+    seg.querySelectorAll("button").forEach(b=>{
+      b.onclick=()=>{
+        seg.querySelectorAll("button").forEach(x=>x.classList.remove("on"));
+        b.classList.add("on");
+        cb(b.getAttribute(attr));
+      };
+    });
+  }
+  function hints(){
+    document.querySelectorAll(".bc-hint").forEach(h=>{ h.hidden = h.getAttribute("data-hint")!==format; });
+  }
+  function render(){
+    const v=input.value.trim();
+    errEmpty.hidden=true; errInvalid.hidden=true;
+    if(!v){ errEmpty.hidden=false; svg.innerHTML=""; return; }
+    try{
+      JsBarcode(svg, v, {format:format, width:width, height:height, displayValue:show, margin:12, background:"#ffffff", fontSize:16});
+    }catch(e){
+      errInvalid.hidden=false; svg.innerHTML="";
+    }
+  }
+  pick(document.getElementById("bcFormatSeg"), "data-format", f=>{ format=f; hints(); render(); });
+  pick(document.getElementById("bcWidthSeg"), "data-width", w=>{ width=parseInt(w,10); render(); });
+  pick(document.getElementById("bcHeightSeg"), "data-height", h=>{ height=parseInt(h,10); render(); });
+  document.getElementById("bcShow").onchange=e=>{ show=e.target.checked; render(); };
+  input.addEventListener("input", render);
+  function download(url, name){
+    const a=document.createElement("a"); a.href=url; a.download=name;
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  document.getElementById("bcSvgBtn").onclick=()=>{
+    if(!svg.innerHTML) return;
+    const blob=new Blob([new XMLSerializer().serializeToString(svg)], {type:"image/svg+xml;charset=utf-8"});
+    const url=URL.createObjectURL(blob);
+    download(url, "barcode.svg");
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+  };
+  document.getElementById("bcPng").onclick=()=>{
+    if(!svg.innerHTML) return;
+    const str=new XMLSerializer().serializeToString(svg);
+    const img=new Image();
+    img.onload=()=>{
+      const scale=3, pad=20;
+      const c=document.createElement("canvas");
+      c.width=img.naturalWidth*scale+pad*2; c.height=img.naturalHeight*scale+pad*2;
+      const ctx=c.getContext("2d");
+      ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,c.width,c.height);
+      ctx.drawImage(img,pad,pad,img.naturalWidth*scale,img.naturalHeight*scale);
+      const url=c.toDataURL("image/png");
+      download(url, "barcode.png");
+    };
+    img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(str);
+  };
+  hints();
+  render();
+})();
+</script>
+</body>
+</html>

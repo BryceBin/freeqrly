@@ -826,6 +826,8 @@ POSTS += [
 <p>For consumer-facing uses, yes — and retail is moving that way with GS1 Digital Link, which puts a QR code on pack that carries the same product identity a barcode does, plus a link to web content. For checkout lanes with laser-only scanners, barcodes stay for now: laser scanners cannot read 2D codes. The practical rule: barcode where laser scanners rule, QR code everywhere a phone is involved.</p>
 
 <p>Want the QR side? <a href="/#studio">Make a QR code</a> — free, no sign-up for static codes. Curious about the editable kind? <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>.</p>
+
+<p>Need a barcode instead? <a href="/barcode-generator/">Make a barcode</a> — free, no sign-up.</p>
 """,
   faq=[
     ("Can a QR code hold the same number as a barcode?",

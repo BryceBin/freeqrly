@@ -20,7 +20,7 @@ CONTENT = {
     "payment-qr-code", "youtube-qr-code", "whatsapp-qr-code",
     "tiktok-qr-code", "spotify-qr-code", "facebook-qr-code",
     "google-maps-qr-code",
-    "about", "privacy", "terms", "developers", "scan",
+    "about", "privacy", "terms", "developers", "scan", "barcode-generator",
 }
 EXCLUDE_DIRS = {"assets", "skills", "api", "functions", "tools", "login", "reset",
                  "dashboard", "node_modules", ".git"}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бесплатный генератор штрихкодов | FreeQrly</title>
+<meta name="description" content="Создавайте штрихкоды бесплатно: Code 128, EAN-13, UPC-A, Code 39, ITF-14. Без регистрации, без водяных знаков. Скачивайте PNG или SVG для упаковки и этикеток.">
+<link rel="canonical" href="https://freeqrly.com/ru/barcode-generator/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/barcode-generator/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/barcode-generator/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/barcode-generator/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/barcode-generator/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/barcode-generator/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/barcode-generator/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/barcode-generator/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/barcode-generator/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/barcode-generator/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/barcode-generator/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/barcode-generator/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Бесплатный генератор штрихкодов | FreeQrly">
+<meta property="og:description" content="Code 128, EAN-13, UPC-A, Code 39, ITF-14 — генерируются в вашем браузере, бесплатно, без водяных знаков.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeqrly.com/ru/barcode-generator/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3l-20261017">
+<style>
+.bc-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;max-width:640px;margin:26px auto 0;text-align:left}
+.bc-row{margin-bottom:16px}
+.bc-label{display:block;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--ink)}
+.bc-hint{font-size:13px;color:var(--soft);margin:8px 0 0;line-height:1.5}
+.bc-err{font-size:13.5px;color:#b3452e;margin:10px 0 0;line-height:1.5}
+.bc-check{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--ink);cursor:pointer}
+.bc-check input{width:18px;height:18px;accent-color:var(--coral);cursor:pointer}
+.bc-preview{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 14px;margin:18px 0 0;text-align:center;overflow-x:auto}
+.bc-preview svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.bc-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
+@media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"Генератор штрихкодов FreeQrly","url":"https://freeqrly.com/ru/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Создавайте штрихкоды Code 128, EAN-13, UPC-A, Code 39 и ITF-14 бесплатно, в браузере. Скачивайте PNG или SVG."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Какой формат штрихкода выбрать?","acceptedAnswer":{"@type":"Answer","text":"Code 128 — для общего использования, он хранит любой текст. EAN-13 — для розничных товаров, продаваемых по всему миру, UPC-A — для розничной торговли в США, Code 39 — когда сканер старый или код должен читаться человеком, ITF-14 — для транспортных коробок."}},
+  {"@type":"Question","name":"Нужна ли контрольная цифра?","acceptedAnswer":{"@type":"Answer","text":"Нет — для EAN-13, UPC-A и ITF-14 введите на одну цифру меньше, и контрольная цифра будет рассчитана за вас. Code 128 и Code 39 в ней не нуждаются."}},
+  {"@type":"Question","name":"PNG или SVG для печати?","acceptedAnswer":{"@type":"Answer","text":"SVG — для упаковки и профессиональной печати: масштабируется бесконечно без размытия. PNG — для офисной печати и приложений, не принимающих SVG."}},
+  {"@type":"Question","name":"Это правда бесплатно? Без водяных знаков?","acceptedAnswer":{"@type":"Answer","text":"Бесплатно, без водяных знаков, без регистрации. Штрихкод рисуется в вашем браузере — ничего не загружается."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Создайте штрихкод","description":"Создайте штрихкод бесплатно, в браузере.","step":[
+  {"@type":"HowToStep","name":"Выберите формат","text":"Code 128 — для общего использования, EAN-13 — для розничных товаров, UPC-A — для розничной торговли в США, Code 39 — для старых сканеров, ITF-14 — для транспортных коробок."},
+  {"@type":"HowToStep","name":"Введите значение","text":"Введите число или текст. Для EAN-13, UPC-A и ITF-14 не вводите контрольную цифру — она добавляется автоматически."},
+  {"@type":"HowToStep","name":"Оформите","text":"Ширина штриха, высота и показ значения под штрихами."},
+  {"@type":"HowToStep","name":"Download","text":"PNG — для офисной печати, SVG — для упаковки и профессиональной печати."}
+]}
+</script>
+<link rel="preconnect" href="https://assets.freeqrly.com">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/ru/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/ru/#studio">Студия</a><a href="/ru/blog/">Заметки</a><a href="/ru/about/">О проекте</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="themeBtn" aria-label="theme">&#9681;</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+
+  <article class="article scanwrap">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/batch.webp" alt="Qly со стопкой коробок"></div>
+    <div class="kicker" style="text-align:center">Генератор штрихкодов</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Штрихкоды <span class="hl hl-honey">без программ</span>.</h1>
+    <p class="lede">Code 128, EAN-13, UPC-A, Code 39, ITF-14 — генерируются в вашем браузере, бесплатно, без регистрации, без водяных знаков. Скачивайте PNG или SVG для упаковки и этикеток.</p>
+
+    <div class="bc-card">
+      <div class="bc-row">
+        <label class="bc-label">Формат</label>
+        <div class="seg" id="bcFormatSeg">
+          <button type="button" data-format="CODE128">Code 128</button>
+          <button type="button" data-format="EAN13" class="on">EAN-13</button>
+          <button type="button" data-format="UPC">UPC-A</button>
+          <button type="button" data-format="CODE39">Code 39</button>
+          <button type="button" data-format="ITF14">ITF-14</button>
+        </div>
+      </div>
+      <div class="bc-row">
+        <label class="bc-label" for="bcValue">Значение</label>
+        <input type="text" id="bcValue" value="5901234123457" placeholder="e.g. 5901234123457" autocomplete="off" spellcheck="false">
+        <p class="bc-hint" data-hint="CODE128" hidden>Любые буквы, цифры и символы. Буквы чувствительны к регистру.</p>
+        <p class="bc-hint" data-hint="EAN13">12 или 13 цифр — последняя цифра — контрольная, добавляется автоматически, если ввести 12.</p>
+        <p class="bc-hint" data-hint="UPC" hidden>11 или 12 цифр — контрольная цифра добавляется автоматически, если ввести 11.</p>
+        <p class="bc-hint" data-hint="CODE39" hidden>Заглавные буквы, цифры и пробел . - $ / + % — строчные буквы преобразуются в заглавные.</p>
+        <p class="bc-hint" data-hint="ITF14" hidden>13 или 14 цифр — контрольная цифра добавляется автоматически, если ввести 13.</p>
+      </div>
+      <div class="bc-row">
+        <label class="bc-label">Ширина штриха</label>
+        <div class="seg" id="bcWidthSeg">
+          <button type="button" data-width="1">Тонкий</button>
+          <button type="button" data-width="2" class="on">Обычный</button>
+          <button type="button" data-width="3">Широкий</button>
+        </div>
+      </div>
+      <div class="bc-row">
+        <label class="bc-label">Высота</label>
+        <div class="seg" id="bcHeightSeg">
+          <button type="button" data-height="60">Низкая</button>
+          <button type="button" data-height="100" class="on">Средняя</button>
+          <button type="button" data-height="140">Высокая</button>
+        </div>
+      </div>
+      <div class="bc-row">
+        <label class="bc-check"><input type="checkbox" id="bcShow" checked> Показывать значение под штрихкодом</label>
+      </div>
+      <div class="bc-preview">
+        <svg id="bcSvg" role="img" aria-label="Barcode preview"></svg>
+      </div>
+      <p class="bc-err" id="bcErrEmpty" hidden>Сначала введите значение.</p>
+      <p class="bc-err" id="bcErrInvalid" hidden>Это значение не подходит для данного формата. Проверьте подсказку.</p>
+      <div class="bc-btns">
+        <button class="btn-solid" id="bcPng" type="button">Скачать PNG</button>
+        <button class="btn-ghost" id="bcSvgBtn" type="button">Скачать SVG</button>
+      </div>
+    </div>
+    <p class="privnote" style="text-align:center">Отрисовывается локально с помощью JsBarcode — ваши значения никогда не покидают эту страницу.</p>
+
+    <h2 style="text-align:center;margin-top:44px">Полезно знать</h2>
+    <details><summary><span>Какой формат штрихкода выбрать?</span></summary><p>Code 128 — для общего использования, он хранит любой текст. EAN-13 — для розничных товаров, продаваемых по всему миру, UPC-A — для розничной торговли в США, Code 39 — когда сканер старый или код должен читаться человеком, ITF-14 — для транспортных коробок.</p></details>
+    <details><summary><span>Нужна ли контрольная цифра?</span></summary><p>Нет — для EAN-13, UPC-A и ITF-14 введите на одну цифру меньше, и контрольная цифра будет рассчитана за вас. Code 128 и Code 39 в ней не нуждаются.</p></details>
+    <details><summary><span>PNG или SVG для печати?</span></summary><p>SVG — для упаковки и профессиональной печати: масштабируется бесконечно без размытия. PNG — для офисной печати и приложений, не принимающих SVG.</p></details>
+    <details><summary><span>Это правда бесплатно? Без водяных знаков?</span></summary><p>Бесплатно, без водяных знаков, без регистрации. Штрихкод рисуется в вашем браузере — ничего не загружается.</p></details>
+
+    <p style="text-align:center;margin-top:26px"><a class="btn" href="/ru/#studio" style="text-decoration:none">Сделать QR-код →</a></p>
+  </article>
+
+<footer>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly — слон машет рукой"></div>
+    <p class="fline">Сделано тихо, в вашем браузере.</p>
+    <p class="flinks"><a href="/ru/#studio">Studio</a><a href="/ru/scan/">QR scanner</a><a href="/ru/blog/">Заметки</a><a href="/ru/about/">About FreeQrly</a><a href="/ru/developers/">API &amp; MCP for agents</a></p>
+    <p class="fmeta">© 2026 FreeQrly</p>
+  </footer>
+</div>
+<script src="/assets/lib/jsbarcode.min.js"></script>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+(function(){
+  const svg=document.getElementById("bcSvg"),
+        input=document.getElementById("bcValue"),
+        errEmpty=document.getElementById("bcErrEmpty"),
+        errInvalid=document.getElementById("bcErrInvalid");
+  let format="EAN13", width=2, height=100, show=true;
+  function pick(seg, attr, cb){
+    seg.querySelectorAll("button").forEach(b=>{
+      b.onclick=()=>{
+        seg.querySelectorAll("button").forEach(x=>x.classList.remove("on"));
+        b.classList.add("on");
+        cb(b.getAttribute(attr));
+      };
+    });
+  }
+  function hints(){
+    document.querySelectorAll(".bc-hint").forEach(h=>{ h.hidden = h.getAttribute("data-hint")!==format; });
+  }
+  function render(){
+    const v=input.value.trim();
+    errEmpty.hidden=true; errInvalid.hidden=true;
+    if(!v){ errEmpty.hidden=false; svg.innerHTML=""; return; }
+    try{
+      JsBarcode(svg, v, {format:format, width:width, height:height, displayValue:show, margin:12, background:"#ffffff", fontSize:16});
+    }catch(e){
+      errInvalid.hidden=false; svg.innerHTML="";
+    }
+  }
+  pick(document.getElementById("bcFormatSeg"), "data-format", f=>{ format=f; hints(); render(); });
+  pick(document.getElementById("bcWidthSeg"), "data-width", w=>{ width=parseInt(w,10); render(); });
+  pick(document.getElementById("bcHeightSeg"), "data-height", h=>{ height=parseInt(h,10); render(); });
+  document.getElementById("bcShow").onchange=e=>{ show=e.target.checked; render(); };
+  input.addEventListener("input", render);
+  function download(url, name){
+    const a=document.createElement("a"); a.href=url; a.download=name;
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  document.getElementById("bcSvgBtn").onclick=()=>{
+    if(!svg.innerHTML) return;
+    const blob=new Blob([new XMLSerializer().serializeToString(svg)], {type:"image/svg+xml;charset=utf-8"});
+    const url=URL.createObjectURL(blob);
+    download(url, "barcode.svg");
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+  };
+  document.getElementById("bcPng").onclick=()=>{
+    if(!svg.innerHTML) return;
+    const str=new XMLSerializer().serializeToString(svg);
+    const img=new Image();
+    img.onload=()=>{
+      const scale=3, pad=20;
+      const c=document.createElement("canvas");
+      c.width=img.naturalWidth*scale+pad*2; c.height=img.naturalHeight*scale+pad*2;
+      const ctx=c.getContext("2d");
+      ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,c.width,c.height);
+      ctx.drawImage(img,pad,pad,img.naturalWidth*scale,img.naturalHeight*scale);
+      const url=c.toDataURL("image/png");
+      download(url, "barcode.png");
+    };
+    img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(str);
+  };
+  hints();
+  render();
+})();
+</script>
+</body>
+</html>

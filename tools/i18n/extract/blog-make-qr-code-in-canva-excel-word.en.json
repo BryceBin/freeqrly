@@ -37,7 +37,6 @@
  "Will the code stay sharp when I export to PDF?",
  "Make the code",
  "In the FreeQrly studio, pick the type, fill it in, style it if you want.",
- "Download PNG",
  "PNG at 1024 px or higher. SVG if your app accepts it; Word and Docs do not.",
  "Insert it",
  "Canva: Uploads. Excel/Word: Insert → Pictures. Docs/Sheets: Insert → Image.",
