@@ -18,6 +18,8 @@ CONTENT = {
     "wedding-qr-code", "instagram-qr-code", "real-estate-qr-code",
     "pdf-qr-code", "multi-link-qr-code", "menu-qr-code",
     "payment-qr-code", "youtube-qr-code", "whatsapp-qr-code",
+    "tiktok-qr-code", "spotify-qr-code", "facebook-qr-code",
+    "google-maps-qr-code",
     "about", "privacy", "terms", "developers", "scan",
 }
 EXCLUDE_DIRS = {"assets", "skills", "api", "functions", "tools", "login", "reset",

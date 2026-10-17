@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRコードがぼやけるのはなぜ？効く修正方法 | FreeQrly</title>
+<meta name="description" content="ぼやけたQRコードが読み取れない？5つのよくある原因：低解像度書き出し、サイズ間違い、JPEG圧縮、引き伸ばし、印刷の質。それぞれの修正方法。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/why-is-my-qr-code-blurry/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QRコードがぼやけるのはなぜ？効く修正方法 | FreeQrly">
+<meta property="og:description" content="ぼやけたQRコードが読み取れない？5つのよくある原因：低解像度書き出し、サイズ間違い、JPEG圧縮、引き伸ばし、印刷の質。それぞれの修正方法。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/why-is-my-qr-code-blurry/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QRコードがぼやけるのはなぜ？効く修正方法 | FreeQrly","description":"ぼやけたQRコードが読み取れない？5つのよくある原因：低解像度書き出し、サイズ間違い、JPEG圧縮、引き伸ばし、印刷の質。それぞれの修正方法。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ぼやけて見えるのにQRコードが読み取れるのはなぜ？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "スマホは寛容です — 誤り訂正がかなりのぼやけを回復します。でも、明るいオフィスで読み取れるコードが、暗い場所や腕を伸ばした距離では失敗することがあります。シャープが安全で、ギリギリ読み取れるは安全ではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ポスターにはどの解像度が必要？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2048pxのPNGが最低ライン、またはSVG。2メートル先から見るポスターは、30cm先から見る名刺よりはるかに多くのピクセルが必要です — 距離のルールは印刷サイズガイドをご覧ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷にはPNGとSVG、どっち？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "プリンターやデザイナーが対応していればSVG — 無限に拡大でき、ぼやけはゼロです。PNGは1024〜2048pxで、オフィス印刷やSVGに対応していないアプリ向けの代替です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ぼやけた印刷コードを再印刷なしで直せる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できません。ぼやけは印刷された画像に焼き付いています。高解像度の書き出し（またはSVG）から再印刷してください。動的コードを編集しても助けにはなりません — 紙の上の模様はそのままです。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"QRコードがぼやけるのはなぜ？効く修正方法 | FreeQrly","description":"ぼやけたQRコードが読み取れない？5つのよくある原因：低解像度書き出し、サイズ間違い、JPEG圧縮、引き伸ばし、印刷の質。それぞれの修正方法。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "適切なサイズで書き出す",
+      "text": "カードやチラシは1024px、ポスターは2048pxのPNGで。プリンターが対応していればSVG。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "PNGかSVGを使う、JPEGは使わない",
+      "text": "JPEGはQRコードのシャープな輪郭をにじませます。画面やオフィス印刷はPNG、プロの印刷はSVG。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "リサイズ時は縦横比を保つ",
+      "text": "Shiftキーやロックアイコンを押して、四角が四角のままになるようにしてください。片方の角だけを自由にドラッグしないでください。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "実際の印刷物をテストスキャン",
+      "text": "最終サイズで1枚印刷し、実際の見る距離まで下がって、スマホでスキャンしてください。1回で読めれば、そのロットは安全です。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/ja/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/ja/#studio">スタジオ</a><a href="/ja/blog/">フィールドノート</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/error.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QRコードが<span class='hl hl-blush'>ぼやける</span>のはなぜ？</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">ぼやけたQRコードは、ほぼ間違いなく解像度の問題です：狭い面積に対してピクセルが足りていない。修正は、もっと大きく書き出すか、SVGを使うことです。</p>
+    <p class="meta" style="text-align:center">2026年10月17日 · 約4分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>QRコードは画面ではくっきり見えるのに、紙にするとボケてしまう。原因はほぼいつも同じです：印刷するサイズに対して画像のピクセルが足りていない。QRコードは小さな四角の集まりです — ピクセルが足りないと輪郭がにじみ、スマホがグリッドを見つけられず、スキャンが失敗します。</p>
+
+<h2>よくある5つの原因</h2>
+<ol>
+<li><b>低解像度の書き出し。</b>512pxのPNGは幅2cmならきれいに見えます。20cmのポスターに引き伸ばすと、1モジュールごとににじみます。印刷が大きいほど、ピクセルが必要です。</li>
+<li><b>JPEG圧縮。</b>JPEGはシャープな輪郭をにじませます — QRコードはまさにそれでできています。低画質のJPEGで保存したコードは、小さくても失敗することがあります。PNGかSVGだけを使ってください。</li>
+<li><b>引き伸ばし。</b>画像の角をドラッグするとグリッドが歪みます：四角が長方形になり、スキャナーが諦めます。必ず縦横比を保ってリサイズしてください。</li>
+<li><b>印刷の質。</b>低DPIのプリンター、粗い紙や吸収性の紙でのインクのにじみ、光沢紙の反射は、どれも輪郭を柔らかくします。マット紙とレーザープリンターは、ナプキン上のインクジェットより優れています。</li>
+<li><b>コピーのコピー。</b>メッセージからコードをスクリーンショットし、そのスクリーンショットをさらにスクリーンショットすると、毎回解像度が落ちます。必ず元の書き出しに戻ってください。</li>
+</ol>
+
+<h2>修正方法</h2>
+<ul>
+<li><strong>もっと大きく書き出す。</strong>カードやチラシは1024px、ポスターは2048pxのPNGで。目安：印刷サイズ（cm）× 約100が、ほしいピクセル数です。</li>
+<li><strong>印刷にはSVGを使う。</strong>SVGはベクター形式 — 無限に拡大でき、ぼやけはゼロです。プリンターやデザイナーが対応していれば使いましょう。</li>
+<li><strong>縦横比を保つ。</strong>リサイズ時はShiftキー（またはロックアイコン）を押して、四角が四角のままになるようにしてください。</li>
+<li><strong>最終サイズで試す。</strong>実際のサイズで1枚印刷し、実際の見る距離まで下がって、スマホでスキャンしてください。1回で読めれば、そのロットは安全です。</li>
+</ul>
+
+<p>シャープに印刷し直しても読み取れない？問題は別にあります — サイズ、コントラスト、破損です。<a href="/ja/blog/why-is-my-qr-code-not-working/">完全なトラブルシューティングガイド</a>で確認してください。サイズと距離のルールは<a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a>をご覧ください。</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>シャープなコードを作る</h3>
+        <p>PNGは最大2048px、SVGは無限に拡大可能。無料、静的コードは登録不要。</p>
+        <a class="btn" href="/ja/#studio">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/static-vs-dynamic-qr-codes/"><b>静的QRコードと動的QRコード</b></a>
+        <a class="rel-card" href="/ja/blog/why-is-my-qr-code-not-working/"><b>QRコードが動作しない？役立つ7つの修正</b></a>
+        <a class="rel-card" href="/ja/blog/qr-codes-for-restaurants/"><b>飲食店向けQRコード — 無料ガイド</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>ぼやけて見えるのにQRコードが読み取れるのはなぜ？</span></summary><p>スマホは寛容です — 誤り訂正がかなりのぼやけを回復します。でも、明るいオフィスで読み取れるコードが、暗い場所や腕を伸ばした距離では失敗することがあります。シャープが安全で、ギリギリ読み取れるは安全ではありません。</p></details>
+    <details><summary><span>ポスターにはどの解像度が必要？</span></summary><p>2048pxのPNGが最低ライン、またはSVG。2メートル先から見るポスターは、30cm先から見る名刺よりはるかに多くのピクセルが必要です — 距離のルールは印刷サイズガイドをご覧ください。</p></details>
+    <details><summary><span>印刷にはPNGとSVG、どっち？</span></summary><p>プリンターやデザイナーが対応していればSVG — 無限に拡大でき、ぼやけはゼロです。PNGは1024〜2048pxで、オフィス印刷やSVGに対応していないアプリ向けの代替です。</p></details>
+    <details><summary><span>ぼやけた印刷コードを再印刷なしで直せる？</span></summary><p>できません。ぼやけは印刷された画像に焼き付いています。高解像度の書き出し（またはSVG）から再印刷してください。動的コードを編集しても助けにはなりません — 紙の上の模様はそのままです。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/ja/" style="color:inherit">FreeQrly</a> — 静かに、ブラウザで作成。</div>
+    <p class="flinks"><a href="/ja/scan/">QRスキャナー</a><a href="/ja/blog/">フィールドノート一覧</a><a href="/ja/about/">FreeQrlyについて</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

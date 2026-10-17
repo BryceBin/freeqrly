@@ -190,7 +190,9 @@ LANDING = ["google-form-qr-code", "wifi-qr-code", "vcard-qr-code", "batch-qr-cod
            "business-card-qr-code", "google-review-qr-code", "qr-code-with-logo",
            "wedding-qr-code", "instagram-qr-code", "real-estate-qr-code",
            "pdf-qr-code", "multi-link-qr-code", "menu-qr-code",
-           "payment-qr-code", "youtube-qr-code", "whatsapp-qr-code"]
+           "payment-qr-code", "youtube-qr-code", "whatsapp-qr-code",
+           "tiktok-qr-code", "spotify-qr-code", "facebook-qr-code",
+           "google-maps-qr-code"]
 for d in LANDING:
     PAGES[f"landing-{d}"] = f"{d}/index.html"
 for d in sorted(os.listdir(os.path.join(SITE, "blog"))):

@@ -14,7 +14,6 @@
  "<b>Built for print</b><span>High-resolution export and vector SVG, quiet zones respected — made for business cards, menus, and posters.</span>",
  "<b>Agent-friendly</b><span>A free <a href=\"/developers/\">API and MCP server</a> so AI assistants can generate codes too.</span>",
  "Questions, answered",
- "Is FreeQrly really free?",
  "Yes — every feature is free, with no watermarks. Static codes need no sign-up and cost nothing to serve once generated in your browser, so there's nothing to charge for.",
  "Do the QR codes expire?",
  "No. Static codes never expire — the destination lives inside the pattern itself. Details: <a href=\"/blog/do-qr-codes-expire/\">do QR codes expire?</a>",

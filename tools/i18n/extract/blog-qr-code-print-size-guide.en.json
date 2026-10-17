@@ -18,9 +18,7 @@
  "As a rule of thumb, 2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, especially for data-heavy codes like vCards.",
  "<span>How big should a QR code be on a poster?</span>",
  "Use the 1:10 rule of thumb: the code width should be at least one-tenth of the expected scanning distance. A poster scanned from 5 meters needs a 50 cm code.",
- "<span>PNG or SVG for print?</span>",
  "SVG is best — it scales infinitely with no quality loss. If your printer needs raster, export PNG at 2048 px.",
  "What is the minimum size for a printed QR code?",
- "How big should a QR code be on a poster?",
- "PNG or SVG for print?"
+ "How big should a QR code be on a poster?"
 ]

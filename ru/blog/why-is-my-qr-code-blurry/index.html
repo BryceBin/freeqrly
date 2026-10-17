@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Почему мой QR-код размыт? Рабочие исправления | FreeQrly</title>
+<meta name="description" content="Размытый QR-код не сканируется? 5 обычных причин: экспорт в низком разрешении, неверный размер, сжатие JPEG, растягивание и плохая печать. Как исправить каждую.">
+<link rel="canonical" href="https://freeqrly.com/ru/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/why-is-my-qr-code-blurry/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/why-is-my-qr-code-blurry/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Почему мой QR-код размыт? Рабочие исправления | FreeQrly">
+<meta property="og:description" content="Размытый QR-код не сканируется? 5 обычных причин: экспорт в низком разрешении, неверный размер, сжатие JPEG, растягивание и плохая печать. Как исправить каждую.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ru/blog/why-is-my-qr-code-blurry/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-elephant.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-elephant.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Почему мой QR-код размыт? Рабочие исправления | FreeQrly","description":"Размытый QR-код не сканируется? 5 обычных причин: экспорт в низком разрешении, неверный размер, сжатие JPEG, растягивание и плохая печать. Как исправить каждую.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Почему мой QR-код выглядит размытым, но всё равно сканируется?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Телефоны снисходительны — коррекция ошибок восстанавливает удивительно много размытия. Но код, который сканируется в вашем светлом офисе, может не сработать в тусклом свете или на расстоянии вытянутой руки. Чёткий — безопасно; едва сканируемый — нет."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какое разрешение нужно для постера?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Минимум PNG в 2048 px или SVG. Постер, на который смотрят с 2 метров, требует куда больше пикселей, чем визитка, на которую смотрят с 30 см, — правило «расстояние» смотрите в гиде по размеру печати."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG или SVG для печати?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVG всегда, когда принтер или дизайнер его принимают, — он масштабируется бесконечно без размытия. PNG в 1024–2048 px — запасной вариант для офисной печати и приложений, не принимающих SVG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли исправить размытый напечатанный код без перепечатки?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Размытие запечено в напечатанное изображение. Перепечатайте из экспорта в более высоком разрешении (или SVG). Редактирование динамического кода не поможет — узор на бумаге есть узор на бумаге."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Почему мой QR-код размыт? Рабочие исправления | FreeQrly","description":"Размытый QR-код не сканируется? 5 обычных причин: экспорт в низком разрешении, неверный размер, сжатие JPEG, растягивание и плохая печать. Как исправить каждую.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Экспортируйте в правильном размере",
+      "text": "PNG в 1024 px для карточек и флаеров, 2048 px для постеров. SVG всегда, когда принтер его принимает."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Используйте PNG или SVG, никогда JPEG",
+      "text": "JPEG размывает чёткие края, из которых состоит QR-код. PNG — для экранов и офисной печати, SVG — для профессиональной печати."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Сохраняйте пропорции при изменении размера",
+      "text": "Держите Shift или значок замка, чтобы квадраты оставались квадратами. Никогда не тяните один угол от руки."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Протестируйте сканирование реального отпечатка",
+      "text": "Напечатайте один экземпляр в финальном размере, отойдите на реальное расстояние просмотра, отсканируйте телефоном. Скан с первой попытки означает, что тираж безопасен."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+    <div class="brand"><a href="/ru/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
+    <nav class="tnav">
+      <a href="/ru/#studio">Студия</a><a href="/ru/blog/">Заметки</a>
+    </nav>
+    <div class="topbtns">
+      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
+      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
+    </div>
+  </header>
+  <div class="topline"></div>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/error.webp" alt="Qly — слон, талисман FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Заметки</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Почему мой QR-код <span class='hl hl-blush'>размыт</span>?</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Размытый QR-код — почти всегда проблема разрешения: слишком мало пикселей, растянутых на слишком большое пространство. Решение — экспортировать в большем размере или как SVG.</p>
+    <p class="meta" style="text-align:center">17 октября 2026 г. · 4 мин чтения</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>QR-код выглядит чётким на экране и превращается в кашу на бумаге. Причина почти всегда одна и та же: у изображения не хватило пикселей на размер, в котором его напечатали. QR-код — это сетка крошечных квадратов: когда пикселей не хватает, края расплываются, телефоны не находят сетку, и сканы не проходят.</p>
+
+<h2>5 обычных причин</h2>
+<ol>
+<li><b>Экспорт в низком разрешении.</b> PNG в 512 px нормально выглядит при ширине 2 см. Растянутый до постера в 20 см, каждый модуль превращается в пятно. Чем больше печать, тем больше пикселей нужно.</li>
+<li><b>Сжатие JPEG.</b> JPEG размывает чёткие края — а именно из них состоит QR-код. Код, сохранённый как JPEG низкого качества, может не сработать даже в малом размере. Только PNG или SVG.</li>
+<li><b>Растягивание.</b> Перетаскивание угла изображения искажает сетку: квадраты становятся прямоугольниками, и сканеры сдаются. Всегда меняйте размер пропорционально.</li>
+<li><b>Плохая печать.</b> Принтеры с низким DPI, растекание чернил на грубой или впитывающей бумаге и блики глянца — всё смягчает края. Матовая бумага и лазерный принтер обыгрывают струйник на салфетке.</li>
+<li><b>Копия с копии.</b> Скриншот кода из сообщения, а потом скриншот этого скриншота, каждый раз теряет разрешение. Всегда возвращайтесь к исходному экспорту.</li>
+</ol>
+
+<h2>Как это исправить</h2>
+<ul>
+<li><strong>Экспортируйте в большем размере.</strong> PNG в 1024 px для карточек и флаеров, 2048 px для постеров. Правило: размер печати в см, умноженный на ~100, — это пиксели, которые вам нужны.</li>
+<li><strong>Используйте SVG для печати.</strong> SVG — вектор, бесконечно масштабируется без размытия. Используйте его, когда принтер или дизайнер его принимают.</li>
+<li><strong>Сохраняйте пропорции.</strong> При изменении размера держите Shift (или значок замка), чтобы квадраты оставались квадратами.</li>
+<li><strong>Тестируйте в финальном размере.</strong> Напечатайте один экземпляр в реальном размере, отойдите на реальное расстояние просмотра и отсканируйте телефоном. Если считалось с первой попытки, тираж безопасен.</li>
+</ul>
+
+<p>После чёткой перепечатки всё равно не сканируется? Проблема в другом — размере, контрасте или повреждении. Об этом — <a href="/ru/blog/why-is-my-qr-code-not-working/">полный гид по устранению неполадок</a>. А правило «размер — расстояние» — в <a href="/ru/blog/qr-code-print-size-guide/">гиде по размеру печати</a>.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly представляет QR-код"></div>
+      <div>
+        <h3>Сделайте чёткий код</h3>
+        <p>Экспорт PNG до 2048 px или бесконечно масштабируемый SVG. Бесплатно, без регистрации для статических кодов.</p>
+        <a class="btn" href="/ru/#studio">Открыть студию</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Читать дальше</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ru/blog/static-vs-dynamic-qr-codes/"><b>Статические и динамические QR-коды</b></a>
+        <a class="rel-card" href="/ru/blog/why-is-my-qr-code-not-working/"><b>QR-код не работает? 7 исправлений, которые помогают</b></a>
+        <a class="rel-card" href="/ru/blog/qr-codes-for-restaurants/"><b>QR-коды для ресторанов — бесплатное руководство</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Полезно знать</h2>
+    <details><summary><span>Почему мой QR-код выглядит размытым, но всё равно сканируется?</span></summary><p>Телефоны снисходительны — коррекция ошибок восстанавливает удивительно много размытия. Но код, который сканируется в вашем светлом офисе, может не сработать в тусклом свете или на расстоянии вытянутой руки. Чёткий — безопасно; едва сканируемый — нет.</p></details>
+    <details><summary><span>Какое разрешение нужно для постера?</span></summary><p>Минимум PNG в 2048 px или SVG. Постер, на который смотрят с 2 метров, требует куда больше пикселей, чем визитка, на которую смотрят с 30 см, — правило «расстояние» смотрите в гиде по размеру печати.</p></details>
+    <details><summary><span>PNG или SVG для печати?</span></summary><p>SVG всегда, когда принтер или дизайнер его принимают, — он масштабируется бесконечно без размытия. PNG в 1024–2048 px — запасной вариант для офисной печати и приложений, не принимающих SVG.</p></details>
+    <details><summary><span>Можно ли исправить размытый напечатанный код без перепечатки?</span></summary><p>Нет. Размытие запечено в напечатанное изображение. Перепечатайте из экспорта в более высоком разрешении (или SVG). Редактирование динамического кода не поможет — узор на бумаге есть узор на бумаге.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fin"><a href="/ru/" style="color:inherit">FreeQrly</a> — сделано тихо, в вашем браузере.</div>
+    <p class="flinks"><a href="/ru/scan/">Сканер QR-кодов</a><a href="/ru/blog/">Все заметки</a><a href="/ru/about/">О проекте</a></p>
+    <div class="rule"></div>
+    <div class="tiny">© 2026 FreeQrly</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
+  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
+  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
+})();
+</script>
+</body>
+</html>

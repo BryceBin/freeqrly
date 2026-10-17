@@ -906,6 +906,124 @@ POSTS += [
  ),
 ]
 
+POSTS += [
+ dict(
+  slug="best-free-qr-code-generators",
+  title="Best Free QR Code Generators in 2026 | FreeQrly",
+  desc="5 free QR code generators compared: FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR. Free tiers, watermarks, limits, and who each fits.",
+  h1="The best free QR code generators, <span class='hl hl-mint'>compared honestly</span>",
+  lede="Every generator calls itself free. The difference is what free actually includes — static codes, editable codes, watermarks, batch, and what happens when you hit the limit.",
+  date="October 17, 2026",
+  datePublished="2026-10-17",
+  mascot="faq",
+  body="""
+<p>"Free" in QR generators means at least three different things: free static codes (the code itself, forever), a few free dynamic codes (editable, with stats), and a free trial that ends. The right pick depends on which one you actually need. Here is how the five best-known free options compare — including this site, with its limits stated plainly.</p>
+
+<h2>The comparison</h2>
+<table>
+<tr><th></th><th>FreeQrly</th><th>QRCode Monkey</th><th>QR Tiger</th><th>QR Code Generator</th><th>ME-QR</th></tr>
+<tr><td><strong>Free static codes</strong></td><td>Unlimited, no sign-up</td><td>Free, with logo / SVG / PDF / EPS</td><td>Free tool</td><td>Free tool</td><td>Free tool</td></tr>
+<tr><td><strong>Free dynamic codes</strong></td><td>8 free, with scan stats</td><td>Paid (via Bitly)</td><td>3 free</td><td>Paid plans</td><td>Free dynamic codes</td></tr>
+<tr><td><strong>Batch generation</strong></td><td>50 per batch, static</td><td>Not stated</td><td>Up to 3,000 per batch</td><td>Not stated</td><td>500–2,000 per batch</td></tr>
+<tr><td><strong>Type range</strong></td><td>12 types + batch</td><td>Core types</td><td>20–24 solutions</td><td>~37 types</td><td>52 types</td></tr>
+<tr><td><strong>Best for</strong></td><td>Free dynamic codes + privacy</td><td>Simple free static codes</td><td>Bulk + enterprise features</td><td>Longest track record (since 2009)</td><td>Widest type range</td></tr>
+</table>
+<p><small>Limits and prices change — check each site before you commit. Figures from public pages and comparisons, October 2026.</small></p>
+
+<h2>What "free" actually means</h2>
+<p>A <strong>static</strong> code carries its content inside the pattern. It costs the provider nothing to serve, so genuinely free static codes — no watermark, no expiry — are the norm, and you should never pay for one. A <strong>dynamic</strong> code points at a short link on the provider's server, which is what makes editing and stats possible — and what costs them money. That is why dynamic codes are where the free tiers end. If a tool's "free" plan gives you dynamic codes, read the number: 3, 8, or unlimited changes everything. <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>.</p>
+
+<h2>The 5 questions to ask before you pick</h2>
+<ol>
+<li><b>Watermark?</b> Some free tiers stamp their logo on your code. If your code goes on packaging, that matters.</li>
+<li><b>Expiry?</b> Static codes should never expire. If a "free" code stops working, it was dynamic on a trial.</li>
+<li><b>Edit after printing?</b> Only dynamic codes allow it. If your link might change, you need dynamic — <a href="/blog/how-to-edit-a-qr-code-after-printing/">here is how editing works</a>.</li>
+<li><b>Stats?</b> Only dynamic codes count scans. Static codes are private by design — nobody, including the provider, sees them.</li>
+<li><b>Privacy?</b> Static codes made in your browser never leave your device. Dynamic codes live on a server by definition. Pick the model that matches the data.</li>
+</ol>
+
+<h2>The verdict</h2>
+<ul>
+<li><strong>Need free dynamic codes with stats?</strong> FreeQrly: 8 free, editable after printing, scan stats included.</li>
+<li><strong>Need bulk or enterprise features?</strong> QR Tiger: up to 3,000 codes per batch, CRM integrations, white-label.</li>
+<li><strong>Just want a quick free static code?</strong> QRCode Monkey is the classic — simple, free, no fuss.</li>
+<li><strong>Want the widest type range?</strong> ME-QR lists 52 types.</li>
+<li><strong>Want the longest-running brand?</strong> QR Code Generator (Egoditor, since 2009, now part of Bitly).</li>
+</ul>
+
+<p>Whatever you pick, test it: generate one code, print it at the size you will actually use, and scan it with your phone. A generator is only as good as its codes on paper. <a href="/#studio">Make a QR code</a> — free, no sign-up for static codes.</p>
+""",
+  faq=[
+    ("Is FreeQrly really free?",
+     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 8 editable codes with scan stats. No trial, no card, no expiry games."),
+    ("Which QR code generator is best for beginners?",
+     "Any of the five above will make a working code. Pick by what you need next: free dynamic editing (FreeQrly), bulk (QR Tiger), widest type range (ME-QR), or the simplest possible static code (QRCode Monkey)."),
+    ("Do free QR codes expire?",
+     "Static codes never expire — the content lives inside the pattern. Dynamic codes can stop working if the provider shuts down or the free tier ends, which is why the provider's longevity matters for dynamic codes."),
+    ("Can I edit a free QR code after printing?",
+     "Only if it is dynamic. Static codes are frozen at print time; dynamic codes point at a short link you control, so you can change the destination without reprinting."),
+  ],
+  cta=dict(title="Compare for yourself",
+           text="Make a code in the studio — free, no sign-up for static codes.",
+           href="/#studio", btn="Open the studio"),
+ ),
+ dict(
+  slug="why-is-my-qr-code-blurry",
+  title="Why Is My QR Code Blurry? Fixes That Work | FreeQrly",
+  desc="Blurry QR code won't scan? The 5 usual causes: low-res export, wrong size, JPEG compression, stretching, and bad print. How to fix each.",
+  h1="Why is my QR code <span class='hl hl-blush'>blurry</span>?",
+  lede="A blurry QR code is almost always a resolution problem: too few pixels stretched across too much space. The fix is to export bigger — or as SVG.",
+  date="October 17, 2026",
+  datePublished="2026-10-17",
+  mascot="error",
+  body="""
+<p>A QR code looks sharp on screen and turns to mush on paper. The cause is nearly always the same: the image did not have enough pixels for the size it was printed at. A QR code is a grid of tiny squares — when there are not enough pixels, the edges smear, phones cannot find the grid, and scans fail.</p>
+
+<h2>The 5 usual causes</h2>
+<ol>
+<li><b>Low-resolution export.</b> A 512 px PNG looks fine at 2 cm wide. Blown up to a 20 cm poster, each module becomes a smudge. The bigger the print, the more pixels you need.</li>
+<li><b>JPEG compression.</b> JPEG smears sharp edges — exactly what a QR code is made of. A code saved as a low-quality JPEG can fail even at small sizes. PNG or SVG only.</li>
+<li><b>Stretching.</b> Dragging a corner of the image distorts the grid: squares become rectangles, and scanners give up. Always resize proportionally.</li>
+<li><b>Bad print.</b> Low-DPI printers, ink bleed on rough or absorbent paper, and glossy glare all soften edges. Matte paper and a laser printer beat an inkjet on a napkin.</li>
+<li><b>Copy of a copy.</b> Screenshotting a code from a message, then screenshotting that screenshot, loses resolution each time. Always go back to the original export.</li>
+</ol>
+
+<h2>How to fix it</h2>
+<ul>
+<li><strong>Export bigger.</strong> PNG at 1024 px for cards and flyers, 2048 px for posters. Rule of thumb: the print size in cm, times ~100, is the pixels you want.</li>
+<li><strong>Use SVG for print.</strong> SVG is vector — infinitely scalable with zero blur. Use it whenever the printer or designer accepts it.</li>
+<li><strong>Keep proportions.</strong> Hold Shift (or the lock icon) when resizing so the squares stay square.</li>
+<li><strong>Test at final size.</strong> Print one copy at the real size, step back to the real viewing distance, and scan it with your phone. If it reads first try, the batch is safe.</li>
+</ul>
+
+<p>Still not scanning after a sharp reprint? The problem is something else — size, contrast, or damage. <a href="/blog/why-is-my-qr-code-not-working/">The full troubleshooting guide</a> covers those. For the size-vs-distance rule, see the <a href="/blog/qr-code-print-size-guide/">print size guide</a>.</p>
+""",
+  howto=[
+    ("Export at the right size",
+     "PNG at 1024 px for cards and flyers, 2048 px for posters. SVG whenever the printer accepts it."),
+    ("Use PNG or SVG, never JPEG",
+     "JPEG smears the sharp edges a QR code is made of. PNG for screens and office printing, SVG for professional print."),
+    ("Keep proportions when resizing",
+     "Hold Shift or the lock icon so the squares stay square. Never drag one corner freehand."),
+    ("Test-scan the real print",
+     "Print one copy at final size, step back to the real viewing distance, scan with your phone. First-try scan means the batch is safe."),
+  ],
+  faq=[
+    ("Why does my QR code look blurry but still scan?",
+     "Phones are forgiving — error correction recovers a surprising amount of blur. But a code that scans in your bright office may fail in dim light or at arm's length. Sharp is safe; barely-scanning is not."),
+    ("What resolution do I need for a poster?",
+     "2048 px PNG minimum, or SVG. A poster viewed from 2 meters needs far more pixels than a business card viewed from 30 cm — see the print size guide for the distance rule."),
+    ("PNG or SVG for print?",
+     "SVG whenever the printer or designer accepts it — it scales infinitely with zero blur. PNG at 1024–2048 px is the fallback for office printing and apps that don't take SVG."),
+    ("Can I fix a blurry printed code without reprinting?",
+     "No. The blur is baked into the printed image. Reprint from a higher-resolution export (or SVG). Editing a dynamic code won't help — the pattern on paper is what it is."),
+  ],
+  cta=dict(title="Make a sharp code",
+           text="Export PNG up to 2048 px or infinitely scalable SVG. Free, no sign-up for static codes.",
+           href="/#studio", btn="Open the studio"),
+ ),
+]
+
 def faq_json(faq):
     return ",\n    ".join(
         '{\n      "@type": "Question",\n      "name": "%s",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "%s"\n      }\n    }' % (q.replace('"', '\\"'), a.replace('"', '\\"'))
