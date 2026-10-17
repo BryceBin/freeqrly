@@ -77,6 +77,22 @@ def localize_page(key, lang, trans):
             esc_en = en.replace('"', '\\"')
             if esc_en not in trans:
                 trans[esc_en] = trans[en].replace('"', '\\"')
+    # HTML entity: the extractor decodes &amp; -> & in keys, but the HTML
+    # body has &amp;, so a key with a raw & never matches the body
+    # (e.g. the print-size-guide 'Flyers & menus' paragraph stayed English
+    # in all 9 languages). Add the &amp; variant, plus the combined
+    # \" + &amp; variant for JSON-LD strings that contain both.
+    for en in list(trans.keys()):
+        if '&' in en and trans[en] != en:
+            esc_amp = re.sub(r'&(?!amp;|#\d+;|[a-zA-Z][a-zA-Z0-9]*;)', '&amp;', en)
+            esc_amp_tr = re.sub(r'&(?!amp;|#\d+;|[a-zA-Z][a-zA-Z0-9]*;)', '&amp;', trans[en])
+            if esc_amp != en and esc_amp not in trans:
+                trans[esc_amp] = esc_amp_tr
+            if '"' in en:
+                esc_both = esc_amp.replace('"', '\\"')
+                esc_both_tr = esc_amp_tr.replace('"', '\\"')
+                if esc_both not in trans:
+                    trans[esc_both] = esc_both_tr
     # longest first so 'Email body' wins over 'Email'
     for en in sorted(trans.keys(), key=len, reverse=True):
         tr = trans[en]

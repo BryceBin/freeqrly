@@ -40,7 +40,7 @@ select.tbtn{appearance:none;-webkit-appearance:none;font-family:inherit;padding-
 select.tbtn option{font-family:inherit}
 /* header auth area */
 #authArea{display:inline-flex;align-items:center;gap:8px}
-.authLink{text-decoration:none;display:inline-block}
+.authLink{text-decoration:none;display:inline-block;white-space:nowrap}
 .authAvatar{width:24px;height:24px;border-radius:50%;object-fit:cover}
 .authEmail{font-size:12.5px;font-weight:600;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 @media(max-width:640px){.authEmail{display:none}}
@@ -286,7 +286,7 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
   .lede{font-size:15px;margin-top:12px}
   .hero{padding:24px 0 18px;gap:0}
   .herocard{display:none}
-  .m-peek{width:88px;top:-46px;right:16px}
+  .m-peek{width:88px;top:-46px;right:16px;display:none}
   .m-herocard{width:76px;top:-40px;right:-8px}
   .m-card{width:44px}
   .studio{padding:26px 18px;border-radius:22px;margin:6px 0}

@@ -414,15 +414,15 @@ def build(p):
 <meta name="description" content="{p["desc"]}">
 <link rel="canonical" href="{url}">
 <link rel="alternate" hreflang="en" href="{url}">
-<link rel="alternate" hreflang="zh" href="{url}?lang=zh">
-<link rel="alternate" hreflang="es" href="{url}?lang=es">
-<link rel="alternate" hreflang="hi" href="{url}?lang=hi">
-<link rel="alternate" hreflang="ar" href="{url}?lang=ar">
-<link rel="alternate" hreflang="pt" href="{url}?lang=pt">
-<link rel="alternate" hreflang="fr" href="{url}?lang=fr">
-<link rel="alternate" hreflang="ru" href="{url}?lang=ru">
-<link rel="alternate" hreflang="de" href="{url}?lang=de">
-<link rel="alternate" hreflang="ja" href="{url}?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/{p['slug']}/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/{p['slug']}/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/{p['slug']}/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/{p['slug']}/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/{p['slug']}/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/{p['slug']}/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/{p['slug']}/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/{p['slug']}/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/{p['slug']}/">
 <link rel="alternate" hreflang="x-default" href="{url}">
 <meta name="theme-color" content="#e9eef4">
 <meta property="og:title" content="{p["title"]}">

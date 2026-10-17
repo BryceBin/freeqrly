@@ -293,10 +293,10 @@ POSTS += [{'body': '\n'
           '<h2>Cheat sheet by use case</h2>\n'
           '<p><b>Business cards:</b> 2x2 cm minimum — see the <a '
           'href="/business-card-qr-code/">business card generator</a>. Keep it clear of the card '
-          'edge.<br>\n'
-          "<b>Flyers &amp; menus:</b> 3x3 cm. People scan these at arm's length.<br>\n"
-          '<b>Table tents:</b> 4–5 cm, so guests scan from their seats.<br>\n'
-          '<b>Posters:</b> use the 1:10 ratio against expected viewing distance.<br>\n'
+          'edge.<br> '
+          "<b>Flyers &amp; menus:</b> 3x3 cm. People scan these at arm's length.<br> "
+          '<b>Table tents:</b> 4–5 cm, so guests scan from their seats.<br> '
+          '<b>Posters:</b> use the 1:10 ratio against expected viewing distance.<br> '
           '<b>Packaging:</b> 2x2 cm minimum, and avoid curved surfaces that distort the '
           'pattern.</p>\n'
           '<h2>Resolution: export big</h2>\n'
@@ -1069,6 +1069,15 @@ def build(p, all_posts=None):
 <meta name="description" content="{p["desc"]}">
 <link rel="canonical" href="{url}">
 <link rel="alternate" hreflang="en" href="{url}">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/{p['slug']}/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/{p['slug']}/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/{p['slug']}/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/{p['slug']}/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/{p['slug']}/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/{p['slug']}/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/{p['slug']}/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/{p['slug']}/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/{p['slug']}/">
 <link rel="alternate" hreflang="x-default" href="{url}">
 <meta name="theme-color" content="#FAF5EA">
 <meta property="og:title" content="{p["title"]}">
