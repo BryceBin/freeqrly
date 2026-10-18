@@ -1096,8 +1096,8 @@ def build(p, all_posts=None):
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:locale:alternate" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="../../assets/img/favicon-elephant.png">
-<link rel="apple-touch-icon" href="../../assets/img/favicon-elephant.png">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-qly.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-qly.png">
 <link rel="stylesheet" href="../../assets/css/main.css">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
 <script type="application/ld+json">
