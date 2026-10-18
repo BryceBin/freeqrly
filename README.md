@@ -60,8 +60,8 @@ Plain HTML/CSS/JS on **Cloudflare Pages**, plus a small Cloudflare backend (**Fu
 ## Local development
 
 ```bash
-git clone https://github.com/BryceBin/qrforge.git
-cd qrforge
+git clone https://github.com/BryceBin/freeqrly.git
+cd freeqrly
 
 # regenerate all pages after editing sources
 python3 tools/build-all.py

@@ -24,7 +24,7 @@ FreeQrly is agent-native. You can generate QR codes without a browser:
     (`type`, `payload`), `GET /api/me/codes` (list + quota),
     `GET /api/codes/{code}/stats`, `PATCH /api/codes/{code}`,
     `DELETE /api/codes/{code}`.
-- **Skill:** see `skills/qr-generator/SKILL.md` in https://github.com/BryceBin/qrforge
+- **Skill:** see `skills/qr-generator/SKILL.md` in https://github.com/BryceBin/freeqrly
 - **Docs:** https://freeqrly.com/developers/
 
 QR payload formats the generator understands:
