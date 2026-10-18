@@ -99,6 +99,22 @@
 .errCard .merror{font-size:14px}
 .btnGhost{display:inline-block;border:1.5px solid #E8DFC8;border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600;cursor:pointer;background:#fff;color:#22303F;text-decoration:none}
 @media(max-width:640px){.codeCard{padding:20px 16px}.qrThumb{width:76px;height:76px;flex-basis:76px}.headRow h1{font-size:22px}}
+.apiTokens{margin-top:28px;background:#fff;border:1.5px solid #EFE7D2;border-radius:18px;padding:22px}
+.apiTokens h2{font-size:17px;margin:0 0 8px}
+.apiHint{font-size:13px;color:#7A8699;margin:0 0 14px;line-height:1.55}
+.newTokenRow{display:flex;gap:10px;margin-bottom:6px}
+.newTokenRow input{flex:1;border:1.5px solid #E8DFC8;border-radius:12px;padding:11px 14px;font-size:14px;min-width:0}
+.tokenFresh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#FDF9EF;border:1.5px dashed #E3C98F;border-radius:12px;padding:12px 14px;margin:10px 0}
+.tokenFresh code{font-size:13px;word-break:break-all;flex:1;min-width:200px;user-select:all}
+.apiWarn{font-size:12.5px;color:#A5762A;margin:2px 0 0;width:100%}
+.tokenRow{display:flex;align-items:center;gap:12px;padding:12px 2px;border-top:1px solid #F1EAD8;font-size:14px}
+.tokenRow:first-child{border-top:0}
+.tokenMeta{flex:1;min-width:0}
+.tokenName{font-weight:600}
+.tokenSub{font-size:12px;color:#98A2B3;margin-top:2px}
+.tokenSub .revokedTag{color:#C0492F;font-weight:700}
+.trashBtnSm{border:1px solid #F0D9D2;background:#fff;color:#C0492F;border-radius:10px;padding:7px 12px;font-size:12.5px;font-weight:600;cursor:pointer}
+.tokenEmpty{font-size:13.5px;color:#98A2B3;padding:8px 2px}
 </style>
 </head>
 <body>
@@ -131,6 +147,21 @@
     <p data-t="noCodesHint">Create your first dynamic code — it stays editable after printing.</p>
     <a class="newBtn" href="/?mode=dynamic" data-t="newCode">+ New dynamic code</a>
   </div>
+
+  <div class="apiTokens" id="apiTokens">
+    <h2 data-t="apiTokensTitle">API Tokens</h2>
+    <p class="apiHint" data-t="apiTokensHint">Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP — same quota as here. A token is shown only once; store it somewhere safe.</p>
+    <div class="newTokenRow">
+      <input id="tokenName" maxlength="60" data-t-ph="apiTokenNamePh" placeholder="Token name, e.g. My script">
+      <button class="newBtn" id="createTokenBtn" type="button" data-t="apiTokenCreate">Create token</button>
+    </div>
+    <div class="tokenFresh" id="tokenFresh" hidden>
+      <code id="tokenFreshValue"></code>
+      <button class="btnGhost" id="copyTokenBtn" type="button" data-t="apiTokenCopy">Copy</button>
+      <p class="apiWarn" data-t="apiTokenOnce">Copy it now — it won't be shown again.</p>
+    </div>
+    <div id="tokenList"></div>
+  </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
 <div class="cpop" id="cpop" hidden>
@@ -142,7 +173,7 @@
 const $ = id => document.getElementById(id);
 const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
 const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
-const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "newCode": "+ New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "newCode": "+ New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
 let I18N = null;
 let LANG = 'en';
 let ME = null;
@@ -197,9 +228,90 @@ function applyLang(){
   document.documentElement.lang = LANG;
   document.documentElement.dir = LANG === 'ar' ? 'rtl' : 'ltr';
   document.querySelectorAll('[data-t]').forEach(el => { el.textContent = t('ui', el.dataset.t); });
+  document.querySelectorAll('[data-t-ph]').forEach(el => { el.placeholder = t('ui', el.dataset.tPh); });
   const sel = $('langSel'); if(sel) { sel.value = LANG; sel.setAttribute('aria-label', t('ui','ariaLanguage')); }
   updateCount();
   renderCards();
+  renderTokens();
+}
+
+// ---------- API tokens ----------
+let TOKENS = [];
+function fmtDate(ms){
+  if(!ms) return t('ui','apiTokenNever');
+  try{ return new Date(ms).toLocaleDateString(LANG === 'zh' ? 'zh-CN' : 'en-US', {month:'short', day:'numeric', year:'numeric'}); }
+  catch(e){ return t('ui','apiTokenNever'); }
+}
+async function loadTokens(){
+  try{
+    const r = await fetch('/api/tokens', { credentials: 'same-origin' });
+    if(!r.ok) return;
+    const d = await r.json().catch(() => ({}));
+    TOKENS = d.tokens || [];
+  }catch(e){ /* leave list as-is */ }
+  renderTokens();
+}
+function renderTokens(){
+  const box = $('tokenList');
+  if(!box) return;
+  if(!TOKENS.length){
+    box.innerHTML = `<div class="tokenEmpty">${esc(t('ui','apiTokenEmpty'))}</div>`;
+    return;
+  }
+  box.innerHTML = TOKENS.map(tk => `
+    <div class="tokenRow">
+      <div class="tokenMeta">
+        <div class="tokenName">${esc(tk.name)} <span class="tokenSub">${esc(tk.prefix)}…</span></div>
+        <div class="tokenSub">${esc(t('ui','apiTokenLastUsed').replace('{d}', fmtDate(tk.last_used_at)))}${tk.revoked_at ? ' · <span class="revokedTag">' + esc(t('ui','apiTokenRevoked')) + '</span>' : ''}</div>
+      </div>
+      ${tk.revoked_at ? '' : `<button class="trashBtnSm" type="button" data-revoke="${esc(tk.id)}">${esc(t('ui','apiTokenRevoke'))}</button>`}
+    </div>`).join('');
+  box.querySelectorAll('[data-revoke]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if(!confirm(t('ui','apiTokenRevokeConfirm'))) return;
+      try{
+        const r = await fetch('/api/tokens/' + encodeURIComponent(btn.dataset.revoke), { method: 'DELETE', credentials: 'same-origin' });
+        if(r.ok) await loadTokens();
+      }catch(e){}
+    });
+  });
+}
+async function createToken(){
+  const nameEl = $('tokenName');
+  const name = (nameEl.value || '').trim();
+  if(!name){ nameEl.focus(); return; }
+  const btn = $('createTokenBtn');
+  btn.disabled = true;
+  try{
+    const r = await fetch('/api/tokens', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name }),
+    });
+    const d = await r.json().catch(() => ({}));
+    if(!r.ok) return;
+    $('tokenFreshValue').textContent = d.token;
+    $('tokenFresh').hidden = false;
+    $('copyTokenBtn').textContent = t('ui','apiTokenCopy');
+    nameEl.value = '';
+    await loadTokens();
+  }catch(e){}
+  btn.disabled = false;
+}
+function wireTokens(){
+  $('createTokenBtn').addEventListener('click', createToken);
+  $('tokenName').addEventListener('keydown', e => { if(e.key === 'Enter') createToken(); });
+  $('copyTokenBtn').addEventListener('click', async () => {
+    const v = $('tokenFreshValue').textContent;
+    try{ await navigator.clipboard.writeText(v); }
+    catch(e){
+      const ta = document.createElement('textarea');
+      ta.value = v; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); }catch(_){}
+      ta.remove();
+    }
+    $('copyTokenBtn').textContent = t('ui','apiTokenCopied');
+  });
 }
 
 // ---------- payload build / parse (homepage field ids) ----------
@@ -930,6 +1042,8 @@ async function boot(){
     CODES = d.codes || [];
     if(d.quota && ME) ME.quota = d.quota;
   }catch(e){ CODES = []; }
+  wireTokens();
+  loadTokens();
   applyLang();
 }
 boot();

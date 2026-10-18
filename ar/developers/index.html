@@ -66,11 +66,11 @@
     <div class="devgrid">
       <div class="devcard">
         <h3>🧰 خادم MCP</h3>
-        <p>أضف <code>https://freeqrly.com/mcp</code> إلى عميل MCP الخاص بك. أداة واحدة — <code>generate_qr</code> — بدون مصادقة. يعمل مع Claude Code وCursor وأي شيء يتحدث HTTP القابل للبث.</p>
+        <p>Add <code>https://freeqrly.com/mcp</code> to your MCP client. <code>generate_qr</code> needs no auth; <code>dynamic_qr_*</code> tools manage your editable dynamic codes with an API token. Works with Claude Code, Cursor, and anything speaking Streamable HTTP.</p>
       </div>
       <div class="devcard">
         <h3>🌐 HTTP API</h3>
-        <p>نقطة نهاية GET بسيطة تُرجع SVG. CORS مفتوح تمامًا، لذا تستطيع المتصفحات وcurl والدوال بلا خادم استدعاءها مباشرة.</p>
+        <p>نقطة نهاية GET بسيطة تُرجع SVG. CORS مفتوح تمامًا، لذا تستطيع المتصفحات وcurl والدوال بلا خادم استدعاءها مباشرة. Authenticated endpoints manage dynamic codes with a Bearer token.</p>
       </div>
       <div class="devcard">
         <h3>📜 مهارة الوكيل</h3>
@@ -102,9 +102,30 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
         <li><strong>ecc</strong> — تصحيح الأخطاء <code>L</code>، <code>M</code>، <code>Q</code>، <code>H</code> (الافتراضي <code>M</code>). استخدم <code>Q</code>/<code>H</code> للطباعة أو الشعارات.</li>
       </ul>
 
+      <h2>Dynamic codes API (authenticated)</h2>
+      <p>Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href="/dashboard/">dashboard</a>, with the same quota (8 free). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:</p>
+      <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/api/codes</div>
+      <pre class="code">export FQ_TOKEN="fqly_..."  # from your dashboard
+
+# create (same validation + quota as the dashboard UI)
+curl -X POST https://freeqrly.com/api/codes \
+  -H "Authorization: Bearer $FQ_TOKEN" -H "Content-Type: application/json" \
+  -d '{"type":"url","payload":"https://example.com/menu"}'
+# → {"code":"aB3x9Qz","shortUrl":"https://freeqrly.com/q/aB3x9Qz"}
+
+# list (with quota) · stats · edit · delete
+curl https://freeqrly.com/api/me/codes -H "Authorization: Bearer $FQ_TOKEN"
+curl https://freeqrly.com/api/codes/aB3x9Qz/stats -H "Authorization: Bearer $FQ_TOKEN"
+curl -X PATCH https://freeqrly.com/api/codes/aB3x9Qz \
+  -H "Authorization: Bearer $FQ_TOKEN" -H "Content-Type: application/json" \
+  -d '{"type":"url","payload":"https://example.com/new-menu"}'
+curl -X DELETE https://freeqrly.com/api/codes/aB3x9Qz \
+  -H "Authorization: Bearer $FQ_TOKEN"</pre>
+      <p>Tokens are per-user, revocable anytime from the dashboard, and deleted with your account. A token can never create or revoke other tokens — that requires a login session. Without a token these endpoints return <code>401</code>; over quota returns <code>403 quota_exceeded</code>.</p>
+
       <h2>MCP</h2>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/mcp</div>
-      <p>HTTP قابل للبث قياسي: <code>initialize</code>، ثم <code>tools/list</code> / <code>tools/call</code>. تأخذ أداة <code>generate_qr</code> <code>data</code>، <code>size</code>، <code>color</code>، <code>bgcolor</code>، <code>ecc</code> وتُرجع رابط SVG جاهزًا للتنزيل.</p>
+      <p>Standard Streamable HTTP: <code>initialize</code>, then <code>tools/list</code> / <code>tools/call</code>. The <code>generate_qr</code> tool takes <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> and returns a ready-to-download SVG URL — no auth needed.</p>
       <pre class="code">{
   "jsonrpc": "2.0", "id": 1, "method": "tools/call",
   "params": {
@@ -112,6 +133,12 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
     "arguments": { "data": "https://example.com", "size": 1024 }
   }
 }</pre>
+      <p>With an <code>Authorization: Bearer &lt;api_token&gt;</code> header, five more tools appear: <code>dynamic_qr_create</code>, <code>dynamic_qr_list</code>, <code>dynamic_qr_update</code>, <code>dynamic_qr_delete</code>, <code>dynamic_qr_stats</code> — your editable dynamic codes, same quota as the dashboard.</p>
+      <pre class="code">curl -X POST https://freeqrly.com/mcp \
+  -H "Authorization: Bearer $FQ_TOKEN" -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":2,"method":"tools/call",
+       "params":{"name":"dynamic_qr_create",
+                 "arguments":{"type":"url","payload":"https://example.com/menu"}}}'</pre>
 
       <h2>وصفات الحمولة</h2>
       <pre class="code">Website : https://example.com/menu

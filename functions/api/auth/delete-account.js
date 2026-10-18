@@ -18,6 +18,7 @@ export async function onRequestPost({ request, env }) {
   await env.DB.prepare('DELETE FROM sessions WHERE user_id = ?').bind(userId).run();
   await env.DB.prepare('UPDATE codes SET user_id = NULL WHERE user_id = ?').bind(userId).run();
   await env.DB.prepare('DELETE FROM email_tokens WHERE user_id = ?').bind(userId).run();
+  await env.DB.prepare('DELETE FROM api_tokens WHERE user_id = ?').bind(userId).run();
   await env.DB.prepare('DELETE FROM users WHERE id = ?').bind(userId).run();
   // Defensive: also drop this exact session token row if it somehow remains
   try { await deleteSessionByToken(env, getCookie(request, SESSION_COOKIE)); } catch { /* ignore */ }

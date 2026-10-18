@@ -9,6 +9,8 @@
 -- Migrations applied to LIVE (2026-10-16, ATT removal):
 --   ALTER TABLE codes DROP COLUMN edit_key_hash (no EditKey / claim flow);
 --   UPDATE users SET code_limit = 8 (free quota 3 -> 8).
+-- Migrations applied to LIVE (2026-10-18, API tokens):
+--   CREATE TABLE api_tokens (see below).
 
 -- Dynamic QR codes. user_id is NULL for anonymous codes created before
 -- login was required; those keep redirecting but cannot be edited.
@@ -120,3 +122,19 @@ CREATE TABLE IF NOT EXISTS login_lockouts (
   locked_until INTEGER NOT NULL DEFAULT 0,
   updated_at INTEGER NOT NULL
 );
+
+-- API tokens for programmatic access (REST + MCP). Only the SHA-256 hash is
+-- stored; the raw token (fqly_<43 base64url chars>) is shown once at creation.
+-- Token management (create/list/revoke) requires a login session; a token
+-- grants the same dynamic-code powers as the Dashboard UI (quota enforced).
+CREATE TABLE IF NOT EXISTS api_tokens (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL REFERENCES users(id),
+  name TEXT NOT NULL,
+  token_hash TEXT NOT NULL UNIQUE,
+  prefix TEXT NOT NULL,
+  created_at INTEGER NOT NULL,
+  last_used_at INTEGER,
+  revoked_at INTEGER
+);
+CREATE INDEX IF NOT EXISTS idx_api_tokens_user ON api_tokens(user_id);

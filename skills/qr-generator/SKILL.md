@@ -30,6 +30,23 @@ Tool `generate_qr` arguments:
 
 Returns a ready-to-download SVG URL plus a one-line summary.
 
+### Authenticated dynamic codes (MCP)
+
+Pass `Authorization: Bearer <api_token>` (create one in the dashboard under
+API Tokens — the user does this, never the agent). Five more tools appear:
+
+| tool | arguments | notes |
+|---|---|---|
+| `dynamic_qr_create` | `type`, `payload` (required) | editable after printing; free quota 8/account |
+| `dynamic_qr_list` | — | codes with scan counts + quota usage |
+| `dynamic_qr_update` | `code`, `type`, `payload` (required) | printed QRs serve the new content instantly |
+| `dynamic_qr_delete` | `code` (required) | frees one quota slot |
+| `dynamic_qr_stats` | `code` (required) | scans by date, country, device |
+
+`type` is one of `url text wifi vcard email sms phone geo event bitcoin coupon appstore`
+(default `url`); `payload` max 8000 chars. Same validation and quota as the
+dashboard UI. Without a token these tools return an auth error.
+
 ## Option B — plain HTTP API
 
 ```
@@ -38,6 +55,18 @@ GET https://freeqrly.com/api/qr?data=TEXT&size=1024&margin=4&color=2F4A62&bgcolo
 
 Returns `image/svg+xml` (CORS `*`). `data` is required; errors are JSON
 with an `error` field and a 4xx status.
+
+### Authenticated dynamic codes (HTTP)
+
+Same Bearer token as above:
+
+```
+POST   /api/codes            {"type":"url","payload":"https://example.com"} → {"code","shortUrl"}
+GET    /api/me/codes         list + {"quota":{"used","limit"}}
+GET    /api/codes/{code}/stats
+PATCH  /api/codes/{code}     {"type","payload"}
+DELETE /api/codes/{code}
+```
 
 ## Payload recipes
 

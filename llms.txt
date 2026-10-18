@@ -8,12 +8,22 @@
 
 FreeQrly is agent-native. You can generate QR codes without a browser:
 
-- **MCP server:** `https://freeqrly.com/mcp` (Streamable HTTP, no auth)
-  - Tool: `generate_qr` — params: `data` (required, max 2000 chars), `size`
-    (128–2048, default 1024), `color` / `bgcolor` (6-digit hex), `ecc`
+- **MCP server:** `https://freeqrly.com/mcp` (Streamable HTTP)
+  - Tool: `generate_qr` — no auth. Params: `data` (required, max 2000 chars),
+    `size` (128–2048, default 1024), `color` / `bgcolor` (6-digit hex), `ecc`
     (L/M/Q/H, default M). Returns a ready-to-download SVG URL.
+  - Authenticated tools (pass `Authorization: Bearer <api_token>` header;
+    create the token in the dashboard under API Tokens): `dynamic_qr_create`
+    (`type`, `payload`), `dynamic_qr_list`, `dynamic_qr_update`
+    (`code`, `type`, `payload`), `dynamic_qr_delete` (`code`),
+    `dynamic_qr_stats` (`code`). Same editable dynamic codes and quota
+    (8 free) as the dashboard UI.
 - **HTTP API:** `GET https://freeqrly.com/api/qr?data=TEXT&size=1024&margin=4&color=2F4A62&bgcolor=ffffff&ecc=M`
   - Returns `image/svg+xml`. Free, no key, CORS open. `data` is required.
+  - Dynamic codes (Bearer `<api_token>`): `POST /api/codes`
+    (`type`, `payload`), `GET /api/me/codes` (list + quota),
+    `GET /api/codes/{code}/stats`, `PATCH /api/codes/{code}`,
+    `DELETE /api/codes/{code}`.
 - **Skill:** see `skills/qr-generator/SKILL.md` in https://github.com/BryceBin/qrforge
 - **Docs:** https://freeqrly.com/developers/
 

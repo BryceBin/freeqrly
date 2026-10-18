@@ -112,6 +112,74 @@ export async function getSessionUser(env, request) {
   };
 }
 
+// ---- API tokens (Bearer) ----
+// Token format: fqly_<43 base64url chars>. Only the SHA-256 hash is stored;
+// the raw token is shown once at creation. A token grants the same
+// dynamic-code powers as the Dashboard UI (quota enforced). Token management
+// (create/list/revoke) always requires a login session, never a token.
+export const API_TOKEN_PREFIX = 'fqly_';
+
+export function bearerToken(request) {
+  const h = request.headers.get('Authorization') || '';
+  const m = /^Bearer\s+(fqly_[A-Za-z0-9_-]{20,})$/i.exec(h.trim());
+  return m ? m[1] : '';
+}
+
+export async function createApiToken(env, userId, name) {
+  const raw = API_TOKEN_PREFIX + genToken(32);
+  const hash = await sha256Hex(raw);
+  const id = genToken(12);
+  const now = Date.now();
+  await env.DB.prepare(
+    'INSERT INTO api_tokens (id, user_id, name, token_hash, prefix, created_at) VALUES (?, ?, ?, ?, ?, ?)'
+  ).bind(id, userId, String(name || '').slice(0, 60), hash, raw.slice(0, 12), now).run();
+  return { id, token: raw, prefix: raw.slice(0, 12), created_at: now };
+}
+
+export async function listApiTokens(env, userId) {
+  const rows = await env.DB.prepare(
+    'SELECT id, name, prefix, created_at, last_used_at, revoked_at FROM api_tokens WHERE user_id = ? ORDER BY created_at DESC LIMIT 50'
+  ).bind(userId).all();
+  return rows.results || [];
+}
+
+// Returns { user, token_id } or null. Revoked tokens never authenticate.
+export async function getApiTokenUser(env, request) {
+  const raw = bearerToken(request);
+  if (!raw || !env.DB) return null;
+  const hash = await sha256Hex(raw);
+  const row = await env.DB.prepare(
+    `SELECT t.id AS token_id, t.revoked_at AS revoked_at,
+            u.id AS id, u.email AS email, u.name AS name, u.avatar_url AS avatar_url,
+            u.plan AS plan, u.code_limit AS code_limit, u.auth_provider AS auth_provider
+     FROM api_tokens t JOIN users u ON u.id = t.user_id WHERE t.token_hash = ?`
+  ).bind(hash).first();
+  if (!row || row.revoked_at) return null;
+  try {
+    await env.DB.prepare('UPDATE api_tokens SET last_used_at = ? WHERE id = ?').bind(Date.now(), row.token_id).run();
+  } catch { /* best-effort */ }
+  return {
+    via: 'api_token',
+    token_id: row.token_id,
+    session: null,
+    user: { id: row.id, email: row.email, name: row.name, avatar_url: row.avatar_url, plan: row.plan, code_limit: row.code_limit, auth_provider: row.auth_provider },
+  };
+}
+
+// Unified auth: Bearer API token first, then the login session cookie.
+// Returns { user, via: 'api_token'|'session', ... } or null. UI behaviour is
+// unchanged — the cookie path is identical to the old getSessionUser flow.
+export async function getAuthUser(env, request) {
+  try {
+    const t = await getApiTokenUser(env, request);
+    if (t) return t;
+  } catch { /* fall through to session */ }
+  let sess = null;
+  try { sess = await getSessionUser(env, request); } catch { sess = null; }
+  if (sess) return { ...sess, via: 'session' };
+  return null;
+}
+
 // ---- Users ----
 export async function upsertUser(env, { email, name, avatar_url, auth_provider }) {
   const now = Date.now();
