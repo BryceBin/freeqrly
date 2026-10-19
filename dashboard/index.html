@@ -188,10 +188,10 @@ a.shortUrl:hover{text-decoration:underline}
   </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/acct-menu.js?v=b3h-20261019"></script>
-<script src="/assets/js/site-header.js?v=b3h-20261019"></script>
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3h-20261019">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3h-20261019">
+<script src="/assets/js/acct-menu.js?v=b3r-20261019"></script>
+<script src="/assets/js/site-header.js?v=b3r-20261019"></script>
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3r-20261019">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3r-20261019">
 <div class="cpop" id="cpop" hidden>
   <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
   <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
@@ -1067,34 +1067,49 @@ async function boot(){
       { href: '/developers/', text: t('ui','navApiDocs') }
     ];
   }
+  // Render header IMMEDIATELY (before i18n/auth) with cached user + English fallback nav.
+  // Re-rendered with translations once i18n loads, and with fresh user once auth resolves.
+  function dashNavEn(){
+    return [
+      { href: '/', text: 'Generator' },
+      { href: '/scan/', text: 'Scanner' },
+      { href: '/developers/', text: 'API Docs' }
+    ];
+  }
+  var _cachedUser = (window.getCachedUser ? window.getCachedUser() : null);
+  function _dashOnDelete(tt){
+    if(!confirm(tt('acctDeleteConfirm'))) return;
+    const errEl = $('acctErr'); errEl.hidden = true;
+    fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'})
+      .then(r => r.json().catch(()=>({})).then(d => ({ok:r.ok, d})))
+      .then(res => {
+        if(!res.ok){
+          errEl.textContent = res.d.error === 'reauth_required' ? t('ui','deleteReauth') : (res.d.error || tt('acctDeleteFailed'));
+          errEl.hidden = false; return;
+        }
+        location.href = '/';
+      })
+      .catch(() => { errEl.textContent = tt('acctNetErr'); errEl.hidden = false; });
+  }
+  if(window.initSiteHeader){
+    window.initSiteHeader({
+      nav: dashNavEn(),
+      t: function(k){ return k; },
+      lang: LANG,
+      langs: LANGS,
+      langNames: LANGN,
+      onLangChange: function(code){ LANG = code; localStorage.setItem('freeqrly-lang', LANG); applyLang(); },
+      user: _cachedUser,
+      showDashboard: false,
+      onDelete: _dashOnDelete
+    });
+  }
   // i18n (already in flight)
   I18N = (await i18nP) || FALLBACK;
-  // Render header immediately (brand/nav/lang/theme); account fills in when auth resolves
-  const headerBase = {
-    nav: dashNav(),
-    t: tShared,
-    lang: LANG,
-    langs: LANGS,
-    langNames: LANGN,
-    onLangChange: (code) => { LANG = code; localStorage.setItem('freeqrly-lang', LANG); applyLang(); },
-    user: (window.getCachedUser ? window.getCachedUser() : null), // instant, revalidated below
-    showDashboard: false,
-    onDelete: (tt) => {
-      if(!confirm(tt('acctDeleteConfirm'))) return;
-      const errEl = $('acctErr'); errEl.hidden = true;
-      fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'})
-        .then(r => r.json().catch(()=>({})).then(d => ({ok:r.ok, d})))
-        .then(res => {
-          if(!res.ok){
-            errEl.textContent = res.d.error === 'reauth_required' ? t('ui','deleteReauth') : (res.d.error || tt('acctDeleteFailed'));
-            errEl.hidden = false; return;
-          }
-          location.href = '/';
-        })
-        .catch(() => { errEl.textContent = tt('acctNetErr'); errEl.hidden = false; });
-    }
-  };
-  if(window.initSiteHeader) window.initSiteHeader(headerBase);
+  // Re-render header with translated nav
+  if(window.renderSiteHeader){
+    window.renderSiteHeader({ nav: dashNav(), t: tShared });
+  }
   // Session gate: not signed in -> login (with ?next= back)
   const meR = await meP;
   if(meR && meR.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }

@@ -37,6 +37,8 @@
 <link rel="icon" type="image/png" href="../assets/img/favicon-qly.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-qly.png">
 <link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/site-header.css?v=b3r-20261019">
+<link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3r-20261019">
 <style>
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
@@ -94,18 +96,62 @@
 </head>
 <body data-lp="whatsapp-qr-code" data-type="url">
 <div class="wrap">
-<header class="top">
-    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
-    <nav class="tnav">
-      <a href="#studio">Studio</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
-    </nav>
-    <div class="topbtns">
-      <span id="authArea"><a class="tbtn authLink" href="/login/" data-i18n="signin">Sign in</a></span>
-      <select class="tbtn langsel" id="langBtn" aria-label="Language" data-i18n-aria="ariaLanguage"></select>
-      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
-    </div>
-  </header>
-  <div class="topline"></div>
+<div id="siteHeader"></div>
+<script src="../assets/js/site-header.js?v=b3r-20261019"></script>
+<script src="../assets/js/acct-menu.js?v=b3r-20261019"></script>
+<script>
+(function(){
+  var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
+  var LANGN = {en:"English",zh:"中文",es:"Español",hi:"हिन्दी",ar:"العربية",pt:"Português",fr:"Français",ru:"Русский",de:"Deutsch",ja:"日本語"};
+  function getLang(){
+    try{
+      var s = localStorage.getItem("freeqrly-lang");
+      if(s && LANGS.indexOf(s) >= 0) return s;
+    }catch(e){}
+    return "en";
+  }
+  function getCachedUser(){
+    try{
+      var c = localStorage.getItem("freeqrly-user");
+      if(!c) return null;
+      var u = JSON.parse(c);
+      return (u && u.email) ? u : null;
+    }catch(e){ return null; }
+  }
+  var lang = getLang();
+  if(window.initSiteHeader){
+    window.initSiteHeader({
+      nav: [
+        {href: "#studio", text: "Studio"},
+        {href: "#how", text: "How it works"},
+        {href: "#faq", text: "FAQ"}
+      ],
+      t: function(k){ return k; },
+      lang: lang,
+      langs: LANGS,
+      langNames: LANGN,
+      onLangChange: function(code){
+        try{ localStorage.setItem("freeqrly-lang", code); }catch(e){}
+        location.reload();
+      },
+      user: getCachedUser(),
+      showDashboard: true
+    });
+  }
+  // Revalidate auth in background; update if changed
+  fetch("/api/auth/me", {credentials: "same-origin"}).then(function(r){
+    return r.json().catch(function(){ return {}; });
+  }).then(function(d){
+    var me = d.user || null;
+    var user = (me && me.email) ? {email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod} : null;
+    try{
+      if(user) localStorage.setItem("freeqrly-user", JSON.stringify(user));
+      else localStorage.removeItem("freeqrly-user");
+    }catch(e){}
+    if(window.renderSiteHeader) window.renderSiteHeader({user: user});
+  }).catch(function(){});
+})();
+</script>
   <section class="hero lp-hero">
     <div>
       <div class="kicker">Free · Static codes need no sign-up · No watermark</div>
@@ -242,7 +288,7 @@
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3h-20261019"></script>
-<script src="../assets/js/app.js?v=b3h-20261019"></script>
+<script src="/assets/js/vcard.js?v=b3r-20261019"></script>
+<script src="../assets/js/app.js?v=b3r-20261019"></script>
 </body>
 </html>
