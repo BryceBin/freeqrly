@@ -38,12 +38,25 @@ select.tbtn{appearance:none;-webkit-appearance:none;font-family:inherit;padding-
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237C8494' fill='none' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:right 10px center}
 select.tbtn option{font-family:inherit}
-/* header auth area */
+/* header auth area + account dropdown (mirrors the dashboard) */
 #authArea{display:inline-flex;align-items:center;gap:8px}
 .authLink{text-decoration:none;display:inline-block;white-space:nowrap}
-.authAvatar{width:24px;height:24px;border-radius:50%;object-fit:cover}
-.authEmail{font-size:12.5px;font-weight:600;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-@media(max-width:640px){.authEmail{display:none}}
+.hAcct{position:relative;display:inline-block}
+.hAcctTrigger{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 12px 4px 4px;font-family:inherit;font-size:12.5px;font-weight:600;color:var(--ink);cursor:pointer}
+.hAcctTrigger:hover{border-color:var(--coral)}
+.hAcctAvatar{width:26px;height:26px;border-radius:50%;object-fit:cover;display:block;flex:0 0 26px;background:#F1EAD9}
+span.hAcctAvatar{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#2F4A62}
+.hAcctName{max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hAcctChev{font-size:9px;color:var(--soft)}
+.hAcctMenu{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(190,145,60,.18);min-width:210px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:60;text-align:left}
+.hAcct.open .hAcctMenu{opacity:1;visibility:visible;transform:none}
+.hAcctMenu a,.hAcctMenu button{display:flex;align-items:center;width:100%;text-align:left;border:0;background:none;padding:10px 12px;border-radius:8px;font-family:inherit;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;text-decoration:none;box-sizing:border-box}
+.hAcctMenu a:hover,.hAcctMenu button:hover{background:rgba(217,164,65,.12)}
+.hAcctMenu .dangerItem{color:#B4563C}
+.hAcctMenu .menuSep{height:1px;background:var(--line);margin:4px 6px}
+.hAcctMenu .mEmail{font-size:13px;font-weight:700;padding:8px 12px 2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:230px}
+.hAcctMenu .mProv{font-size:11.5px;color:var(--soft);padding:0 12px 8px}
+@media(max-width:640px){.hAcctName{display:none}.hAcctTrigger{padding-right:8px}}
 /* quota hint near the Dynamic toggle — informational only, never blocks */
 .quotaHint{text-align:center;font-size:12.5px;color:#b45309;margin:-4px 0 12px;line-height:1.5}
 /* RTL: Arabic script breaks with wide letter-spacing */
