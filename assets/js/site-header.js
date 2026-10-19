@@ -126,6 +126,8 @@
       clone.style.border = cs.border;
       clone.style.letterSpacing = cs.letterSpacing;
       clone.style.borderRadius = cs.borderRadius;
+      clone.style.appearance = 'none';
+      clone.style.webkitAppearance = 'none';
       var opt = document.createElement('option');
       opt.textContent = sel.options[idx].textContent;
       clone.appendChild(opt);
