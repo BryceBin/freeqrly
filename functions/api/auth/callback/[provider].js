@@ -39,7 +39,11 @@ export async function onRequestGet({ request, env, params }) {
   // Missing cookie/query (expired tab, cookies blocked, or >30 min on the
   // provider page) is a different failure from a genuine state mismatch —
   // keep them distinguishable for diagnostics.
-  if (!stateCookie || !stateQuery) return login('oauth_expired');
+  if (!stateCookie || !stateQuery) {
+    // TEMP-DIAG: reveal whether the Cookie header reached the function
+    const dbg = 'ck' + (request.headers.get('Cookie') ? 'Y' : 'N') + '_raw' + (stateCookieRaw ? 'Y' : 'N');
+    return login('dbgexp_' + dbg);
+  }
   if (stateCookie !== stateQuery) return login('csrf');
 
   // Per-IP callback attempt limit (D1 counting)
