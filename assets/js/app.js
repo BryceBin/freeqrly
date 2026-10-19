@@ -213,10 +213,10 @@ async function draw(){
 const MASCOT_BASE="/assets/img/mascots/";
 const MASCOT_LOCAL="/assets/img/mascots/";
 // Preload every mascot pose on page load so switching types swaps instantly
-["qly-url","qly-text","qly-email","qly-sms","qly-phone","qly-geo","wifi","business-card","wedding","batch","studio-qr"].forEach(p=>{ const im=new Image(); im.src=MASCOT_BASE+p+".webp"; });
+["qly-url","qly-text","qly-email","qly-sms","qly-phone","qly-geo","wifi","business-card","wedding","batch","studio-qr","qly-bitcoin","qly-coupon","qly-appstore","qly-review","qly-mp3","qly-google-form","qly-menu"].forEach(p=>{ const im=new Image(); im.src=MASCOT_BASE+p+".webp"; });
 function updateStudioMascot(){
   const image=document.querySelector("[data-studio-mascot]"); if(!image) return;
-  const local={url:"qly-url",text:"qly-text",email:"qly-email",sms:"qly-sms",phone:"qly-phone",geo:"qly-geo"};
+  const local={url:"qly-url",text:"qly-text",email:"qly-email",sms:"qly-sms",phone:"qly-phone",geo:"qly-geo",bitcoin:"qly-bitcoin",coupon:"qly-coupon",appstore:"qly-appstore",review:"qly-review",mp3:"qly-mp3","google-form":"qly-google-form",menu:"qly-menu"};
   const r2={wifi:"wifi",vcard:"business-card",event:"wedding",batch:"batch"};
   if(local[cur]) image.src=MASCOT_LOCAL+local[cur]+".webp";
   else { const pose=r2[cur] || image.getAttribute("data-mascot-default") || "studio-qr"; image.src=MASCOT_BASE+pose+".webp"; }
