@@ -3019,7 +3019,10 @@
       "apiTokenNever": "never",
       "apiTokenRevoked": "revoked",
       "apiTokensDocs": "Guide",
-      "signin": "Sign in"
+      "signin": "Sign in",
+      "navGenerator": "Generator",
+      "navScanner": "Scanner",
+      "navApiDocs": "API Docs"
     },
     "zh": {
       "manageTitle": "控制台",
@@ -3078,7 +3081,10 @@
       "apiTokenNever": "从未",
       "apiTokenRevoked": "已吊销",
       "apiTokensDocs": "使用手册",
-      "signin": "登录"
+      "signin": "登录",
+      "navGenerator": "生成器",
+      "navScanner": "扫码",
+      "navApiDocs": "API 文档"
     },
     "es": {
       "manageTitle": "Panel",
@@ -3137,7 +3143,10 @@
       "apiTokenNever": "nunca",
       "apiTokenRevoked": "revocado",
       "apiTokensDocs": "Guía",
-      "signin": "Iniciar sesión"
+      "signin": "Iniciar sesión",
+      "navGenerator": "Generador",
+      "navScanner": "Escáner",
+      "navApiDocs": "Docs API"
     },
     "hi": {
       "manageTitle": "डैशबोर्ड",
@@ -3196,7 +3205,10 @@
       "apiTokenNever": "कभी नहीं",
       "apiTokenRevoked": "रद्द",
       "apiTokensDocs": "मार्गदर्शिका",
-      "signin": "साइन इन"
+      "signin": "साइन इन",
+      "navGenerator": "जनरेटर",
+      "navScanner": "स्कैनर",
+      "navApiDocs": "API डॉक्स"
     },
     "ar": {
       "manageTitle": "لوحة التحكم",
@@ -3255,7 +3267,10 @@
       "apiTokenNever": "أبدًا",
       "apiTokenRevoked": "ملغى",
       "apiTokensDocs": "الدليل",
-      "signin": "تسجيل الدخول"
+      "signin": "تسجيل الدخول",
+      "navGenerator": "المولد",
+      "navScanner": "الماسح",
+      "navApiDocs": "مستندات API"
     },
     "pt": {
       "manageTitle": "Painel",
@@ -3314,7 +3329,10 @@
       "apiTokenNever": "nunca",
       "apiTokenRevoked": "revogado",
       "apiTokensDocs": "Guia",
-      "signin": "Entrar"
+      "signin": "Entrar",
+      "navGenerator": "Gerador",
+      "navScanner": "Scanner",
+      "navApiDocs": "Docs API"
     },
     "fr": {
       "manageTitle": "Tableau de bord",
@@ -3373,7 +3391,10 @@
       "apiTokenNever": "jamais",
       "apiTokenRevoked": "révoqué",
       "apiTokensDocs": "Guide",
-      "signin": "Se connecter"
+      "signin": "Se connecter",
+      "navGenerator": "Générateur",
+      "navScanner": "Scanner",
+      "navApiDocs": "Docs API"
     },
     "ru": {
       "manageTitle": "Панель управления",
@@ -3432,7 +3453,10 @@
       "apiTokenNever": "никогда",
       "apiTokenRevoked": "отозван",
       "apiTokensDocs": "Руководство",
-      "signin": "Войти"
+      "signin": "Войти",
+      "navGenerator": "Генератор",
+      "navScanner": "Сканер",
+      "navApiDocs": "API Docs"
     },
     "de": {
       "manageTitle": "Dashboard",
@@ -3491,7 +3515,10 @@
       "apiTokenNever": "nie",
       "apiTokenRevoked": "widerrufen",
       "apiTokensDocs": "Anleitung",
-      "signin": "Anmelden"
+      "signin": "Anmelden",
+      "navGenerator": "Generator",
+      "navScanner": "Scanner",
+      "navApiDocs": "API-Docs"
     },
     "ja": {
       "manageTitle": "ダッシュボード",
@@ -3550,7 +3577,10 @@
       "apiTokenNever": "なし",
       "apiTokenRevoked": "無効化済み",
       "apiTokensDocs": "使い方",
-      "signin": "サインイン"
+      "signin": "サインイン",
+      "navGenerator": "ジェネレーター",
+      "navScanner": "スキャナー",
+      "navApiDocs": "API ドキュメント"
     }
   }
 }

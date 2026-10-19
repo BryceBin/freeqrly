@@ -155,7 +155,6 @@ a.shortUrl:hover{text-decoration:underline}
 
   <p class="merror" id="acctErr" hidden style="margin:0 0 12px"></p>
   <div class="pageHead">
-    <a class="backLink" href="/" data-t="backGenerator">← Back to generator</a>
     <div class="headRow">
       <h1 data-t="manageTitle">Dashboard</h1>
     </div>
@@ -1064,7 +1063,11 @@ async function boot(){
   const KEYMAP = { acctSignedInWith:'signedInWith', acctExport:'exportData', acctDelete:'deleteAccount', acctLogout:'logoutMenu', acctDeleteConfirm:'deleteAccountConfirm', acctDeleteFailed:'deleteFailed', acctNetErr:'networkErr', signin:'signin' };
   const tShared = k => t('ui', KEYMAP[k] || k);
   function dashNav(){
-    return [{ href: '/', text: t('ui','backGenerator').replace('← ','') }];
+    return [
+      { href: '/', text: t('ui','navGenerator') },
+      { href: '/scan/', text: t('ui','navScanner') },
+      { href: '/developers/', text: t('ui','navApiDocs') }
+    ];
   }
   // i18n (already in flight)
   I18N = (await i18nP) || FALLBACK;

@@ -3,7 +3,7 @@
 .amTrigger{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);border-radius:999px;padding:5px 12px 5px 5px;font-family:inherit;font-size:14px;font-weight:600;color:var(--ink,#22303F);cursor:pointer}
 .amAvatar{width:30px;height:30px;border-radius:50%;object-fit:cover;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;background:#E9D9B8;color:#7A6A4F;font-weight:700}
 .amName{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.amChev{font-size:10px;color:var(--soft,#8A7F6A)}
+.amChev{font-size:14px;color:var(--soft,#8A7F6A);line-height:1}
 .amMenu{position:absolute;top:calc(100% + 8px);right:0;background:var(--card,#fff);border:1px solid var(--line,#E8DFC8);border-radius:14px;box-shadow:0 12px 32px rgba(190,145,60,.18);min-width:210px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:60;text-align:left}
 .amWrap.open .amMenu{opacity:1;visibility:visible;transform:none}
 @media(hover:hover) and (min-width:641px){.amWrap:hover .amMenu{opacity:1;visibility:visible;transform:none}}

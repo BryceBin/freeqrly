@@ -54,7 +54,7 @@
         '<div class="shRight">' + acctH + langH +
           '<button class="shTheme" type="button" aria-label="theme">\u25D0</button>' +
         '</div>' +
-      '</header>';
+      '</header><div class="shLine"></div>';
 
     // Theme toggle (shared logic)
     var root = document.documentElement;
