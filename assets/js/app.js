@@ -1351,6 +1351,18 @@ function initAuthHeader(){
   try{
     const quotaEl = $("quotaHint");
     const tr = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
+    const headerCfg = () => ({
+      nav: headerNav(),
+      t: tr,
+      lang: lang,
+      langs: LANGS,
+      langNames: LANGN,
+      onLangChange: (code) => { lang = code; applyLang(); },
+      user: null, // filled in when auth resolves
+      showDashboard: true
+    });
+    // Render header immediately (brand/nav/lang/theme); account fills in async
+    if(window.initSiteHeader) window.initSiteHeader(headerCfg());
     window.getAuthState().then(st => {
       const me = st.user;
       if(window.refreshDynamicUI) window.refreshDynamicUI();
@@ -1360,16 +1372,10 @@ function initAuthHeader(){
           quotaEl.hidden = false;
         }
       }
-      if(window.initSiteHeader){
-        window.initSiteHeader({
-          nav: headerNav(),
-          t: tr,
-          lang: lang,
-          langs: LANGS,
-          langNames: LANGN,
-          onLangChange: (code) => { lang = code; applyLang(); },
-          user: me && me.email ? { email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod } : null,
-          showDashboard: true
+      // Patch the account module once auth resolves (header already visible)
+      if(window.renderSiteHeader){
+        window.renderSiteHeader({
+          user: me && me.email ? { email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod } : null
         });
       }
     }).catch(()=>{});

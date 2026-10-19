@@ -1,6 +1,6 @@
 /* Shared account dropdown menu — homepage + dashboard. Logout is plain ink; only Delete is red. */
 .amWrap{position:relative;display:inline-block}
-.amTrigger{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);border-radius:999px;padding:5px 12px 5px 5px;font-family:inherit;font-size:14px;font-weight:600;color:var(--ink,#22303F);cursor:pointer}
+.amTrigger{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);border-radius:999px;padding:5px 12px 5px 5px;font-family:inherit;font-size:14px;font-weight:600;color:var(--ink,#22303F);cursor:pointer;min-height:42px;box-sizing:border-box}
 .amAvatar{width:30px;height:30px;border-radius:50%;object-fit:cover;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;background:#E9D9B8;color:#7A6A4F;font-weight:700}
 .amName{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .amChev{font-size:14px;color:var(--soft,#8A7F6A);line-height:1}

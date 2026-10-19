@@ -13,7 +13,7 @@
 /* Reserve the scrollbar gutter on both sides so the centered layout never
    shifts horizontally when a panel opens/closes and the scrollbar appears. */
 html{scrollbar-gutter:stable both-edges}
-.manageWrap{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+.manageWrap{max-width:720px;margin:0 auto;padding:0 16px 64px}
 @media(min-width:1024px){
   .manageWrap{max-width:1080px}
   .qrThumb{width:64px;height:64px;flex:0 0 64px}
@@ -149,9 +149,7 @@ a.shortUrl:hover{text-decoration:underline}
 </head>
 <body>
 <div class="manageWrap">
-  <div class="topbar">
-    <div id="siteHeader"></div>
-  </div>
+  <div id="siteHeader"></div>
 
   <p class="merror" id="acctErr" hidden style="margin:0 0 12px"></p>
   <div class="pageHead">
@@ -1071,36 +1069,41 @@ async function boot(){
   }
   // i18n (already in flight)
   I18N = (await i18nP) || FALLBACK;
+  // Render header immediately (brand/nav/lang/theme); account fills in when auth resolves
+  const headerBase = {
+    nav: dashNav(),
+    t: tShared,
+    lang: LANG,
+    langs: LANGS,
+    langNames: LANGN,
+    onLangChange: (code) => { LANG = code; localStorage.setItem('freeqrly-lang', LANG); applyLang(); },
+    user: null,
+    showDashboard: false,
+    onDelete: (tt) => {
+      if(!confirm(tt('acctDeleteConfirm'))) return;
+      const errEl = $('acctErr'); errEl.hidden = true;
+      fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'})
+        .then(r => r.json().catch(()=>({})).then(d => ({ok:r.ok, d})))
+        .then(res => {
+          if(!res.ok){
+            errEl.textContent = res.d.error === 'reauth_required' ? t('ui','deleteReauth') : (res.d.error || tt('acctDeleteFailed'));
+            errEl.hidden = false; return;
+          }
+          location.href = '/';
+        })
+        .catch(() => { errEl.textContent = tt('acctNetErr'); errEl.hidden = false; });
+    }
+  };
+  if(window.initSiteHeader) window.initSiteHeader(headerBase);
   // Session gate: not signed in -> login (with ?next= back)
   const meR = await meP;
   if(meR && meR.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
   if(meR){
     const d = await meR.json().catch(() => ({}));
     ME = d.user || null;
-    if(ME && ME.email && window.initSiteHeader){
-      window.initSiteHeader({
-        nav: dashNav(),
-        t: tShared,
-        lang: LANG,
-        langs: LANGS,
-        langNames: LANGN,
-        onLangChange: (code) => { LANG = code; localStorage.setItem('freeqrly-lang', LANG); applyLang(); },
-        user: { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod },
-        showDashboard: false,
-        onDelete: (tt) => {
-          if(!confirm(tt('acctDeleteConfirm'))) return;
-          const errEl = $('acctErr'); errEl.hidden = true;
-          fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'})
-            .then(r => r.json().catch(()=>({})).then(d => ({ok:r.ok, d})))
-            .then(res => {
-              if(!res.ok){
-                errEl.textContent = res.d.error === 'reauth_required' ? t('ui','deleteReauth') : (res.d.error || tt('acctDeleteFailed'));
-                errEl.hidden = false; return;
-              }
-              location.href = '/';
-            })
-            .catch(() => { errEl.textContent = tt('acctNetErr'); errEl.hidden = false; });
-        }
+    if(ME && ME.email && window.renderSiteHeader){
+      window.renderSiteHeader({
+        user: { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod }
       });
     }
   }
