@@ -35,7 +35,7 @@
       : '<span class="amAvatar amAvatarLetter">' + esc(displayName.trim().charAt(0).toUpperCase()) + '</span>';
     mount.innerHTML =
       '<span class="amWrap"><button class="amTrigger" type="button" aria-haspopup="menu">' + av +
-      '<span class="amName">' + esc(displayName) + '</span><span class="amChev">▾</span></button>' +
+      '<span class="amName">' + esc(displayName) + '</span></button>' +
       '<span class="amMenu" role="menu"></span></span>';
 
     var wrap = mount.querySelector('.amWrap');
