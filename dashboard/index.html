@@ -10,6 +10,9 @@
 <style>
 /* Manage page — cards layout. The edit module inside each card reuses the
    generator styles from main.css (typerail, grid, previewCol, seg, etc.). */
+/* Reserve the scrollbar gutter on both sides so the centered layout never
+   shifts horizontally when a panel opens/closes and the scrollbar appears. */
+html{scrollbar-gutter:stable both-edges}
 .manageWrap{max-width:720px;margin:0 auto;padding:24px 16px 64px}
 @media(min-width:1024px){
   .manageWrap{max-width:1080px}
