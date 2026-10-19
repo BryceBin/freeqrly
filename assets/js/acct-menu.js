@@ -41,14 +41,7 @@
     var wrap = mount.querySelector('.amWrap');
     wrap._amUser = user; wrap._amT = t; wrap._amShowDash = !!opts.showDashboard;
 
-    window.renderAcctMenu = function(){
-      var w = document.querySelector('.amWrap');
-      if(!w || !w._amUser) return;
-      var m = w.querySelector('.amMenu');
-      if(m) m.innerHTML = menuHTML(w._amUser, w._amT, w._amShowDash);
-    };
-    window.renderAcctMenu();
-
+    // Bind toggle FIRST so the button works even if menu content render fails
     wrap.querySelector('.amTrigger').addEventListener('click', function(e){
       e.stopPropagation();
       wrap.classList.toggle('open');
@@ -56,6 +49,15 @@
     document.addEventListener('click', function(e){
       if(!e.target.closest('.amWrap')) wrap.classList.remove('open');
     });
+
+    window.renderAcctMenu = function(){
+      var w = document.querySelector('.amWrap');
+      if(!w || !w._amUser) return;
+      var m = w.querySelector('.amMenu');
+      if(m) m.innerHTML = menuHTML(w._amUser, w._amT, w._amShowDash);
+    };
+    try{ window.renderAcctMenu(); }catch(e){}
+
     wrap.querySelector('.amMenu').addEventListener('click', function(e){
       var btn = e.target.closest('[data-act]');
       if(!btn || btn.disabled) return;
