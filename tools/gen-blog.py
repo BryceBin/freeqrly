@@ -1024,6 +1024,112 @@ POSTS += [
            text="Export PNG up to 2048 px or infinitely scalable SVG. Free, no sign-up for static codes.",
            href="/#studio", btn="Open the studio"),
  ),
+ dict(
+  slug="how-to-scan-qr-code-on-phone",
+  title="How to Scan a QR Code on Your Phone (iPhone & Android) | FreeQrly",
+  desc="How to scan a QR code on your phone: iPhone Camera and Control Center, Android camera and Google Lens. No extra app needed, plus fixes when it won't scan.",
+  h1="How to scan a QR code <span class='hl hl-mint'>on your phone</span>",
+  lede="No app to install — your phone already knows how. Here's where the scanner lives on iPhone and Android, and what to do when it won't read.",
+  date="October 19, 2026",
+  datePublished="2026-10-19",
+  mascot="scanner",
+  body="""
+<p>Almost every "how do I scan this" question has the same answer: <strong>open your camera and point it at the code</strong>. Modern phones read QR codes natively — the scanner is built into the camera app, not a separate download. The exact spot differs slightly between iPhone and Android.</p>
+
+<h2>On iPhone</h2>
+<p><strong>Method 1 — the Camera app.</strong> Open Camera, point it at the code, and hold still for a second. A yellow notification banner appears at the top — tap it to open the link. That's it; there is nothing to enable first.</p>
+<p><strong>Method 2 — Control Center.</strong> Swipe down from the top-right corner, tap the QR code icon (a small code symbol). If you don't see it, go to Settings → Control Center and add "Code Scanner." This opens a dedicated scanner view, handy in low light.</p>
+
+<h2>On Android</h2>
+<p><strong>Method 1 — the Camera app.</strong> On most Android phones (Samsung, Pixel, and others), open the camera and point it at the code. A link popup appears — tap it. If nothing happens, check the camera settings for a "Scan QR codes" toggle and switch it on.</p>
+<p><strong>Method 2 — Google Lens.</strong> Open the Google app or Google Lens, point at the code, and tap the shutter button. Lens reads the code and shows the link. Some phones also have a QR tile in Quick Settings (swipe down twice from the top).</p>
+
+<h2>When it won't scan</h2>
+<p>Nine times out of ten it's one of these:</p>
+<ul>
+<li><strong>Too far or too close.</strong> Fill about half the viewfinder with the code, then hold still.</li>
+<li><strong>Glare or shadow.</strong> Tilt the phone slightly so reflections move off the code.</li>
+<li><strong>Dirty or damaged print.</strong> A smudged code may still scan — QR codes tolerate <a href="http://www.iso.org/standard/83389.html">up to 30% damage</a> at the highest error-correction level — but a torn finder pattern (the three big squares) is fatal.</li>
+<li><strong>It's not a QR code.</strong> Some "codes" on packaging are barcodes or proprietary marks. A QR code always has three square positioning marks in the corners.</li>
+</ul>
+
+<h2>Do you need a scanner app?</h2>
+<p>No — and that's the honest answer even though scanner apps exist. The built-in camera handles standard QR codes, and third-party scanner apps mostly add ads and tracking. The one exception: if your phone is old enough to lack a built-in reader, any reputable scanner app will do the job.</p>
+
+<p>Want to test right now? Point your camera at any code on <a href="/scan/">our free scanner page</a> — or upload a photo of a code and decode it in your browser, nothing uploaded.</p>
+""",
+  faq=[
+    ("How do I scan a QR code on my iPhone?",
+     "Open the Camera app and point it at the code — a notification banner appears at the top. Tap it. Alternatively, add the Code Scanner to Control Center (Settings → Control Center) for a dedicated scanner."),
+    ("How do I scan a QR code on Android?",
+     "Open your camera app and point it at the code; a link popup appears. If that doesn't work, enable 'Scan QR codes' in camera settings, or use Google Lens."),
+    ("Do I need to download a QR scanner app?",
+     "No. iPhones and most Android phones read QR codes with the built-in camera. Scanner apps are unnecessary for standard codes."),
+    ("Why won't my phone scan the QR code?",
+     "Usually distance, glare, or a damaged print. Hold the phone so the code fills half the viewfinder, avoid reflections, and check the three corner squares aren't torn."),
+  ],
+  sources=[("http://www.iso.org/standard/83389.html", "ISO/IEC 18004:2024", "The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%).")],
+  cta=dict(title="Try a scan right now",
+           text="Point your phone at any QR code — or decode one from a photo, free, in your browser.",
+           href="/scan/", btn="Open the scanner"),
+ ),
+ dict(
+  slug="get-google-reviews-with-qr-code",
+  title="How to Get More Google Reviews with a QR Code | FreeQrly",
+  desc="More Google reviews with a QR code: find your review link, generate a free review QR code, and place it where customers actually scan — receipt, table, checkout.",
+  h1="Get more Google reviews with <span class='hl hl-blush'>a QR code</span>",
+  lede="The best time to ask for a review is the moment a happy customer is standing in front of you. A QR code makes that moment one scan long.",
+  date="October 19, 2026",
+  datePublished="2026-10-19",
+  mascot="success",
+  body="""
+<p>Google reviews decide who gets picked — and the businesses with the most reviews didn't get them by luck. They asked, at the right moment, with zero friction. A QR code pointing straight at your Google review form turns "please leave us a review" into a single scan.</p>
+
+<h2>Step 1 — get your Google review link</h2>
+<p>You need the direct link to your review form, not just your business listing:</p>
+<ol>
+<li>Go to your <a href="https://www.google.com/business/">Google Business Profile</a> and sign in.</li>
+<li>Open the "Reviews" section and look for "Get more reviews" — Google gives you a short shareable link (it looks like <code>https://g.page/your-business/review</code>).</li>
+<li>Copy it. That's the link your QR code will hold.</li>
+</ol>
+
+<h2>Step 2 — turn it into a QR code</h2>
+<p>Paste the link into a <a href="/google-review-qr-code/">Google review QR code generator</a> — it takes seconds, it's free, and the static code never expires. Print it at a decent size: business-card codes get ignored, but a 5 cm code on a table tent gets scanned. Keep dark ink on a light background with a clear quiet margin around the code.</p>
+
+<h2>Step 3 — put it where the moment happens</h2>
+<p>Placement is the whole game. The code has to be in front of a happy customer <em>before</em> they leave:</p>
+<ul>
+<li><strong>Restaurants & cafés:</strong> table tents and the receipt. "Enjoyed your meal? One scan." beats a follow-up email nobody opens.</li>
+<li><strong>Retail & salons:</strong> the checkout counter, right where they pay — satisfaction peaks at purchase.</li>
+<li><strong>Services (plumbers, tutors, clinics):</strong> a card handed over at the end of the visit, or a sticker on the invoice.</li>
+<li><strong>Delivery & takeaway:</strong> a sticker on the bag or box. The food is the reminder.</li>
+</ul>
+
+<h2>What to write next to it</h2>
+<p>A bare code gets fewer scans than a code with a reason. Keep it short and specific: "Love your visit? Scan to review us on Google — 30 seconds." Asking for <em>Google</em> reviews by name matters — customers default to whichever platform is easiest, and you want them on the one future customers check.</p>
+
+<h2>A few honest tips</h2>
+<ul>
+<li><strong>Ask, don't beg.</strong> One visible code plus a spoken "we'd love a review" outperforms five signs.</li>
+<li><strong>Never pay for reviews or offer rewards for them</strong> — it violates Google's policies and the reviews get removed anyway.</li>
+<li><strong>Reply to reviews.</strong> A business that answers reviews gets more of them; reviewers can see you read them.</li>
+<li><strong>Track what works.</strong> If you want to know which placement drives scans, use a dynamic code for one location and compare — but for most shops, one static code that never expires is all you need.</li>
+</ul>
+""",
+  faq=[
+    ("How do I create a QR code for Google reviews?",
+     "Copy your Google review link from your Google Business Profile (Reviews → Get more reviews), paste it into a free QR code generator, and print the code. Static codes are free and never expire."),
+    ("Where should I put my Google review QR code?",
+     "Wherever a satisfied customer stands before leaving: restaurant tables and receipts, retail checkout counters, service invoices, or delivery packaging."),
+    ("Do Google review QR codes expire?",
+     "A static QR code never expires — it holds your review link directly. As long as your Google Business Profile exists, the code keeps working."),
+    ("Should I offer a discount for a Google review?",
+     "No. Google prohibits incentivized reviews and removes them. Ask at the right moment instead — that's what the QR code is for."),
+  ],
+  cta=dict(title="Make your review QR code",
+           text="Paste your Google review link, get a printable code in seconds. Free, no sign-up for static codes.",
+           href="/google-review-qr-code/", btn="Create review code"),
+ ),
 ]
 
 def faq_json(faq):
