@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://freeqrly.com/</loc></url>
   <url><loc>https://freeqrly.com/about/</loc></url>
+  <url><loc>https://freeqrly.com/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/</loc></url>
   <url><loc>https://freeqrly.com/ar/about/</loc></url>
+  <url><loc>https://freeqrly.com/ar/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/ar/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ar/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/blog/</loc></url>
   <url><loc>https://freeqrly.com/ar/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/ar/blog/do-qr-codes-expire/</loc></url>
@@ -26,6 +29,7 @@
   <url><loc>https://freeqrly.com/ar/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/ar/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/ar/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ar/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/developers/</loc></url>
   <url><loc>https://freeqrly.com/ar/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/google-form-qr-code/</loc></url>
@@ -33,6 +37,7 @@
   <url><loc>https://freeqrly.com/ar/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ar/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ar/pdf-qr-code/</loc></url>
@@ -50,6 +55,7 @@
   <url><loc>https://freeqrly.com/ar/youtube-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/blog/</loc></url>
   <url><loc>https://freeqrly.com/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/blog/do-qr-codes-expire/</loc></url>
@@ -70,10 +76,13 @@
   <url><loc>https://freeqrly.com/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/</loc></url>
   <url><loc>https://freeqrly.com/de/about/</loc></url>
+  <url><loc>https://freeqrly.com/de/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/de/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/de/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/blog/</loc></url>
   <url><loc>https://freeqrly.com/de/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/de/blog/do-qr-codes-expire/</loc></url>
@@ -94,6 +103,7 @@
   <url><loc>https://freeqrly.com/de/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/de/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/de/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/de/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/developers/</loc></url>
   <url><loc>https://freeqrly.com/de/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/google-form-qr-code/</loc></url>
@@ -101,6 +111,7 @@
   <url><loc>https://freeqrly.com/de/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/de/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/de/pdf-qr-code/</loc></url>
@@ -119,8 +130,10 @@
   <url><loc>https://freeqrly.com/developers/</loc></url>
   <url><loc>https://freeqrly.com/es/</loc></url>
   <url><loc>https://freeqrly.com/es/about/</loc></url>
+  <url><loc>https://freeqrly.com/es/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/es/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/es/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/blog/</loc></url>
   <url><loc>https://freeqrly.com/es/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/es/blog/do-qr-codes-expire/</loc></url>
@@ -141,6 +154,7 @@
   <url><loc>https://freeqrly.com/es/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/es/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/es/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/es/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/developers/</loc></url>
   <url><loc>https://freeqrly.com/es/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/google-form-qr-code/</loc></url>
@@ -148,6 +162,7 @@
   <url><loc>https://freeqrly.com/es/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/es/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/es/pdf-qr-code/</loc></url>
@@ -166,8 +181,10 @@
   <url><loc>https://freeqrly.com/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/</loc></url>
   <url><loc>https://freeqrly.com/fr/about/</loc></url>
+  <url><loc>https://freeqrly.com/fr/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/fr/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/fr/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/blog/</loc></url>
   <url><loc>https://freeqrly.com/fr/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/fr/blog/do-qr-codes-expire/</loc></url>
@@ -188,6 +205,7 @@
   <url><loc>https://freeqrly.com/fr/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/fr/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/fr/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/fr/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/developers/</loc></url>
   <url><loc>https://freeqrly.com/fr/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/google-form-qr-code/</loc></url>
@@ -195,6 +213,7 @@
   <url><loc>https://freeqrly.com/fr/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/fr/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/fr/pdf-qr-code/</loc></url>
@@ -215,8 +234,10 @@
   <url><loc>https://freeqrly.com/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/</loc></url>
   <url><loc>https://freeqrly.com/hi/about/</loc></url>
+  <url><loc>https://freeqrly.com/hi/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/hi/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/hi/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/blog/</loc></url>
   <url><loc>https://freeqrly.com/hi/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/hi/blog/do-qr-codes-expire/</loc></url>
@@ -237,6 +258,7 @@
   <url><loc>https://freeqrly.com/hi/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/hi/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/hi/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/hi/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/developers/</loc></url>
   <url><loc>https://freeqrly.com/hi/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/google-form-qr-code/</loc></url>
@@ -244,6 +266,7 @@
   <url><loc>https://freeqrly.com/hi/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/hi/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/hi/pdf-qr-code/</loc></url>
@@ -262,8 +285,10 @@
   <url><loc>https://freeqrly.com/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/</loc></url>
   <url><loc>https://freeqrly.com/ja/about/</loc></url>
+  <url><loc>https://freeqrly.com/ja/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/ja/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ja/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/blog/</loc></url>
   <url><loc>https://freeqrly.com/ja/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/ja/blog/do-qr-codes-expire/</loc></url>
@@ -284,6 +309,7 @@
   <url><loc>https://freeqrly.com/ja/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/ja/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/ja/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ja/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/developers/</loc></url>
   <url><loc>https://freeqrly.com/ja/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/google-form-qr-code/</loc></url>
@@ -291,6 +317,7 @@
   <url><loc>https://freeqrly.com/ja/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ja/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/pdf-qr-code/</loc></url>
@@ -307,14 +334,17 @@
   <url><loc>https://freeqrly.com/ja/wifi-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ja/youtube-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pdf-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/privacy/</loc></url>
   <url><loc>https://freeqrly.com/pt/</loc></url>
   <url><loc>https://freeqrly.com/pt/about/</loc></url>
+  <url><loc>https://freeqrly.com/pt/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/pt/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/pt/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/blog/</loc></url>
   <url><loc>https://freeqrly.com/pt/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/pt/blog/do-qr-codes-expire/</loc></url>
@@ -335,6 +365,7 @@
   <url><loc>https://freeqrly.com/pt/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/pt/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/pt/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/pt/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/developers/</loc></url>
   <url><loc>https://freeqrly.com/pt/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/google-form-qr-code/</loc></url>
@@ -342,6 +373,7 @@
   <url><loc>https://freeqrly.com/pt/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/pt/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/pt/pdf-qr-code/</loc></url>
@@ -361,8 +393,10 @@
   <url><loc>https://freeqrly.com/real-estate-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/</loc></url>
   <url><loc>https://freeqrly.com/ru/about/</loc></url>
+  <url><loc>https://freeqrly.com/ru/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/ru/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ru/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/blog/</loc></url>
   <url><loc>https://freeqrly.com/ru/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/ru/blog/do-qr-codes-expire/</loc></url>
@@ -383,6 +417,7 @@
   <url><loc>https://freeqrly.com/ru/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/ru/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/ru/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ru/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/developers/</loc></url>
   <url><loc>https://freeqrly.com/ru/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/google-form-qr-code/</loc></url>
@@ -390,6 +425,7 @@
   <url><loc>https://freeqrly.com/ru/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/ru/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/ru/pdf-qr-code/</loc></url>
@@ -416,8 +452,10 @@
   <url><loc>https://freeqrly.com/youtube-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/</loc></url>
   <url><loc>https://freeqrly.com/zh/about/</loc></url>
+  <url><loc>https://freeqrly.com/zh/app-store-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/barcode-generator/</loc></url>
   <url><loc>https://freeqrly.com/zh/batch-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/zh/bitcoin-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/blog/</loc></url>
   <url><loc>https://freeqrly.com/zh/blog/best-free-qr-code-generators/</loc></url>
   <url><loc>https://freeqrly.com/zh/blog/do-qr-codes-expire/</loc></url>
@@ -438,6 +476,7 @@
   <url><loc>https://freeqrly.com/zh/blog/why-is-my-qr-code-blurry/</loc></url>
   <url><loc>https://freeqrly.com/zh/blog/why-is-my-qr-code-not-working/</loc></url>
   <url><loc>https://freeqrly.com/zh/business-card-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/zh/coupon-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/developers/</loc></url>
   <url><loc>https://freeqrly.com/zh/facebook-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/google-form-qr-code/</loc></url>
@@ -445,6 +484,7 @@
   <url><loc>https://freeqrly.com/zh/google-review-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/instagram-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/menu-qr-code/</loc></url>
+  <url><loc>https://freeqrly.com/zh/mp3-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/multi-link-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/payment-qr-code/</loc></url>
   <url><loc>https://freeqrly.com/zh/pdf-qr-code/</loc></url>
