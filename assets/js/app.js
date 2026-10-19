@@ -385,6 +385,7 @@ function applyLang(){
     _sel.value = lang;
   } else if(_sel){ _sel.textContent = LANGN[lang]||lang; }
   renderTabs(); renderFields(); renderHist();
+  if(window.renderAcctMenu) window.renderAcctMenu(); // retranslate the account dropdown
   localStorage.setItem("freeqrly-lang", lang);
 }
 /* batch */
@@ -1342,6 +1343,26 @@ function initAuthHeader(){
     const quotaEl = $("quotaHint");
     const tr = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
     const escH = s => String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+    // (Re)renders the account dropdown menu text in the current language.
+    // Called on init and from applyLang() on every language switch.
+    window.renderAcctMenu = function(){
+      const wrap = document.querySelector(".hAcct");
+      const me = wrap && wrap._me;
+      if(!wrap || !me) return;
+      const t2 = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
+      const providerLabel = { password: "Email", email: "Email", google: "Google", github: "GitHub" };
+      const menu = wrap.querySelector(".hAcctMenu");
+      if(!menu) return;
+      menu.innerHTML =
+        `<div class="mEmail">${escH(me.email)}</div>` +
+        `<div class="mProv">${escH(t2("acctSignedInWith").replace("{method}", providerLabel[me.authMethod] || "Email"))}</div>` +
+        `<div class="menuSep"></div>` +
+        `<a href="/dashboard/" role="menuitem">${escH(t2("acctDashboard"))}</a>` +
+        `<button type="button" data-act="export" role="menuitem">${escH(t2("acctExport"))}</button>` +
+        `<button type="button" class="dangerItem" data-act="delete" role="menuitem">${escH(t2("acctDelete"))}</button>` +
+        `<div class="menuSep"></div>` +
+        `<button type="button" data-act="logout" role="menuitem">${escH(t2("acctLogout"))}</button>`;
+    };
     window.getAuthState().then(st => {
       const me = st.user;
       if(window.refreshDynamicUI) window.refreshDynamicUI();
@@ -1359,43 +1380,37 @@ function initAuthHeader(){
         const avHtml = avatarUrl
           ? `<img class="hAcctAvatar" src="${escH(avatarUrl)}" alt="" referrerpolicy="no-referrer">`
           : `<span class="hAcctAvatar">${escH(displayName.trim().charAt(0).toUpperCase())}</span>`;
-        const providerLabel = { password: "Email", email: "Email", google: "Google", github: "GitHub" };
         const wrap = document.createElement("span");
         wrap.className = "hAcct";
+        wrap._me = me; // stash for re-render on language switch
         wrap.innerHTML =
           `<button class="hAcctTrigger" type="button" aria-haspopup="menu">${avHtml}<span class="hAcctName">${escH(displayName)}</span><span class="hAcctChev">▾</span></button>` +
-          `<span class="hAcctMenu" role="menu">` +
-            `<div class="mEmail">${escH(me.email)}</div>` +
-            `<div class="mProv">${escH(tr("acctSignedInWith").replace("{method}", providerLabel[me.authMethod] || "Email"))}</div>` +
-            `<div class="menuSep"></div>` +
-            `<a href="/dashboard/" role="menuitem">${escH(tr("acctDashboard"))}</a>` +
-            `<button type="button" data-act="export" role="menuitem">${escH(tr("acctExport"))}</button>` +
-            `<button type="button" class="dangerItem" data-act="delete" role="menuitem">${escH(tr("acctDelete"))}</button>` +
-            `<div class="menuSep"></div>` +
-            `<button type="button" data-act="logout" role="menuitem">${escH(tr("acctLogout"))}</button>` +
-          `</span>`;
+          `<span class="hAcctMenu" role="menu"></span>`;
         area.appendChild(wrap);
+        window.renderAcctMenu();
         const trig = wrap.querySelector(".hAcctTrigger");
         trig.addEventListener("click", e => { e.stopPropagation(); wrap.classList.toggle("open"); });
         document.addEventListener("click", e => { if(!e.target.closest(".hAcct")) wrap.classList.remove("open"); });
-        wrap.querySelector('[data-act="export"]').addEventListener("click", () => { location.href = "/api/auth/export"; });
-        wrap.querySelector('[data-act="logout"]').addEventListener("click", async (e) => {
-          const btn = e.currentTarget;
-          if(btn.disabled) return;
-          btn.disabled = true;
-          btn.style.opacity = ".55";
-          btn.style.pointerEvents = "none";
-          try{ await fetch("/api/auth/logout", { method: "POST", credentials: "same-origin" }); }catch(err){}
-          location.href = "/login/";
-        });
-        wrap.querySelector('[data-act="delete"]').addEventListener("click", async () => {
-          if(!confirm(tr("acctDeleteConfirm"))) return;
-          try{
-            const r = await fetch("/api/auth/delete-account", { method: "POST", credentials: "same-origin" });
-            const d = await r.json().catch(() => ({}));
-            if(!r.ok){ alert(d.error || tr("acctDeleteFailed")); return; }
-            location.href = "/";
-          }catch(err){ alert(tr("acctNetErr")); }
+        // Delegated menu actions — survives innerHTML re-render on language switch
+        wrap.querySelector(".hAcctMenu").addEventListener("click", async (e) => {
+          const btn = e.target.closest("[data-act]"); if(!btn || btn.disabled) return;
+          const act = btn.getAttribute("data-act");
+          const t3 = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
+          if(act === "export"){ location.href = "/api/auth/export"; return; }
+          if(act === "logout"){
+            btn.disabled = true; btn.style.opacity = ".55"; btn.style.pointerEvents = "none";
+            try{ await fetch("/api/auth/logout", { method: "POST", credentials: "same-origin" }); }catch(err){}
+            location.href = "/login/"; return;
+          }
+          if(act === "delete"){
+            if(!confirm(t3("acctDeleteConfirm"))) return;
+            try{
+              const r = await fetch("/api/auth/delete-account", { method: "POST", credentials: "same-origin" });
+              const d = await r.json().catch(() => ({}));
+              if(!r.ok){ alert(d.error || t3("acctDeleteFailed")); return; }
+              location.href = "/";
+            }catch(err){ alert(t3("acctNetErr")); }
+          }
         });
       }
     }).catch(()=>{});
