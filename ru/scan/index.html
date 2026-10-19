@@ -47,7 +47,6 @@
   {"@type":"Question","name":"Нужно ли что-то устанавливать?","acceptedAnswer":{"@type":"Answer","text":"Нет. Работает в любом современном браузере на мобильном или компьютере. Сканирование камерой требует разрешения на камеру; загрузка изображений работает везде."}}
 ]}
 </script>
-<link rel="preconnect" href="https://assets.freeqrly.com">
 </head>
 <body>
 <div class="wrap">
@@ -63,7 +62,7 @@
   <div class="topline"></div>
 
   <article class="article scanwrap">
-    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/scanner.webp" alt="Qly сканирует QR-код телефоном"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly сканирует QR-код телефоном"></div>
     <div class="kicker" style="text-align:center">Сканер</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Наведите, отсканируйте, <span class="hl hl-mint">готово</span>.</h1>
     <p class="lede">Сканер QR-кодов, который никогда не звонит домой. Кадры вашей камеры и загруженные изображения расшифровываются <b>на вашем устройстве</b> — ничего не загружается, не хранится и не отслеживается. Без приложения, без аккаунта.</p>
@@ -78,7 +77,7 @@
     <canvas id="scanCanvas" hidden></canvas>
 
     <div class="scanresult" id="scanResult" hidden>
-      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/success.webp" alt="Qly празднует успешное скачивание" id="scanStateMascot"></div>
+      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/success.webp" alt="Qly празднует успешное скачивание" id="scanStateMascot"></div>
       <div class="fl">Расшифровано</div>
       <p id="scanText" style="margin:0 0 12px"></p>
       <div class="scanbtns" style="margin:0">
@@ -101,7 +100,7 @@
   </article>
 
 <footer>
-    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly — слон машет рукой"></div>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/home-welcome.webp" alt="Qly — слон машет рукой"></div>
     <p class="fline">Сделано тихо, в вашем браузере.</p>
     <p class="flinks"><a href="/ru/google-form-qr-code/">QR-коды для Google-форм</a><a href="/ru/wifi-qr-code/">QR-коды для WiFi</a><a href="/ru/vcard-qr-code/">QR-коды vCard</a><a href="/ru/batch-qr-code/">Пакетные QR-коды</a></p>
     <p class="flinks"><a href="/ru/business-card-qr-code/">QR-коды для визиток</a><a href="/ru/google-review-qr-code/">QR-коды для отзывов в Google</a><a href="/ru/qr-code-with-logo/">QR-коды с логотипом</a><a href="/ru/wedding-qr-code/">QR-коды для свадеб</a><a href="/ru/instagram-qr-code/">QR-коды для Instagram</a><a href="/ru/real-estate-qr-code/">QR-коды для недвижимости</a></p>
@@ -143,7 +142,7 @@
   var scanMethod="upload";
   function setScanState(state){
     const image=document.getElementById("scanStateMascot");
-    image.src="https://assets.freeqrly.com/mascots/v1/"+state+".webp";
+    image.src="/assets/img/mascots/"+state+".webp";
   }
   function showResult(data){
     if(!data || data===lastData) return;

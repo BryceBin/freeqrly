@@ -47,7 +47,6 @@
   {"@type":"Question","name":"Preciso instalar alguma coisa?","acceptedAnswer":{"@type":"Answer","text":"Não. Funciona em qualquer navegador moderno de celular ou desktop. O escaneamento por câmera exige permissão de câmera; o envio de imagem funciona em todo lugar."}}
 ]}
 </script>
-<link rel="preconnect" href="https://assets.freeqrly.com">
 </head>
 <body>
 <div class="wrap">
@@ -63,7 +62,7 @@
   <div class="topline"></div>
 
   <article class="article scanwrap">
-    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/scanner.webp" alt="Qly escaneando um QR code com um celular"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly escaneando um QR code com um celular"></div>
     <div class="kicker" style="text-align:center">Scanner</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Aponte, escaneie, <span class="hl hl-mint">pronto</span>.</h1>
     <p class="lede">Um scanner de QR que nunca liga para casa. Seus frames de câmera e imagens enviadas são decodificados <b>no seu dispositivo</b> — nada é enviado, armazenado ou rastreado. Sem app, sem conta.</p>
@@ -78,7 +77,7 @@
     <canvas id="scanCanvas" hidden></canvas>
 
     <div class="scanresult" id="scanResult" hidden>
-      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/success.webp" alt="Qly comemorando um download bem-sucedido" id="scanStateMascot"></div>
+      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/success.webp" alt="Qly comemorando um download bem-sucedido" id="scanStateMascot"></div>
       <div class="fl">Decodificado</div>
       <p id="scanText" style="margin:0 0 12px"></p>
       <div class="scanbtns" style="margin:0">
@@ -101,7 +100,7 @@
   </article>
 
 <footer>
-    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly, o elefante, acenando oi"></div>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/home-welcome.webp" alt="Qly, o elefante, acenando oi"></div>
     <p class="fline">Feito com calma, no seu navegador.</p>
     <p class="flinks"><a href="/pt/google-form-qr-code/">QR codes para Google Forms</a><a href="/pt/wifi-qr-code/">QR codes de WiFi</a><a href="/pt/vcard-qr-code/">QR codes vCard</a><a href="/pt/batch-qr-code/">QR codes em lote</a></p>
     <p class="flinks"><a href="/pt/business-card-qr-code/">QR codes para cartão de visita</a><a href="/pt/google-review-qr-code/">QR codes para avaliação no Google</a><a href="/pt/qr-code-with-logo/">QR codes com logo</a><a href="/pt/wedding-qr-code/">QR codes para casamento</a><a href="/pt/instagram-qr-code/">QR codes para Instagram</a><a href="/pt/real-estate-qr-code/">QR codes para imobiliária</a></p>
@@ -143,7 +142,7 @@
   var scanMethod="upload";
   function setScanState(state){
     const image=document.getElementById("scanStateMascot");
-    image.src="https://assets.freeqrly.com/mascots/v1/"+state+".webp";
+    image.src="/assets/img/mascots/"+state+".webp";
   }
   function showResult(data){
     if(!data || data===lastData) return;

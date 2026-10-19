@@ -210,7 +210,7 @@ async function draw(){
     $("qrbox").innerHTML=""; qr.append($("qrbox"));
   }
 }
-const MASCOT_BASE="https://assets.freeqrly.com/mascots/v1/";
+const MASCOT_BASE="/assets/img/mascots/";
 const MASCOT_LOCAL="/assets/img/mascots/";
 function updateStudioMascot(){
   const image=document.querySelector("[data-studio-mascot]"); if(!image) return;

@@ -47,7 +47,6 @@
   {"@type":"Question","name":"क्या मुझे कुछ इंस्टॉल करना होगा?","acceptedAnswer":{"@type":"Answer","text":"नहीं। यह किसी भी आधुनिक मोबाइल या डेस्कटॉप ब्राउज़र में काम करता है। कैमरा स्कैनिंग के लिए आपको कैमरा परमिशन देनी होगी; इमेज अपलोड हर जगह काम करता है।"}}
 ]}
 </script>
-<link rel="preconnect" href="https://assets.freeqrly.com">
 </head>
 <body>
 <div class="wrap">
@@ -63,7 +62,7 @@
   <div class="topline"></div>
 
   <article class="article scanwrap">
-    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/scanner.webp" alt="Qly फ़ोन से QR कोड स्कैन कर रहा है"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly फ़ोन से QR कोड स्कैन कर रहा है"></div>
     <div class="kicker" style="text-align:center">स्कैनर</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">पॉइंट करें, स्कैन करें, <span class="hl hl-mint">हो गया</span>।</h1>
     <p class="lede">एक QR स्कैनर जो कभी घर फ़ोन नहीं करता। आपके कैमरा फ्रेम और अपलोड की गई इमेज <b>आपके डिवाइस पर</b> डिकोड होती हैं — कुछ भी अपलोड, स्टोर या ट्रैक नहीं होता। न ऐप, न अकाउंट।</p>
@@ -78,7 +77,7 @@
     <canvas id="scanCanvas" hidden></canvas>
 
     <div class="scanresult" id="scanResult" hidden>
-      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/success.webp" alt="Qly सफल डाउनलोड का जश्न मना रहा है" id="scanStateMascot"></div>
+      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/success.webp" alt="Qly सफल डाउनलोड का जश्न मना रहा है" id="scanStateMascot"></div>
       <div class="fl">डिकोड हो गया</div>
       <p id="scanText" style="margin:0 0 12px"></p>
       <div class="scanbtns" style="margin:0">
@@ -101,7 +100,7 @@
   </article>
 
 <footer>
-    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly हाथी नमस्ते कर रहा है"></div>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/home-welcome.webp" alt="Qly हाथी नमस्ते कर रहा है"></div>
     <p class="fline">चुपचाप, आपके ब्राउज़र में बना।</p>
     <p class="flinks"><a href="/hi/google-form-qr-code/">Google Form QR कोड</a><a href="/hi/wifi-qr-code/">WiFi QR कोड</a><a href="/hi/vcard-qr-code/">vCard QR कोड</a><a href="/hi/batch-qr-code/">बैच QR कोड</a></p>
     <p class="flinks"><a href="/hi/business-card-qr-code/">बिज़नेस कार्ड QR कोड</a><a href="/hi/google-review-qr-code/">Google रिव्यू QR कोड</a><a href="/hi/qr-code-with-logo/">लोगो वाले QR कोड</a><a href="/hi/wedding-qr-code/">शादी के QR कोड</a><a href="/hi/instagram-qr-code/">Instagram QR कोड</a><a href="/hi/real-estate-qr-code/">रियल एस्टेट QR कोड</a></p>
@@ -143,7 +142,7 @@
   var scanMethod="upload";
   function setScanState(state){
     const image=document.getElementById("scanStateMascot");
-    image.src="https://assets.freeqrly.com/mascots/v1/"+state+".webp";
+    image.src="/assets/img/mascots/"+state+".webp";
   }
   function showResult(data){
     if(!data || data===lastData) return;

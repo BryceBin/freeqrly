@@ -450,7 +450,7 @@ def build(p):
     studio = STUDIO_H2_RE.sub(
         '<div class="shead"><div class="over">The studio</div><h2>%s</h2></div>' % p["studio_h2"], STUDIO)
     studio = studio.replace('<main class="studio" id="studio">',
-        '<main class="studio" id="studio">\n    <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>', 1)
+        '<main class="studio" id="studio">\n    <div class="mascot m-peek" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code" data-studio-mascot data-mascot-default="studio-qr"></div>', 1)
     # studio assets live one level up
     studio = studio.replace('id="batchPanel"', 'id="batchPanel"')  # noop, keep ids
     steps_html = "\n".join(

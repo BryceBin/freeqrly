@@ -47,7 +47,6 @@
   {"@type":"Question","name":"هل أحتاج تثبيت أي شيء؟","acceptedAnswer":{"@type":"Answer","text":"لا. يعمل في أي متصفح حديث على الجوال أو سطح المكتب. المسح بالكاميرا يحتاج منح إذن الكاميرا؛ رفع الصور يعمل في كل مكان."}}
 ]}
 </script>
-<link rel="preconnect" href="https://assets.freeqrly.com">
 </head>
 <body>
 <div class="wrap">
@@ -63,7 +62,7 @@
   <div class="topline"></div>
 
   <article class="article scanwrap">
-    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/scanner.webp" alt="Qly يمسح رمز QR بهاتف"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly يمسح رمز QR بهاتف"></div>
     <div class="kicker" style="text-align:center">الماسح</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">وجّه، امسح، <span class="hl hl-mint">تم</span>.</h1>
     <p class="lede">ماسح QR لا يتصل بالبيت أبدًا. إطارات كاميرتك وصورك المرفوعة تُفكّ <b>على جهازك</b> — لا شيء يُرفع أو يُخزَّن أو يُتتبع. بدون تطبيق، بدون حساب.</p>
@@ -78,7 +77,7 @@
     <canvas id="scanCanvas" hidden></canvas>
 
     <div class="scanresult" id="scanResult" hidden>
-      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/success.webp" alt="Qly يحتفل بتنزيل ناجح" id="scanStateMascot"></div>
+      <div class="mascot m-scan" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/success.webp" alt="Qly يحتفل بتنزيل ناجح" id="scanStateMascot"></div>
       <div class="fl">تم الفك</div>
       <p id="scanText" style="margin:0 0 12px"></p>
       <div class="scanbtns" style="margin:0">
@@ -101,7 +100,7 @@
   </article>
 
 <footer>
-    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/home-welcome.webp" alt="Qly الفيل يلوّح مرحبًا"></div>
+    <div class="mascot m-foot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/home-welcome.webp" alt="Qly الفيل يلوّح مرحبًا"></div>
     <p class="fline">صُنع بهدوء، في متصفحك.</p>
     <p class="flinks"><a href="/ar/google-form-qr-code/">مولّد رمز QR لنماذج Google</a><a href="/ar/wifi-qr-code/">رموز QR لـ WiFi</a><a href="/ar/vcard-qr-code/">مولّد رمز QR لـ vCard</a><a href="/ar/batch-qr-code/">مولّد رموز QR بالجملة</a></p>
     <p class="flinks"><a href="/ar/business-card-qr-code/">رموز QR لبطاقات الأعمال</a><a href="/ar/google-review-qr-code/">رموز QR لتقييمات Google</a><a href="/ar/qr-code-with-logo/">رموز QR مع شعار</a><a href="/ar/wedding-qr-code/">رموز QR للزفاف</a><a href="/ar/instagram-qr-code/">رموز QR لـ Instagram</a><a href="/ar/real-estate-qr-code/">رموز QR للعقارات</a></p>
@@ -143,7 +142,7 @@
   var scanMethod="upload";
   function setScanState(state){
     const image=document.getElementById("scanStateMascot");
-    image.src="https://assets.freeqrly.com/mascots/v1/"+state+".webp";
+    image.src="/assets/img/mascots/"+state+".webp";
   }
   function showResult(data){
     if(!data || data===lastData) return;

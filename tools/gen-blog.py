@@ -1223,7 +1223,7 @@ def build(p, all_posts=None):
 <div class="wrap">
 {HEADER}
   <article class="article">
-    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/{p["mascot"]}.webp" alt="Qly the FreeQrly elephant mascot"></div>
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/{p["mascot"]}.webp" alt="Qly the FreeQrly elephant mascot"></div>
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">{p["h1"]}</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">{p["lede"]}</p>
@@ -1232,7 +1232,7 @@ def build(p, all_posts=None):
 {p["body"]}
     </div>
 {sources_html}    <div class="cta-card">
-      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="https://assets.freeqrly.com/mascots/v1/studio-qr.webp" alt="Qly presenting a QR code"></div>
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
         <h3>{cta['title']}</h3>
         <p>{cta['text']}</p>
