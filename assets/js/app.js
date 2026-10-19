@@ -212,7 +212,7 @@ async function draw(){
 }
 const MASCOT_BASE="/assets/img/mascots/";
 const MASCOT_LOCAL="/assets/img/mascots/";
-const MASCOT_VER="t1"; // bump when mascot files change (transparent backgrounds)
+const MASCOT_VER="t2"; // bump when mascot files change (transparent backgrounds)
 // Preload every mascot pose on page load so switching types swaps instantly
 ["qly-url","qly-text","qly-email","qly-sms","qly-phone","qly-geo","wifi","business-card","wedding","batch","studio-qr","qly-bitcoin","qly-coupon","qly-appstore","qly-review","qly-mp3","qly-google-form","qly-menu"].forEach(p=>{ const im=new Image(); im.src=MASCOT_BASE+p+".webp?v="+MASCOT_VER; });
 function updateStudioMascot(){
