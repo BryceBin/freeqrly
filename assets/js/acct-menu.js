@@ -44,6 +44,8 @@
     // Bind toggle FIRST so the button works even if menu content render fails
     wrap.querySelector('.amTrigger').addEventListener('click', function(e){
       e.stopPropagation();
+      var lw = document.querySelector('.shLangWrap.open');
+      if(lw) lw.classList.remove('open');
       wrap.classList.toggle('open');
     });
     document.addEventListener('click', function(e){

@@ -41,11 +41,15 @@
       acctH = '<a class="shSignin" href="/login/">' + esc(t('signin')) + '</a>';
     }
 
-    var langH = '<select class="shLang" aria-label="Language">' +
+    var curLangName = (cfg.langNames && cfg.langNames[cfg.lang]) || cfg.lang || 'en';
+    var langH = '<span class="shLangWrap"><button class="shLangBtn" type="button" aria-haspopup="menu">' +
+      esc(curLangName) + '</button>' +
+      '<span class="shLangMenu" role="menu">' +
       (cfg.langs || ['en']).map(function(c){
         var name = (cfg.langNames && cfg.langNames[c]) || c;
-        return '<option value="' + esc(c) + '"' + (c === cfg.lang ? ' selected' : '') + '>' + esc(name) + '</option>';
-      }).join('') + '</select>';
+        return '<button type="button" data-lang="' + esc(c) + '" role="menuitem"' +
+          (c === cfg.lang ? ' class="on"' : '') + '>' + esc(name) + '</button>';
+      }).join('') + '</span></span>';
 
     mount.innerHTML =
       '<header class="sh">' +
@@ -69,17 +73,25 @@
       setTheme(root.getAttribute('data-theme') !== 'dark');
     });
 
-    // Language change
-    var sel = mount.querySelector('.shLang');
-    sel.addEventListener('change', function(){
-      if(cfg.onLangChange) cfg.onLangChange(sel.value);
+    // Language dropdown (button + menu; width auto-fits the label)
+    var langWrap = mount.querySelector('.shLangWrap');
+    var langBtn = mount.querySelector('.shLangBtn');
+    langBtn.addEventListener('click', function(e){
+      e.stopPropagation();
+      // close account menu if open
+      var am = mount.querySelector('.amWrap.open');
+      if(am) am.classList.remove('open');
+      langWrap.classList.toggle('open');
     });
-    // Fit width to the CURRENT language only (native select sizes to longest option)
-    fitLangWidth(sel);
-    // Re-fit after webfonts load (measurement may have used fallback font)
-    if(document.fonts && document.fonts.ready){
-      document.fonts.ready.then(function(){ fitLangWidth(sel); });
-    }
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.shLangWrap')) langWrap.classList.remove('open');
+    });
+    mount.querySelector('.shLangMenu').addEventListener('click', function(e){
+      var b = e.target.closest('[data-lang]');
+      if(!b) return;
+      langWrap.classList.remove('open');
+      if(cfg.onLangChange) cfg.onLangChange(b.getAttribute('data-lang'));
+    });
 
     // Account menu
     if(cfg.user && cfg.user.email && window.initAcctMenu){
@@ -113,30 +125,6 @@
   window.clearCachedUser = function(){
     try{ localStorage.removeItem(CACHE_KEY); }catch(e){}
   };
-
-  function fitLangWidth(sel){    try{
-      var idx = sel.selectedIndex;
-      if(idx < 0 || !sel.options[idx]) return;
-      // Clone the select with ONLY the selected option, measure its real width
-      var clone = document.createElement('select');
-      var cs = getComputedStyle(sel);
-      clone.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;top:0;left:0;';
-      clone.style.font = cs.font;
-      clone.style.padding = cs.padding;
-      clone.style.border = cs.border;
-      clone.style.letterSpacing = cs.letterSpacing;
-      clone.style.borderRadius = cs.borderRadius;
-      clone.style.appearance = 'none';
-      clone.style.webkitAppearance = 'none';
-      var opt = document.createElement('option');
-      opt.textContent = sel.options[idx].textContent;
-      clone.appendChild(opt);
-      document.body.appendChild(clone);
-      var w = clone.offsetWidth;
-      clone.remove();
-      sel.style.width = (w + 2) + 'px';
-    }catch(e){}
-  }
 
   window.initSiteHeader = function(opts){
     cfg = opts || {};

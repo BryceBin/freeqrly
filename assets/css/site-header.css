@@ -6,7 +6,14 @@
 .shNav a{font-size:12px;letter-spacing:.18em;font-weight:600;color:var(--soft,#8A7F6A);text-decoration:none;text-transform:uppercase}
 .shNav a:hover{color:var(--ink,#22303F)}
 .shRight{display:flex;align-items:center;gap:10px;margin-left:auto}
-.shLang{-webkit-appearance:none;appearance:none;border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);border-radius:999px;padding:8px 14px;font-family:inherit;font-size:13px;font-weight:600;color:var(--ink,#22303F);cursor:pointer;height:42px;box-sizing:border-box;width:fit-content;max-width:150px;flex:0 0 auto;text-overflow:ellipsis;white-space:nowrap}
+.shLangWrap{position:relative;display:inline-flex;flex-shrink:0}
+.shLangBtn{border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);border-radius:999px;padding:8px 14px;font-family:inherit;font-size:13px;font-weight:600;color:var(--ink,#22303F);cursor:pointer;height:42px;box-sizing:border-box;white-space:nowrap}
+.shLangBtn:hover{border-color:var(--ink,#22303F)}
+.shLangMenu{position:absolute;top:calc(100% + 8px);right:0;min-width:140px;background:var(--card,#fff);border:1px solid var(--line,#E8DFC8);border-radius:14px;box-shadow:0 12px 32px rgba(34,48,63,.12);padding:6px;display:none;z-index:60;max-height:320px;overflow:auto}
+.shLangWrap.open .shLangMenu{display:block}
+.shLangMenu button{display:block;width:100%;text-align:left;border:0;background:none;font-family:inherit;font-size:13px;font-weight:500;color:var(--ink,#22303F);padding:9px 12px;border-radius:9px;cursor:pointer;white-space:nowrap}
+.shLangMenu button:hover{background:var(--cream,#FAF5EA)}
+.shLangMenu button.on{font-weight:700;color:var(--coral,#E8736B)}
 .shTheme{width:42px;height:42px;border-radius:50%;border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);color:var(--ink,#22303F);font-size:16px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;box-sizing:border-box}
 .shSignin{border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--ink,#22303F);text-decoration:none;white-space:nowrap}
 @media(max-width:640px){
@@ -14,7 +21,7 @@
   .shNav{display:none}
   .shBrand{font-size:22px;flex-shrink:0}
   .shRight{gap:8px;flex-shrink:0}
-  .shLang{height:36px;padding:6px 10px;font-size:12px}
+  .shLangBtn{height:36px;padding:6px 10px;font-size:12px}
   .shTheme{width:36px;height:36px;font-size:14px}
 }
 .shLine{height:1px;background:var(--line,#E8DFC8);margin-top:14px}
