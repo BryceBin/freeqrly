@@ -150,10 +150,7 @@ a.shortUrl:hover{text-decoration:underline}
 <body>
 <div class="manageWrap">
   <div class="topbar">
-    <a class="brand" href="/">Free<span>Qrly</span></a>
-    <div class="acct"><span id="acctMount"></span>
-      <select class="tbtn langsel" id="langSel" aria-label="Language"></select>
-    </div>
+    <div id="siteHeader"></div>
   </div>
 
   <p class="merror" id="acctErr" hidden style="margin:0 0 12px"></p>
@@ -195,7 +192,9 @@ a.shortUrl:hover{text-decoration:underline}
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/js/acct-menu.js"></script>
+<script src="/assets/js/site-header.js"></script>
 <link rel="stylesheet" href="/assets/css/acct-menu.css">
+<link rel="stylesheet" href="/assets/css/site-header.css">
 <div class="cpop" id="cpop" hidden>
   <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
   <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
@@ -267,7 +266,7 @@ function applyLang(){
   renderTokens();
   const docsBtn = $('apiDocsBtn');
   if(docsBtn) docsBtn.href = (LANG === 'en' ? '' : '/' + LANG) + '/developers/#api-tokens';
-  if(window.renderAcctMenu) window.renderAcctMenu(); // retranslate the account menu
+  if(window.renderSiteHeader) window.renderSiteHeader({ nav: dashNav(), t: tShared, lang: LANG });
 }
 
 // ---------- API tokens ----------
@@ -1061,18 +1060,12 @@ async function boot(){
   const meP = fetch('/api/auth/me', { credentials: 'same-origin' }).catch(() => null);
   const codesP = fetch('/api/me/codes', { credentials: 'same-origin' }).catch(() => null);
   const tokensP = fetch('/api/tokens', { credentials: 'same-origin' }).then(r => r.ok ? r.json().catch(() => ({})) : {}).catch(() => ({}));
-  // Language switcher (same pill as the homepage header)
-  const sel = $('langSel');
-  sel.innerHTML = LANGS.map(l => `<option value="${l}">${LANGN[l]}</option>`).join('');
-  sel.value = LANG;
-  sel.addEventListener('change', () => {
-    LANG = sel.value;
-    localStorage.setItem('freeqrly-lang', LANG);
-    applyLang();
-  });
-  // Account menu (shared module: /assets/js/acct-menu.js, same as homepage)
-  const KEYMAP = { acctSignedInWith:'signedInWith', acctExport:'exportData', acctDelete:'deleteAccount', acctLogout:'logoutMenu', acctDeleteConfirm:'deleteAccountConfirm', acctDeleteFailed:'deleteFailed', acctNetErr:'networkErr' };
+  // Shared site header (same code as homepage): brand + nav + account + language + theme
+  const KEYMAP = { acctSignedInWith:'signedInWith', acctExport:'exportData', acctDelete:'deleteAccount', acctLogout:'logoutMenu', acctDeleteConfirm:'deleteAccountConfirm', acctDeleteFailed:'deleteFailed', acctNetErr:'networkErr', signin:'signin' };
   const tShared = k => t('ui', KEYMAP[k] || k);
+  function dashNav(){
+    return [{ href: '/', text: t('ui','backGenerator').replace('← ','') }];
+  }
   // i18n (already in flight)
   I18N = (await i18nP) || FALLBACK;
   // Session gate: not signed in -> login (with ?next= back)
@@ -1081,11 +1074,15 @@ async function boot(){
   if(meR){
     const d = await meR.json().catch(() => ({}));
     ME = d.user || null;
-    if(ME && ME.email && window.initAcctMenu){
-      window.initAcctMenu({
-        mount: $('acctMount'),
-        user: { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod },
+    if(ME && ME.email && window.initSiteHeader){
+      window.initSiteHeader({
+        nav: dashNav(),
         t: tShared,
+        lang: LANG,
+        langs: LANGS,
+        langNames: LANGN,
+        onLangChange: (code) => { LANG = code; localStorage.setItem('freeqrly-lang', LANG); applyLang(); },
+        user: { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod },
         showDashboard: false,
         onDelete: (tt) => {
           if(!confirm(tt('acctDeleteConfirm'))) return;

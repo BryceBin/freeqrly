@@ -387,7 +387,7 @@ function applyLang(){
     _sel.value = lang;
   } else if(_sel){ _sel.textContent = LANGN[lang]||lang; }
   renderTabs(); renderFields(); renderHist();
-  if(window.renderAcctMenu) window.renderAcctMenu(); // retranslate the account dropdown
+  if(window.renderSiteHeader) window.renderSiteHeader({ nav: headerNav(), t: k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k, lang: lang });
   localStorage.setItem("freeqrly-lang", lang);
 }
 /* batch */
@@ -1007,7 +1007,7 @@ function setTheme(dark){
 }
 setTheme(localStorage.getItem("freeqrly-theme")==="dark" ||
   (!localStorage.getItem("freeqrly-theme") && matchMedia("(prefers-color-scheme: dark)").matches));
-$("themeBtn").onclick=()=> setTheme(root.getAttribute("data-theme")!=="dark");
+// Theme toggle now lives in the shared site header (assets/js/site-header.js).
 (function(){ const b=$("langBtn"); if(!b) return;
   if(b.tagName==="SELECT"){ b.addEventListener("change",e=>{ lang=e.target.value; applyLang(); }); }
   else { b.onclick=()=>{ const i=LANGS.indexOf(lang); lang=LANGS[(i+1)%LANGS.length]; applyLang(); }; }
@@ -1337,28 +1337,38 @@ window.getAuthState = function(){
 
 // Header auth state + quota hint. Fail-open: anonymous use is unaffected
 // if /api/auth/me is unreachable, 401s, or returns anything unexpected.
-// Logged in: avatar + name trigger, click/hover opens the account menu
-// (shared module: assets/js/acct-menu.js, also used by dashboard).
+// Uses the shared site header (assets/js/site-header.js).
+function headerNav(){
+  const tr = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
+  return [
+    { href: '#studio', text: tr('navStudio') },
+    { href: '#why', text: tr('navWhy') },
+    { href: '#faq', text: tr('navFaq') },
+    { href: '/scan/', text: tr('navScan') }
+  ];
+}
 function initAuthHeader(){
   try{
-    const area = $("authArea");
     const quotaEl = $("quotaHint");
     const tr = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
     window.getAuthState().then(st => {
       const me = st.user;
       if(window.refreshDynamicUI) window.refreshDynamicUI();
-      if(!me) return;
-      if(quotaEl && typeof me.codeCount === "number" && typeof me.codeLimit === "number"){
+      if(quotaEl && me && typeof me.codeCount === "number" && typeof me.codeLimit === "number"){
         if(me.codeCount >= me.codeLimit){
           quotaEl.textContent = "You've reached your code limit (" + me.codeCount + "/" + me.codeLimit + ")";
           quotaEl.hidden = false;
         }
       }
-      if(area && window.initAcctMenu){
-        window.initAcctMenu({
-          mount: area,
-          user: { email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod },
+      if(window.initSiteHeader){
+        window.initSiteHeader({
+          nav: headerNav(),
           t: tr,
+          lang: lang,
+          langs: LANGS,
+          langNames: LANGN,
+          onLangChange: (code) => { lang = code; applyLang(); },
+          user: me && me.email ? { email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod } : null,
           showDashboard: true
         });
       }
