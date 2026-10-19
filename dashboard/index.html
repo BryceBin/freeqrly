@@ -20,7 +20,7 @@ html{scrollbar-gutter:stable both-edges}
   .shortUrl{font-size:16px}
 }
 /* Top bar: brand + account + language (transparent, matches the page) */
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0 18px;flex-wrap:wrap}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0 18px;flex-wrap:wrap;position:relative}
 .brand{font-family:inherit;font-size:21px;font-weight:800;letter-spacing:-.02em;color:#22303F;text-decoration:none}
 .brand span{color:#D9A441}
 .acct{display:flex;align-items:center;gap:10px;font-size:13px;flex-wrap:nowrap}
@@ -38,6 +38,12 @@ html{scrollbar-gutter:stable both-edges}
 .acctMenu .menuSep{height:1px;background:#F1EAD9;margin:6px 0}
 .acctMenu .logoutItem{color:#B4563C}
 .acctMenu .dangerItem{color:#B4563C}
+/* Mobile: menu spans the header width instead of clipping off-screen */
+@media(max-width:640px){
+  .acctWrap{position:static}
+  .acctMenu{top:calc(100% + 8px);left:12px;right:12px;min-width:0}
+  .acctEmail{max-width:110px;overflow:hidden;text-overflow:ellipsis}
+}
 /* Page header */
 .pageHead{margin-bottom:20px}
 .backLink{display:inline-block;color:#2F4A62;text-decoration:none;font-size:13px;font-weight:600}
@@ -1070,11 +1076,11 @@ async function boot(){
   const saved = localStorage.getItem('freeqrly-lang');
   LANG = LANGS.includes(qLang) ? qLang : (LANGS.includes(saved) ? saved : 'en');
   localStorage.setItem('freeqrly-lang', LANG);
-  try{
-    const r = await fetch('/dashboard/i18n.json');
-    if(r.ok) I18N = await r.json();
-  }catch(e){ /* fall back to inlined English */ }
-  if(!I18N) I18N = FALLBACK;
+  // Fire all independent data fetches in parallel (one round trip, not four).
+  const i18nP = fetch('/dashboard/i18n.json').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
+  const meP = fetch('/api/auth/me', { credentials: 'same-origin' }).catch(() => null);
+  const codesP = fetch('/api/me/codes', { credentials: 'same-origin' }).catch(() => null);
+  const tokensP = fetch('/api/tokens', { credentials: 'same-origin' }).then(r => r.ok ? r.json().catch(() => ({})) : {}).catch(() => ({}));
   // Language switcher (same pill as the homepage header)
   const sel = $('langSel');
   sel.innerHTML = LANGS.map(l => `<option value="${l}">${LANGN[l]}</option>`).join('');
@@ -1114,11 +1120,13 @@ async function boot(){
     try{ await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' }); }catch(e){}
     location.href = '/login/';
   });
+  // i18n (already in flight)
+  I18N = (await i18nP) || FALLBACK;
   // Session gate: not signed in -> login (with ?next= back)
-  try{
-    const r = await fetch('/api/auth/me', { credentials: 'same-origin' });
-    if(r.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
-    const d = await r.json().catch(() => ({}));
+  const meR = await meP;
+  if(meR && meR.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+  if(meR){
+    const d = await meR.json().catch(() => ({}));
     ME = d.user || null;
     if(ME && ME.email){
       const displayName = ME.name || ME.email;
@@ -1136,16 +1144,18 @@ async function boot(){
       const providerLabel = { password: 'Email', email: 'Email', google: 'Google', github: 'GitHub' };
       $('menuProvider').textContent = t('ui','signedInWith').replace('{method}', providerLabel[ME.authMethod] || 'Email');
     }
-  }catch(e){ /* codes fetch below will 401 -> login */ }
-  try{
-    const r = await fetch('/api/me/codes', { credentials: 'same-origin' });
-    if(r.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
-    const d = await r.json().catch(() => ({}));
+  }
+  const codesR = await codesP;
+  if(codesR && codesR.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+  if(codesR){
+    const d = await codesR.json().catch(() => ({}));
     CODES = d.codes || [];
     if(d.quota && ME) ME.quota = d.quota;
-  }catch(e){ CODES = []; }
+  }else{ CODES = []; }
+  const tokensD = await tokensP;
+  TOKENS = tokensD.tokens || [];
   wireTokens();
-  loadTokens();
+  renderTokens();
   applyLang();
 }
 boot();
