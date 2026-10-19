@@ -1,6 +1,7 @@
 // GET /api/auth/oauth/:provider — start OAuth (google|github).
-// Optional ?turnstileToken=... — verified server-side when TURNSTILE_SECRET_KEY is set
-// (missing token proceeds; a token that fails verification redirects with error=turnstile).
+// Requires ?turnstileToken=... when TURNSTILE_SECRET_KEY is set: the token is
+// verified server-side, and a missing or invalid token redirects to
+// /login/?error=turnstile. (If no secret is configured, verification is skipped.)
 // Optional ?next=... — validated (same-origin path only) and stored in the
 // state cookie alongside the CSRF state; the callback redirects to it.
 // Unconfigured provider → redirect /login/?error=provider_unavailable.

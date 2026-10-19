@@ -158,7 +158,8 @@ const ERRORS = {
   email_not_verified: '请先验证邮箱——我们刚给你发了新的验证链接。',
   already_registered: '这个邮箱已经注册过了——直接登录吧。',
   weak_password: '请设一个更强的密码（至少 8 个字符，包含字母和数字）。',
-  rate_limited: '尝试次数太多了，稍等一下再试。'
+  rate_limited: '尝试次数太多了，稍等一下再试。',
+  turnstile: '请先完成人机验证，再试一次。'
 };
 function errText(key, fallback){
   return ERRORS[key] || fallback || '出了点问题，请再试一次。';
@@ -334,8 +335,9 @@ $('pwForm').addEventListener('submit', async e => {
   }
 });
 
-// --- OAuth ---
-$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT));
-$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT));
+// --- OAuth (Turnstile token is required by /api/auth/oauth/:provider when the
+// server has TURNSTILE_SECRET_KEY set; without it the backend bounces to ?error=turnstile)
+$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
+$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
 </script>
 </body></html>

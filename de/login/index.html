@@ -158,7 +158,8 @@ const ERRORS = {
   email_not_verified: 'Bitte bestätige zuerst deine E-Mail — wir haben dir gerade einen neuen Bestätigungslink geschickt.',
   already_registered: 'Ein Konto mit dieser E-Mail gibt es schon — meld dich stattdessen an.',
   weak_password: 'Bitte wähl ein stärkeres Passwort (mindestens 8 Zeichen, mit Buchstaben und Zahlen).',
-  rate_limited: 'Zu viele Versuche. Bitte warte kurz und versuch es nochmal.'
+  rate_limited: 'Zu viele Versuche. Bitte warte kurz und versuch es nochmal.',
+  turnstile: 'Bitte bestätige, dass du kein Roboter bist, und versuch es nochmal.'
 };
 function errText(key, fallback){
   return ERRORS[key] || fallback || 'Etwas ist schiefgelaufen. Bitte versuch es nochmal.';
@@ -334,8 +335,9 @@ $('pwForm').addEventListener('submit', async e => {
   }
 });
 
-// --- OAuth ---
-$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT));
-$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT));
+// --- OAuth (Turnstile token is required by /api/auth/oauth/:provider when the
+// server has TURNSTILE_SECRET_KEY set; without it the backend bounces to ?error=turnstile)
+$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
+$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
 </script>
 </body></html>

@@ -158,7 +158,8 @@ const ERRORS = {
   email_not_verified: 'まずメールアドレスを確認してください — 新しい確認リンクを送信しました。',
   already_registered: 'このメールアドレスのアカウントはすでに存在します — 代わりにログインしてください。',
   weak_password: 'もっと強いパスワードにしてください（8文字以上、英字と数字を含む）。',
-  rate_limited: '試行回数が多すぎます。しばらく待ってからもう一度お試しください。'
+  rate_limited: '試行回数が多すぎます。しばらく待ってからもう一度お試しください。',
+  turnstile: '人間確認を完了して、もう一度お試しください。'
 };
 function errText(key, fallback){
   return ERRORS[key] || fallback || '問題が発生しました。もう一度お試しください。';
@@ -334,8 +335,9 @@ $('pwForm').addEventListener('submit', async e => {
   }
 });
 
-// --- OAuth ---
-$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT));
-$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT));
+// --- OAuth (Turnstile token is required by /api/auth/oauth/:provider when the
+// server has TURNSTILE_SECRET_KEY set; without it the backend bounces to ?error=turnstile)
+$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
+$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
 </script>
 </body></html>
