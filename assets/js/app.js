@@ -1351,20 +1351,27 @@ function initAuthHeader(){
   try{
     const quotaEl = $("quotaHint");
     const tr = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
-    const headerCfg = () => ({
+    const toUser = (me) => me && me.email
+      ? { email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod }
+      : null;
+    const headerCfg = (user) => ({
       nav: headerNav(),
       t: tr,
       lang: lang,
       langs: LANGS,
       langNames: LANGN,
       onLangChange: (code) => { lang = code; applyLang(); },
-      user: null, // filled in when auth resolves
+      user: user,
       showDashboard: true
     });
-    // Render header immediately (brand/nav/lang/theme); account fills in async
-    if(window.initSiteHeader) window.initSiteHeader(headerCfg());
+    // Render immediately with cached user (if any) — no Sign-in flash
+    const cached = window.getCachedUser ? window.getCachedUser() : null;
+    if(window.initSiteHeader) window.initSiteHeader(headerCfg(cached));
+    // Revalidate in background; fall back to Sign in if session expired
     window.getAuthState().then(st => {
       const me = st.user;
+      const user = toUser(me);
+      if(window.setCachedUser) window.setCachedUser(user);
       if(window.refreshDynamicUI) window.refreshDynamicUI();
       if(quotaEl && me && typeof me.codeCount === "number" && typeof me.codeLimit === "number"){
         if(me.codeCount >= me.codeLimit){
@@ -1372,13 +1379,9 @@ function initAuthHeader(){
           quotaEl.hidden = false;
         }
       }
-      // Patch the account module once auth resolves (header already visible)
-      if(window.renderSiteHeader){
-        window.renderSiteHeader({
-          user: me && me.email ? { email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod } : null
-        });
-      }
-    }).catch(()=>{});
+      // Patch the account module (no-op if unchanged)
+      if(window.renderSiteHeader) window.renderSiteHeader({ user: user });
+    }).catch(()=>{ /* network error: keep cached UI */ });
   }catch(e){}
 }
 detectLang().then(async l => {

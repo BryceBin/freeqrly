@@ -93,8 +93,28 @@
     }
   }
 
-  function fitLangWidth(sel){
+  // Cached user snapshot for instant header render (revalidated in background).
+  // Stores display info only (name/avatar/email) — never auth tokens.
+  var CACHE_KEY = 'freeqrly-user';
+  window.getCachedUser = function(){
     try{
+      var c = localStorage.getItem(CACHE_KEY);
+      if(!c) return null;
+      var u = JSON.parse(c);
+      return (u && u.email) ? u : null;
+    }catch(e){ return null; }
+  };
+  window.setCachedUser = function(user){
+    try{
+      if(user && user.email) localStorage.setItem(CACHE_KEY, JSON.stringify(user));
+      else localStorage.removeItem(CACHE_KEY);
+    }catch(e){}
+  };
+  window.clearCachedUser = function(){
+    try{ localStorage.removeItem(CACHE_KEY); }catch(e){}
+  };
+
+  function fitLangWidth(sel){    try{
       var idx = sel.selectedIndex;
       if(idx < 0 || !sel.options[idx]) return;
       // Clone the select with ONLY the selected option, measure its real width

@@ -66,6 +66,7 @@
       if(act === 'export'){ location.href = '/api/auth/export'; return; }
       if(act === 'logout'){
         btn.disabled = true; btn.style.opacity = '.55'; btn.style.pointerEvents = 'none';
+        if(window.clearCachedUser) window.clearCachedUser();
         fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' })
           .catch(function(){})
           .then(function(){ location.href = '/login/'; });

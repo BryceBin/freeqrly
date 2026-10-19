@@ -188,10 +188,10 @@ a.shortUrl:hover{text-decoration:underline}
   </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/acct-menu.js?v=b3v-20261019"></script>
-<script src="/assets/js/site-header.js?v=b3v-20261019"></script>
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3v-20261019">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3v-20261019">
+<script src="/assets/js/acct-menu.js?v=b3w-20261019"></script>
+<script src="/assets/js/site-header.js?v=b3w-20261019"></script>
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261019">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261019">
 <div class="cpop" id="cpop" hidden>
   <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
   <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
@@ -1077,7 +1077,7 @@ async function boot(){
     langs: LANGS,
     langNames: LANGN,
     onLangChange: (code) => { LANG = code; localStorage.setItem('freeqrly-lang', LANG); applyLang(); },
-    user: null,
+    user: (window.getCachedUser ? window.getCachedUser() : null), // instant, revalidated below
     showDashboard: false,
     onDelete: (tt) => {
       if(!confirm(tt('acctDeleteConfirm'))) return;
@@ -1101,11 +1101,9 @@ async function boot(){
   if(meR){
     const d = await meR.json().catch(() => ({}));
     ME = d.user || null;
-    if(ME && ME.email && window.renderSiteHeader){
-      window.renderSiteHeader({
-        user: { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod }
-      });
-    }
+    var dashUser = (ME && ME.email) ? { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod } : null;
+    if(window.setCachedUser) window.setCachedUser(dashUser);
+    if(window.renderSiteHeader) window.renderSiteHeader({ user: dashUser });
   }
   const codesR = await codesP;
   if(codesR && codesR.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
