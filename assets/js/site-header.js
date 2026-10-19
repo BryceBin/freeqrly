@@ -76,6 +76,10 @@
     });
     // Fit width to the CURRENT language only (native select sizes to longest option)
     fitLangWidth(sel);
+    // Re-fit after webfonts load (measurement may have used fallback font)
+    if(document.fonts && document.fonts.ready){
+      document.fonts.ready.then(function(){ fitLangWidth(sel); });
+    }
 
     // Account menu
     if(cfg.user && cfg.user.email && window.initAcctMenu){
@@ -91,20 +95,24 @@
 
   function fitLangWidth(sel){
     try{
-      var opt = sel.options[sel.selectedIndex];
-      if(!opt) return;
-      var meas = document.createElement('span');
+      var idx = sel.selectedIndex;
+      if(idx < 0 || !sel.options[idx]) return;
+      // Clone the select with ONLY the selected option, measure its real width
+      var clone = document.createElement('select');
       var cs = getComputedStyle(sel);
-      meas.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;pointer-events:none;';
-      meas.style.font = cs.font;
-      meas.textContent = opt.textContent;
-      document.body.appendChild(meas);
-      var w = meas.offsetWidth;
-      meas.remove();
-      // padding-left 14 + padding-right 14 (desktop) — read from computed style
-      var pl = parseFloat(cs.paddingLeft) || 0;
-      var pr = parseFloat(cs.paddingRight) || 0;
-      sel.style.width = Math.ceil(w + pl + pr + 2) + 'px';
+      clone.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;top:0;left:0;';
+      clone.style.font = cs.font;
+      clone.style.padding = cs.padding;
+      clone.style.border = cs.border;
+      clone.style.letterSpacing = cs.letterSpacing;
+      clone.style.borderRadius = cs.borderRadius;
+      var opt = document.createElement('option');
+      opt.textContent = sel.options[idx].textContent;
+      clone.appendChild(opt);
+      document.body.appendChild(clone);
+      var w = clone.offsetWidth;
+      clone.remove();
+      sel.style.width = (w + 2) + 'px';
     }catch(e){}
   }
 
