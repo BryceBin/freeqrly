@@ -3017,7 +3017,8 @@
    "apiTokenEmpty": "No tokens yet.",
    "apiTokenLastUsed": "Last used {d}",
    "apiTokenNever": "never",
-   "apiTokenRevoked": "revoked"
+   "apiTokenRevoked": "revoked",
+   "apiTokensDocs": "Guide"
   },
   "zh": {
    "manageTitle": "控制台",
@@ -3074,7 +3075,8 @@
    "apiTokenEmpty": "还没有 Token。",
    "apiTokenLastUsed": "上次使用 {d}",
    "apiTokenNever": "从未",
-   "apiTokenRevoked": "已吊销"
+   "apiTokenRevoked": "已吊销",
+   "apiTokensDocs": "使用手册"
   },
   "es": {
    "manageTitle": "Panel",
@@ -3131,7 +3133,8 @@
    "apiTokenEmpty": "Aún no hay tokens.",
    "apiTokenLastUsed": "Último uso {d}",
    "apiTokenNever": "nunca",
-   "apiTokenRevoked": "revocado"
+   "apiTokenRevoked": "revocado",
+   "apiTokensDocs": "Guía"
   },
   "hi": {
    "manageTitle": "डैशबोर्ड",
@@ -3188,7 +3191,8 @@
    "apiTokenEmpty": "अभी कोई टोकन नहीं।",
    "apiTokenLastUsed": "अंतिम उपयोग {d}",
    "apiTokenNever": "कभी नहीं",
-   "apiTokenRevoked": "रद्द"
+   "apiTokenRevoked": "रद्द",
+   "apiTokensDocs": "मार्गदर्शिका"
   },
   "ar": {
    "manageTitle": "لوحة التحكم",
@@ -3245,7 +3249,8 @@
    "apiTokenEmpty": "لا توجد رموز بعد.",
    "apiTokenLastUsed": "آخر استخدام {d}",
    "apiTokenNever": "أبدًا",
-   "apiTokenRevoked": "ملغى"
+   "apiTokenRevoked": "ملغى",
+   "apiTokensDocs": "الدليل"
   },
   "pt": {
    "manageTitle": "Painel",
@@ -3302,7 +3307,8 @@
    "apiTokenEmpty": "Nenhum token ainda.",
    "apiTokenLastUsed": "Último uso {d}",
    "apiTokenNever": "nunca",
-   "apiTokenRevoked": "revogado"
+   "apiTokenRevoked": "revogado",
+   "apiTokensDocs": "Guia"
   },
   "fr": {
    "manageTitle": "Tableau de bord",
@@ -3359,7 +3365,8 @@
    "apiTokenEmpty": "Aucun jeton pour le moment.",
    "apiTokenLastUsed": "Dernière utilisation {d}",
    "apiTokenNever": "jamais",
-   "apiTokenRevoked": "révoqué"
+   "apiTokenRevoked": "révoqué",
+   "apiTokensDocs": "Guide"
   },
   "ru": {
    "manageTitle": "Панель управления",
@@ -3416,7 +3423,8 @@
    "apiTokenEmpty": "Токенов пока нет.",
    "apiTokenLastUsed": "Последнее использование {d}",
    "apiTokenNever": "никогда",
-   "apiTokenRevoked": "отозван"
+   "apiTokenRevoked": "отозван",
+   "apiTokensDocs": "Руководство"
   },
   "de": {
    "manageTitle": "Dashboard",
@@ -3473,7 +3481,8 @@
    "apiTokenEmpty": "Noch keine Tokens.",
    "apiTokenLastUsed": "Zuletzt verwendet {d}",
    "apiTokenNever": "nie",
-   "apiTokenRevoked": "widerrufen"
+   "apiTokenRevoked": "widerrufen",
+   "apiTokensDocs": "Anleitung"
   },
   "ja": {
    "manageTitle": "ダッシュボード",
@@ -3530,7 +3539,8 @@
    "apiTokenEmpty": "トークンはまだありません。",
    "apiTokenLastUsed": "最終使用 {d}",
    "apiTokenNever": "なし",
-   "apiTokenRevoked": "無効化済み"
+   "apiTokenRevoked": "無効化済み",
+   "apiTokensDocs": "使い方"
   }
  }
 }

@@ -102,7 +102,7 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
         <li><strong>ecc</strong> — corrección de errores <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (por defecto <code>M</code>). Usa <code>Q</code>/<code>H</code> para impresión o logos.</li>
       </ul>
 
-      <h2>Dynamic codes API (authenticated)</h2>
+      <h2 id="api-tokens">Dynamic codes API (authenticated)</h2>
       <p>Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href="/dashboard/">dashboard</a>, with the same quota (8 free). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:</p>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/api/codes</div>
       <pre class="code">export FQ_TOKEN="fqly_..."  # from your dashboard
