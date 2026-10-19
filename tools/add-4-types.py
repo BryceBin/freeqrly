@@ -155,8 +155,11 @@ for idx, (lg, pos) in enumerate(bounds):
     ins = "".join(f'"{t}":["{TYPE_TR[t][lg][0]}","{TYPE_TR[t][lg][1]}"],' for t in NEWTYPE_ORDER)
     ob = ob[:bi] + ins + ob[bi:]
 
-    # 2. fields{}: insert 4 entries after "appstore" value
-    ai = ob.index('"appstore":')
+    # 2. fields{}: insert 4 entries after "appstore" value.
+    # MUST scope to fields{} — ob.index('"appstore":') alone finds types{} first
+    # (2026-10-19 bug: field defs landed in types{} as dead dup keys, fields{} got nothing)
+    fi = ob.index('fields:{')
+    ai = ob.index('"appstore":', fi)
     ab = ob.index('[', ai)
     ae = find_matching(ob, ab, '[', ']')
     fins = []
