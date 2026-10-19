@@ -212,6 +212,8 @@ async function draw(){
 }
 const MASCOT_BASE="/assets/img/mascots/";
 const MASCOT_LOCAL="/assets/img/mascots/";
+// Preload every mascot pose on page load so switching types swaps instantly
+["qly-url","qly-text","qly-email","qly-sms","qly-phone","qly-geo","wifi","business-card","wedding","batch","studio-qr"].forEach(p=>{ const im=new Image(); im.src=MASCOT_BASE+p+".webp"; });
 function updateStudioMascot(){
   const image=document.querySelector("[data-studio-mascot]"); if(!image) return;
   const local={url:"qly-url",text:"qly-text",email:"qly-email",sms:"qly-sms",phone:"qly-phone",geo:"qly-geo"};
