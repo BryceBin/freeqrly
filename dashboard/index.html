@@ -24,25 +24,9 @@ html{scrollbar-gutter:stable both-edges}
 .brand{font-family:inherit;font-size:21px;font-weight:800;letter-spacing:-.02em;color:#22303F;text-decoration:none}
 .brand span{color:#D9A441}
 .acct{display:flex;align-items:center;gap:10px;font-size:13px;flex-wrap:nowrap}
-.acctWrap{position:relative}
-.acctTrigger{display:flex;align-items:center;gap:10px;border:0;background:none;font-family:inherit;cursor:pointer;padding:4px 6px;border-radius:99px}
-.acctTrigger:hover{background:#F1EAD9}
-.avatar{width:32px;height:32px;border-radius:50%;background:#F1EAD9;border:1px solid #E8DFC8;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#2F4A62;flex:0 0 32px;overflow:hidden;padding:0}
-.avatar img{width:100%;height:100%;object-fit:cover;display:block}
-.acctEmail{color:#22303F;font-weight:600;white-space:nowrap}
 .chev{font-size:10px;color:#8a7a5f}
-.acctMenu{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid #E8DFC8;border-radius:14px;box-shadow:0 12px 32px rgba(190,145,60,.18);min-width:200px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:30}
-.acctWrap:hover .acctMenu,.acctWrap.open .acctMenu{opacity:1;visibility:visible;transform:none}
-.acctMenu a,.acctMenu button{display:block;width:100%;text-align:left;border:0;background:none;padding:10px 12px;border-radius:8px;font-family:inherit;font-size:13px;font-weight:600;color:#22303F;cursor:pointer;text-decoration:none;box-sizing:border-box}
-.acctMenu a:hover,.acctMenu button:hover{background:#FBF6EC}
-.acctMenu .menuSep{height:1px;background:#F1EAD9;margin:6px 0}
-.acctMenu .logoutItem{color:#B4563C}
-.acctMenu .dangerItem{color:#B4563C}
 /* Mobile: menu spans the header width instead of clipping off-screen */
 @media(max-width:640px){
-  .acctWrap{position:static}
-  .acctMenu{top:calc(100% + 8px);left:12px;right:12px;min-width:0}
-  .acctEmail{max-width:110px;overflow:hidden;text-overflow:ellipsis}
 }
 /* Page header */
 .pageHead{margin-bottom:20px}
@@ -133,9 +117,6 @@ a.shortUrl:hover{text-decoration:underline}
 .merror{color:#b45309;font-size:13px;margin-top:10px}
 .mok{color:#2F6B4F;font-size:13px;margin-top:10px}
 /* Account menu header: email + real sign-in channel */
-.acctMenuHead{padding:10px 12px 8px}
-.acctMenuHead .mEmail{font-size:13px;font-weight:700;color:#22303F;word-break:break-all}
-.acctMenuHead .mProv{font-size:12px;color:#8a7a5f;margin-top:2px}
 /* Empty / error states */
 .emptyCard{background:#fff;border:1px solid #E8DFC8;border-radius:20px;padding:40px 28px;text-align:center;box-shadow:0 8px 28px rgba(190,145,60,.10)}
 .emptyCard h2{font-size:18px;margin-bottom:8px}
@@ -170,11 +151,7 @@ a.shortUrl:hover{text-decoration:underline}
 <div class="manageWrap">
   <div class="topbar">
     <a class="brand" href="/">Free<span>Qrly</span></a>
-    <div class="acct">
-      <div class="acctWrap" id="acctWrap">
-        <button class="acctTrigger" type="button" id="acctTrigger"><span class="avatar" id="acctAvatar">?</span><span class="acctEmail" id="acctEmail"></span><span class="chev">▾</span></button>
-        <div class="acctMenu"><div class="acctMenuHead"><div class="mEmail" id="menuEmail"></div><div class="mProv" id="menuProvider"></div></div><div class="menuSep"></div><button type="button" id="exportMenuBtn" data-t="exportData">Export my data</button><button type="button" id="deleteAcctMenuBtn" class="dangerItem" data-t="deleteAccount">Delete account</button><div class="menuSep"></div><button class="logoutItem" type="button" id="logoutBtn" data-t="logoutMenu">Log out</button></div>
-      </div>
+    <div class="acct" id="acctMount"></div>
       <select class="tbtn langsel" id="langSel" aria-label="Language"></select>
     </div>
   </div>
@@ -217,6 +194,8 @@ a.shortUrl:hover{text-decoration:underline}
   </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
+<script src="/assets/js/acct-menu.js"></script>
+<link rel="stylesheet" href="/assets/css/acct-menu.css">
 <div class="cpop" id="cpop" hidden>
   <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
   <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
@@ -288,6 +267,7 @@ function applyLang(){
   renderTokens();
   const docsBtn = $('apiDocsBtn');
   if(docsBtn) docsBtn.href = (LANG === 'en' ? '' : '/' + LANG) + '/developers/#api-tokens';
+  if(window.renderAcctMenu) window.renderAcctMenu(); // retranslate the account menu
 }
 
 // ---------- API tokens ----------
@@ -1090,36 +1070,9 @@ async function boot(){
     localStorage.setItem('freeqrly-lang', LANG);
     applyLang();
   });
-  // Account menu
-  const wrap = $('acctWrap');
-  $('acctTrigger').addEventListener('click', e => { e.stopPropagation(); wrap.classList.toggle('open'); });
-  document.addEventListener('click', e => { if(!e.target.closest('.acctWrap')) wrap.classList.remove('open'); });
-  $('exportMenuBtn').addEventListener('click', () => { location.href = '/api/auth/export'; });
-  $('deleteAcctMenuBtn').addEventListener('click', async () => {
-    if(!confirm(t('ui','deleteAccountConfirm'))) return;
-    const errEl = $('acctErr'); errEl.hidden = true;
-    try{
-      const r = await fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'});
-      const d = await r.json().catch(()=>({}));
-      if(!r.ok){
-        errEl.textContent = d.error === 'reauth_required' ? t('ui','deleteReauth') : (d.error || t('ui','deleteFailed'));
-        errEl.hidden = false; return;
-      }
-      location.href = '/';
-    }catch(e){ errEl.textContent = t('ui','networkErr'); errEl.hidden = false; }
-  });
-  $('logoutBtn').addEventListener('click', async (e) => {
-    const btn = e.currentTarget;
-    if(btn.disabled) return; // prevent double-clicks while logging out
-    btn.disabled = true;
-    btn.style.opacity = '.55';
-    btn.style.pointerEvents = 'none';
-    const s = document.createElement('span');
-    s.className = 'mini-spin'; s.setAttribute('aria-hidden', 'true');
-    btn.appendChild(s);
-    try{ await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' }); }catch(e){}
-    location.href = '/login/';
-  });
+  // Account menu (shared module: /assets/js/acct-menu.js, same as homepage)
+  const KEYMAP = { acctSignedInWith:'signedInWith', acctExport:'exportData', acctDelete:'deleteAccount', acctLogout:'logoutMenu', acctDeleteConfirm:'deleteAccountConfirm', acctDeleteFailed:'deleteFailed', acctNetErr:'networkErr' };
+  const tShared = k => t('ui', KEYMAP[k] || k);
   // i18n (already in flight)
   I18N = (await i18nP) || FALLBACK;
   // Session gate: not signed in -> login (with ?next= back)
@@ -1128,21 +1081,27 @@ async function boot(){
   if(meR){
     const d = await meR.json().catch(() => ({}));
     ME = d.user || null;
-    if(ME && ME.email){
-      const displayName = ME.name || ME.email;
-      $('acctEmail').textContent = displayName;
-      const av = $('acctAvatar');
-      if(ME.avatar_url){
-        av.innerHTML = '';
-        const img = document.createElement('img');
-        img.src = ME.avatar_url; img.alt = ''; img.referrerPolicy = 'no-referrer';
-        av.appendChild(img);
-      }else{
-        av.textContent = displayName.trim().charAt(0).toUpperCase();
-      }
-      $('menuEmail').textContent = ME.email;
-      const providerLabel = { password: 'Email', email: 'Email', google: 'Google', github: 'GitHub' };
-      $('menuProvider').textContent = t('ui','signedInWith').replace('{method}', providerLabel[ME.authMethod] || 'Email');
+    if(ME && ME.email && window.initAcctMenu){
+      window.initAcctMenu({
+        mount: $('acctMount'),
+        user: { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod },
+        t: tShared,
+        showDashboard: false,
+        onDelete: (tt) => {
+          if(!confirm(tt('acctDeleteConfirm'))) return;
+          const errEl = $('acctErr'); errEl.hidden = true;
+          fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'})
+            .then(r => r.json().catch(()=>({})).then(d => ({ok:r.ok, d})))
+            .then(res => {
+              if(!res.ok){
+                errEl.textContent = res.d.error === 'reauth_required' ? t('ui','deleteReauth') : (res.d.error || tt('acctDeleteFailed'));
+                errEl.hidden = false; return;
+              }
+              location.href = '/';
+            })
+            .catch(() => { errEl.textContent = tt('acctNetErr'); errEl.hidden = false; });
+        }
+      });
     }
   }
   const codesR = await codesP;
