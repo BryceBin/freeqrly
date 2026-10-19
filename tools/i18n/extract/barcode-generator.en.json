@@ -38,7 +38,7 @@
  "No — for EAN-13, UPC-A, and ITF-14, enter one digit short and the check digit is calculated for you. Code 128 and Code 39 need none.",
  "SVG for packaging and professional print — it scales infinitely with no blur. PNG for office printing and apps that don't accept SVG.",
  "Free, no watermark, no sign-up. The barcode is drawn in your browser — nothing is uploaded.",
- "<a href=\"/#studio\">Studio</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a><a href=\"/about/\">About FreeQrly</a><a href=\"/developers/\">API & MCP for agents</a>",
+ "<a href=\"/#studio\">Studio</a><a href=\"/scan/\">QR scanner</a><a href=\"/blog/\">Field notes</a><a href=\"/about/\">About FreeQrly</a><a href=\"/developers/\">API & MCP for agents</a><a href=\"mailto:hello@freeqrly.com\">hello@freeqrly.com</a>",
  "FreeQrly Barcode Generator",
  "Generate Code 128, EAN-13, UPC-A, Code 39, and ITF-14 barcodes free, in the browser. Download PNG or SVG.",
  "Which barcode format should I use?",

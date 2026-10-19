@@ -36,7 +36,7 @@ QR payload formats the generator understands:
 
 ## Site map
 
-- `/` — the studio (13 QR types incl. Batch mode, logo upload, PNG/SVG export, transparent background option, local history, 10 languages)
+- `/` — the studio (17 QR types incl. Batch mode, logo upload, PNG/SVG export, transparent background option, local history, 10 languages)
 - `/scan/` — free QR scanner (camera + image upload, decoded 100% on-device with jsQR, nothing uploaded)
 - `/barcode-generator/` — free barcode generator (Code 128, EAN-13, UPC-A, Code 39, ITF-14, rendered 100% on-device with JsBarcode, PNG/SVG download, nothing uploaded)
 - `/google-form-qr-code/` — QR codes for Google Forms

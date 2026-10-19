@@ -13,6 +13,7 @@ const LANG_SLUGS = new Set([
   'payment-qr-code', 'youtube-qr-code', 'whatsapp-qr-code',
   'tiktok-qr-code', 'spotify-qr-code', 'facebook-qr-code',
   'google-maps-qr-code',
+  'bitcoin-qr-code', 'coupon-qr-code', 'app-store-qr-code', 'mp3-qr-code',
   'about', 'privacy', 'terms', 'developers', 'scan', 'barcode-generator', 'login', 'reset',
 ]);
 
@@ -26,7 +27,8 @@ const TOP_LEVEL = new Set([
   'pdf-qr-code', 'multi-link-qr-code', 'menu-qr-code',
   'payment-qr-code', 'youtube-qr-code', 'whatsapp-qr-code',
   'tiktok-qr-code', 'spotify-qr-code', 'facebook-qr-code',
-  'google-maps-qr-code']);
+  'google-maps-qr-code',
+  'bitcoin-qr-code', 'coupon-qr-code', 'app-store-qr-code', 'mp3-qr-code']);
 
 function isKnown(path) {
   if (path === '/') return true;

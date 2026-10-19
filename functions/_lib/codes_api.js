@@ -10,6 +10,7 @@ import { sanitizeStyle, parseStyle } from './style.js';
 export const VALID_TYPES = new Set([
   'url', 'text', 'wifi', 'vcard', 'email', 'sms', 'phone',
   'geo', 'event', 'bitcoin', 'coupon', 'appstore',
+  'review', 'mp3', 'google-form', 'menu',
 ]);
 
 export class ApiError extends Error {
