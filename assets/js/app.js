@@ -837,11 +837,50 @@ async function downloadQR(format){
       ctx.fillStyle = "#fff"; ctx.fillRect(0,0,px,px);
       ctx.drawImage(img, 0, 0, px, px);
       URL.revokeObjectURL(url);
-      // Minimal PDF wrapper
-      const dataUrl = canvas.toDataURL("image/png");
-      const b64 = dataUrl.split(",")[1];
-      const pdf = `%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 ${px} ${px}]/Resources<</XObject<</I1 4 0 R>>>>/Contents 5 0 R>>endobj\n4 0 obj<</Type/XObject/Subtype/Image/Width ${px}/Height ${px}/ColorSpace/DeviceRGB/BitsPerComponent 8/Filter/DCTDecode/Length ${b64.length}>>stream\n${atob(b64)}\nendstream\nendobj\n5 0 obj<</Length 44>>stream\nq ${px} 0 0 ${px} 0 0 cm /I1 Do Q\nendstream\nendobj\ntrailer<</Size 6/Root 1 0 R>>\n%%EOF`;
-      const blob = new Blob([pdf], {type:"application/pdf"});
+      // Minimal valid PDF (binary-safe assembly + xref table)
+      const b64 = canvas.toDataURL("image/jpeg", 0.92).split(",")[1];
+      const bin = atob(b64);
+      const jpg = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) jpg[i] = bin.charCodeAt(i);
+      const enc = new TextEncoder();
+      const E = s => enc.encode(s);
+      const body5 = `q ${px} 0 0 ${px} 0 0 cm /I1 Do Q`;
+      const objBody = [
+        E(`<</Type/Catalog/Pages 2 0 R>>`),
+        E(`<</Type/Pages/Kids[3 0 R]/Count 1>>`),
+        E(`<</Type/Page/Parent 2 0 R/MediaBox[0 0 ${px} ${px}]/Resources<</XObject<</I1 4 0 R>>>>/Contents 5 0 R>>`),
+        null,
+        E(body5),
+      ];
+      const chunks = [E(`%PDF-1.4\n`)];
+      const offsets = [0];
+      let pos = chunks[0].length;
+      for (let n = 1; n <= 5; n++) {
+        offsets[n] = pos;
+        const open = E(`${n} 0 obj\n`), close = E(`\nendobj\n`);
+        if (n === 4) {
+          const dict = E(`<</Type/XObject/Subtype/Image/Width ${px}/Height ${px}/ColorSpace/DeviceRGB/BitsPerComponent 8/Filter/DCTDecode/Length ${jpg.length}>>\nstream\n`);
+          const tail = E(`\nendstream`);
+          chunks.push(open, dict, jpg, tail, close);
+          pos += open.length + dict.length + jpg.length + tail.length + close.length;
+        } else if (n === 5) {
+          const dict = E(`<</Length ${body5.length}>>\nstream\n`);
+          const tail = E(`\nendstream`);
+          chunks.push(open, dict, objBody[n-1], tail, close);
+          pos += open.length + dict.length + objBody[n-1].length + tail.length + close.length;
+        } else {
+          chunks.push(open, objBody[n-1], close);
+          pos += open.length + objBody[n-1].length + close.length;
+        }
+      }
+      let xref = `xref\n0 6\n0000000000 65535 f \n`;
+      for (let n = 1; n <= 5; n++) xref += String(offsets[n]).padStart(10, "0") + ` 00000 n \n`;
+      xref += `trailer\n<</Size 6/Root 1 0 R>>\nstartxref\n${pos}\n%%EOF`;
+      chunks.push(E(xref));
+      const pdfBytes = new Uint8Array(chunks.reduce((a, c) => a + c.length, 0));
+      let wp = 0;
+      for (const c of chunks) { pdfBytes.set(c, wp); wp += c.length; }
+      const blob = new Blob([pdfBytes], {type:"application/pdf"});
       const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "freeqrly.pdf"; a.click();
     } else if(format === "eps"){
       // Render QR to canvas, then emit real PostScript rectangles
