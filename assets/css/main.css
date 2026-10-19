@@ -291,7 +291,6 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
 }
 @media(max-width:640px){
   .wrap{padding:0 18px}
-  .modeTip{right:0;width:230px;max-width:calc(100vw - 60px)}
 }
   header.top{padding:18px 0 8px}
   .brand{font-size:21px}
@@ -473,9 +472,6 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 /* --- Dynamic QR mode (integrated in preview) --- */
 .segMode{margin-bottom:10px}
 .segMode button{position:relative}
-.modeInfo{position:absolute;top:-4px;right:-4px;width:16px;height:16px;border-radius:50%;background:var(--deep);color:#fff;font-size:10px;line-height:16px;text-align:center;cursor:pointer}
-.modeTip{display:none;position:absolute;top:30px;right:-10px;width:230px;background:#22303F;color:#fff;font-size:12px;line-height:1.5;padding:10px 12px;border-radius:10px;z-index:10;text-align:left;font-weight:400}
-.modeInfo:hover + .modeTip,.modeTip.show{display:block}
 .modeHintLine{text-align:center;font-size:13px;color:var(--muted);margin-bottom:12px;min-height:18px}
 .qrpaper.blurred{position:relative}
 .qrpaper.blurred #qrbox{filter:blur(10px);opacity:.45;pointer-events:none}
