@@ -38,9 +38,9 @@ export async function onRequestGet({ request, env, params }) {
     const challenge = await sha256Base64Url(verifier);
     authUrl.searchParams.set('code_challenge', challenge);
     authUrl.searchParams.set('code_challenge_method', 'S256');
-    headers.append('Set-Cookie', tempCookie(PKCE_COOKIE, verifier, 600));
+    headers.append('Set-Cookie', tempCookie(PKCE_COOKIE, verifier, 1800));
   }
-  headers.append('Set-Cookie', tempCookie(OAUTH_STATE_COOKIE, JSON.stringify({ s: state, n: next }), 600));
+  headers.append('Set-Cookie', tempCookie(OAUTH_STATE_COOKIE, JSON.stringify({ s: state, n: next }), 1800));
   headers.set('Location', authUrl.toString());
   return new Response(null, { status: 302, headers });
 }

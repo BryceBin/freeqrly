@@ -36,7 +36,11 @@ export async function onRequestGet({ request, env, params }) {
     }
   } catch { /* not JSON → bare state string, next stays default */ }
   const stateQuery = url.searchParams.get('state') || '';
-  if (!stateCookie || !stateQuery || stateCookie !== stateQuery) return login('csrf');
+  // Missing cookie/query (expired tab, cookies blocked, or >30 min on the
+  // provider page) is a different failure from a genuine state mismatch —
+  // keep them distinguishable for diagnostics.
+  if (!stateCookie || !stateQuery) return login('oauth_expired');
+  if (stateCookie !== stateQuery) return login('csrf');
 
   // Per-IP callback attempt limit (D1 counting)
   if (!(await checkRateLimit(env, 'oauth:ip:' + getClientIp(request), 20))) return login('rate_limited');
@@ -54,7 +58,7 @@ export async function onRequestGet({ request, env, params }) {
     });
     if (cfg.pkce) {
       const verifier = getCookie(request, PKCE_COOKIE);
-      if (!verifier) return login('csrf');
+      if (!verifier) return login('oauth_expired');
       form.set('code_verifier', verifier);
     }
     const res = await fetch(cfg.token, {

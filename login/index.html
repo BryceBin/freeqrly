@@ -147,7 +147,8 @@ const ERRORS = {
   already_registered: 'An account with this email already exists — try logging in instead.',
   weak_password: 'Please choose a stronger password (at least 8 characters, with letters and numbers).',
   rate_limited: 'Too many attempts. Please wait a bit and try again.',
-  turnstile: 'Please complete the human check and try again.'
+  turnstile: 'Please complete the human check and try again.',
+  oauth_expired: 'Your sign-in request expired. Please try again.'
 };
 function errText(key, fallback){
   return ERRORS[key] || fallback || 'Something went wrong. Please try again.';
@@ -325,7 +326,15 @@ $('pwForm').addEventListener('submit', async e => {
 
 // --- OAuth (Turnstile token is required by /api/auth/oauth/:provider when the
 // server has TURNSTILE_SECRET_KEY set; without it the backend bounces to ?error=turnstile)
-$('oauthGoogle').addEventListener('click', () => location.href = '/api/auth/oauth/google?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
-$('oauthGithub').addEventListener('click', () => location.href = '/api/auth/oauth/github?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken()));
+  // One OAuth flow at a time: disable both buttons on first click so a double
+  // click can't start two flows (second overwrites the state cookie while the
+  // first flow's tab still returns the old state -> csrf).
+  function oauthGo(provider){
+    $('oauthGoogle').disabled = true;
+    $('oauthGithub').disabled = true;
+    location.href = '/api/auth/oauth/' + provider + '?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken());
+  }
+  $('oauthGoogle').addEventListener('click', () => oauthGo('google'));
+  $('oauthGithub').addEventListener('click', () => oauthGo('github'));
 </script>
 </body></html>
