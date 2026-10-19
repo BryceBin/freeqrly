@@ -74,6 +74,8 @@
     sel.addEventListener('change', function(){
       if(cfg.onLangChange) cfg.onLangChange(sel.value);
     });
+    // Fit width to the CURRENT language only (native select sizes to longest option)
+    fitLangWidth(sel);
 
     // Account menu
     if(cfg.user && cfg.user.email && window.initAcctMenu){
@@ -85,6 +87,25 @@
         onDelete: cfg.onDelete
       });
     }
+  }
+
+  function fitLangWidth(sel){
+    try{
+      var opt = sel.options[sel.selectedIndex];
+      if(!opt) return;
+      var meas = document.createElement('span');
+      var cs = getComputedStyle(sel);
+      meas.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;pointer-events:none;';
+      meas.style.font = cs.font;
+      meas.textContent = opt.textContent;
+      document.body.appendChild(meas);
+      var w = meas.offsetWidth;
+      meas.remove();
+      // padding-left 14 + padding-right 14 (desktop) — read from computed style
+      var pl = parseFloat(cs.paddingLeft) || 0;
+      var pr = parseFloat(cs.paddingRight) || 0;
+      sel.style.width = Math.ceil(w + pl + pr + 2) + 'px';
+    }catch(e){}
   }
 
   window.initSiteHeader = function(opts){
