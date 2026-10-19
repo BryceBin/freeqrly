@@ -1290,8 +1290,6 @@ function restoreDraft(){
       const link = $("dynShortUrl"); if(link){ link.href = d.shortUrl; link.textContent = d.shortUrl.replace(/^https?:\/\//, ''); }
       // New code: show Dashboard + Manage links (session-owned, no EditKey).
       const dashLink = $("dynDashLink");
-      const mLink = $("dynManageLink");
-      if(mLink){ mLink.hidden = false; mLink.href = "/dashboard/?c=" + encodeURIComponent(d.code); }
       if(dashLink) dashLink.hidden = false;
       refreshDynamicUI();
     }catch(e){ alert("Network error"); }
