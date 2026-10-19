@@ -16,6 +16,8 @@
 .amMenu .amProv{font-size:11.5px;color:var(--soft,#8A7F6A);padding-top:2px}
 @media(max-width:640px){
   .amName{display:none}
+  .amTrigger{min-height:36px;padding:3px}
+  .amAva{width:28px;height:28px;font-size:12px}
   .amWrap{position:static}
   .amMenu{left:12px;right:12px;min-width:0}
 }

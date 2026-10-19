@@ -10,7 +10,11 @@
 .shTheme{width:42px;height:42px;border-radius:50%;border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);color:var(--ink,#22303F);font-size:16px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;box-sizing:border-box}
 .shSignin{border:1px solid var(--line,#E8DFC8);background:var(--card,#fff);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--ink,#22303F);text-decoration:none;white-space:nowrap}
 @media(max-width:640px){
+  .sh{padding:12px 0 6px;flex-wrap:nowrap}
   .shNav{display:none}
-  .shBrand{font-size:22px}
+  .shBrand{font-size:22px;flex-shrink:0}
+  .shRight{gap:8px;flex-shrink:0}
+  .shLang{height:36px;padding:6px 10px;font-size:12px}
+  .shTheme{width:36px;height:36px;font-size:14px}
 }
 .shLine{height:1px;background:var(--line,#E8DFC8);margin-top:14px}
