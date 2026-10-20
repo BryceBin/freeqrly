@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3x-20261020">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3z-20261020">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly QRスキャナー","url":"https://freeqrly.com/ja/scan/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"完全にブラウザ内でデコードする無料QRコードスキャナー。アップロードなし、追跡なし。"}
 </script>
@@ -47,19 +47,15 @@
   {"@type":"Question","name":"何かインストールが必要？","acceptedAnswer":{"@type":"Answer","text":"いいえ。最近のモバイル・デスクトップブラウザならどれでも動作します。カメラスキャンにはカメラの許可が必要です。画像アップロードはどこでも動作します。"}}
 ]}
 </script>
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3z-20261020">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3z-20261020">
 </head>
 <body>
 <div class="wrap">
-<header class="top">
-    <div class="brand"><a href="/ja/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
-    <nav class="tnav">
-      <a href="/ja/#studio">スタジオ</a><a href="/ja/blog/">フィールドノート</a><a href="/ja/about/">FreeQrlyについて</a>
-    </nav>
-    <div class="topbtns">
-      <button class="tbtn" id="themeBtn" aria-label="theme">&#9681;</button>
-    </div>
-  </header>
-  <div class="topline"></div>
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3z-20261020"></script>
+<script src="/assets/js/acct-menu.js?v=b3z-20261020"></script>
+<script src="/assets/js/subpage-header.js?v=b3z-20261020"></script>
 
   <article class="article scanwrap">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="スマホでQRコードをスキャンするQly"></div>
@@ -124,106 +120,6 @@
 </div>
 <script src="/assets/js/vcard.js?v=contact-20261014"></script>
 <script src="/assets/lib/jsqr.js"></script>
-<script>
-(function(){
-  const root=document.documentElement;
-  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
-  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
-  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
-})();
-(function(){
-  const video=document.getElementById("scanVideo"), canvas=document.getElementById("scanCanvas"),
-        ctx=canvas.getContext("2d",{willReadFrequently:true}),
-        res=document.getElementById("scanResult"), txt=document.getElementById("scanText"),
-        openBtn=document.getElementById("scanOpen"),
-        startBtn=document.getElementById("camStart"), stopBtn=document.getElementById("camStop");
-  let stream=null, raf=null, lastData="", contactUrl=null;
-  const contactLink=document.getElementById("scanContact"), contactHint=document.getElementById("contactHint");
-  function clearContact(){
-    if(contactUrl) URL.revokeObjectURL(contactUrl);
-    contactUrl=null; contactLink.hidden=true; contactHint.hidden=true;
-    contactLink.removeAttribute("href");
-  }
-  addEventListener("pagehide",clearContact);
 
-  function trackScan(method){
-    try{
-      var body=JSON.stringify({event:"scan_decode",method:method,lang:document.documentElement.lang||"en"});
-      if(navigator.sendBeacon){ navigator.sendBeacon("/api/track", new Blob([body],{type:"application/json"})); }
-      else{ fetch("/api/track",{method:"POST",headers:{"Content-Type":"application/json"},body:body,keepalive:true}).catch(function(){}); }
-    }catch(e){}
-  }
-  var scanMethod="upload";
-  function setScanState(state){
-    const image=document.getElementById("scanStateMascot");
-    image.src="/assets/img/mascots/"+state+".webp";
-  }
-  function showResult(data){
-    if(!data || data===lastData) return;
-    trackScan(scanMethod);
-    lastData=data;
-    setScanState("success");
-    clearContact();
-    txt.textContent=data;
-    if(FreeQrlyVCard.isVCard(data)){
-      const card=FreeQrlyVCard.normalize(data);
-      contactUrl=URL.createObjectURL(new Blob([card],{type:"text/vcard;charset=utf-8"}));
-      contactLink.href=contactUrl;contactLink.hidden=false;contactHint.hidden=false;
-    }
-    const isUrl=/^https?:\/\//i.test(data.trim());
-    openBtn.hidden=!isUrl;
-    openBtn.onclick=()=>window.open(data.trim(),"_blank","noopener");
-    res.hidden=false;
-    res.scrollIntoView({behavior:"smooth",block:"nearest"});
-  }
-  document.getElementById("scanCopy").onclick=()=>{ navigator.clipboard.writeText(txt.textContent).catch(()=>{}); };
-  document.getElementById("scanAgain").onclick=()=>{ lastData=""; clearContact(); res.hidden=true; };
-
-  function tick(){
-    scanMethod="camera";
-    if(video.readyState===video.HAVE_ENOUGH_DATA){
-      canvas.width=video.videoWidth; canvas.height=video.videoHeight;
-      ctx.drawImage(video,0,0,canvas.width,canvas.height);
-      const img=ctx.getImageData(0,0,canvas.width,canvas.height);
-      const code=jsQR(img.data,img.width,img.height,{inversionAttempts:"dontInvert"});
-      if(code) showResult(code.data);
-    }
-    raf=requestAnimationFrame(tick);
-  }
-  startBtn.onclick=async()=>{
-    try{
-      stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:false});
-    }catch(e){ clearContact(); setScanState("error"); txt.textContent="カメラを利用できません： "+(e.message||e); openBtn.hidden=true; res.hidden=false; return; }
-    video.srcObject=stream; video.style.display="block"; video.play();
-    startBtn.disabled=true; stopBtn.disabled=false; lastData="";
-    tick();
-  };
-  function stop(){
-    if(raf) cancelAnimationFrame(raf);
-    if(stream) stream.getTracks().forEach(t=>t.stop());
-    stream=null; video.style.display="none";
-    startBtn.disabled=false; stopBtn.disabled=true;
-  }
-  stopBtn.onclick=stop;
-
-  document.getElementById("scanFile").addEventListener("change",function(){scanMethod="upload";});
-  document.getElementById("scanFile").addEventListener("change",e=>{
-    const f=e.target.files[0]; if(!f) return;
-    const img=new Image();
-    img.onload=()=>{
-      const w=img.naturalWidth,h=img.naturalHeight, s=Math.min(1,1200/Math.max(w,h));
-      canvas.width=w*s; canvas.height=h*s;
-      ctx.drawImage(img,0,0,canvas.width,canvas.height);
-      const d=ctx.getImageData(0,0,canvas.width,canvas.height);
-      const code=jsQR(d.data,d.width,d.height);
-      URL.revokeObjectURL(img.src);
-      if(code){ lastData=""; showResult(code.data); }
-      else { lastData=""; clearContact(); setScanState("error"); txt.textContent="No QR code found in that image. Try a clearer photo."; openBtn.hidden=true; res.hidden=false; }
-    };
-    img.src=URL.createObjectURL(f);
-    e.target.value="";
-  });
-})();
-</script>
 </body>
 </html>

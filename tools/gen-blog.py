@@ -4,27 +4,12 @@ import os
 
 SITE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 
-HEADER = '''<header class="top">
-    <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
-    <nav class="tnav">
-      <a href="/#studio">Studio</a><a href="/blog/">Field notes</a>
-    </nav>
-    <div class="topbtns">
-      <button class="tbtn" id="langBtn" aria-label="language" style="display:none">EN</button>
-      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
-    </div>
-  </header>
-  <div class="topline"></div>'''
+HEADER = '''<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3r-20261020"></script>
+<script src="/assets/js/acct-menu.js?v=b3r-20261020"></script>
+<script src="/assets/js/subpage-header.js?v=b3r-20261020"></script>'''
 
-# theme toggle only (no i18n on blog pages)
-THEME_JS = '''<script>
-(function(){
-  const root=document.documentElement;
-  const set=d=>{d?root.setAttribute("data-theme","dark"):root.removeAttribute("data-theme");localStorage.setItem("freeqrly-theme",d?"dark":"light")};
-  set(localStorage.getItem("freeqrly-theme")==="dark"||(!localStorage.getItem("freeqrly-theme")&&matchMedia("(prefers-color-scheme: dark)").matches));
-  document.getElementById("themeBtn").onclick=()=>set(root.getAttribute("data-theme")!=="dark");
-})();
-</script>'''
+THEME_JS = ''
 
 POSTS = [
  dict(
@@ -1205,6 +1190,8 @@ def build(p, all_posts=None):
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
 <link rel="stylesheet" href="../../assets/css/main.css?v=b3r-20261020">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3r-20261020">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3r-20261020">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"{p.get('datePublished','2026-10-13')}","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}

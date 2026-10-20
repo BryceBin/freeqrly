@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../assets/css/main.css?v=b3x-20261020">
-<link rel="stylesheet" href="../assets/css/site-header.css?v=b3x-20261020">
-<link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3x-20261020">
+<link rel="stylesheet" href="../assets/css/main.css?v=b3z-20261020">
+<link rel="stylesheet" href="../assets/css/site-header.css?v=b3z-20261020">
+<link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3z-20261020">
 <style>
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
@@ -97,8 +97,8 @@
 <body data-lp="mp3-qr-code" data-type="mp3">
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="../assets/js/site-header.js?v=b3x-20261020"></script>
-<script src="../assets/js/acct-menu.js?v=b3x-20261020"></script>
+<script src="../assets/js/site-header.js?v=b3z-20261020"></script>
+<script src="../assets/js/acct-menu.js?v=b3z-20261020"></script>
 <script>
 (function(){
   var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
@@ -126,7 +126,22 @@
         {href: "#how", text: "How it works"},
         {href: "#faq", text: "FAQ"}
       ],
-      t: function(k){ return k; },
+      t: function(k){
+        var T = {
+          en: {signin:"Sign in",acctDashboard:"Dashboard",acctExport:"Export my data",acctDelete:"Delete account",acctLogout:"Log out",acctSignedInWith:"Signed in with {method}",acctDeleteConfirm:"Delete your account? This cannot be undone.",acctDeleteFailed:"Couldn't delete the account. Please try again.",acctNetErr:"Network error. Please try again."},
+          zh: {signin:"登录",acctDashboard:"Dashboard",acctExport:"导出我的数据",acctDelete:"删除账号",acctLogout:"退出登录",acctSignedInWith:"通过{method}登录",acctDeleteConfirm:"确定删除账号吗？此操作无法撤销。",acctDeleteFailed:"删除失败，请重试。",acctNetErr:"网络错误，请重试。"},
+          es: {signin:"Iniciar sesión",acctDashboard:"Dashboard",acctExport:"Exportar mis datos",acctDelete:"Eliminar cuenta",acctLogout:"Cerrar sesión",acctSignedInWith:"Sesión con {method}",acctDeleteConfirm:"¿Eliminar tu cuenta? No se puede deshacer.",acctDeleteFailed:"No se pudo eliminar. Inténtalo de nuevo.",acctNetErr:"Error de red. Inténtalo de nuevo."},
+          hi: {signin:"साइन इन",acctDashboard:"Dashboard",acctExport:"मेरा डेटा निर्यात करें",acctDelete:"खाता हटाएं",acctLogout:"लॉग आउट",acctSignedInWith:"{method} से लॉग इन",acctDeleteConfirm:"अपना खाता हटाएं? इसे पूर्ववत नहीं किया जा सकता।",acctDeleteFailed:"हटाया नहीं जा सका। पुनः प्रयास करें।",acctNetErr:"नेटवर्क त्रुटि। पुनः प्रयास करें।"},
+          ar: {signin:"تسجيل الدخول",acctDashboard:"Dashboard",acctExport:"تصدير بياناتي",acctDelete:"حذف الحساب",acctLogout:"تسجيل الخروج",acctSignedInWith:"تم تسجيل الدخول عبر {method}",acctDeleteConfirm:"حذف حسابك؟ لا يمكن التراجع عن هذا.",acctDeleteFailed:"تعذر الحذف. حاول مجددًا.",acctNetErr:"خطأ في الشبكة. حاول مجددًا."},
+          pt: {signin:"Entrar",acctDashboard:"Dashboard",acctExport:"Exportar meus dados",acctDelete:"Excluir conta",acctLogout:"Sair",acctSignedInWith:"Sessão com {method}",acctDeleteConfirm:"Excluir sua conta? Não pode ser desfeito.",acctDeleteFailed:"Não foi possível excluir. Tente novamente.",acctNetErr:"Erro de rede. Tente novamente."},
+          fr: {signin:"Se connecter",acctDashboard:"Dashboard",acctExport:"Exporter mes données",acctDelete:"Supprimer le compte",acctLogout:"Se déconnecter",acctSignedInWith:"Connecté via {method}",acctDeleteConfirm:"Supprimer votre compte ? Irréversible.",acctDeleteFailed:"Suppression impossible. Réessayez.",acctNetErr:"Erreur réseau. Réessayez."},
+          ru: {signin:"Войти",acctDashboard:"Dashboard",acctExport:"Экспортировать мои данные",acctDelete:"Удалить аккаунт",acctLogout:"Выйти",acctSignedInWith:"Вход через {method}",acctDeleteConfirm:"Удалить аккаунт? Это необратимо.",acctDeleteFailed:"Не удалось удалить. Попробуйте ещё раз.",acctNetErr:"Ошибка сети. Попробуйте ещё раз."},
+          de: {signin:"Anmelden",acctDashboard:"Dashboard",acctExport:"Meine Daten exportieren",acctDelete:"Konto löschen",acctLogout:"Abmelden",acctSignedInWith:"Angemeldet mit {method}",acctDeleteConfirm:"Konto wirklich löschen? Kann nicht rückgängig gemacht werden.",acctDeleteFailed:"Löschen fehlgeschlagen. Bitte erneut versuchen.",acctNetErr:"Netzwerkfehler. Bitte erneut versuchen."},
+          ja: {signin:"ログイン",acctDashboard:"Dashboard",acctExport:"データをエクスポート",acctDelete:"アカウントを削除",acctLogout:"ログアウト",acctSignedInWith:"{method}でログイン中",acctDeleteConfirm:"アカウントを削除しますか？元に戻せません。",acctDeleteFailed:"削除できませんでした。もう一度お試しください。",acctNetErr:"ネットワークエラー。もう一度お試しください。"}
+        };
+        var tb = T[lang] || T.en;
+        return tb[k] || k;
+      },
       lang: lang,
       langs: LANGS,
       langNames: LANGN,
@@ -303,7 +318,7 @@
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3x-20261020"></script>
-<script src="../assets/js/app.js?v=b3x-20261020"></script>
+<script src="/assets/js/vcard.js?v=b3z-20261020"></script>
+<script src="../assets/js/app.js?v=b3z-20261020"></script>
 </body>
 </html>

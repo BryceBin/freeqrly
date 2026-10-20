@@ -2,7 +2,6 @@
  "Developers — FreeQrly API & MCP",
  "FreeQrly for agents: a free QR code API and MCP server. Generate static QR codes programmatically — no key, no sign-up.",
  "A free QR code API and MCP server for agents. No key, no sign-up.",
- "<a href=\"/#studio\">Studio</a><a href=\"/blog/do-qr-codes-expire/\">Field notes</a>",
  "For agents",
  "QR codes, <span class=\"hl hl-mint\">minus</span> the browser.",
  "FreeQrly speaks HTTP and MCP. Generate static QR codes from any agent, script, or workflow — no key, no sign-up, no expiry. If you can make a request, you can make a code.",
@@ -35,7 +34,6 @@
  "Payload recipes",
  "Fair use",
  "It's free, but be kind: cache results instead of re-requesting the same code, and keep automated traffic reasonable. Per-IP rate limits apply. Static codes are deterministic — the same input always yields the same output, so caching is trivial.",
- "<a href=\"/\" style=\"color:inherit\">FreeQrly</a> — made quietly, in your browser. And your agent's.",
  "FreeQrly API & MCP",
  "Free QR code API and MCP server for agents. No key, no sign-up."
 ]
