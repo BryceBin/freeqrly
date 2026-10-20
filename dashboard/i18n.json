@@ -3022,7 +3022,8 @@
       "signin": "Sign in",
       "navGenerator": "Generator",
       "navScanner": "Scanner",
-      "navApiDocs": "API Docs"
+      "navApiDocs": "API Docs",
+      "codesUsedUnlimited": "{n} codes · unlimited (limited time)"
     },
     "zh": {
       "manageTitle": "控制台",
@@ -3084,7 +3085,8 @@
       "signin": "登录",
       "navGenerator": "生成器",
       "navScanner": "扫码",
-      "navApiDocs": "API 文档"
+      "navApiDocs": "API 文档",
+      "codesUsedUnlimited": "已创建 {n} 个 · 限时不限量"
     },
     "es": {
       "manageTitle": "Panel",
@@ -3146,7 +3148,8 @@
       "signin": "Iniciar sesión",
       "navGenerator": "Generador",
       "navScanner": "Escáner",
-      "navApiDocs": "Docs API"
+      "navApiDocs": "Docs API",
+      "codesUsedUnlimited": "{n} códigos · ilimitado (por tiempo limitado)"
     },
     "hi": {
       "manageTitle": "डैशबोर्ड",
@@ -3208,7 +3211,8 @@
       "signin": "साइन इन",
       "navGenerator": "जनरेटर",
       "navScanner": "स्कैनर",
-      "navApiDocs": "API डॉक्स"
+      "navApiDocs": "API डॉक्स",
+      "codesUsedUnlimited": "{n} कोड · असीमित (सीमित समय)"
     },
     "ar": {
       "manageTitle": "لوحة التحكم",
@@ -3270,7 +3274,8 @@
       "signin": "تسجيل الدخول",
       "navGenerator": "المولد",
       "navScanner": "الماسح",
-      "navApiDocs": "مستندات API"
+      "navApiDocs": "مستندات API",
+      "codesUsedUnlimited": "{n} رمزًا · غير محدود (لفترة محدودة)"
     },
     "pt": {
       "manageTitle": "Painel",
@@ -3332,7 +3337,8 @@
       "signin": "Entrar",
       "navGenerator": "Gerador",
       "navScanner": "Scanner",
-      "navApiDocs": "Docs API"
+      "navApiDocs": "Docs API",
+      "codesUsedUnlimited": "{n} códigos · ilimitado (tempo limitado)"
     },
     "fr": {
       "manageTitle": "Tableau de bord",
@@ -3394,7 +3400,8 @@
       "signin": "Se connecter",
       "navGenerator": "Générateur",
       "navScanner": "Scanner",
-      "navApiDocs": "Docs API"
+      "navApiDocs": "Docs API",
+      "codesUsedUnlimited": "{n} codes · illimité (offre limitée)"
     },
     "ru": {
       "manageTitle": "Панель управления",
@@ -3456,7 +3463,8 @@
       "signin": "Войти",
       "navGenerator": "Генератор",
       "navScanner": "Сканер",
-      "navApiDocs": "API Docs"
+      "navApiDocs": "API Docs",
+      "codesUsedUnlimited": "{n} кодов · безлимит (временная акция)"
     },
     "de": {
       "manageTitle": "Dashboard",
@@ -3518,7 +3526,8 @@
       "signin": "Anmelden",
       "navGenerator": "Generator",
       "navScanner": "Scanner",
-      "navApiDocs": "API-Docs"
+      "navApiDocs": "API-Docs",
+      "codesUsedUnlimited": "{n} Codes · unbegrenzt (zeitlich begrenzt)"
     },
     "ja": {
       "manageTitle": "ダッシュボード",
@@ -3580,7 +3589,8 @@
       "signin": "サインイン",
       "navGenerator": "ジェネレーター",
       "navScanner": "スキャナー",
-      "navApiDocs": "API ドキュメント"
+      "navApiDocs": "API ドキュメント",
+      "codesUsedUnlimited": "{n} 個 · 期間限定で無制限"
     }
   }
 }

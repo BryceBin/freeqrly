@@ -66,11 +66,17 @@ async function checkCreateRateLimit(env, ip) {
   }
 }
 
+// Promotional policy (2026-10-20): existing users have code_limit = UNLIMITED
+// ("limited-time, unlimited quantity"). New signups default to 8, so ending the
+// promo needs no code change — just stop raising new users' limits.
+export const UNLIMITED_LIMIT = 999999;
+
 // Create a dynamic code for `user`. `origin` = e.g. https://freeqrly.com (for shortUrl).
 export async function createDynamicCode(env, user, { type, payload, style }, { origin, ip }) {
   const v = validateCodeInput(type, payload);
   const used = await getCodeCount(env, user.id);
-  if (used >= user.code_limit) throw new ApiError(403, { error: 'quota_exceeded', hint: 'upgrade' });
+  const unlimited = !user.code_limit || user.code_limit >= UNLIMITED_LIMIT;
+  if (!unlimited && used >= user.code_limit) throw new ApiError(403, { error: 'quota_exceeded', hint: 'upgrade' });
   const cleanStyle = style !== undefined ? sanitizeStyleOrThrow(style, user.id) : null;
   await checkCreateRateLimit(env, ip || 'unknown');
 

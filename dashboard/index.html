@@ -188,10 +188,10 @@ a.shortUrl:hover{text-decoration:underline}
   </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/acct-menu.js?v=b3r-20261019"></script>
-<script src="/assets/js/site-header.js?v=b3r-20261019"></script>
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3r-20261019">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3r-20261019">
+<script src="/assets/js/acct-menu.js?v=b3s-20261020"></script>
+<script src="/assets/js/site-header.js?v=b3s-20261020"></script>
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3s-20261020">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3s-20261020">
 <div class="cpop" id="cpop" hidden>
   <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
   <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
@@ -467,7 +467,11 @@ function updateCount(){
   const el = $('codeCount');
   if(!el) return;
   const limit = (ME && ME.quota && ME.quota.limit) || 8;
-  el.textContent = t('ui','codesUsed').replace('{n}', CODES.length).replace('{limit}', limit);
+  if(limit >= 999999){
+    el.textContent = t('ui','codesUsedUnlimited').replace('{n}', CODES.length);
+  }else{
+    el.textContent = t('ui','codesUsed').replace('{n}', CODES.length).replace('{limit}', limit);
+  }
 }
 function renderCards(){
   const wrap = $('cards');
