@@ -41,6 +41,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .state h2{font-size:20px;text-align:center;margin-bottom:8px}
 .state p{font-size:14px;color:#8a7a5f;line-height:1.6;text-align:center}
 .linkbtn{background:none;border:0;color:#2F4A62;font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-family:inherit}
+
+footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC",sans-serif}
+.fcta{display:flex;align-items:center;gap:22px;background:#FDF3D8;border:1px solid #F0DFAE;border-radius:20px;padding:24px 30px;margin-bottom:48px}
+.fcta img{width:76px;height:76px;flex-shrink:0}
+.fctaText h3{font-family:Georgia,serif;font-size:25px;font-weight:700;color:#22303F;line-height:1.25}
+.fctaText p{color:#7A6A45;font-size:14.5px;margin-top:5px;line-height:1.5}
+.fctaBtn{margin-left:auto;background:#22303F;color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:14.5px;text-decoration:none;white-space:nowrap;flex-shrink:0}
+.fmain{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1fr;gap:38px}
+.fbrandName{font-family:Georgia,serif;font-size:34px;font-weight:700;color:#22303F;letter-spacing:-.5px}
+.fbrandName em{color:#F0766B;font-style:italic}
+.ftag{color:#8A7F6A;font-size:14.5px;line-height:1.6;margin-top:12px;max-width:280px}
+.fmade{font-family:Georgia,serif;font-style:italic;color:#8A7F6A;font-size:13px;margin-top:16px}
+.fcol{display:flex;flex-direction:column;gap:13px}
+.fcol h4{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#22303F;font-weight:700;margin-bottom:6px}
+.fcol a{color:#5B6B7B;text-decoration:none;font-size:14.5px}
+.fbottom{margin-top:48px;padding-top:20px;border-top:1px solid #E8DFC8;display:flex;justify-content:space-between;color:#9A8F76;font-size:13px}
+.fbottom a{color:#9A8F76;text-decoration:none}
+@media(max-width:860px){.fmain{grid-template-columns:1fr 1fr;gap:32px}.fbrand{grid-column:1/-1}.fcta{flex-wrap:wrap;padding:20px 22px}.fctaBtn{margin-left:0}}
 </style>
 </head>
 <body>
@@ -181,4 +199,18 @@ if(token){
   });
 }
 </script>
+<footer>
+    <div class="fmain">
+      <div class="fbrand">
+        <div class="fbrandName">Free<em>Qrly</em></div>
+        <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
+        <div class="fmade">Made quietly — static codes in your browser.</div>
+      </div>
+      <div class="fcol"><h4>Product</h4><a href="/ar/">QR Generator</a><a href="/ar/batch-qr-code/">Batch QR Codes</a><a href="/ar/qr-code-with-logo/">QR Code with Logo</a><a href="/ar/scan/">QR Scanner</a><a href="/ar/barcode-generator/">Barcode Generator</a></div>
+      <div class="fcol"><h4>Resources</h4><a href="/ar/blog/">Blog</a><a href="/ar/developers/">Developers · API &amp; MCP</a><a href="/ar/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/ar/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Company</h4><a href="/ar/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Legal</h4><a href="/ar/privacy/">Privacy Policy</a><a href="/ar/terms/">Terms of Service</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
 </body></html>
