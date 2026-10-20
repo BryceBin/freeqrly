@@ -37,6 +37,8 @@
 <link rel="icon" type="image/png" href="/assets/img/favicon-qly.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-qly.png">
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3u-20261020">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3u-20261020">
 <style>
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
@@ -94,18 +96,62 @@
 </head>
 <body data-lp="qr-code-with-logo" data-type="url">
 <div class="wrap">
-<header class="top">
-    <div class="brand"><a href="/pt/" style="color:inherit;text-decoration:none">Free<em>Qrly</em></a></div>
-    <nav class="tnav">
-      <a href="#studio">Estúdio</a><a href="#how">Como funciona</a><a href="#faq">Perguntas</a>
-    </nav>
-    <div class="topbtns">
-      <span id="authArea"><a class="tbtn authLink" href="/pt/login/" data-i18n="signin">Sign in</a></span>
-      <select class="tbtn langsel" id="langBtn" aria-label="Language" data-i18n-aria="ariaLanguage"></select>
-      <button class="tbtn" id="themeBtn" aria-label="theme">◐</button>
-    </div>
-  </header>
-  <div class="topline"></div>
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3u-20261020"></script>
+<script src="/assets/js/acct-menu.js?v=b3u-20261020"></script>
+<script>
+(function(){
+  var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
+  var LANGN = {en:"English",zh:"中文",es:"Español",hi:"हिन्दी",ar:"العربية",pt:"Português",fr:"Français",ru:"Русский",de:"Deutsch",ja:"日本語"};
+  function getLang(){
+    try{
+      var s = localStorage.getItem("freeqrly-lang");
+      if(s && LANGS.indexOf(s) >= 0) return s;
+    }catch(e){}
+    return "en";
+  }
+  function getCachedUser(){
+    try{
+      var c = localStorage.getItem("freeqrly-user");
+      if(!c) return null;
+      var u = JSON.parse(c);
+      return (u && u.email) ? u : null;
+    }catch(e){ return null; }
+  }
+  var lang = getLang();
+  if(window.initSiteHeader){
+    window.initSiteHeader({
+      nav: [
+        {href: "#studio", text: "Studio"},
+        {href: "#how", text: "How it works"},
+        {href: "#faq", text: "FAQ"}
+      ],
+      t: function(k){ return k; },
+      lang: lang,
+      langs: LANGS,
+      langNames: LANGN,
+      onLangChange: function(code){
+        try{ localStorage.setItem("freeqrly-lang", code); }catch(e){}
+        location.reload();
+      },
+      user: getCachedUser(),
+      showDashboard: true
+    });
+  }
+  // Revalidate auth in background; update if changed
+  fetch("/api/auth/me", {credentials: "same-origin"}).then(function(r){
+    return r.json().catch(function(){ return {}; });
+  }).then(function(d){
+    var me = d.user || null;
+    var user = (me && me.email) ? {email: me.email, name: me.name, avatar: me.avatar || me.avatar_url || null, authMethod: me.authMethod} : null;
+    try{
+      if(user) localStorage.setItem("freeqrly-user", JSON.stringify(user));
+      else localStorage.removeItem("freeqrly-user");
+    }catch(e){}
+    if(window.renderSiteHeader) window.renderSiteHeader({user: user});
+  }).catch(function(){});
+})();
+</script>
   <section class="hero lp-hero">
     <div>
       <div class="kicker">Grátis · Códigos estáticos sem cadastro · Sem marca d'água</div>
@@ -194,14 +240,13 @@
       <div class="previewCol">
         <div class="seg segMode" id="segMode" role="tablist" aria-label="QR mode">
           <button type="button" data-mode="static" class="on" data-i18n="modeStatic">Static</button>
-          <button type="button" data-mode="dynamic" data-i18n="modeDynamic">Dynamic<span class="modeInfo" id="modeInfoBtn" aria-label="About dynamic codes">i</span><span class="modeTip" id="modeTip" data-i18n="modeTip">Dynamic codes can be edited after printing + track scans. The printed QR stays the same.</span></button>
+          <button type="button" data-mode="dynamic"><span data-i18n="modeDynamic">Dynamic</span></button>
         </div>
-        <div class="modeHintLine" id="modeHintLine" data-i18n="live">Live preview — updates as you type</div>
+        <div class="modeHintLine" id="modeHintLine" data-i18n="live">Type and it appears</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
         <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR code preview"></div><div class="blurOverlay" data-i18n="dynBlurHint">Fill in your content, then hit Generate</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
-          <a class="dynManageLink" id="dynManageLink" href="/dashboard/" target="_blank" rel="noopener" data-i18n="dynManageLink">Manage this code →</a>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">View in Dashboard →</a>
         </div>
         <p class="dynSigninHint" id="dynSigninHint" hidden><a id="dynSigninLink" href="/pt/login/" data-i18n="dynSigninHint">Sign in to create dynamic codes</a></p>
@@ -234,16 +279,32 @@
   </section>
 
   <footer>
-    <div class="fin"><a href="/pt/" style="color:inherit">FreeQrly</a> — feito com calma, códigos estáticos no seu navegador.</div>
-    <div class="rule"></div>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/qly-bitcoin.webp?v=t2" alt="">
+      <div class="fctaText">
+        <h3>Unlimited dynamic codes — limited-time offer.</h3>
+        <p>Sign in free and create as many as you need. Every code stays editable after printing and never expires.</p>
+      </div>
+      <a class="fctaBtn" href="/pt/login/">Start free</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <div class="fbrandName">Free<em>Qrly</em></div>
+        <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
+        <div class="fmade">Made quietly — static codes in your browser.</div>
+      </div>
+      <div class="fcol"><h4>Product</h4><a href="/pt/">QR Generator</a><a href="/pt/batch-qr-code/">Batch QR Codes</a><a href="/pt/qr-code-with-logo/">QR Code with Logo</a><a href="/pt/scan/">QR Scanner</a><a href="/pt/barcode-generator/">Barcode Generator</a></div>
+      <div class="fcol"><h4>Resources</h4><a href="/pt/blog/">Blog</a><a href="/pt/developers/">Developers · API &amp; MCP</a><a href="/pt/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/pt/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Company</h4><a href="/pt/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Legal</h4><a href="/pt/privacy/">Privacy Policy</a><a href="/pt/terms/">Terms of Service</a></div>
+    </div>
     <div class="lplinks"><a href="/pt/google-form-qr-code/">gerador de qr code para google form</a> · <a href="/pt/wifi-qr-code/">gerador de qr code wifi</a> · <a href="/pt/vcard-qr-code/">gerador de qr code vcard</a> · <a href="/pt/batch-qr-code/">batch qr code generator</a> · <a href="/pt/business-card-qr-code/">qr code para cartões de visita</a> · <a href="/pt/google-review-qr-code/">qr code para avaliação no google</a> · <a href="/pt/wedding-qr-code/">qr code para casamento</a> · <a href="/pt/instagram-qr-code/">qr code para instagram</a> · <a href="/pt/real-estate-qr-code/">qr code para imobiliária</a> · <a href="/pt/pdf-qr-code/">pdf qr code generator</a> · <a href="/pt/multi-link-qr-code/">multi link qr code</a> · <a href="/pt/menu-qr-code/">menu qr code generator</a> · <a href="/pt/payment-qr-code/">payment qr code generator</a> · <a href="/pt/youtube-qr-code/">youtube qr code generator</a> · <a href="/pt/whatsapp-qr-code/">whatsapp qr code generator</a> · <a href="/pt/tiktok-qr-code/">tiktok qr code generator</a> · <a href="/pt/spotify-qr-code/">spotify qr code generator</a> · <a href="/pt/facebook-qr-code/">facebook qr code generator</a> · <a href="/pt/google-maps-qr-code/">google maps qr code generator</a> · <a href="/pt/bitcoin-qr-code/">gerador de QR code de bitcoin</a> · <a href="/pt/coupon-qr-code/">gerador de QR code de cupons</a> · <a href="/pt/app-store-qr-code/">gerador de QR code da App Store</a> · <a href="/pt/mp3-qr-code/">gerador de QR code de MP3</a></div>
-    <div class="lplinks"><a href="/pt/privacy/">Privacidade</a> · <a href="/pt/terms/">Termos</a> · <a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
-    <div class="tiny">© 2026 FreeQrly</div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
   </footer>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3t-20261020"></script>
-<script src="/assets/js/app.js?v=b3t-20261020"></script>
+<script src="/assets/js/vcard.js?v=b3u-20261020"></script>
+<script src="/assets/js/app.js?v=b3u-20261020"></script>
 </body>
 </html>

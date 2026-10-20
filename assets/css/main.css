@@ -474,3 +474,34 @@ input[type="datetime-local"]:focus{border-color:var(--coral);box-shadow:0 0 0 3p
 #dynCopyKey{display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:8px;border:1.5px solid #E8DFC8;background:#fff;font-size:13px;font-weight:600;cursor:pointer;color:#22303F}
 .dynWarn{font-size:12px;color:#b45309;margin-top:4px}
 .dynManageLink{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--deep);text-decoration:none}
+
+/* ---- Footer v2 (design C): CTA band + brand + 4 columns ---- */
+footer{margin-top:40px;padding:44px 0 40px;text-align:left}
+.fcta{display:flex;align-items:center;gap:22px;background:#FDF3D8;border:1px solid #F0DFAE;border-radius:20px;padding:24px 30px;margin-bottom:48px}
+.fcta img{width:76px;height:76px;flex-shrink:0}
+.fctaText h3{font-family:Georgia,serif;font-size:25px;font-weight:700;color:var(--ink);line-height:1.25}
+.fctaText p{color:#7A6A45;font-size:14.5px;margin-top:5px;line-height:1.5}
+.fctaBtn{margin-left:auto;background:var(--ink);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:14.5px;text-decoration:none;white-space:nowrap;flex-shrink:0}
+.fctaBtn:hover{background:#31435A}
+.fmain{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1fr;gap:38px}
+.fbrandName{font-family:Georgia,serif;font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.5px}
+.fbrandName em{color:var(--coral);font-style:italic}
+.ftag{color:var(--soft);font-size:14.5px;line-height:1.6;margin-top:12px;max-width:280px}
+.fmade{font-family:Georgia,serif;font-style:italic;color:var(--soft);font-size:13px;margin-top:16px}
+.fcol{display:flex;flex-direction:column;gap:13px}
+.fcol h4{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:700;margin-bottom:6px}
+.fcol a{color:#5B6B7B;text-decoration:none;font-size:14.5px}
+.fcol a:hover{color:var(--coral)}
+.fbottom{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#9A8F76;font-size:13px}
+.fbottom a{color:#9A8F76;text-decoration:none}
+.fbottom a:hover{color:var(--coral)}
+@media(max-width:860px){
+  .fmain{grid-template-columns:1fr 1fr;gap:32px}
+  .fbrand{grid-column:1/-1}
+  .fcta{flex-wrap:wrap;padding:20px 22px}
+  .fctaBtn{margin-left:0}
+}
+@media(max-width:480px){
+  .fmain{grid-template-columns:1fr 1fr;gap:26px}
+  .fctaText h3{font-size:21px}
+}
