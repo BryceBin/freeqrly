@@ -84,7 +84,7 @@ hub = f'''<!DOCTYPE html>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/blog/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
-<link rel="icon" type="image/png" href="/assets/img/favicon-qly.png">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="stylesheet" href="/assets/css/main.css">
 {HUB_CSS}
 <script type="application/ld+json">
@@ -139,11 +139,11 @@ about = f'''<!DOCTYPE html>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/about/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
-<link rel="icon" type="image/png" href="/assets/img/favicon-qly.png">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="stylesheet" href="/assets/css/main.css">
 {ABOUT_CSS}
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Organization","name":"FreeQrly","url":"https://freeqrly.com/","logo":"https://freeqrly.com/assets/img/favicon-qly.png","description":"FreeQrly is a free QR code generator that runs entirely in the browser. No sign-up, no tracking, no expiry — static QR codes with optional logos, in 10 languages.","foundingDate":"2026","sameAs":[]}}
+{{"@context":"https://schema.org","@type":"Organization","name":"FreeQrly","url":"https://freeqrly.com/","logo":"https://freeqrly.com/assets/img/favicon-scanner.png","description":"FreeQrly is a free QR code generator that runs entirely in the browser. No sign-up, no tracking, no expiry — static QR codes with optional logos, in 10 languages.","foundingDate":"2026","sameAs":[]}}
 </script>
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"WebSite","name":"FreeQrly","url":"https://freeqrly.com/","inLanguage":["en","zh","es","hi","ar","pt","fr","ru","de","ja"]}}

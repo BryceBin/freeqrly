@@ -541,8 +541,8 @@ def build(p):
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:locale:alternate" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="../assets/img/favicon-qly.png">
-<link rel="apple-touch-icon" href="../assets/img/favicon-qly.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-scanner.png">
 <link rel="stylesheet" href="../assets/css/main.css?v=b3r-20261020">
 <link rel="stylesheet" href="../assets/css/site-header.css?v=b3q-20261019">
 <link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3q-20261019">
