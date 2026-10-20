@@ -543,7 +543,7 @@ def build(p):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../assets/img/favicon-qly.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-qly.png">
-<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/main.css?v=b3r-20261020">
 <link rel="stylesheet" href="../assets/css/site-header.css?v=b3q-20261019">
 <link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3q-20261019">
 <style>{EXTRA_CSS}</style>
@@ -609,8 +609,8 @@ def build(p):
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3f-20261015"></script>
-<script src="../assets/js/app.js?v=b3f-20261015"></script>
+<script src="/assets/js/vcard.js?v=b3r-20261020"></script>
+<script src="../assets/js/app.js?v=b3r-20261020"></script>
 </body>
 </html>
 '''

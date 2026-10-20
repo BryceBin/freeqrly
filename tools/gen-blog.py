@@ -1204,7 +1204,7 @@ def build(p, all_posts=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-qly.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-qly.png">
-<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3r-20261020">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"{p.get('datePublished','2026-10-13')}","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
