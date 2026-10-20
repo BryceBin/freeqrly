@@ -19,11 +19,11 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:#FBF6EC;color:#22303F;padding:0}
-.topbar{max-width:980px;margin:0 auto;padding:20px 20px 0;display:flex;justify-content:space-between;align-items:center}
+.topbar{max-width:1120px;margin:0 auto;padding:20px 20px 0;display:flex;justify-content:space-between;align-items:center}
 .wordmark{font-size:21px;font-weight:800;letter-spacing:-.02em;color:#22303F;text-decoration:none}
 .wordmark span{color:#D9A441}
 .topbar a.back{font-size:13px;font-weight:600;color:#2F4A62;text-decoration:none}
-.shell{max-width:980px;margin:28px auto 24px;display:flex;background:#fff;border:1px solid #E8DFC8;border-radius:24px;overflow:hidden;box-shadow:0 12px 32px rgba(190,145,60,.12)}
+.shell{max-width:1120px;margin:28px auto 24px;display:flex;background:#fff;border:1px solid #E8DFC8;border-radius:24px;overflow:hidden;box-shadow:0 12px 32px rgba(190,145,60,.12)}
 .brand{flex:0 0 42%;background:#F7E8B8;padding:40px 36px;display:flex;flex-direction:column;justify-content:center}
 .brand img.mascot{width:190px;height:auto;display:block;margin-bottom:20px}
 .brand h1{font-size:28px;line-height:1.25;margin-bottom:12px}
@@ -367,7 +367,7 @@ $('pwForm').addEventListener('submit', async e => {
   $('oauthGoogle').addEventListener('click', () => oauthGo('google'));
   $('oauthGithub').addEventListener('click', () => oauthGo('github'));
 </script>
-<footer>
+<div style="max-width:1120px;margin:0 auto;padding:0 30px"><footer>
     <div class="fmain">
       <div class="fbrand">
         <div class="fbrandName">Free<em>Qrly</em></div>
@@ -380,5 +380,5 @@ $('pwForm').addEventListener('submit', async e => {
       <div class="fcol"><h4>Legal</h4><a href="/es/privacy/">Privacy Policy</a><a href="/es/terms/">Terms of Service</a></div>
     </div>
     <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
-  </footer>
+  </footer></div>
 </body></html>

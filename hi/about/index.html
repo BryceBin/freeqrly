@@ -23,16 +23,25 @@
 <meta property="og:url" content="https://freeqrly.com/hi/about/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <link rel="icon" type="image/png" href="/assets/img/favicon-qly.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3z-20261020">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3s-20261020">
 <style>
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0}
 .fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
 .fact b{display:block;font-size:15px;margin-bottom:4px}
 .fact span{font-size:14px;color:var(--soft);line-height:1.6}
 @media(max-width:720px){.facts{grid-template-columns:1fr}}
-.qa{margin:22px 0}
-.qa h3{font-size:17px;margin:18px 0 6px}
-.qa p{font-size:15px;color:var(--soft);line-height:1.7;margin:0 0 4px}
+.article{max-width:1120px}
+.article .lede{max-width:720px;margin-left:auto;margin-right:auto;text-align:center}
+.qa{margin:34px 0 8px}
+.qaPanel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 30px;margin-top:22px}
+.qaItem{padding:22px 0;border-bottom:1px solid var(--line)}
+.qaItem:last-child{border-bottom:none}
+.qaItem h3{font-family:Georgia,"Times New Roman",serif;font-size:19px;font-weight:700;color:var(--ink);margin:0 0 8px;letter-spacing:-.01em}
+.qaItem p{font-size:15px;color:var(--soft);line-height:1.75;margin:0}
+.qaItem a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--coral);text-decoration-thickness:1.5px;text-underline-offset:3px}
+.qaItem a:hover{color:var(--coral)}
+.fact a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--coral);text-decoration-thickness:1.5px;text-underline-offset:3px}
+@media(max-width:720px){.qaPanel{padding:2px 20px}.qaItem{padding:18px 0}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"FreeQrly","url":"https://freeqrly.com/hi/","logo":"https://freeqrly.com/assets/img/favicon-qly.png","description":"FreeQrly is a free QR code generator that runs entirely in the browser. No sign-up, no tracking, no expiry — static QR codes with optional logos, in 10 languages.","foundingDate":"2026","sameAs":[]}
@@ -43,9 +52,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"FreeQrly क्या है?","acceptedAnswer":{"@type":"Answer","text":"FreeQrly is a free online QR code generator. It creates static QR codes for links, text, WiFi, vCards, SMS, calls, and locations — entirely in your browser, with no account and no fees."}},
- {"@type":"Question","name":"क्या FreeQrly सच में मुफ़्त है?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every feature — including logo upload, batch generation, and high-resolution export — is free with no sign-up, no trial, and no watermarks."}},
- {"@type":"Question","name":"क्या FreeQrly QR कोड एक्सपायर होते हैं?","acceptedAnswer":{"@type":"Answer","text":"नहीं। FreeQrly सिर्फ स्टैटिक QR कोड बनाता है, जो गंतव्य को सीधे पैटर्न में एनकोड करते हैं। वे कभी एक्सपायर नहीं होते और उन्हें कोई सब्सक्रिप्शन नहीं चाहिए।"}},
- {"@type":"Question","name":"क्या FreeQrly मेरे QR कोड या मेरे डेटा को ट्रैक करता है?","acceptedAnswer":{"@type":"Answer","text":"No. Codes are generated locally in your browser using JavaScript; your content is never uploaded to a server, and there is no scan tracking."}},
+ {"@type":"Question","name":"क्या FreeQrly सच में मुफ़्त है?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every feature — including logo upload, batch generation, and high-resolution export — is free with no trial and no watermarks. Static codes need no account; dynamic codes need a free sign-in."}},
+ {"@type":"Question","name":"क्या FreeQrly QR कोड एक्सपायर होते हैं?","acceptedAnswer":{"@type":"Answer","text":"No. Static codes encode the destination directly in the pattern, and dynamic codes stay live and editable — neither kind expires or requires a subscription."}},
+ {"@type":"Question","name":"क्या FreeQrly मेरे QR कोड या मेरे डेटा को ट्रैक करता है?","acceptedAnswer":{"@type":"Answer","text":"Static codes are generated locally in your browser; their content is never uploaded and they have no scan tracking. Dynamic codes count scans — that is what they are for — and their destinations can be changed anytime."}},
  {"@type":"Question","name":"FreeQrly कौन सी भाषाएं सपोर्ट करता है?","acceptedAnswer":{"@type":"Answer","text":"दस: अंग्रेज़ी, चीनी, स्पेनिश, हिंदी, अरबी (राइट-टू-लेफ्ट लेआउट के साथ), पुर्तगाली, फ्रेंच, रूसी, जर्मन और जापानी।"}},
  {"@type":"Question","name":"क्या FreeQrly और FreeQR एक ही हैं?","acceptedAnswer":{"@type":"Answer","text":"नहीं। FreeQrly (freeqrly.com) एक स्वतंत्र प्रोजेक्ट है और FreeQR (freeqr.com) से संबद्ध नहीं है।"}}
 ]}
@@ -70,24 +79,26 @@
     <p class="lede">FreeQrly is a free QR code generator with a simple idea: the tool should live in your browser, not on somebody's server. You type, it draws — nothing is uploaded, tracked, or billed.</p>
     <div class="facts">
       <div class="fact"><b>100% browser-based</b><span>Every code is drawn locally with JavaScript. Your links, contacts, and WiFi passwords never leave your device.</span></div>
-      <div class="fact"><b>सिर्फ स्टैटिक कोड</b><span>न ट्रायल, न सब्सक्रिप्शन, न डीएक्टिवेट किए गए कोड। जो आज प्रिंट करते हैं, वह दस साल बाद भी स्कैन होगा।</span></div>
-      <div class="fact"><b>Free, no sign-up</b><span>Logo upload, batch generation, 2048&nbsp;px PNG and SVG export — all free, no account, no watermark.</span></div>
+      <div class="fact"><b>Codes that never expire</b><span>Static codes live in the pattern itself; dynamic codes stay editable after printing. No trials, no deactivated codes — what you print today scans in ten years.</span></div>
+      <div class="fact"><b>Free to start</b><span>Static codes need no account at all. Dynamic codes — editable, with scan stats — need a free sign-in. No watermark either way.</span></div>
       <div class="fact"><b>10 भाषाएं</b><span>अंग्रेज़ी, चीनी, स्पेनिश, हिंदी, अरबी (RTL), पुर्तगाली, फ्रेंच, रूसी, जर्मन, जापानी।</span></div>
       <div class="fact"><b>प्रिंट के लिए बना</b><span>हाई-रेज़ोल्यूशन एक्सपोर्ट और वेक्टर SVG, क्वाइट ज़ोन का सम्मान — बिज़नेस कार्ड, मेन्यू और पोस्टर के लिए बना है।</span></div>
       <div class="fact"><b>एजेंट-फ्रेंडली</b><span>एक मुफ़्त <a href="/hi/developers/">API और MCP सर्वर</a> ताकि AI असिस्टेंट भी कोड बना सकें।</span></div>
     </div>
     <div class="qa">
       <h2 style="text-align:center">सवाल, जवाब के साथ</h2>
-      <h3>क्या FreeQrly सच में मुफ़्त है?</h3>
-      <p>Yes — every feature is free, with no sign-up and no watermarks. Static codes cost nothing to serve once generated in your browser, so there's nothing to charge for.</p>
-      <h3>क्या QR कोड एक्सपायर होते हैं?</h3>
-      <p>No. FreeQrly generates static codes only; the destination lives inside the pattern itself. Details: <a href="/hi/blog/do-qr-codes-expire/">do QR codes expire?</a></p>
-      <h3>क्या मैं इसे अपने बिज़नेस के लिए इस्तेमाल कर सकता हूं?</h3>
-      <p>हां — व्यावसायिक इस्तेमाल मुफ़्त है। रेस्टोरेंट इसका इस्तेमाल <a href="/hi/blog/qr-codes-for-restaurants/">मेन्यू और रिव्यू</a> के लिए करते हैं, दुकानें <a href="/hi/google-review-qr-code/">रिव्यू कोड</a> और <a href="/hi/wifi-qr-code/">WiFi कोड</a> के लिए।</p>
-      <h3>FreeQrly के पीछे कौन है?</h3>
-      <p>एक स्वतंत्र निर्माता जो उन "मुफ़्त" जनरेटरों से तंग आ गया था जो आपके कोड को ट्रायल के पीछे बंधक बना लेते हैं। शुभंकर Qly है, एक छोटा हाथी जो पूरे साइट पर दिखता है।</p>
-      <h3>क्या FreeQrly और FreeQR एक ही हैं?</h3>
-      <p>नहीं। FreeQrly (freeqrly.com) एक स्वतंत्र प्रोजेक्ट है और FreeQR (freeqr.com) से संबद्ध नहीं है।</p>
+      <div class="qaPanel">
+      <div class="qaItem"><h3>क्या FreeQrly सच में मुफ़्त है?</h3>
+      <p>Yes — every feature is free, with no watermarks. Static codes are made entirely in your browser and need no account; dynamic codes need a free sign-in so they can be edited later.</p></div>
+      <div class="qaItem"><h3>क्या QR कोड एक्सपायर होते हैं?</h3>
+      <p>No — neither kind. A static code's destination lives inside the pattern itself, and dynamic codes stay live and editable for as long as your account exists. Details: <a href="/hi/blog/do-qr-codes-expire/">do QR codes expire?</a></p></div>
+      <div class="qaItem"><h3>क्या मैं इसे अपने बिज़नेस के लिए इस्तेमाल कर सकता हूं?</h3>
+      <p>हां — व्यावसायिक इस्तेमाल मुफ़्त है। रेस्टोरेंट इसका इस्तेमाल <a href="/hi/blog/qr-codes-for-restaurants/">मेन्यू और रिव्यू</a> के लिए करते हैं, दुकानें <a href="/hi/google-review-qr-code/">रिव्यू कोड</a> और <a href="/hi/wifi-qr-code/">WiFi कोड</a> के लिए।</p></div>
+      <div class="qaItem"><h3>FreeQrly के पीछे कौन है?</h3>
+      <p>एक स्वतंत्र निर्माता जो उन "मुफ़्त" जनरेटरों से तंग आ गया था जो आपके कोड को ट्रायल के पीछे बंधक बना लेते हैं। शुभंकर Qly है, एक छोटा हाथी जो पूरे साइट पर दिखता है।</p></div>
+      <div class="qaItem"><h3>क्या FreeQrly और FreeQR एक ही हैं?</h3>
+      <p>नहीं। FreeQrly (freeqrly.com) एक स्वतंत्र प्रोजेक्ट है और FreeQR (freeqr.com) से संबद्ध नहीं है।</p></div>
+      </div>
     </div>
     <p style="text-align:center;margin-top:26px"><a class="btn" href="/hi/#studio" style="text-decoration:none">Try the generator &rarr;</a></p>
   </article>
