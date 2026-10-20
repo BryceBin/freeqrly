@@ -283,7 +283,9 @@
   "Static codes are generated locally in your browser using JavaScript; your content is never uploaded to a server, and there is no scan tracking. Dynamic codes store only the destination you set, so they can be edited later, plus anonymous scan counts.": "स्टैटिक कोड JavaScript से आपके ब्राउज़र में लोकली बनते हैं; आपका कंटेंट कभी सर्वर पर अपलोड नहीं होता, और कोई स्कैन ट्रैकिंग नहीं है। डायनामिक कोड सिर्फ वही गंतव्य स्टोर करते हैं जो आप सेट करते हैं, ताकि उन्हें बाद में बदला जा सके, साथ ही अनाम स्कैन गिनती।",
   "What languages does FreeQrly support?": "FreeQrly कौन सी भाषाएं सपोर्ट करता है?",
   "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "दस: अंग्रेज़ी, चीनी, स्पेनिश, हिंदी, अरबी (राइट-टू-लेफ्ट लेआउट के साथ), पुर्तगाली, फ्रेंच, रूसी, जर्मन और जापानी।",
-  "Try the generator →": "जनरेटर आज़माएँ →"
+  "Try the generator →": "जनरेटर आज़माएँ →",
+  "Is FreeQrly the same as FreeQR?": "क्या FreeQrly और FreeQR एक ही हैं?",
+  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "नहीं। FreeQrly (freeqrly.com) एक स्वतंत्र प्रोजेक्ट है और FreeQR (freeqr.com) से संबद्ध नहीं है।"
  },
  "scan": {
   "Free QR Code Scanner — 100% Private | FreeQrly": "मुफ़्त QR कोड स्कैनर — 100% प्राइवेट | FreeQrly",
