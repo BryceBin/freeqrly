@@ -186,7 +186,7 @@ export async function upsertUser(env, { email, name, avatar_url, auth_provider }
   const id = genToken(16);
   await env.DB.prepare(
     `INSERT INTO users (id, email, email_verified, name, avatar_url, auth_provider, plan, code_limit, created_at, last_login_at)
-     VALUES (?, ?, 1, ?, ?, ?, 'free', 8, ?, ?)
+     VALUES (?, ?, 1, ?, ?, ?, 'free', 999999, ?, ?)
      ON CONFLICT(email) DO UPDATE SET
        name = COALESCE(excluded.name, users.name),
        avatar_url = COALESCE(excluded.avatar_url, users.avatar_url),
@@ -339,7 +339,7 @@ export async function createPasswordUser(env, email, passwordHash) {
   const id = genToken(16);
   await env.DB.prepare(
     `INSERT INTO users (id, email, email_verified, name, avatar_url, auth_provider, plan, code_limit, created_at, last_login_at, password_hash)
-     VALUES (?, ?, 0, NULL, NULL, 'password', 'free', 8, ?, NULL, ?)`
+     VALUES (?, ?, 0, NULL, NULL, 'password', 'free', 999999, ?, NULL, ?)`
   ).bind(id, email, now, passwordHash).run();
   return env.DB.prepare('SELECT * FROM users WHERE email = ?').bind(email).first();
 }
