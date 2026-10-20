@@ -51,6 +51,14 @@ function isKnown(path) {
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
+  // Canonical domain: www -> apex (301, path + query kept). NOTE: this has to
+  // live here and not only in _redirects — this catch-all function intercepts
+  // every request before _redirects is evaluated, so a _redirects-only rule
+  // silently never fires (verified 2026-10-20: www returned 200, not 301).
+  if (url.hostname === 'www.freeqrly.com') {
+    url.hostname = 'freeqrly.com';
+    return Response.redirect(url.toString(), 301);
+  }
   // /manage/* permanently moved to /dashboard/* (keep path + query).
   if (url.pathname === '/manage' || url.pathname.startsWith('/manage/')) {
     return Response.redirect(new URL(url.pathname.replace(/^\/manage/, '/dashboard') + url.search, url.origin), 301);
