@@ -484,7 +484,7 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left}
 .fctaBtn{margin-left:auto;background:var(--ink);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:14.5px;text-decoration:none;white-space:nowrap;flex-shrink:0}
 .fctaBtn:hover{background:#31435A}
 .fmain{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1fr;gap:38px}
-.fbrandName{font-family:Georgia,serif;font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.5px}
+.fbrandName{display:block;font-family:Georgia,serif;font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.5px;text-decoration:none}
 .fbrandName em{color:var(--coral);font-style:italic}
 .ftag{color:var(--soft);font-size:14.5px;line-height:1.6;margin-top:12px;max-width:280px}
 .fmade{font-family:Georgia,serif;font-style:italic;color:var(--soft);font-size:13px;margin-top:16px}

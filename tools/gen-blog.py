@@ -1261,7 +1261,7 @@ def build(p, all_posts=None):
     </div>
     <div class="fmain">
       <div class="fbrand">
-        <div class="fbrandName">Free<em>Qrly</em></div>
+        <a class="fbrandName" href="/">Free<em>Qrly</em></a>
         <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
         <div class="fmade">Made quietly — static codes in your browser.</div>
       </div>
