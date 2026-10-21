@@ -4,6 +4,17 @@
 
 const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// Render-time scheme allowlist (defense in depth — codes_api.js also validates
+// at save time, but codes stored before that fix must stay safe). Anything
+// whose scheme is not listed (javascript:, data:, vbscript:, control-char
+// tricks that fail the scheme match) degrades to '#'.
+function safeHref(value, schemes) {
+  const v = String(value || '').trim();
+  const m = v.match(/^([a-zA-Z][a-zA-Z0-9+.-]*):/);
+  if (!m) return '#';
+  return schemes.includes(m[1].toLowerCase()) ? v : '#';
+}
+
 function layout(title, body, code = '') {
   // Small, unobtrusive "Report this code" block at the bottom of hosted pages.
   // Posts { code, reason, reporter_email? } to /api/auth/report. Hidden unless a code is passed.
@@ -57,7 +68,7 @@ export function renderHostedPage(type, payload, code = '') {
         ${title ? `<div class="row"><div class="lbl">Title</div><div class="val">${esc(title)}</div></div>` : ''}
         ${tel ? `<div class="row"><div class="lbl">Phone</div><div class="val"><a href="tel:${esc(tel)}">${esc(tel)}</a></div></div>` : ''}
         ${email ? `<div class="row"><div class="lbl">Email</div><div class="val"><a href="mailto:${esc(email)}">${esc(email)}</a></div></div>` : ''}
-        ${url ? `<div class="row"><div class="lbl">Website</div><div class="val"><a href="${esc(url)}">${esc(url)}</a></div></div>` : ''}
+        ${url ? `<div class="row"><div class="lbl">Website</div><div class="val"><a href="${esc(safeHref(url, ['http', 'https']))}">${esc(url)}</a></div></div>` : ''}
         <a class="btn" href="${dl}" download="contact.vcf">Download contact</a>`);
     }
     case 'email': {
@@ -67,7 +78,7 @@ export function renderHostedPage(type, payload, code = '') {
       return L('Email', `<h1>✉️ Email</h1>
         <div class="row"><div class="lbl">To</div><div class="val">${esc(to)}</div></div>
         ${subj ? `<div class="row"><div class="lbl">Subject</div><div class="val">${esc(subj)}</div></div>` : ''}
-        <a class="btn" href="${esc(p)}">Compose email</a>`);
+        <a class="btn" href="${esc(safeHref(p, ['mailto']))}">Compose email</a>`);
     }
     case 'sms': {
       const m = p.match(/sms:([^?]*)\?body=(.*)/);
@@ -76,13 +87,13 @@ export function renderHostedPage(type, payload, code = '') {
       return L('SMS', `<h1>💬 SMS</h1>
         <div class="row"><div class="lbl">To</div><div class="val">${esc(num)}</div></div>
         ${msg ? `<div class="row"><div class="lbl">Message</div><div class="val">${esc(msg)}</div></div>` : ''}
-        <a class="btn" href="${esc(p)}">Send SMS</a>`);
+        <a class="btn" href="${esc(safeHref(p, ['sms', 'smsto']))}">Send SMS</a>`);
     }
     case 'phone': {
       const num = p.replace(/^tel:/, '');
       return L('Phone', `<h1>📞 Phone</h1>
         <div class="row"><div class="lbl">Number</div><div class="val">${esc(num)}</div></div>
-        <a class="btn" href="${esc(p)}">Call now</a>`);
+        <a class="btn" href="${esc(safeHref(p, ['tel']))}">Call now</a>`);
     }
     case 'geo': {
       const coords = p.replace(/^geo:/, '');
@@ -113,8 +124,8 @@ export function renderHostedPage(type, payload, code = '') {
     case 'appstore': {
       const [ios, android] = p.split('\n');
       return L('App', `<h1>📱 Get the app</h1>
-        ${ios ? `<a class="btn" href="${esc(ios)}" target="_blank" rel="noopener">Download on App Store</a><br>` : ''}
-        ${android ? `<a class="btn btn2" href="${esc(android)}" target="_blank" rel="noopener">Get it on Google Play</a>` : ''}`);
+        ${ios ? `<a class="btn" href="${esc(safeHref(ios, ['http', 'https']))}" target="_blank" rel="noopener">Download on App Store</a><br>` : ''}
+        ${android ? `<a class="btn btn2" href="${esc(safeHref(android, ['http', 'https']))}" target="_blank" rel="noopener">Get it on Google Play</a>` : ''}`);
     }
     default:
       return L('QR Code', `<h1>QR Code</h1><pre>${esc(p)}</pre>`);

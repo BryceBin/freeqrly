@@ -30,6 +30,62 @@ function assertUrl(payload) {
   }
 }
 
+// Types whose payload is a bare link (rendered/scanned as a URL).
+const LINK_TYPES = new Set(['review', 'mp3', 'google-form', 'menu']);
+
+function assertPrefix(payload, prefixes) {
+  const lower = payload.toLowerCase();
+  if (!prefixes.some((p) => lower.startsWith(p))) {
+    throw new ApiError(400, { error: 'Invalid payload' });
+  }
+}
+
+// Scheme allowlist per type. Payloads are rendered as clickable links on the
+// /q/ hosted pages, so a payload like `javascript:...` must never be stored:
+// without this, one click on a hosted-page button would run a script in the
+// freeqrly.com origin. (Defense in depth: hosted.js also filters at render.)
+function assertPayloadScheme(type, payload) {
+  switch (type) {
+    case 'url':
+      assertUrl(payload);
+      break;
+    case 'email':
+      assertPrefix(payload, ['mailto:']);
+      break;
+    case 'sms':
+      assertPrefix(payload, ['sms:', 'smsto:']);
+      break;
+    case 'phone':
+      assertPrefix(payload, ['tel:']);
+      break;
+    case 'geo': {
+      assertPrefix(payload, ['geo:']);
+      const coords = payload.slice(4).split(/[?;]/)[0];
+      if (!/^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(coords)) {
+        throw new ApiError(400, { error: 'Invalid payload' });
+      }
+      break;
+    }
+    case 'bitcoin':
+      assertPrefix(payload, ['bitcoin:']);
+      break;
+    case 'appstore':
+      for (const line of payload.split('\n')) {
+        const u = line.trim();
+        if (u) assertUrl(u);
+      }
+      break;
+    case 'vcard':
+      // Every URL property inside the vCard must be http(s).
+      for (const m of payload.matchAll(/^URL[^:\r\n]*:(.+)$/gim)) {
+        assertUrl(m[1].trim());
+      }
+      break;
+    default:
+      if (LINK_TYPES.has(type)) assertUrl(payload);
+  }
+}
+
 // Validate + normalize { type, payload }. `requireType` for PATCH (type is mandatory there).
 export function validateCodeInput(type, payload, { requireType = false } = {}) {
   type = (type || (requireType ? '' : 'url')).trim();
@@ -37,7 +93,7 @@ export function validateCodeInput(type, payload, { requireType = false } = {}) {
   if (!type || !VALID_TYPES.has(type)) throw new ApiError(400, { error: 'Invalid type' });
   if (!payload) throw new ApiError(400, { error: requireType ? 'Invalid payload' : 'payload is required' });
   if (payload.length > 8000) throw new ApiError(400, { error: requireType ? 'Invalid payload' : 'Payload too large' });
-  if (type === 'url') assertUrl(payload);
+  assertPayloadScheme(type, payload);
   return { type, payload };
 }
 
