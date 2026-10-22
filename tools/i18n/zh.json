@@ -246,7 +246,12 @@
   "Liability": "责任",
   "The service is provided \"as is\", without warranties of any kind. To the fullest extent permitted by law, we are not liable for any damages arising from your use of the service.": "本服务按“现状”提供，不作任何形式的保证。在法律允许的最大范围内，我们不对因你使用本服务而产生的任何损害承担责任。",
   "We may update these terms as the service evolves. Updated terms will be posted here with a new date. Continued use after changes means you accept the updated terms.": "随着服务发展，我们可能会更新本条款。更新后的条款会在这里发布并标注新日期。变更后继续使用，即表示你接受更新后的条款。",
-  "<a href=\"/\">Generator</a> · <a href=\"/privacy/\">Privacy</a>": "<a href=\"/\">生成器</a> · <a href=\"/privacy/\">隐私政策</a>"
+  "<a href=\"/\">Generator</a> · <a href=\"/privacy/\">Privacy</a>": "<a href=\"/\">生成器</a> · <a href=\"/privacy/\">隐私政策</a>",
+  "Billing and refunds": "计费与退款",
+  "FreeQrly is free to use, including 20 dynamic codes with every account. We also offer an optional Pro subscription — US$9 per month or US$90 per year — with unlimited dynamic codes. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "FreeQrly 免费使用，每个账号包含 20 个动态码。我们还提供可选的 Pro 订阅——每月 9 美元或每年 90 美元——动态码不限量。订阅由我们的销售代理兼支付处理商 Waffo Pancake 出售并收费。",
+  "By subscribing, you authorize Waffo Pancake to charge your payment method at the start of each billing period until you cancel. You can cancel anytime from your dashboard: Pro stays active until the end of the current period and is not renewed after that.": "你订阅即表示授权 Waffo Pancake 在每个计费周期开始时从你的支付方式扣款，直至你取消。你可随时在控制台取消：Pro 在当前周期结束前保持有效，之后不再续费。",
+  "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. After those 7 days, payments are not refundable except where the law requires it; cancelling stops future charges but does not refund the current period. Codes you created keep working after a subscription ends — only your limit for creating new dynamic codes returns to the free plan.": "如果是首次订阅，你可在首次付款后 7 天内申请全额退款——发邮件至 hello@freeqrly.com。超过 7 天后，除法律另有要求外，款项不予退还；取消只停止后续扣款，不退当前周期费用。订阅结束后，你已创建的码继续可用——只是新建动态码的额度恢复为免费档。",
+  "Static codes carry their destination inside the pattern — nothing we do can turn them off, and they keep working forever. Dynamic codes keep working even if you cancel your Pro subscription. The only codes we remove are ones that violate these terms.": "静态码的目的地址就藏在图案里——我们无法将其关闭，它们会永远有效。动态码即使你取消 Pro 订阅也会继续有效。我们唯一会移除的，是违反这些条款的码。"
  },
  "about": {
   "About FreeQrly — Free QR Codes, Static Codes Need No Sign-Up": "关于 FreeQrly — 免费二维码，静态码免注册",
