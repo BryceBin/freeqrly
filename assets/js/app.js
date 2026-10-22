@@ -906,10 +906,12 @@ $("logo").addEventListener("change",e=>{
   r.readAsDataURL(f);
 });
 /* Frame: wrap QR with border + optional CTA text */
+let frameAccent = null;
 function frameWrap(svgStr, px){
   const frame = (typeof getFrame === "function" ? getFrame() : "none");
   if(frame === "none") return svgStr;
   const fg = $("fg").value, bg = ($("transp") && $("transp").checked) ? "#FFFFFF" : $("bgc").value;
+  const fcol = frameAccent || fg;
   const pad = Math.round(px * 0.06);
   const ctaH = frame === "cta" ? Math.round(px * 0.14) : 0;
   // Width: QR + padding both sides (QR centered horizontally)
@@ -926,9 +928,9 @@ function frameWrap(svgStr, px){
   const ctaY = pad + px + (ctaH + pad) / 2;
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">` +
     `<rect width="${w}" height="${h}" rx="${radius}" fill="${bg}"/>` +
-    `<rect x="2" y="2" width="${w-4}" height="${h-4}" rx="${Math.max(0,radius-2)}" fill="none" stroke="${fg}" stroke-width="2"/>` +
+    `<rect x="2" y="2" width="${w-4}" height="${h-4}" rx="${Math.max(0,radius-2)}" fill="none" stroke="${fcol}" stroke-width="2"/>` +
     `<image href="${qrUri}" xlink:href="${qrUri}" x="${pad}" y="${pad}" width="${px}" height="${px}"/>` +
-    (frame === "cta" ? `<text x="${w/2}" y="${ctaY}" text-anchor="middle" dominant-baseline="middle" font-family="system-ui,sans-serif" font-size="${Math.round(px*0.055)}" font-weight="600" fill="${fg}">${esc(ctaText)}</text>` : "") +
+    (frame === "cta" ? `<text x="${w/2}" y="${ctaY}" text-anchor="middle" dominant-baseline="middle" font-family="system-ui,sans-serif" font-size="${Math.round(px*0.055)}" font-weight="600" fill="${fcol}">${esc(ctaText)}</text>` : "") +
     `</svg>`;
 }
 
@@ -1136,6 +1138,53 @@ const _ft = $("frameText");
 if(_ft) _ft.addEventListener("input", ()=>{ draw(); });
 // Helper: current frame value (used by frameWrap and draw)
 function getFrame(){ return frameVal; }
+/* Holiday frame presets: one click sets ink, paper, CTA frame + gold accent */
+const FP_TEXT = {
+  bf:{en:"BLACK FRIDAY · SCAN FOR DEALS", zh:"黑五大促 · 扫码抢购", es:"BLACK FRIDAY · ESCANEA Y AHORRA", fr:"BLACK FRIDAY · SCANNEZ LES OFFRES", de:"BLACK FRIDAY · ANGEBOTE SCANNEN", ja:"ブラックフライデー · スキャンでお得", pt:"BLACK FRIDAY · ESCANEIE AS OFERTAS", ru:"ЧЁРНАЯ ПЯТНИЦА · СКАНИРУЙ ЗА СКИДКОЙ", hi:"BLACK FRIDAY · ऑफ़र स्कैन करें", ar:"الجمعة السوداء · امسح للعروض"},
+  xmas:{en:"MERRY CHRISTMAS", zh:"圣诞快乐", es:"FELIZ NAVIDAD", fr:"JOYEUX NOËL", de:"FROHE WEIHNACHTEN", ja:"メリークリスマス", pt:"FELIZ NATAL", ru:"С РОЖДЕСТВОМ", hi:"मेरी क्रिसमस", ar:"عيد ميلاد مجيد"}
+};
+const FP_LABEL = {
+  label:{en:"Holiday presets", zh:"节日预设", es:"Ajustes de fiesta", fr:"Préréglages fêtes", de:"Feiertags-Presets", ja:"季節のプリセット", pt:"Predefinições festivas", ru:"Праздничные пресеты", hi:"त्योहारी प्रीसेट", ar:"إعدادات الأعياد"},
+  bf:{en:"Black Friday", zh:"黑五", es:"Black Friday", fr:"Black Friday", de:"Black Friday", ja:"ブラックフライデー", pt:"Black Friday", ru:"Чёрная пятница", hi:"ब्लैक फ्राइडे", ar:"الجمعة السوداء"},
+  xmas:{en:"Christmas", zh:"圣诞", es:"Navidad", fr:"Noël", de:"Weihnachten", ja:"クリスマス", pt:"Natal", ru:"Рождество", hi:"क्रिसमस", ar:"عيد الميلاد"}
+};
+function fpLang(){
+  const g = k => (FP_LABEL[k][lang] || FP_LABEL[k].en);
+  const a=$("fpLab"), b=$("fpBfT"), c=$("fpXmT");
+  if(a) a.textContent = g("label"); if(b) b.textContent = g("bf"); if(c) c.textContent = g("xmas");
+}
+fpLang();
+new MutationObserver(fpLang).observe(document.documentElement, {attributes:true, attributeFilter:["lang"]});
+function applyFramePreset(name){
+  const P = name==="bf" ? {fg:"#161616", bg:"#FFFFFF"} : name==="xmas" ? {fg:"#1F4D3A", bg:"#FBF7EC"} : null;
+  if(!P) return;
+  frameAccent = "#A97F1F";
+  const tr = $("transp"); if(tr) tr.checked = false;
+  const setCol = (id, dotsId, val, isFg)=>{
+    const h = $(id); if(!h) return;
+    h.value = val;
+    h.dispatchEvent(new Event("input",{bubbles:true}));
+    h.dispatchEvent(new Event("change",{bubbles:true}));
+    if(typeof ensureCustomDot === "function") ensureCustomDot(dotsId, val, id, isFg);
+    if(typeof dotsInit === "function" && dotsInit._mark) dotsInit._mark(dotsId, val);
+  };
+  setCol("fg","fgDots",P.fg,true);
+  setCol("bgc","bgDots",P.bg,false);
+  const ctaBtn = _segFrame ? _segFrame.querySelector('button[data-v="cta"]') : null;
+  if(ctaBtn && frameVal !== "cta") ctaBtn.click();
+  const ft = $("frameText"); if(ft) ft.value = (FP_TEXT[name][lang] || FP_TEXT[name].en);
+  document.querySelectorAll("#framePresets .fpBtn").forEach(b=>b.classList.toggle("on", b.dataset.preset===name));
+  draw(); scanScore();
+}
+document.querySelectorAll("#framePresets .fpBtn").forEach(b=>{ b.addEventListener("click", ()=>applyFramePreset(b.dataset.preset)); });
+document.addEventListener("click", (e)=>{
+  if(!e.isTrusted) return; // ignore the preset's own programmatic seg click
+  if(e.target.closest("#framePresets")) return;
+  if(e.target.closest(".cdot") || e.target.closest(".cpick") || e.target.closest("#segFrame")){
+    frameAccent = null;
+    document.querySelectorAll("#framePresets .fpBtn").forEach(b=>b.classList.remove("on"));
+  }
+});
 const _hc=$("histClear"); if(_hc) _hc.onclick=()=>{ try{localStorage.removeItem(HIST_KEY);}catch(e){} renderHist(); };
 /* theme */
 const root=document.documentElement;
