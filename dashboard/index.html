@@ -159,6 +159,36 @@ a.shortUrl:hover{text-decoration:underline}
 .planNote{font-size:13px;color:#7A8699;line-height:1.55;margin:8px 0 0}
 .planNote.warn{color:#C0492F}
 .planOk{font-size:13.5px;color:#2E7D4F;background:#EFF7F0;border:1px solid #CFE8D4;border-radius:12px;padding:11px 14px;margin:0 0 14px}
+.planStrip{margin:16px 0 14px;background:#fff;border:1.5px solid #EFE7D2;border-radius:18px;padding:14px 22px}
+.planStrip.pro{border-color:#E7D9B4}
+.planStrip .planOk{margin:0 0 10px}
+.planStripRow{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.planPill{display:inline-block;background:#FBF5E9;border:1px solid #E8DFC8;color:#2F4A62;font-size:12.5px;font-weight:700;border-radius:99px;padding:5px 12px;white-space:nowrap}
+.planBadgeImg{height:36px;width:auto;display:block}
+.planMid{flex:1;min-width:250px}
+.planLine{font-size:14.5px;color:#5A6B7A;margin:0}
+.planLine b{color:#22303F}
+.planStrip .planBar{margin:8px 0 2px;max-width:340px}
+.planStrip .planNote{margin-top:4px}
+.planActions{display:flex;gap:10px;align-items:center}
+.btnCoral{background:#EF7D6B;color:#fff;border:0;border-radius:99px;font-size:13.5px;font-weight:700;padding:10px 19px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btnCoral:disabled{opacity:.6;cursor:wait}
+.btnCoralO{background:#fff;color:#C4503C;border:1.5px solid #EF7D6B;border-radius:99px;font-size:13.5px;font-weight:700;padding:9px 18px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btnCoralO:disabled{opacity:.6;cursor:wait}
+.pwOverlay{position:fixed;inset:0;background:rgba(43,36,22,.48);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:56px 14px 20px;overflow:auto}
+.pwOverlay[hidden]{display:none}
+.pwModal{background:#FFFCF4;border-radius:22px;width:620px;max-width:94vw;padding:26px 30px;box-shadow:0 24px 70px rgba(40,30,5,.35);position:relative;box-sizing:border-box}
+.pwModal h3{font-family:Georgia,serif;font-size:24px;color:#22303F;margin:0}
+.pwX{position:absolute;top:13px;inset-inline-end:15px;background:none;border:0;font-size:16px;color:#A08F6C;cursor:pointer;padding:4px}
+.pwTable{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px;color:#3D4A57}
+.pwTable th,.pwTable td{padding:9px 8px;border-bottom:1px solid #F1EAD9;text-align:start}
+.pwTable th{color:#8A7B5F;font-size:12.5px;font-weight:600}
+.pwTable td.c,.pwTable th.c{text-align:center;width:100px}
+.pwTable .ck{color:#3E9B6B;font-weight:800}
+.pwBtns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.pwBtns button{flex:1;padding:12px 10px}
+.saveChip{background:#EF7D6B;color:#fff;font-size:11px;border-radius:99px;padding:2px 8px;margin-inline-start:5px;vertical-align:1px}
+.pwMicro{font-size:11.5px;color:#A08F6C;text-align:center;margin:9px 0 0}
 </style>
 </head>
 <body>
@@ -170,9 +200,32 @@ a.shortUrl:hover{text-decoration:underline}
     <div class="headRow">
       <h1 data-t="manageTitle">Dashboard</h1>
     </div>
-    <div class="codeCount" id="codeCount"></div>
   </div>
 
+  <div class="planStrip" id="planSection" hidden>
+    <p class="planOk" id="planSuccess" hidden></p>
+    <div class="planStripRow">
+      <span id="planBadgeWrap"></span>
+      <div class="planMid">
+        <p class="planLine" id="planLine"></p>
+        <div class="planBar" id="planBar" hidden><i id="planBarFill"></i></div>
+        <p class="planNote" id="planNote"></p>
+      </div>
+      <div class="planActions" id="planActions"></div>
+    </div>
+  </div>
+  <div class="pwOverlay" id="pwOverlay" hidden>
+    <div class="pwModal" role="dialog" aria-modal="true">
+      <button class="pwX" id="pwClose" type="button" aria-label="Close">✕</button>
+      <h3 id="pwTitle"></h3>
+      <table class="pwTable"><thead><tr><th></th><th class="c" id="pwFreeCol"></th><th class="c" id="pwProCol"></th></tr></thead><tbody id="pwRows"></tbody></table>
+      <div class="pwBtns">
+        <button class="btnCoral" id="pwBuyM" type="button"></button>
+        <button class="btnCoralO" id="pwBuyY" type="button"></button>
+      </div>
+      <p class="pwMicro" id="pwMicro"></p>
+    </div>
+  </div>
   <div class="errCard" id="loadErrCard" hidden><p class="merror" id="loadErr"></p></div>
   <div class="group"><a class="addRow" href="/?mode=dynamic"><span class="plus">＋</span><span data-t="newCode">New dynamic code</span></a></div>
   <div id="cards"><div class="group" aria-hidden="true">
@@ -201,14 +254,6 @@ a.shortUrl:hover{text-decoration:underline}
     <div id="tokenList"></div>
   </div>
 
-  <div class="apiTokens" id="planSection" hidden>
-    <div class="apiHead"><h2 data-t="planTitle">Plan</h2><span class="docsBtn" id="planBadge">Free</span></div>
-    <p class="planOk" id="planSuccess" hidden></p>
-    <p class="apiHint" id="planLine"></p>
-    <div class="planBar" id="planBar" hidden><i id="planBarFill"></i></div>
-    <p class="planNote" id="planNote"></p>
-    <div class="planRow" id="planActions"></div>
-  </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/js/acct-menu.js?v=b3w-20261022"></script>
@@ -224,7 +269,7 @@ a.shortUrl:hover{text-decoration:underline}
 const $ = id => document.getElementById(id);
 const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
 const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
-const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "codesUsedUnlimited": "{n} codes · unlimited (limited time)", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends."}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "codesUsedUnlimited": "{n} codes · unlimited (limited time)", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends.", "planCreated": "{n} dynamic codes created", "planOfLimit": " \u00b7 free limit {limit}", "planUnlimitedSuffix": " \u00b7 unlimited", "pwTitle": "Free vs Pro", "pwRowQuota": "Dynamic codes", "pwRowStatic": "Static codes", "pwRowEdit": "Edit after printing + scan stats", "pwRowMarks": "No watermark, never expires", "pwRowKeep": "Codes keep working after you cancel", "pwUnlimited": "Unlimited", "pwQuota20": "20", "pwBuyMonthly": "Upgrade monthly \u00b7 $9 / month", "pwBuyYearly": "Upgrade yearly \u00b7 $90 / year", "pwSave": "Save 17%", "pwMicro": "Cancel anytime \u00b7 7-day full refund on your first subscription"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
 let I18N = null;
 let LANG = 'en';
 let ME = null;
@@ -368,7 +413,10 @@ function renderPlan(){
   sec.hidden = false;
   const sub = PLAN.subscription;
   const isPro = !!sub;
-  $('planBadge').textContent = isPro ? t('ui','planCurrentPro') : t('ui','planCurrentFree');
+  sec.classList.toggle('pro', isPro);
+  $('planBadgeWrap').innerHTML = isPro
+    ? '<img class="planBadgeImg" src="/assets/img/pro-badge.png" alt="Pro">'
+    : '<span class="planPill">' + t('ui','planCurrentFree') + '</span>';
   const params = new URLSearchParams(location.search);
   if(params.get('billing') === 'success'){
     const ok = $('planSuccess');
@@ -379,11 +427,15 @@ function renderPlan(){
   note.className = 'planNote'; note.textContent = '';
   actions.innerHTML = '';
   const used = PLAN.usage.used, limit = PLAN.usage.limit;
-  if(limit >= 999999){
-    line.textContent = t('ui','codesUsedUnlimited').replace('{n}', used);
+  if(isPro){
+    line.innerHTML = '<b>' + t('ui','planCurrentPro') + '</b> · ' +
+      t('ui','planCreated').replace('{n}', '<b>' + used + '</b>') + t('ui','planUnlimitedSuffix');
+    bar.hidden = true;
+  }else if(limit >= 999999){
+    line.innerHTML = t('ui','codesUsedUnlimited').replace('{n}', '<b>' + used + '</b>');
     bar.hidden = true;
   }else{
-    line.textContent = t('ui','codesUsed').replace('{n}', used).replace('{limit}', limit);
+    line.innerHTML = t('ui','planCreated').replace('{n}', '<b>' + used + '</b>') + t('ui','planOfLimit').replace('{limit}', limit);
     bar.hidden = false;
     $('planBarFill').style.width = Math.min(100, limit ? (used / limit) * 100 : 0) + '%';
   }
@@ -405,15 +457,44 @@ function renderPlan(){
     }
   }else{
     note.textContent = limit >= 999999 ? t('ui','planPromoNote') : t('ui','planPitch');
-    for(const period of ['monthly','yearly']){
-      const b = document.createElement('button');
-      b.className = 'newBtn'; b.type = 'button';
-      b.textContent = t('ui','planUpgrade') + ' · ' + t('ui', period === 'monthly' ? 'planMonthly' : 'planYearly');
-      b.addEventListener('click', () => startCheckout(period, b));
-      actions.appendChild(b);
-    }
+    const b = document.createElement('button');
+    b.className = 'btnCoral'; b.type = 'button'; b.textContent = t('ui','planUpgrade');
+    b.addEventListener('click', openPaywall);
+    actions.appendChild(b);
   }
 }
+// ---------- paywall (Free vs Pro, W3 table design) ----------
+let pwWired = false;
+function openPaywall(){
+  const ov = $('pwOverlay');
+  $('pwTitle').textContent = t('ui','pwTitle');
+  $('pwFreeCol').textContent = t('ui','planCurrentFree') + ' · $0';
+  $('pwProCol').textContent = t('ui','planCurrentPro');
+  const ck = '<span class="ck">✓</span>';
+  const rows = [
+    [t('ui','pwRowQuota'), t('ui','pwQuota20'), '<b>' + t('ui','pwUnlimited') + '</b>'],
+    [t('ui','pwRowStatic'), t('ui','pwUnlimited'), t('ui','pwUnlimited')],
+    [t('ui','pwRowEdit'), ck, ck],
+    [t('ui','pwRowMarks'), ck, ck],
+    [t('ui','pwRowKeep'), '—', ck],
+  ];
+  $('pwRows').innerHTML = rows.map(r =>
+    '<tr><td>' + r[0] + '</td><td class="c">' + r[1] + '</td><td class="c">' + r[2] + '</td></tr>').join('');
+  const bm = $('pwBuyM'), by = $('pwBuyY');
+  bm.textContent = t('ui','pwBuyMonthly');
+  by.innerHTML = t('ui','pwBuyYearly') + '<span class="saveChip">' + t('ui','pwSave') + '</span>';
+  $('pwMicro').textContent = t('ui','pwMicro');
+  if(!pwWired){
+    pwWired = true;
+    bm.addEventListener('click', () => startCheckout('monthly', bm));
+    by.addEventListener('click', () => startCheckout('yearly', by));
+    $('pwClose').addEventListener('click', closePaywall);
+    ov.addEventListener('click', e => { if(e.target === ov) closePaywall(); });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') closePaywall(); });
+  }
+  ov.hidden = false;
+}
+function closePaywall(){ $('pwOverlay').hidden = true; }
 async function startCheckout(period, btn){
   const orig = btn.textContent;
   btn.disabled = true; btn.textContent = t('ui','planWorking');
@@ -569,16 +650,7 @@ function frameWrap(svgStr, px, style){
 }
 
 // ---------- cards ----------
-function updateCount(){
-  const el = $('codeCount');
-  if(!el) return;
-  const limit = (ME && ME.quota && ME.quota.limit) || 8;
-  if(limit >= 999999){
-    el.textContent = t('ui','codesUsedUnlimited').replace('{n}', CODES.length);
-  }else{
-    el.textContent = t('ui','codesUsed').replace('{n}', CODES.length).replace('{limit}', limit);
-  }
-}
+function updateCount(){ /* plan strip shows the count now */ }
 function renderCards(){
   const wrap = $('cards');
   if(!wrap) return;
@@ -1163,7 +1235,7 @@ async function boot(){
   LANG = LANGS.includes(qLang) ? qLang : (LANGS.includes(saved) ? saved : 'en');
   localStorage.setItem('freeqrly-lang', LANG);
   // Fire all independent data fetches in parallel (one round trip, not four).
-  const i18nP = fetch('/dashboard/i18n.json').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
+  const i18nP = fetch('/dashboard/i18n.json?v=plan2-20261022').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
   const meP = fetch('/api/auth/me', { credentials: 'same-origin' }).catch(() => null);
   const codesP = fetch('/api/me/codes', { credentials: 'same-origin' }).catch(() => null);
   const tokensP = fetch('/api/tokens', { credentials: 'same-origin' }).then(r => r.ok ? r.json().catch(() => ({})) : {}).catch(() => ({}));
