@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS users (
   avatar_url TEXT,
   auth_provider TEXT NOT NULL DEFAULT 'email',
   plan TEXT NOT NULL DEFAULT 'free',
-  code_limit INTEGER NOT NULL DEFAULT 8,
+  code_limit INTEGER NOT NULL DEFAULT 20,
   created_at INTEGER NOT NULL,
   last_login_at INTEGER,
   -- PBKDF2-SHA256 hash for email+password accounts: pbkdf2$100000$<salt_b64>$<hash_b64>.

@@ -1,12 +1,14 @@
 // Pro tier state: D1 `subscriptions` rows driven by Waffo webhooks.
 // users.plan mirrors liveness ('pro' while a subscription is active /
-// canceling / past_due). Quota rule (her policy): Pro = 100 dynamic codes,
-// but billing must never *lower* a limit — during the unlimited promo
-// (code_limit >= UNLIMITED_LIMIT) everyone keeps the promo limit.
+// canceling / past_due). Quota rule (her policy, 2026-10-22): free = 20
+// dynamic codes; Pro = unlimited. Billing must never *lower* a limit —
+// during the unlimited promo (code_limit >= UNLIMITED_LIMIT) everyone
+// keeps the promo limit, and a live subscription always resolves to it.
 // Mirrors UNLIMITED_LIMIT in codes_api.js (kept local to avoid an import cycle).
 const UNLIMITED_LIMIT = 999999;
 
-export const PRO_LIMIT = 100;
+export const FREE_LIMIT = 20;
+export const PRO_LIMIT = UNLIMITED_LIMIT;
 const LIVE_STATUSES = new Set(['active', 'canceling', 'past_due']);
 
 export async function getLiveSubscription(env, userId) {
@@ -18,11 +20,8 @@ export async function getLiveSubscription(env, userId) {
 }
 
 export function resolveCodeLimit(user, sub) {
-  const base = user.code_limit ?? 8;
-  if (sub && LIVE_STATUSES.has(sub.status)) {
-    if (base >= UNLIMITED_LIMIT) return UNLIMITED_LIMIT;
-    return Math.max(PRO_LIMIT, base);
-  }
+  const base = user.code_limit ?? FREE_LIMIT;
+  if (sub && LIVE_STATUSES.has(sub.status)) return UNLIMITED_LIMIT;
   return base;
 }
 

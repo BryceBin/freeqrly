@@ -3027,7 +3027,7 @@
    "planTitle": "Plan",
    "planCurrentFree": "Free plan",
    "planCurrentPro": "Pro plan",
-   "planPitch": "Pro gives you 100 dynamic codes — for menus, packaging and campaigns that outgrow the free plan.",
+   "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.",
    "planMonthly": "$9 / month",
    "planYearly": "$90 / year — save 17%",
    "planUpgrade": "Upgrade to Pro",
@@ -3039,7 +3039,7 @@
    "planSuccess": "Payment received — Pro activates within a minute.",
    "planCheckoutErr": "Couldn't open checkout. Please try again.",
    "planWorking": "Opening checkout…",
-   "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro keeps 100 codes for you after the offer ends."
+   "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends."
   },
   "zh": {
    "manageTitle": "控制台",
@@ -3106,7 +3106,7 @@
    "planTitle": "套餐",
    "planCurrentFree": "免费版",
    "planCurrentPro": "Pro 版",
-   "planPitch": "Pro 提供 100 个动态码——适合菜单、包装和超出免费额度的营销活动。",
+   "planPitch": "Pro 提供不限量动态码——适合菜单、包装和超出免费额度的营销活动。",
    "planMonthly": "$9 / 月",
    "planYearly": "$90 / 年 — 省 17%",
    "planUpgrade": "升级到 Pro",
@@ -3118,7 +3118,7 @@
    "planSuccess": "已收到付款——Pro 将在一分钟内激活。",
    "planCheckoutErr": "无法打开结账页，请重试。",
    "planWorking": "正在打开结账页…",
-   "planPromoNote": "目前所有账号都有不限量动态码（限时活动）。活动结束后，Pro 为你保留 100 个动态码。"
+   "planPromoNote": "目前所有账号都有不限量动态码（限时活动）。活动结束后，Pro 仍然不限量。"
   },
   "es": {
    "manageTitle": "Panel",
@@ -3185,7 +3185,7 @@
    "planTitle": "Plan",
    "planCurrentFree": "Plan gratuito",
    "planCurrentPro": "Plan Pro",
-   "planPitch": "Pro te da 100 códigos dinámicos: para menús, envases y campañas que superan el plan gratuito.",
+   "planPitch": "Pro te da códigos dinámicos ilimitados: para menús, envases y campañas que superan el plan gratuito.",
    "planMonthly": "$9 / mes",
    "planYearly": "$90 / año — ahorra 17%",
    "planUpgrade": "Pasar a Pro",
@@ -3197,7 +3197,7 @@
    "planSuccess": "Pago recibido: tu plan Pro se activa en un minuto.",
    "planCheckoutErr": "No se pudo abrir el pago. Inténtalo de nuevo.",
    "planWorking": "Abriendo el pago…",
-   "planPromoNote": "Ahora todas las cuentas tienen códigos dinámicos ilimitados (oferta por tiempo limitado). Pro te reserva 100 códigos cuando la oferta termine."
+   "planPromoNote": "Ahora todas las cuentas tienen códigos dinámicos ilimitados (oferta por tiempo limitado). Pro sigue ilimitado cuando la oferta termine."
   },
   "hi": {
    "manageTitle": "डैशबोर्ड",
@@ -3264,7 +3264,7 @@
    "planTitle": "योजना",
    "planCurrentFree": "मुफ़्त योजना",
    "planCurrentPro": "Pro योजना",
-   "planPitch": "Pro आपको 100 डायनामिक कोड देता है — मेनू, पैकेजिंग और मुफ़्त योजना से आगे बढ़ने वाले अभियानों के लिए।",
+   "planPitch": "Pro आपको असीमित डायनामिक कोड देता है — मेनू, पैकेजिंग और मुफ़्त योजना से आगे बढ़ने वाले अभियानों के लिए।",
    "planMonthly": "$9 / महीना",
    "planYearly": "$90 / साल — 17% बचत",
    "planUpgrade": "Pro में अपग्रेड करें",
@@ -3276,7 +3276,7 @@
    "planSuccess": "भुगतान मिल गया — आपका Pro एक मिनट में सक्रिय हो जाएगा।",
    "planCheckoutErr": "चेकआउट नहीं खुला। कृपया फिर कोशिश करें।",
    "planWorking": "चेकआउट खुल रहा है…",
-   "planPromoNote": "अभी सभी खातों में असीमित डायनामिक कोड हैं (सीमित समय का ऑफ़र)। ऑफ़र खत्म होने के बाद Pro आपके लिए 100 कोड रखता है।"
+   "planPromoNote": "अभी सभी खातों में असीमित डायनामिक कोड हैं (सीमित समय का ऑफ़र)। ऑफ़र खत्म होने के बाद भी Pro असीमित रहता है।"
   },
   "ar": {
    "manageTitle": "لوحة التحكم",
@@ -3343,7 +3343,7 @@
    "planTitle": "الخطة",
    "planCurrentFree": "الخطة المجانية",
    "planCurrentPro": "خطة Pro",
-   "planPitch": "يمنحك Pro 100 رمز ديناميكي — للقوائم والتغليف والحملات التي تتجاوز الخطة المجانية.",
+   "planPitch": "يمنحك Pro رموزًا ديناميكية غير محدودة — للقوائم والتغليف والحملات التي تتجاوز الخطة المجانية.",
    "planMonthly": "$9 / شهر",
    "planYearly": "$90 / سنة — وفّر 17%",
    "planUpgrade": "الترقية إلى Pro",
@@ -3355,7 +3355,7 @@
    "planSuccess": "تم استلام الدفع — ستُفعَّل خطة Pro خلال دقيقة.",
    "planCheckoutErr": "تعذر فتح الدفع. حاول مرة أخرى.",
    "planWorking": "جارٍ فتح الدفع…",
-   "planPromoNote": "حاليًا تتمتع جميع الحسابات برموز ديناميكية غير محدودة (عرض لفترة محدودة). يحفظ لك Pro 100 رمز بعد انتهاء العرض."
+   "planPromoNote": "حاليًا تتمتع جميع الحسابات برموز ديناميكية غير محدودة (عرض لفترة محدودة). ويبقى Pro غير محدود بعد انتهاء العرض."
   },
   "pt": {
    "manageTitle": "Painel",
@@ -3422,7 +3422,7 @@
    "planTitle": "Plano",
    "planCurrentFree": "Plano gratuito",
    "planCurrentPro": "Plano Pro",
-   "planPitch": "O Pro dá 100 códigos dinâmicos — para cardápios, embalagens e campanhas que ultrapassam o plano gratuito.",
+   "planPitch": "O Pro dá códigos dinâmicos ilimitados — para cardápios, embalagens e campanhas que ultrapassam o plano gratuito.",
    "planMonthly": "$9 / mês",
    "planYearly": "$90 / ano — economize 17%",
    "planUpgrade": "Assinar o Pro",
@@ -3434,7 +3434,7 @@
    "planSuccess": "Pagamento recebido — seu Pro ativa em um minuto.",
    "planCheckoutErr": "Não foi possível abrir o pagamento. Tente de novo.",
    "planWorking": "Abrindo o pagamento…",
-   "planPromoNote": "Agora todas as contas têm códigos dinâmicos ilimitados (oferta por tempo limitado). O Pro mantém 100 códigos para você depois que a oferta acabar."
+   "planPromoNote": "Agora todas as contas têm códigos dinâmicos ilimitados (oferta por tempo limitado). O Pro continua ilimitado depois que a oferta acabar."
   },
   "fr": {
    "manageTitle": "Tableau de bord",
@@ -3501,7 +3501,7 @@
    "planTitle": "Forfait",
    "planCurrentFree": "Forfait gratuit",
    "planCurrentPro": "Forfait Pro",
-   "planPitch": "Pro vous donne 100 codes dynamiques — pour les menus, les emballages et les campagnes qui dépassent le forfait gratuit.",
+   "planPitch": "Pro vous donne des codes dynamiques illimités — pour les menus, les emballages et les campagnes qui dépassent le forfait gratuit.",
    "planMonthly": "$9 / mois",
    "planYearly": "$90 / an — 17 % d'économie",
    "planUpgrade": "Passer à Pro",
@@ -3513,7 +3513,7 @@
    "planSuccess": "Paiement reçu — votre forfait Pro s'active dans une minute.",
    "planCheckoutErr": "Impossible d'ouvrir le paiement. Réessayez.",
    "planWorking": "Ouverture du paiement…",
-   "planPromoNote": "Actuellement, tous les comptes ont des codes dynamiques illimités (offre limitée). Pro vous garde 100 codes après la fin de l'offre."
+   "planPromoNote": "Actuellement, tous les comptes ont des codes dynamiques illimités (offre limitée). Pro reste illimité après la fin de l'offre."
   },
   "ru": {
    "manageTitle": "Панель управления",
@@ -3580,7 +3580,7 @@
    "planTitle": "План",
    "planCurrentFree": "Бесплатный план",
    "planCurrentPro": "План Pro",
-   "planPitch": "Pro даёт 100 динамических кодов — для меню, упаковки и кампаний, которым мало бесплатного плана.",
+   "planPitch": "Pro даёт безлимитные динамические коды — для меню, упаковки и кампаний, которым мало бесплатного плана.",
    "planMonthly": "$9 / месяц",
    "planYearly": "$90 / год — экономия 17%",
    "planUpgrade": "Перейти на Pro",
@@ -3592,7 +3592,7 @@
    "planSuccess": "Платёж получен — Pro активируется в течение минуты.",
    "planCheckoutErr": "Не удалось открыть оплату. Попробуйте ещё раз.",
    "planWorking": "Открываем оплату…",
-   "planPromoNote": "Сейчас у всех аккаунтов безлимитные динамические коды (временная акция). Pro сохранит за вами 100 кодов после её окончания."
+   "planPromoNote": "Сейчас у всех аккаунтов безлимитные динамические коды (временная акция). Pro останется безлимитным и после её окончания."
   },
   "de": {
    "manageTitle": "Dashboard",
@@ -3659,7 +3659,7 @@
    "planTitle": "Plan",
    "planCurrentFree": "Kostenloser Plan",
    "planCurrentPro": "Pro-Plan",
-   "planPitch": "Pro gibt dir 100 dynamische Codes — für Speisekarten, Verpackungen und Kampagnen, die über den Gratis-Plan hinauswachsen.",
+   "planPitch": "Pro gibt dir unbegrenzt dynamische Codes — für Speisekarten, Verpackungen und Kampagnen, die über den Gratis-Plan hinauswachsen.",
    "planMonthly": "$9 / Monat",
    "planYearly": "$90 / Jahr — 17 % sparen",
    "planUpgrade": "Auf Pro upgraden",
@@ -3671,7 +3671,7 @@
    "planSuccess": "Zahlung erhalten — dein Pro wird innerhalb einer Minute aktiviert.",
    "planCheckoutErr": "Checkout konnte nicht geöffnet werden. Bitte erneut versuchen.",
    "planWorking": "Checkout wird geöffnet…",
-   "planPromoNote": "Aktuell haben alle Konten unbegrenzte dynamische Codes (zeitlich begrenztes Angebot). Pro sichert dir 100 Codes nach Ende des Angebots."
+   "planPromoNote": "Aktuell haben alle Konten unbegrenzte dynamische Codes (zeitlich begrenztes Angebot). Pro bleibt auch nach Ende des Angebots unbegrenzt."
   },
   "ja": {
    "manageTitle": "ダッシュボード",
@@ -3738,7 +3738,7 @@
    "planTitle": "プラン",
    "planCurrentFree": "無料プラン",
    "planCurrentPro": "Proプラン",
-   "planPitch": "Proでは動的コードが100個まで使えます。メニューやパッケージ、無料プランを超えるキャンペーンに。",
+   "planPitch": "Proでは動的コードが無制限に使えます。メニューやパッケージ、無料プランを超えるキャンペーンに。",
    "planMonthly": "$9 / 月",
    "planYearly": "$90 / 年 — 17%お得",
    "planUpgrade": "Proにアップグレード",
@@ -3750,7 +3750,7 @@
    "planSuccess": "お支払いを受け付けました。Proは1分以内に有効になります。",
    "planCheckoutErr": "チェックアウトを開けませんでした。もう一度お試しください。",
    "planWorking": "チェックアウトを開いています…",
-   "planPromoNote": "現在、全アカウントで動的コードが無制限です（期間限定オファー）。オファー終了後もProなら100個のコードが使えます。"
+   "planPromoNote": "現在、全アカウントで動的コードが無制限です（期間限定オファー）。オファー終了後もProは無制限のままです。"
   }
  }
 }
