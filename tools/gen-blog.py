@@ -1189,7 +1189,7 @@ def build(p, all_posts=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3u-20261022">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3v-20261022">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3u-20261022">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3u-20261022">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
