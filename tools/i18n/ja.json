@@ -1861,6 +1861,7 @@
   "No. Your codes keep working after a subscription ends. You just return to the free limit for creating new dynamic codes.": "いいえ。サブスクリプション終了後もコードはそのまま使えます。新しく作れる動的コードの上限が無料枠に戻るだけです。",
   "How do refunds work?": "返金はどうなりますか？",
   "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. The full billing terms are in the <a href=\"/terms/\">Terms of Service</a>.": "初めてのサブスクリプションの場合、初回支払いから7日以内であれば全額返金を申請できます——hello@freeqrly.com までご連絡ください。請求に関する全条件は<a href=\"/terms/\">利用規約</a>に記載しています。",
-  "Prices in USD. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "価格は米ドルです。サブスクリプションの販売と請求は、当社の販売事業者兼決済プロセッサーであるWaffo Pancakeが行います。"
+  "Prices in USD. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "価格は米ドルです。サブスクリプションの販売と請求は、当社の販売事業者兼決済プロセッサーであるWaffo Pancakeが行います。",
+  "Upgrade to Pro": "Proにアップグレード"
  }
 }
