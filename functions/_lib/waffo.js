@@ -73,6 +73,17 @@ function pemToPkcs8(pem) {
   const body = pem.replace(/-----BEGIN [^-]+-----/, '').replace(/-----END [^-]+-----/, '').replace(/\s+/g, '');
   const der = b64ToBytes(body);
   if (/BEGIN PRIVATE KEY-----/.test(pem) && !/RSA PRIVATE KEY/.test(pem)) return der;
+  // Bare base64 without PEM armor (Waffo's dashboard copy format): detect the
+  // structure from the DER itself. After SEQ header + version INTEGER, a
+  // PKCS#8 PrivateKeyInfo has a SEQUENCE (AlgorithmIdentifier) next, while a
+  // PKCS#1 RSAPrivateKey has an INTEGER (modulus) next.
+  let i = 1;
+  if (der[i] & 0x80) i += der[i] & 0x7f;
+  i += 1; // first length byte / long-form length position
+  if (der[i] === 0x02) { // version INTEGER
+    const vlen = der[i + 1];
+    if (der[i + 2 + vlen] === 0x30) return der; // already PKCS#8
+  }
   // PKCS#1 → PKCS#8 wrap
   const algId = [0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00];
   const version = [0x02, 0x01, 0x00];
