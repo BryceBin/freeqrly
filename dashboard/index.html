@@ -175,9 +175,9 @@ a.shortUrl:hover{text-decoration:underline}
 .btnCoral:disabled{opacity:.6;cursor:wait}
 .btnCoralO{background:#fff;color:#C4503C;border:1.5px solid #EF7D6B;border-radius:99px;font-size:13.5px;font-weight:700;padding:9px 18px;cursor:pointer;font-family:inherit;white-space:nowrap}
 .btnCoralO:disabled{opacity:.6;cursor:wait}
-.pwOverlay{position:fixed;inset:0;background:rgba(43,36,22,.48);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:56px 14px 20px;overflow:auto}
+.pwOverlay{position:fixed;inset:0;background:rgba(43,36,22,.48);z-index:200;display:flex;padding:20px 14px;overflow:auto}
 .pwOverlay[hidden]{display:none}
-.pwModal{background:#FFFCF4;border-radius:22px;width:620px;max-width:94vw;padding:26px 30px;box-shadow:0 24px 70px rgba(40,30,5,.35);position:relative;box-sizing:border-box}
+.pwModal{background:#FFFCF4;border-radius:22px;width:620px;max-width:94vw;padding:26px 30px;box-shadow:0 24px 70px rgba(40,30,5,.35);position:relative;box-sizing:border-box;margin:auto}
 .pwModal h3{font-family:Georgia,serif;font-size:24px;color:#22303F;margin:0}
 .pwX{position:absolute;top:13px;inset-inline-end:15px;background:none;border:0;font-size:16px;color:#A08F6C;cursor:pointer;padding:4px}
 .pwTable{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px;color:#3D4A57}
@@ -496,8 +496,6 @@ function openPaywall(){
     bm.addEventListener('click', () => startCheckout('monthly', bm));
     by.addEventListener('click', () => startCheckout('yearly', by));
     $('pwClose').addEventListener('click', closePaywall);
-    ov.addEventListener('click', e => { if(e.target === ov) closePaywall(); });
-    document.addEventListener('keydown', e => { if(e.key === 'Escape') closePaywall(); });
   }
   ov.hidden = false;
 }
