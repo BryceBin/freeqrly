@@ -24,7 +24,7 @@
  "<strong>color / bgcolor</strong> — 6-digit hex, no <code>#</code> (defaults <code>2F4A62</code> / <code>ffffff</code>).",
  "<strong>ecc</strong> — error correction <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (default <code>M</code>). Use <code>Q</code>/<code>H</code> for print or logos.",
  "Dynamic codes API (authenticated)",
- "Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href=\"/dashboard/\">dashboard</a>, with the same quota (8 free). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:",
+ "Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href=\"/dashboard/\">dashboard</a>, with the same quota (20 free — unlimited for everyone during the current limited-time promotion). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:",
  "<span class=\"m\">POST</span> https://freeqrly.com/api/codes",
  "Tokens are per-user, revocable anytime from the dashboard, and deleted with your account. A token can never create or revoke other tokens — that requires a login session. Without a token these endpoints return <code>401</code>; over quota returns <code>403 quota_exceeded</code>.",
  "MCP",

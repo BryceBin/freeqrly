@@ -35,7 +35,6 @@
  "Can Excel generate QR codes natively?",
  "PNG or SVG for Word and Docs?",
  "Will the code stay sharp when I export to PDF?",
- "Make the code",
  "In the FreeQrly studio, pick the type, fill it in, style it if you want.",
  "PNG at 1024 px or higher. SVG if your app accepts it; Word and Docs do not.",
  "Insert it",

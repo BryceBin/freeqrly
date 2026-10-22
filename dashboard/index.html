@@ -220,8 +220,8 @@ a.shortUrl:hover{text-decoration:underline}
       <h3 id="pwTitle"></h3>
       <table class="pwTable"><thead><tr><th></th><th class="c" id="pwFreeCol"></th><th class="c" id="pwProCol"></th></tr></thead><tbody id="pwRows"></tbody></table>
       <div class="pwBtns">
-        <button class="btnCoral" id="pwBuyM" type="button"></button>
-        <button class="btnCoralO" id="pwBuyY" type="button"></button>
+        <button class="btnCoral" id="pwBuyY" type="button"></button>
+        <button class="btnCoralO" id="pwBuyM" type="button"></button>
       </div>
       <p class="pwMicro" id="pwMicro"></p>
     </div>
@@ -328,6 +328,9 @@ function applyLang(){
   const sel = $('langSel'); if(sel) { sel.value = LANG; sel.setAttribute('aria-label', t('ui','ariaLanguage')); }
   updateCount();
   renderCards();
+  if(typeof PLAN !== 'undefined' && PLAN) renderPlan();
+  const pwOv = $('pwOverlay');
+  if(pwOv && !pwOv.hidden) fillPaywall();
   renderTokens();
   const docsBtn = $('apiDocsBtn');
   if(docsBtn) docsBtn.href = (LANG === 'en' ? '' : '/' + LANG) + '/developers/#api-tokens';
@@ -465,8 +468,7 @@ function renderPlan(){
 }
 // ---------- paywall (Free vs Pro, W3 table design) ----------
 let pwWired = false;
-function openPaywall(){
-  const ov = $('pwOverlay');
+function fillPaywall(){
   $('pwTitle').textContent = t('ui','pwTitle');
   $('pwFreeCol').textContent = t('ui','planCurrentFree') + ' · $0';
   $('pwProCol').textContent = t('ui','planCurrentPro');
@@ -484,6 +486,11 @@ function openPaywall(){
   bm.textContent = t('ui','pwBuyMonthly');
   by.innerHTML = t('ui','pwBuyYearly') + '<span class="saveChip">' + t('ui','pwSave') + '</span>';
   $('pwMicro').textContent = t('ui','pwMicro');
+}
+function openPaywall(){
+  const ov = $('pwOverlay');
+  const bm = $('pwBuyM'), by = $('pwBuyY');
+  fillPaywall();
   if(!pwWired){
     pwWired = true;
     bm.addEventListener('click', () => startCheckout('monthly', bm));
