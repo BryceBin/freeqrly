@@ -503,7 +503,7 @@ dict(slug="christmas-qr-code", dtype="event",
 ]
 
 EXTRA_CSS = '''
-.lp-hero{grid-template-columns:1fr 1fr;align-items:start}
+.lp-hero{grid-template-columns:1fr 1fr;align-items:start;margin-bottom:72px}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
 .steps li{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 17px;font-size:14.5px;line-height:1.6;color:var(--soft)}
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}

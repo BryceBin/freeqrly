@@ -1145,13 +1145,15 @@ const FP_TEXT = {
 };
 const FP_LABEL = {
   label:{en:"Holiday presets", zh:"节日预设", es:"Ajustes de fiesta", fr:"Préréglages fêtes", de:"Feiertags-Presets", ja:"季節のプリセット", pt:"Predefinições festivas", ru:"Праздничные пресеты", hi:"त्योहारी प्रीसेट", ar:"إعدادات الأعياد"},
+  sub:{en:"One tap — ink, paper & frame set", zh:"一键配好颜色和边框", es:"Un toque: tinta, papel y marco", fr:"Un toucher : encre, papier et cadre", de:"Ein Tipp: Tinte, Papier & Rahmen", ja:"ワンタップで色と枠をセット", pt:"Um toque: tinta, papel e moldura", ru:"В один тап: цвет, бумага и рамка", hi:"एक टैप: स्याही, कागज़ और फ़्रेम", ar:"بنقرة واحدة: الحبر والورق والإطار"},
   bf:{en:"Black Friday", zh:"黑五", es:"Black Friday", fr:"Black Friday", de:"Black Friday", ja:"ブラックフライデー", pt:"Black Friday", ru:"Чёрная пятница", hi:"ब्लैक फ्राइडे", ar:"الجمعة السوداء"},
   xmas:{en:"Christmas", zh:"圣诞", es:"Navidad", fr:"Noël", de:"Weihnachten", ja:"クリスマス", pt:"Natal", ru:"Рождество", hi:"क्रिसमस", ar:"عيد الميلاد"}
 };
 function fpLang(){
   const g = k => (FP_LABEL[k][lang] || FP_LABEL[k].en);
-  const a=$("fpLab"), b=$("fpBfT"), c=$("fpXmT");
+  const a=$("fpLab"), b=$("fpBfT"), c=$("fpXmT"), s=$("fpSub");
   if(a) a.textContent = g("label"); if(b) b.textContent = g("bf"); if(c) c.textContent = g("xmas");
+  if(s) s.textContent = g("sub");
 }
 fpLang();
 new MutationObserver(fpLang).observe(document.documentElement, {attributes:true, attributeFilter:["lang"]});

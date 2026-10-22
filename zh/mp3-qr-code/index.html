@@ -36,11 +36,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261022">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261022">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261022">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3t-20261022">
 <style>
-.lp-hero{grid-template-columns:1fr 1fr;align-items:start}
+.lp-hero{grid-template-columns:1fr 1fr;align-items:start;margin-bottom:72px}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
 .steps li{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 17px;font-size:14.5px;line-height:1.6;color:var(--soft)}
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
@@ -97,8 +97,8 @@
 <body data-lp="mp3-qr-code" data-type="mp3">
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261022"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261022"></script>
+<script src="/assets/js/site-header.js?v=b3t-20261022"></script>
+<script src="/assets/js/acct-menu.js?v=b3t-20261022"></script>
 <script>
 (function(){
   var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
@@ -205,6 +205,11 @@
         </div>
 
         <div class="fl" data-i18n="appearance">Style</div>
+        <div class="approw"><div class="applabel"><span id="fpLab">Holiday presets</span><small id="fpSub">One tap — ink, paper &amp; frame set</small></div>
+          <div class="framePresets" id="framePresets">
+            <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Black Friday</span></button>
+            <button type="button" class="fpBtn" data-preset="xmas"><span class="fpDot" style="background:#1F4D3A"></span><span id="fpXmT">Christmas</span></button>
+          </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="dots">Dot style</span><small data-i18n="dotsSub">QR dot shape</small></div>
           <div class="seg" id="segDots" role="radiogroup">
             <button data-v="square" data-i18n="dSquare">方形</button><button data-v="dots" data-i18n="dRound">圆形</button><button data-v="rounded" data-i18n="dSoft">柔和</button><button data-v="extra-rounded" data-i18n="dPebble">鹅卵石</button>
@@ -244,11 +249,6 @@
             </div>
             <div class="frameExpand" id="frameExpand">
               <input type="text" id="frameText" class="frameExpandInput" placeholder="扫我" data-i18n-ph="frameTextPh">
-            </div>
-            <div class="framePresets" id="framePresets">
-              <span class="fpLab" id="fpLab">Holiday presets</span>
-              <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Black Friday</span></button>
-              <button type="button" class="fpBtn" data-preset="xmas"><span class="fpDot" style="background:#1F4D3A"></span><span id="fpXmT">Christmas</span></button>
             </div>
           </div></div>
         <!-- hidden native controls (synced by the visual UI above) -->
@@ -323,7 +323,7 @@
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
 <script src="/assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3aa-20261022"></script>
-<script src="/assets/js/app.js?v=b3aa-20261022"></script>
+<script src="/assets/js/vcard.js?v=b3t-20261022"></script>
+<script src="/assets/js/app.js?v=b3t-20261022"></script>
 </body>
 </html>
