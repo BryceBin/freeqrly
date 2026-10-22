@@ -325,6 +325,147 @@ function sizeInit(){
     hidden.dispatchEvent(new Event("input",{bubbles:true}));
   }));
 }
+/* ---- Apple-style datetime picker (Event start/end) ---- */
+const DTP_TXT = {
+  en:{pick:"Select date", time:"Time"}, zh:{pick:"选择日期", time:"时间"},
+  es:{pick:"Fecha", time:"Hora"}, fr:{pick:"Date", time:"Heure"},
+  de:{pick:"Datum", time:"Uhrzeit"}, ja:{pick:"日付を選択", time:"時刻"},
+  pt:{pick:"Data", time:"Hora"}, ru:{pick:"Дата", time:"Время"},
+  hi:{pick:"तारीख़ चुनें", time:"समय"}, ar:{pick:"اختر التاريخ", time:"الوقت"}
+};
+const DTP_FD = {en:0, ja:0, ar:0, hi:0, pt:0};
+const DTPW = {};
+function syncDtpAll(){ Object.keys(DTPW).forEach(k=>DTPW[k].syncFromInput()); }
+const _p2 = n => String(n).padStart(2,"0");
+function _dstr(y,mo,d){ return y+"-"+_p2(mo+1)+"-"+_p2(d); }
+function _parseD(s){ const p=(s||"").split("-").map(Number); return (p.length===3 && p[0]) ? {y:p[0], mo:p[1]-1, d:p[2]} : null; }
+function dtpCreate(id, hidden){
+  const T = DTP_TXT[lang] || DTP_TXT.en;
+  const locale = LANGBCP[lang] || "en";
+  const firstDay = (lang in DTP_FD) ? DTP_FD[lang] : 1;
+  let val = {d:null, h:null, m:null};
+  let view = null, unit = "h", open = false;
+  const wrap = document.createElement("div"); wrap.className="dtp"; wrap.dataset.wid=id;
+  const bar = document.createElement("button"); bar.type="button"; bar.className="dtp-bar";
+  bar.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+  const chipD = document.createElement("span"); chipD.className="dtp-chip ph";
+  const chipT = document.createElement("span"); chipT.className="dtp-chip ph dtp-ct";
+  bar.appendChild(chipD); bar.appendChild(chipT);
+  const panel = document.createElement("div"); panel.className="dtp-panel"; panel.hidden=true;
+  panel.innerHTML =
+    '<div class="dtp-chead"><button type="button" class="dtp-nav" data-nav="-1" aria-label="prev">&#8249;</button><span class="dtp-mtitle"></span><button type="button" class="dtp-nav" data-nav="1" aria-label="next">&#8250;</button></div>' +
+    '<div class="dtp-grid"></div>' +
+    '<div class="dtp-trow"><span class="dtp-tlab"></span><span class="dtp-tchips"><button type="button" class="dtp-chip th"></button><span class="dtp-colon">:</span><button type="button" class="dtp-chip tm"></button></span>' +
+    '<span class="dtp-step"><button type="button" data-step="1" aria-label="up">&#9650;</button><button type="button" data-step="-1" aria-label="down">&#9660;</button></span></div>';
+  panel.querySelector(".dtp-tlab").textContent = T.time;
+  wrap.appendChild(bar); wrap.appendChild(panel);
+  const grid = panel.querySelector(".dtp-grid");
+  const mtitle = panel.querySelector(".dtp-mtitle");
+  const th = panel.querySelector(".th"), tm = panel.querySelector(".tm");
+  function toDate(o){ return (o && o.d) ? new Date(o.d+"T"+_p2(o.h||0)+":"+_p2(o.m||0)+":00") : null; }
+  function fromDate(dt){ return {d:_dstr(dt.getFullYear(), dt.getMonth(), dt.getDate()), h:dt.getHours(), m:dt.getMinutes()}; }
+  function paint(){
+    if(val.d){ chipD.classList.remove("ph"); chipD.textContent = new Intl.DateTimeFormat(locale,{weekday:"short",month:"short",day:"numeric"}).format(new Date(val.d+"T12:00:00")); }
+    else { chipD.classList.add("ph"); chipD.textContent = T.pick; }
+    if(val.h!=null){ chipT.classList.remove("ph"); chipT.textContent = _p2(val.h)+":"+_p2(val.m||0); }
+    else { chipT.classList.add("ph"); chipT.textContent = "-- : --"; }
+    th.textContent = val.h!=null ? _p2(val.h) : "--";
+    tm.textContent = val.h!=null ? _p2(val.m||0) : "--";
+    th.classList.toggle("act", unit==="h"); tm.classList.toggle("act", unit==="m");
+  }
+  function renderCal(){
+    if(!view) return;
+    mtitle.textContent = new Intl.DateTimeFormat(locale,{year:"numeric",month:"long"}).format(new Date(view.y, view.mo, 1));
+    grid.innerHTML = "";
+    for(let i=0;i<7;i++){
+      const wd = (firstDay+i)%7;
+      const s = document.createElement("span"); s.className="dtp-wk";
+      s.textContent = new Intl.DateTimeFormat(locale,{weekday:"short"}).format(new Date(2023,0,1+wd));
+      grid.appendChild(s);
+    }
+    const first = new Date(view.y, view.mo, 1);
+    const lead = (first.getDay() - firstDay + 7) % 7;
+    const dim = new Date(view.y, view.mo+1, 0).getDate();
+    const dprev = new Date(view.y, view.mo, 0).getDate();
+    const cells = Math.ceil((lead+dim)/7)*7;
+    const now = new Date(); const todayS = _dstr(now.getFullYear(), now.getMonth(), now.getDate());
+    for(let i=0;i<cells;i++){
+      const dayNum = i - lead + 1;
+      let cd, dimmed = false;
+      if(dayNum < 1){ cd = new Date(view.y, view.mo-1, dprev+dayNum); dimmed = true; }
+      else if(dayNum > dim){ cd = new Date(view.y, view.mo+1, dayNum-dim); dimmed = true; }
+      else cd = new Date(view.y, view.mo, dayNum);
+      const cs = _dstr(cd.getFullYear(), cd.getMonth(), cd.getDate());
+      const b = document.createElement("button"); b.type="button";
+      b.className = "dtp-day" + (dimmed?" dim":"") + (cs===todayS?" today":"") + (val.d===cs?" sel":"");
+      b.textContent = cd.getDate();
+      b.onclick = ()=>pickDay(cs);
+      grid.appendChild(b);
+    }
+  }
+  function commit(){ hidden.value = (val.d && val.h!=null) ? val.d+"T"+_p2(val.h)+":"+_p2(val.m||0) : (val.d||""); paint(); draw(); }
+  function setOpen(o){
+    open = o; panel.hidden = !o; wrap.classList.toggle("open", o);
+    if(o){ if(!view){ const base = val.d ? _parseD(val.d) : null; const n = new Date(); view = base ? {y:base.y, mo:base.mo} : {y:n.getFullYear(), mo:n.getMonth()}; } renderCal(); }
+  }
+  function afterChange(){
+    const me = toDate(val); if(!me) return;
+    if(id==="estart"){
+      const en = DTPW.eend; if(!en) return;
+      const ev = en._val();
+      if(!ev.d) en._set(fromDate(new Date(me.getTime()+3600e3)));
+      else { const ed = en._dt(); if(ed && ed <= me) en._set(fromDate(new Date(me.getTime()+3600e3))); }
+    }
+    if(id==="eend"){
+      const st = DTPW.estart ? DTPW.estart._dt() : null;
+      if(st && me <= st){ val = fromDate(new Date(st.getTime()+3600e3)); commit(); if(open) renderCal(); }
+    }
+  }
+  function pickDay(cs){
+    val.d = cs;
+    if(val.h==null){
+      const od = (id==="eend" && DTPW.estart) ? DTPW.estart._dt() : null;
+      if(od){ const t = new Date(od.getTime()+3600e3); val.h = t.getHours(); val.m = t.getMinutes(); }
+      else { val.h = (id==="estart") ? 9 : 10; val.m = 0; }
+    }
+    if(view){ const p = _parseD(cs); view = {y:p.y, mo:p.mo}; }
+    commit(); renderCal(); afterChange();
+  }
+  bar.onclick = ()=>{
+    const willOpen = !open;
+    document.querySelectorAll(".dtp.open").forEach(w=>{ if(w!==wrap){ const a = DTPW[w.dataset.wid]; if(a) a._setOpen(false); } });
+    setOpen(willOpen);
+  };
+  panel.querySelectorAll(".dtp-nav").forEach(b=>{ b.onclick = ()=>{ view.mo += (+b.dataset.nav); if(view.mo<0){ view.mo=11; view.y--; } if(view.mo>11){ view.mo=0; view.y++; } renderCal(); }; });
+  th.onclick = ()=>{ unit="h"; paint(); };
+  tm.onclick = ()=>{ unit="m"; paint(); };
+  panel.querySelectorAll(".dtp-step button").forEach(b=>{ b.onclick = ()=>{
+    if(val.h==null){ val.h = 9; val.m = 0; }
+    const dir = +b.dataset.step;
+    if(unit==="h") val.h = (val.h + dir + 24) % 24; else val.m = (val.m + dir*5 + 60) % 60;
+    commit(); afterChange();
+  }; });
+  const api = {
+    _val: ()=>val,
+    _dt: ()=>toDate(val),
+    _set: nv => { val = nv; commit(); if(open) renderCal(); },
+    _setOpen: setOpen,
+    syncFromInput(){
+      const m = (hidden.value||"").match(/^(\d{4}-\d{2}-\d{2})(?:T(\d{2}):(\d{2}))?/);
+      val = m ? {d:m[1], h:(m[2]!=null?+m[2]:null), m:(m[3]!=null?+m[3]:null)} : {d:null, h:null, m:null};
+      view = null; paint(); if(open) setOpen(true);
+    }
+  };
+  hidden.addEventListener("input", ()=>api.syncFromInput());
+  DTPW[id] = api;
+  paint();
+  return wrap;
+}
+if(!window.__dtpDocHook){
+  window.__dtpDocHook = true;
+  document.addEventListener("pointerdown", e=>{ if(!e.target.closest(".dtp")) document.querySelectorAll(".dtp.open").forEach(w=>{ const a = DTPW[w.dataset.wid]; if(a) a._setOpen(false); }); });
+  document.addEventListener("keydown", e=>{ if(e.key==="Escape") document.querySelectorAll(".dtp.open").forEach(w=>{ const a = DTPW[w.dataset.wid]; if(a) a._setOpen(false); }); });
+}
 function renderFields(){
   const f = $("fields"); f.innerHTML="";
   if(cur==="batch") return;
@@ -333,13 +474,8 @@ function renderFields(){
     let el, defVal="";
     if(third==="textarea"){ el=document.createElement("textarea"); el.placeholder=ph||""; }
     else if(third==="datetime-local"){
-      const wrap=document.createElement("div"); wrap.className="dtpair";
-      const d=document.createElement("input"); d.type="date"; d.id="f_"+id+"_date"; d.oninput=draw;
-      const t=document.createElement("input"); t.type="time"; t.id="f_"+id+"_time"; t.oninput=draw;
-      wrap.appendChild(d); wrap.appendChild(t); f.appendChild(wrap);
       el=document.createElement("input"); el.type="hidden"; el.id="f_"+id;
-      const sync=()=>{ el.value = d.value && t.value ? d.value+"T"+t.value : (d.value||""); };
-      d.oninput=()=>{sync();draw();}; t.oninput=()=>{sync();draw();};
+      f.appendChild(dtpCreate(id, el));
     }
     else if(typeof third==="string" && third.startsWith("select:")){
       const opts=third.slice(7).split(",");
@@ -737,6 +873,7 @@ function renderHist(){
     const sp=document.createElement("span"); sp.textContent=it.data.length>36?it.data.slice(0,36)+"…":it.data; b.appendChild(sp);
     b.onclick=()=>{ if(!ORDER.includes(it.type)) return; cur=it.type; renderTabs(); renderFields();
       Object.keys(it.vals||{}).forEach(id=>{ const el=$("f_"+id); if(el) el.value=it.vals[id]; });
+      syncDtpAll();
       draw(); const st=$("studio"); if(st) st.scrollIntoView({behavior:"smooth",block:"start"}); };
     box.appendChild(b);
   });
