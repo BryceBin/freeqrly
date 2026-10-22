@@ -536,9 +536,6 @@ span.dtp-chip{cursor:pointer}
 .dtp-step{display:flex;flex-direction:column;gap:3px}
 .dtp-step button{border:none;background:color-mix(in srgb,var(--ink) 6%,transparent);border-radius:6px;width:24px;height:16px;font-size:8px;color:var(--ink);cursor:pointer;line-height:1;padding:0}
 
-/* Holiday frame presets */
-.framePresets{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
-.fpBtn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 11px 5px 8px;font:inherit;font-size:12.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s,box-shadow .15s}
-.fpBtn:hover{border-color:var(--gold)}
-.fpBtn.on{border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,164,65,.18)}
+/* Holiday frame presets — a .seg control, same as the other option rows */
+.fpBtn{display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .fpDot{width:12px;height:12px;border-radius:50%;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
