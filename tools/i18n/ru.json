@@ -122,7 +122,8 @@
   "About": "О нас",
   "Contact": "Контакты",
   "Privacy Policy": "Политика конфиденциальности",
-  "Terms of Service": "Условия использования"
+  "Terms of Service": "Условия использования",
+  "Pricing": "Цены"
  },
  "login": {
   "Sign in — FreeQrly": "Вход — FreeQrly",
@@ -273,7 +274,8 @@
   "FreeQrly is free to use, including 20 dynamic codes with every account. We also offer an optional Pro subscription — US$9 per month or US$90 per year — with unlimited dynamic codes. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "FreeQrly бесплатен, и каждый аккаунт включает 20 динамических кодов. Мы также предлагаем необязательную подписку Pro — 9 долларов США в месяц или 90 в год — с безлимитными динамическими кодами. Подписки продаёт и тарифицирует Waffo Pancake — наш официальный продавец и платёжный процессор.",
   "By subscribing, you authorize Waffo Pancake to charge your payment method at the start of each billing period until you cancel. You can cancel anytime from your dashboard: Pro stays active until the end of the current period and is not renewed after that.": "Оформляя подписку, вы разрешаете Waffo Pancake списывать оплату с вашего платёжного средства в начале каждого расчётного периода, пока вы не отмените подписку. Отменить можно в любой момент в панели управления: Pro действует до конца текущего периода и далее не продлевается.",
   "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. After those 7 days, payments are not refundable except where the law requires it; cancelling stops future charges but does not refund the current period. Codes you created keep working after a subscription ends — only your limit for creating new dynamic codes returns to the free plan.": "Если это ваша первая подписка, вы можете запросить полный возврат в течение 7 дней после первого платежа — напишите на hello@freeqrly.com. После этих 7 дней платежи не возвращаются, за исключением случаев, предусмотренных законом; отмена прекращает будущие списания, но не возвращает текущий период. Созданные вами коды продолжают работать после окончания подписки — только лимит на создание новых динамических кодов возвращается к бесплатному плану.",
-  "Static codes carry their destination inside the pattern — nothing we do can turn them off, and they keep working forever. Dynamic codes keep working even if you cancel your Pro subscription. The only codes we remove are ones that violate these terms.": "Статические коды несут своё назначение внутри самого узора — мы никак не можем их отключить, и они работают вечно. Динамические коды продолжают работать, даже если вы отмените подписку Pro. Мы удаляем только те коды, которые нарушают эти условия."
+  "Static codes carry their destination inside the pattern — nothing we do can turn them off, and they keep working forever. Dynamic codes keep working even if you cancel your Pro subscription. The only codes we remove are ones that violate these terms.": "Статические коды несут своё назначение внутри самого узора — мы никак не можем их отключить, и они работают вечно. Динамические коды продолжают работать, даже если вы отмените подписку Pro. Мы удаляем только те коды, которые нарушают эти условия.",
+  "FreeQrly is free to use, including 20 dynamic codes with every account. A limited-time promotion currently makes dynamic codes unlimited for every account; when it ends, the 20-code quota applies. We also offer an optional Pro subscription — US$9 per month or US$90 per year — with unlimited dynamic codes. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "FreeQrly бесплатен, и каждый аккаунт включает 20 динамических кодов. Временная акция сейчас делает динамические коды безлимитными для всех аккаунтов; когда она закончится, будет действовать квота в 20 кодов. Мы также предлагаем необязательную подписку Pro — 9 долларов США в месяц или 90 в год — с безлимитными динамическими кодами. Подписки продаёт и тарифицирует Waffo Pancake — наш официальный продавец и платёжный процессор."
  },
  "about": {
   "About FreeQrly — Free QR Codes, Static Codes Need No Sign-Up": "О FreeQrly — бесплатные QR-коды, статические коды без регистрации",
@@ -313,7 +315,9 @@
   "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "Десять: английский, китайский, испанский, хинди, арабский (с письмом справа налево), португальский, французский, русский, немецкий и японский.",
   "Try the generator →": "Попробовать генератор →",
   "Is FreeQrly the same as FreeQR?": "FreeQrly и FreeQR — это одно и то же?",
-  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "Нет. FreeQrly (freeqrly.com) — независимый проект, не связанный с FreeQR (freeqr.com)."
+  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "Нет. FreeQrly (freeqrly.com) — независимый проект, не связанный с FreeQR (freeqr.com).",
+  "Almost everything is free. Static codes are completely free, with no watermarks — they are made entirely in your browser and need no account. Dynamic codes need a free sign-in so they can be edited later, and 20 are included free; if you need more, an optional Pro subscription (US$9/month or US$90/year) makes dynamic codes unlimited.": "Почти всё бесплатно. Статические коды полностью бесплатны, без водяных знаков — они создаются целиком в вашем браузере и не требуют аккаунта. Для динамических кодов нужен бесплатный вход, чтобы их можно было редактировать позже, и 20 включены бесплатно; если нужно больше, необязательная подписка Pro (9 долларов США в месяц или 90 в год) делает динамические коды безлимитными.",
+  "Yes — almost everything. Static codes are free with no trial and no watermarks, including logo upload, batch generation, and high-resolution export. Static codes need no account; dynamic codes need a free sign-in and include 20 free, with an optional Pro subscription for unlimited dynamic codes.": "Да — почти всё. Статические коды бесплатны, без пробного периода и водяных знаков, включая загрузку логотипа, пакетную генерацию и экспорт в высоком разрешении. Статическим кодам аккаунт не нужен; динамическим нужен бесплатный вход, и они включают 20 бесплатно, а необязательная подписка Pro даёт безлимитные динамические коды."
  },
  "scan": {
   "Free QR Code Scanner — 100% Private | FreeQrly": "Бесплатный сканер QR-кодов — 100% приватный | FreeQrly",
@@ -388,7 +392,8 @@
   "It's free, but be kind: cache results instead of re-requesting the same code, and keep automated traffic reasonable. Per-IP rate limits apply. Static codes are deterministic — the same input always yields the same output, so caching is trivial.": "Бесплатно, но будьте вежливы: кэшируйте результаты вместо повторных запросов одного и того же кода и держите автоматический трафик в разумных пределах. Действуют ограничения на IP. Статические коды детерминированы — один и тот же ввод всегда даёт один и тот же вывод, так что кэширование тривиально.",
   "<a href=\"/\" style=\"color:inherit\">FreeQrly</a> — made quietly, in your browser. And your agent's.": "<a href=\"/\" style=\"color:inherit\">FreeQrly</a> — сделано тихо, в вашем браузере. И в браузере вашего агента.",
   "FreeQrly API & MCP": "API и MCP от FreeQrly",
-  "Free QR code API and MCP server for agents. No key, no sign-up.": "Бесплатный API QR-кодов и MCP-сервер для агентов. Без ключа, без регистрации."
+  "Free QR code API and MCP server for agents. No key, no sign-up.": "Бесплатный API QR-кодов и MCP-сервер для агентов. Без ключа, без регистрации.",
+  "Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href=\"/dashboard/\">dashboard</a>, with the same quota (20 free — unlimited for everyone during the current limited-time promotion). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:": "Динамические коды остаются редактируемыми после печати и отслеживают сканирования — те же коды, которыми вы управляете в <a href=\"/dashboard/\">панели управления</a>, с той же квотой (20 бесплатно — безлимитно для всех во время текущей временной акции). Создайте токен в панели управления в разделе <strong>API Tokens</strong> (показывается один раз), а затем передавайте его как Bearer-токен:"
  },
  "blog-index": {
   "Field Notes — QR Code Guides & Tips | FreeQrly": "Заметки — руководства и советы по QR-кодам | FreeQrly",
@@ -1164,7 +1169,9 @@
   "Dots, colors, logo, frame. The preview updates live and the style is saved with the code.": "Точки, цвета, логотип, рамка. Предпросмотр обновляется вживую, а стиль сохраняется вместе с кодом.",
   "Hit Generate. You get a short link like freeqrly.com/q/XXXXXXX — that's what the pattern encodes.": "Нажмите «Сгенерировать». Вы получите короткую ссылку вида freeqrly.com/q/XXXXXXX — именно её кодирует узор.",
   "Manage it later": "Управляйте потом",
-  "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot.": "Найдите свои коды в панели: редактируйте, смотрите статистику или удалите код, чтобы освободить место."
+  "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot.": "Найдите свои коды в панели: редактируйте, смотрите статистику или удалите код, чтобы освободить место.",
+  "Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 20 free codes.": "Создайте динамический QR-код бесплатно: войдите, выберите тип, оформите, напечатайте. Позже измените назначение без перепечатки. 20 бесплатных кодов.",
+  "Yes. Sign in free, create up to 20 dynamic codes, edit them, see stats. No trial period and no card required. Static codes remain free and unlimited with no account at all.": "Да. Войдите бесплатно, создайте до 20 динамических кодов, редактируйте их и смотрите статистику. Без пробного периода и без карты. Статические коды остаются бесплатными и безлимитными, без аккаунта."
  },
  "blog-how-to-edit-a-qr-code-after-printing": {
   "How to Edit a QR Code After Printing | FreeQrly": "Как редактировать QR-код после печати | FreeQrly",
@@ -1611,7 +1618,9 @@
   "<span>Can I edit a free QR code after printing?</span>": "<span>Можно ли редактировать бесплатный QR-код после печати?</span>",
   "Only if it is dynamic. Static codes are frozen at print time; dynamic codes point at a short link you control, so you can change the destination without reprinting.": "Только если он динамический. Статические коды замораживаются в момент печати; динамические указывают на короткую ссылку, которой управляете вы, так что можно изменить адрес без перепечатки.",
   "Which QR code generator is best for beginners?": "Какой генератор QR-кодов лучше для новичков?",
-  "Can I edit a free QR code after printing?": "Можно ли редактировать бесплатный QR-код после печати?"
+  "Can I edit a free QR code after printing?": "Можно ли редактировать бесплатный QR-код после печати?",
+  "20 free, with scan stats": "20 бесплатных, со статистикой сканов",
+  "<strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.": "<strong>Нужны бесплатные динамические коды со статистикой?</strong> FreeQrly: 20 бесплатных, редактируемые после печати, статистика сканов включена."
  },
  "blog-why-is-my-qr-code-blurry": {
   "Why Is My QR Code Blurry? Fixes That Work | FreeQrly": "Почему мой QR-код размыт? Рабочие исправления | FreeQrly",
@@ -1821,5 +1830,36 @@
   "Print where ears are": "Печатайте там, где уши",
   "Album art, flyers, exhibits, invitations. 1024 px export for print.": "Обложки, флаеры, экспонаты, приглашения. Экспорт 1024 px для печати.",
   "<a href=\"/google-form-qr-code/\">qr code generator for google form</a> · <a href=\"/wifi-qr-code/\">wifi qr code generator</a> · <a href=\"/vcard-qr-code/\">vcard qr code generator</a> · <a href=\"/batch-qr-code/\">batch qr code generator</a> · <a href=\"/business-card-qr-code/\">qr code for business cards</a> · <a href=\"/google-review-qr-code/\">qr code for google review</a> · <a href=\"/qr-code-with-logo/\">qr code with logo</a> · <a href=\"/wedding-qr-code/\">qr code wedding</a> · <a href=\"/instagram-qr-code/\">qr code for instagram</a> · <a href=\"/real-estate-qr-code/\">qr code for real estate</a> · <a href=\"/pdf-qr-code/\">pdf qr code generator</a> · <a href=\"/multi-link-qr-code/\">multi link qr code</a> · <a href=\"/menu-qr-code/\">menu qr code generator</a> · <a href=\"/payment-qr-code/\">payment qr code generator</a> · <a href=\"/youtube-qr-code/\">youtube qr code generator</a> · <a href=\"/whatsapp-qr-code/\">whatsapp qr code generator</a> · <a href=\"/tiktok-qr-code/\">tiktok qr code generator</a> · <a href=\"/spotify-qr-code/\">spotify qr code generator</a> · <a href=\"/facebook-qr-code/\">facebook qr code generator</a> · <a href=\"/google-maps-qr-code/\">google maps qr code generator</a> · <a href=\"/bitcoin-qr-code/\">bitcoin qr code generator</a> · <a href=\"/coupon-qr-code/\">coupon qr code generator</a> · <a href=\"/app-store-qr-code/\">app store qr code generator</a>": "<a href=\"/google-form-qr-code/\">генератор QR-кодов для Google-форм</a> · <a href=\"/wifi-qr-code/\">генератор WiFi QR-кодов</a> · <a href=\"/vcard-qr-code/\">генератор vCard QR-кодов</a> · <a href=\"/batch-qr-code/\">batch qr code generator</a> · <a href=\"/business-card-qr-code/\">QR-код для визиток</a> · <a href=\"/google-review-qr-code/\">QR-код для отзывов в Google</a> · <a href=\"/qr-code-with-logo/\">QR-код с логотипом</a> · <a href=\"/wedding-qr-code/\">свадебный QR-код</a> · <a href=\"/instagram-qr-code/\">QR-код для Instagram</a> · <a href=\"/real-estate-qr-code/\">QR-код для недвижимости</a> · <a href=\"/pdf-qr-code/\">pdf qr code generator</a> · <a href=\"/multi-link-qr-code/\">multi link qr code</a> · <a href=\"/menu-qr-code/\">menu qr code generator</a> · <a href=\"/payment-qr-code/\">payment qr code generator</a> · <a href=\"/youtube-qr-code/\">youtube qr code generator</a> · <a href=\"/whatsapp-qr-code/\">whatsapp qr code generator</a> · <a href=\"/tiktok-qr-code/\">tiktok qr code generator</a> · <a href=\"/spotify-qr-code/\">spotify qr code generator</a> · <a href=\"/facebook-qr-code/\">facebook qr code generator</a> · <a href=\"/google-maps-qr-code/\">google maps qr code generator</a> · <a href=\"/bitcoin-qr-code/\">генератор QR-кодов биткоин</a> · <a href=\"/coupon-qr-code/\">генератор QR-кодов купонов</a> · <a href=\"/app-store-qr-code/\">генератор QR-кодов App Store</a>"
+ },
+ "pricing": {
+  "Pricing — FreeQrly": "Цены — FreeQrly",
+  "FreeQrly pricing: static QR codes are free forever. Dynamic codes include 20 free; Pro is US$9/month or US$90/year for unlimited dynamic codes.": "Цены FreeQrly: статические QR-коды бесплатны навсегда. Динамические коды включают 20 бесплатных; Pro — 9 долларов США в месяц или 90 в год с безлимитными динамическими кодами.",
+  "Pricing": "Цены",
+  "Static QR codes are free forever. Dynamic codes come with a free quota — and Pro removes the limit if you need a lot of them.": "Статические QR-коды бесплатны навсегда. У динамических кодов есть бесплатная квота — а Pro снимает лимит, если вам нужно много.",
+  "Limited-time offer: right now, every account gets unlimited dynamic codes. When the offer ends, the plan limits below apply — and codes you already made keep working either way.": "Временная акция: сейчас у всех аккаунтов безлимитные динамические коды. Когда акция закончится, будут действовать лимиты ниже — а уже созданные вами коды продолжат работать в любом случае.",
+  "Free": "Бесплатный",
+  "forever": "навсегда",
+  "Unlimited static QR codes — no sign-up, generated in your browser": "Безлимитные статические QR-коды — без регистрации, создаются в вашем браузере",
+  "20 dynamic QR codes with a free account": "20 динамических QR-кодов с бесплатным аккаунтом",
+  "Edit destinations after printing": "Изменяйте назначение после печати",
+  "Scan statistics for dynamic codes": "Статистика сканирований для динамических кодов",
+  "No watermark — codes never expire": "Без водяных знаков — коды никогда не истекают",
+  "Start free": "Начать бесплатно",
+  "Pro": "Pro",
+  "per month": "/месяц",
+  "or $90 per year": "или 90 $ в год",
+  "Unlimited dynamic QR codes": "Безлимитные динамические QR-коды",
+  "Everything in Free": "Всё из бесплатного плана",
+  "Billed monthly or yearly — auto-renews until you cancel": "Оплата ежемесячно или ежегодно — автопродление, пока вы не отмените",
+  "Cancel anytime in your dashboard; Pro stays active until the end of the period": "Отмена в любой момент в панели управления; Pro действует до конца периода",
+  "Full refund within 7 days of your first payment": "Полный возврат в течение 7 дней после первого платежа",
+  "Start free — upgrade anytime": "Начните бесплатно — перейдите на Pro в любой момент",
+  "What happens when the limited-time offer ends?": "Что будет, когда закончится временная акция?",
+  "Free accounts go back to 20 dynamic codes, and Pro accounts stay unlimited. Nothing happens to codes you already created — they keep working.": "Бесплатные аккаунты возвращаются к 20 динамическим кодам, а аккаунты Pro остаются безлимитными. Уже созданные вами коды не затрагиваются — они продолжают работать.",
+  "If I cancel Pro, do my codes stop working?": "Если я отменю Pro, мои коды перестанут работать?",
+  "No. Your codes keep working after a subscription ends. You just return to the free limit for creating new dynamic codes.": "Нет. Ваши коды продолжат работать после окончания подписки. Вы просто вернётесь к бесплатному лимиту на создание новых динамических кодов.",
+  "How do refunds work?": "Как работает возврат?",
+  "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. The full billing terms are in the <a href=\"/terms/\">Terms of Service</a>.": "Если это ваша первая подписка, вы можете запросить полный возврат в течение 7 дней после первого платежа — напишите на hello@freeqrly.com. Полные условия оплаты — в <a href=\"/terms/\">Условиях использования</a>.",
+  "Prices in USD. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "Цены в долларах США. Подписки продаёт и тарифицирует Waffo Pancake — наш официальный продавец и платёжный процессор."
  }
 }

@@ -17,7 +17,7 @@ FreeQrly is agent-native. You can generate QR codes without a browser:
     (`type`, `payload`), `dynamic_qr_list`, `dynamic_qr_update`
     (`code`, `type`, `payload`), `dynamic_qr_delete` (`code`),
     `dynamic_qr_stats` (`code`). Same editable dynamic codes and quota
-    (8 free) as the dashboard UI.
+    (20 free; unlimited during the current limited-time promotion) as the dashboard UI.
 - **HTTP API:** `GET https://freeqrly.com/api/qr?data=TEXT&size=1024&margin=4&color=2F4A62&bgcolor=ffffff&ecc=M`
   - Returns `image/svg+xml`. Free, no key, CORS open. `data` is required.
   - Dynamic codes (Bearer `<api_token>`): `POST /api/codes`

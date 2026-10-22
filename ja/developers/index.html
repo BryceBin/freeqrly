@@ -35,19 +35,19 @@
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3u-20261022">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly APIとMCP","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ja/developers/","description":"エージェント向け無料QRコードAPIとMCPサーバー。キー不要、登録不要。"}
 </script>
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3t-20261022">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3u-20261022">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3u-20261022">
 </head>
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3t-20261022"></script>
-<script src="/assets/js/acct-menu.js?v=b3t-20261022"></script>
-<script src="/assets/js/subpage-header.js?v=b3t-20261022"></script>
+<script src="/assets/js/site-header.js?v=b3u-20261022"></script>
+<script src="/assets/js/acct-menu.js?v=b3u-20261022"></script>
+<script src="/assets/js/subpage-header.js?v=b3u-20261022"></script>
 
   <section class="hero" style="grid-template-columns:1fr;gap:0">
     <div>
@@ -99,7 +99,7 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
       </ul>
 
       <h2 id="api-tokens">Dynamic codes API (authenticated)</h2>
-      <p>Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href="/dashboard/">dashboard</a>, with the same quota (8 free). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:</p>
+      <p>動的コードは印刷後も編集でき、スキャンを追跡します——<a href="/dashboard/">ダッシュボード</a>で管理するのと同じコードで、枠も同じです（無料20個——現在の期間限定プロモーション中は全員無制限）。ダッシュボードの <strong>API Tokens</strong> でトークンを作成し（表示は一度だけ）、Bearerトークンとして渡してください：</p>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/api/codes</div>
       <pre class="code">export FQ_TOKEN="fqly_..."  # from your dashboard
 
@@ -163,7 +163,7 @@ SMS     : sms:+15550100?body=Hello</pre>
         <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
         <div class="fmade">静的コードはブラウザで作成。</div>
       </div>
-      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a></div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
       <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
       <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
       <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>

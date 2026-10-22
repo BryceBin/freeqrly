@@ -35,19 +35,19 @@
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3u-20261022">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"API et MCP FreeQrly","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/fr/developers/","description":"API de QR code gratuite et serveur MCP pour les agents. Sans clé, sans inscription."}
 </script>
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3t-20261022">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3u-20261022">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3u-20261022">
 </head>
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3t-20261022"></script>
-<script src="/assets/js/acct-menu.js?v=b3t-20261022"></script>
-<script src="/assets/js/subpage-header.js?v=b3t-20261022"></script>
+<script src="/assets/js/site-header.js?v=b3u-20261022"></script>
+<script src="/assets/js/acct-menu.js?v=b3u-20261022"></script>
+<script src="/assets/js/subpage-header.js?v=b3u-20261022"></script>
 
   <section class="hero" style="grid-template-columns:1fr;gap:0">
     <div>
@@ -99,7 +99,7 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
       </ul>
 
       <h2 id="api-tokens">Dynamic codes API (authenticated)</h2>
-      <p>Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href="/dashboard/">dashboard</a>, with the same quota (8 free). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:</p>
+      <p>Les codes dynamiques restent modifiables après l'impression et suivent les scans — les mêmes codes que vous gérez dans le <a href="/dashboard/">tableau de bord</a>, avec le même quota (20 gratuits — illimités pour tous pendant la promotion actuelle à durée limitée). Créez un jeton dans le tableau de bord, sous <strong>API Tokens</strong> (affiché une seule fois), puis transmettez-le comme jeton Bearer :</p>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/api/codes</div>
       <pre class="code">export FQ_TOKEN="fqly_..."  # from your dashboard
 
@@ -163,7 +163,7 @@ SMS     : sms:+15550100?body=Hello</pre>
         <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n'expirent jamais.</p>
         <div class="fmade">Codes statiques, faits dans votre navigateur.</div>
       </div>
-      <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a></div>
+      <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a><a href="/fr/pricing/">Tarifs</a></div>
       <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d'impression</a><a href="/fr/#faq">FAQ</a></div>
       <div class="fcol"><h4>Entreprise</h4><a href="/fr/about/">À propos</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
       <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d'utilisation</a></div>

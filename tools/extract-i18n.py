@@ -180,6 +180,7 @@ PAGES = {
     "404": "404.html",
     "privacy": "privacy/index.html",
     "terms": "terms/index.html",
+    "pricing": "pricing/index.html",
     "about": "about/index.html",
     "scan": "scan/index.html",
     "barcode-generator": "barcode-generator/index.html",

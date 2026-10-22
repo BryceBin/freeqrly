@@ -35,19 +35,19 @@
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3u-20261022">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly API 与 MCP","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/zh/developers/","description":"给智能体的免费二维码 API 和 MCP 服务器。不用密钥，不用注册。"}
 </script>
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3t-20261022">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3t-20261022">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3u-20261022">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3u-20261022">
 </head>
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3t-20261022"></script>
-<script src="/assets/js/acct-menu.js?v=b3t-20261022"></script>
-<script src="/assets/js/subpage-header.js?v=b3t-20261022"></script>
+<script src="/assets/js/site-header.js?v=b3u-20261022"></script>
+<script src="/assets/js/acct-menu.js?v=b3u-20261022"></script>
+<script src="/assets/js/subpage-header.js?v=b3u-20261022"></script>
 
   <section class="hero" style="grid-template-columns:1fr;gap:0">
     <div>
@@ -99,7 +99,7 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
       </ul>
 
       <h2 id="api-tokens">Dynamic codes API (authenticated)</h2>
-      <p>Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href="/dashboard/">dashboard</a>, with the same quota (8 free). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:</p>
+      <p>动态码打印后仍可编辑，并可追踪扫码——与你在<a href="/dashboard/">控制台</a>中管理的是同一批码，额度相同（免费 20 个——当前限时优惠期间所有人不限量）。在控制台的 <strong>API Tokens</strong> 下创建令牌（仅显示一次），然后将其作为 Bearer 令牌传入：</p>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/api/codes</div>
       <pre class="code">export FQ_TOKEN="fqly_..."  # from your dashboard
 
@@ -163,7 +163,7 @@ SMS     : sms:+15550100?body=Hello</pre>
         <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
         <div class="fmade">静态码，在你的浏览器里生成。</div>
       </div>
-      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a></div>
+      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
       <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>
       <div class="fcol"><h4>公司</h4><a href="/zh/about/">关于</a><a href="mailto:hello@freeqrly.com">联系我们</a></div>
       <div class="fcol"><h4>法律</h4><a href="/zh/privacy/">隐私政策</a><a href="/zh/terms/">服务条款</a></div>

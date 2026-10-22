@@ -23,6 +23,7 @@ PAGES = {
     "404": ("404.html", "{lang}/404.html"),
     "privacy": ("privacy/index.html", "{lang}/privacy/index.html"),
     "terms": ("terms/index.html", "{lang}/terms/index.html"),
+    "pricing": ("pricing/index.html", "{lang}/pricing/index.html"),
     "about": ("about/index.html", "{lang}/about/index.html"),
     "scan": ("scan/index.html", "{lang}/scan/index.html"),
     "barcode-generator": ("barcode-generator/index.html", "{lang}/barcode-generator/index.html"),
@@ -139,7 +140,7 @@ def localize_page(key, lang, trans):
         "whatsapp-qr-code", "tiktok-qr-code", "spotify-qr-code",
         "facebook-qr-code", "google-maps-qr-code", "bitcoin-qr-code",
         "coupon-qr-code", "app-store-qr-code", "mp3-qr-code",
-        "about", "privacy", "terms", "developers",
+        "about", "privacy", "terms", "pricing", "developers",
         "scan", "barcode-generator", "login", "reset", "blog"])
     def _loc_url(m):
         pre, url = m.group(1), m.group(2)

@@ -123,7 +123,8 @@
   "About": "私たちについて",
   "Contact": "お問い合わせ",
   "Privacy Policy": "プライバシーポリシー",
-  "Terms of Service": "利用規約"
+  "Terms of Service": "利用規約",
+  "Pricing": "料金"
  },
  "login": {
   "Sign in — FreeQrly": "ログイン — FreeQrly",
@@ -274,7 +275,8 @@
   "FreeQrly is free to use, including 20 dynamic codes with every account. We also offer an optional Pro subscription — US$9 per month or US$90 per year — with unlimited dynamic codes. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "FreeQrlyは無料で使え、各アカウントには動的コードが20個含まれます。任意のProサブスクリプション（月額9米ドルまたは年額90米ドル）では、動的コードが無制限になります。サブスクリプションの販売と請求は、当社の販売事業者兼決済プロセッサーであるWaffo Pancakeが行います。",
   "By subscribing, you authorize Waffo Pancake to charge your payment method at the start of each billing period until you cancel. You can cancel anytime from your dashboard: Pro stays active until the end of the current period and is not renewed after that.": "サブスクリプションに登録すると、解約するまで各請求期間の開始時にWaffo Pancakeがお支払い方法へ請求することに同意したものとみなされます。解約はダッシュボードからいつでも可能で、Proは現在の期間終了まで有効となり、その後は更新されません。",
   "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. After those 7 days, payments are not refundable except where the law requires it; cancelling stops future charges but does not refund the current period. Codes you created keep working after a subscription ends — only your limit for creating new dynamic codes returns to the free plan.": "初めてのサブスクリプションの場合、初回支払いから7日以内であれば全額返金を申請できます——hello@freeqrly.com までご連絡ください。その7日を過ぎると、法律で求められる場合を除き、支払いは返金されません。解約すると以後の請求は止まりますが、現在の期間分は返金されません。サブスクリプション終了後も、作成したコードはそのまま使えます——新しく作れる動的コードの上限が無料プランに戻るだけです。",
-  "Static codes carry their destination inside the pattern — nothing we do can turn them off, and they keep working forever. Dynamic codes keep working even if you cancel your Pro subscription. The only codes we remove are ones that violate these terms.": "静的コードは行き先をパターン自体に内包しています——私たちがオフにすることはできず、永遠に機能します。動的コードはProサブスクリプションを解約しても機能し続けます。削除するのは、これらの規約に違反するコードのみです。"
+  "Static codes carry their destination inside the pattern — nothing we do can turn them off, and they keep working forever. Dynamic codes keep working even if you cancel your Pro subscription. The only codes we remove are ones that violate these terms.": "静的コードは行き先をパターン自体に内包しています——私たちがオフにすることはできず、永遠に機能します。動的コードはProサブスクリプションを解約しても機能し続けます。削除するのは、これらの規約に違反するコードのみです。",
+  "FreeQrly is free to use, including 20 dynamic codes with every account. A limited-time promotion currently makes dynamic codes unlimited for every account; when it ends, the 20-code quota applies. We also offer an optional Pro subscription — US$9 per month or US$90 per year — with unlimited dynamic codes. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "FreeQrlyは無料で使え、各アカウントには動的コードが20個含まれます。期間限定プロモーションにより、現在は全アカウントで動的コードが無制限です。終了後は20個の枠が適用されます。任意のProサブスクリプション（月額9米ドルまたは年額90米ドル）では、動的コードが無制限になります。サブスクリプションの販売と請求は、当社の販売事業者兼決済プロセッサーであるWaffo Pancakeが行います。"
  },
  "about": {
   "About FreeQrly — Free QR Codes, Static Codes Need No Sign-Up": "FreeQrlyについて — 無料QRコード、静的コードは登録不要",
@@ -314,7 +316,9 @@
   "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "10言語：英語、中国語、スペイン語、ヒンディー語、アラビア語（右から左のレイアウト）、ポルトガル語、フランス語、ロシア語、ドイツ語、日本語。",
   "Try the generator →": "ジェネレーターを試す →",
   "Is FreeQrly the same as FreeQR?": "FreeQrly と FreeQR は同じものですか？",
-  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "いいえ。FreeQrly（freeqrly.com）は独立したプロジェクトであり、FreeQR（freeqr.com）とは関係ありません。"
+  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "いいえ。FreeQrly（freeqrly.com）は独立したプロジェクトであり、FreeQR（freeqr.com）とは関係ありません。",
+  "Almost everything is free. Static codes are completely free, with no watermarks — they are made entirely in your browser and need no account. Dynamic codes need a free sign-in so they can be edited later, and 20 are included free; if you need more, an optional Pro subscription (US$9/month or US$90/year) makes dynamic codes unlimited.": "ほぼすべて無料です。静的コードは完全に無料で透かしもありません——ブラウザ内で完全に生成され、アカウントも不要です。動的コードは後から編集できるよう無料のサインインが必要で、20個まで無料で含まれます。もっと必要な場合は、任意のProサブスクリプション（月額9米ドルまたは年額90米ドル）で動的コードが無制限になります。",
+  "Yes — almost everything. Static codes are free with no trial and no watermarks, including logo upload, batch generation, and high-resolution export. Static codes need no account; dynamic codes need a free sign-in and include 20 free, with an optional Pro subscription for unlimited dynamic codes.": "はい——ほぼすべて無料です。静的コードは無料で、試用期間も透かしもなく、ロゴのアップロード、バッチ生成、高解像度エクスポートを含みます。静的コードはアカウント不要です。動的コードは無料のサインインが必要で20個まで無料、無制限の動的コードには任意のProサブスクリプションがあります。"
  },
  "scan": {
   "Free QR Code Scanner — 100% Private | FreeQrly": "無料QRコードスキャナー — 100%プライベート | FreeQrly",
@@ -389,7 +393,8 @@
   "It's free, but be kind: cache results instead of re-requesting the same code, and keep automated traffic reasonable. Per-IP rate limits apply. Static codes are deterministic — the same input always yields the same output, so caching is trivial.": "無料ですが、配慮をお願いします。同じコードを再リクエストする代わりに結果をキャッシュし、自動トラフィックは適度に。IPごとのレート制限があります。静的コードは決定的です — 同じ入力は常に同じ出力を生むので、キャッシュは簡単です。",
   "<a href=\"/\" style=\"color:inherit\">FreeQrly</a> — made quietly, in your browser. And your agent's.": "<a href=\"/\" style=\"color:inherit\">FreeQrly</a> — 静かに、ブラウザで作成。あなたのエージェントのブラウザでも。",
   "FreeQrly API & MCP": "FreeQrly APIとMCP",
-  "Free QR code API and MCP server for agents. No key, no sign-up.": "エージェント向け無料QRコードAPIとMCPサーバー。キー不要、登録不要。"
+  "Free QR code API and MCP server for agents. No key, no sign-up.": "エージェント向け無料QRコードAPIとMCPサーバー。キー不要、登録不要。",
+  "Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href=\"/dashboard/\">dashboard</a>, with the same quota (20 free — unlimited for everyone during the current limited-time promotion). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:": "動的コードは印刷後も編集でき、スキャンを追跡します——<a href=\"/dashboard/\">ダッシュボード</a>で管理するのと同じコードで、枠も同じです（無料20個——現在の期間限定プロモーション中は全員無制限）。ダッシュボードの <strong>API Tokens</strong> でトークンを作成し（表示は一度だけ）、Bearerトークンとして渡してください："
  },
  "blog-index": {
   "Field Notes — QR Code Guides & Tips | FreeQrly": "フィールドノート — QRコードガイドとヒント | FreeQrly",
@@ -1165,7 +1170,9 @@
   "Dots, colors, logo, frame. The preview updates live and the style is saved with the code.": "ドット、色、ロゴ、フレーム。プレビューはライブで更新され、スタイルはコードと一緒に保存されます。",
   "Hit Generate. You get a short link like freeqrly.com/q/XXXXXXX — that's what the pattern encodes.": "「生成」を押します。freeqrly.com/q/XXXXXXXのような短いリンクがもらえます — 模様がエンコードするのはこれです。",
   "Manage it later": "あとで管理する",
-  "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot.": "ダッシュボードでコードを探します。編集、統計の確認、スロットを空けるための削除ができます。"
+  "Find your codes in the Dashboard: edit, check stats, or delete one to free a slot.": "ダッシュボードでコードを探します。編集、統計の確認、スロットを空けるための削除ができます。",
+  "Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 20 free codes.": "動的QRコードを無料で作成：ログイン、種類を選ぶ、スタイルを整える、印刷する。後から再印刷なしで行き先を変更。無料20コード。",
+  "Yes. Sign in free, create up to 20 dynamic codes, edit them, see stats. No trial period and no card required. Static codes remain free and unlimited with no account at all.": "はい。無料でサインインし、動的コードを最大20個作成、編集して統計も見られます。試用期間もカードも不要です。静的コードはアカウントなしで無料・無制限のままです。"
  },
  "blog-how-to-edit-a-qr-code-after-printing": {
   "How to Edit a QR Code After Printing | FreeQrly": "印刷後にQRコードを編集する方法 | FreeQrly",
@@ -1612,7 +1619,9 @@
   "<span>Can I edit a free QR code after printing?</span>": "<span>無料のQRコードを印刷後に編集できる？</span>",
   "Only if it is dynamic. Static codes are frozen at print time; dynamic codes point at a short link you control, so you can change the destination without reprinting.": "動的コードならできます。静的コードは印刷時点で固定されます。動的コードは自分が管理する短いリンクを指すので、印刷し直さずに行き先を変えられます。",
   "Which QR code generator is best for beginners?": "初心者におすすめのQRコードジェネレーターは？",
-  "Can I edit a free QR code after printing?": "無料のQRコードを印刷後に編集できる？"
+  "Can I edit a free QR code after printing?": "無料のQRコードを印刷後に編集できる？",
+  "20 free, with scan stats": "無料20件、スキャン統計付き",
+  "<strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.": "<strong>無料の動的コードと統計がほしい？</strong>FreeQrly：無料20件、印刷後に編集可能、スキャン統計付き。"
  },
  "blog-why-is-my-qr-code-blurry": {
   "Why Is My QR Code Blurry? Fixes That Work | FreeQrly": "QRコードがぼやけるのはなぜ？効く修正方法 | FreeQrly",
@@ -1822,5 +1831,36 @@
   "Print where ears are": "耳のある場所に印刷",
   "Album art, flyers, exhibits, invitations. 1024 px export for print.": "ジャケット・チラシ・展示・招待状。印刷用1024px書き出し。",
   "<a href=\"/google-form-qr-code/\">qr code generator for google form</a> · <a href=\"/wifi-qr-code/\">wifi qr code generator</a> · <a href=\"/vcard-qr-code/\">vcard qr code generator</a> · <a href=\"/batch-qr-code/\">batch qr code generator</a> · <a href=\"/business-card-qr-code/\">qr code for business cards</a> · <a href=\"/google-review-qr-code/\">qr code for google review</a> · <a href=\"/qr-code-with-logo/\">qr code with logo</a> · <a href=\"/wedding-qr-code/\">qr code wedding</a> · <a href=\"/instagram-qr-code/\">qr code for instagram</a> · <a href=\"/real-estate-qr-code/\">qr code for real estate</a> · <a href=\"/pdf-qr-code/\">pdf qr code generator</a> · <a href=\"/multi-link-qr-code/\">multi link qr code</a> · <a href=\"/menu-qr-code/\">menu qr code generator</a> · <a href=\"/payment-qr-code/\">payment qr code generator</a> · <a href=\"/youtube-qr-code/\">youtube qr code generator</a> · <a href=\"/whatsapp-qr-code/\">whatsapp qr code generator</a> · <a href=\"/tiktok-qr-code/\">tiktok qr code generator</a> · <a href=\"/spotify-qr-code/\">spotify qr code generator</a> · <a href=\"/facebook-qr-code/\">facebook qr code generator</a> · <a href=\"/google-maps-qr-code/\">google maps qr code generator</a> · <a href=\"/bitcoin-qr-code/\">bitcoin qr code generator</a> · <a href=\"/coupon-qr-code/\">coupon qr code generator</a> · <a href=\"/app-store-qr-code/\">app store qr code generator</a>": "<a href=\"/google-form-qr-code/\">Googleフォーム用QRコードジェネレーター</a> · <a href=\"/wifi-qr-code/\">WiFi QRコードジェネレーター</a> · <a href=\"/vcard-qr-code/\">vCard QRコードジェネレーター</a> · <a href=\"/batch-qr-code/\">batch qr code generator</a> · <a href=\"/business-card-qr-code/\">名刺用QRコード</a> · <a href=\"/google-review-qr-code/\">Googleレビュー用QRコード</a> · <a href=\"/qr-code-with-logo/\">ロゴ入りQRコード</a> · <a href=\"/wedding-qr-code/\">結婚式QRコード</a> · <a href=\"/instagram-qr-code/\">Instagram用QRコード</a> · <a href=\"/real-estate-qr-code/\">不動産用QRコード</a> · <a href=\"/pdf-qr-code/\">pdf qr code generator</a> · <a href=\"/multi-link-qr-code/\">multi link qr code</a> · <a href=\"/menu-qr-code/\">menu qr code generator</a> · <a href=\"/payment-qr-code/\">payment qr code generator</a> · <a href=\"/youtube-qr-code/\">youtube qr code generator</a> · <a href=\"/whatsapp-qr-code/\">whatsapp qr code generator</a> · <a href=\"/tiktok-qr-code/\">tiktok qr code generator</a> · <a href=\"/spotify-qr-code/\">spotify qr code generator</a> · <a href=\"/facebook-qr-code/\">facebook qr code generator</a> · <a href=\"/google-maps-qr-code/\">google maps qr code generator</a> · <a href=\"/bitcoin-qr-code/\">ビットコインQRコード生成</a> · <a href=\"/coupon-qr-code/\">クーポンQRコード生成</a> · <a href=\"/app-store-qr-code/\">App Store QRコード生成</a>"
+ },
+ "pricing": {
+  "Pricing — FreeQrly": "料金 — FreeQrly",
+  "FreeQrly pricing: static QR codes are free forever. Dynamic codes include 20 free; Pro is US$9/month or US$90/year for unlimited dynamic codes.": "FreeQrlyの料金：静的QRコードは永久に無料。動的コードは20個まで無料で、Proは月額9米ドルまたは年額90米ドルで動的コード無制限。",
+  "Pricing": "料金",
+  "Static QR codes are free forever. Dynamic codes come with a free quota — and Pro removes the limit if you need a lot of them.": "静的QRコードは永久に無料です。動的コードには無料枠があり、たくさん必要な場合はProで上限がなくなります。",
+  "Limited-time offer: right now, every account gets unlimited dynamic codes. When the offer ends, the plan limits below apply — and codes you already made keep working either way.": "期間限定オファー：現在、すべてのアカウントで動的コードが無制限です。オファー終了後は下記のプラン上限が適用されますが、作成済みのコードはいずれにしても使い続けられます。",
+  "Free": "無料",
+  "forever": "永久",
+  "Unlimited static QR codes — no sign-up, generated in your browser": "静的QRコード無制限——登録不要、ブラウザで生成",
+  "20 dynamic QR codes with a free account": "無料アカウントで動的QRコード20個",
+  "Edit destinations after printing": "印刷後にリンク先を変更可能",
+  "Scan statistics for dynamic codes": "動的コードのスキャン統計",
+  "No watermark — codes never expire": "透かしなし——コードは期限切れになりません",
+  "Start free": "無料で始める",
+  "Pro": "Pro",
+  "per month": "/月",
+  "or $90 per year": "または年額 $90",
+  "Unlimited dynamic QR codes": "動的QRコード無制限",
+  "Everything in Free": "無料プランの全機能を含む",
+  "Billed monthly or yearly — auto-renews until you cancel": "月額または年額請求——解約するまで自動更新",
+  "Cancel anytime in your dashboard; Pro stays active until the end of the period": "ダッシュボードからいつでも解約可能。Proは期間終了まで有効",
+  "Full refund within 7 days of your first payment": "初回支払いから7日以内は全額返金",
+  "Start free — upgrade anytime": "無料で開始——いつでもアップグレード可能",
+  "What happens when the limited-time offer ends?": "期間限定オファーが終了したらどうなりますか？",
+  "Free accounts go back to 20 dynamic codes, and Pro accounts stay unlimited. Nothing happens to codes you already created — they keep working.": "無料アカウントは動的コード20個に戻り、Proアカウントは無制限のままです。作成済みのコードに影響はなく、そのまま使えます。",
+  "If I cancel Pro, do my codes stop working?": "Proを解約すると、コードは使えなくなりますか？",
+  "No. Your codes keep working after a subscription ends. You just return to the free limit for creating new dynamic codes.": "いいえ。サブスクリプション終了後もコードはそのまま使えます。新しく作れる動的コードの上限が無料枠に戻るだけです。",
+  "How do refunds work?": "返金はどうなりますか？",
+  "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. The full billing terms are in the <a href=\"/terms/\">Terms of Service</a>.": "初めてのサブスクリプションの場合、初回支払いから7日以内であれば全額返金を申請できます——hello@freeqrly.com までご連絡ください。請求に関する全条件は<a href=\"/terms/\">利用規約</a>に記載しています。",
+  "Prices in USD. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "価格は米ドルです。サブスクリプションの販売と請求は、当社の販売事業者兼決済プロセッサーであるWaffo Pancakeが行います。"
  }
 }

@@ -122,7 +122,8 @@
   "About": "关于",
   "Contact": "联系我们",
   "Privacy Policy": "隐私政策",
-  "Terms of Service": "服务条款"
+  "Terms of Service": "服务条款",
+  "Pricing": "定价"
  },
  "404": {
   "Page not found | FreeQrly": "页面不存在 | FreeQrly",
@@ -273,7 +274,8 @@
   "FreeQrly is free to use, including 20 dynamic codes with every account. We also offer an optional Pro subscription — US$9 per month or US$90 per year — with unlimited dynamic codes. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "FreeQrly 免费使用，每个账号包含 20 个动态码。我们还提供可选的 Pro 订阅——每月 9 美元或每年 90 美元——动态码不限量。订阅由我们的销售代理兼支付处理商 Waffo Pancake 出售并收费。",
   "By subscribing, you authorize Waffo Pancake to charge your payment method at the start of each billing period until you cancel. You can cancel anytime from your dashboard: Pro stays active until the end of the current period and is not renewed after that.": "你订阅即表示授权 Waffo Pancake 在每个计费周期开始时从你的支付方式扣款，直至你取消。你可随时在控制台取消：Pro 在当前周期结束前保持有效，之后不再续费。",
   "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. After those 7 days, payments are not refundable except where the law requires it; cancelling stops future charges but does not refund the current period. Codes you created keep working after a subscription ends — only your limit for creating new dynamic codes returns to the free plan.": "如果是首次订阅，你可在首次付款后 7 天内申请全额退款——发邮件至 hello@freeqrly.com。超过 7 天后，除法律另有要求外，款项不予退还；取消只停止后续扣款，不退当前周期费用。订阅结束后，你已创建的码继续可用——只是新建动态码的额度恢复为免费档。",
-  "Static codes carry their destination inside the pattern — nothing we do can turn them off, and they keep working forever. Dynamic codes keep working even if you cancel your Pro subscription. The only codes we remove are ones that violate these terms.": "静态码的目的地址就藏在图案里——我们无法将其关闭，它们会永远有效。动态码即使你取消 Pro 订阅也会继续有效。我们唯一会移除的，是违反这些条款的码。"
+  "Static codes carry their destination inside the pattern — nothing we do can turn them off, and they keep working forever. Dynamic codes keep working even if you cancel your Pro subscription. The only codes we remove are ones that violate these terms.": "静态码的目的地址就藏在图案里——我们无法将其关闭，它们会永远有效。动态码即使你取消 Pro 订阅也会继续有效。我们唯一会移除的，是违反这些条款的码。",
+  "FreeQrly is free to use, including 20 dynamic codes with every account. A limited-time promotion currently makes dynamic codes unlimited for every account; when it ends, the 20-code quota applies. We also offer an optional Pro subscription — US$9 per month or US$90 per year — with unlimited dynamic codes. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "FreeQrly 免费使用，每个账号包含 20 个动态码。目前有一项限时优惠：所有账号的动态码都不限量；优惠结束后，恢复 20 个的额度。我们还提供可选的 Pro 订阅——每月 9 美元或每年 90 美元——动态码不限量。订阅由我们的销售代理兼支付处理商 Waffo Pancake 出售并收费。"
  },
  "about": {
   "About FreeQrly — Free QR Codes, Static Codes Need No Sign-Up": "关于 FreeQrly — 免费二维码，静态码免注册",
@@ -313,7 +315,9 @@
   "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "十种：英语、中文、西班牙语、印地语、阿拉伯语（从右到左排版）、葡萄牙语、法语、俄语、德语和日语。",
   "Try the generator →": "试试生成器 →",
   "Is FreeQrly the same as FreeQR?": "FreeQrly 和 FreeQR 是同一家吗？",
-  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "不是。FreeQrly（freeqrly.com）是独立项目，与 FreeQR（freeqr.com）没有任何关联。"
+  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "不是。FreeQrly（freeqrly.com）是独立项目，与 FreeQR（freeqr.com）没有任何关联。",
+  "Almost everything is free. Static codes are completely free, with no watermarks — they are made entirely in your browser and need no account. Dynamic codes need a free sign-in so they can be edited later, and 20 are included free; if you need more, an optional Pro subscription (US$9/month or US$90/year) makes dynamic codes unlimited.": "几乎全部免费。静态码完全免费、没有水印——它们完全在你的浏览器里生成，不需要账号。动态码需要免费登录，以便之后编辑，免费包含 20 个；如果需要更多，可选的 Pro 订阅（每月 9 美元或每年 90 美元）可让动态码不限量。",
+  "Yes — almost everything. Static codes are free with no trial and no watermarks, including logo upload, batch generation, and high-resolution export. Static codes need no account; dynamic codes need a free sign-in and include 20 free, with an optional Pro subscription for unlimited dynamic codes.": "是的——几乎所有功能都免费。静态码免费、无试用、无水印，包括 Logo 上传、批量生成和高分辨率导出。静态码不需要账号；动态码需要免费登录，包含 20 个免费额度，并有可选的 Pro 订阅提供不限量动态码。"
  },
  "scan": {
   "Free QR Code Scanner — 100% Private | FreeQrly": "免费二维码扫码器 — 100% 隐私 | FreeQrly",
@@ -388,7 +392,8 @@
   "Returns <code>image/svg+xml</code>. Only <code>data</code> is required; everything else has a sane default. Errors come back as JSON with an <code>error</code> field.": "返回 <code>image/svg+xml</code>。只有 <code>data</code> 是必填的；其他都有合理的默认值。错误以 JSON 返回，带一个 <code>error</code> 字段。",
   "<strong>color / bgcolor</strong> — 6-digit hex, no <code>#</code> (defaults <code>2F4A62</code> / <code>ffffff</code>).": "<strong>color / bgcolor</strong> —— 6 位十六进制，没有 <code>#</code>（默认 <code>2F4A62</code> / <code>ffffff</code>）。",
   "<strong>ecc</strong> — error correction <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code> (default <code>M</code>). Use <code>Q</code>/<code>H</code> for print or logos.": "<strong>ecc</strong> —— 纠错等级 <code>L</code>、<code>M</code>、<code>Q</code>、<code>H</code>（默认 <code>M</code>）。打印或加 Logo 时用 <code>Q</code>/<code>H</code>。",
-  "Standard Streamable HTTP: <code>initialize</code>, then <code>tools/list</code> / <code>tools/call</code>. The <code>generate_qr</code> tool takes <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> and returns a ready-to-download SVG URL.": "标准 Streamable HTTP：<code>initialize</code>，然后 <code>tools/list</code> / <code>tools/call</code>。<code>generate_qr</code> 工具接受 <code>data</code>、<code>size</code>、<code>color</code>、<code>bgcolor</code>、<code>ecc</code>，返回一个可直接下载的 SVG 链接。"
+  "Standard Streamable HTTP: <code>initialize</code>, then <code>tools/list</code> / <code>tools/call</code>. The <code>generate_qr</code> tool takes <code>data</code>, <code>size</code>, <code>color</code>, <code>bgcolor</code>, <code>ecc</code> and returns a ready-to-download SVG URL.": "标准 Streamable HTTP：<code>initialize</code>，然后 <code>tools/list</code> / <code>tools/call</code>。<code>generate_qr</code> 工具接受 <code>data</code>、<code>size</code>、<code>color</code>、<code>bgcolor</code>、<code>ecc</code>，返回一个可直接下载的 SVG 链接。",
+  "Dynamic codes stay editable after printing and track scans — the same codes you manage in the <a href=\"/dashboard/\">dashboard</a>, with the same quota (20 free — unlimited for everyone during the current limited-time promotion). Create a token in the dashboard under <strong>API Tokens</strong> (shown once), then pass it as a Bearer token:": "动态码打印后仍可编辑，并可追踪扫码——与你在<a href=\"/dashboard/\">控制台</a>中管理的是同一批码，额度相同（免费 20 个——当前限时优惠期间所有人不限量）。在控制台的 <strong>API Tokens</strong> 下创建令牌（仅显示一次），然后将其作为 Bearer 令牌传入："
  },
  "blog-index": {
   "Field Notes — QR Code Guides & Tips | FreeQrly": "实战笔记 — 二维码指南与技巧 | FreeQrly",
@@ -1164,7 +1169,9 @@
   "What does a dynamic QR code link to?": "动态二维码链接到哪里？",
   "What the QR code actually contains": "二维码里到底装了什么",
   "Yes — the code has to belong to someone so only you can edit it. Email + password, Google, or GitHub. Static codes never need an account.": "需要——码必须属于某个人，这样只有你能编辑它。邮箱 + 密码、Google 或 GitHub 都行。静态码永远不需要账号。",
-  "Yes. Sign in free, create up to 8 dynamic codes, edit them, see stats. No trial period, no card, no subscription. Static codes remain free and unlimited with no account at all.": "真的。免费登录，最多创建 8 个动态码，随便编辑，看统计。没有试用期，不用绑卡，不用订阅。静态码依然完全免费、无限量，不用账号。"
+  "Yes. Sign in free, create up to 8 dynamic codes, edit them, see stats. No trial period, no card, no subscription. Static codes remain free and unlimited with no account at all.": "真的。免费登录，最多创建 8 个动态码，随便编辑，看统计。没有试用期，不用绑卡，不用订阅。静态码依然完全免费、无限量，不用账号。",
+  "Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 20 free codes.": "免费创建动态二维码：登录、选类型、做样式、打印。之后改目标地址不用重印。免费 20 个码。",
+  "Yes. Sign in free, create up to 20 dynamic codes, edit them, see stats. No trial period and no card required. Static codes remain free and unlimited with no account at all.": "真的。免费登录，最多创建 20 个动态码，随便编辑，看统计。没有试用期，不用绑卡。静态码依然完全免费、无限量，不用账号。"
  },
  "blog-how-to-edit-a-qr-code-after-printing": {
   "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a>": "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>二维码会过期吗？简短回答：不会 | FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>怎么扫二维码（iPhone 与安卓）</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>二维码打印尺寸指南：印多大合适？</b></a>",
@@ -1523,7 +1530,9 @@
   "Which QR code generator is best for beginners?": "哪个二维码生成器最适合新手？",
   "Widest type range": "类型范围最广",
   "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 8 editable codes with scan stats. No trial, no card, no expiry games.": "是的。静态码免费不限量，不用账号。动态码也免费：登录后得到 8 个可编辑的码，带扫码统计。没有试用期，不用绑卡，没有过期套路。",
-  "~37 types": "约 37 种"
+  "~37 types": "约 37 种",
+  "20 free, with scan stats": "20 个免费，带扫码统计",
+  "<strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.": "<strong>需要带统计的免费动态码？</strong>FreeQrly：20 个免费，印后可编辑，含扫码统计。"
  },
  "blog-why-is-my-qr-code-blurry": {
   "2048 px PNG minimum, or SVG. A poster viewed from 2 meters needs far more pixels than a business card viewed from 30 cm — see the print size guide for the distance rule.": "PNG 至少 2048 像素，或者用 SVG。从 2 米外看的海报，比从 30 厘米外看的名片需要多得多的像素——距离规则看打印尺寸指南。",
@@ -1821,5 +1830,36 @@
   "Print where ears are": "印在耳朵在的地方",
   "Album art, flyers, exhibits, invitations. 1024 px export for print.": "专辑封面、传单、展品、请柬。1024 px 导出打印。",
   "<a href=\"/google-form-qr-code/\">qr code generator for google form</a> · <a href=\"/wifi-qr-code/\">wifi qr code generator</a> · <a href=\"/vcard-qr-code/\">vcard qr code generator</a> · <a href=\"/batch-qr-code/\">batch qr code generator</a> · <a href=\"/business-card-qr-code/\">qr code for business cards</a> · <a href=\"/google-review-qr-code/\">qr code for google review</a> · <a href=\"/qr-code-with-logo/\">qr code with logo</a> · <a href=\"/wedding-qr-code/\">qr code wedding</a> · <a href=\"/instagram-qr-code/\">qr code for instagram</a> · <a href=\"/real-estate-qr-code/\">qr code for real estate</a> · <a href=\"/pdf-qr-code/\">pdf qr code generator</a> · <a href=\"/multi-link-qr-code/\">multi link qr code</a> · <a href=\"/menu-qr-code/\">menu qr code generator</a> · <a href=\"/payment-qr-code/\">payment qr code generator</a> · <a href=\"/youtube-qr-code/\">youtube qr code generator</a> · <a href=\"/whatsapp-qr-code/\">whatsapp qr code generator</a> · <a href=\"/tiktok-qr-code/\">tiktok qr code generator</a> · <a href=\"/spotify-qr-code/\">spotify qr code generator</a> · <a href=\"/facebook-qr-code/\">facebook qr code generator</a> · <a href=\"/google-maps-qr-code/\">google maps qr code generator</a> · <a href=\"/bitcoin-qr-code/\">bitcoin qr code generator</a> · <a href=\"/coupon-qr-code/\">coupon qr code generator</a> · <a href=\"/app-store-qr-code/\">app store qr code generator</a>": "<a href=\"/google-form-qr-code/\">谷歌表单二维码生成器</a> · <a href=\"/wifi-qr-code/\">WiFi 二维码生成器</a> · <a href=\"/vcard-qr-code/\">vCard 二维码生成器</a> · <a href=\"/batch-qr-code/\">batch qr code generator</a> · <a href=\"/business-card-qr-code/\">名片二维码</a> · <a href=\"/google-review-qr-code/\">谷歌评价二维码</a> · <a href=\"/qr-code-with-logo/\">带 Logo 的二维码</a> · <a href=\"/wedding-qr-code/\">婚礼二维码</a> · <a href=\"/instagram-qr-code/\">Instagram 二维码</a> · <a href=\"/real-estate-qr-code/\">房产二维码</a> · <a href=\"/pdf-qr-code/\">pdf qr code generator</a> · <a href=\"/multi-link-qr-code/\">multi link qr code</a> · <a href=\"/menu-qr-code/\">menu qr code generator</a> · <a href=\"/payment-qr-code/\">payment qr code generator</a> · <a href=\"/youtube-qr-code/\">youtube qr code generator</a> · <a href=\"/whatsapp-qr-code/\">whatsapp qr code generator</a> · <a href=\"/tiktok-qr-code/\">tiktok qr code generator</a> · <a href=\"/spotify-qr-code/\">spotify qr code generator</a> · <a href=\"/facebook-qr-code/\">facebook qr code generator</a> · <a href=\"/google-maps-qr-code/\">google maps qr code generator</a> · <a href=\"/bitcoin-qr-code/\">比特币二维码生成器</a> · <a href=\"/coupon-qr-code/\">优惠券二维码生成器</a> · <a href=\"/app-store-qr-code/\">应用商店二维码生成器</a>"
+ },
+ "pricing": {
+  "Pricing — FreeQrly": "定价 — FreeQrly",
+  "FreeQrly pricing: static QR codes are free forever. Dynamic codes include 20 free; Pro is US$9/month or US$90/year for unlimited dynamic codes.": "FreeQrly 定价：静态二维码永久免费。动态码含 20 个免费额度；Pro 每月 9 美元或每年 90 美元，动态码不限量。",
+  "Pricing": "定价",
+  "Static QR codes are free forever. Dynamic codes come with a free quota — and Pro removes the limit if you need a lot of them.": "静态二维码永久免费。动态码有免费额度——需要大量使用时，Pro 帮你解除上限。",
+  "Limited-time offer: right now, every account gets unlimited dynamic codes. When the offer ends, the plan limits below apply — and codes you already made keep working either way.": "限时优惠：目前每个账号的动态码都不限量。优惠结束后，下方的套餐额度生效——你已经创建的码无论如何都继续可用。",
+  "Free": "免费",
+  "forever": "永久",
+  "Unlimited static QR codes — no sign-up, generated in your browser": "不限量静态二维码——免注册，在你的浏览器中生成",
+  "20 dynamic QR codes with a free account": "免费账号含 20 个动态二维码",
+  "Edit destinations after printing": "打印后可修改目标地址",
+  "Scan statistics for dynamic codes": "动态码扫码统计",
+  "No watermark — codes never expire": "无水印——码永不过期",
+  "Start free": "免费开始",
+  "Pro": "Pro",
+  "per month": "/月",
+  "or $90 per year": "或 $90/年",
+  "Unlimited dynamic QR codes": "不限量动态二维码",
+  "Everything in Free": "包含免费版的全部功能",
+  "Billed monthly or yearly — auto-renews until you cancel": "按月或按年计费——自动续订，直至你取消",
+  "Cancel anytime in your dashboard; Pro stays active until the end of the period": "随时可在控制台取消；Pro 在周期结束前保持有效",
+  "Full refund within 7 days of your first payment": "首次付款后 7 天内可全额退款",
+  "Start free — upgrade anytime": "免费开始——随时可升级",
+  "What happens when the limited-time offer ends?": "限时优惠结束后会怎样？",
+  "Free accounts go back to 20 dynamic codes, and Pro accounts stay unlimited. Nothing happens to codes you already created — they keep working.": "免费账号恢复为 20 个动态码，Pro 账号保持不限量。你已经创建的码不受影响——继续可用。",
+  "If I cancel Pro, do my codes stop working?": "取消 Pro 后，我的码会停止工作吗？",
+  "No. Your codes keep working after a subscription ends. You just return to the free limit for creating new dynamic codes.": "不会。订阅结束后你的码继续可用，只是新建动态码的额度恢复为免费档。",
+  "How do refunds work?": "退款怎么办理？",
+  "If this is your first subscription, you can ask for a full refund within 7 days of your first payment — write to hello@freeqrly.com. The full billing terms are in the <a href=\"/terms/\">Terms of Service</a>.": "如果是首次订阅，你可在首次付款后 7 天内申请全额退款——发邮件至 hello@freeqrly.com。完整的计费条款见<a href=\"/terms/\">服务条款</a>。",
+  "Prices in USD. Subscriptions are sold and billed by Waffo Pancake, our merchant of record and payment processor.": "价格以美元计。订阅由我们的销售代理兼支付处理商 Waffo Pancake 出售并收费。"
  }
 }

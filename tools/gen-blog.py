@@ -5,9 +5,9 @@ import os
 SITE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 
 HEADER = '''<div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3r-20261020"></script>
-<script src="/assets/js/acct-menu.js?v=b3r-20261020"></script>
-<script src="/assets/js/subpage-header.js?v=b3r-20261020"></script>'''
+<script src="/assets/js/site-header.js?v=b3u-20261022"></script>
+<script src="/assets/js/acct-menu.js?v=b3u-20261022"></script>
+<script src="/assets/js/subpage-header.js?v=b3u-20261022"></script>'''
 
 THEME_JS = ''
 
@@ -590,7 +590,7 @@ POSTS += [
  dict(
   slug="how-to-create-a-dynamic-qr-code",
   title="How to Create a Dynamic QR Code (Free & Editable) | FreeQrly",
-  desc="Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 8 free codes.",
+  desc="Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 20 free codes.",
   h1="How to create a <span class='hl hl-mint'>dynamic</span> QR code",
   lede="A dynamic QR code lets you change the destination after printing — and see how many people scanned. Here's how to make one, free, in about a minute.",
   date="October 16, 2026",
@@ -637,7 +637,7 @@ POSTS += [
   ],
   faq=[
     ("Is creating a dynamic QR code really free?",
-     "Yes. Sign in free, create up to 8 dynamic codes, edit them, see stats. No trial period, no card, no subscription. Static codes remain free and unlimited with no account at all."),
+     "Yes. Sign in free, create up to 20 dynamic codes, edit them, see stats. No trial period and no card required. Static codes remain free and unlimited with no account at all."),
     ("Do I need an account for a dynamic QR code?",
      "Yes — the code has to belong to someone so only you can edit it. Email + password, Google, or GitHub. Static codes never need an account."),
     ("How many dynamic QR codes can I have?",
@@ -910,7 +910,7 @@ POSTS += [
 <table>
 <tr><th></th><th>FreeQrly</th><th>QRCode Monkey</th><th>QR Tiger</th><th>QR Code Generator</th><th>ME-QR</th></tr>
 <tr><td><strong>Free static codes</strong></td><td>Unlimited, no sign-up</td><td>Free, with logo / SVG / PDF / EPS</td><td>Free tool</td><td>Free tool</td><td>Free tool</td></tr>
-<tr><td><strong>Free dynamic codes</strong></td><td>8 free, with scan stats</td><td>Paid (via Bitly)</td><td>3 free</td><td>Paid plans</td><td>Free dynamic codes</td></tr>
+<tr><td><strong>Free dynamic codes</strong></td><td>20 free, with scan stats</td><td>Paid (via Bitly)</td><td>3 free</td><td>Paid plans</td><td>Free dynamic codes</td></tr>
 <tr><td><strong>Batch generation</strong></td><td>50 per batch, static</td><td>Not stated</td><td>Up to 3,000 per batch</td><td>Not stated</td><td>500–2,000 per batch</td></tr>
 <tr><td><strong>Type range</strong></td><td>12 types + batch</td><td>Core types</td><td>20–24 solutions</td><td>~37 types</td><td>52 types</td></tr>
 <tr><td><strong>Best for</strong></td><td>Free dynamic codes + privacy</td><td>Simple free static codes</td><td>Bulk + enterprise features</td><td>Longest track record (since 2009)</td><td>Widest type range</td></tr>
@@ -931,7 +931,7 @@ POSTS += [
 
 <h2>The verdict</h2>
 <ul>
-<li><strong>Need free dynamic codes with stats?</strong> FreeQrly: 8 free, editable after printing, scan stats included.</li>
+<li><strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.</li>
 <li><strong>Need bulk or enterprise features?</strong> QR Tiger: up to 3,000 codes per batch, CRM integrations, white-label.</li>
 <li><strong>Just want a quick free static code?</strong> QRCode Monkey is the classic — simple, free, no fuss.</li>
 <li><strong>Want the widest type range?</strong> ME-QR lists 52 types.</li>
@@ -1189,9 +1189,9 @@ def build(p, all_posts=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3r-20261020">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3r-20261020">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3r-20261020">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3u-20261022">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3u-20261022">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3u-20261022">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"{p.get('datePublished','2026-10-13')}","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
@@ -1252,7 +1252,7 @@ def build(p, all_posts=None):
         <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
         <div class="fmade">Made quietly — static codes in your browser.</div>
       </div>
-      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a></div>
+      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a><a href="/pricing/">Pricing</a></div>
       <div class="fcol"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/developers/">Developers · API &amp; MCP</a><a href="/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/#faq">FAQ</a></div>
       <div class="fcol"><h4>Company</h4><a href="/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
       <div class="fcol"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
