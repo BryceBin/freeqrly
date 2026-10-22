@@ -6,6 +6,7 @@
 import { genCode } from './dynamic.js';
 import { getCodeCount } from './auth.js';
 import { sanitizeStyle, parseStyle } from './style.js';
+import { getLiveSubscription, resolveCodeLimit } from './billing.js';
 
 export const VALID_TYPES = new Set([
   'url', 'text', 'wifi', 'vcard', 'email', 'sms', 'phone',
@@ -131,8 +132,9 @@ export const UNLIMITED_LIMIT = 999999;
 export async function createDynamicCode(env, user, { type, payload, style }, { origin, ip }) {
   const v = validateCodeInput(type, payload);
   const used = await getCodeCount(env, user.id);
-  const unlimited = !user.code_limit || user.code_limit >= UNLIMITED_LIMIT;
-  if (!unlimited && used >= user.code_limit) throw new ApiError(403, { error: 'quota_exceeded', hint: 'upgrade' });
+  const limit = resolveCodeLimit(user, await getLiveSubscription(env, user.id));
+  const unlimited = !limit || limit >= UNLIMITED_LIMIT;
+  if (!unlimited && used >= limit) throw new ApiError(403, { error: 'quota_exceeded', hint: 'upgrade' });
   const cleanStyle = style !== undefined ? sanitizeStyleOrThrow(style, user.id) : null;
   await checkCreateRateLimit(env, ip || 'unknown');
 
@@ -207,6 +209,7 @@ export async function listDynamicCodes(env, user) {
     'SELECT code, type, destination, payload, style, total_scans, created_at FROM codes WHERE user_id = ? ORDER BY created_at DESC LIMIT 100'
   ).bind(user.id).all();
   const used = await getCodeCount(env, user.id);
+  const limit = resolveCodeLimit(user, await getLiveSubscription(env, user.id));
   return {
     codes: (rows.results || []).map((r) => ({
       code: r.code,
@@ -217,7 +220,7 @@ export async function listDynamicCodes(env, user) {
       totalScans: r.total_scans || 0,
       created_at: r.created_at,
     })),
-    quota: { used, limit: user.code_limit },
+    quota: { used, limit },
   };
 }
 

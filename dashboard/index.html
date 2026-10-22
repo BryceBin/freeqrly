@@ -6,7 +6,7 @@
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261020">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3s-20261022">
 <style>
 /* Manage page — cards layout. The edit module inside each card reuses the
    generator styles from main.css (typerail, grid, previewCol, seg, etc.). */
@@ -153,6 +153,12 @@ a.shortUrl:hover{text-decoration:underline}
 .tokenSub .revokedTag{color:#C0492F;font-weight:700}
 .trashBtnSm{border:1px solid #F0D9D2;background:#fff;color:#C0492F;border-radius:10px;padding:7px 12px;font-size:12.5px;font-weight:600;cursor:pointer}
 .tokenEmpty{font-size:13.5px;color:#98A2B3;padding:8px 2px}
+.planBar{height:8px;background:#F1EAD8;border-radius:99px;overflow:hidden;margin:10px 0 4px}
+.planBar i{display:block;height:100%;background:#D9A441;border-radius:99px}
+.planRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.planNote{font-size:13px;color:#7A8699;line-height:1.55;margin:8px 0 0}
+.planNote.warn{color:#C0492F}
+.planOk{font-size:13.5px;color:#2E7D4F;background:#EFF7F0;border:1px solid #CFE8D4;border-radius:12px;padding:11px 14px;margin:0 0 14px}
 </style>
 </head>
 <body>
@@ -194,12 +200,21 @@ a.shortUrl:hover{text-decoration:underline}
     </div>
     <div id="tokenList"></div>
   </div>
+
+  <div class="apiTokens" id="planSection" hidden>
+    <div class="apiHead"><h2 data-t="planTitle">Plan</h2><span class="docsBtn" id="planBadge">Free</span></div>
+    <p class="planOk" id="planSuccess" hidden></p>
+    <p class="apiHint" id="planLine"></p>
+    <div class="planBar" id="planBar" hidden><i id="planBarFill"></i></div>
+    <p class="planNote" id="planNote"></p>
+    <div class="planRow" id="planActions"></div>
+  </div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261020"></script>
-<script src="/assets/js/site-header.js?v=b3aa-20261020"></script>
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261020">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261020">
+<script src="/assets/js/acct-menu.js?v=b3s-20261022"></script>
+<script src="/assets/js/site-header.js?v=b3s-20261022"></script>
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3s-20261022">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3s-20261022">
 <div class="cpop" id="cpop" hidden>
   <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
   <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
@@ -209,7 +224,7 @@ a.shortUrl:hover{text-decoration:underline}
 const $ = id => document.getElementById(id);
 const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
 const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
-const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you 100 dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro keeps 100 codes for you after the offer ends."}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
 let I18N = null;
 let LANG = 'en';
 let ME = null;
@@ -336,6 +351,89 @@ async function createToken(){
     await loadTokens();
   }catch(e){}
   btn.disabled = false;
+}
+// ---------- plan / billing ----------
+let PLAN = null;
+async function loadPlan(){
+  try{
+    const r = await fetch('/api/billing/status', { credentials: 'same-origin' });
+    if(!r.ok) return;
+    PLAN = await r.json();
+    renderPlan();
+  }catch(e){ /* section stays hidden */ }
+}
+function renderPlan(){
+  const sec = $('planSection');
+  if(!sec || !PLAN || !PLAN.billingEnabled){ if(sec) sec.hidden = true; return; }
+  sec.hidden = false;
+  const sub = PLAN.subscription;
+  const isPro = !!sub;
+  $('planBadge').textContent = isPro ? t('ui','planCurrentPro') : t('ui','planCurrentFree');
+  const params = new URLSearchParams(location.search);
+  if(params.get('billing') === 'success'){
+    const ok = $('planSuccess');
+    ok.textContent = t('ui','planSuccess');
+    ok.hidden = false;
+  }
+  const line = $('planLine'), note = $('planNote'), bar = $('planBar'), actions = $('planActions');
+  note.className = 'planNote'; note.textContent = '';
+  actions.innerHTML = '';
+  const used = PLAN.usage.used, limit = PLAN.usage.limit;
+  if(limit >= 999999){
+    line.textContent = t('ui','codesUsedUnlimited').replace('{n}', used);
+    bar.hidden = true;
+  }else{
+    line.textContent = t('ui','codesUsed').replace('{n}', used).replace('{limit}', limit);
+    bar.hidden = false;
+    $('planBarFill').style.width = Math.min(100, limit ? (used / limit) * 100 : 0) + '%';
+  }
+  if(isPro){
+    const end = sub.currentPeriodEnd ? fmtDate(Date.parse(sub.currentPeriodEnd)) : '—';
+    if(sub.status === 'canceling'){
+      note.textContent = t('ui','planEnds').replace('{d}', end);
+    }else if(sub.status === 'past_due'){
+      note.textContent = t('ui','planPastDue');
+      note.className = 'planNote warn';
+    }else{
+      note.textContent = t('ui','planRenews').replace('{d}', end);
+    }
+    if(sub.status !== 'canceling'){
+      const b = document.createElement('button');
+      b.className = 'btnGhost'; b.type = 'button'; b.textContent = t('ui','planCancel');
+      b.addEventListener('click', cancelPlan);
+      actions.appendChild(b);
+    }
+  }else{
+    note.textContent = limit >= 999999 ? t('ui','planPromoNote') : t('ui','planPitch');
+    for(const period of ['monthly','yearly']){
+      const b = document.createElement('button');
+      b.className = 'newBtn'; b.type = 'button';
+      b.textContent = t('ui','planUpgrade') + ' · ' + t('ui', period === 'monthly' ? 'planMonthly' : 'planYearly');
+      b.addEventListener('click', () => startCheckout(period, b));
+      actions.appendChild(b);
+    }
+  }
+}
+async function startCheckout(period, btn){
+  const orig = btn.textContent;
+  btn.disabled = true; btn.textContent = t('ui','planWorking');
+  try{
+    const r = await fetch('/api/billing/checkout', { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ period }) });
+    const d = await r.json().catch(() => ({}));
+    if(r.ok && d.checkoutUrl){ location.href = d.checkoutUrl; return; }
+    throw new Error(d.error || 'failed');
+  }catch(e){
+    btn.disabled = false; btn.textContent = orig;
+    const note = $('planNote');
+    note.textContent = t('ui','planCheckoutErr'); note.className = 'planNote warn';
+  }
+}
+async function cancelPlan(){
+  if(!confirm(t('ui','planCancelConfirm'))) return;
+  try{
+    const r = await fetch('/api/billing/cancel', { method: 'POST', credentials: 'same-origin' });
+    if(r.ok) await loadPlan();
+  }catch(e){ /* leave UI as-is */ }
 }
 function wireTokens(){
   $('createTokenBtn').addEventListener('click', createToken);
@@ -1143,6 +1241,7 @@ async function boot(){
   TOKENS = tokensD.tokens || [];
   wireTokens();
   renderTokens();
+  loadPlan();
   applyLang();
 }
 boot();

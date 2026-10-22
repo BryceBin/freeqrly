@@ -138,3 +138,26 @@ CREATE TABLE IF NOT EXISTS api_tokens (
   revoked_at INTEGER
 );
 CREATE INDEX IF NOT EXISTS idx_api_tokens_user ON api_tokens(user_id);
+
+-- Paid tier (2026-10-22, Waffo Pancake as MoR). One row per Waffo subscription
+-- order. users.plan mirrors the live state ('pro' while a subscription here is
+-- active / canceling / past_due); quota resolution lives in _lib/billing.js.
+CREATE TABLE IF NOT EXISTS subscriptions (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL REFERENCES users(id),
+  provider TEXT NOT NULL DEFAULT 'waffo',
+  waffo_order_id TEXT UNIQUE,
+  buyer_email TEXT,
+  period TEXT,
+  status TEXT NOT NULL DEFAULT 'active',
+  current_period_end TEXT,
+  created_at INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_subscriptions_user ON subscriptions(user_id);
+
+-- Waffo webhook idempotency: event_key = "<eventType>:<eventId>".
+CREATE TABLE IF NOT EXISTS webhook_events (
+  event_key TEXT PRIMARY KEY,
+  received_at INTEGER NOT NULL
+);
