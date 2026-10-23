@@ -103,6 +103,13 @@
         onDelete: cfg.onDelete
       });
     }
+
+    // "Start free" / pricing CTAs follow the auth state: signed-in users go
+    // straight to the dashboard; only signed-out visitors detour via login.
+    var ctaTarget = (cfg.user && cfg.user.email) ? '/dashboard/' : '/login/';
+    document.querySelectorAll('a.fctaBtn, a.pbtn').forEach(function(a){
+      a.setAttribute('href', ctaTarget);
+    });
   }
 
   // Cached user snapshot for instant header render (revalidated in background).
