@@ -315,8 +315,6 @@
   "What languages does FreeQrly support?": "FreeQrlyはどの言語に対応している？",
   "Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), Portuguese, French, Russian, German, and Japanese.": "10言語：英語、中国語、スペイン語、ヒンディー語、アラビア語（右から左のレイアウト）、ポルトガル語、フランス語、ロシア語、ドイツ語、日本語。",
   "Try the generator →": "ジェネレーターを試す →",
-  "Is FreeQrly the same as FreeQR?": "FreeQrly と FreeQR は同じものですか？",
-  "No. FreeQrly (freeqrly.com) is an independent project and is not affiliated with FreeQR (freeqr.com).": "いいえ。FreeQrly（freeqrly.com）は独立したプロジェクトであり、FreeQR（freeqr.com）とは関係ありません。",
   "Almost everything is free. Static codes are completely free, with no watermarks — they are made entirely in your browser and need no account. Dynamic codes need a free sign-in so they can be edited later, and 20 are included free; if you need more, an optional Pro subscription (US$9/month or US$90/year) makes dynamic codes unlimited.": "ほぼすべて無料です。静的コードは完全に無料で透かしもありません——ブラウザ内で完全に生成され、アカウントも不要です。動的コードは後から編集できるよう無料のサインインが必要で、20個まで無料で含まれます。もっと必要な場合は、任意のProサブスクリプション（月額9米ドルまたは年額90米ドル）で動的コードが無制限になります。",
   "Yes — almost everything. Static codes are free with no trial and no watermarks, including logo upload, batch generation, and high-resolution export. Static codes need no account; dynamic codes need a free sign-in and include 20 free, with an optional Pro subscription for unlimited dynamic codes.": "はい——ほぼすべて無料です。静的コードは無料で、試用期間も透かしもなく、ロゴのアップロード、バッチ生成、高解像度エクスポートを含みます。静的コードはアカウント不要です。動的コードは無料のサインインが必要で20個まで無料、無制限の動的コードには任意のProサブスクリプションがあります。"
  },
