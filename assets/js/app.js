@@ -1145,33 +1145,49 @@ const FP_TEXT = {
 };
 const FP_LABEL = {
   label:{en:"Holiday presets", zh:"节日预设", es:"Ajustes de fiesta", fr:"Préréglages fêtes", de:"Feiertags-Presets", ja:"季節のプリセット", pt:"Predefinições festivas", ru:"Праздничные пресеты", hi:"त्योहारी प्रीसेट", ar:"إعدادات الأعياد"},
+  none:{en:"None", zh:"无", es:"Ninguno", fr:"Aucun", de:"Keine", ja:"なし", pt:"Nenhum", ru:"Нет", hi:"कोई नहीं", ar:"بدون"},
   sub:{en:"One tap — ink, paper & frame set", zh:"一键配好颜色和边框", es:"Un toque: tinta, papel y marco", fr:"Un toucher : encre, papier et cadre", de:"Ein Tipp: Tinte, Papier & Rahmen", ja:"ワンタップで色と枠をセット", pt:"Um toque: tinta, papel e moldura", ru:"В один тап: цвет, бумага и рамка", hi:"एक टैप: स्याही, कागज़ और फ़्रेम", ar:"بنقرة واحدة: الحبر والورق والإطار"},
   bf:{en:"Black Friday", zh:"黑五", es:"Black Friday", fr:"Black Friday", de:"Black Friday", ja:"ブラックフライデー", pt:"Black Friday", ru:"Чёрная пятница", hi:"ब्लैक फ्राइडे", ar:"الجمعة السوداء"},
   xmas:{en:"Christmas", zh:"圣诞", es:"Navidad", fr:"Noël", de:"Weihnachten", ja:"クリスマス", pt:"Natal", ru:"Рождество", hi:"क्रिसमस", ar:"عيد الميلاد"}
 };
 function fpLang(){
   const g = k => (FP_LABEL[k][lang] || FP_LABEL[k].en);
-  const a=$("fpLab"), b=$("fpBfT"), c=$("fpXmT"), s=$("fpSub");
+  const a=$("fpLab"), b=$("fpBfT"), c=$("fpXmT"), s=$("fpSub"), n=$("fpNoneT");
   if(a) a.textContent = g("label"); if(b) b.textContent = g("bf"); if(c) c.textContent = g("xmas");
-  if(s) s.textContent = g("sub");
+  if(s) s.textContent = g("sub"); if(n) n.textContent = g("none");
 }
 fpLang();
 new MutationObserver(fpLang).observe(document.documentElement, {attributes:true, attributeFilter:["lang"]});
+function fpSetCol(id, dotsId, val, isFg){
+  const h = $(id); if(!h) return;
+  h.value = val;
+  h.dispatchEvent(new Event("input",{bubbles:true}));
+  h.dispatchEvent(new Event("change",{bubbles:true}));
+  if(typeof ensureCustomDot === "function") ensureCustomDot(dotsId, val, id, isFg);
+  if(typeof dotsInit === "function" && dotsInit._mark) dotsInit._mark(dotsId, val);
+}
+function resetFramePreset(){
+  // "None": back to the generator defaults — ink, transparent paper, no frame
+  frameAccent = null;
+  const tr = $("transp"); if(tr) tr.checked = true;
+  fpSetCol("fg","fgDots","#22303F",true);
+  const h = $("bgc");
+  if(h){ h.value = "#FFFFFF"; h.dispatchEvent(new Event("input",{bubbles:true})); h.dispatchEvent(new Event("change",{bubbles:true})); }
+  if(typeof dotsInit === "function" && dotsInit._mark) dotsInit._mark("bgDots","transparent");
+  const noneBtn = _segFrame ? _segFrame.querySelector('button[data-v="none"]') : null;
+  if(noneBtn && frameVal !== "none") noneBtn.click();
+  const ft = $("frameText"); if(ft) ft.value = "";
+  document.querySelectorAll("#framePresets .fpBtn").forEach(b=>b.classList.toggle("on", b.dataset.preset==="none"));
+  draw(); scanScore();
+}
 function applyFramePreset(name){
+  if(name === "none"){ resetFramePreset(); return; }
   const P = name==="bf" ? {fg:"#161616", bg:"#FFFFFF"} : name==="xmas" ? {fg:"#1F4D3A", bg:"#FBF7EC"} : null;
   if(!P) return;
   frameAccent = "#A97F1F";
   const tr = $("transp"); if(tr) tr.checked = false;
-  const setCol = (id, dotsId, val, isFg)=>{
-    const h = $(id); if(!h) return;
-    h.value = val;
-    h.dispatchEvent(new Event("input",{bubbles:true}));
-    h.dispatchEvent(new Event("change",{bubbles:true}));
-    if(typeof ensureCustomDot === "function") ensureCustomDot(dotsId, val, id, isFg);
-    if(typeof dotsInit === "function" && dotsInit._mark) dotsInit._mark(dotsId, val);
-  };
-  setCol("fg","fgDots",P.fg,true);
-  setCol("bgc","bgDots",P.bg,false);
+  fpSetCol("fg","fgDots",P.fg,true);
+  fpSetCol("bgc","bgDots",P.bg,false);
   const ctaBtn = _segFrame ? _segFrame.querySelector('button[data-v="cta"]') : null;
   if(ctaBtn && frameVal !== "cta") ctaBtn.click();
   const ft = $("frameText"); if(ft) ft.value = (FP_TEXT[name][lang] || FP_TEXT[name].en);
