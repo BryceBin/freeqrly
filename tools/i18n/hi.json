@@ -123,7 +123,8 @@
   "Contact": "संपर्क",
   "Privacy Policy": "गोपनीयता नीति",
   "Terms of Service": "सेवा की शर्तें",
-  "Pricing": "मूल्य"
+  "Pricing": "मूल्य",
+  "Last updated: October 24, 2026": "अंतिम अद्यतन: 24 अक्टूबर 2026"
  },
  "404": {
   "Page not found | FreeQrly": "पेज नहीं मिला | FreeQrly",
@@ -243,7 +244,14 @@
   "Your rights": "आपके अधिकार",
   "You can <a href=\"/dashboard/\">export your data</a> or <a href=\"/dashboard/\">delete your account</a> at any time from your Dashboard. Deleting your account releases your codes — they keep working, but can no longer be edited — and removes your account data. If you need anything else, reach us through the contact link in the footer.": "आप अपने डैशबोर्ड से कभी भी <a href=\"/dashboard/\">अपना डेटा एक्सपोर्ट</a> कर सकते हैं या <a href=\"/dashboard/\">अपना अकाउंट डिलीट</a> कर सकते हैं। अकाउंट डिलीट करने से आपके कोड रिलीज़ हो जाते हैं — वे चलते रहते हैं, लेकिन अब बदले नहीं जा सकते — और आपका अकाउंट डेटा हट जाता है। अगर आपको कुछ और चाहिए, तो फुटर में दिए संपर्क लिंक से हमसे संपर्क करें।",
   "If this policy changes, we will post the updated version here with a new date. Substantial changes will be noted on the homepage as well.": "अगर यह पॉलिसी बदलती है, तो हम अपडेटेड वर्शन नई तारीख के साथ यहां पोस्ट करेंगे। बड़े बदलावों का ज़िक्र होमपेज पर भी होगा।",
-  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">जनरेटर</a> · <a href=\"/terms/\">शर्तें</a>"
+  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">जनरेटर</a> · <a href=\"/terms/\">शर्तें</a>",
+  "Third-party sharing": "तृतीय पक्षों के साथ साझाकरण",
+  "We share limited data with a small number of service providers that help us run FreeQrly. They may only use it to provide their service to us:": "हम FreeQrly चलाने में मदद करने वाले कुछ ही सेवा प्रदाताओं के साथ सीमित डेटा साझा करते हैं। वे इसका उपयोग केवल हमें अपनी सेवा देने के लिए कर सकते हैं:",
+  "<b>Infrastructure — Cloudflare.</b> The site is hosted on Cloudflare and account data is stored in Cloudflare D1. Cloudflare processes requests (including IP addresses) to deliver pages, prevent abuse, and provide privacy-first, cookie-less web analytics. Cloudflare's own privacy policy applies to that processing.": "<b>इन्फ्रास्ट्रक्चर — Cloudflare।</b> साइट Cloudflare पर होस्ट की गई है और खाता डेटा Cloudflare D1 में संग्रहीत है। Cloudflare पेज डिलीवर करने, दुरुपयोग रोकने और गोपनीयता-प्रथम, कुकी-रहित वेब एनालिटिक्स देने के लिए अनुरोधों (IP पतों सहित) को प्रोसेस करता है। उस प्रोसेसिंग पर Cloudflare की अपनी गोपनीयता नीति लागू होती है।",
+  "<b>Payments — Waffo Pancake.</b> When you buy a Pro subscription, checkout and billing are handled by Waffo Pancake as the merchant of record. Your payment details go directly to them; we never see or store your full card number. We receive only what we need to manage your subscription (such as your email address and plan status).": "<b>भुगतान — Waffo Pancake।</b> जब आप Pro सदस्यता खरीदते हैं, तो चेकआउट और बिलिंग merchant of record के रूप में Waffo Pancake द्वारा संभाली जाती है। आपके भुगतान विवरण सीधे उन्हें जाते हैं; हम आपका पूरा कार्ड नंबर कभी नहीं देखते या संग्रहीत नहीं करते। हमें केवल आपकी सदस्यता प्रबंधित करने के लिए आवश्यक जानकारी मिलती है (जैसे आपका ईमेल पता और प्लान की स्थिति)।",
+  "<b>Email delivery — Resend.</b> Account emails (verification, password reset) are sent through Resend, which processes your email address to deliver them.": "<b>ईमेल डिलीवरी — Resend।</b> खाता ईमेल (सत्यापन, पासवर्ड रीसेट) Resend के माध्यम से भेजे जाते हैं, जो उन्हें पहुंचाने के लिए आपका ईमेल पता प्रोसेस करता है।",
+  "We do not sell your personal information, and we do not share it with advertisers or data brokers.": "हम आपकी व्यक्तिगत जानकारी नहीं बेचते, और न ही इसे विज्ञापनदाताओं या डेटा ब्रोकर्स के साथ साझा करते हैं।",
+  "One strictly-necessary session cookie keeps you signed in. That is all. No tracking pixels, no advertising cookies, and no analytics that follow you around the web — our analytics are Cloudflare's privacy-first, cookie-less page-view counts (see Third-party sharing above).": "एक पूरी तरह आवश्यक सत्र कुकी आपको साइन इन रखती है। बस इतना ही। कोई ट्रैकिंग पिक्सेल नहीं, कोई विज्ञापन कुकी नहीं, और कोई ऐसा एनालिटिक्स नहीं जो वेब पर आपका पीछा करे — हमारा एनालिटिक्स Cloudflare के गोपनीयता-प्रथम, कुकी-रहित पेज-व्यू गिनती है (ऊपर «तृतीय पक्षों के साथ साझाकरण» देखें)।"
  },
  "terms": {
   "Terms of Service — FreeQrly": "सेवा की शर्तें — FreeQrly",

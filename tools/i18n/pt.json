@@ -123,7 +123,8 @@
   "Contact": "Contato",
   "Privacy Policy": "Política de privacidade",
   "Terms of Service": "Termos de serviço",
-  "Pricing": "Preços"
+  "Pricing": "Preços",
+  "Last updated: October 24, 2026": "Última atualização: 24 de outubro de 2026"
  },
  "404": {
   "Page not found | FreeQrly": "Página não encontrada | FreeQrly",
@@ -244,7 +245,14 @@
   "Your rights": "Seus direitos",
   "You can <a href=\"/dashboard/\">export your data</a> or <a href=\"/dashboard/\">delete your account</a> at any time from your Dashboard. Deleting your account releases your codes — they keep working, but can no longer be edited — and removes your account data. If you need anything else, reach us through the contact link in the footer.": "Você pode <a href=\"/dashboard/\">exportar seus dados</a> ou <a href=\"/dashboard/\">excluir sua conta</a> a qualquer momento no seu Painel. Excluir sua conta libera seus códigos — eles continuam funcionando, mas não podem mais ser editados — e remove os dados da sua conta. Se precisar de qualquer outra coisa, fale conosco pelo link de contato no rodapé.",
   "If this policy changes, we will post the updated version here with a new date. Substantial changes will be noted on the homepage as well.": "Se esta política mudar, publicaremos a versão atualizada aqui com uma nova data. Mudanças substanciais também serão destacadas na página inicial.",
-  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">Gerador</a> · <a href=\"/terms/\">Termos</a>"
+  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">Gerador</a> · <a href=\"/terms/\">Termos</a>",
+  "Third-party sharing": "Compartilhamento com terceiros",
+  "We share limited data with a small number of service providers that help us run FreeQrly. They may only use it to provide their service to us:": "Compartilhamos dados limitados com um pequeno número de provedores de serviços que nos ajudam a operar o FreeQrly. Eles só podem usá-los para nos prestar o serviço:",
+  "<b>Infrastructure — Cloudflare.</b> The site is hosted on Cloudflare and account data is stored in Cloudflare D1. Cloudflare processes requests (including IP addresses) to deliver pages, prevent abuse, and provide privacy-first, cookie-less web analytics. Cloudflare's own privacy policy applies to that processing.": "<b>Infraestrutura — Cloudflare.</b> O site é hospedado na Cloudflare e os dados da conta são armazenados no Cloudflare D1. A Cloudflare processa as solicitações (incluindo endereços IP) para entregar as páginas, prevenir abusos e fornecer análises da web privadas e sem cookies. A esse processamento se aplica a própria política de privacidade da Cloudflare.",
+  "<b>Payments — Waffo Pancake.</b> When you buy a Pro subscription, checkout and billing are handled by Waffo Pancake as the merchant of record. Your payment details go directly to them; we never see or store your full card number. We receive only what we need to manage your subscription (such as your email address and plan status).": "<b>Pagamentos — Waffo Pancake.</b> Quando você compra uma assinatura Pro, o checkout e a cobrança são gerenciados pela Waffo Pancake como merchant of record. Seus dados de pagamento vão diretamente para eles; nunca vemos nem armazenamos o número completo do seu cartão. Recebemos apenas o necessário para gerenciar sua assinatura (como seu e-mail e o status do plano).",
+  "<b>Email delivery — Resend.</b> Account emails (verification, password reset) are sent through Resend, which processes your email address to deliver them.": "<b>Entrega de e-mails — Resend.</b> Os e-mails da conta (verificação, redefinição de senha) são enviados via Resend, que processa seu endereço de e-mail para entregá-los.",
+  "We do not sell your personal information, and we do not share it with advertisers or data brokers.": "Não vendemos suas informações pessoais nem as compartilhamos com anunciantes ou corretores de dados.",
+  "One strictly-necessary session cookie keeps you signed in. That is all. No tracking pixels, no advertising cookies, and no analytics that follow you around the web — our analytics are Cloudflare's privacy-first, cookie-less page-view counts (see Third-party sharing above).": "Um único cookie de sessão estritamente necessário mantém você conectado. Só isso. Sem pixels de rastreamento, sem cookies de publicidade e sem análises que sigam você pela web — nossas análises são as contagens de visualizações de página da Cloudflare, privadas e sem cookies (ver «Compartilhamento com terceiros» acima)."
  },
  "terms": {
   "Terms of Service — FreeQrly": "Termos de Serviço — FreeQrly",

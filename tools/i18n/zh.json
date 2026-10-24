@@ -123,7 +123,8 @@
   "Contact": "联系我们",
   "Privacy Policy": "隐私政策",
   "Terms of Service": "服务条款",
-  "Pricing": "定价"
+  "Pricing": "定价",
+  "Last updated: October 24, 2026": "最后更新：2026 年 10 月 24 日"
  },
  "404": {
   "Page not found | FreeQrly": "页面不存在 | FreeQrly",
@@ -244,7 +245,14 @@
   "Your rights": "你的权利",
   "You can <a href=\"/dashboard/\">export your data</a> or <a href=\"/dashboard/\">delete your account</a> at any time from your Dashboard. Deleting your account releases your codes — they keep working, but can no longer be edited — and removes your account data. If you need anything else, reach us through the contact link in the footer.": "你可以随时在 Dashboard 里<a href=\"/dashboard/\">导出数据</a>或<a href=\"/dashboard/\">删除账号</a>。删除账号会释放你的二维码——它们继续可用，但无法再编辑——同时删除你的账号数据。还有其他需要，请通过页脚的联系链接找我们。",
   "If this policy changes, we will post the updated version here with a new date. Substantial changes will be noted on the homepage as well.": "如果本政策变更，我们会在这里发布带新日期的更新版本。重大变更也会在首页说明。",
-  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">生成器</a> · <a href=\"/terms/\">服务条款</a>"
+  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">生成器</a> · <a href=\"/terms/\">服务条款</a>",
+  "Third-party sharing": "第三方共享",
+  "We share limited data with a small number of service providers that help us run FreeQrly. They may only use it to provide their service to us:": "我们仅与少数帮助 FreeQrly 运行的服务提供商共享有限的数据，他们只能将这些数据用于为我们提供服务：",
+  "<b>Infrastructure — Cloudflare.</b> The site is hosted on Cloudflare and account data is stored in Cloudflare D1. Cloudflare processes requests (including IP addresses) to deliver pages, prevent abuse, and provide privacy-first, cookie-less web analytics. Cloudflare's own privacy policy applies to that processing.": "<b>基础设施 — Cloudflare。</b>网站托管在 Cloudflare 上，账户数据存储在 Cloudflare D1 中。Cloudflare 会处理请求（包括 IP 地址），用于交付页面、防范滥用，并提供注重隐私、无 Cookie 的网站访问统计。对该处理行为适用 Cloudflare 自己的隐私政策。",
+  "<b>Payments — Waffo Pancake.</b> When you buy a Pro subscription, checkout and billing are handled by Waffo Pancake as the merchant of record. Your payment details go directly to them; we never see or store your full card number. We receive only what we need to manage your subscription (such as your email address and plan status).": "<b>支付 — Waffo Pancake。</b>当你购买 Pro 订阅时，结账与账单由作为交易记录商户（merchant of record）的 Waffo Pancake 处理。你的支付信息直接提交给他们；我们不会看到或存储你的完整卡号。我们只收到管理订阅所需的信息（例如你的邮箱地址和套餐状态）。",
+  "<b>Email delivery — Resend.</b> Account emails (verification, password reset) are sent through Resend, which processes your email address to deliver them.": "<b>邮件投递 — Resend。</b>账户邮件（验证邮件、密码重置邮件）通过 Resend 发送，Resend 会处理你的邮箱地址以完成投递。",
+  "We do not sell your personal information, and we do not share it with advertisers or data brokers.": "我们不会出售你的个人信息，也不会将其提供给广告商或数据经纪商。",
+  "One strictly-necessary session cookie keeps you signed in. That is all. No tracking pixels, no advertising cookies, and no analytics that follow you around the web — our analytics are Cloudflare's privacy-first, cookie-less page-view counts (see Third-party sharing above).": "一个用于保持登录状态的严格必要会话 Cookie，仅此而已。没有追踪像素，没有广告 Cookie，也没有会跨网站追踪你的统计工具——我们的统计是 Cloudflare 注重隐私、无 Cookie 的页面浏览计数（见上文「第三方共享」）。"
  },
  "terms": {
   "Terms of Service — FreeQrly": "服务条款 — FreeQrly",

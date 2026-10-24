@@ -851,7 +851,14 @@
   "Your rights": "حقوقك",
   "You can <a href=\"/dashboard/\">export your data</a> or <a href=\"/dashboard/\">delete your account</a> at any time from your Dashboard. Deleting your account releases your codes — they keep working, but can no longer be edited — and removes your account data. If you need anything else, reach us through the contact link in the footer.": "يمكنك <a href=\"/dashboard/\">تصدير بياناتك</a> أو <a href=\"/dashboard/\">حذف حسابك</a> في أي وقت من لوحة تحكمك. حذف حسابك يحرّر رموزك — فهي تستمر في العمل، لكن لا يمكن تعديلها بعد ذلك — ويزيل بيانات حسابك. إذا احتجت أي شيء آخر، تواصل معنا عبر رابط التواصل في التذييل.",
   "If this policy changes, we will post the updated version here with a new date. Substantial changes will be noted on the homepage as well.": "إذا تغيرت هذه السياسة، سننشر النسخة المحدّثة هنا بتاريخ جديد. التغييرات الجوهرية ستُذكر في الصفحة الرئيسية أيضًا.",
-  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">المولّد</a> · <a href=\"/terms/\">الشروط</a>"
+  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">المولّد</a> · <a href=\"/terms/\">الشروط</a>",
+  "Third-party sharing": "مشاركة البيانات مع أطراف ثالثة",
+  "We share limited data with a small number of service providers that help us run FreeQrly. They may only use it to provide their service to us:": "نشارك بيانات محدودة مع عدد صغير من مزودي الخدمات الذين يساعدوننا في تشغيل FreeQrly. ولا يجوز لهم استخدامها إلا لتقديم خدمتهم لنا:",
+  "<b>Infrastructure — Cloudflare.</b> The site is hosted on Cloudflare and account data is stored in Cloudflare D1. Cloudflare processes requests (including IP addresses) to deliver pages, prevent abuse, and provide privacy-first, cookie-less web analytics. Cloudflare's own privacy policy applies to that processing.": "<b>البنية التحتية — Cloudflare.</b> يُستضاف الموقع على Cloudflare وتُخزَّن بيانات الحساب في Cloudflare D1. تعالج Cloudflare الطلبات (بما فيها عناوين IP) لتقديم الصفحات ومنع إساءة الاستخدام وتوفير تحليلات ويب تحترم الخصوصية ولا تستخدم ملفات تعريف الارتباط. وتخضع تلك المعالجة لسياسة الخصوصية الخاصة بـ Cloudflare.",
+  "<b>Payments — Waffo Pancake.</b> When you buy a Pro subscription, checkout and billing are handled by Waffo Pancake as the merchant of record. Your payment details go directly to them; we never see or store your full card number. We receive only what we need to manage your subscription (such as your email address and plan status).": "<b>المدفوعات — Waffo Pancake.</b> عند شراء اشتراك Pro، يتولى Waffo Pancake بصفته تاجر السجل (merchant of record) إتمام الدفع والفوترة. تذهب بيانات الدفع الخاصة بك إليه مباشرة؛ فنحن لا نرى رقم بطاقتك الكامل ولا نخزّنه أبدًا. ونتلقى فقط ما نحتاجه لإدارة اشتراكك (مثل عنوان بريدك الإلكتروني وحالة خطتك).",
+  "<b>Email delivery — Resend.</b> Account emails (verification, password reset) are sent through Resend, which processes your email address to deliver them.": "<b>إرسال البريد — Resend.</b> تُرسَل رسائل الحساب (التحقق، إعادة تعيين كلمة المرور) عبر Resend، الذي يعالج عنوان بريدك الإلكتروني لتسليمها.",
+  "We do not sell your personal information, and we do not share it with advertisers or data brokers.": "لا نبيع معلوماتك الشخصية ولا نشاركها مع المعلنين أو وسطاء البيانات.",
+  "One strictly-necessary session cookie keeps you signed in. That is all. No tracking pixels, no advertising cookies, and no analytics that follow you around the web — our analytics are Cloudflare's privacy-first, cookie-less page-view counts (see Third-party sharing above).": "ملف تعريف ارتباط جلسة واحد ضروري للغاية يُبقيك مسجّل الدخول. هذا كل شيء. لا بكسلات تتبّع، ولا ملفات تعريف ارتباط إعلانية، ولا تحليلات تتعقبك عبر الويب — تحليلاتنا هي عدّادات مشاهدات الصفحات من Cloudflare التي تحترم الخصوصية ولا تستخدم ملفات تعريف الارتباط (انظر «مشاركة البيانات مع أطراف ثالثة» أعلاه)."
  },
  "reset": {
   "Reset password — FreeQrly": "إعادة تعيين كلمة المرور — FreeQrly",
@@ -1049,7 +1056,8 @@
   "Contact": "اتصل بنا",
   "Privacy Policy": "سياسة الخصوصية",
   "Terms of Service": "شروط الخدمة",
-  "Pricing": "التسعير"
+  "Pricing": "التسعير",
+  "Last updated: October 24, 2026": "آخر تحديث: 24 أكتوبر 2026"
  },
  "terms": {
   "Terms of Service — FreeQrly": "شروط الخدمة — FreeQrly",

@@ -124,7 +124,8 @@
   "Contact": "お問い合わせ",
   "Privacy Policy": "プライバシーポリシー",
   "Terms of Service": "利用規約",
-  "Pricing": "料金"
+  "Pricing": "料金",
+  "Last updated: October 24, 2026": "最終更新: 2026 年 10 月 24 日"
  },
  "login": {
   "Sign in — FreeQrly": "ログイン — FreeQrly",
@@ -245,7 +246,14 @@
   "Your rights": "あなたの権利",
   "You can <a href=\"/dashboard/\">export your data</a> or <a href=\"/dashboard/\">delete your account</a> at any time from your Dashboard. Deleting your account releases your codes — they keep working, but can no longer be edited — and removes your account data. If you need anything else, reach us through the contact link in the footer.": "ダッシュボードから、いつでも<a href=\"/dashboard/\">データを書き出し</a>たり、<a href=\"/dashboard/\">アカウントを削除</a>したりできます。アカウントを削除するとコードは解放されます — 引き続き動作しますが、編集はできなくなります — アカウントデータは削除されます。その他必要なことがあれば、フッターの連絡先リンクからご連絡ください。",
   "If this policy changes, we will post the updated version here with a new date. Substantial changes will be noted on the homepage as well.": "本ポリシーが変更された場合、更新版を新しい日付とともにここに掲載します。重要な変更はホームページでもお知らせします。",
-  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">ジェネレーター</a> · <a href=\"/terms/\">利用規約</a>"
+  "<a href=\"/\">Generator</a> · <a href=\"/terms/\">Terms</a>": "<a href=\"/\">ジェネレーター</a> · <a href=\"/terms/\">利用規約</a>",
+  "Third-party sharing": "第三者への開示",
+  "We share limited data with a small number of service providers that help us run FreeQrly. They may only use it to provide their service to us:": "FreeQrly の運営を支援する少数のサービス事業者に限り、限定的なデータを共有します。各事業者は、当社へのサービス提供以外の目的でデータを利用することはできません。",
+  "<b>Infrastructure — Cloudflare.</b> The site is hosted on Cloudflare and account data is stored in Cloudflare D1. Cloudflare processes requests (including IP addresses) to deliver pages, prevent abuse, and provide privacy-first, cookie-less web analytics. Cloudflare's own privacy policy applies to that processing.": "<b>インフラ — Cloudflare。</b>サイトは Cloudflare 上でホストされ、アカウントデータは Cloudflare D1 に保存されます。Cloudflare は、ページ配信、不正利用の防止、およびプライバシーに配慮した Cookie レスのウェブ解析の提供のため、リクエスト（IP アドレスを含む）を処理します。当該処理には Cloudflare 独自のプライバシーポリシーが適用されます。",
+  "<b>Payments — Waffo Pancake.</b> When you buy a Pro subscription, checkout and billing are handled by Waffo Pancake as the merchant of record. Your payment details go directly to them; we never see or store your full card number. We receive only what we need to manage your subscription (such as your email address and plan status).": "<b>決済 — Waffo Pancake。</b>Pro サブスクリプションをご購入の際は、merchant of record として Waffo Pancake がチェックアウトと請求を処理します。お支払い情報は直接同社に送信され、当社がカード番号の全体を確認・保存することは一切ありません。当社が受け取るのは、サブスクリプションの管理に必要な情報（メールアドレスやプランの状態など）のみです。",
+  "<b>Email delivery — Resend.</b> Account emails (verification, password reset) are sent through Resend, which processes your email address to deliver them.": "<b>メール配信 — Resend。</b>アカウント関連のメール（認証、パスワード再設定）は Resend を経由して送信され、配信のためにメールアドレスが処理されます。",
+  "We do not sell your personal information, and we do not share it with advertisers or data brokers.": "当社はお客様の個人情報を販売することはなく、広告主やデータブローカーと共有することもありません。",
+  "One strictly-necessary session cookie keeps you signed in. That is all. No tracking pixels, no advertising cookies, and no analytics that follow you around the web — our analytics are Cloudflare's privacy-first, cookie-less page-view counts (see Third-party sharing above).": "ログイン状態を維持するための厳格に必要なセッション Cookie が 1 つだけあります。これだけです。トラッキングピクセルも、広告 Cookie も、ウェブ上であなたを追跡する解析もありません。当社の解析は、Cloudflare によるプライバシーに配慮した Cookie レスのページビュー計数です（上記「第三者への開示」を参照）。"
  },
  "terms": {
   "Terms of Service — FreeQrly": "利用規約 — FreeQrly",
