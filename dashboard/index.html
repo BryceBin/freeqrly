@@ -1312,7 +1312,7 @@ async function boot(){
   LANG = LANGS.includes(qLang) ? qLang : (LANGS.includes(saved) ? saved : 'en');
   localStorage.setItem('freeqrly-lang', LANG);
   // Fire all independent data fetches in parallel (one round trip, not four).
-  const i18nP = fetch('/dashboard/i18n.json?v=plan2-20261022').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
+  const i18nP = fetch('/dashboard/i18n.json?v=plan3-20261026').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
   const meP = fetch('/api/auth/me', { credentials: 'same-origin' }).catch(() => null);
   const codesP = fetch('/api/me/codes', { credentials: 'same-origin' }).catch(() => null);
   const tokensP = fetch('/api/tokens', { credentials: 'same-origin' }).then(r => r.ok ? r.json().catch(() => ({})) : {}).catch(() => ({}));
