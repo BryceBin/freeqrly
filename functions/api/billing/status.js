@@ -23,6 +23,7 @@ export async function onRequestGet({ request, env }) {
       status: sub.status,
       period: sub.period,
       currentPeriodEnd: sub.current_period_end,
+      startedAt: sub.created_at,
     } : null,
   });
 }

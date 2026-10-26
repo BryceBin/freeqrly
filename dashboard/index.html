@@ -180,6 +180,24 @@ a.shortUrl:hover{text-decoration:underline}
 .pwModal{background:#FFFCF4;border-radius:22px;width:620px;max-width:94vw;padding:26px 30px;box-shadow:0 24px 70px rgba(40,30,5,.35);position:relative;box-sizing:border-box;margin:auto}
 .pwModal h3{font-family:Georgia,serif;font-size:24px;color:#22303F;margin:0}
 .pwX{position:absolute;top:13px;inset-inline-end:15px;background:none;border:0;font-size:16px;color:#A08F6C;cursor:pointer;padding:4px}
+.cwOverlay{position:fixed;inset:0;background:rgba(43,36,22,.48);z-index:200;display:flex;padding:20px 14px;overflow:auto}
+.cwOverlay[hidden]{display:none}
+.cwModal{background:#FFFCF4;border-radius:22px;width:480px;max-width:94vw;padding:28px 26px 24px;box-shadow:0 24px 70px rgba(40,30,5,.35);position:relative;box-sizing:border-box;margin:auto;text-align:center}
+.cwX{position:absolute;top:13px;inset-inline-end:15px;background:none;border:0;font-size:16px;color:#A08F6C;cursor:pointer;padding:4px}
+.cwQly{width:104px;height:104px;object-fit:contain;margin:0 auto 4px;display:block}
+.cwModal h3{font-size:21px;color:#22303F;margin:0}
+.cwStats{display:flex;gap:10px;margin:16px 0}
+.cwStats>div{flex:1;background:#FBF3E4;border-radius:14px;padding:12px 8px}
+.cwStats .n{font-size:20px;font-weight:800;color:#22303F}
+.cwStats .l{font-size:11.5px;color:#7A8A99;margin-top:2px;line-height:1.3}
+.cwRows{text-align:start;border-top:1px solid #EFE6D2;padding-top:14px}
+.cwRow{display:flex;gap:10px;align-items:flex-start;margin:11px 0;font-size:14px;line-height:1.55;color:#3D4A57;text-align:start}
+.cwIc{flex:0 0 22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.cwIc.k{background:#E6F4EA;color:#2E7D4F}
+.cwIc.g{background:#FBF0D3;color:#8A6D1B}
+.cwNote{font-size:12.5px;color:#7A8A99;line-height:1.5;margin:14px 0 16px;text-align:start}
+.cwKeep{display:block;width:100%;padding:13px;border:0;border-radius:12px;background:#EF7D6B;color:#fff;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+.cwQuiet{display:block;width:100%;text-align:center;margin-top:12px;background:none;border:0;color:#22303F;font-size:14px;cursor:pointer;font-family:inherit}
 .pwTable{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px;color:#3D4A57}
 .pwTable th,.pwTable td{padding:9px 8px;border-bottom:1px solid #F1EAD9;text-align:start}
 .pwTable th{color:#8A7B5F;font-size:12.5px;font-weight:600}
@@ -226,6 +244,25 @@ a.shortUrl:hover{text-decoration:underline}
       <p class="pwMicro" id="pwMicro"></p>
     </div>
   </div>
+  <div class="cwOverlay" id="cwOverlay" hidden>
+    <div class="cwModal" role="dialog" aria-modal="true">
+      <button class="cwX" id="cwClose" type="button" aria-label="Close">✕</button>
+      <img class="cwQly" src="/assets/img/mascots/home-welcome.webp" alt="">
+      <h3 id="cwTitle"></h3>
+      <div class="cwStats">
+        <div><div class="n" id="cwCodes"></div><div class="l" id="cwCodesLbl"></div></div>
+        <div><div class="n" id="cwScans"></div><div class="l" id="cwScansLbl"></div></div>
+        <div><div class="n" id="cwSince"></div><div class="l" id="cwSinceLbl"></div></div>
+      </div>
+      <div class="cwRows">
+        <div class="cwRow"><span class="cwIc k">✓</span><span id="cwKeep"></span></div>
+        <div class="cwRow"><span class="cwIc g">◆</span><span id="cwChange"></span></div>
+      </div>
+      <p class="cwNote" id="cwNote"></p>
+      <button class="cwKeep" id="cwKeepBtn" type="button"></button>
+      <button class="cwQuiet" id="cwCancelBtn" type="button"></button>
+    </div>
+  </div>
   <div class="errCard" id="loadErrCard" hidden><p class="merror" id="loadErr"></p></div>
   <div class="group"><a class="addRow" href="/?mode=dynamic"><span class="plus">＋</span><span data-t="newCode">New dynamic code</span></a></div>
   <div id="cards"><div class="group" aria-hidden="true">
@@ -269,7 +306,7 @@ a.shortUrl:hover{text-decoration:underline}
 const $ = id => document.getElementById(id);
 const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
 const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
-const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "codesUsedUnlimited": "{n} codes · unlimited (limited time)", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends.", "planCreated": "{n} dynamic codes created", "planOfLimit": " \u00b7 free limit {limit}", "planUnlimitedSuffix": " \u00b7 unlimited", "pwTitle": "Free vs Pro", "pwRowQuota": "Dynamic codes", "pwRowStatic": "Static codes", "pwRowEdit": "Edit after printing + scan stats", "pwRowMarks": "No watermark, never expires", "pwRowKeep": "Codes keep working after you cancel", "pwUnlimited": "Unlimited", "pwQuota20": "20", "pwBuyMonthly": "Upgrade monthly \u00b7 $9 / month", "pwBuyYearly": "Upgrade yearly \u00b7 $90 / year", "pwSave": "Save 17%", "pwMicro": "Cancel anytime \u00b7 7-day full refund on your first subscription"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "codesUsedUnlimited": "{n} codes · unlimited (limited time)", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "cwTitle": "Your Pro so far", "cwCodesLbl": "dynamic codes", "cwScansLbl": "total scans", "cwSinceLbl": "Pro since", "cwKeep": "Nothing happens to your {n} codes — they stay <b>editable</b>, keep their <b>stats</b>, and keep working.", "cwChange": "The one thing that changes: free accounts cap new dynamic codes at <b>20</b>. Pro stays <b>unlimited</b>.", "cwNote": "Pro stays active until {d}. No charge after that.", "cwKeepBtn": "Keep Pro", "cwCancelBtn": "Cancel anyway", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends.", "planCreated": "{n} dynamic codes created", "planOfLimit": " \u00b7 free limit {limit}", "planUnlimitedSuffix": " \u00b7 unlimited", "pwTitle": "Free vs Pro", "pwRowQuota": "Dynamic codes", "pwRowStatic": "Static codes", "pwRowEdit": "Edit after printing + scan stats", "pwRowMarks": "No watermark, never expires", "pwRowKeep": "Codes keep working after you cancel", "pwUnlimited": "Unlimited", "pwQuota20": "20", "pwBuyMonthly": "Upgrade monthly \u00b7 $9 / month", "pwBuyYearly": "Upgrade yearly \u00b7 $90 / year", "pwSave": "Save 17%", "pwMicro": "Cancel anytime \u00b7 7-day full refund on your first subscription"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
 let I18N = null;
 let LANG = 'en';
 let ME = null;
@@ -519,12 +556,42 @@ async function startCheckout(period, btn){
     note.textContent = t('ui','planCheckoutErr'); note.className = 'planNote warn';
   }
 }
-async function cancelPlan(){
-  if(!confirm(t('ui','planCancelConfirm'))) return;
+let cwWired = false;
+function openCancelWall(){
+  const sub = (PLAN && PLAN.subscription) || {};
+  $('cwTitle').textContent = t('ui','cwTitle');
+  const used = (PLAN && PLAN.usage) ? PLAN.usage.used : 0;
+  $('cwCodes').textContent = used;
+  $('cwCodesLbl').textContent = t('ui','cwCodesLbl');
+  const total = (CODES || []).reduce((s, c) => s + (c.totalScans || 0), 0);
+  $('cwScans').textContent = total.toLocaleString();
+  $('cwScansLbl').textContent = t('ui','cwScansLbl');
+  $('cwSince').textContent = sub.startedAt ? new Date(sub.startedAt).toLocaleDateString('en-US', {month:'short', day:'numeric'}) : '—';
+  $('cwSinceLbl').textContent = t('ui','cwSinceLbl');
+  $('cwKeep').innerHTML = t('ui','cwKeep').replace('{n}', '<b>' + used + '</b>');
+  $('cwChange').innerHTML = t('ui','cwChange');
+  const end = sub.currentPeriodEnd ? fmtDate(Date.parse(sub.currentPeriodEnd)) : '—';
+  $('cwNote').textContent = t('ui','cwNote').replace('{d}', end);
+  $('cwKeepBtn').textContent = t('ui','cwKeepBtn');
+  $('cwCancelBtn').textContent = t('ui','cwCancelBtn');
+  if(!cwWired){
+    cwWired = true;
+    $('cwClose').addEventListener('click', closeCancelWall);
+    $('cwKeepBtn').addEventListener('click', closeCancelWall);
+    $('cwCancelBtn').addEventListener('click', confirmCancelPlan);
+  }
+  $('cwOverlay').hidden = false;
+}
+function closeCancelWall(){ $('cwOverlay').hidden = true; }
+async function confirmCancelPlan(){
   try{
     const r = await fetch('/api/billing/cancel', { method: 'POST', credentials: 'same-origin' });
     if(r.ok) await loadPlan();
   }catch(e){ /* leave UI as-is */ }
+  closeCancelWall();
+}
+async function cancelPlan(){
+  openCancelWall();
 }
 function wireTokens(){
   $('createTokenBtn').addEventListener('click', createToken);
