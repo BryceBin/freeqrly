@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /q/
+Disallow: /api/
+Disallow: /mcp
 
 Sitemap: https://freeqrly.com/sitemap.xml
