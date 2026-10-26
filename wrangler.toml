@@ -8,11 +8,12 @@ pages_build_output_dir = "."
 # come back as strings.
 compatibility_date = "2026-10-16"
 
-# Waffo Pancake billing (functions/_lib/waffo.js). "test" until go-live;
-# secrets (WAFFO_MERCHANT_ID, WAFFO_PRIVATE_KEY_*, WAFFO_PRODUCT_*) are set
+# Waffo Pancake billing (functions/_lib/waffo.js). "prod" since 2026-10-26
+# go-live (products published from test, same IDs); secrets
+# (WAFFO_MERCHANT_ID, WAFFO_PRIVATE_KEY_*, WAFFO_PRODUCT_*) are set
 # as encrypted env vars in the Pages dashboard, never in this file.
 [vars]
-WAFFO_ENV = "test"
+WAFFO_ENV = "prod"
 
 [[d1_databases]]
 binding = "DB"
