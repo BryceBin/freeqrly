@@ -421,10 +421,15 @@ function renderPlan(){
     ? '<img class="planBadgeImg" src="/assets/img/pro-badge.png" alt="Pro">'
     : '<span class="planPill">' + t('ui','planCurrentFree') + '</span>';
   const params = new URLSearchParams(location.search);
-  if(params.get('billing') === 'success'){
+  if(params.get('billing') === 'success' && !isPro){
     const ok = $('planSuccess');
     ok.textContent = t('ui','planSuccess');
     ok.hidden = false;
+    // Strip the param so refresh/back never resurfaces the banner; once
+    // Pro is active (isPro) the banner is hidden anyway.
+    params.delete('billing');
+    const qs = params.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
   }
   const line = $('planLine'), note = $('planNote'), bar = $('planBar'), actions = $('planActions');
   note.className = 'planNote'; note.textContent = '';
