@@ -1602,7 +1602,9 @@ detectLang().then(async l => {
         history.replaceState(null, "", u.pathname + u.search + u.hash);
       }
     }catch(e){}
-  } else if(params.get("mode") === "dynamic"){
+  } else if(params.get("mode") === "dynamic" || document.body.getAttribute("data-mode") === "dynamic"){
+    // Landing pages preselect dynamic via body[data-mode], same pattern as
+    // body[data-type] for the content type above.
     switchToDynamic();
   }
 });

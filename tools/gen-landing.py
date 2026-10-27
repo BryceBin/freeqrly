@@ -502,7 +502,7 @@ dict(slug="christmas-qr-code", dtype="event",
        ("I need a different code on every gift tag. Help?","Use Batch mode in the generator: one link per line, one code per tag, all downloaded as a ZIP.")]),
 ]
 PAGES += [
-dict(slug="dynamic-qr-code", dtype="url", en_only=True,
+dict(slug="dynamic-qr-code", dtype="url", en_only=True, mode="dynamic",
   title="Free Dynamic QR Code Generator | FreeQrly",
   desc="Create a free dynamic QR code you can edit after printing. Change the destination anytime, see scan counts \u2014 free sign-in, no expiry, no watermark.",
   kw="dynamic qr code",
@@ -576,6 +576,7 @@ def build(p):
     faq_html = "\n".join(
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
         for q, a in p["faq"])
+    mode_attr = f' data-mode="{p["mode"]}"' if p.get("mode") else ""
     other = [x for x in PAGES if x["slug"] != p["slug"]]
     foot_links = ' · '.join('<a href="/%s/">%s</a>' % (x["slug"], x["kw"]) for x in other)
     # en_only pages ship English-only for now (no localized copies yet, so
@@ -632,7 +633,7 @@ def build(p):
 {howto_json(p)}
 </script>
 </head>
-<body data-lp="{p["slug"]}" data-type="{p["dtype"]}">
+<body data-lp="{p["slug"]}" data-type="{p["dtype"]}"{mode_attr}>
 <div class="wrap">
 {HEADER}
   <section class="hero lp-hero">
