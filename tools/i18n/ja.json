@@ -125,7 +125,9 @@
   "Privacy Policy": "プライバシーポリシー",
   "Terms of Service": "利用規約",
   "Pricing": "料金",
-  "Last updated: October 24, 2026": "最終更新: 2026 年 10 月 24 日"
+  "Last updated: October 24, 2026": "最終更新: 2026 年 10 月 24 日",
+  "Dynamic QR Codes": "動的QRコード",
+  "Ticket QR Codes": "チケットQRコード"
  },
  "login": {
   "Sign in — FreeQrly": "ログイン — FreeQrly",

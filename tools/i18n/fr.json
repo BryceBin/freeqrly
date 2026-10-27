@@ -124,7 +124,10 @@
   "Privacy Policy": "Politique de confidentialité",
   "Terms of Service": "Conditions d'utilisation",
   "Pricing": "Tarifs",
-  "Last updated: October 24, 2026": "Dernière mise à jour : 24 octobre 2026"
+  "Last updated: October 24, 2026": "Dernière mise à jour : 24 octobre 2026",
+  "October 19, 2026 · 4 min read": "19 octobre 2026 · 4 min de lecture",
+  "Dynamic QR Codes": "QR codes dynamiques",
+  "Ticket QR Codes": "QR codes de billet"
  },
  "404": {
   "Page not found | FreeQrly": "Page introuvable | FreeQrly",
@@ -446,7 +449,9 @@
   "Best free QR code generators, compared honestly": "Les meilleurs générateurs de QR code gratuits, comparés honnêtement",
   "FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR — free tiers, limits, and who each fits.": "FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR — offres gratuites, limites, et à qui chacun convient.",
   "Why is my QR code blurry?": "Pourquoi mon QR code est-il flou ?",
-  "Too few pixels stretched across too much space. The 5 causes and the fix for each.": "Trop peu de pixels étirés sur trop d'espace. Les 5 causes et le correctif pour chacune."
+  "Too few pixels stretched across too much space. The 5 causes and the fix for each.": "Trop peu de pixels étirés sur trop d'espace. Les 5 causes et le correctif pour chacune.",
+  "Get more Google reviews with a QR code": "Obtenez plus d’avis Google avec un QR code",
+  "Find your review link, print the code, place it where happy customers stand.": "Trouvez votre lien d’avis, imprimez le code, placez-le là où se tiennent les clients satisfaits."
  },
  "landing-wifi-qr-code": {
   "Free WiFi QR Code Generator | FreeQrly": "Générateur gratuit de QR code WiFi | FreeQrly",
@@ -1925,5 +1930,47 @@
   "Links become static codes instantly, no sign-up. For invitations, the studio below starts on Event: title, start, end, place.": "Les liens deviennent des codes statiques instantanément, sans inscription. Pour les invitations, le studio ci-dessous démarre déjà sur Événement : titre, début, fin, lieu.",
   "Print it where the surprise lands": "Imprimez-le là où la surprise atterrit",
   "Inside the card, on the gift tag, on the invitation envelope. The 1024 px export stays crisp at card size.": "Dans la carte, sur l'étiquette du cadeau, sur l'enveloppe de l'invitation. L'export en 1024 px reste net au format carte."
+ },
+ "blog-get-google-reviews-with-qr-code": {
+  "How to Get More Google Reviews with a QR Code | FreeQrly": "Comment obtenir plus d’avis Google avec un QR code | FreeQrly",
+  "More Google reviews with a QR code: find your review link, generate a free review QR code, and place it where customers actually scan — receipt, table, checkout.": "Plus d’avis Google avec un QR code : trouvez votre lien d’avis, générez un QR code d’avis gratuit, et placez-le là où les clients scannent vraiment — ticket de caisse, table, passage en caisse.",
+  "Get more Google reviews with <span class='hl hl-blush'>a QR code</span>": "Obtenez plus d’avis Google avec <span class='hl hl-blush'>un QR code</span>",
+  "The best time to ask for a review is the moment a happy customer is standing in front of you. A QR code makes that moment one scan long.": "Le meilleur moment pour demander un avis, c’est quand un client satisfait se tient devant vous. Un QR code fait de ce moment un seul scan.",
+  "Google reviews decide who gets picked — and the businesses with the most reviews didn't get them by luck. They asked, at the right moment, with zero friction. A QR code pointing straight at your Google review form turns \"please leave us a review\" into a single scan.": "Les avis Google décident qui sera choisi — et les entreprises qui en ont le plus ne les ont pas obtenus par chance. Elles ont demandé, au bon moment, sans friction. Un QR code pointant directement vers votre formulaire d’avis Google transforme « laissez-nous un avis, s’il vous plaît » en un seul scan.",
+  "Step 1 — get your Google review link": "Étape 1 — récupérez votre lien d’avis Google",
+  "You need the direct link to your review form, not just your business listing:": "Il vous faut le lien direct vers votre formulaire d’avis, pas seulement votre fiche d’établissement :",
+  "Go to your <a href=\"https://www.google.com/business/\">Google Business Profile</a> and sign in.": "Allez sur votre <a href=\"https://www.google.com/business/\">profil d’entreprise Google</a> et connectez-vous.",
+  "Open the \"Reviews\" section and look for \"Get more reviews\" — Google gives you a short shareable link (it looks like <code>https://g.page/your-business/review</code>).": "Ouvrez la section « Avis » et cherchez « Obtenir plus d’avis » — Google vous donne un lien court à partager (il ressemble à <code>https://g.page/your-business/review</code>).",
+  "Copy it. That's the link your QR code will hold.": "Copiez-le. C’est le lien que votre QR code contiendra.",
+  "Step 2 — turn it into a QR code": "Étape 2 — transformez-le en QR code",
+  "Paste the link into a <a href=\"/google-review-qr-code/\">Google review QR code generator</a> — it takes seconds, it's free, and the static code never expires. Print it at a decent size: business-card codes get ignored, but a 5 cm code on a table tent gets scanned. Keep dark ink on a light background with a clear quiet margin around the code.": "Collez le lien dans un <a href=\"/google-review-qr-code/\">générateur de QR code d’avis Google</a> — cela prend quelques secondes, c’est gratuit, et le code statique n’expire jamais. Imprimez-le à une taille correcte : les codes de carte de visite sont ignorés, mais un code de 5 cm sur un chevalet de table est scanné. Gardez une encre foncée sur fond clair, avec une marge de silence nette autour du code.",
+  "Step 3 — put it where the moment happens": "Étape 3 — placez-le là où le moment se joue",
+  "Placement is the whole game. The code has to be in front of a happy customer <em>before</em> they leave:": "L’emplacement, c’est tout le jeu. Le code doit se trouver devant un client satisfait <em>avant</em> qu’il ne parte :",
+  "<strong>Restaurants & cafés:</strong> table tents and the receipt. \"Enjoyed your meal? One scan.\" beats a follow-up email nobody opens.": "<strong>Restaurants et cafés :</strong> chevalets de table et ticket de caisse. « Vous avez aimé votre repas ? Un scan. » vaut mieux qu’un e-mail de suivi que personne n’ouvre.",
+  "<strong>Retail & salons:</strong> the checkout counter, right where they pay — satisfaction peaks at purchase.": "<strong>Commerce et salons :</strong> le comptoir de caisse, juste là où ils paient — la satisfaction est à son maximum au moment de l’achat.",
+  "<strong>Services (plumbers, tutors, clinics):</strong> a card handed over at the end of the visit, or a sticker on the invoice.": "<strong>Services (plombiers, professeurs, cliniques) :</strong> une carte remise à la fin de la visite, ou un autocollant sur la facture.",
+  "<strong>Delivery & takeaway:</strong> a sticker on the bag or box. The food is the reminder.": "<strong>Livraison et plats à emporter :</strong> un autocollant sur le sac ou la boîte. La nourriture est le rappel.",
+  "What to write next to it": "Quoi écrire à côté",
+  "A bare code gets fewer scans than a code with a reason. Keep it short and specific: \"Love your visit? Scan to review us on Google — 30 seconds.\" Asking for <em>Google</em> reviews by name matters — customers default to whichever platform is easiest, and you want them on the one future customers check.": "Un code seul est moins scanné qu’un code avec une raison. Restez court et précis : « Vous avez aimé votre visite ? Scannez pour nous laisser un avis sur Google — 30 secondes. » Demander nommément des avis <em>Google</em> compte — les clients se tournent par défaut vers la plateforme la plus simple, et vous voulez qu’ils aillent sur celle que les futurs clients consultent.",
+  "A few honest tips": "Quelques conseils honnêtes",
+  "<strong>Ask, don't beg.</strong> One visible code plus a spoken \"we'd love a review\" outperforms five signs.": "<strong>Demandez, ne suppliez pas.</strong> Un code bien visible plus un « nous serions ravis d’avoir votre avis » dit à voix haute vaut mieux que cinq affiches.",
+  "<strong>Never pay for reviews or offer rewards for them</strong> — it violates Google's policies and the reviews get removed anyway.": "<strong>Ne payez jamais pour des avis et n’offrez pas de récompenses en échange</strong> — cela enfreint les règles de Google et les avis sont de toute façon supprimés.",
+  "<strong>Reply to reviews.</strong> A business that answers reviews gets more of them; reviewers can see you read them.": "<strong>Répondez aux avis.</strong> Une entreprise qui répond aux avis en reçoit davantage ; les auteurs voient que vous les lisez.",
+  "<strong>Track what works.</strong> If you want to know which placement drives scans, use a dynamic code for one location and compare — but for most shops, one static code that never expires is all you need.": "<strong>Mesurez ce qui fonctionne.</strong> Si vous voulez savoir quel emplacement génère des scans, utilisez un code dynamique pour un lieu et comparez — mais pour la plupart des commerces, un seul code statique qui n’expire jamais suffit.",
+  "Make your review QR code": "Créez votre QR code d’avis",
+  "Paste your Google review link, get a printable code in seconds. Free, no sign-up for static codes.": "Collez votre lien d’avis Google, obtenez un code imprimable en quelques secondes. Gratuit, sans inscription pour les codes statiques.",
+  "Create review code": "Créer un code d’avis",
+  "<span>How do I create a QR code for Google reviews?</span>": "<span>Comment créer un QR code pour les avis Google ?</span>",
+  "Copy your Google review link from your Google Business Profile (Reviews → Get more reviews), paste it into a free QR code generator, and print the code. Static codes are free and never expire.": "Copiez votre lien d’avis Google depuis votre profil d’entreprise Google (Avis → Obtenir plus d’avis), collez-le dans un générateur de QR code gratuit, et imprimez le code. Les codes statiques sont gratuits et n’expirent jamais.",
+  "<span>Where should I put my Google review QR code?</span>": "<span>Où placer mon QR code d’avis Google ?</span>",
+  "Wherever a satisfied customer stands before leaving: restaurant tables and receipts, retail checkout counters, service invoices, or delivery packaging.": "Partout où un client satisfait se tient avant de partir : tables et tickets de restaurant, comptoirs de caisse, factures de services, ou emballages de livraison.",
+  "<span>Do Google review QR codes expire?</span>": "<span>Les QR codes d’avis Google expirent-ils ?</span>",
+  "A static QR code never expires — it holds your review link directly. As long as your Google Business Profile exists, the code keeps working.": "Un QR code statique n’expire jamais — il contient directement votre lien d’avis. Tant que votre profil d’entreprise Google existe, le code continue de fonctionner.",
+  "<span>Should I offer a discount for a Google review?</span>": "<span>Faut-il offrir une réduction en échange d’un avis Google ?</span>",
+  "No. Google prohibits incentivized reviews and removes them. Ask at the right moment instead — that's what the QR code is for.": "Non. Google interdit les avis récompensés et les supprime. Demandez plutôt au bon moment — c’est à cela que sert le QR code.",
+  "How do I create a QR code for Google reviews?": "Comment créer un QR code pour les avis Google ?",
+  "Where should I put my Google review QR code?": "Où placer mon QR code d’avis Google ?",
+  "Do Google review QR codes expire?": "Les QR codes d’avis Google expirent-ils ?",
+  "Should I offer a discount for a Google review?": "Faut-il offrir une réduction en échange d’un avis Google ?"
  }
 }

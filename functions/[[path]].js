@@ -30,7 +30,8 @@ const TOP_LEVEL = new Set([
   'tiktok-qr-code', 'spotify-qr-code', 'facebook-qr-code',
   'google-maps-qr-code',
   'bitcoin-qr-code', 'coupon-qr-code', 'app-store-qr-code', 'mp3-qr-code',
-  'black-friday-qr-code', 'christmas-qr-code']);
+  'black-friday-qr-code', 'christmas-qr-code',
+  'dynamic-qr-code', 'ticket-qr-code']);
 
 function isKnown(path) {
   if (path === '/') return true;

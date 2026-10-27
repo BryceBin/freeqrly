@@ -501,6 +501,36 @@ dict(slug="christmas-qr-code", dtype="event",
        ("Will the code still work next Christmas?","Yes \u2014 static codes never expire. The same printed code works next year too, as long as the page or video behind it is still online."),
        ("I need a different code on every gift tag. Help?","Use Batch mode in the generator: one link per line, one code per tag, all downloaded as a ZIP.")]),
 ]
+PAGES += [
+dict(slug="dynamic-qr-code", dtype="url", en_only=True,
+  title="Free Dynamic QR Code Generator | FreeQrly",
+  desc="Create a free dynamic QR code you can edit after printing. Change the destination anytime, see scan counts \u2014 free sign-in, no expiry, no watermark.",
+  kw="dynamic qr code",
+  h1='A QR code you can <span class="hl hl-blush">change after printing</span>.',
+  lede="Print it once, point it anywhere, forever. A dynamic code keeps the same printed pattern while you change where it goes \u2014 and shows you how often it gets scanned. Free with a sign-in.",
+  steps=[("Make a code here","Paste your link in the studio below \u2014 your code appears instantly, free, no sign-up for the static version."),
+         ("Sign in free to make it dynamic","From your dashboard, create a dynamic code for the same destination. It looks the same on paper \u2014 the difference is on our side."),
+         ("Edit and track from your dashboard","Change the destination anytime, check scan counts, and repoint old posters to your next campaign. The printed code never changes.")],
+  studio_h2="Try the studio \u2014 then make it dynamic",
+  faq=[("What is a dynamic QR code?","A code whose destination lives on the server side instead of inside the pattern. The printed code stays the same, but you can change where it points after printing \u2014 and see how many times it was scanned."),
+       ("How is it different from a static code?","A static code carries its content inside the pattern: free, no sign-up, made in your browser, and it can never change. A dynamic code needs a free sign-in, but you can edit its destination and track scans. Both never expire."),
+       ("How many dynamic codes are free?","20 on the free plan \u2014 and right now, during the limited-time offer, unlimited for everyone. Pro is unlimited, always."),
+       ("Do dynamic codes expire?","No. Dynamic codes never expire. If you stop using one, repoint it to your next campaign instead of reprinting \u2014 the poster keeps working.")]),
+dict(slug="ticket-qr-code", dtype="url", en_only=True,
+  title="Free Ticket QR Code Generator | FreeQrly",
+  desc="Create free QR codes for tickets: link to your ticket or check-in page, print one code per ticket with Batch mode, no sign-up for static codes, never expires.",
+  kw="qr code ticket",
+  h1='One scan at the door, <span class="hl hl-mint">no ticket queue</span>.',
+  lede="Put a QR code on every ticket, poster, and confirmation email. Guests scan at the entrance and land straight on your ticket or check-in page \u2014 concerts, conferences, workshops, school events.",
+  steps=[("Link to your ticket page","Your ticketing page, check-in form, or event details \u2014 one code, one destination."),
+         ("Make the code","Paste the link in the studio below. Print-ready PNG or SVG, free, no watermark, no sign-up for static codes."),
+         ("One code per ticket, with Batch","Need a different code on every ticket? Batch mode takes one link per line and downloads every code as a ZIP.")],
+  studio_h2="Make your ticket QR code",
+  faq=[("What should a ticket QR code link to?","Your ticket page, a check-in form, or the event details page. The code simply opens that page on the guest\u2019s phone \u2014 keep the page itself as the source of truth for entry."),
+       ("Can I make a different code for every ticket?","Yes \u2014 Batch mode generates one code per link: paste one ticket link per line, download them all as a ZIP, and print each on its own ticket."),
+       ("Do ticket QR codes expire?","No. Static codes never expire. If the event moves, point the page behind the code at the new details \u2014 or, with a dynamic code, repoint the code itself without reprinting."),
+       ("How big should I print it on a ticket?","At least 2 \u00d7 2 cm with a clear quiet margin, at 1024 px export or higher. At a busy entrance, bigger is safer \u2014 a code that scans first try keeps the line moving.")]),
+]
 
 EXTRA_CSS = '''
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start;margin-bottom:72px}
@@ -548,6 +578,20 @@ def build(p):
         for q, a in p["faq"])
     other = [x for x in PAGES if x["slug"] != p["slug"]]
     foot_links = ' · '.join('<a href="/%s/">%s</a>' % (x["slug"], x["kw"]) for x in other)
+    # en_only pages ship English-only for now (no localized copies yet, so
+    # they must NOT claim localized hreflang URLs that would 404). When
+    # translations land, drop en_only and register the slug in
+    # localize_pages.py LANDING + _LOCALIZABLE and extract-i18n.py LANDING.
+    if p.get("en_only"):
+        hl = f'<link rel="alternate" hreflang="en" href="{url}">\n<link rel="alternate" hreflang="x-default" href="{url}">'
+        locale_alts = ""
+    else:
+        hl = "\n".join(
+            [f'<link rel="alternate" hreflang="en" href="{url}">']
+            + [f'<link rel="alternate" hreflang="{lg}" href="https://freeqrly.com/{lg}/{p["slug"]}/">' for lg in ("zh", "es", "hi", "ar", "pt", "fr", "ru", "de", "ja")]
+            + [f'<link rel="alternate" hreflang="x-default" href="{url}">'])
+        locale_alts = "\n".join(
+            f'<meta property="og:locale:alternate" content="{lc}">' for lc in ("zh_CN", "es_ES", "hi_IN", "ar_AR", "pt_BR", "fr_FR", "ru_RU", "de_DE", "ja_JP"))
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -556,17 +600,7 @@ def build(p):
 <title>{p["title"]}</title>
 <meta name="description" content="{p["desc"]}">
 <link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="en" href="{url}">
-<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/{p['slug']}/">
-<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/{p['slug']}/">
-<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/{p['slug']}/">
-<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/{p['slug']}/">
-<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/{p['slug']}/">
-<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/{p['slug']}/">
-<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/{p['slug']}/">
-<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/{p['slug']}/">
-<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/{p['slug']}/">
-<link rel="alternate" hreflang="x-default" href="{url}">
+{hl}
 <meta name="theme-color" content="#e9eef4">
 <meta property="og:title" content="{p["title"]}">
 <meta property="og:description" content="{p["desc"]}">
@@ -574,15 +608,7 @@ def build(p):
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="https://freeqrly.com/og.png">
 <meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="zh_CN">
-<meta property="og:locale:alternate" content="es_ES">
-<meta property="og:locale:alternate" content="hi_IN">
-<meta property="og:locale:alternate" content="ar_AR">
-<meta property="og:locale:alternate" content="pt_BR">
-<meta property="og:locale:alternate" content="fr_FR">
-<meta property="og:locale:alternate" content="ru_RU">
-<meta property="og:locale:alternate" content="de_DE">
-<meta property="og:locale:alternate" content="ja_JP">
+{locale_alts}
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-scanner.png">
@@ -641,7 +667,7 @@ def build(p):
         <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
         <div class="fmade">Made quietly — static codes in your browser.</div>
       </div>
-      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a><a href="/pricing/">Pricing</a></div>
+      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/dynamic-qr-code/">Dynamic QR Codes</a><a href="/ticket-qr-code/">Ticket QR Codes</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a><a href="/pricing/">Pricing</a></div>
       <div class="fcol"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/developers/">Developers · API &amp; MCP</a><a href="/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/#faq">FAQ</a></div>
       <div class="fcol"><h4>Company</h4><a href="/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
       <div class="fcol"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
