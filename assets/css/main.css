@@ -244,6 +244,7 @@ footer .tiny{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:
 .prose strong{font-weight:700}
 .prose blockquote{border-left:4px solid var(--honey);background:var(--honeybg);border-radius:0 14px 14px 0;padding:16px 22px;margin:0 0 1.4em;font-family:Georgia,serif;font-style:italic;font-size:18px}
 .cta-card{margin:44px 0;background:var(--mintbg);border:1px solid var(--mint);border-radius:22px;padding:30px 32px;display:flex;gap:20px;align-items:center}
+.cta-card .mascot{width:160px}
 .cta-card h3{font-family:Georgia,serif;font-weight:400;font-size:21px;margin-bottom:8px}
 .cta-card p{font-size:14.5px;color:var(--soft);margin-bottom:14px;line-height:1.6}
 .cta-card a.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;border-radius:14px;padding:12px 26px}
@@ -304,7 +305,7 @@ pre.code{background:#232D3B;color:#E8EEF5;border-radius:16px;padding:22px 24px;f
   details{padding:18px}
   summary{font-size:15px}
   .batchGrid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .cta-card{flex-direction:column;text-align:center}
+  .cta-card{flex-direction:column;text-align:center;align-items:center}
   footer{padding:28px 0 40px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
