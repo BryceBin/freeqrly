@@ -38,7 +38,8 @@ LANDING = ["google-form-qr-code", "wifi-qr-code", "vcard-qr-code", "batch-qr-cod
            "tiktok-qr-code", "spotify-qr-code", "facebook-qr-code",
            "google-maps-qr-code",
            "bitcoin-qr-code", "coupon-qr-code", "app-store-qr-code",
-           "mp3-qr-code", "black-friday-qr-code", "christmas-qr-code"]
+           "mp3-qr-code", "black-friday-qr-code", "christmas-qr-code",
+           "dynamic-qr-code", "ticket-qr-code"]
 for d in LANDING:
         PAGES[f"landing-{d}"] = (f"{d}/index.html", "{lang}/" + d + "/index.html")
 for d in sorted(os.listdir(os.path.join(SITE, "blog"))):
@@ -141,6 +142,7 @@ def localize_page(key, lang, trans):
         "facebook-qr-code", "google-maps-qr-code", "bitcoin-qr-code",
         "coupon-qr-code", "app-store-qr-code", "mp3-qr-code",
         "black-friday-qr-code", "christmas-qr-code",
+        "dynamic-qr-code", "ticket-qr-code",
         "about", "privacy", "terms", "pricing", "developers",
         "scan", "barcode-generator", "login", "reset", "blog"])
     def _loc_url(m):

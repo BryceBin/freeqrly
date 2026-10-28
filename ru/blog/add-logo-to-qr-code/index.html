@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Как добавить логотип в QR-код (и сохранить его считываемым) | FreeQrly</title>
+<meta name="description" content="Поместите логотип в центр QR-кода: загрузите квадратный PNG, держите его в пределах ~30% площади кода, а коррекцию ошибок оставьте работать. Бесплатно, без водяных знаков, код по-прежнему сканируется.">
+<link rel="canonical" href="https://freeqrly.com/ru/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Как добавить логотип в QR-код (и сохранить его считываемым) | FreeQrly">
+<meta property="og:description" content="Поместите логотип в центр QR-кода: загрузите квадратный PNG, держите его в пределах ~30% площади кода, а коррекцию ошибок оставьте работать. Бесплатно, без водяных знаков, код по-прежнему сканируется.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ru/blog/add-logo-to-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261028">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Как добавить логотип в QR-код (и сохранить его считываемым) | FreeQrly","description":"Поместите логотип в центр QR-кода: загрузите квадратный PNG, держите его в пределах ~30% площади кода, а коррекцию ошибок оставьте работать. Бесплатно, без водяных знаков, код по-прежнему сканируется.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Сломает ли мой логотип QR-код?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет, если он остаётся в пределах ~30% площади кода. При добавлении логотипа коррекция ошибок поднимается автоматически, поэтому закрытая середина не мешает сканированию."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой файл логотипа подходит лучше всего?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Квадратный PNG с прозрачностью. Прямоугольные логотипы и логотипы в белом прямоугольнике тратят место и спорят с узором."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли использовать логотип с любым типом QR-кода?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да — ссылка, визитка vCard, Wi-Fi и любой другой тип. Один и тот же логотип можно применить и ко всей партии."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG или SVG для печати?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG до 2048 px для большинства печатных задач или SVG, когда нужна бесконечная масштабируемость, например для баннера."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Как добавить логотип в QR-код (и сохранить его считываемым) | FreeQrly","description":"Поместите логотип в центр QR-кода: загрузите квадратный PNG, держите его в пределах ~30% площади кода, а коррекцию ошибок оставьте работать. Бесплатно, без водяных знаков, код по-прежнему сканируется.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Создайте код",
+      "text": "С логотипом работает любой тип: ссылка, визитка vCard, сеть Wi-Fi."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Загрузите квадратный PNG",
+      "text": "Лучше всего — с прозрачностью. Держите логотип в пределах ~30% площади кода."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Пусть коррекция ошибок подстроится",
+      "text": "Она поднимается автоматически при добавлении логотипа, поэтому код по-прежнему сканируется."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Проверьте сканированием перед печатью",
+      "text": "Два телефона, iPhone и Android, на самой распечатке. Если оба считывают с первой попытки — в печать."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3w-20261028"></script>
+<script src="/assets/js/acct-menu.js?v=b3w-20261028"></script>
+<script src="/assets/js/subpage-header.js?v=b3w-20261028"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="Qly — слон, талисман FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Заметки</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Ваш логотип — <span class='hl hl-blush'>в середине</span>, а код по-прежнему сканируется</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Логотип делает код вашим. Но он же закрывает часть узора. Вот как получить и то, и другое: логотип строго по центру, а код считывается с первой попытки.</p>
+    <p class="meta" style="text-align:center">28 октября 2026 · 4 мин чтения</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>Обычный QR-код работает. QR-код с логотипом работает и при этом узнаётся — на упаковке, на визитке, на плакате через всю комнату. Подвох реален: логотип лежит поверх узора, а телефон считывает именно узор. Нарушите баланс — и код перестанет сканироваться. Найдёте баланс — и никто не заметит инженерию, все просто увидят ваш бренд.</p>
+
+<h2>Три правила</h2>
+<ol>
+<li><b>Квадратный PNG с прозрачностью.</b> Квадратный логотип на прозрачном фоне ложится в середину чище всего. Прямоугольный логотип или логотип в белом прямоугольнике тратит место впустую и спорит с узором.</li>
+<li><b>Держите его в пределах ~30% площади кода.</b> Это эмпирическое правило, которым пользуется и сам генератор: достаточно мало, чтобы оставшийся узор всё ещё нёс данные, и достаточно крупно, чтобы читаться с первого взгляда.</li>
+<li><b>Позвольте коррекции ошибок делать свою работу.</b> QR-коды устроены так, чтобы переживать повреждения: до 30% узора может отсутствовать, а код всё равно прочитается. Когда вы добавляете логотип, коррекция ошибок поднимается автоматически, так что закрытая середина не имеет значения.</li>
+</ol>
+
+<h2>Шаг за шагом</h2>
+<p>Сначала сделайте код — с логотипом работает любой тип: ссылка, визитка vCard, сеть Wi-Fi. Затем загрузите логотип на шаге с логотипом в студии, разместите его по центру и скачайте. PNG до 2048 px для печати или SVG, если нужна бесконечная масштабируемость. Шаг с логотипом работает со всеми типами кодов, а один и тот же логотип можно применить ко всей партии.</p>
+
+<h2>Четыре ошибки, которые ломают сканирование</h2>
+<ul>
+<li><strong>Слишком большой логотип.</strong> После ~30% площади даже коррекция ошибок не восстановит недостающие данные. Если логотип обязательно должен быть крупным, используйте более короткую ссылку: меньше данных — просторнее узор.</li>
+<li><strong>Низкоконтрастный логотип.</strong> Бледный логотип на светлом коде или логотип, сливающийся с модулями, сбивает камеры с толку. Тёмный логотип, светлый фон, сильный контраст — то же правило, что и для самого кода.</li>
+<li><strong>Пёстрый фон за кодом.</strong> Код с логотипом на фотографии или узоре — это сразу два препятствия. Дайте коду чистый светлый участок, на котором он будет лежать, со свободной тихой зоной.</li>
+<li><strong>Растягивание кода.</strong> Непропорциональное изменение размера искажает сетку. Масштабируйте равномерно, чтобы квадраты оставались квадратами.</li>
+</ul>
+
+<h2>Тест, который всё доказывает</h2>
+<p>Прежде чем печатать тираж, отсканируйте код двумя телефонами — одним iPhone и одним Android — и сканируйте именно распечатку, а не экран. Если оба считывают с первой попытки — в печать. Если хоть один медлит, чуть уменьшите логотип или поднимите контраст и проверьте снова. Тридцать секунд здесь сэкономят перепечатку.</p>
+
+<p>Попробуйте: <a href="/ru/qr-code-with-logo/">Создайте QR-код со своим логотипом</a> — бесплатно, без регистрации для статических кодов, без водяных знаков.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly представляет QR-код"></div>
+      <div>
+        <h3>Создайте QR-код со своим логотипом</h3>
+        <p>Загрузите логотип, держите его по центру и сохраните считываемость. Бесплатно.</p>
+        <a class="btn" href="/ru/qr-code-with-logo/">Открыть студию</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Читать дальше</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ru/blog/static-vs-dynamic-qr-codes/"><b>Статические и динамические QR-коды</b></a>
+        <a class="rel-card" href="/ru/blog/why-is-my-qr-code-not-working/"><b>QR-код не работает? 7 исправлений, которые помогают</b></a>
+        <a class="rel-card" href="/ru/blog/qr-codes-for-restaurants/"><b>QR-коды для ресторанов — бесплатное руководство</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Полезно знать</h2>
+    <details><summary><span>Сломает ли мой логотип QR-код?</span></summary><p>Нет, если он остаётся в пределах ~30% площади кода. При добавлении логотипа коррекция ошибок поднимается автоматически, поэтому закрытая середина не мешает сканированию.</p></details>
+    <details><summary><span>Какой файл логотипа подходит лучше всего?</span></summary><p>Квадратный PNG с прозрачностью. Прямоугольные логотипы и логотипы в белом прямоугольнике тратят место и спорят с узором.</p></details>
+    <details><summary><span>Можно ли использовать логотип с любым типом QR-кода?</span></summary><p>Да — ссылка, визитка vCard, Wi-Fi и любой другой тип. Один и тот же логотип можно применить и ко всей партии.</p></details>
+    <details><summary><span>PNG или SVG для печати?</span></summary><p>PNG до 2048 px для большинства печатных задач или SVG, когда нужна бесконечная масштабируемость, например для баннера.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Безлимитные динамические коды — временная акция.</h3>
+        <p>Войдите бесплатно и создавайте сколько нужно. Каждый код можно менять после печати, и он никогда не истекает.</p>
+      </div>
+      <a class="fctaBtn" href="/ru/login/">Начать бесплатно</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ru/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Красивые QR-коды прямо в браузере. Статические коды не истекают никогда.</p>
+        <div class="fmade">Статические коды, сделаны в вашем браузере.</div>
+      </div>
+      <div class="fcol"><h4>Продукт</h4><a href="/ru/">Генератор QR</a><a href="/ru/batch-qr-code/">Пакетные QR-коды</a><a href="/ru/qr-code-with-logo/">QR с логотипом</a><a href="/ru/scan/">Сканер QR</a><a href="/ru/barcode-generator/">Генератор штрихкодов</a><a href="/ru/pricing/">Цены</a></div>
+      <div class="fcol"><h4>Ресурсы</h4><a href="/ru/blog/">Блог</a><a href="/ru/developers/">Разработчикам · API и MCP</a><a href="/ru/blog/qr-code-print-size-guide/">Гид по размерам печати</a><a href="/ru/#faq">Вопросы и ответы</a></div>
+      <div class="fcol"><h4>Компания</h4><a href="/ru/about/">О нас</a><a href="mailto:hello@freeqrly.com">Контакты</a></div>
+      <div class="fcol"><h4>Правовое</h4><a href="/ru/privacy/">Политика конфиденциальности</a><a href="/ru/terms/">Условия использования</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

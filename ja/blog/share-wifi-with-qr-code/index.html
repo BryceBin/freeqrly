@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wi-Fi QRコードでパスワードを共有する方法 | FreeQrly</title>
+<meta name="description" content="Wi-FiのパスワードをQRコードで共有：ゲストはスキャンするだけで接続でき、つづりを伝えたり入力したりする必要はありません。無料でプライバシーにも配慮——静的コードなら、パスワードがブラウザの外に出ることはありません。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/share-wifi-with-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/share-wifi-with-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Wi-Fi QRコードでパスワードを共有する方法 | FreeQrly">
+<meta property="og:description" content="Wi-FiのパスワードをQRコードで共有：ゲストはスキャンするだけで接続でき、つづりを伝えたり入力したりする必要はありません。無料でプライバシーにも配慮——静的コードなら、パスワードがブラウザの外に出ることはありません。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/share-wifi-with-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261028">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Wi-Fi QRコードでパスワードを共有する方法 | FreeQrly","description":"Wi-FiのパスワードをQRコードで共有：ゲストはスキャンするだけで接続でき、つづりを伝えたり入力したりする必要はありません。無料でプライバシーにも配慮——静的コードなら、パスワードがブラウザの外に出ることはありません。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wi-Fi QRコードにパスワードを入れても安全？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "静的コードなら、はい。すべてブラウザ内で描かれ、アップロードも保存もされません。ただし印刷したコードを写真に撮った人は接続できてしまうので、ゲスト用の鍵だと思って扱ってください。自宅、カフェ、レンタル物件なら問題なく、漏れたら貼り直せばOKです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どのスマホがWi-Fi QRコードを読み取れる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhoneはiOS 11以降ならカメラアプリから直接接続できます。AndroidもAndroid 10以降の多くの機種が、カメラまたはWi-Fi設定から同じように接続できます。専用アプリは不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "WPA3や隠しネットワークでも使える？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ルーターに合ったセキュリティの種類（WPA、WPA2、WEP、オープン）を選んでください。隠しネットワークの名前を正確に入力すれば、同じように接続します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wi-Fiのパスワードをあとから変えたらどうなる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "静的コードは編集できないので、新しいものを印刷してください。無料で1分で作れます。だからこそ、このコードはパスワードがめったに変わらないネットワークに最適です。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Wi-Fi QRコードでパスワードを共有する方法 | FreeQrly","description":"Wi-FiのパスワードをQRコードで共有：ゲストはスキャンするだけで接続でき、つづりを伝えたり入力したりする必要はありません。無料でプライバシーにも配慮——静的コードなら、パスワードがブラウザの外に出ることはありません。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "ネットワーク情報を確認する",
+      "text": "ルーターのシールにあるネットワーク名とパスワード、または自分で設定したもの。大文字はぴったり一致させること。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "コードを生成する",
+      "text": "Wi-Fi QRコードジェネレーターでWiFiタイプを選び、名前、パスワード、セキュリティの種類を入力します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印刷は最低2 × 2 cm",
+      "text": "PNGは1024 px以上で。ゲストの目につく場所に貼る：冷蔵庫、カウンター、ウェルカムブック。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "ゲストが来る前にテストスキャンする",
+      "text": "自分のスマホで印刷物を向けてみてください。1回でつながれば完成です。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3w-20261028"></script>
+<script src="/assets/js/acct-menu.js?v=b3w-20261028"></script>
+<script src="/assets/js/subpage-header.js?v=b3w-20261028"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/wifi.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Wi-Fiを <span class='hl hl-mint'>QRコード</span>で共有する</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">ゲストにパスワードを聞かれたら、冷蔵庫を指さすだけ。スキャンひとつでオンラインに——つづりを読み上げる必要も、打ち間違いも、ルーターのシールから読み取る手間もありません。</p>
+    <p class="meta" style="text-align:center">2026年10月28日 · 4分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>ゲストが来るたび同じ光景です。Wi-Fiのパスワードを聞かれ、大文字・数字・記号の羅列を読み上げているあいだに、相手は2回打ち間違える。Wi-Fi QRコードがそれを終わらせます。コードを1枚印刷してゲストの目につく場所に貼れば、スキャンした瞬間にスマホがネットワークにつながります。入力は一切不要です。</p>
+
+<h2>Wi-Fi QRコードに入っている情報</h2>
+<p>3つだけです。ネットワーク名（SSID）、パスワード、セキュリティの種類——家庭用ルーターなら通常WPAまたはWPA2、とても古い機器ならWEP、パスワードなしのオープンネットワークならなし。スキャンしたスマホはこの3つを読み取り、設定画面を開いて入力することなく直接接続します。</p>
+
+<h2>3ステップで作る</h2>
+<ol>
+<li><b>ネットワーク情報を確認する。</b>名前とパスワードはたいていルーターのシールに書かれています。変更したことがある場合は、設定したものを使ってください。コードは大文字も含めてルーターとぴったり一致している必要があります。</li>
+<li><b>コードを生成する。</b><a href="/ja/wifi-qr-code/">Wi-Fi QRコードジェネレーター</a>でWiFiタイプを選び、ネットワーク名、パスワード、セキュリティの種類を入力します。コードはすぐ表示されます。</li>
+<li><b>印刷してゲストの目につく場所に置く。</b>自宅なら冷蔵庫のドア、カフェならカウンターのカード、Airbnbならウェルカムブック、オフィスなら受付。印刷は最低2 × 2 cm。腕の長さほどの距離からスマホが読み取れる大きさです。</li>
+</ol>
+
+<h2>どのスマホがスキャンで接続できる？</h2>
+<p>iPhoneはiOS 11以降ならカメラアプリから直接接続できます。向けて通知をタップするだけ。AndroidもAndroid 10以降の多くの機種が、カメラまたはWi-Fi設定から同じように接続できます。どちらも専用アプリは不要で、ゲストがパスワードそのものを見ることもありません。</p>
+
+<h2>正直なセキュリティの話</h2>
+<p>静的Wi-Fiコードが便利なのは、パスワードが模様そのものに入っているからです。裏を返せば、コードを写真に撮った人は誰でもネットワークに入れてしまうということ。自宅、カフェ、レンタル物件なら、それこそ求めるバランスです。ゲストはオンラインになるべきなのですから。2つのルールさえ守れば安心です。</p>
+<ul>
+<li><strong>プライベートに生成する。</strong>静的コードはすべてブラウザ内で描かれるため、パスワードがアップロードされたり保存されたりすることはありません。さらに安心したいなら、ページを開いてからインターネットを切断し、それから入力してください。</li>
+<li><strong>漏れたら、パスワードを変更して貼り直す。</strong>静的コードは印刷後に編集できませんが、新しいコードを作るのは無料で1分もかかりません。</li>
+</ul>
+
+<h2>隠しネットワークやちょっと癖のあるルーター</h2>
+<p>隠しネットワークも同じ作り方です。ネットワーク名を正確に入力すれば、リストに表示されなくてもスマホは接続します。WPA3ルーターの場合は、WPA3が一覧になければWPA2/WPAを選んでください。ほとんどのWPA3ルーターはWPA2のクライアントを受け入れます。ゲストのスマホがどうしてもつながらない場合は、まずパスワードの大文字を確認してください。ほとんどの場合、それが原因です。</p>
+
+<p>コードがほしい方はこちら。<a href="/ja/wifi-qr-code/">Wi-Fi QRコードを作る</a>——無料、静的コードは登録不要、有効期限なし。</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>Wi-Fi QRコードを作る</h3>
+        <p>ゲストはスキャンするだけでオンラインに。無料、静的コードは登録不要。</p>
+        <a class="btn" href="/ja/wifi-qr-code/">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/add-logo-to-qr-code/"><b>QRコード ロゴ 中央に入れる方法——読み取り可能に保つコツ</b></a>
+        <a class="rel-card" href="/ja/blog/static-vs-dynamic-qr-codes/"><b>静的QRコードと動的QRコード</b></a>
+        <a class="rel-card" href="/ja/blog/why-is-my-qr-code-not-working/"><b>QRコードが動作しない？役立つ7つの修正</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>Wi-Fi QRコードにパスワードを入れても安全？</span></summary><p>静的コードなら、はい。すべてブラウザ内で描かれ、アップロードも保存もされません。ただし印刷したコードを写真に撮った人は接続できてしまうので、ゲスト用の鍵だと思って扱ってください。自宅、カフェ、レンタル物件なら問題なく、漏れたら貼り直せばOKです。</p></details>
+    <details><summary><span>どのスマホがWi-Fi QRコードを読み取れる？</span></summary><p>iPhoneはiOS 11以降ならカメラアプリから直接接続できます。AndroidもAndroid 10以降の多くの機種が、カメラまたはWi-Fi設定から同じように接続できます。専用アプリは不要です。</p></details>
+    <details><summary><span>WPA3や隠しネットワークでも使える？</span></summary><p>ルーターに合ったセキュリティの種類（WPA、WPA2、WEP、オープン）を選んでください。隠しネットワークの名前を正確に入力すれば、同じように接続します。</p></details>
+    <details><summary><span>Wi-Fiのパスワードをあとから変えたらどうなる？</span></summary><p>静的コードは編集できないので、新しいものを印刷してください。無料で1分で作れます。だからこそ、このコードはパスワードがめったに変わらないネットワークに最適です。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>動的コード無制限 — 期間限定オファー。</h3>
+        <p>無料でサインインして、必要なだけ作成できます。すべてのコードは印刷後も編集でき、有効期限はありません。</p>
+      </div>
+      <a class="fctaBtn" href="/ja/login/">無料で始める</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
+        <div class="fmade">静的コードはブラウザで作成。</div>
+      </div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
+      <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
+      <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
+      <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

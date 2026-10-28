@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment ajouter un logo au centre d'un QR code (et le garder lisible) | FreeQrly</title>
+<meta name="description" content="Mettez votre logo au centre d'un QR code : importez un PNG carré, gardez-le sous ~30 % du code, laissez la correction d'erreur faire son travail. Gratuit, sans filigrane, et ça scanne toujours.">
+<link rel="canonical" href="https://freeqrly.com/fr/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Comment ajouter un logo au centre d'un QR code (et le garder lisible) | FreeQrly">
+<meta property="og:description" content="Mettez votre logo au centre d'un QR code : importez un PNG carré, gardez-le sous ~30 % du code, laissez la correction d'erreur faire son travail. Gratuit, sans filigrane, et ça scanne toujours.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/fr/blog/add-logo-to-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261028">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Comment ajouter un logo au centre d'un QR code (et le garder lisible) | FreeQrly","description":"Mettez votre logo au centre d'un QR code : importez un PNG carré, gardez-le sous ~30 % du code, laissez la correction d'erreur faire son travail. Gratuit, sans filigrane, et ça scanne toujours.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mon logo va-t-il casser le QR code ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, s'il reste sous ~30 % de la surface du code. La correction d'erreur est relevée automatiquement quand un logo est ajouté, donc le centre recouvert n'empêche pas le scan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel fichier de logo fonctionne le mieux ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un PNG carré avec transparence. Les logos rectangulaires et les logos encadrés de blanc gaspillent de la place et luttent contre le motif."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je utiliser un logo avec tous les types de QR code ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui — lien, vCard, Wi-Fi et tous les autres types. Le même logo peut aussi s'appliquer à tout un lot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG ou SVG pour l'impression ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG jusqu'à 2048 px pour la plupart des travaux d'impression, ou SVG quand vous en avez besoin en taille infiniment adaptable, comme pour une banderole."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Comment ajouter un logo au centre d'un QR code (et le garder lisible) | FreeQrly","description":"Mettez votre logo au centre d'un QR code : importez un PNG carré, gardez-le sous ~30 % du code, laissez la correction d'erreur faire son travail. Gratuit, sans filigrane, et ça scanne toujours.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Créez le code",
+      "text": "Tous les types acceptent un logo : un lien, une vCard, un réseau Wi-Fi."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Importez un PNG carré",
+      "text": "La transparence fonctionne le mieux. Gardez le logo sous ~30 % de la surface du code."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Laissez la correction d'erreur s'ajuster",
+      "text": "Elle augmente automatiquement quand un logo est ajouté, donc le code scanne toujours."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Testez le scan avant d'imprimer",
+      "text": "Deux téléphones, iPhone et Android, sur l'impression elle-même. Si les deux lisent du premier coup, c'est bon."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3w-20261028"></script>
+<script src="/assets/js/acct-menu.js?v=b3w-20261028"></script>
+<script src="/assets/js/subpage-header.js?v=b3w-20261028"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notes de terrain</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Votre logo, <span class='hl hl-blush'>au centre</span> — toujours lisible</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un logo rend un code vraiment vôtre. Il recouvre aussi une partie du motif. Voici comment avoir les deux : logo parfaitement centré, code qui scanne toujours du premier coup.</p>
+    <p class="meta" style="text-align:center">28 octobre 2026 · 4 min de lecture</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>Un QR code simple fonctionne. Un QR code avec logo au centre fonctionne et se reconnaît — sur un emballage, sur une carte de visite, sur une affiche de l'autre côté de la pièce. Le piège est bien réel, pourtant : le logo repose sur le motif, et c'est le motif que le téléphone lit. Si l'équilibre est raté, le code cesse de scanner. S'il est juste, personne ne remarque la technique — on ne voit que votre marque.</p>
+
+<h2>Les trois règles</h2>
+<ol>
+<li><b>PNG carré avec transparence.</b> Un logo carré sur fond transparent s'installe le plus proprement au centre. Un logo rectangulaire ou encadré de blanc gaspille de la place et lutte contre le motif.</li>
+<li><b>Gardez-le sous ~30 % de la surface du code.</b> C'est la règle empirique qu'utilise le générateur lui-même : assez petit pour que le motif restant porte encore les données, assez grand pour se lire d'un coup d'œil.</li>
+<li><b>Laissez la correction d'erreur faire son travail.</b> Les QR codes sont conçus pour survivre aux dommages — jusqu'à 30 % du motif peut manquer et le code se lit encore. Quand vous ajoutez un logo, la correction d'erreur est relevée automatiquement pour que le centre recouvert ne pose pas problème.</li>
+</ol>
+
+<h2>Étape par étape</h2>
+<p>Créez d'abord le code — tous les types acceptent un logo : un lien, une vCard, un réseau Wi-Fi. Puis importez le logo à l'étape logo du studio, dimensionnez-le au centre, et téléchargez. PNG jusqu'à 2048 px pour l'impression, ou SVG si vous en avez besoin en taille infiniment adaptable. L'étape logo fonctionne avec tous les types de code, et le même logo peut s'appliquer à tout un lot.</p>
+
+<h2>Quatre erreurs qui cassent les scans</h2>
+<ul>
+<li><strong>Logo trop grand.</strong> Au-delà de ~30 % de la surface, même la correction d'erreur ne peut pas reconstruire les données manquantes. Si le logo doit être grand, utilisez un lien plus court — moins de données, c'est un motif plus aéré.</li>
+<li><strong>Logo peu contrasté.</strong> Un logo pâle sur un code clair, ou un logo qui se fond dans les modules, perturbe les appareils photo. Logo foncé, fond clair, fort contraste — la même règle que pour le code lui-même.</li>
+<li><strong>Fond chargé derrière le code.</strong> Un code avec logo posé sur une photo ou un motif, c'est deux combats à la fois. Offrez au code une zone propre et claire où se poser, avec sa marge de silence dégagée.</li>
+<li><strong>Code étiré.</strong> Un redimensionnement non proportionnel déforme la grille. Agrandissez uniformément pour que les carrés restent carrés.</li>
+</ul>
+
+<h2>Le test qui le prouve</h2>
+<p>Avant d'imprimer une série, scannez le code avec deux téléphones — un iPhone, un Android — et scannez l'impression, pas seulement l'écran. Si les deux lisent du premier coup, c'est bon. Si l'un des deux hésite, réduisez le logo d'un cran ou augmentez le contraste et testez à nouveau. Trente secondes ici vous épargnent une réimpression.</p>
+
+<p>Essayez : <a href="/fr/qr-code-with-logo/">Créez un QR code avec votre logo</a> — gratuit, sans inscription pour les codes statiques, sans filigrane.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly présentant un QR code"></div>
+      <div>
+        <h3>Créez votre QR code avec logo</h3>
+        <p>Importez votre logo, gardez-le centré, gardez-le lisible. Gratuit.</p>
+        <a class="btn" href="/fr/qr-code-with-logo/">Ouvrir le studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Continuer la lecture</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/fr/blog/static-vs-dynamic-qr-codes/"><b>QR codes statiques vs dynamiques</b></a>
+        <a class="rel-card" href="/fr/blog/why-is-my-qr-code-not-working/"><b>QR code qui ne fonctionne pas ? 7 correctifs qui aident</b></a>
+        <a class="rel-card" href="/fr/blog/qr-codes-for-restaurants/"><b>QR codes pour restaurants — Guide gratuit</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bon à savoir</h2>
+    <details><summary><span>Mon logo va-t-il casser le QR code ?</span></summary><p>Non, s'il reste sous ~30 % de la surface du code. La correction d'erreur est relevée automatiquement quand un logo est ajouté, donc le centre recouvert n'empêche pas le scan.</p></details>
+    <details><summary><span>Quel fichier de logo fonctionne le mieux ?</span></summary><p>Un PNG carré avec transparence. Les logos rectangulaires et les logos encadrés de blanc gaspillent de la place et luttent contre le motif.</p></details>
+    <details><summary><span>Puis-je utiliser un logo avec tous les types de QR code ?</span></summary><p>Oui — lien, vCard, Wi-Fi et tous les autres types. Le même logo peut aussi s'appliquer à tout un lot.</p></details>
+    <details><summary><span>PNG ou SVG pour l'impression ?</span></summary><p>PNG jusqu'à 2048 px pour la plupart des travaux d'impression, ou SVG quand vous en avez besoin en taille infiniment adaptable, comme pour une banderole.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Codes dynamiques illimités — offre à durée limitée.</h3>
+        <p>Connectez-vous gratuitement et créez-en autant que nécessaire. Chaque code reste modifiable après impression et n'expire jamais.</p>
+      </div>
+      <a class="fctaBtn" href="/fr/login/">Commencer gratuitement</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/fr/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n'expirent jamais.</p>
+        <div class="fmade">Codes statiques, faits dans votre navigateur.</div>
+      </div>
+      <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a><a href="/fr/pricing/">Tarifs</a></div>
+      <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d'impression</a><a href="/fr/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Entreprise</h4><a href="/fr/about/">À propos</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d'utilisation</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

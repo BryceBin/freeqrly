@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Add a Logo to a QR Code (and Keep It Scannable) | FreeQrly</title>
+<meta name="description" content="Put your logo in the center of a QR code: upload a square PNG, keep it under ~30% of the code, let error correction do its job. Free, no watermark, still scans.">
+<link rel="canonical" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="How to Add a Logo to a QR Code (and Keep It Scannable) | FreeQrly">
+<meta property="og:description" content="Put your logo in the center of a QR code: upload a square PNG, keep it under ~30% of the code, let error correction do its job. Free, no watermark, still scans.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261028">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Add a Logo to a QR Code (and Keep It Scannable) | FreeQrly","description":"Put your logo in the center of a QR code: upload a square PNG, keep it under ~30% of the code, let error correction do its job. Free, no watermark, still scans.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will my logo break the QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not if it stays under ~30% of the code area. Error correction is raised automatically when a logo is added, so the covered middle doesn't stop the scan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What logo file works best?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A square PNG with transparency. Rectangular logos and white-boxed logos waste space and fight the pattern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a logo with any QR code type?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — link, vCard, WiFi, and every other type. The same logo can also be applied across a whole batch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG or SVG for print?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG up to 2048 px for most print jobs, or SVG when you need it infinitely scalable, like a banner."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to Add a Logo to a QR Code (and Keep It Scannable) | FreeQrly","description":"Put your logo in the center of a QR code: upload a square PNG, keep it under ~30% of the code, let error correction do its job. Free, no watermark, still scans.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Make the code",
+      "text": "Any type works with a logo: a link, a vCard, a WiFi network."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Upload a square PNG",
+      "text": "Transparency works best. Keep the logo under ~30% of the code area."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Let error correction adjust",
+      "text": "It rises automatically when a logo is added, so the code still scans."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Test-scan before printing",
+      "text": "Two phones, iPhone and Android, on the print itself. If both read first try, ship it."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3w-20261028"></script>
+<script src="/assets/js/acct-menu.js?v=b3w-20261028"></script>
+<script src="/assets/js/subpage-header.js?v=b3w-20261028"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="Qly the FreeQrly elephant mascot"></div>
+    <div class="kicker" style="text-align:center">Field notes</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Your logo, <span class='hl hl-blush'>in the middle</span> — still scannable</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">A logo makes a code yours. It also covers up part of the pattern. Here's how to have both: logo dead center, code still scanning on the first try.</p>
+    <p class="meta" style="text-align:center">October 28, 2026 · 4 min read</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>A plain QR code works. A QR code with your logo works and gets recognized — on packaging, on a business card, on a poster across the room. The catch is real, though: the logo sits on top of the pattern, and the pattern is what the phone reads. Get the balance wrong and the code stops scanning. Get it right and nobody notices the engineering — they just see your brand.</p>
+
+<h2>The three rules</h2>
+<ol>
+<li><b>Square PNG with transparency.</b> A square logo with a transparent background sits cleanest in the middle. A rectangular logo or a white-boxed logo wastes space and fights the pattern.</li>
+<li><b>Keep it under ~30% of the code area.</b> That is the rule of thumb the generator itself uses: small enough that the remaining pattern still carries the data, big enough to read at a glance.</li>
+<li><b>Let error correction do its job.</b> QR codes are built to survive damage — up to 30% of the pattern can be missing and the code still reads. When you add a logo, error correction is raised automatically so the covered middle doesn't matter.</li>
+</ol>
+
+<h2>Step by step</h2>
+<p>Make the code first — any type works with a logo: a link, a vCard, a WiFi network. Then upload the logo in the studio's logo step, size it to the middle, and download. PNG up to 2048 px for print, or SVG if you need it infinitely scalable. The logo step works with every code type, and the same logo can be applied across a whole batch.</p>
+
+<h2>Four mistakes that break scans</h2>
+<ul>
+<li><strong>Logo too big.</strong> Past ~30% of the area, even error correction can't rebuild the missing data. If the logo must be big, use a shorter link — less data means a roomier pattern.</li>
+<li><strong>Low-contrast logo.</strong> A pale logo on a light code, or a logo that blends into the modules, confuses cameras. Dark logo, light background, strong contrast — same rule as the code itself.</li>
+<li><strong>Busy background behind the code.</strong> A logo code on a photo or a pattern is two fights at once. Give the code a clean, light patch to sit on, with its quiet margin clear.</li>
+<li><strong>Stretching the code.</strong> Resizing non-proportionally distorts the grid. Scale evenly so the squares stay square.</li>
+</ul>
+
+<h2>The test that proves it</h2>
+<p>Before you print a run, scan the code with two phones — one iPhone, one Android — and scan the print, not just the screen. If both read on the first try, ship it. If either hesitates, shrink the logo a notch or raise the contrast and test again. Thirty seconds here saves a reprint.</p>
+
+<p>Try it: <a href="/qr-code-with-logo/">Make a QR code with your logo</a> — free, no sign-up for static codes, no watermark.</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
+      <div>
+        <h3>Make your logo QR code</h3>
+        <p>Upload your logo, keep it centered, keep it scannable. Free.</p>
+        <a class="btn" href="/qr-code-with-logo/">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Keep reading</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/static-vs-dynamic-qr-codes/"><b>Static vs Dynamic QR Codes</b></a>
+        <a class="rel-card" href="/blog/why-is-my-qr-code-not-working/"><b>QR Code Not Working? 7 Fixes That Help</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-restaurants/"><b>QR Codes for Restaurants — Free Guide</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Good to know</h2>
+    <details><summary><span>Will my logo break the QR code?</span></summary><p>Not if it stays under ~30% of the code area. Error correction is raised automatically when a logo is added, so the covered middle doesn't stop the scan.</p></details>
+    <details><summary><span>What logo file works best?</span></summary><p>A square PNG with transparency. Rectangular logos and white-boxed logos waste space and fight the pattern.</p></details>
+    <details><summary><span>Can I use a logo with any QR code type?</span></summary><p>Yes — link, vCard, WiFi, and every other type. The same logo can also be applied across a whole batch.</p></details>
+    <details><summary><span>PNG or SVG for print?</span></summary><p>PNG up to 2048 px for most print jobs, or SVG when you need it infinitely scalable, like a banner.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Unlimited dynamic codes — limited-time offer.</h3>
+        <p>Sign in free and create as many as you need. Every code stays editable after printing and never expires.</p>
+      </div>
+      <a class="fctaBtn" href="/login/">Start free</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
+        <div class="fmade">Made quietly — static codes in your browser.</div>
+      </div>
+      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a><a href="/pricing/">Pricing</a></div>
+      <div class="fcol"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/developers/">Developers · API &amp; MCP</a><a href="/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Company</h4><a href="/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

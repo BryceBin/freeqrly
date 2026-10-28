@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRコード ロゴ 中央に入れる方法——読み取り可能に保つコツ | FreeQrly</title>
+<meta name="description" content="QRコードの中央にロゴを入れる：正方形PNGをアップロードし、コード面積の約30%以下に抑え、あとは誤り訂正に任せる。無料、透かしなし、読み取り可能。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QRコード ロゴ 中央に入れる方法——読み取り可能に保つコツ | FreeQrly">
+<meta property="og:description" content="QRコードの中央にロゴを入れる：正方形PNGをアップロードし、コード面積の約30%以下に抑え、あとは誤り訂正に任せる。無料、透かしなし、読み取り可能。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/add-logo-to-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261028">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QRコード ロゴ 中央に入れる方法——読み取り可能に保つコツ | FreeQrly","description":"QRコードの中央にロゴを入れる：正方形PNGをアップロードし、コード面積の約30%以下に抑え、あとは誤り訂正に任せる。無料、透かしなし、読み取り可能。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ロゴを入れるとQRコードは壊れる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "コード面積の約30%以下に収まっていれば、壊れません。ロゴを追加すると誤り訂正が自動で上がるため、隠れた中央がスキャンを止めることはありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "最適なロゴファイルは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "透過背景の正方形PNGが最適です。横長のロゴや白い箱付きのロゴは場所を無駄に食い、模様とぶつかります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ロゴはどのQRコードタイプでも使える？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。リンク、vCard、Wi-Fi、その他すべてのタイプで使えます。同じロゴをバッチ全体に適用することもできます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷にはPNGとSVG、どっち？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ほとんどの印刷物には最大2048 pxのPNG、バナーのように無限に拡大したい場合はSVG。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"QRコード ロゴ 中央に入れる方法——読み取り可能に保つコツ | FreeQrly","description":"QRコードの中央にロゴを入れる：正方形PNGをアップロードし、コード面積の約30%以下に抑え、あとは誤り訂正に任せる。無料、透かしなし、読み取り可能。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "コードを作る",
+      "text": "どのタイプでもロゴと組み合わせられます。リンク、vCard、Wi-Fiネットワークなど。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "正方形PNGをアップロードする",
+      "text": "透過背景が最適です。ロゴはコード面積の約30%以下に抑えてください。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "誤り訂正を自動で調整させる",
+      "text": "ロゴを追加すると自動で上がるため、コードは読み取り可能なままです。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印刷前にテストスキャンする",
+      "text": "iPhoneとAndroidの2台で、印刷物そのものをスキャンしてください。両方とも1回で読めれば出荷OKです。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3w-20261028"></script>
+<script src="/assets/js/acct-menu.js?v=b3w-20261028"></script>
+<script src="/assets/js/subpage-header.js?v=b3w-20261028"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">あなたのロゴを <span class='hl hl-blush'>中央に</span>——それでも読み取れる</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">ロゴがあると、コードがあなたのものになります。ただし模様の一部が隠れるのも事実です。両立のコツはこうです。ロゴは真ん中にぴったり、コードは1回で読み取れる。</p>
+    <p class="meta" style="text-align:center">2026年10月28日 · 4分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>ただのQRコードでも機能します。ロゴ入り QRコードは、機能したうえで覚えられます。パッケージでも、名刺でも、部屋の向こう側のポスターでも。ただし注意点は本物です。ロゴは模様の上に載り、スマホが読むのはその模様です。バランスを間違えるとコードは読めなくなります。バランスが合えば、仕組みに気づく人はいません。目に入るのはブランドだけです。</p>
+
+<h2>3つのルール</h2>
+<ol>
+<li><b>透過背景の正方形PNG。</b>透過背景の正方形ロゴが中央にいちばんきれいに収まります。横長のロゴや白い箱付きのロゴは場所を無駄に食い、模様とぶつかります。</li>
+<li><b>コード面積の約30%以下に抑える。</b>ジェネレーター自身も使っている目安です。データが残りの模様に十分収まる小ささで、一目で読める大きさ。</li>
+<li><b>誤り訂正に任せる。</b>QRコードは損傷に耐えるよう作られています。模様の最大30%が欠けても読み取れます。ロゴを追加すると誤り訂正が自動で上がるため、隠れた中央は問題になりません。</li>
+</ol>
+
+<h2>手順</h2>
+<p>まずコードを作ります。ロゴはどのタイプとも組み合わせられます。リンク、vCard、Wi-Fiネットワークなど。次にスタジオのロゴステップでロゴをアップロードし、中央にサイズを合わせ、ダウンロードします。印刷用は最大2048 pxのPNG、無限に拡大したい場合はSVG。ロゴステップはすべてのコードタイプで使え、同じロゴをバッチ全体に適用することもできます。</p>
+
+<h2>スキャンを壊す4つのミス</h2>
+<ul>
+<li><strong>ロゴが大きすぎる。</strong>面積の約30%を超えると、誤り訂正でも欠けたデータを復元できません。ロゴを大きくせざるを得ない場合は、リンクを短くしてください。データが少なければ、模様に余裕ができます。</li>
+<li><strong>コントラストの低いロゴ。</strong>明るいコード上の淡いロゴや、モジュールに溶け込むロゴはカメラを混乱させます。濃いロゴ、明るい背景、強いコントラスト——コードそのものと同じルールです。</li>
+<li><strong>コードの後ろがごちゃごちゃしている。</strong>写真や模様の上のロゴ入りコードは、二重の戦いです。クワイエットマージンを空けて、きれいで明るい場所にコードを置いてください。</li>
+<li><strong>コードを引き伸ばす。</strong>縦横比を変えてリサイズするとグリッドが歪みます。四角が四角のままになるよう、均等に拡大・縮小してください。</li>
+</ul>
+
+<h2>証明になるテスト</h2>
+<p>印刷する前に、iPhoneとAndroidの2台のスマホでスキャンしてください。画面ではなく印刷物で。両方とも1回で読めれば出荷OKです。どちらかがためらうようなら、ロゴを少し小さくするか、コントラストを上げて再テストしてください。ここの30秒が刷り直しを防ぎます。</p>
+
+<p>試してみてください。<a href="/ja/qr-code-with-logo/">ロゴ入りQRコードを作る</a>——無料、静的コードは登録不要、透かしなし。</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>ロゴ入りQRコードを作る</h3>
+        <p>ロゴをアップロードして中央に置き、読み取り可能に保つ。無料。</p>
+        <a class="btn" href="/ja/qr-code-with-logo/">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/static-vs-dynamic-qr-codes/"><b>静的QRコードと動的QRコード</b></a>
+        <a class="rel-card" href="/ja/blog/why-is-my-qr-code-not-working/"><b>QRコードが動作しない？役立つ7つの修正</b></a>
+        <a class="rel-card" href="/ja/blog/qr-codes-for-restaurants/"><b>飲食店向けQRコード — 無料ガイド</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>ロゴを入れるとQRコードは壊れる？</span></summary><p>コード面積の約30%以下に収まっていれば、壊れません。ロゴを追加すると誤り訂正が自動で上がるため、隠れた中央がスキャンを止めることはありません。</p></details>
+    <details><summary><span>最適なロゴファイルは？</span></summary><p>透過背景の正方形PNGが最適です。横長のロゴや白い箱付きのロゴは場所を無駄に食い、模様とぶつかります。</p></details>
+    <details><summary><span>ロゴはどのQRコードタイプでも使える？</span></summary><p>はい。リンク、vCard、Wi-Fi、その他すべてのタイプで使えます。同じロゴをバッチ全体に適用することもできます。</p></details>
+    <details><summary><span>印刷にはPNGとSVG、どっち？</span></summary><p>ほとんどの印刷物には最大2048 pxのPNG、バナーのように無限に拡大したい場合はSVG。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>動的コード無制限 — 期間限定オファー。</h3>
+        <p>無料でサインインして、必要なだけ作成できます。すべてのコードは印刷後も編集でき、有効期限はありません。</p>
+      </div>
+      <a class="fctaBtn" href="/ja/login/">無料で始める</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
+        <div class="fmade">静的コードはブラウザで作成。</div>
+      </div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
+      <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
+      <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
+      <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

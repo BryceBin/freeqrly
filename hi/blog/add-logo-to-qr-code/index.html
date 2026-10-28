@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hi" data-lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>लोगो वाला QR कोड कैसे बनाएँ (और उसे scan होने लायक रखें) | FreeQrly</title>
+<meta name="description" content="अपना logo QR code के बीच में लगाएँ: एक square PNG upload करें, उसे code के ~30% से कम रखें, और error correction को अपना काम करने दें। Free, कोई watermark नहीं, फिर भी scan होगा।">
+<link rel="canonical" href="https://freeqrly.com/hi/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/add-logo-to-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/add-logo-to-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="लोगो वाला QR कोड कैसे बनाएँ (और उसे scan होने लायक रखें) | FreeQrly">
+<meta property="og:description" content="अपना logo QR code के बीच में लगाएँ: एक square PNG upload करें, उसे code के ~30% से कम रखें, और error correction को अपना काम करने दें। Free, कोई watermark नहीं, फिर भी scan होगा।">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/hi/blog/add-logo-to-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261028">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261028">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"लोगो वाला QR कोड कैसे बनाएँ (और उसे scan होने लायक रखें) | FreeQrly","description":"अपना logo QR code के बीच में लगाएँ: एक square PNG upload करें, उसे code के ~30% से कम रखें, और error correction को अपना काम करने दें। Free, कोई watermark नहीं, फिर भी scan होगा।","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "क्या मेरा logo QR code को खराब कर देगा?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नहीं, अगर वह code area के ~30% से कम रहे। Logo लगाते ही error correction अपने आप बढ़ जाती है, इसलिए ढका हुआ बीच का हिस्सा scan नहीं रोकता।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "कौन सी logo file सबसे अच्छी चलती है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Transparency वाला एक square PNG। Rectangular logo और white box वाले logo जगह बर्बाद करते हैं और pattern से टकराते हैं।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "क्या मैं किसी भी QR code type के साथ logo इस्तेमाल कर सकता हूँ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "हाँ — link, vCard, WiFi, और हर दूसरा type। वही logo पूरे batch पर भी लगाया जा सकता है।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "प्रिंट के लिए PNG या SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ज़्यादातर print कामों के लिए 2048 px तक का PNG, या banner जैसे काम के लिए SVG, जब infinitely scalable चाहिए।"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"लोगो वाला QR कोड कैसे बनाएँ (और उसे scan होने लायक रखें) | FreeQrly","description":"अपना logo QR code के बीच में लगाएँ: एक square PNG upload करें, उसे code के ~30% से कम रखें, और error correction को अपना काम करने दें। Free, कोई watermark नहीं, फिर भी scan होगा।","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Code बनाएँ",
+      "text": "Logo के साथ कोई भी type चलता है: link, vCard, WiFi network।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "एक square PNG upload करें",
+      "text": "Transparency सबसे अच्छा काम करती है। Logo को code area के ~30% से कम रखें।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Error correction को adjust होने दें",
+      "text": "Logo लगाते ही यह अपने आप बढ़ जाती है, इसलिए code फिर भी scan होता है।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Print करने से पहले test-scan करें",
+      "text": "Print पर ही दो phones, iPhone और Android। अगर दोनों पहली बार में पढ़ लें, तो भेज दीजिए।"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3w-20261028"></script>
+<script src="/assets/js/acct-menu.js?v=b3w-20261028"></script>
+<script src="/assets/js/subpage-header.js?v=b3w-20261028"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="Qly, FreeQrly का हाथी शुभंकर"></div>
+    <div class="kicker" style="text-align:center">फ़ील्ड नोट्स</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">आपका logo, <span class='hl hl-blush'>बीचों-बीच</span> — फिर भी scan होगा</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Logo code को आपका बना देता है। लेकिन वह pattern का एक हिस्सा भी ढक देता है। दोनों पाने का तरीका यह है: logo बिल्कुल बीच में, और code पहली बार में ही scan हो जाए।</p>
+    <p class="meta" style="text-align:center">28 अक्टूबर 2026 · 4 मिनट में पढ़ें</p>
+    <div class="prose" style="margin-top:40px">
+
+<p>सादा QR code काम करता है। Logo वाला QR कोड काम भी करता है और पहचाना भी जाता है — packaging पर, business card पर, कमरे के दूसरी ओर लगे poster पर। लेकिन एक पेंच सच में है: logo pattern के ऊपर बैठता है, और phone उसी pattern को पढ़ता है। Balance गलत हुआ तो code scan होना बंद हो जाएगा। Balance सही हुआ तो किसी को engineering नज़र नहीं आएगी — सिर्फ आपका brand दिखेगा।</p>
+
+<h2>तीन rules</h2>
+<ol>
+<li><b>Transparency वाला square PNG।</b> Transparent background वाला square logo बीच में सबसे साफ बैठता है। Rectangular logo या white box वाला logo जगह बर्बाद करता है और pattern से टकराता है।</li>
+<li><b>इसे code area के ~30% से कम रखें।</b> Generator भी यही thumb rule इस्तेमाल करता है: इतना छोटा कि बाकी pattern data संभाल सके, इतना बड़ा कि एक नज़र में पढ़ा जा सके।</li>
+<li><b>Error correction को अपना काम करने दें।</b> QR code नुकसान झेलने के लिए ही बने हैं — pattern का 30% तक गायब हो, तब भी code पढ़ा जाता है। Logo लगाने पर error correction अपने आप बढ़ जाती है, ताकि ढका हुआ बीच का हिस्सा मायने न रखे।</li>
+</ol>
+
+<h2>Step by step</h2>
+<p>पहले code बनाएँ — logo के साथ कोई भी type चलता है: link, vCard, WiFi network। फिर studio के logo step में logo upload करें, उसे बीच में size करें, और download करें। Print के लिए 2048 px तक का PNG, या अगर infinitely scalable चाहिए तो SVG। Logo step हर code type के साथ काम करता है, और वही logo पूरे batch पर भी लगाया जा सकता है।</p>
+
+<h2>चार गलतियाँ जो scan खराब कर देती हैं</h2>
+<ul>
+<li><strong>Logo बहुत बड़ा।</strong> Area के ~30% से ज़्यादा होने पर error correction भी गायब data को वापस नहीं बना सकती। अगर logo बड़ा ही रखना है, तो छोटा link इस्तेमाल करें — कम data का मतलब है ज़्यादा खुला pattern।</li>
+<li><strong>Low-contrast logo।</strong> हल्के code पर हल्का logo, या modules में घुल जाने वाला logo, camera को confuse कर देता है। गहरा logo, हल्का background, मज़बूत contrast — वही rule जो code पर लागू होता है।</li>
+<li><strong>Code के पीछे busy background।</strong> Photo या pattern पर logo वाला code एक साथ दो लड़ाइयाँ लड़ता है। Code को बैठने के लिए एक साफ, हल्का patch दें, जिसका quiet margin साफ हो।</li>
+<li><strong>Code को खींचना।</strong> Proportion के बिना resize करने से grid टेढ़ा हो जाता है। बराबर scale करें, ताकि square, square ही रहें।</li>
+</ul>
+
+<h2>वह test जो इसे साबित कर देता है</h2>
+<p>Print का पूरा run निकालने से पहले, code को दो phones से scan करें — एक iPhone, एक Android — और screen पर ही नहीं, print पर scan करें। अगर दोनों पहली बार में पढ़ लें, तो भेज दीजिए। अगर कोई एक भी अटके, तो logo थोड़ा छोटा करें या contrast बढ़ाएँ और फिर test करें। यहाँ के तीस seconds एक reprint बचा लेते हैं।</p>
+
+<p>आज़माएँ: <a href="/hi/qr-code-with-logo/">अपने logo वाला QR code बनाएँ</a> — free, static code के लिए कोई sign-up नहीं, कोई watermark नहीं।</p>
+
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly एक QR कोड दिखा रहा है"></div>
+      <div>
+        <h3>अपना लोगो वाला QR code बनाएँ</h3>
+        <p>अपना logo upload करें, बीच में रखें, scan होने लायक रखें। Free।</p>
+        <a class="btn" href="/hi/qr-code-with-logo/">स्टूडियो खोलें</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">आगे पढ़ें</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/hi/blog/static-vs-dynamic-qr-codes/"><b>स्टैटिक बनाम डायनामिक QR कोड</b></a>
+        <a class="rel-card" href="/hi/blog/why-is-my-qr-code-not-working/"><b>QR कोड काम नहीं कर रहा? 7 फ़िक्स जो मदद करते हैं</b></a>
+        <a class="rel-card" href="/hi/blog/qr-codes-for-restaurants/"><b>रेस्टोरेंट के लिए QR कोड — मुफ़्त गाइड</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>जानना अच्छा रहेगा</h2>
+    <details><summary><span>क्या मेरा logo QR code को खराब कर देगा?</span></summary><p>नहीं, अगर वह code area के ~30% से कम रहे। Logo लगाते ही error correction अपने आप बढ़ जाती है, इसलिए ढका हुआ बीच का हिस्सा scan नहीं रोकता।</p></details>
+    <details><summary><span>कौन सी logo file सबसे अच्छी चलती है?</span></summary><p>Transparency वाला एक square PNG। Rectangular logo और white box वाले logo जगह बर्बाद करते हैं और pattern से टकराते हैं।</p></details>
+    <details><summary><span>क्या मैं किसी भी QR code type के साथ logo इस्तेमाल कर सकता हूँ?</span></summary><p>हाँ — link, vCard, WiFi, और हर दूसरा type। वही logo पूरे batch पर भी लगाया जा सकता है।</p></details>
+    <details><summary><span>प्रिंट के लिए PNG या SVG?</span></summary><p>ज़्यादातर print कामों के लिए 2048 px तक का PNG, या banner जैसे काम के लिए SVG, जब infinitely scalable चाहिए।</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>असीमित डायनेमिक कोड — सीमित समय का ऑफ़र।</h3>
+        <p>मुफ़्त साइन इन करें और जितने चाहें बनाएँ। हर कोड छपने के बाद भी बदला जा सकता है और कभी समाप्त नहीं होता।</p>
+      </div>
+      <a class="fctaBtn" href="/hi/login/">मुफ़्त शुरू करें</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/hi/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">आपके ब्राउज़र में बने सुंदर QR कोड। स्टैटिक कोड कभी समाप्त नहीं होते।</p>
+        <div class="fmade">स्टैटिक कोड, आपके ब्राउज़र में बने।</div>
+      </div>
+      <div class="fcol"><h4>उत्पाद</h4><a href="/hi/">QR जनरेटर</a><a href="/hi/batch-qr-code/">बैच QR कोड</a><a href="/hi/qr-code-with-logo/">लोगो वाला QR कोड</a><a href="/hi/scan/">QR स्कैनर</a><a href="/hi/barcode-generator/">बारकोड जनरेटर</a><a href="/hi/pricing/">मूल्य</a></div>
+      <div class="fcol"><h4>संसाधन</h4><a href="/hi/blog/">ब्लॉग</a><a href="/hi/developers/">डेवलपर्स · API और MCP</a><a href="/hi/blog/qr-code-print-size-guide/">प्रिंट आकार गाइड</a><a href="/hi/#faq">सामान्य प्रश्न</a></div>
+      <div class="fcol"><h4>कंपनी</h4><a href="/hi/about/">हमारे बारे में</a><a href="mailto:hello@freeqrly.com">संपर्क</a></div>
+      <div class="fcol"><h4>कानूनी</h4><a href="/hi/privacy/">गोपनीयता नीति</a><a href="/hi/terms/">सेवा की शर्तें</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

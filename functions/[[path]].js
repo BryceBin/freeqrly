@@ -15,6 +15,7 @@ const LANG_SLUGS = new Set([
   'google-maps-qr-code',
   'bitcoin-qr-code', 'coupon-qr-code', 'app-store-qr-code', 'mp3-qr-code',
   'black-friday-qr-code', 'christmas-qr-code',
+  'dynamic-qr-code', 'ticket-qr-code',
   'about', 'privacy', 'terms', 'pricing', 'developers', 'scan', 'barcode-generator', 'login', 'reset',
 ]);
 

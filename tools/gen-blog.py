@@ -1117,6 +1117,192 @@ POSTS += [
  ),
 ]
 
+POSTS += [
+ dict(
+  slug="share-wifi-with-qr-code",
+  title="How to Share WiFi with a QR Code | FreeQrly",
+  desc="Share your WiFi password with a QR code: guests scan and join, no spelling, no typing. Free and private — for a static code, the password never leaves your browser.",
+  h1="Share your WiFi with <span class='hl hl-mint'>a QR code</span>",
+  lede="Guests ask for the password. You point at the fridge. One scan and they're online — no spelling, no typos, no reading it off the router sticker.",
+  date="October 28, 2026",
+  datePublished="2026-10-28",
+  mascot="wifi",
+  body="""
+<p>Every host knows the ritual: a guest arrives, asks for the WiFi password, and you recite a string of capitals, numbers, and symbols while they mistype it twice. A WiFi QR code ends it. You print one code, stick it where guests look, and their phone joins the network the moment they scan — no typing at all.</p>
+
+<h2>What a WiFi QR code holds</h2>
+<p>Three things: the network name (SSID), the password, and the security type — usually WPA or WPA2 on a home router, WEP on very old hardware, or nothing at all for an open network. A phone that scans the code reads all three and joins directly, instead of opening settings and typing.</p>
+
+<h2>Make one in three steps</h2>
+<ol>
+<li><b>Find your network details.</b> The name and password are usually on a sticker on the router. If you changed them, use the ones you set — the code has to match the router exactly, including capitals.</li>
+<li><b>Generate the code.</b> In the <a href="/wifi-qr-code/">WiFi QR code generator</a>, pick the WiFi type, enter the network name, password, and security type. The code appears instantly.</li>
+<li><b>Print it and put it where guests look.</b> Fridge door at home, counter card in a café, the welcome book in an Airbnb, the reception desk in an office. At least 2 × 2 cm on print so phones read it at arm's length.</li>
+</ol>
+
+<h2>Which phones join from a scan?</h2>
+<p>iPhones on iOS 11 and later join straight from the Camera app — point, tap the notification, done. Most Android phones on Android 10 and later do the same from the camera or from WiFi settings. No extra app needed on either side, and guests never see the password itself.</p>
+
+<h2>The honest security note</h2>
+<p>A static WiFi code is convenient because the password lives inside the pattern — which also means anyone who photographs the code can join your network. For a home, a café, or a rental, that is exactly the trade you want: guests are supposed to be online. Two rules keep it sane:</p>
+<ul>
+<li><strong>Generate it privately.</strong> A static code is drawn entirely in your browser — your password is never uploaded or stored anywhere. For extra peace of mind, load the page, disconnect from the internet, then type.</li>
+<li><strong>If the code leaks somewhere it shouldn't, change the password and reprint.</strong> A static code can't be edited after printing, but making a new one is free and takes a minute.</li>
+</ul>
+
+<h2>Hidden networks and tricky routers</h2>
+<p>Hidden networks work the same way — enter the exact network name and the phone connects without ever seeing it in a list. For WPA3 routers, pick the WPA2/WPA option if WPA3 isn't listed; most WPA3 routers accept WPA2 clients. And if a guest's phone refuses to join, check the password's capitals first — that is the cause almost every time.</p>
+
+<p>Want the code itself? <a href="/wifi-qr-code/">Make your WiFi QR code</a> — free, no sign-up for static codes, and it never expires.</p>
+""",
+  howto=[
+    ("Find your network details",
+     "Network name and password from the router sticker, or the ones you set yourself. Capitals must match exactly."),
+    ("Generate the code",
+     "In the WiFi QR code generator, pick the WiFi type and enter the name, password, and security type."),
+    ("Print it at least 2 × 2 cm",
+     "PNG at 1024 px or higher. Stick it where guests look: fridge, counter, welcome book."),
+    ("Test-scan before guests arrive",
+     "Point your own phone at the print. If it joins on the first try, you're done."),
+  ],
+  faq=[
+    ("Is my WiFi password safe in a QR code?",
+     "For a static code, yes — it is drawn entirely in your browser and never uploaded or stored. Anyone who photographs the printed code can join, so treat it like a guest key: fine for homes, cafés, and rentals, and reprint if it leaks."),
+    ("Which phones can scan a WiFi QR code?",
+     "iPhones on iOS 11+ join straight from the Camera app; most Android phones on Android 10+ do the same from the camera or WiFi settings. No extra app needed."),
+    ("Does it work with WPA3 or hidden networks?",
+     "Choose the security type that matches your router (WPA, WPA2, WEP, or open). Enter a hidden network's name exactly and it connects the same way."),
+    ("What if I change my WiFi password later?",
+     "A static code can't be edited, so print a fresh one — it's free and takes a minute. That's also why the code is best for networks whose password rarely changes."),
+  ],
+  cta=dict(title="Make your WiFi QR code",
+           text="Guests scan and they're online. Free, no sign-up for static codes.",
+           href="/wifi-qr-code/", btn="Open the studio"),
+ ),
+ dict(
+  slug="bulk-qr-codes",
+  title="Bulk QR Codes: Generate Dozens at Once, Free | FreeQrly",
+  desc="Generate QR codes in bulk: paste up to 50 links, get 50 print-ready codes, download them as one ZIP. Free, no sign-up for static codes, no watermark.",
+  h1="Dozens of codes, <span class='hl hl-honey'>one download</span>",
+  lede="Fifty product pages, fifty codes, one afternoon you don't have to spend making them one by one. Paste the links, download a ZIP, done.",
+  date="October 28, 2026",
+  datePublished="2026-10-28",
+  mascot="batch",
+  body="""
+<p>Making one QR code takes seconds. Making fifty, one at a time, takes an afternoon — and the fiftieth always has a typo. Bulk generation exists for exactly this job: you paste a list of links, every link becomes its own code, and you download the whole set in one ZIP.</p>
+
+<h2>How it works</h2>
+<ol>
+<li><b>Paste your links, one per line.</b> Up to 50 at a time in the <a href="/batch-qr-code/">batch QR code generator</a>.</li>
+<li><b>Hit Generate all.</b> Every link becomes its own QR code, previewed in a grid.</li>
+<li><b>Download the ZIP.</b> One click packs them all as print-ready PNGs at 1024 px, named qr-1.png, qr-2.png, and so on. Need more than 50? Run another batch — there's no daily cap and no account to hit.</li>
+</ol>
+
+<h2>Where bulk codes earn their keep</h2>
+<ul>
+<li><strong>Product packaging and labels.</strong> One code per product page, manual, or reorder link — printed straight onto the pack.</li>
+<li><strong>Events.</strong> One code per ticket or per check-in point, generated in a single pass instead of a long evening of clicking.</li>
+<li><strong>Real estate and retail.</strong> One code per listing or per shelf item, each opening its own page.</li>
+<li><strong>Menus and locations.</strong> One code per branch or per table, all from the same list.</li>
+</ul>
+
+<h2>Three habits that save reprints</h2>
+<p><strong>Check the list before you generate.</strong> A wrong link becomes a wrong code, fifty times over if it's repeated. Skim the list once — especially the first and last lines, where paste errors hide.</p>
+<p><strong>Test-scan the first and last codes.</strong> If those two read on the first try, the middle ones will too — they're rendered the same way. Test on a print, not just on screen, if they're going to paper.</p>
+<p><strong>Keep the print size honest.</strong> A code on a label still needs at least 2 × 2 cm and dark ink on a light background, with its quiet margin clear. Batch output is print-ready, but a tiny label undoes that.</p>
+
+<h2>What bulk codes are — and aren't</h2>
+<p>Batch codes are static: the link lives inside each pattern, so they never expire and need no sign-up. That also means a batch code can't be edited after printing — if a link changes, regenerate that one code (or the batch) and reprint. Want a logo on every code? Upload it once and it applies across the batch, with error correction raised automatically so every code stays scannable.</p>
+
+<p>Ready? <a href="/batch-qr-code/">Generate your batch</a> — free, no watermark, no account for static codes.</p>
+""",
+  howto=[
+    ("Paste your links, one per line",
+     "Up to 50 at a time in the batch QR code generator. Skim the list once for paste errors."),
+    ("Hit Generate all",
+     "Every link becomes its own QR code, previewed in a grid."),
+    ("Download the ZIP",
+     "One click packs print-ready 1024 px PNGs, named qr-1.png, qr-2.png, and so on."),
+    ("Test-scan first and last",
+     "If those two read on the first try, the rest will too. Test on print if they're going to paper."),
+  ],
+  faq=[
+    ("How many QR codes can I make at once?",
+     "Up to 50 per batch. Need more? Run another batch — there's no daily cap or account to hit."),
+    ("Is batch generation really free?",
+     "Yes. Many generators charge a subscription for bulk export; here it's the same free tool, no watermark, no sign-up for static codes."),
+    ("What format do the downloads come in?",
+     "A single ZIP containing high-resolution PNGs (1024 px), each named qr-1.png, qr-2.png, and so on — ready for print."),
+    ("Can I add my logo to batch codes?",
+     "Upload your logo once and it applies across the batch, with error correction raised automatically so every code stays scannable."),
+    ("Can I edit a batch code after printing?",
+     "Batch codes are static, so no — if a link changes, regenerate that code and reprint. For editable codes, use a dynamic code instead."),
+  ],
+  cta=dict(title="Generate your batch",
+           text="Paste up to 50 links, download one ZIP of print-ready codes. Free.",
+           href="/batch-qr-code/", btn="Open batch mode"),
+ ),
+ dict(
+  slug="add-logo-to-qr-code",
+  title="How to Add a Logo to a QR Code (and Keep It Scannable) | FreeQrly",
+  desc="Put your logo in the center of a QR code: upload a square PNG, keep it under ~30% of the code, let error correction do its job. Free, no watermark, still scans.",
+  h1="Your logo, <span class='hl hl-blush'>in the middle</span> — still scannable",
+  lede="A logo makes a code yours. It also covers up part of the pattern. Here's how to have both: logo dead center, code still scanning on the first try.",
+  date="October 28, 2026",
+  datePublished="2026-10-28",
+  mascot="logo-customize",
+  body="""
+<p>A plain QR code works. A QR code with your logo works and gets recognized — on packaging, on a business card, on a poster across the room. The catch is real, though: the logo sits on top of the pattern, and the pattern is what the phone reads. Get the balance wrong and the code stops scanning. Get it right and nobody notices the engineering — they just see your brand.</p>
+
+<h2>The three rules</h2>
+<ol>
+<li><b>Square PNG with transparency.</b> A square logo with a transparent background sits cleanest in the middle. A rectangular logo or a white-boxed logo wastes space and fights the pattern.</li>
+<li><b>Keep it under ~30% of the code area.</b> That is the rule of thumb the generator itself uses: small enough that the remaining pattern still carries the data, big enough to read at a glance.</li>
+<li><b>Let error correction do its job.</b> QR codes are built to survive damage — up to 30% of the pattern can be missing and the code still reads. When you add a logo, error correction is raised automatically so the covered middle doesn't matter.</li>
+</ol>
+
+<h2>Step by step</h2>
+<p>Make the code first — any type works with a logo: a link, a vCard, a WiFi network. Then upload the logo in the studio's logo step, size it to the middle, and download. PNG up to 2048 px for print, or SVG if you need it infinitely scalable. The logo step works with every code type, and the same logo can be applied across a whole batch.</p>
+
+<h2>Four mistakes that break scans</h2>
+<ul>
+<li><strong>Logo too big.</strong> Past ~30% of the area, even error correction can't rebuild the missing data. If the logo must be big, use a shorter link — less data means a roomier pattern.</li>
+<li><strong>Low-contrast logo.</strong> A pale logo on a light code, or a logo that blends into the modules, confuses cameras. Dark logo, light background, strong contrast — same rule as the code itself.</li>
+<li><strong>Busy background behind the code.</strong> A logo code on a photo or a pattern is two fights at once. Give the code a clean, light patch to sit on, with its quiet margin clear.</li>
+<li><strong>Stretching the code.</strong> Resizing non-proportionally distorts the grid. Scale evenly so the squares stay square.</li>
+</ul>
+
+<h2>The test that proves it</h2>
+<p>Before you print a run, scan the code with two phones — one iPhone, one Android — and scan the print, not just the screen. If both read on the first try, ship it. If either hesitates, shrink the logo a notch or raise the contrast and test again. Thirty seconds here saves a reprint.</p>
+
+<p>Try it: <a href="/qr-code-with-logo/">Make a QR code with your logo</a> — free, no sign-up for static codes, no watermark.</p>
+""",
+  howto=[
+    ("Make the code",
+     "Any type works with a logo: a link, a vCard, a WiFi network."),
+    ("Upload a square PNG",
+     "Transparency works best. Keep the logo under ~30% of the code area."),
+    ("Let error correction adjust",
+     "It rises automatically when a logo is added, so the code still scans."),
+    ("Test-scan before printing",
+     "Two phones, iPhone and Android, on the print itself. If both read first try, ship it."),
+  ],
+  faq=[
+    ("Will my logo break the QR code?",
+     "Not if it stays under ~30% of the code area. Error correction is raised automatically when a logo is added, so the covered middle doesn't stop the scan."),
+    ("What logo file works best?",
+     "A square PNG with transparency. Rectangular logos and white-boxed logos waste space and fight the pattern."),
+    ("Can I use a logo with any QR code type?",
+     "Yes — link, vCard, WiFi, and every other type. The same logo can also be applied across a whole batch."),
+    ("PNG or SVG for print?",
+     "PNG up to 2048 px for most print jobs, or SVG when you need it infinitely scalable, like a banner."),
+  ],
+  cta=dict(title="Make your logo QR code",
+           text="Upload your logo, keep it centered, keep it scannable. Free.",
+           href="/qr-code-with-logo/", btn="Open the studio"),
+ ),
+]
+
 def faq_json(faq):
     return ",\n    ".join(
         '{\n      "@type": "Question",\n      "name": "%s",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "%s"\n      }\n    }' % (q.replace('"', '\\"'), a.replace('"', '\\"'))
