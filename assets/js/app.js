@@ -197,6 +197,19 @@ function styleOpts(px){
 async function draw(){
   if(cur==="batch") return;
   scanScore();
+  // Keep the pre-rendered preview while state is still pristine: replacing it
+  // with an identical image would reset the LCP clock (and can nudge layout).
+  // The check keys on the pre-render img itself, not on call order — init
+  // calls draw() twice (once directly, once after language setup), and only
+  // the pre-render presence tells us nothing has rendered yet. Once any real
+  // draw replaces it, this never triggers again.
+  const pristine = cur==="url" && (v("url")===""||v("url")==="https://example.com")
+    && !logoData && (typeof getFrame!=="function"||getFrame()==="none")
+    && $("dots").value==="square" && $("ecc").value==="M"
+    && $("fg").value.toLowerCase()==="#22303f" && $("bgc").value.toLowerCase()==="#ffffff"
+    && $("transp") && $("transp").checked
+    && $("qrbox") && $("qrbox").querySelector("img[data-prerender]");
+  if(pristine){ return; }
   const qr = new QRCodeStyling(styleOpts(236));
   try{
     // Use SVG (synchronous data) instead of canvas append (async, may be blank)
