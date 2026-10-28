@@ -42,6 +42,16 @@ for line in out.split("\n"):
     if line.startswith("Wrote"):
         print(f"  {line}")
 
+# 2.5. 合并首页 CSS（只首页用 bundle，子页/落地页仍用 3 个源文件）：
+#     main + acct-menu + site-header 按原引用顺序拼接，省 2 个渲染阻塞请求。
+#     bundle 是生成物，源文件不动；顺序即层叠顺序，不可调换。
+print("→ 合并首页 CSS...")
+bundle = ""
+for _name in ["main.css", "acct-menu.css", "site-header.css"]:
+    bundle += open(os.path.join(SITE, "assets/css", _name), encoding="utf-8").read() + "\n"
+open(os.path.join(SITE, "assets/css/home-bundle.css"), "w", encoding="utf-8").write(bundle)
+print(f"  home-bundle.css ({len(bundle)} 字节)")
+
 # 3. 统一版本号：找当前最大的 b3x 后缀，+1
 print("→ 统一 ?v= 版本号...")
 versions = set()

@@ -213,8 +213,13 @@ async function draw(){
 const MASCOT_BASE="/assets/img/mascots/";
 const MASCOT_LOCAL="/assets/img/mascots/";
 const MASCOT_VER="t2"; // bump when mascot files change (transparent backgrounds)
-// Preload every mascot pose on page load so switching types swaps instantly
+// Defer mascot preload until window load: 18 poses (~1MB) used to compete
+// with the first QR render for bandwidth and delayed LCP. Switching types
+// before load just fetches on demand via updateStudioMascot; after load
+// swaps are still instant.
+window.addEventListener("load", ()=>{
 ["qly-url","qly-text","qly-email","qly-sms","qly-phone","qly-geo","wifi","business-card","wedding","batch","studio-qr","qly-bitcoin","qly-coupon","qly-appstore","qly-review","qly-mp3","qly-google-form","qly-menu"].forEach(p=>{ const im=new Image(); im.src=MASCOT_BASE+p+".webp?v="+MASCOT_VER; });
+});
 function updateStudioMascot(){
   const image=document.querySelector("[data-studio-mascot]"); if(!image) return;
   const local={url:"qly-url",text:"qly-text",email:"qly-email",sms:"qly-sms",phone:"qly-phone",geo:"qly-geo",bitcoin:"qly-bitcoin",coupon:"qly-coupon",appstore:"qly-appstore",review:"qly-review",mp3:"qly-mp3","google-form":"qly-google-form",menu:"qly-menu"};
