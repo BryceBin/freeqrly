@@ -262,7 +262,7 @@ function renderTabs(){
     b.setAttribute("aria-selected", k===cur ? "true" : "false");
     const ic = document.createElement("span"); ic.className="tico"; ic.textContent = TYPE_EMOJI[k]||"\u25CF";
     b.appendChild(ic); b.appendChild(document.createTextNode(name));
-    b.onclick = ()=>{ cur=k; renderTabs(); renderFields(); draw();
+    b.onclick = ()=>{ cur=k; track("type_select",{type:k}); renderTabs(); renderFields(); draw();
       const bp=$("batchPanel"); if(bp) bp.hidden = cur!=="batch";
     };
     t.appendChild(b);
@@ -857,10 +857,17 @@ $("batchZip").onclick = async ()=>{ track("batch_zip",{count:batchItems.length})
   a.href = URL.createObjectURL(blob); a.download = "freeqrly-batch.zip"; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
 };
-/* privacy-first analytics: fire-and-forget, no cookies/ids */
+/* privacy-first analytics: aggregate counts only. Never input content, never
+   raw IP, no cookies. A random per-tab session id (sessionStorage) links the
+   steps of one visit for funnel analysis; it is discarded when the tab closes
+   and is never tied to an account or identity. */
+function fqSid(){ try{ let s=sessionStorage.getItem("fq_sid"); if(!s){ try{ const a=new Uint8Array(8); crypto.getRandomValues(a); s=Array.from(a,x=>x.toString(16).padStart(2,"0")).join(""); }catch(e){ s=Array.from({length:16},()=>Math.floor(Math.random()*16).toString(16)).join(""); } sessionStorage.setItem("fq_sid",s); } return s; }catch(e){ return ""; } }
+function fqRef(){ try{ const r=document.referrer; if(!r) return "direct"; const h=new URL(r).hostname; if(/(^|\.)google\./.test(h)) return "google"; if(/(^|\.)baidu\.com$/.test(h)) return "baidu"; if(/(^|\.)bing\.com$/.test(h)) return "bing"; if(/(^|\.)(chatgpt|openai)\.com$/.test(h)||/(^|\.)perplexity\.ai$/.test(h)||/(^|\.)claude\.ai$/.test(h)) return "ai"; return "other"; }catch(e){ return "other"; } }
+function fqDevice(){ return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent||"") ? "mobile" : "desktop"; }
+function fqBrowser(){ const u=navigator.userAgent||""; if(/Edg\//.test(u)) return "edge"; if(/Chrome\//.test(u)) return "chrome"; if(/Firefox\//.test(u)) return "firefox"; if(/Safari\//.test(u)) return "safari"; return "other"; }
 function track(event, props){
   try{
-    const body = JSON.stringify(Object.assign({event:event, lang:lang}, props||{}));
+    const body = JSON.stringify(Object.assign({event:event, lang:lang, sid:fqSid(), ref:fqRef(), blang:(navigator.language||"").slice(0,8), device:fqDevice(), browser:fqBrowser()}, props||{}));
     if(navigator.sendBeacon){
       navigator.sendBeacon("/api/track", new Blob([body], {type:"application/json"}));
     }else{
@@ -1199,6 +1206,7 @@ function resetFramePreset(){
   draw(); scanScore();
 }
 function applyFramePreset(name){
+  track("preset_click",{type:name});
   if(name === "none"){ resetFramePreset(); return; }
   const P = name==="bf" ? {fg:"#161616", bg:"#FFFFFF"} : name==="xmas" ? {fg:"#1F4D3A", bg:"#FBF7EC"} : null;
   if(!P) return;
@@ -1508,6 +1516,7 @@ function restoreDraft(){
       }
       dynamicShortUrl = d.shortUrl;
       dynamicGenerated = true;
+      track("code_create",{type:cur});
       const res = $("dynResult"); if(res) res.hidden = false;
       const link = $("dynShortUrl"); if(link){ link.href = d.shortUrl; link.textContent = d.shortUrl.replace(/^https?:\/\//, ''); }
       // New code: show Dashboard + Manage links (session-owned, no EditKey).
@@ -1607,6 +1616,7 @@ function initAuthHeader(){
 }
 detectLang().then(async l => {
   lang = l; applyLang(); draw();
+  track("page_view",{type:location.pathname});
   initAuthHeader(); // after lang is set, so the account menu uses the right language
   if(window.refreshDynamicUI) window.refreshDynamicUI();
   const params = new URLSearchParams(location.search);
