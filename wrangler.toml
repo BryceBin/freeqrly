@@ -25,3 +25,11 @@ database_id = "7c643833-dd76-4cb5-b528-0d6575b54362"
 [[r2_buckets]]
 binding = "LOGOS"
 bucket_name = "freeqrly-logos"
+
+# Analytics Engine for /api/track (functions/api/track.js reads env.ANALYTICS).
+# Must live here, not only in the Pages dashboard: a dashboard-only binding
+# was silently dropped by a later wrangler.toml deploy (2026-10-16 onward),
+# which stopped all event writes while /api/track kept returning 200.
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "freeqrly_events"
