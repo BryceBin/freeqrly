@@ -254,6 +254,38 @@ export async function getCodeStats(env, user, code) {
     `SELECT date, COUNT(*) AS uniques FROM scan_fingerprints WHERE code = ? GROUP BY date ORDER BY date DESC LIMIT 30`
   ).bind(code).all();
 
+  // Range-sliced breakdowns (7/14/30 days) so the panel's breakdown follows
+  // the trend range without refetching. daily_stats.date is a UTC ISO date
+  // string, so lexicographic comparison matches calendar ranges.
+  const now = new Date();
+  const utcToday = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const isoDay = (d) => d.toISOString().slice(0, 10);
+  const cutoff30 = new Date(utcToday); cutoff30.setUTCDate(cutoff30.getUTCDate() - 29);
+  const dimRows = {};
+  for (const [key, col, extra] of [['country', 'country', ''], ['city', 'city', `AND city != ''`], ['device', 'device', ''], ['os', 'os', '']]) {
+    const r = await env.DB.prepare(
+      `SELECT date, ${col} AS name, SUM(count) AS scans FROM daily_stats WHERE code = ? AND date >= ? ${extra} GROUP BY date, ${col}`
+    ).bind(code, isoDay(cutoff30)).all();
+    dimRows[key] = r.results || [];
+  }
+  const byRange = {};
+  for (const n of [7, 14, 30]) {
+    const cut = new Date(utcToday); cut.setUTCDate(cut.getUTCDate() - (n - 1));
+    const cutStr = isoDay(cut);
+    byRange[n] = {};
+    for (const key of ['country', 'city', 'device', 'os']) {
+      const agg = new Map();
+      for (const r of dimRows[key]) {
+        if (r.date < cutStr) continue;
+        agg.set(r.name, (agg.get(r.name) || 0) + r.scans);
+      }
+      byRange[n][key] = [...agg.entries()]
+        .map(([name, scans]) => ({ [key]: name, scans }))
+        .sort((a, b) => b.scans - a.scans)
+        .slice(0, 10);
+    }
+  }
+
   return {
     code,
     type: row.type || 'url',
@@ -268,5 +300,6 @@ export async function getCodeStats(env, user, code) {
     byOS: byOS.results || [],
     uniqueScans: (uniqueRow && uniqueRow.n) || 0,
     uniqueByDate: uniqueByDate.results || [],
+    byRange,
   };
 }
