@@ -98,18 +98,73 @@ a.shortUrl:hover{text-decoration:underline}
 .statBig{flex:1;min-width:120px;background:#FBF6EC;border-radius:14px;padding:16px;text-align:center}
 .statBig .num{font-size:28px;font-weight:800}
 .statBig .lbl{font-size:12px;color:#8a7a5f;margin-top:2px}
-.secTitle{font-size:15px;font-weight:700;margin:20px 0 10px}
-.chart{display:flex;align-items:flex-end;gap:10px;height:72px;padding:0 4px}
-.chart .bar{flex:1;background:#DCE5DD;border-radius:6px 6px 0 0;min-height:4px;position:relative}
-.chart .bar.today{background:#2F4A62}
-.chart .bar.zero{min-height:0}
-.chart .bar span{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:10px;color:#8a7a5f}
-.chartLabels{display:flex;gap:10px;font-size:11px;color:#8a7a5f;padding:0 4px;margin-top:6px}
-.chartLabels span{flex:1;text-align:center}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:560px){.two{grid-template-columns:1fr}}
-.breakRow{display:flex;justify-content:space-between;font-size:13px;padding:8px 0;border-bottom:1px solid #F1EAD9}
-.breakRow:last-child{border-bottom:0}
+/* STATS-PANEL-CSS-START */
+.sp-mod{margin-top:22px}
+.sp-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.sp-head .sp-left{display:flex;align-items:center;gap:12px}
+.sp-head > .sp-seg{margin-left:auto}
+.sp-mt{font-size:15px;font-weight:700;white-space:nowrap}
+.sp-seg{display:inline-flex;background:#FBF6EC;border:1px solid #E8DFC8;border-radius:99px;padding:3px;gap:2px}
+.sp-seg button{border:0;background:transparent;padding:6px 13px;border-radius:99px;font-size:13px;color:#6B6252;cursor:pointer;font-family:inherit}
+.sp-seg button.on{background:#2F4A62;color:#fff;font-weight:700}
+.sp-seg.mini button{padding:5px 11px;font-size:12.5px}
+.sp-body{border-top:1px solid #F1EAD9;margin-top:12px;padding-top:14px}
+.sp-note{font-size:12px;color:#8a7a5f;margin-top:8px;line-height:1.7}
+.sp-chart{display:flex;align-items:flex-end;height:150px;border-bottom:1px solid #E8DFC8;padding:0 4px}
+.sp-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px}
+.sp-col .v{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+.sp-col .b{width:30px;background:#DCE5DD;border-radius:5px 5px 0 0}
+.sp-col.today .b{background:#2F4A62}
+.sp-col.today .v{color:#2F4A62}
+.sp-labels{display:flex;padding:8px 4px 0}
+.sp-labels span{flex:1;text-align:center;font-size:11px;color:#8a7a5f}
+.sp-labels span.today{color:#2F4A62;font-weight:600}
+.sp-donutwrap{display:flex;gap:36px;align-items:center;padding:4px 0}
+.sp-donut{position:relative;width:190px;height:190px;flex-shrink:0}
+.sp-donut svg{transform:rotate(-90deg)}
+.sp-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.sp-center b{font-size:30px;font-variant-numeric:tabular-nums}
+.sp-center span{font-size:12px;color:#8a7a5f}
+.sp-legend{flex:1}
+.sp-lrow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F1EAD9;font-size:14px}
+.sp-lrow:last-child{border-bottom:none}
+.sp-lrow .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sp-lrow .name{flex:1}
+.sp-lrow .val{font-weight:700;font-variant-numeric:tabular-nums}
+.sp-lrow .pct{width:44px;text-align:right;color:#8a7a5f;font-size:12px}
+.sp-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F1EAD9;font-size:14px}
+.sp-row:last-child{border-bottom:none}
+.sp-row .name{width:92px;color:#444;flex-shrink:0}
+.sp-track{flex:1;height:7px;background:#F1EAD9;border-radius:4px;overflow:hidden}
+.sp-fill{height:100%;background:#D9A441;border-radius:4px}
+.sp-row .val{width:44px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.sp-row .pct{width:40px;text-align:right;color:#8a7a5f;font-size:12px}
+.sp-table{width:100%;border-collapse:collapse;font-size:14px}
+.sp-table th{text-align:left;font-size:12px;color:#8a7a5f;font-weight:600;padding:8px 10px 8px 0;border-bottom:1px solid #E8DFC8}
+.sp-table td{padding:10px 10px 10px 0;border-bottom:1px solid #F1EAD9;font-variant-numeric:tabular-nums}
+.sp-table td.num,.sp-table th.num{text-align:right}
+.sp-table tr.total td{font-weight:700;border-bottom:none}
+.sp-empty{font-size:13px;color:#8a7a5f;padding:10px 0}
+.sp-drop{display:none;position:relative}
+.sp-dropbtn{border:1.5px solid #E8DFC8;background:#fff;border-radius:99px;padding:7px 13px;font-size:13px;font-weight:700;color:#2F4A62;cursor:pointer;font-family:inherit;white-space:nowrap}
+.sp-menu{display:none;position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid #E8DFC8;border-radius:12px;box-shadow:0 8px 24px rgba(43,36,22,.14);padding:6px;z-index:5;min-width:120px}
+.sp-drop.open .sp-menu{display:block}
+.sp-menu button{display:block;width:100%;text-align:left;padding:9px 12px;border:0;background:none;border-radius:8px;font-size:14px;color:#22303F;cursor:pointer;font-family:inherit}
+.sp-menu button.on{background:#FBF6EC;font-weight:700;color:#2F4A62}
+.sp-mobrow{display:none}
+@media(max-width:560px){
+.sp-head .sp-seg{display:none}
+.sp-head .sp-left{width:100%;justify-content:space-between}
+.sp-drop{display:inline-block}
+.sp-mobrow{display:flex;width:100%;justify-content:space-between;align-items:center}
+.sp-mlbl{font-size:13px;color:#8a7a5f}
+.sp-donutwrap{flex-direction:column;gap:16px}
+.sp-donut{width:170px;height:170px}
+.sp-legend{width:100%}
+.sp-col .b{width:20px}
+.sp-row .name{width:76px}
+}
+/* STATS-PANEL-CSS-END */
 .breakVal{display:flex;gap:8px;align-items:baseline}
 .breakVal b{color:#22303F}
 .breakVal span{color:#8a7a5f}
@@ -321,7 +376,7 @@ function dashTrack(event, props){
 }
 const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
 const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
-const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "codesUsedUnlimited": "{n} codes · unlimited (limited time)", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "cwTitle": "Your Pro so far", "cwCodesLbl": "dynamic codes", "cwScansLbl": "total scans", "cwSinceLbl": "Pro since", "cwKeep": "Nothing happens to your {n} codes — they stay <b>editable</b>, keep their <b>stats</b>, and keep working.", "cwChange": "The one thing that changes: free accounts cap new dynamic codes at <b>20</b>. Pro stays <b>unlimited</b>.", "cwNote": "Pro stays active until {d}. No charge after that.", "cwKeepBtn": "Keep Pro", "cwCancelBtn": "Cancel anyway", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends.", "planCreated": "{n} dynamic codes created", "planOfLimit": " \u00b7 free limit {limit}", "planUnlimitedSuffix": " \u00b7 unlimited", "pwTitle": "Free vs Pro", "pwRowQuota": "Dynamic codes", "pwRowStatic": "Static codes", "pwRowEdit": "Edit after printing + scan stats", "pwRowMarks": "No watermark, never expires", "pwRowKeep": "Codes keep working after you cancel", "pwUnlimited": "Unlimited", "pwQuota20": "20", "pwBuyMonthly": "Upgrade monthly \u00b7 $9 / month", "pwBuyYearly": "Upgrade yearly \u00b7 $90 / year", "pwSave": "Save 17%", "pwMicro": "Cancel anytime \u00b7 7-day full refund on your first subscription"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "codesUsedUnlimited": "{n} codes · unlimited (limited time)", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "trendTitle": "Scan trend", "breakTitle": "Scan breakdown", "vizLine": "Line", "vizBar": "Bar", "vizHBar": "Bars", "vizTable": "Table", "vizDonut": "Donut", "range7": "7 days", "range14": "14 days", "range30": "30 days", "rangeLbl": "Range", "catLbl": "Category", "lastNDays": "Last {n} days", "dateCol": "Date", "scansCol": "Scans", "uniqueCol": "Unique", "totalRow": "Total", "cumNote": "Cumulative", "rangeNote": "Changes with range", "rangeEmpty": "No scans in this range", "cityNote": "Only {n} scans have city info",  "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "cwTitle": "Your Pro so far", "cwCodesLbl": "dynamic codes", "cwScansLbl": "total scans", "cwSinceLbl": "Pro since", "cwKeep": "Nothing happens to your {n} codes — they stay <b>editable</b>, keep their <b>stats</b>, and keep working.", "cwChange": "The one thing that changes: free accounts cap new dynamic codes at <b>20</b>. Pro stays <b>unlimited</b>.", "cwNote": "Pro stays active until {d}. No charge after that.", "cwKeepBtn": "Keep Pro", "cwCancelBtn": "Cancel anyway", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends.", "planCreated": "{n} dynamic codes created", "planOfLimit": " \u00b7 free limit {limit}", "planUnlimitedSuffix": " \u00b7 unlimited", "pwTitle": "Free vs Pro", "pwRowQuota": "Dynamic codes", "pwRowStatic": "Static codes", "pwRowEdit": "Edit after printing + scan stats", "pwRowMarks": "No watermark, never expires", "pwRowKeep": "Codes keep working after you cancel", "pwUnlimited": "Unlimited", "pwQuota20": "20", "pwBuyMonthly": "Upgrade monthly \u00b7 $9 / month", "pwBuyYearly": "Upgrade yearly \u00b7 $90 / year", "pwSave": "Save 17%", "pwMicro": "Cancel anytime \u00b7 7-day full refund on your first subscription"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
 let I18N = null;
 let LANG = 'en';
 let ME = null;
@@ -861,7 +916,8 @@ async function deleteCode(code, cardEl){
 // ---------- stats panel (lazy) ----------
 async function openStats(cardEl, code){
   const panel = cardEl.querySelector('.panel-stats');
-  if(STATS_CACHE[code]){ panel.innerHTML = statsHTML(STATS_CACHE[code]); return; }
+  spBindPanel(panel, code);
+  if(STATS_CACHE[code]){ spRenderPanel(panel, code); return; }
   const btn = cardEl.querySelector('.actRow button[data-panel="stats"]');
   const spin = document.createElement('span');
   spin.className = 'mini-spin'; spin.setAttribute('aria-hidden', 'true');
@@ -873,46 +929,213 @@ async function openStats(cardEl, code){
     const d = await r.json().catch(() => ({}));
     if(!r.ok){ panel.innerHTML = `<p class="merror">${esc(d.error || t('ui','networkErr'))}</p>`; return; }
     STATS_CACHE[code] = d;
-    panel.innerHTML = statsHTML(d);
+    spRenderPanel(panel, code);
     dashTrack("dashboard_action",{type:"stats_view"});
   }catch(e){ panel.innerHTML = `<p class="merror">${t('ui','networkErr')}</p>`; }
   finally{ spin.remove(); }
 }
-function statsHTML(d){
-  const today = new Date().toISOString().slice(0,10);
-  const todayRow = (d.byDate||[]).find(r => r.date === today);
-  // Fixed 7-day window (today + previous 6 days); days without scans are 0.
+// ---------- redesigned stats panel (V9+V10) ----------
+// STATS-PANEL-JS-START
+const SP_DONUT_COLORS = ['#D9A441','#2F4A62','#E8C98F','#B9AE99','#EFE7D2'];
+const SP_UI = {}; // code -> {range, trendViz, cat, brkViz}
+function spUI(code){
+  if(!SP_UI[code]) SP_UI[code] = { range: 7, trendViz: 'line', cat: 'country', brkViz: 'donut' };
+  return SP_UI[code];
+}
+function spRangeData(d, n){
   const byDateMap = Object.fromEntries((d.byDate||[]).map(r => [r.date, r.scans]));
-  const utcToday = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate()));
-  const last7 = [];
-  for(let i = 6; i >= 0; i--){
+  const uniqMap = Object.fromEntries((d.uniqueByDate||[]).map(r => [r.date, r.uniques]));
+  const now = new Date();
+  const utcToday = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const days = [], vals = [], uniq = [];
+  for(let i = n - 1; i >= 0; i--){
     const dt = new Date(utcToday); dt.setUTCDate(dt.getUTCDate() - i);
     const iso = dt.toISOString().slice(0,10);
-    last7.push({ date: iso, scans: byDateMap[iso] || 0 });
+    days.push(iso); vals.push(byDateMap[iso] || 0); uniq.push(uniqMap[iso] || 0);
   }
-  const max = Math.max(1, ...last7.map(r => r.scans));
-  const rows = (arr, empty) => {
-    if(!arr || !arr.length) return `<div class="breakRow"><span>${empty}</span><span class="breakVal">—</span></div>`;
-    const total = arr.reduce((s,r) => s + r.scans, 0) || 1;
-    return arr.map(r => `<div class="breakRow"><span>${esc(r.country||r.city||r.device||r.os||'Unknown')}</span><span class="breakVal"><b>${r.scans.toLocaleString()}</b><span>${Math.round(r.scans/total*100)}%</span></span></div>`).join('');
-  };
-  return `
-  <div class="statTop">
-    <div class="statBig"><div class="num">${(d.totalScans||0).toLocaleString()}</div><div class="lbl">${t('ui','totalScans')}</div></div>
-    <div class="statBig"><div class="num">${(todayRow ? todayRow.scans : 0).toLocaleString()}</div><div class="lbl">${t('ui','today')}</div></div>
-    <div class="statBig"><div class="num">${(d.uniqueScans||0).toLocaleString()}</div><div class="lbl">${t('ui','uniqueScans')}</div></div>
-    <div class="statBig"><div class="num">${fmtDate(d.createdAt)}</div><div class="lbl">${t('ui','created')}</div></div>
-  </div>
-  <div class="secTitle">${t('ui','last7')}</div>
-  <div class="chart">${last7.map(r => `<div class="bar ${r.date===today?'today':''}${r.scans===0?' zero':''}" style="height:${r.scans===0?0:Math.max(6,r.scans/max*100)}%"><span>${r.scans}</span></div>`).join('')}</div>
-  <div class="chartLabels">${last7.map(r => { const dt = new Date(r.date+'T00:00:00'); return `<span>${r.date===today?t('ui','today'):dt.toLocaleDateString('en-US',{weekday:'short'})}</span>`; }).join('')}</div>
-  <div class="two">
-    <div><div class="secTitle">${t('ui','byCountry')}</div><div>${rows(d.byCountry, t('ui','noScans'))}</div></div>
-    <div><div class="secTitle">${t('ui','byCity')}</div><div>${rows(d.byCity, t('ui','noCity'))}</div></div>
-    <div><div class="secTitle">${t('ui','byDevice')}</div><div>${rows(d.byDevice, t('ui','noScans'))}</div></div>
-    <div><div class="secTitle">${t('ui','byOS')}</div><div>${rows(d.byOS, t('ui','noScans'))}</div></div>
-  </div>`;
+  return { days, vals, uniq };
 }
+function spCatData(d, cat){
+  const map = { country: d.byCountry, city: d.byCity, device: d.byDevice, os: d.byOS };
+  const labelKey = { country: 'byCountry', city: 'byCity', device: 'byDevice', os: 'byOS' }[cat];
+  const field = { country: 'country', city: 'city', device: 'device', os: 'os' }[cat];
+  const rows = (map[cat] || []).map(r => ({ name: r[field] || 'Unknown', scans: r.scans }));
+  return { rows, label: t('ui', labelKey) };
+}
+function spSeg(buttons, current, kind, mini){
+  return `<span class="sp-seg${mini ? ' mini' : ''}">` + buttons.map(b =>
+    `<button type="button" data-sp="${kind}" data-v="${b[0]}" class="${String(b[0]) === String(current) ? 'on' : ''}">${b[1]}</button>`).join('') + `</span>`;
+}
+function spDrop(id, btnLabel, items, current){
+  return `<span class="sp-drop" id="${id}"><button class="sp-dropbtn" type="button" data-sp="drop">${btnLabel} ▾</button><div class="sp-menu">` + items.map(it =>
+    `<button type="button" data-sp="dropItem" data-drop="${id}" data-v="${it[0]}" class="${String(it[0]) === String(current) ? 'on' : ''}">${it[1]}</button>`).join('') + `</div></span>`;
+}
+function spTrendLine(days, vals, uniq){
+  const W = 860, H = 220, PL = 8, PR = 8, PT = 22, PB = 28;
+  const max = Math.max(1, ...vals) * 1.15;
+  const x = i => PL + i * (W - PL - PR) / (vals.length - 1);
+  const y = v => PT + (H - PT - PB) * (1 - v / max);
+  let grid = '';
+  for(let g = 0; g <= 4; g++){
+    const gy = PT + (H - PT - PB) * g / 4;
+    grid += `<line x1="${PL}" y1="${gy}" x2="${W-PR}" y2="${gy}" stroke="#F1EAD9" stroke-width="1"/>`;
+  }
+  const mk = arr => arr.map((v,i) => x(i).toFixed(1) + ',' + y(v).toFixed(1)).join(' ');
+  const p1 = mk(vals), p2 = mk(uniq);
+  const vmax = Math.max(...vals);
+  let dots = '', labels = '';
+  vals.forEach((v,i) => {
+    dots += `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="4" fill="#fff" stroke="#2F4A62" stroke-width="2"/>`;
+    if(vals.length <= 14 || v === vmax || i === vals.length - 1)
+      labels += `<text x="${x(i).toFixed(1)}" y="${(y(v)-10).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="600" fill="#22303F">${v}</text>`;
+  });
+  const mid = Math.floor((vals.length - 1) / 2);
+  const xl = [0, mid, vals.length - 1].map(i => {
+    const anchor = i === 0 ? 'start' : (i === vals.length - 1 ? 'end' : 'middle');
+    const xx = i === 0 ? PL : (i === vals.length - 1 ? W - PR : x(i));
+    const lbl = i === vals.length - 1 ? t('ui','today') : days[i].slice(5);
+    return `<text x="${xx.toFixed(1)}" y="${H-8}" text-anchor="${anchor}" font-size="11" fill="#8a7a5f">${lbl}</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%">${grid}<polygon points="${PL},${H-PB} ${p1} ${x(vals.length-1).toFixed(1)},${H-PB}" fill="#2F4A62" opacity="0.07"/><polyline points="${p1}" fill="none" stroke="#2F4A62" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${p2}" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round"/>${dots}${labels}${xl}</svg>` +
+    `<div class="sp-note"><span style="color:#2F4A62">━</span> ${t('ui','totalScans')} &nbsp; <span style="color:#D9A441">┄</span> ${t('ui','uniqueScans')}</div>`;
+}
+function spTrendBars(days, vals){
+  const max = Math.max(1, ...vals);
+  const vmax = Math.max(...vals);
+  const todayIdx = vals.length - 1;
+  const showVal = (v,i) => vals.length <= 14 || v === vmax || i === todayIdx;
+  const showDate = i => vals.length <= 14 || i === 0 || i === Math.floor((vals.length-1)/2) || i === todayIdx;
+  return `<div class="sp-chart">` + vals.map((v,i) =>
+    `<div class="sp-col${i===todayIdx?' today':''}"><span class="v">${showVal(v,i)?v:''}</span><div class="b" style="height:${Math.max(4, v/max*100)}%"></div></div>`).join('') +
+    `</div><div class="sp-labels">` + days.map((d,i) =>
+    `<span class="${i===todayIdx?'today':''}">${showDate(i)? (i===todayIdx? t('ui','today') : d.slice(5)) : ''}</span>`).join('') + `</div>`;
+}
+function spTrendTable(days, vals, uniq){
+  const total = vals.reduce((a,b) => a + b, 0), utotal = uniq.reduce((a,b) => a + b, 0);
+  return `<table class="sp-table"><thead><tr><th>${t('ui','dateCol')}</th><th class="num">${t('ui','scansCol')}</th><th class="num">${t('ui','uniqueCol')}</th></tr></thead><tbody>` +
+    vals.map((v,i) => `<tr><td>${days[i]}</td><td class="num">${v.toLocaleString()}</td><td class="num">${uniq[i].toLocaleString()}</td></tr>`).join('') +
+    `<tr class="total"><td>${t('ui','totalRow')}</td><td class="num">${total.toLocaleString()}</td><td class="num">${utotal.toLocaleString()}</td></tr></tbody></table>`;
+}
+function spBreakDonut(rows, catTotal, catLabel){
+  const R = 80, C = 2 * Math.PI * R;
+  let off = 0, svg = '';
+  rows.forEach((r, i) => {
+    const frac = catTotal ? r.scans / catTotal : 0, len = frac * C;
+    if(len <= 0) return;
+    svg += `<circle cx="95" cy="95" r="${R}" fill="none" stroke="${SP_DONUT_COLORS[i % SP_DONUT_COLORS.length]}" stroke-width="26" stroke-dasharray="${Math.max(0, len - 2).toFixed(1)} ${(C - len + 2).toFixed(1)}" stroke-dashoffset="${(-off).toFixed(1)}"/>`;
+    off += len;
+  });
+  return `<div class="sp-donutwrap"><div class="sp-donut"><svg width="190" height="190" viewBox="0 0 190 190">${svg}</svg><div class="sp-center"><b>${catTotal.toLocaleString()}</b><span>${esc(catLabel)}</span></div></div><div class="sp-legend">` +
+    rows.map((r, i) => `<div class="sp-lrow"><span class="dot" style="background:${SP_DONUT_COLORS[i % SP_DONUT_COLORS.length]}"></span><span class="name">${esc(r.name)}</span><span class="val">${r.scans.toLocaleString()}</span><span class="pct">${catTotal ? Math.round(r.scans/catTotal*100) : 0}%</span></div>`).join('') + `</div></div>`;
+}
+function spBreakBars(rows, catTotal){
+  const max = Math.max(1, ...rows.map(r => r.scans));
+  return rows.map(r => `<div class="sp-row"><div class="name">${esc(r.name)}</div><div class="sp-track"><div class="sp-fill" style="width:${Math.round(r.scans/max*100)}%"></div></div><div class="val">${r.scans.toLocaleString()}</div><div class="pct">${catTotal ? Math.round(r.scans/catTotal*100) : 0}%</div></div>`).join('');
+}
+function spBreakTable(rows, catTotal, totalScans, catLabel){
+  const pctTotal = totalScans ? Math.round(catTotal/totalScans*100) : 0;
+  return `<table class="sp-table"><thead><tr><th>${esc(catLabel)}</th><th class="num">${t('ui','scansCol')}</th><th class="num">%</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td>${esc(r.name)}</td><td class="num">${r.scans.toLocaleString()}</td><td class="num">${catTotal ? Math.round(r.scans/catTotal*100) : 0}%</td></tr>`).join('') +
+    `<tr class="total"><td>${t('ui','totalRow')}</td><td class="num">${catTotal.toLocaleString()}</td><td class="num">${pctTotal}%</td></tr></tbody></table>`;
+}
+function statsPanelHTML(d, ui){
+  const today = new Date().toISOString().slice(0,10);
+  const todayRow = (d.byDate||[]).find(r => r.date === today);
+  const { days, vals, uniq } = spRangeData(d, ui.range);
+  const rangeTotal = vals.reduce((a,b) => a + b, 0);
+  const uniqueTotal = d.uniqueScans || 0;
+  const totalScans = d.totalScans || 0;
+  const pct = totalScans ? Math.round(uniqueTotal/totalScans*100) : 0;
+  const kpis = `<div class="statTop">` +
+    `<div class="statBig"><div class="num">${totalScans.toLocaleString()}</div><div class="lbl">${t('ui','totalScans')}</div><div class="lbl">${t('ui','cumNote')}</div></div>` +
+    `<div class="statBig"><div class="num">${(todayRow ? todayRow.scans : 0).toLocaleString()}</div><div class="lbl">${t('ui','today')}</div><div class="lbl">${fmtDate(new Date().toISOString())}</div></div>` +
+    `<div class="statBig"><div class="num">${uniqueTotal.toLocaleString()}</div><div class="lbl">${t('ui','uniqueScans')}</div><div class="lbl">${pct}%</div></div>` +
+    `<div class="statBig"><div class="num">${rangeTotal.toLocaleString()}</div><div class="lbl">${t('ui','lastNDays').replace('{n}', ui.range)}</div><div class="lbl">${t('ui','rangeNote')}</div></div></div>`;
+  const trendVizBtns = [['line', t('ui','vizLine')], ['bar', t('ui','vizBar')], ['table', t('ui','vizTable')]];
+  const rangeBtns = [[7, t('ui','range7')], [14, t('ui','range14')], [30, t('ui','range30')]];
+  const trendVizLbl = trendVizBtns.find(b => b[0] === ui.trendViz)[1];
+  const rangeLbl = rangeBtns.find(b => b[0] === ui.range)[1];
+  let trendBody;
+  if(rangeTotal === 0){
+    trendBody = `<div class="sp-empty">${totalScans > 0 ? t('ui','rangeEmpty') : t('ui','noScans')}</div>`;
+  } else if(ui.trendViz === 'table'){
+    trendBody = spTrendTable(days, vals, uniq);
+  } else if(ui.trendViz === 'bar'){
+    trendBody = spTrendBars(days, vals);
+  } else {
+    trendBody = spTrendLine(days, vals, uniq);
+  }
+  const trendHead = `<div class="sp-head"><div class="sp-left"><span class="sp-mt">${t('ui','trendTitle')}</span>${spSeg(trendVizBtns, ui.trendViz, 'trendViz', true)}${spDrop('spTrendVizDrop', trendVizLbl, trendVizBtns, ui.trendViz)}</div>${spSeg(rangeBtns, ui.range, 'range', false)}<span class="sp-mobrow"><span class="sp-mlbl">${t('ui','rangeLbl')}</span>${spDrop('spRangeDrop', rangeLbl, rangeBtns, ui.range)}</span></div>`;
+  const catBtns = [['country', t('ui','byCountry')], ['city', t('ui','byCity')], ['device', t('ui','byDevice')], ['os', t('ui','byOS')]];
+  const brkVizBtns = [['donut', t('ui','vizDonut')], ['bar', t('ui','vizHBar')], ['table', t('ui','vizTable')]];
+  const brkVizLbl = brkVizBtns.find(b => b[0] === ui.brkViz)[1];
+  const catLbl = catBtns.find(b => b[0] === ui.cat)[1];
+  const { rows, label } = spCatData(d, ui.cat);
+  const catTotal = rows.reduce((a,b) => a + b.scans, 0);
+  let brkBody;
+  if(!rows.length){
+    brkBody = `<div class="sp-empty">${ui.cat === 'city' ? t('ui','noCity') : t('ui','noScans')}</div>`;
+  } else if(ui.brkViz === 'bar'){
+    brkBody = spBreakBars(rows, catTotal);
+  } else if(ui.brkViz === 'table'){
+    brkBody = spBreakTable(rows, catTotal, totalScans, label);
+  } else {
+    brkBody = spBreakDonut(rows, catTotal, label);
+  }
+  const catNote = (ui.cat === 'city' && rows.length) ? `<div class="sp-note">${t('ui','cityNote').replace('{n}', catTotal.toLocaleString())}</div>` : '';
+  const brkHead = `<div class="sp-head"><div class="sp-left"><span class="sp-mt">${t('ui','breakTitle')}</span>${spSeg(brkVizBtns, ui.brkViz, 'brkViz', true)}${spDrop('spBrkVizDrop', brkVizLbl, brkVizBtns, ui.brkViz)}</div>${spSeg(catBtns, ui.cat, 'cat', false)}<span class="sp-mobrow"><span class="sp-mlbl">${t('ui','catLbl')}</span>${spDrop('spCatDrop', catLbl, catBtns, ui.cat)}</span></div>`;
+  return kpis +
+    `<div class="sp-mod">${trendHead}<div class="sp-body">${trendBody}</div></div>` +
+    `<div class="sp-mod">${brkHead}<div class="sp-body">${brkBody}</div>${catNote}</div>`;
+}
+function spRenderPanel(panel, code){
+  const d = STATS_CACHE[code];
+  if(!d) return;
+  panel.innerHTML = statsPanelHTML(d, spUI(code));
+}
+function spOnPanelClick(e, panel, code){
+  const btn = e.target.closest('[data-sp]');
+  if(!btn) return;
+  const ui = spUI(code);
+  const act = btn.dataset.sp;
+  if(act === 'drop'){
+    const drop = btn.closest('.sp-drop');
+    const was = drop.classList.contains('open');
+    panel.querySelectorAll('.sp-drop.open').forEach(el => el.classList.remove('open'));
+    if(!was) drop.classList.add('open');
+    return;
+  }
+  if(act === 'dropItem'){
+    const dropId = btn.dataset.drop, v = btn.dataset.v;
+    if(dropId === 'spTrendVizDrop') ui.trendViz = v;
+    else if(dropId === 'spRangeDrop') ui.range = parseInt(v, 10);
+    else if(dropId === 'spBrkVizDrop') ui.brkViz = v;
+    else if(dropId === 'spCatDrop') ui.cat = v;
+    else return;
+    spRenderPanel(panel, code);
+    return;
+  }
+  if(act === 'range') ui.range = parseInt(btn.dataset.v, 10);
+  else if(act === 'trendViz') ui.trendViz = btn.dataset.v;
+  else if(act === 'cat') ui.cat = btn.dataset.v;
+  else if(act === 'brkViz') ui.brkViz = btn.dataset.v;
+  else return;
+  spRenderPanel(panel, code);
+}
+let SP_DOC_BOUND = false;
+function spBindPanel(panel, code){
+  if(panel.dataset.spBound) return;
+  panel.dataset.spBound = '1';
+  panel.addEventListener('click', e => spOnPanelClick(e, panel, code));
+  if(!SP_DOC_BOUND){
+    SP_DOC_BOUND = true;
+    document.addEventListener('click', e => {
+      if(e.target.closest('.sp-drop')) return;
+      document.querySelectorAll('.sp-drop.open').forEach(el => el.classList.remove('open'));
+    });
+  }
+}
+// STATS-PANEL-JS-END
 
 // ---------- edit panel (the generator module inside a card) ----------
 function openEdit(cardEl, code){
@@ -1332,7 +1555,7 @@ async function boot(){
   LANG = LANGS.includes(qLang) ? qLang : (LANGS.includes(saved) ? saved : 'en');
   localStorage.setItem('freeqrly-lang', LANG);
   // Fire all independent data fetches in parallel (one round trip, not four).
-  const i18nP = fetch('/dashboard/i18n.json?v=plan3-20261026').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
+  const i18nP = fetch('/dashboard/i18n.json?v=stats10-20261029').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
   const meP = fetch('/api/auth/me', { credentials: 'same-origin' }).catch(() => null);
   const codesP = fetch('/api/me/codes', { credentials: 'same-origin' }).catch(() => null);
   const tokensP = fetch('/api/tokens', { credentials: 'same-origin' }).then(r => r.ok ? r.json().catch(() => ({})) : {}).catch(() => ({}));
