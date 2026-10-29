@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard — FreeQrly</title>
+<meta name="description" content="Your FreeQrly dashboard: your dynamic QR codes, quota, and account data.">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261028">
+<style>
+/* Manage page — cards layout. The edit module inside each card reuses the
+   generator styles from main.css (typerail, grid, previewCol, seg, etc.). */
+/* Reserve the scrollbar gutter on both sides so the centered layout never
+   shifts horizontally when a panel opens/closes and the scrollbar appears. */
+html{scrollbar-gutter:stable both-edges}
+.manageWrap{max-width:720px;margin:0 auto;padding:0 16px 64px}
+.dashFootWrap{max-width:720px;margin:0 auto;padding:0 16px}
+.dashFootWrap .fmain{grid-template-columns:1fr 1fr;gap:28px}
+.dashFootWrap .fbrand{grid-column:1/-1}
+@media(min-width:1024px){
+  .dashFootWrap{max-width:1120px}
+  .dashFootWrap .fmain{grid-template-columns:1.35fr 1fr 1fr 1fr 1fr;gap:38px}
+  .dashFootWrap .fbrand{grid-column:auto}
+}
+@media(min-width:1024px){
+  .manageWrap{max-width:1120px}
+  .qrThumb{width:64px;height:64px;flex:0 0 64px}
+  .shortUrl{font-size:16px}
+}
+/* Top bar: brand + account + language (transparent, matches the page) */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0 18px;flex-wrap:wrap;position:relative}
+.brand{font-family:inherit;font-size:21px;font-weight:800;letter-spacing:-.02em;color:#22303F;text-decoration:none}
+.brand span{color:#D9A441}
+.acct{display:flex;align-items:center;gap:10px;font-size:13px;flex-wrap:nowrap}
+.chev{font-size:10px;color:#8a7a5f}
+/* Mobile: menu spans the header width instead of clipping off-screen */
+@media(max-width:640px){
+}
+/* Page header */
+.pageHead{margin-bottom:20px}
+.backLink{display:inline-block;color:#2F4A62;text-decoration:none;font-size:13px;font-weight:600}
+.headRow{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.headRow h1{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:10px 0 12px}
+.newBtn{display:inline-block;background:#2F4A62;color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:10px 18px;border:0;border-radius:99px;white-space:nowrap;cursor:pointer;font-family:inherit}
+.codeCount{font-size:13px;color:#8a7a5f;margin-top:8px}
+/* Code list (native list style) */
+.group{background:#fff;border:1px solid #E8DFC8;border-radius:18px;overflow:hidden;margin-bottom:14px}
+.addRow{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;background:#fff;font-family:inherit;font-size:14px;font-weight:700;color:#2F4A62;padding:15px;cursor:pointer;text-decoration:none;box-sizing:border-box}
+.addRow .plus{width:22px;height:22px;border-radius:50%;background:#D9A441;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex:0 0 22px}
+.codeCard{border-top:1px solid #F1EAD9}
+.group>.codeCard:first-child{border-top:0}
+.rowHead{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;cursor:pointer;box-sizing:border-box}
+.rowHead:focus-visible{outline:2px solid #D9A441;outline-offset:-2px}
+.qrThumb{width:48px;height:48px;flex:0 0 48px;border:1px solid #EFE6D2;border-radius:10px;padding:4px;box-sizing:border-box;background:#fff;object-fit:contain}
+.rowMid{flex:1;min-width:0}
+.shortUrl{display:block;font-size:14.5px;font-weight:700;color:#2F4A62;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}
+a.shortUrl:hover{text-decoration:underline}
+.rowMeta{display:block;font-size:11.5px;color:#8a7a5f;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rowDest{display:none;font-size:12.5px;color:#8a7a5f;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(min-width:1024px){.rowDest{display:block}}
+.rowDel{border:0;background:none;color:#B9AE99;cursor:pointer;padding:8px;border-radius:10px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center}
+.rowDel:hover{background:#FDF2EF;color:#B4563C}
+.rowDel svg{display:block;width:16px;height:16px}
+.liveDot{width:8px;height:8px;border-radius:50%;background:#4CAF7D;flex:0 0 8px}
+.rowChev{color:#C9BFA9;font-size:18px;line-height:1;flex:0 0 auto;transition:transform .18s}
+.codeCard.open .rowChev{transform:rotate(90deg)}
+.rowBody{border-top:1px solid #F1EAD9;background:#FFFDF9;padding:14px}
+.rowBody[hidden]{display:none}
+.actRow{display:flex;gap:8px}
+.actRow button{flex:1;border:1.5px solid #E8DFC8;background:#fff;border-radius:11px;padding:10px;font-family:inherit;font-size:13px;font-weight:700;color:#2F4A62;cursor:pointer}
+.actRow button.on{background:#2F4A62;border-color:#2F4A62;color:#fff}
+.actRow button.del{color:#B4563C;border-color:#EFD5CC}
+.delConfirm{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#FDF2EF;border:1px solid #E8C4B8;border-radius:12px;padding:12px 16px;margin-top:12px;font-size:13px}
+.delConfirm[hidden]{display:none}
+.delConfirm .delText{flex:1;min-width:200px}
+.delConfirm button{border:0;border-radius:99px;padding:7px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.delConfirm .cancelDel{background:#fff;border:1.5px solid #E8DFC8;color:#22303F}
+.delConfirm .confirmDel{border:0;background:#B4563C;color:#fff}
+.cardPanel{margin-top:12px;border-top:1px solid #F1EAD9;padding-top:14px}
+.cardPanel[hidden]{display:none}
+/* Loading skeleton (no layout jump while codes load) */
+.skelRow{display:flex;align-items:center;gap:12px;padding:12px 14px;border-top:1px solid #F1EAD9}
+.group>.skelRow:first-child{border-top:0}
+.skelQr{width:48px;height:48px;flex:0 0 48px;border-radius:10px;background:linear-gradient(100deg,#F1EAD9 40%,#FAF3E3 50%,#F1EAD9 60%);background-size:200% 100%;animation:shimmer 1.2s infinite}
+.skelMid{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.skelMid i{display:block;height:13px;border-radius:6px;background:linear-gradient(100deg,#F1EAD9 40%,#FAF3E3 50%,#F1EAD9 60%);background-size:200% 100%;animation:shimmer 1.2s infinite}
+.skelMid i.s2{width:55%;height:11px}
+@keyframes shimmer{to{background-position:-200% 0}}
+/* Stats button loading spinner (right of the label) */
+.mini-spin{display:inline-block;width:13px;height:13px;margin-left:8px;vertical-align:-2px;border:2px solid rgba(47,74,98,.22);border-top-color:#2F4A62;border-radius:50%;animation:spin .7s linear infinite}
+.actRow button.on .mini-spin{border-color:rgba(255,255,255,.28);border-top-color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+.statSkel{display:flex;flex-direction:column;gap:8px}
+.statSkel i{display:block;height:12px;border-radius:6px;background:linear-gradient(100deg,#F1EAD9 40%,#FAF3E3 50%,#F1EAD9 60%);background-size:200% 100%;animation:shimmer 1.2s infinite}
+.statSkel i:nth-child(2){width:72%}.statSkel i:nth-child(3){width:48%}
+/* Stats */
+.statTop{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.statBig{flex:1;min-width:120px;background:#FBF6EC;border-radius:14px;padding:16px;text-align:center}
+.statBig .num{font-size:28px;font-weight:800}
+.statBig .lbl{font-size:12px;color:#8a7a5f;margin-top:2px}
+/* STATS-PANEL-CSS-START */
+.sp-mod{margin-top:22px}
+.sp-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.sp-head .sp-left{display:flex;align-items:center;gap:12px}
+.sp-head > .sp-seg{margin-left:auto}
+.sp-mt{font-size:15px;font-weight:700;white-space:nowrap}
+.sp-seg{display:inline-flex;background:#FBF6EC;border:1px solid #E8DFC8;border-radius:99px;padding:3px;gap:2px}
+.sp-seg button{border:0;background:transparent;padding:6px 13px;border-radius:99px;font-size:13px;color:#6B6252;cursor:pointer;font-family:inherit}
+.sp-seg button.on{background:#2F4A62;color:#fff;font-weight:700}
+.sp-seg.mini button{padding:5px 11px;font-size:12.5px}
+.sp-body{border-top:1px solid #F1EAD9;margin-top:12px;padding-top:14px}
+.sp-note{font-size:12px;color:#8a7a5f;margin-top:8px;line-height:1.7}
+.sp-chart{display:flex;align-items:flex-end;height:150px;border-bottom:1px solid #E8DFC8;padding:0 4px}
+.sp-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px}
+.sp-col .v{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+.sp-col .b{width:30px;background:#DCE5DD;border-radius:5px 5px 0 0}
+.sp-col.today .b{background:#2F4A62}
+.sp-col.today .v{color:#2F4A62}
+.sp-labels{display:flex;padding:8px 4px 0}
+.sp-labels span{flex:1;text-align:center;font-size:11px;color:#8a7a5f}
+.sp-labels span.today{color:#2F4A62;font-weight:600}
+.sp-donutwrap{display:flex;gap:36px;align-items:center;padding:4px 0}
+.sp-donut{position:relative;width:190px;height:190px;flex-shrink:0}
+.sp-donut svg{transform:rotate(-90deg)}
+.sp-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.sp-center b{font-size:30px;font-variant-numeric:tabular-nums}
+.sp-center span{font-size:12px;color:#8a7a5f}
+.sp-legend{flex:1}
+.sp-lrow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F1EAD9;font-size:14px}
+.sp-lrow:last-child{border-bottom:none}
+.sp-lrow .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sp-lrow .name{flex:1}
+.sp-lrow .val{font-weight:700;font-variant-numeric:tabular-nums}
+.sp-lrow .pct{width:44px;text-align:right;color:#8a7a5f;font-size:12px}
+.sp-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F1EAD9;font-size:14px}
+.sp-row:last-child{border-bottom:none}
+.sp-row .name{width:92px;color:#444;flex-shrink:0}
+.sp-track{flex:1;height:7px;background:#F1EAD9;border-radius:4px;overflow:hidden}
+.sp-fill{height:100%;background:#D9A441;border-radius:4px}
+.sp-row .val{width:44px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.sp-row .pct{width:40px;text-align:right;color:#8a7a5f;font-size:12px}
+.sp-table{width:100%;border-collapse:collapse;font-size:14px}
+.sp-table th{text-align:left;font-size:12px;color:#8a7a5f;font-weight:600;padding:8px 10px 8px 0;border-bottom:1px solid #E8DFC8}
+.sp-table td{padding:10px 10px 10px 0;border-bottom:1px solid #F1EAD9;font-variant-numeric:tabular-nums}
+.sp-table td.num,.sp-table th.num{text-align:right}
+.sp-table tr.total td{font-weight:700;border-bottom:none}
+.sp-empty{font-size:13px;color:#8a7a5f;padding:10px 0}
+.sp-drop{display:none;position:relative}
+.sp-dropbtn{display:inline-flex;align-items:center;gap:6px;border:1.5px solid #E8DFC8;background:#fff;border-radius:99px;padding:7px 13px;font-size:13px;font-weight:700;color:#2F4A62;cursor:pointer;font-family:inherit;white-space:nowrap}
+.sp-chev{display:inline-block;color:#C9BFA9;font-size:16px;line-height:1;transform:rotate(90deg)}
+.sp-menu{display:none;position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid #E8DFC8;border-radius:12px;box-shadow:0 8px 24px rgba(43,36,22,.14);padding:6px;z-index:5;min-width:120px}
+.sp-drop.open .sp-menu{display:block}
+.sp-menu button{display:block;width:100%;text-align:left;padding:9px 12px;border:0;background:none;border-radius:8px;font-size:14px;color:#22303F;cursor:pointer;font-family:inherit}
+.sp-menu button.on{background:#FBF6EC;font-weight:700;color:#2F4A62}
+@media(max-width:560px){
+.sp-head .sp-seg{display:none}
+.sp-head > .sp-drop{margin-left:auto}
+.sp-drop{display:inline-block}
+.sp-donutwrap{flex-direction:column;gap:16px}
+.sp-donut{width:170px;height:170px}
+.sp-legend{width:100%}
+.sp-col .b{width:20px}
+.sp-row .name{width:76px}
+}
+/* STATS-PANEL-CSS-END */
+.breakVal{display:flex;gap:8px;align-items:baseline}
+.breakVal b{color:#22303F}
+.breakVal span{color:#8a7a5f}
+/* Edit panel — the generator module inside a card */
+.editHint{font-size:13px;color:#8a7a5f;margin-bottom:16px}
+.qrPreview{display:flex;align-items:center;justify-content:center;overflow:hidden}
+.qrPreview svg{max-width:100%;height:auto;display:block}
+.qrPreview img{width:100%;height:auto;display:block;max-width:100%}
+.qrPreview.empty{display:flex;align-items:center;justify-content:center;height:180px;color:#8a7a5f;font-size:13px}
+.cpick{position:relative;overflow:hidden}
+.cpick input[type=color]{position:absolute;inset:0;opacity:0;cursor:pointer}
+.logopick.current img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+.merror{color:#b45309;font-size:13px;margin-top:10px}
+.mok{color:#2F6B4F;font-size:13px;margin-top:10px}
+/* Account menu header: email + real sign-in channel */
+/* Empty / error states */
+.emptyCard{background:#fff;border:1px solid #E8DFC8;border-radius:20px;padding:40px 28px;text-align:center;box-shadow:0 8px 28px rgba(190,145,60,.10)}
+.emptyCard h2{font-size:18px;margin-bottom:8px}
+.emptyCard p{font-size:14px;color:#8a7a5f;line-height:1.6;margin-bottom:20px}
+.errCard{background:#fff;border:1px solid #E8DFC8;border-radius:20px;padding:28px;margin-bottom:18px;text-align:center}
+.errCard .merror{font-size:14px}
+.btnGhost{display:inline-block;border:1.5px solid #E8DFC8;border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600;cursor:pointer;background:#fff;color:#22303F;text-decoration:none}
+@media(max-width:640px){.headRow h1{font-size:22px}}
+.apiTokens{margin-top:28px;background:#fff;border:1.5px solid #EFE7D2;border-radius:18px;padding:22px}
+.apiHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 8px}
+.apiHead h2{font-size:17px;margin:0}
+.docsBtn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#2F4A62;text-decoration:none;border:1.5px solid #E8DFC8;border-radius:99px;padding:7px 14px;background:#fff;white-space:nowrap;flex:0 0 auto}
+.docsBtn:hover{border-color:#D9A441}
+.apiHint{font-size:13px;color:#7A8699;margin:0 0 14px;line-height:1.55}
+.newTokenRow{display:flex;gap:10px;margin-bottom:6px}
+.newTokenRow input{flex:1;border:1.5px solid #E8DFC8;border-radius:12px;padding:11px 14px;font-size:14px;min-width:0}
+.tokenFresh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#FDF9EF;border:1.5px dashed #E3C98F;border-radius:12px;padding:12px 14px;margin:10px 0}
+.tokenFresh[hidden]{display:none}
+.tokenFresh code{font-size:13px;word-break:break-all;flex:1;min-width:200px;user-select:all}
+.apiWarn{font-size:12.5px;color:#A5762A;margin:2px 0 0;width:100%}
+.tokenRow{display:flex;align-items:center;gap:12px;padding:12px 2px;border-top:1px solid #F1EAD8;font-size:14px}
+.tokenRow:first-child{border-top:0}
+.tokenMeta{flex:1;min-width:0}
+.tokenName{font-weight:600}
+.tokenSub{font-size:12px;color:#98A2B3;margin-top:2px}
+.tokenSub .revokedTag{color:#C0492F;font-weight:700}
+.trashBtnSm{border:1px solid #F0D9D2;background:#fff;color:#C0492F;border-radius:10px;padding:7px 12px;font-size:12.5px;font-weight:600;cursor:pointer}
+.tokenEmpty{font-size:13.5px;color:#98A2B3;padding:8px 2px}
+.planBar{height:8px;background:#F1EAD8;border-radius:99px;overflow:hidden;margin:10px 0 4px}
+.planBar i{display:block;height:100%;background:#D9A441;border-radius:99px}
+.planRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.planNote{font-size:13px;color:#7A8699;line-height:1.55;margin:8px 0 0}
+.planNote.warn{color:#C0492F}
+.planOk{font-size:13.5px;color:#2E7D4F;background:#EFF7F0;border:1px solid #CFE8D4;border-radius:12px;padding:11px 14px;margin:0 0 14px}
+.planStrip{margin:16px 0 14px;background:#fff;border:1.5px solid #EFE7D2;border-radius:18px;padding:14px 22px}
+.planStrip.pro{border-color:#E7D9B4}
+.planStrip .planOk{margin:0 0 10px}
+.planStripRow{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.planPill{display:inline-block;background:#FBF5E9;border:1px solid #E8DFC8;color:#2F4A62;font-size:12.5px;font-weight:700;border-radius:99px;padding:5px 12px;white-space:nowrap}
+.planBadgeImg{height:36px;width:auto;display:block}
+.planMid{flex:1;min-width:250px}
+.planLine{font-size:14.5px;color:#5A6B7A;margin:0}
+.planLine b{color:#22303F}
+.planStrip .planBar{margin:8px 0 2px;max-width:340px}
+.planStrip .planNote{margin-top:4px}
+.planActions{display:flex;gap:10px;align-items:center}
+.btnCoral{background:#EF7D6B;color:#fff;border:0;border-radius:99px;font-size:13.5px;font-weight:700;padding:10px 19px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btnCoral:disabled{opacity:.6;cursor:wait}
+.btnCoralO{background:#fff;color:#C4503C;border:1.5px solid #EF7D6B;border-radius:99px;font-size:13.5px;font-weight:700;padding:9px 18px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btnCoralO:disabled{opacity:.6;cursor:wait}
+.pwOverlay{position:fixed;inset:0;background:rgba(43,36,22,.48);z-index:200;display:flex;padding:20px 14px;overflow:auto}
+.pwOverlay[hidden]{display:none}
+.pwModal{background:#FFFCF4;border-radius:22px;width:620px;max-width:94vw;padding:26px 30px;box-shadow:0 24px 70px rgba(40,30,5,.35);position:relative;box-sizing:border-box;margin:auto}
+.pwModal h3{font-family:Georgia,serif;font-size:24px;color:#22303F;margin:0}
+.pwX{position:absolute;top:13px;inset-inline-end:15px;background:none;border:0;font-size:16px;color:#A08F6C;cursor:pointer;padding:4px}
+.cwOverlay{position:fixed;inset:0;background:rgba(43,36,22,.48);z-index:200;display:flex;padding:20px 14px;overflow:auto}
+.cwOverlay[hidden]{display:none}
+.cwModal{background:#FFFCF4;border-radius:22px;width:480px;max-width:94vw;padding:28px 26px 24px;box-shadow:0 24px 70px rgba(40,30,5,.35);position:relative;box-sizing:border-box;margin:auto;text-align:center}
+.cwX{position:absolute;top:13px;inset-inline-end:15px;background:none;border:0;font-size:16px;color:#A08F6C;cursor:pointer;padding:4px}
+.cwQly{width:104px;height:104px;object-fit:contain;margin:0 auto 4px;display:block}
+.cwModal h3{font-size:21px;color:#22303F;margin:0}
+.cwStats{display:flex;gap:10px;margin:16px 0}
+.cwStats>div{flex:1;background:#FBF3E4;border-radius:14px;padding:12px 8px}
+.cwStats .n{font-size:20px;font-weight:800;color:#22303F}
+.cwStats .l{font-size:11.5px;color:#7A8A99;margin-top:2px;line-height:1.3}
+.cwRows{text-align:start;border-top:1px solid #EFE6D2;padding-top:14px}
+.cwRow{display:flex;gap:10px;align-items:flex-start;margin:11px 0;font-size:14px;line-height:1.55;color:#3D4A57;text-align:start}
+.cwIc{flex:0 0 22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.cwIc.k{background:#E6F4EA;color:#2E7D4F}
+.cwIc.g{background:#FBF0D3;color:#8A6D1B}
+.cwNote{font-size:12.5px;color:#7A8A99;line-height:1.5;margin:14px 0 16px;text-align:start}
+.cwKeep{display:block;width:100%;padding:13px;border:0;border-radius:12px;background:#EF7D6B;color:#fff;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+.cwQuiet{display:block;width:100%;text-align:center;margin-top:12px;background:none;border:0;color:#22303F;font-size:14px;cursor:pointer;font-family:inherit}
+.pwTable{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px;color:#3D4A57}
+.pwTable th,.pwTable td{padding:9px 8px;border-bottom:1px solid #F1EAD9;text-align:start}
+.pwTable th{color:#8A7B5F;font-size:12.5px;font-weight:600}
+.pwTable td.c,.pwTable th.c{text-align:center;width:100px}
+.pwTable .ck{color:#3E9B6B;font-weight:800}
+.pwBtns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.pwBtns button{flex:1;padding:12px 10px}
+.saveChip{background:#EF7D6B;color:#fff;font-size:11px;border-radius:99px;padding:2px 8px;margin-inline-start:5px;vertical-align:1px}
+.pwMicro{font-size:11.5px;color:#A08F6C;text-align:center;margin:9px 0 0}
+</style>
+</head>
+<body>
+<div class="manageWrap">
+  <div id="siteHeader"></div>
+
+  <p class="merror" id="acctErr" hidden style="margin:0 0 12px"></p>
+  <div class="pageHead">
+    <div class="headRow">
+      <h1 data-t="manageTitle">Dashboard</h1>
+    </div>
+  </div>
+
+  <div class="planStrip" id="planSection" hidden>
+    <p class="planOk" id="planSuccess" hidden></p>
+    <div class="planStripRow">
+      <span id="planBadgeWrap"></span>
+      <div class="planMid">
+        <p class="planLine" id="planLine"></p>
+        <div class="planBar" id="planBar" hidden><i id="planBarFill"></i></div>
+        <p class="planNote" id="planNote"></p>
+      </div>
+      <div class="planActions" id="planActions"></div>
+    </div>
+  </div>
+  <div class="pwOverlay" id="pwOverlay" hidden>
+    <div class="pwModal" role="dialog" aria-modal="true">
+      <button class="pwX" id="pwClose" type="button" aria-label="Close">✕</button>
+      <h3 id="pwTitle"></h3>
+      <table class="pwTable"><thead><tr><th></th><th class="c" id="pwFreeCol"></th><th class="c" id="pwProCol"></th></tr></thead><tbody id="pwRows"></tbody></table>
+      <div class="pwBtns">
+        <button class="btnCoral" id="pwBuyY" type="button"></button>
+        <button class="btnCoralO" id="pwBuyM" type="button"></button>
+      </div>
+      <p class="pwMicro" id="pwMicro"></p>
+    </div>
+  </div>
+  <div class="cwOverlay" id="cwOverlay" hidden>
+    <div class="cwModal" role="dialog" aria-modal="true">
+      <button class="cwX" id="cwClose" type="button" aria-label="Close">✕</button>
+      <img class="cwQly" src="/assets/img/mascots/home-welcome.webp" alt="">
+      <h3 id="cwTitle"></h3>
+      <div class="cwStats">
+        <div><div class="n" id="cwCodes"></div><div class="l" id="cwCodesLbl"></div></div>
+        <div><div class="n" id="cwScans"></div><div class="l" id="cwScansLbl"></div></div>
+        <div><div class="n" id="cwSince"></div><div class="l" id="cwSinceLbl"></div></div>
+      </div>
+      <div class="cwRows">
+        <div class="cwRow"><span class="cwIc k">✓</span><span id="cwKeep"></span></div>
+        <div class="cwRow"><span class="cwIc g">◆</span><span id="cwChange"></span></div>
+      </div>
+      <p class="cwNote" id="cwNote"></p>
+      <button class="cwKeep" id="cwKeepBtn" type="button"></button>
+      <button class="cwQuiet" id="cwCancelBtn" type="button"></button>
+    </div>
+  </div>
+  <div class="errCard" id="loadErrCard" hidden><p class="merror" id="loadErr"></p></div>
+  <div class="group"><a class="addRow" href="/?mode=dynamic"><span class="plus">＋</span><span data-t="newCode">New dynamic code</span></a></div>
+  <div id="cards"><div class="group" aria-hidden="true">
+    <div class="skelRow"><span class="skelQr"></span><span class="skelMid"><i></i><i class="s2"></i></span></div>
+    <div class="skelRow"><span class="skelQr"></span><span class="skelMid"><i></i><i class="s2"></i></span></div>
+    <div class="skelRow"><span class="skelQr"></span><span class="skelMid"><i></i><i class="s2"></i></span></div>
+  </div></div>
+  <div class="emptyCard" id="emptyState" hidden>
+    <h2 data-t="noCodes">No dynamic codes yet</h2>
+    <p data-t="noCodesHint">Create your first dynamic code — it stays editable after printing.</p>
+    <a class="newBtn" href="/?mode=dynamic" data-t="newCode">+ New dynamic code</a>
+  </div>
+
+  <div class="apiTokens" id="apiTokens">
+    <div class="apiHead"><h2 data-t="apiTokensTitle">API Tokens</h2><a class="docsBtn" id="apiDocsBtn" href="/developers/#api-tokens" target="_blank" rel="noopener" data-t="apiTokensDocs">Guide</a></div>
+    <p class="apiHint" data-t="apiTokensHint">Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP — same quota as here. A token is shown only once; store it somewhere safe.</p>
+    <div class="newTokenRow">
+      <input id="tokenName" maxlength="60" data-t-ph="apiTokenNamePh" placeholder="Token name, e.g. My script">
+      <button class="newBtn" id="createTokenBtn" type="button" data-t="apiTokenCreate">Create token</button>
+    </div>
+    <div class="tokenFresh" id="tokenFresh" hidden>
+      <code id="tokenFreshValue"></code>
+      <button class="btnGhost" id="copyTokenBtn" type="button" data-t="apiTokenCopy">Copy</button>
+      <p class="apiWarn" data-t="apiTokenOnce">Copy it now — it won't be shown again.</p>
+    </div>
+    <div id="tokenList"></div>
+  </div>
+
+</div>
+<script src="/assets/lib/qr-code-styling.js"></script>
+<script src="/assets/js/acct-menu.js?v=b3aa-20261028"></script>
+<script src="/assets/js/site-header.js?v=b3aa-20261028"></script>
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261028">
+<div class="cpop" id="cpop" hidden>
+  <div class="cpop-sat" id="cpopSat"><div class="cpop-sat-dot" id="cpopSatDot"></div></div>
+  <div class="cpop-hue" id="cpopHue"><div class="cpop-hue-dot" id="cpopHueDot"></div></div>
+  <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+/* privacy-first analytics: aggregate counts only, same /api/track endpoint.
+   Never input content, never raw IP, no cookies. Session id is shared with
+   the generator tab when this dashboard opened in the same tab. */
+function dashTrack(event, props){
+  try{
+    let sid=""; try{ sid=sessionStorage.getItem("fq_sid")||""; if(!sid){ const a=new Uint8Array(8); crypto.getRandomValues(a); sid=Array.from(a,x=>x.toString(16).padStart(2,"0")).join(""); sessionStorage.setItem("fq_sid",sid); } }catch(e){ sid=""; }
+    const ref=(()=>{ try{ const r=document.referrer; if(!r) return "direct"; const h=new URL(r).hostname; if(/(^|\.)google\./.test(h)) return "google"; if(/(^|\.)baidu\.com$/.test(h)) return "baidu"; if(/(^|\.)bing\.com$/.test(h)) return "bing"; if(/(^|\.)(chatgpt|openai)\.com$/.test(h)||/(^|\.)perplexity\.ai$/.test(h)||/(^|\.)claude\.ai$/.test(h)) return "ai"; return "other"; }catch(e){ return "other"; } })();
+    const ua=navigator.userAgent||"";
+    const device=/Mobi|Android|iPhone|iPad/i.test(ua) ? "mobile" : "desktop";
+    const browser=/Edg\//.test(ua) ? "edge" : /Chrome\//.test(ua) ? "chrome" : /Firefox\//.test(ua) ? "firefox" : /Safari\//.test(ua) ? "safari" : "other";
+    const body=JSON.stringify(Object.assign({event:event, lang:LANG, sid:sid, ref:ref, blang:(navigator.language||"").slice(0,8), device:device, browser:browser}, props||{}));
+    if(navigator.sendBeacon){ navigator.sendBeacon("/api/track", new Blob([body],{type:"application/json"})); }
+    else{ fetch("/api/track",{method:"POST",headers:{"Content-Type":"application/json"},body:body,keepalive:true}).catch(()=>{}); }
+  }catch(e){}
+}
+const LANGS = ['en','zh','es','hi','ar','pt','fr','ru','de','ja'];
+const LANGN = {en:'English',zh:'中文',es:'Español',hi:'हिन्दी',ar:'العربية',pt:'Português',fr:'Français',ru:'Русский',de:'Deutsch',ja:'日本語'};
+const FALLBACK = {"ui": {"en": {"manageTitle": "Dashboard", "backGenerator": "← Back to generator", "codesUsed": "{n} of {limit} codes used", "codesUsedUnlimited": "{n} codes · unlimited (limited time)", "newCode": "New dynamic code", "noCodes": "No dynamic codes yet", "noCodesHint": "Create your first dynamic code — it stays editable after printing.", "created": "Created", "totalScans": "Total scans", "today": "Today", "uniqueScans": "Unique scans", "last7": "Scans — last 7 days", "byCountry": "By country", "byCity": "By city", "byDevice": "By device", "byOS": "By OS", "noScans": "No scans yet", "noCity": "No city data yet", "statsBtn": "Stats", "trendTitle": "Scan trend", "breakTitle": "Scan breakdown", "vizLine": "Line", "vizBar": "Bar", "vizHBar": "Bars", "vizTable": "Table", "vizDonut": "Donut", "range7": "7 days", "range14": "14 days", "range30": "30 days", "lastNDays": "Last {n} days", "dateCol": "Date", "scansCol": "Scans", "uniqueCol": "Unique", "totalRow": "Total", "cumNote": "Cumulative", "rangeNote": "Changes with range", "rangeEmpty": "No scans in this range", "cityNote": "Only {n} scans have city info",  "editBtn": "Edit", "saveBtn": "Save changes", "saving": "Saving…", "saved": "Saved. Your printed QR now serves the new content.", "saveErrEmpty": "Please fill in the content first.", "deleteBtn": "Delete", "deleteConfirm": "Delete this code? Printed QRs will stop working.", "cancelBtn": "Cancel", "liveBadge": "● Live", "editHint": "Edit the type or content, then save.", "exportData": "Export my data", "deleteAccount": "Delete account", "signedInWith": "Signed in with {method}", "deleteAccountConfirm": "Delete your account? Your codes will be released — NOT deleted — but can no longer be edited. This cannot be undone.", "deleteReauth": "Please sign in again, then retry.", "logoutMenu": "Log out", "networkErr": "Network error. Please try again.", "deleteFailed": "Delete failed. Please try again.", "uploadingLogo": "Uploading logo…", "notYours": "This code isn't on your account.", "ariaLanguage": "Language", "ariaContentType": "Content type", "ariaCustomInk": "Custom ink color", "ariaCustomBg": "Custom background color", "apiTokensTitle": "API Tokens", "apiTokensDocs": "Guide", "apiTokensHint": "Tokens let your scripts and AI assistants manage dynamic codes via the REST API and MCP \u2014 same quota as here. A token is shown only once; store it somewhere safe.", "apiTokenNamePh": "Token name, e.g. My script", "apiTokenCreate": "Create token", "apiTokenCopy": "Copy", "apiTokenCopied": "Copied!", "apiTokenOnce": "Copy it now \u2014 it won't be shown again.", "apiTokenRevoke": "Revoke", "apiTokenRevokeConfirm": "Revoke this token? Scripts using it will stop working.", "apiTokenEmpty": "No tokens yet.", "apiTokenLastUsed": "Last used {d}", "apiTokenNever": "never", "apiTokenRevoked": "revoked", "planTitle": "Plan", "planCurrentFree": "Free plan", "planCurrentPro": "Pro plan", "planPitch": "Pro gives you unlimited dynamic codes — for menus, packaging and campaigns that outgrow the free plan.", "planMonthly": "$9 / month", "planYearly": "$90 / year — save 17%", "planUpgrade": "Upgrade to Pro", "planRenews": "Renews {d}", "planEnds": "Ends {d} — Pro stays active until then.", "planCancel": "Cancel subscription", "planCancelConfirm": "Cancel Pro? You'll keep Pro until the end of the current billing period.", "cwTitle": "Your Pro so far", "cwCodesLbl": "dynamic codes", "cwScansLbl": "total scans", "cwSinceLbl": "Pro since", "cwKeep": "Nothing happens to your {n} codes — they stay <b>editable</b>, keep their <b>stats</b>, and keep working.", "cwChange": "The one thing that changes: free accounts cap new dynamic codes at <b>20</b>. Pro stays <b>unlimited</b>.", "cwNote": "Pro stays active until {d}. No charge after that.", "cwKeepBtn": "Keep Pro", "cwCancelBtn": "Cancel anyway", "planPastDue": "Your last payment failed. Waffo retries automatically; if it keeps failing, Pro will end.", "planSuccess": "Payment received — Pro activates within a minute.", "planCheckoutErr": "Couldn't open checkout. Please try again.", "planWorking": "Opening checkout…", "planPromoNote": "Every account currently has unlimited dynamic codes (limited-time offer). Pro stays unlimited after the offer ends.", "planCreated": "{n} dynamic codes created", "planOfLimit": " \u00b7 free limit {limit}", "planUnlimitedSuffix": " \u00b7 unlimited", "pwTitle": "Free vs Pro", "pwRowQuota": "Dynamic codes", "pwRowStatic": "Static codes", "pwRowEdit": "Edit after printing + scan stats", "pwRowMarks": "No watermark, never expires", "pwRowKeep": "Codes keep working after you cancel", "pwUnlimited": "Unlimited", "pwQuota20": "20", "pwBuyMonthly": "Upgrade monthly \u00b7 $9 / month", "pwBuyYearly": "Upgrade yearly \u00b7 $90 / year", "pwSave": "Save 17%", "pwMicro": "Cancel anytime \u00b7 7-day full refund on your first subscription"}}, "gen": {"en": {"types": {"url": ["Website", "link, page, video"], "text": ["Text", "any words"], "wifi": ["WiFi", "join instantly"], "vcard": ["Contact", "vCard"], "email": ["Email", "prefilled"], "sms": ["SMS", "prefilled text"], "phone": ["Call", "tap to dial"], "geo": ["Place", "map pin"], "event": ["Event", "add to calendar"], "bitcoin": ["Bitcoin", "crypto payment"], "coupon": ["Coupon", "promo code"], "appstore": ["App Store", "iOS + Android"], "batch": ["Batch", "many at once"]}, "fields": {"url": [["url", "Destination", "https://example.com"]], "text": [["text", "Message", "textarea", "Hello, world!"]], "wifi": [["ssid", "Network name", "MyWiFi"], ["pass", "Password", "", "WiFi password"], ["enc", "Security", "select:WPA,WPA2,WEP,nopass"]], "vcard": [["name", "Full name", "Jane Doe"], ["phone", "Phone", "+1 555 0100"], ["email", "Email", "jane@example.com"], ["vcorg", "Company", "", "Acme Inc"], ["vctitle", "Job title", "", "Designer"], ["vcurl", "Website", "https://example.com"], ["vcadr", "Address", "", "123 Main St"], ["vcnote", "Note", "", ""]], "email": [["to", "To", "hi@example.com"], ["subject", "Subject", "Hello"], ["body", "Body", "textarea", "Email body…"]], "sms": [["phone", "Phone", "+1 555 0100"], ["body", "Message", "", "Type your message…"]], "phone": [["phone", "Phone", "+1 555 0100"]], "geo": [["lat", "Latitude", "37.7749"], ["lng", "Longitude", "-122.4194"]], "event": [["etitle", "Title", "", "e.g. Birthday party"], ["estart", "Starts", "datetime-local"], ["eend", "Ends", "datetime-local"], ["eloc", "Location", "", "e.g. Central Park"], ["edesc", "Details", "textarea", "Event details…"]], "bitcoin": [["btcaddr", "Wallet address", "bc1q..."], ["btcamt", "Amount (BTC)", "0.001"], ["btclabel", "Label", "", "e.g. Coffee"], ["btcmsg", "Message", "", "e.g. Thanks"]], "coupon": [["cpcode", "Coupon code", "SAVE20"], ["cpdesc", "Description", "", "e.g. 20% off"]], "appstore": [["appios", "App Store link", "https://apps.apple.com/app/..."], ["appand", "Google Play link", "https://play.google.com/store/apps/..."]]}, "appearance": "Style", "dots": "Style", "dotsSub": "Dot shape", "ecc": "Error correction", "eccSub": "Scans even when covered", "colors": "Colors", "colorsSub": "Tap or customize", "ink": "Ink", "background": "Background", "logo": "Add your logo", "logoSub": "Centered in the code", "size": "Download size", "frame": "Frame", "frameSub": "Border around the code", "frameNone": "None", "frameRounded": "Rounded", "frameCta": "With text", "frameTextPh": "Scan me", "dSquare": "Square", "dRound": "Round", "dSoft": "Soft", "dPebble": "Pebble", "eL": "Low", "eM": "Medium", "eQ": "High", "eH": "Max", "dl": "Download", "modeStatic": "Static", "modeDynamic": "Dynamic", "modeTip": "Dynamic codes can be edited after printing + track scans. The printed QR stays the same."}}};
+let I18N = null;
+let LANG = 'en';
+let ME = null;
+let CODES = [];
+let CARD_STATE = {};   // code -> { type, payload, style, size }
+let EXPANDED = {};     // code -> 'stats' | 'edit' | null
+let STATS_CACHE = {};  // code -> stats JSON
+let DEEP_DONE = false; // ?c= deep link handled once
+
+const STYLE_DEFAULTS = { fg:'#22303F', bg:'#FFFFFF', transparent:true, dots:'square', ecc:'M', frame:'none', frameText:'', logoPreset:null, logoKey:null };
+const SIZES = [512, 1024, 2048, 4096];
+const INK_PRESETS = ['#22303F','#232323','#B4563C','#2F6B4F','#2F4A62'];
+const BG_PRESETS = ['#FFFFFF','#FBF6EC','#DCE5DD','#232323'];
+const LOGO_PRESETS = ['apple','x','facebook','instagram','google','microsoft'];
+const TYPES = ['url','text','wifi','vcard','email','sms','phone','geo','event','bitcoin','coupon','appstore'];
+const TYPE_EMOJI = {url:'🔗',text:'📝',wifi:'📶',vcard:'👤',email:'✉️',sms:'💬',phone:'📞',geo:'📍',event:'📅',bitcoin:'₿',coupon:'🎟️',appstore:'📱'};
+
+function t(section, key){
+  const src = I18N || FALLBACK;
+  const sec = src[section] || {};
+  // Language-first (i18n.json / FALLBACK): sec[lang][key]
+  if(sec[LANG] && sec[LANG][key] !== undefined) return sec[LANG][key];
+  if(sec.en && sec.en[key] !== undefined) return sec.en[key];
+  // Key-first (legacy shape): sec[key][lang]
+  if(sec[key] && typeof sec[key] === 'object' && sec[key][LANG] !== undefined) return sec[key][LANG];
+  if(sec[key] && typeof sec[key] === 'object' && sec[key].en !== undefined) return sec[key].en;
+  // Flat (legacy shape): sec[key]
+  if(typeof sec[key] === 'string') return sec[key];
+  return key;
+}
+function g(key){
+  const src = I18N || FALLBACK;
+  return (src.gen && src.gen[LANG] && src.gen[LANG][key]) || (src.gen && src.gen.en && src.gen.en[key]) || '';
+}
+function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function fmtDate(ts){ if(!ts) return '—'; try{ return new Date(ts).toLocaleDateString('en-US',{month:'short',day:'numeric'}); }catch(e){ return '—'; } }
+function normalizeStyle(s){ return Object.assign({}, STYLE_DEFAULTS, s || {}); }
+function logoURL(style){
+  if(style.logoKey) return '/api/logos/' + encodeURIComponent(style.logoKey);
+  if(style.logoPreset) return '/assets/img/logos/' + style.logoPreset + '.svg';
+  return null;
+}
+function destLabel(c){
+  // Short human-readable destination for the row (desktop).
+  if(c.type === 'url') return c.payload || c.destination || '';
+  if(c.type === 'wifi'){ const v = parsePayload('wifi', c.payload || ''); return 'WiFi · ' + (v.ssid || ''); }
+  if(c.type === 'text') return c.payload || '';
+  if(c.type === 'vcard'){ const v = parsePayload('vcard', c.payload || ''); return v.vname ? 'Contact · ' + v.vname : 'Contact'; }
+  return (c.destination || c.payload || '').slice(0, 120);
+}
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.documentElement.dir = LANG === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-t]').forEach(el => { el.textContent = t('ui', el.dataset.t); });
+  document.querySelectorAll('[data-t-ph]').forEach(el => { el.placeholder = t('ui', el.dataset.tPh); });
+  const sel = $('langSel'); if(sel) { sel.value = LANG; sel.setAttribute('aria-label', t('ui','ariaLanguage')); }
+  updateCount();
+  renderCards();
+  if(typeof PLAN !== 'undefined' && PLAN) renderPlan();
+  const pwOv = $('pwOverlay');
+  if(pwOv && !pwOv.hidden) fillPaywall();
+  renderTokens();
+  const docsBtn = $('apiDocsBtn');
+  if(docsBtn) docsBtn.href = (LANG === 'en' ? '' : '/' + LANG) + '/developers/#api-tokens';
+  if(window.renderSiteHeader) window.renderSiteHeader({ nav: dashNav(), t: tShared, lang: LANG });
+}
+
+// ---------- API tokens ----------
+let TOKENS = [];
+function fmtDate(ms){
+  if(!ms) return t('ui','apiTokenNever');
+  try{ return new Date(ms).toLocaleDateString(LANG === 'zh' ? 'zh-CN' : 'en-US', {month:'short', day:'numeric', year:'numeric'}); }
+  catch(e){ return t('ui','apiTokenNever'); }
+}
+async function loadTokens(){
+  try{
+    const r = await fetch('/api/tokens', { credentials: 'same-origin' });
+    if(!r.ok) return;
+    const d = await r.json().catch(() => ({}));
+    TOKENS = d.tokens || [];
+  }catch(e){ /* leave list as-is */ }
+  renderTokens();
+}
+function renderTokens(){
+  const box = $('tokenList');
+  if(!box) return;
+  if(!TOKENS.length){
+    box.innerHTML = `<div class="tokenEmpty">${esc(t('ui','apiTokenEmpty'))}</div>`;
+    return;
+  }
+  box.innerHTML = TOKENS.map(tk => `
+    <div class="tokenRow">
+      <div class="tokenMeta">
+        <div class="tokenName">${esc(tk.name)} <span class="tokenSub">${esc(tk.prefix)}…</span></div>
+        <div class="tokenSub">${esc(t('ui','apiTokenLastUsed').replace('{d}', fmtDate(tk.last_used_at)))}${tk.revoked_at ? ' · <span class="revokedTag">' + esc(t('ui','apiTokenRevoked')) + '</span>' : ''}</div>
+      </div>
+      ${tk.revoked_at ? '' : `<button class="trashBtnSm" type="button" data-revoke="${esc(tk.id)}">${esc(t('ui','apiTokenRevoke'))}</button>`}
+    </div>`).join('');
+  box.querySelectorAll('[data-revoke]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if(!confirm(t('ui','apiTokenRevokeConfirm'))) return;
+      try{
+        const r = await fetch('/api/tokens/' + encodeURIComponent(btn.dataset.revoke), { method: 'DELETE', credentials: 'same-origin' });
+        if(r.ok){ dashTrack("dashboard_action",{type:"token_revoke"}); await loadTokens(); }
+      }catch(e){}
+    });
+  });
+}
+async function createToken(){
+  const nameEl = $('tokenName');
+  const name = (nameEl.value || '').trim();
+  if(!name){ nameEl.focus(); return; }
+  const btn = $('createTokenBtn');
+  btn.disabled = true;
+  try{
+    const r = await fetch('/api/tokens', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name }),
+    });
+    const d = await r.json().catch(() => ({}));
+    if(!r.ok) return;
+    $('tokenFreshValue').textContent = d.token;
+    $('tokenFresh').hidden = false;
+    $('copyTokenBtn').textContent = t('ui','apiTokenCopy');
+    nameEl.value = '';
+    await loadTokens();
+    dashTrack("dashboard_action",{type:"token_create"});
+  }catch(e){}
+  btn.disabled = false;
+}
+// ---------- plan / billing ----------
+let PLAN = null;
+async function loadPlan(){
+  try{
+    const r = await fetch('/api/billing/status', { credentials: 'same-origin' });
+    if(!r.ok) return;
+    PLAN = await r.json();
+    renderPlan();
+  }catch(e){ /* section stays hidden */ }
+}
+function renderPlan(){
+  const sec = $('planSection');
+  if(!sec || !PLAN || !PLAN.billingEnabled){ if(sec) sec.hidden = true; return; }
+  sec.hidden = false;
+  const sub = PLAN.subscription;
+  const isPro = !!sub;
+  sec.classList.toggle('pro', isPro);
+  $('planBadgeWrap').innerHTML = isPro
+    ? '<img class="planBadgeImg" src="/assets/img/pro-badge.png" alt="Pro">'
+    : '<span class="planPill">' + t('ui','planCurrentFree') + '</span>';
+  const params = new URLSearchParams(location.search);
+  if(params.get('billing') === 'success' && !isPro){
+    const ok = $('planSuccess');
+    ok.textContent = t('ui','planSuccess');
+    ok.hidden = false;
+    // Strip the param so refresh/back never resurfaces the banner; once
+    // Pro is active (isPro) the banner is hidden anyway.
+    params.delete('billing');
+    const qs = params.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  }
+  const line = $('planLine'), note = $('planNote'), bar = $('planBar'), actions = $('planActions');
+  note.className = 'planNote'; note.textContent = '';
+  actions.innerHTML = '';
+  const used = PLAN.usage.used, limit = PLAN.usage.limit;
+  if(isPro){
+    line.innerHTML = '<b>' + t('ui','planCurrentPro') + '</b> · ' +
+      t('ui','planCreated').replace('{n}', '<b>' + used + '</b>') + t('ui','planUnlimitedSuffix');
+    bar.hidden = true;
+  }else if(limit >= 999999){
+    line.innerHTML = t('ui','codesUsedUnlimited').replace('{n}', '<b>' + used + '</b>');
+    bar.hidden = true;
+  }else{
+    line.innerHTML = t('ui','planCreated').replace('{n}', '<b>' + used + '</b>') + t('ui','planOfLimit').replace('{limit}', limit);
+    bar.hidden = false;
+    $('planBarFill').style.width = Math.min(100, limit ? (used / limit) * 100 : 0) + '%';
+  }
+  if(isPro){
+    const end = sub.currentPeriodEnd ? fmtDate(Date.parse(sub.currentPeriodEnd)) : '—';
+    if(sub.status === 'canceling'){
+      note.textContent = t('ui','planEnds').replace('{d}', end);
+    }else if(sub.status === 'past_due'){
+      note.textContent = t('ui','planPastDue');
+      note.className = 'planNote warn';
+    }else{
+      note.textContent = t('ui','planRenews').replace('{d}', end);
+    }
+    if(sub.status !== 'canceling'){
+      const b = document.createElement('button');
+      b.className = 'btnGhost'; b.type = 'button'; b.textContent = t('ui','planCancel');
+      b.addEventListener('click', cancelPlan);
+      actions.appendChild(b);
+    }
+  }else{
+    note.textContent = limit >= 999999 ? t('ui','planPromoNote') : t('ui','planPitch');
+    const b = document.createElement('button');
+    b.className = 'btnCoral'; b.type = 'button'; b.textContent = t('ui','planUpgrade');
+    b.addEventListener('click', openPaywall);
+    actions.appendChild(b);
+  }
+}
+// ---------- paywall (Free vs Pro, W3 table design) ----------
+let pwWired = false;
+function fillPaywall(){
+  $('pwTitle').textContent = t('ui','pwTitle');
+  $('pwFreeCol').textContent = t('ui','planCurrentFree') + ' · $0';
+  $('pwProCol').textContent = t('ui','planCurrentPro');
+  const ck = '<span class="ck">✓</span>';
+  const rows = [
+    [t('ui','pwRowQuota'), t('ui','pwQuota20'), '<b>' + t('ui','pwUnlimited') + '</b>'],
+    [t('ui','pwRowStatic'), t('ui','pwUnlimited'), t('ui','pwUnlimited')],
+    [t('ui','pwRowEdit'), ck, ck],
+    [t('ui','pwRowMarks'), ck, ck],
+    [t('ui','pwRowKeep'), '—', ck],
+  ];
+  $('pwRows').innerHTML = rows.map(r =>
+    '<tr><td>' + r[0] + '</td><td class="c">' + r[1] + '</td><td class="c">' + r[2] + '</td></tr>').join('');
+  const bm = $('pwBuyM'), by = $('pwBuyY');
+  bm.textContent = t('ui','pwBuyMonthly');
+  by.innerHTML = t('ui','pwBuyYearly') + '<span class="saveChip">' + t('ui','pwSave') + '</span>';
+  $('pwMicro').textContent = t('ui','pwMicro');
+}
+function openPaywall(){
+  const ov = $('pwOverlay');
+  const bm = $('pwBuyM'), by = $('pwBuyY');
+  fillPaywall();
+  if(!pwWired){
+    pwWired = true;
+    bm.addEventListener('click', () => startCheckout('monthly', bm));
+    by.addEventListener('click', () => startCheckout('yearly', by));
+    $('pwClose').addEventListener('click', closePaywall);
+  }
+  ov.hidden = false;
+}
+function closePaywall(){ $('pwOverlay').hidden = true; }
+async function startCheckout(period, btn){
+  const orig = btn.textContent;
+  btn.disabled = true; btn.textContent = t('ui','planWorking');
+  try{
+    const r = await fetch('/api/billing/checkout', { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ period }) });
+    const d = await r.json().catch(() => ({}));
+    if(r.ok && d.checkoutUrl){ dashTrack("dashboard_action",{type:"checkout"}); location.href = d.checkoutUrl; return; }
+    throw new Error(d.error || 'failed');
+  }catch(e){
+    btn.disabled = false; btn.textContent = orig;
+    const note = $('planNote');
+    note.textContent = t('ui','planCheckoutErr'); note.className = 'planNote warn';
+  }
+}
+let cwWired = false;
+function openCancelWall(){
+  const sub = (PLAN && PLAN.subscription) || {};
+  $('cwTitle').textContent = t('ui','cwTitle');
+  const used = (PLAN && PLAN.usage) ? PLAN.usage.used : 0;
+  $('cwCodes').textContent = used;
+  $('cwCodesLbl').textContent = t('ui','cwCodesLbl');
+  const total = (CODES || []).reduce((s, c) => s + (c.totalScans || 0), 0);
+  $('cwScans').textContent = total.toLocaleString();
+  $('cwScansLbl').textContent = t('ui','cwScansLbl');
+  $('cwSince').textContent = sub.startedAt ? new Date(sub.startedAt).toLocaleDateString('en-US', {month:'short', day:'numeric'}) : '—';
+  $('cwSinceLbl').textContent = t('ui','cwSinceLbl');
+  $('cwKeep').innerHTML = t('ui','cwKeep').replace('{n}', '<b>' + used + '</b>');
+  $('cwChange').innerHTML = t('ui','cwChange');
+  const end = sub.currentPeriodEnd ? fmtDate(Date.parse(sub.currentPeriodEnd)) : '—';
+  $('cwNote').textContent = t('ui','cwNote').replace('{d}', end);
+  $('cwKeepBtn').textContent = t('ui','cwKeepBtn');
+  $('cwCancelBtn').textContent = t('ui','cwCancelBtn');
+  if(!cwWired){
+    cwWired = true;
+    $('cwClose').addEventListener('click', closeCancelWall);
+    $('cwKeepBtn').addEventListener('click', closeCancelWall);
+    $('cwCancelBtn').addEventListener('click', confirmCancelPlan);
+  }
+  $('cwOverlay').hidden = false;
+}
+function closeCancelWall(){ $('cwOverlay').hidden = true; }
+async function confirmCancelPlan(){
+  try{
+    const r = await fetch('/api/billing/cancel', { method: 'POST', credentials: 'same-origin' });
+    if(r.ok){ dashTrack("dashboard_action",{type:"cancel"}); await loadPlan(); }
+  }catch(e){ /* leave UI as-is */ }
+  closeCancelWall();
+}
+async function cancelPlan(){
+  openCancelWall();
+}
+function wireTokens(){
+  $('createTokenBtn').addEventListener('click', createToken);
+  $('tokenName').addEventListener('keydown', e => { if(e.key === 'Enter') createToken(); });
+  $('copyTokenBtn').addEventListener('click', async () => {
+    const v = $('tokenFreshValue').textContent;
+    try{ await navigator.clipboard.writeText(v); }
+    catch(e){
+      const ta = document.createElement('textarea');
+      ta.value = v; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); }catch(_){}
+      ta.remove();
+    }
+    $('copyTokenBtn').textContent = t('ui','apiTokenCopied');
+  });
+}
+
+// ---------- payload build / parse (homepage field ids) ----------
+const enc = s => encodeURIComponent(s || '');
+function buildPayload(type, vals){
+  switch(type){
+    case 'url': return vals.url || '';
+    case 'text': return vals.text || '';
+    case 'wifi': return `WIFI:T:${vals.enc||'WPA'};S:${vals.ssid||''};P:${vals.pass||''};;`;
+    case 'vcard': {
+      const L = ['BEGIN:VCARD','VERSION:3.0'];
+      if(vals.vname) L.push(`FN:${vals.vname}`);
+      if(vals.vorg) L.push(`ORG:${vals.vorg}`);
+      if(vals.vtitle) L.push(`TITLE:${vals.vtitle}`);
+      if(vals.vphone) L.push(`TEL;TYPE=CELL:${vals.vphone}`);
+      if(vals.vemail) L.push(`EMAIL:${vals.vemail}`);
+      if(vals.vurl) L.push(`URL:${vals.vurl}`);
+      if(vals.vaddr) L.push(`ADR:;;${vals.vaddr};;;;`);
+      if(vals.vnote) L.push(`NOTE:${vals.vnote}`);
+      L.push('END:VCARD');
+      return L.join('\n');
+    }
+    case 'email': return `mailto:${vals.eto||''}?subject=${enc(vals.esub)}&body=${enc(vals.ebody)}`;
+    case 'sms': return `sms:${vals.sphone||''}?body=${enc(vals.smsg)}`;
+    case 'phone': return `tel:${vals.phone||''}`;
+    case 'geo': return `geo:${vals.lat||''},${vals.lng||''}`;
+    case 'event': {
+      const f = v => v ? v.replace(/[-:]/g,'').replace('T','T') : '';
+      const L = ['BEGIN:VEVENT', `SUMMARY:${vals.etitle||''}`];
+      if(vals.estart) L.push(`DTSTART:${f(vals.estart)}`);
+      if(vals.eend) L.push(`DTEND:${f(vals.eend)}`);
+      if(vals.eloc) L.push(`LOCATION:${vals.eloc}`);
+      if(vals.edesc) L.push(`DESCRIPTION:${vals.edesc}`);
+      L.push('END:VEVENT');
+      return L.join('\n');
+    }
+    case 'bitcoin': {
+      let u = `bitcoin:${vals.btcaddr||''}`;
+      const q = [];
+      if(vals.btcamt) q.push(`amount=${vals.btcamt}`);
+      if(vals.btclabel) q.push(`label=${enc(vals.btclabel)}`);
+      if(vals.btcmsg) q.push(`message=${enc(vals.btcmsg)}`);
+      return q.length ? u + '?' + q.join('&') : u;
+    }
+    case 'coupon': return [vals.cpdesc||'', vals.cpcode ? `Code: ${vals.cpcode}` : ''].filter(Boolean).join('\n');
+    case 'appstore': return vals.appios || vals.appand || '';
+    default: return '';
+  }
+}
+function parsePayload(type, payload){
+  const v = {};
+  try{
+    if(type==='url') v.url = payload;
+    else if(type==='text') v.text = payload;
+    else if(type==='wifi'){ const m = payload.match(/WIFI:T:([^;]*);S:([^;]*);P:([^;]*);/); if(m){ v.enc=m[1]; v.ssid=m[2]; v.pass=m[3]; } }
+    else if(type==='vcard'){ const gg = k => { const m = payload.match(new RegExp('^'+k+':(.*)$','m')); return m ? m[1] : ''; }; v.vname=gg('FN'); v.vorg=gg('ORG'); v.vtitle=gg('TITLE'); v.vphone=gg('TEL;TYPE=CELL')||gg('TEL'); v.vemail=gg('EMAIL'); v.vurl=gg('URL'); v.vaddr=(gg('ADR').split(';')[2]||''); v.vnote=gg('NOTE'); }
+    else if(type==='email'){ const m = payload.match(/^mailto:([^?]*)\??(.*)$/); if(m){ v.eto=m[1]; const p = new URLSearchParams(m[2]||''); v.esub=p.get('subject')||''; v.ebody=p.get('body')||''; } }
+    else if(type==='sms'){ const m = payload.match(/^sms:([^?]*)\??(.*)$/); if(m){ v.sphone=m[1]; v.smsg=new URLSearchParams(m[2]||'').get('body')||''; } }
+    else if(type==='phone') v.phone = payload.replace(/^tel:/,'');
+    else if(type==='geo'){ const m = payload.match(/^geo:([^,]*),?(.*)$/); if(m){ v.lat=m[1]; v.lng=m[2]; } }
+    else if(type==='event'){
+      const gg = k => { const m = payload.match(new RegExp('^'+k+':(.*)$','m')); return m ? m[1] : ''; };
+      v.etitle=gg('SUMMARY'); v.eloc=gg('LOCATION'); v.edesc=gg('DESCRIPTION');
+      const toLocal = s => { const m = s.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})/); return m ? `${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}` : ''; };
+      v.estart=toLocal(gg('DTSTART')); v.eend=toLocal(gg('DTEND'));
+    }
+    else if(type==='bitcoin'){ const m = payload.match(/^bitcoin:([^?]*)\??(.*)$/); if(m){ v.btcaddr=m[1]; const p = new URLSearchParams(m[2]||''); v.btcamt=p.get('amount')||''; v.btclabel=p.get('label')||''; v.btcmsg=p.get('message')||''; } }
+    else if(type==='coupon'){ const m = payload.match(/^Code: (.*)$/m); v.cpcode = m ? m[1] : ''; v.cpdesc = payload.replace(/\nCode: .*$/,''); }
+    else if(type==='appstore'){ if(/apps\.apple\.com/.test(payload)) v.appios = payload; else v.appand = payload; }
+  }catch(e){}
+  return v;
+}
+
+// ---------- QR rendering (same engine as the homepage) ----------
+function qrOpts(px, data, style){
+  return {
+    width: px, height: px, data, margin: 4,
+    qrOptions: { errorCorrectionLevel: style.ecc || 'M' },
+    imageOptions: { crossOrigin: 'anonymous', margin: 8, imageSize: .4 },
+    dotsOptions: { color: style.fg, type: style.dots },
+    backgroundOptions: { color: style.transparent ? 'rgba(0,0,0,0)' : style.bg },
+    cornersSquareOptions: { color: style.fg },
+    cornersDotOptions: { color: style.fg },
+    image: logoURL(style) || undefined
+  };
+}
+async function renderQRImage(imgEl, px, data, style, attempt){
+  try{
+    const qr = new QRCodeStyling(qrOpts(px, data, style));
+    const blob = await qr.getRawData('png');
+    if(imgEl.dataset.objUrl) URL.revokeObjectURL(imgEl.dataset.objUrl);
+    const url = URL.createObjectURL(blob);
+    imgEl.dataset.objUrl = url;
+    imgEl.src = url;
+  }catch(e){
+    // Transient failure (e.g. logo image not ready yet) left the thumbnail
+    // broken with no retry — retry once so it self-heals.
+    if(!attempt) setTimeout(() => renderQRImage(imgEl, px, data, style, 1), 800);
+  }
+}
+// Frame wrap (same look as the homepage: rounded border + optional CTA text)
+function frameWrap(svgStr, px, style){
+  if(style.frame === 'none') return svgStr;
+  const bg = style.transparent ? '#FFFFFF' : style.bg;
+  const pad = Math.round(px * 0.06);
+  const ctaH = style.frame === 'cta' ? Math.round(px * 0.14) : 0;
+  const w = px + pad * 2, h = px + pad * 2 + ctaH;
+  const radius = Math.round(px * 0.05);
+  const esc2 = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const qrUri = 'data:image/svg+xml,' + encodeURIComponent(svgStr);
+  const ctaY = pad + px + (ctaH + pad) / 2;
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">` +
+    `<rect width="${w}" height="${h}" rx="${radius}" fill="${bg}"/>` +
+    `<rect x="2" y="2" width="${w-4}" height="${h-4}" rx="${Math.max(0,radius-2)}" fill="none" stroke="${style.fg}" stroke-width="2"/>` +
+    `<image href="${qrUri}" xlink:href="${qrUri}" x="${pad}" y="${pad}" width="${px}" height="${px}"/>` +
+    (style.frame === 'cta' ? `<text x="${w/2}" y="${ctaY}" text-anchor="middle" dominant-baseline="middle" font-family="system-ui,sans-serif" font-size="${Math.round(px*0.055)}" font-weight="600" fill="${style.fg}">${esc2(style.frameText || g('frameTextPh'))}</text>` : '') +
+    `</svg>`;
+}
+
+// ---------- cards ----------
+function updateCount(){ /* plan strip shows the count now */ }
+function renderCards(){
+  const wrap = $('cards');
+  if(!wrap) return;
+  wrap.innerHTML = '';
+  updateCount();
+  $('emptyState').hidden = CODES.length > 0;
+  if(CODES.length){
+    const group = document.createElement('div');
+    group.className = 'group';
+    CODES.forEach(c => group.appendChild(renderCard(c)));
+    wrap.appendChild(group);
+  }
+  // Deep link: ?c=CODE expands that card's Edit panel (once).
+  const deep = DEEP_DONE ? '' : (new URLSearchParams(location.search).get('c') || '');
+  DEEP_DONE = true;
+  if(deep){
+    const target = document.querySelector(`.codeCard[data-code="${CSS.escape(deep)}"]`);
+    if(target){ setPanel(target, 'edit'); target.scrollIntoView({block:'start'}); }
+    else { $('loadErr').textContent = t('ui','notYours'); $('loadErrCard').hidden = false; }
+  }
+}
+function renderCard(c){
+  if(!CARD_STATE[c.code]) CARD_STATE[c.code] = { type: c.type, payload: c.payload || '', style: normalizeStyle(c.style), size: 1024 };
+  const st = CARD_STATE[c.code];
+  const el = document.createElement('article');
+  el.className = 'codeCard';
+  el.dataset.code = c.code;
+  const typeName = (g('types')[c.type] && g('types')[c.type][0]) || c.type;
+  const metaLine = `${esc(typeName)} &middot; ${fmtDate(c.created_at)} &middot; ${(c.totalScans||0).toLocaleString()} ${t('ui','totalScans').toLowerCase()}`;
+  el.innerHTML = `
+  <div class="rowHead" role="button" tabindex="0" aria-expanded="false">
+    <img class="qrThumb" alt="QR code for ${esc(c.code)}">
+    <span class="rowMid"><a class="shortUrl" href="/q/${esc(c.code)}" target="_blank" rel="noopener">freeqrly.com/q/${esc(c.code)}</a><span class="rowDest">&rarr; ${esc(destLabel(c))}</span><span class="rowMeta">${metaLine}</span></span>
+    <button class="rowDel" type="button" title="${t('ui','deleteBtn')}" aria-label="${t('ui','deleteBtn')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg></button>
+    <span class="liveDot" title="${t('ui','liveBadge')}" aria-hidden="true"></span>
+    <span class="rowChev" aria-hidden="true">›</span>
+  </div>
+  <div class="rowBody" hidden>
+    <div class="actRow" role="tablist">
+      <button type="button" data-panel="stats" role="tab">${t('ui','statsBtn')}</button><button type="button" data-panel="edit" role="tab">${t('ui','editBtn')}</button>
+    </div>
+    <div class="delConfirm" hidden><span class="delText">${t('ui','deleteConfirm')}</span><button class="cancelDel" type="button">${t('ui','cancelBtn')}</button><button class="confirmDel" type="button">${t('ui','deleteBtn')}</button></div>
+    <div class="cardPanel panel-stats" hidden></div>
+    <div class="cardPanel panel-edit" hidden></div>
+  </div>`;
+  const head = el.querySelector('.rowHead');
+  const body = el.querySelector('.rowBody');
+  const toggleRow = (e) => {
+    if(e.target.closest('a,button')) return; // links/buttons handle themselves; don't toggle
+    const open = body.hidden;
+    body.hidden = !open;
+    head.setAttribute('aria-expanded', String(open));
+    el.classList.toggle('open', open);
+  };
+  head.addEventListener('click', toggleRow);
+  head.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggleRow(e); }
+  });
+  // Panel buttons (mutually exclusive; clicking the active one collapses)
+  el.querySelectorAll('.actRow button[data-panel]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const want = btn.dataset.panel;
+      setPanel(el, EXPANDED[c.code] === want ? null : want);
+    });
+  });
+  // Delete (in the row header): expand the row and show the inline confirmation
+  el.querySelector('.rowDel').addEventListener('click', (e) => {
+    e.stopPropagation();
+    if(body.hidden){ body.hidden = false; head.setAttribute('aria-expanded', 'true'); el.classList.add('open'); }
+    el.querySelector('.delConfirm').hidden = false;
+  });
+  el.querySelector('.cancelDel').addEventListener('click', () => { el.querySelector('.delConfirm').hidden = true; });
+  el.querySelector('.confirmDel').addEventListener('click', () => deleteCode(c.code, el));
+  // QR thumbnail: the real styled QR for this code
+  renderQRImage(el.querySelector('.qrThumb'), 200, location.origin + '/q/' + c.code, st.style);
+  // Restore expanded state across re-renders (e.g. language switch)
+  if(EXPANDED[c.code]) setPanel(el, EXPANDED[c.code], true);
+  return el;
+}
+function setPanel(cardEl, which, skipToggle){
+  const code = cardEl.dataset.code;
+  EXPANDED[code] = which;
+  // Opening a panel also expands the row.
+  if(which){
+    const bd = cardEl.querySelector('.rowBody');
+    const hd = cardEl.querySelector('.rowHead');
+    if(bd && bd.hidden){ bd.hidden = false; hd.setAttribute('aria-expanded', 'true'); cardEl.classList.add('open'); }
+  }
+  const segBtns = cardEl.querySelectorAll('.actRow button[data-panel]');
+  segBtns.forEach(b => b.classList.toggle('on', b.dataset.panel === which));
+  const statsPanel = cardEl.querySelector('.panel-stats');
+  const editPanel = cardEl.querySelector('.panel-edit');
+  statsPanel.hidden = which !== 'stats';
+  editPanel.hidden = which !== 'edit';
+  if(which === 'stats') openStats(cardEl, code);
+  if(which === 'edit') openEdit(cardEl, code);
+}
+async function deleteCode(code, cardEl){
+  const btn = cardEl.querySelector('.confirmDel');
+  btn.disabled = true;
+  try{
+    const r = await fetch(`/api/codes/${encodeURIComponent(code)}`, { method: 'DELETE', credentials: 'same-origin' });
+    if(r.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+    if(!r.ok){ alert(t('ui','deleteFailed')); return; }
+    CODES = CODES.filter(c => c.code !== code);
+    delete CARD_STATE[code]; delete EXPANDED[code]; delete STATS_CACHE[code];
+    cardEl.remove();
+    dashTrack("dashboard_action",{type:"code_delete"});
+    updateCount();
+    $('emptyState').hidden = CODES.length > 0;
+  }catch(e){ alert(t('ui','networkErr')); }
+  finally{ btn.disabled = false; }
+}
+
+// ---------- stats panel (lazy) ----------
+async function openStats(cardEl, code){
+  const panel = cardEl.querySelector('.panel-stats');
+  spBindPanel(panel, code);
+  if(STATS_CACHE[code]){ spRenderPanel(panel, code); return; }
+  const btn = cardEl.querySelector('.actRow button[data-panel="stats"]');
+  const spin = document.createElement('span');
+  spin.className = 'mini-spin'; spin.setAttribute('aria-hidden', 'true');
+  if(btn) btn.appendChild(spin);
+  panel.innerHTML = `<div class="statSkel" aria-hidden="true"><i></i><i></i><i></i></div>`;
+  try{
+    const r = await fetch(`/api/codes/${encodeURIComponent(code)}/stats`, { credentials: 'same-origin' });
+    if(r.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+    const d = await r.json().catch(() => ({}));
+    if(!r.ok){ panel.innerHTML = `<p class="merror">${esc(d.error || t('ui','networkErr'))}</p>`; return; }
+    STATS_CACHE[code] = d;
+    spRenderPanel(panel, code);
+    dashTrack("dashboard_action",{type:"stats_view"});
+  }catch(e){ panel.innerHTML = `<p class="merror">${t('ui','networkErr')}</p>`; }
+  finally{ spin.remove(); }
+}
+// ---------- redesigned stats panel (V9+V10) ----------
+// STATS-PANEL-JS-START
+const SP_DONUT_COLORS = ['#D9A441','#2F4A62','#E8C98F','#B9AE99','#EFE7D2'];
+const SP_UI = {}; // code -> {range, trendViz, cat, brkViz}
+function spUI(code){
+  if(!SP_UI[code]) SP_UI[code] = { range: 7, trendViz: 'line', cat: 'country', brkViz: 'donut' };
+  return SP_UI[code];
+}
+function spRangeData(d, n){
+  const byDateMap = Object.fromEntries((d.byDate||[]).map(r => [r.date, r.scans]));
+  const uniqMap = Object.fromEntries((d.uniqueByDate||[]).map(r => [r.date, r.uniques]));
+  const now = new Date();
+  const utcToday = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const days = [], vals = [], uniq = [];
+  for(let i = n - 1; i >= 0; i--){
+    const dt = new Date(utcToday); dt.setUTCDate(dt.getUTCDate() - i);
+    const iso = dt.toISOString().slice(0,10);
+    days.push(iso); vals.push(byDateMap[iso] || 0); uniq.push(uniqMap[iso] || 0);
+  }
+  return { days, vals, uniq };
+}
+function spCatData(d, cat){
+  const map = { country: d.byCountry, city: d.byCity, device: d.byDevice, os: d.byOS };
+  const labelKey = { country: 'byCountry', city: 'byCity', device: 'byDevice', os: 'byOS' }[cat];
+  const field = { country: 'country', city: 'city', device: 'device', os: 'os' }[cat];
+  const rows = (map[cat] || []).map(r => ({ name: r[field] || 'Unknown', scans: r.scans }));
+  return { rows, label: t('ui', labelKey) };
+}
+function spSeg(buttons, current, kind, mini){
+  return `<span class="sp-seg${mini ? ' mini' : ''}">` + buttons.map(b =>
+    `<button type="button" data-sp="${kind}" data-v="${b[0]}" class="${String(b[0]) === String(current) ? 'on' : ''}">${b[1]}</button>`).join('') + `</span>`;
+}
+function spDrop(id, btnLabel, items, current){
+  return `<span class="sp-drop" id="${id}"><button class="sp-dropbtn" type="button" data-sp="drop">${btnLabel}<span class="sp-chev" aria-hidden="true">›</span></button><div class="sp-menu">` + items.map(it =>
+    `<button type="button" data-sp="dropItem" data-drop="${id}" data-v="${it[0]}" class="${String(it[0]) === String(current) ? 'on' : ''}">${it[1]}</button>`).join('') + `</div></span>`;
+}
+function spTrendLine(days, vals, uniq){
+  const W = 860, H = 220, PL = 8, PR = 8, PT = 22, PB = 28;
+  const max = Math.max(1, ...vals) * 1.15;
+  const x = i => PL + i * (W - PL - PR) / (vals.length - 1);
+  const y = v => PT + (H - PT - PB) * (1 - v / max);
+  let grid = '';
+  for(let g = 0; g <= 4; g++){
+    const gy = PT + (H - PT - PB) * g / 4;
+    grid += `<line x1="${PL}" y1="${gy}" x2="${W-PR}" y2="${gy}" stroke="#F1EAD9" stroke-width="1"/>`;
+  }
+  const mk = arr => arr.map((v,i) => x(i).toFixed(1) + ',' + y(v).toFixed(1)).join(' ');
+  const p1 = mk(vals), p2 = mk(uniq);
+  const vmax = Math.max(...vals);
+  let dots = '', labels = '';
+  vals.forEach((v,i) => {
+    dots += `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="4" fill="#fff" stroke="#2F4A62" stroke-width="2"/>`;
+    if(vals.length <= 14 || v === vmax || i === vals.length - 1)
+      labels += `<text x="${x(i).toFixed(1)}" y="${(y(v)-10).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="600" fill="#22303F">${v}</text>`;
+  });
+  const mid = Math.floor((vals.length - 1) / 2);
+  const xl = [0, mid, vals.length - 1].map(i => {
+    const anchor = i === 0 ? 'start' : (i === vals.length - 1 ? 'end' : 'middle');
+    const xx = i === 0 ? PL : (i === vals.length - 1 ? W - PR : x(i));
+    const lbl = i === vals.length - 1 ? t('ui','today') : days[i].slice(5);
+    return `<text x="${xx.toFixed(1)}" y="${H-8}" text-anchor="${anchor}" font-size="11" fill="#8a7a5f">${lbl}</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%">${grid}<polygon points="${PL},${H-PB} ${p1} ${x(vals.length-1).toFixed(1)},${H-PB}" fill="#2F4A62" opacity="0.07"/><polyline points="${p1}" fill="none" stroke="#2F4A62" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${p2}" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round"/>${dots}${labels}${xl}</svg>` +
+    `<div class="sp-note"><span style="color:#2F4A62">━</span> ${t('ui','totalScans')} &nbsp; <span style="color:#D9A441">┄</span> ${t('ui','uniqueScans')}</div>`;
+}
+function spTrendBars(days, vals){
+  const max = Math.max(1, ...vals);
+  const vmax = Math.max(...vals);
+  const todayIdx = vals.length - 1;
+  const showVal = (v,i) => vals.length <= 14 || v === vmax || i === todayIdx;
+  const showDate = i => vals.length <= 14 || i === 0 || i === Math.floor((vals.length-1)/2) || i === todayIdx;
+  return `<div class="sp-chart">` + vals.map((v,i) =>
+    `<div class="sp-col${i===todayIdx?' today':''}"><span class="v">${showVal(v,i)?v:''}</span><div class="b" style="height:${Math.max(4, v/max*100)}%"></div></div>`).join('') +
+    `</div><div class="sp-labels">` + days.map((d,i) =>
+    `<span class="${i===todayIdx?'today':''}">${showDate(i)? (i===todayIdx? t('ui','today') : d.slice(5)) : ''}</span>`).join('') + `</div>`;
+}
+function spTrendTable(days, vals, uniq){
+  const total = vals.reduce((a,b) => a + b, 0), utotal = uniq.reduce((a,b) => a + b, 0);
+  return `<table class="sp-table"><thead><tr><th>${t('ui','dateCol')}</th><th class="num">${t('ui','scansCol')}</th><th class="num">${t('ui','uniqueCol')}</th></tr></thead><tbody>` +
+    vals.map((v,i) => `<tr><td>${days[i]}</td><td class="num">${v.toLocaleString()}</td><td class="num">${uniq[i].toLocaleString()}</td></tr>`).join('') +
+    `<tr class="total"><td>${t('ui','totalRow')}</td><td class="num">${total.toLocaleString()}</td><td class="num">${utotal.toLocaleString()}</td></tr></tbody></table>`;
+}
+function spBreakDonut(rows, catTotal, catLabel){
+  const R = 80, C = 2 * Math.PI * R;
+  let off = 0, svg = '';
+  rows.forEach((r, i) => {
+    const frac = catTotal ? r.scans / catTotal : 0, len = frac * C;
+    if(len <= 0) return;
+    svg += `<circle cx="95" cy="95" r="${R}" fill="none" stroke="${SP_DONUT_COLORS[i % SP_DONUT_COLORS.length]}" stroke-width="26" stroke-dasharray="${Math.max(0, len - 2).toFixed(1)} ${(C - len + 2).toFixed(1)}" stroke-dashoffset="${(-off).toFixed(1)}"/>`;
+    off += len;
+  });
+  return `<div class="sp-donutwrap"><div class="sp-donut"><svg width="190" height="190" viewBox="0 0 190 190">${svg}</svg><div class="sp-center"><b>${catTotal.toLocaleString()}</b><span>${esc(catLabel)}</span></div></div><div class="sp-legend">` +
+    rows.map((r, i) => `<div class="sp-lrow"><span class="dot" style="background:${SP_DONUT_COLORS[i % SP_DONUT_COLORS.length]}"></span><span class="name">${esc(r.name)}</span><span class="val">${r.scans.toLocaleString()}</span><span class="pct">${catTotal ? Math.round(r.scans/catTotal*100) : 0}%</span></div>`).join('') + `</div></div>`;
+}
+function spBreakBars(rows, catTotal){
+  const max = Math.max(1, ...rows.map(r => r.scans));
+  return rows.map(r => `<div class="sp-row"><div class="name">${esc(r.name)}</div><div class="sp-track"><div class="sp-fill" style="width:${Math.round(r.scans/max*100)}%"></div></div><div class="val">${r.scans.toLocaleString()}</div><div class="pct">${catTotal ? Math.round(r.scans/catTotal*100) : 0}%</div></div>`).join('');
+}
+function spBreakTable(rows, catTotal, totalScans, catLabel){
+  const pctTotal = totalScans ? Math.round(catTotal/totalScans*100) : 0;
+  return `<table class="sp-table"><thead><tr><th>${esc(catLabel)}</th><th class="num">${t('ui','scansCol')}</th><th class="num">%</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td>${esc(r.name)}</td><td class="num">${r.scans.toLocaleString()}</td><td class="num">${catTotal ? Math.round(r.scans/catTotal*100) : 0}%</td></tr>`).join('') +
+    `<tr class="total"><td>${t('ui','totalRow')}</td><td class="num">${catTotal.toLocaleString()}</td><td class="num">${pctTotal}%</td></tr></tbody></table>`;
+}
+function statsPanelHTML(d, ui){
+  const today = new Date().toISOString().slice(0,10);
+  const todayRow = (d.byDate||[]).find(r => r.date === today);
+  const { days, vals, uniq } = spRangeData(d, ui.range);
+  const rangeTotal = vals.reduce((a,b) => a + b, 0);
+  const uniqueTotal = d.uniqueScans || 0;
+  const totalScans = d.totalScans || 0;
+  const pct = totalScans ? Math.round(uniqueTotal/totalScans*100) : 0;
+  const kpis = `<div class="statTop">` +
+    `<div class="statBig"><div class="num">${totalScans.toLocaleString()}</div><div class="lbl">${t('ui','totalScans')}</div><div class="lbl">${t('ui','cumNote')}</div></div>` +
+    `<div class="statBig"><div class="num">${(todayRow ? todayRow.scans : 0).toLocaleString()}</div><div class="lbl">${t('ui','today')}</div><div class="lbl">${fmtDate(new Date().toISOString())}</div></div>` +
+    `<div class="statBig"><div class="num">${uniqueTotal.toLocaleString()}</div><div class="lbl">${t('ui','uniqueScans')}</div><div class="lbl">${pct}%</div></div>` +
+    `<div class="statBig"><div class="num">${rangeTotal.toLocaleString()}</div><div class="lbl">${t('ui','lastNDays').replace('{n}', ui.range)}</div><div class="lbl">${t('ui','rangeNote')}</div></div></div>`;
+  const trendVizBtns = [['line', t('ui','vizLine')], ['bar', t('ui','vizBar')], ['table', t('ui','vizTable')]];
+  const rangeBtns = [[7, t('ui','range7')], [14, t('ui','range14')], [30, t('ui','range30')]];
+  const trendVizLbl = trendVizBtns.find(b => b[0] === ui.trendViz)[1];
+  const rangeLbl = rangeBtns.find(b => b[0] === ui.range)[1];
+  let trendBody;
+  if(rangeTotal === 0){
+    trendBody = `<div class="sp-empty">${totalScans > 0 ? t('ui','rangeEmpty') : t('ui','noScans')}</div>`;
+  } else if(ui.trendViz === 'table'){
+    trendBody = spTrendTable(days, vals, uniq);
+  } else if(ui.trendViz === 'bar'){
+    trendBody = spTrendBars(days, vals);
+  } else {
+    trendBody = spTrendLine(days, vals, uniq);
+  }
+  const trendHead = `<div class="sp-head"><div class="sp-left"><span class="sp-mt">${t('ui','trendTitle')}</span>${spSeg(trendVizBtns, ui.trendViz, 'trendViz', true)}${spDrop('spTrendVizDrop', trendVizLbl, trendVizBtns, ui.trendViz)}</div>${spSeg(rangeBtns, ui.range, 'range', false)}${spDrop('spRangeDrop', rangeLbl, rangeBtns, ui.range)}</div>`;
+  const catBtns = [['country', t('ui','byCountry')], ['city', t('ui','byCity')], ['device', t('ui','byDevice')], ['os', t('ui','byOS')]];
+  const brkVizBtns = [['donut', t('ui','vizDonut')], ['bar', t('ui','vizHBar')], ['table', t('ui','vizTable')]];
+  const brkVizLbl = brkVizBtns.find(b => b[0] === ui.brkViz)[1];
+  const catLbl = catBtns.find(b => b[0] === ui.cat)[1];
+  const { rows, label } = spCatData(d, ui.cat);
+  const catTotal = rows.reduce((a,b) => a + b.scans, 0);
+  let brkBody;
+  if(!rows.length){
+    brkBody = `<div class="sp-empty">${ui.cat === 'city' ? t('ui','noCity') : t('ui','noScans')}</div>`;
+  } else if(ui.brkViz === 'bar'){
+    brkBody = spBreakBars(rows, catTotal);
+  } else if(ui.brkViz === 'table'){
+    brkBody = spBreakTable(rows, catTotal, totalScans, label);
+  } else {
+    brkBody = spBreakDonut(rows, catTotal, label);
+  }
+  const catNote = (ui.cat === 'city' && rows.length) ? `<div class="sp-note">${t('ui','cityNote').replace('{n}', catTotal.toLocaleString())}</div>` : '';
+  const brkHead = `<div class="sp-head"><div class="sp-left"><span class="sp-mt">${t('ui','breakTitle')}</span>${spSeg(brkVizBtns, ui.brkViz, 'brkViz', true)}${spDrop('spBrkVizDrop', brkVizLbl, brkVizBtns, ui.brkViz)}</div>${spSeg(catBtns, ui.cat, 'cat', false)}${spDrop('spCatDrop', catLbl, catBtns, ui.cat)}</div>`;
+  return kpis +
+    `<div class="sp-mod">${trendHead}<div class="sp-body">${trendBody}</div></div>` +
+    `<div class="sp-mod">${brkHead}<div class="sp-body">${brkBody}</div>${catNote}</div>`;
+}
+function spRenderPanel(panel, code){
+  const d = STATS_CACHE[code];
+  if(!d) return;
+  panel.innerHTML = statsPanelHTML(d, spUI(code));
+}
+function spOnPanelClick(e, panel, code){
+  const btn = e.target.closest('[data-sp]');
+  if(!btn) return;
+  const ui = spUI(code);
+  const act = btn.dataset.sp;
+  if(act === 'drop'){
+    const drop = btn.closest('.sp-drop');
+    const was = drop.classList.contains('open');
+    panel.querySelectorAll('.sp-drop.open').forEach(el => el.classList.remove('open'));
+    if(!was) drop.classList.add('open');
+    return;
+  }
+  if(act === 'dropItem'){
+    const dropId = btn.dataset.drop, v = btn.dataset.v;
+    if(dropId === 'spTrendVizDrop') ui.trendViz = v;
+    else if(dropId === 'spRangeDrop') ui.range = parseInt(v, 10);
+    else if(dropId === 'spBrkVizDrop') ui.brkViz = v;
+    else if(dropId === 'spCatDrop') ui.cat = v;
+    else return;
+    spRenderPanel(panel, code);
+    return;
+  }
+  if(act === 'range') ui.range = parseInt(btn.dataset.v, 10);
+  else if(act === 'trendViz') ui.trendViz = btn.dataset.v;
+  else if(act === 'cat') ui.cat = btn.dataset.v;
+  else if(act === 'brkViz') ui.brkViz = btn.dataset.v;
+  else return;
+  spRenderPanel(panel, code);
+}
+let SP_DOC_BOUND = false;
+function spBindPanel(panel, code){
+  if(panel.dataset.spBound) return;
+  panel.dataset.spBound = '1';
+  panel.addEventListener('click', e => spOnPanelClick(e, panel, code));
+  if(!SP_DOC_BOUND){
+    SP_DOC_BOUND = true;
+    document.addEventListener('click', e => {
+      if(e.target.closest('.sp-drop')) return;
+      document.querySelectorAll('.sp-drop.open').forEach(el => el.classList.remove('open'));
+    });
+  }
+}
+// STATS-PANEL-JS-END
+
+// ---------- edit panel (the generator module inside a card) ----------
+function openEdit(cardEl, code){
+  const panel = cardEl.querySelector('.panel-edit');
+  if(!panel.dataset.built){ buildEditPanel(panel, code); panel.dataset.built = '1'; }
+}
+function buildEditPanel(panel, code){
+  const st = CARD_STATE[code];
+  panel.innerHTML = `
+  <div class="typerail" role="tablist" aria-label="${t('ui','ariaContentType')}"></div>
+  <div class="grid">
+    <div class="fieldsCol">
+      <div class="editFields"></div>
+      <div class="fl">${g('appearance')}</div>
+      <div class="approw"><div class="applabel"><span>${g('dots')}</span><small>${g('dotsSub')}</small></div>
+        <div class="seg segDots" data-seg="dots"></div>
+      </div>
+      <div class="approw"><div class="applabel"><span>${g('ecc')}</span><small>${g('eccSub')}</small></div>
+        <div class="seg segEcc" data-seg="ecc"></div>
+      </div>
+      <div class="approw"><div class="applabel"><span>${g('colors')}</span><small>${g('colorsSub')}</small></div>
+        <div class="cpair">
+          <div class="cgroup"><span class="cname">${g('ink')}</span><div class="cdots" data-dots="fg"></div></div>
+          <div class="cgroup"><span class="cname">${g('background')}</span><div class="cdots" data-dots="bg"></div></div>
+        </div>
+      </div>
+      <div class="approw"><div class="applabel"><span>${g('logo')}</span><small>${g('logoSub')}</small></div>
+        <div class="logorow" id="logoRow"></div>
+      </div>
+      <div class="approw"><div class="applabel"><span>${g('size')}</span><small><span class="sizeVal">${st.size}</span> px</small></div>
+        <div class="seg segSize" data-seg="size"></div>
+      </div>
+      <div class="approw"><div class="applabel"><span>${g('frame')}</span><small>${g('frameSub')}</small></div>
+        <div class="frameWrap"><div class="seg segFrame" data-seg="frame"></div><div class="frameExpand"><input class="frameExpandInput" type="text" placeholder="${esc(g('frameTextPh'))}" maxlength="100"></div></div>
+      </div>
+    </div>
+    <div class="previewCol">
+      <p class="modeHintLine">${t('ui','editHint')}</p>
+      <div class="qrpaper"><div class="qrPreview"></div></div>
+      <button class="dynGenBtn saveBtn" type="button">${t('ui','saveBtn')}</button>
+      <div class="dlrow"><div class="dlSplit"><button class="dlMain" type="button">${g('dl')} PNG ↓</button><button class="dlArrow" type="button">▾</button><div class="dlMenu"><button type="button" data-fmt="svg">SVG ↓</button><button type="button" data-fmt="pdf">PDF ↓</button><button type="button" data-fmt="eps">EPS ↓</button></div></div></div>
+      <p class="merror saveErr" hidden></p>
+      <p class="mok saveOk" hidden>${t('ui','saved')}</p>
+    </div>
+  </div>`;
+  wireEditPanel(panel, code);
+  renderEditFields(panel, code);
+  renderStyleControls(panel, code);
+  refreshPreview(panel, code);
+}
+function wireEditPanel(panel, code){
+  const st = CARD_STATE[code];
+  // Type rail
+  const rail = panel.querySelector('.typerail');
+  TYPES.forEach(v => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ttab' + (v === st.type ? ' on' : '');
+    const ic = document.createElement('span'); ic.className = 'tico'; ic.textContent = TYPE_EMOJI[v];
+    b.appendChild(ic);
+    b.appendChild(document.createTextNode((g('types')[v] && g('types')[v][0]) || v));
+    b.addEventListener('click', () => {
+      if(st.type === v) return;
+      st.type = v; st.payload = '';
+      rail.querySelectorAll('.ttab').forEach(x => x.classList.toggle('on', x === b));
+      renderEditFields(panel, code);
+    });
+    rail.appendChild(b);
+  });
+  // Save
+  panel.querySelector('.saveBtn').addEventListener('click', () => saveCode(panel, code));
+  // Download split
+  const dlMain = panel.querySelector('.dlMain');
+  const dlMenu = panel.querySelector('.dlMenu');
+  dlMain.addEventListener('click', () => downloadCode(panel, code, 'png'));
+  dlMenu.querySelectorAll('button[data-fmt]').forEach(b => b.addEventListener('click', () => { downloadCode(panel, code, b.dataset.fmt); }));
+}
+function readFieldValues(panel){
+  const vals = {};
+  panel.querySelectorAll('.editFields [data-k]').forEach(el => { vals[el.dataset.k] = el.value; });
+  // datetime-local pairs (date + time inputs) combine into one value
+  panel.querySelectorAll('.editFields .dtpair').forEach(pair => {
+    const d = pair.querySelector('[data-k-date]'); const tm = pair.querySelector('[data-k-time]');
+    if(d && tm) vals[d.dataset.kDate] = d.value && tm.value ? d.value + 'T' + tm.value : (d.value || '');
+  });
+  return vals;
+}
+function renderEditFields(panel, code){
+  const st = CARD_STATE[code];
+  const box = panel.querySelector('.editFields');
+  const specs = (g('fields')[st.type] || []);
+  const vals = parsePayload(st.type, st.payload);
+  box.innerHTML = specs.map(spec => {
+    const [key, label, third, ph] = spec;
+    const val = esc(vals[key] || '');
+    if(third === 'textarea') return `<div class="field"><label>${esc(label)}</label><textarea data-k="${key}" rows="3" placeholder="${esc(ph || '')}">${val}</textarea></div>`;
+    if(typeof third === 'string' && third.startsWith('select:')){
+      const opts = third.slice(7).split(',');
+      return `<div class="field"><label>${esc(label)}</label><div class="seg segSmall" data-select="${key}">${opts.map(o => `<button type="button" data-v="${esc(o)}" class="${(vals[key] || opts[0]) === o ? 'on' : ''}">${esc(o)}</button>`).join('')}</div><input type="hidden" data-k="${key}" value="${esc(vals[key] || opts[0])}"></div>`;
+    }
+    if(third === 'datetime-local'){
+      const [d, tm] = (vals[key] || '').split('T');
+      return `<div class="field"><label>${esc(label)}</label><div class="dtpair"><input type="date" data-k-date="${key}" value="${esc(d || '')}"><input type="time" data-k-time="${key}" value="${esc(tm || '')}"></div></div>`;
+    }
+    return `<div class="field"><label>${esc(label)}</label><input data-k="${key}" type="text" placeholder="${esc(ph || third || '')}" value="${val}"></div>`;
+  }).join('');
+  box.querySelectorAll('[data-select]').forEach(seg => {
+    seg.querySelectorAll('button[data-v]').forEach(b => b.addEventListener('click', () => {
+      seg.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+      box.querySelector(`input[data-k="${seg.dataset.select}"]`).value = b.dataset.v;
+      syncPayload(panel, code);
+    }));
+  });
+  box.querySelectorAll('input[data-k], textarea[data-k]').forEach(el => el.addEventListener('input', () => syncPayload(panel, code)));
+  box.querySelectorAll('.dtpair input').forEach(el => el.addEventListener('input', () => syncPayload(panel, code)));
+}
+function syncPayload(panel, code){
+  const st = CARD_STATE[code];
+  st.payload = buildPayload(st.type, readFieldValues(panel));
+}
+function renderStyleControls(panel, code){
+  const st = CARD_STATE[code];
+  const style = st.style;
+  const segBtn = (v, label, on) => `<button type="button" data-v="${esc(v)}" class="${on ? 'on' : ''}">${esc(label)}</button>`;
+  // Dots
+  const dotsSeg = panel.querySelector('.segDots');
+  dotsSeg.innerHTML = [['square', g('dSquare')], ['dots', g('dRound')], ['rounded', g('dSoft')], ['extra-rounded', g('dPebble')]].map(([v, l]) => segBtn(v, l, style.dots === v)).join('');
+  // ECC
+  const eccSeg = panel.querySelector('.segEcc');
+  eccSeg.innerHTML = [['L', g('eL')], ['M', g('eM')], ['Q', g('eQ')], ['H', g('eH')]].map(([v, l]) => segBtn(v, l, style.ecc === v)).join('');
+  // Size
+  const sizeSeg = panel.querySelector('.segSize');
+  sizeSeg.innerHTML = SIZES.map(v => segBtn(String(v), String(v), st.size === v)).join('');
+  // Frame
+  const frameSeg = panel.querySelector('.segFrame');
+  frameSeg.innerHTML = [['none', g('frameNone')], ['rounded', g('frameRounded')], ['cta', g('frameCta')]].map(([v, l]) => segBtn(v, l, style.frame === v)).join('');
+  const frameExpand = panel.querySelector('.frameExpand');
+  const frameInput = panel.querySelector('.frameExpandInput');
+  frameExpand.classList.toggle('show', style.frame === 'cta');
+  frameInput.value = style.frameText || '';
+  // Colors
+  const fgDots = panel.querySelector('[data-dots="fg"]');
+  const fgCustom = INK_PRESETS.some(c => c.toLowerCase() === style.fg.toLowerCase()) ? '' : `<button type="button" class="cdot custom on" data-v="${esc(style.fg)}" style="background:${esc(style.fg)}" title="${esc(style.fg)}"></button>`;
+  fgDots.innerHTML = INK_PRESETS.map(c => `<button type="button" class="cdot${style.fg.toLowerCase() === c.toLowerCase() ? ' on' : ''}" data-v="${c}" style="background:${c}"></button>`).join('') + fgCustom +
+    `<button type="button" class="cpick" data-kind="fg" aria-label="${t('ui','ariaCustomInk')}">+</button>`;
+  const bgDots = panel.querySelector('[data-dots="bg"]');
+  const transpBtn = `<button type="button" class="cdot ctransp${style.transparent ? ' on' : ''}" data-v="transparent" title="transparent"></button>`;
+  const bgCustom = (style.transparent || BG_PRESETS.some(c => c.toLowerCase() === style.bg.toLowerCase())) ? '' : `<button type="button" class="cdot custom on" data-v="${esc(style.bg)}" style="background:${esc(style.bg)}" title="${esc(style.bg)}"></button>`;
+  bgDots.innerHTML = transpBtn + BG_PRESETS.map(c => `<button type="button" class="cdot${!style.transparent && style.bg.toLowerCase() === c.toLowerCase() ? ' on' : ''}" data-v="${c}" style="background:${c}"></button>`).join('') + bgCustom +
+    `<button type="button" class="cpick" data-kind="bg" aria-label="${t('ui','ariaCustomBg')}">+</button>`;
+  // Logo row
+  const logoRow = panel.querySelector('.logorow');
+  logoRow.innerHTML = LOGO_PRESETS.map(p => `<button type="button" class="logopick${style.logoPreset === p ? ' on' : ''}" data-preset="${p}"><img src="/assets/img/logos/${p}.svg" alt="${p}"></button>`).join('') +
+    (style.logoKey ? `<button type="button" class="logopick current on" data-current="1" title="Custom logo — click to remove"><img src="${logoURL(style)}" alt="Custom logo"></button>` : '') +
+    `<label class="logopick logoupload">+<input type="file" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" hidden></label>`;
+  // Wire everything
+  dotsSeg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { style.dots = b.dataset.v; dotsSeg.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); afterStyleChange(panel, code); }));
+  eccSeg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { style.ecc = b.dataset.v; eccSeg.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); afterStyleChange(panel, code); }));
+  sizeSeg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { st.size = parseInt(b.dataset.v, 10); sizeSeg.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); panel.querySelector('.sizeVal').textContent = st.size; }));
+  frameSeg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { style.frame = b.dataset.v; frameSeg.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); frameExpand.classList.toggle('show', style.frame === 'cta'); afterStyleChange(panel, code); }));
+  frameInput.addEventListener('input', () => { style.frameText = frameInput.value; refreshPreview(panel, code); });
+  fgDots.querySelectorAll('.cdot[data-v]').forEach(b => b.addEventListener('click', () => { style.fg = b.dataset.v; renderStyleControls(panel, code); afterStyleChange(panel, code); }));
+  fgDots.querySelector('.cpick').addEventListener('click', e => { e.preventDefault(); openColorPicker(e.currentTarget, style.fg, hex => applyCustomColor(panel, code, 'fg', hex)); });
+  bgDots.querySelectorAll('.cdot[data-v]').forEach(b => b.addEventListener('click', () => {
+    if(b.dataset.v === 'transparent'){ style.transparent = true; } else { style.transparent = false; style.bg = b.dataset.v; }
+    renderStyleControls(panel, code); afterStyleChange(panel, code);
+  }));
+  bgDots.querySelector('.cpick').addEventListener('click', e => { e.preventDefault(); openColorPicker(e.currentTarget, style.transparent ? '#FFFFFF' : style.bg, hex => applyCustomColor(panel, code, 'bg', hex)); });
+  logoRow.querySelectorAll('.logopick[data-preset]').forEach(b => b.addEventListener('click', () => {
+    const wasOn = b.classList.contains('on');
+    style.logoPreset = wasOn ? null : b.dataset.preset;
+    style.logoKey = null;
+    renderStyleControls(panel, code); afterStyleChange(panel, code);
+  }));
+  const curBtn = logoRow.querySelector('.logopick.current');
+  if(curBtn) curBtn.addEventListener('click', () => { style.logoKey = null; renderStyleControls(panel, code); afterStyleChange(panel, code); });
+  logoRow.querySelector('input[type=file]').addEventListener('change', e => uploadLogo(panel, code, e.target.files[0]));
+}
+function applyCustomColor(panel, code, kind, hex){
+  const st = CARD_STATE[code];
+  const style = st.style;
+  if(kind === 'fg'){ style.fg = hex; } else { style.transparent = false; style.bg = hex; }
+  const box = panel.querySelector(kind === 'fg' ? '[data-dots="fg"]' : '[data-dots="bg"]');
+  let custom = box.querySelector('.cdot.custom');
+  if(!custom){
+    custom = document.createElement('button');
+    custom.type = 'button'; custom.className = 'cdot custom'; custom.setAttribute('aria-label', 'Custom color');
+    box.insertBefore(custom, box.querySelector('.cpick'));
+    custom.addEventListener('click', () => {
+      if(kind === 'fg'){ style.fg = custom.dataset.v; } else { style.transparent = false; style.bg = custom.dataset.v; }
+      box.querySelectorAll('.cdot').forEach(d => d.classList.toggle('on', d === custom));
+      afterStyleChange(panel, code);
+    });
+  }
+  custom.dataset.v = hex; custom.style.background = hex; custom.title = hex;
+  box.querySelectorAll('.cdot').forEach(d => d.classList.toggle('on', !!d.dataset.v && d.dataset.v.toLowerCase() === hex.toLowerCase()));
+  afterStyleChange(panel, code);
+}
+
+/* Custom color picker popover — same component as the homepage generator */
+(function(){
+  const pop = $('cpop'); if(!pop) return;
+  const sat = $('cpopSat'), satDot = $('cpopSatDot'), hue = $('cpopHue'), hueDot = $('cpopHueDot');
+  const prev = $('cpopPrev'), hexI = $('cpopHex'), ok = $('cpopOk');
+  let H = 210, S = 30, V = 25, onPick = null, interacted = false;
+  function hsv2hex(h, s, v){
+    s /= 100; v /= 100;
+    const k = n => (n + h / 60) % 6, f = n => v * (1 - s * Math.max(0, Math.min(k(n), 4 - k(n), 1)));
+    const r = Math.round(f(5) * 255), g = Math.round(f(3) * 255), b = Math.round(f(7) * 255);
+    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('').toUpperCase();
+  }
+  function hex2hsv(hex){
+    const r = parseInt(hex.slice(1, 3), 16) / 255, g = parseInt(hex.slice(3, 5), 16) / 255, b = parseInt(hex.slice(5, 7), 16) / 255;
+    const mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn;
+    let h = 0; if(d){ if(mx === r) h = ((g - b) / d) % 6; else if(mx === g) h = (b - r) / d + 2; else h = (r - g) / d + 4; h *= 60; if(h < 0) h += 360; }
+    return [h, mx ? d / mx * 100 : 0, mx * 100];
+  }
+  function render(){
+    const hex = hsv2hex(H, S, V);
+    sat.style.background = `linear-gradient(to top,#000,transparent),linear-gradient(to right,#fff,transparent),hsl(${H},100%,50%)`;
+    satDot.style.left = S + '%'; satDot.style.top = (100 - V) + '%';
+    hueDot.style.left = (H / 360 * 100) + '%';
+    prev.style.background = hex; hexI.value = hex;
+    if(onPick && interacted) onPick(hex);
+  }
+  function fromHex(hex){
+    if(!/^#[0-9A-Fa-f]{6}$/.test(hex)) return;
+    [H, S, V] = hex2hsv(hex); render();
+  }
+  sat.addEventListener('pointerdown', e => {
+    interacted = true;
+    const move = ev => { const r = sat.getBoundingClientRect();
+      S = Math.min(100, Math.max(0, (ev.clientX - r.left) / r.width * 100));
+      V = 100 - Math.min(100, Math.max(0, (ev.clientY - r.top) / r.height * 100));
+      render(); };
+    move(e);
+    const up = () => { window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); };
+    window.addEventListener('pointermove', move); window.addEventListener('pointerup', up);
+  });
+  hue.addEventListener('pointerdown', e => {
+    interacted = true;
+    const move = ev => { const r = hue.getBoundingClientRect();
+      H = Math.min(360, Math.max(0, (ev.clientX - r.left) / r.width * 360)); render(); };
+    move(e);
+    const up = () => { window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); };
+    window.addEventListener('pointermove', move); window.addEventListener('pointerup', up);
+  });
+  hexI.addEventListener('input', () => { interacted = true; fromHex(hexI.value); });
+  ok.addEventListener('click', () => { if(onPick && interacted){ render(); } pop.hidden = true; });
+  document.addEventListener('pointerdown', e => {
+    if(!pop.hidden && !pop.contains(e.target) && !e.target.closest('.cpick')) pop.hidden = true;
+  });
+  window.openColorPicker = function(anchorBtn, initialHex, cb){
+    onPick = cb; interacted = false;
+    fromHex(initialHex || '#22303F');
+    pop.hidden = false;
+    const r = anchorBtn.getBoundingClientRect();
+    pop.style.left = Math.min(window.innerWidth - 250, Math.max(10, r.left - 100)) + 'px';
+    pop.style.top = Math.min(window.innerHeight - 320, r.bottom + 8) + 'px';
+  };
+})();
+
+function afterStyleChange(panel, code){
+  const st = CARD_STATE[code];
+  const cardEl = panel.closest('.codeCard');
+  if(cardEl) renderQRImage(cardEl.querySelector('.qrThumb'), 200, location.origin + '/q/' + code, st.style);
+  refreshPreview(panel, code);
+}
+async function refreshPreview(panel, code){
+  const st = CARD_STATE[code];
+  const box = panel.querySelector('.qrPreview');
+  try{
+    const qr = new QRCodeStyling(qrOpts(260, location.origin + '/q/' + code, st.style));
+    const blob = await qr.getRawData('svg');
+    let svgText = await blob.text();
+    svgText = frameWrap(svgText, 260, st.style);
+    box.innerHTML = svgText;
+    box.classList.remove('empty');
+  }catch(e){ box.textContent = '—'; box.classList.add('empty'); }
+}
+async function uploadLogo(panel, code, file){
+  if(!file) return;
+  const st = CARD_STATE[code];
+  try{
+    const fd = new FormData(); fd.append('file', file);
+    const r = await fetch('/api/logos', { method: 'POST', credentials: 'same-origin', body: fd });
+    const d = await r.json().catch(() => ({}));
+    if(!r.ok){ alert(d.error || t('ui','networkErr')); return; }
+    st.style.logoKey = d.key; st.style.logoPreset = null;
+    renderStyleControls(panel, code); afterStyleChange(panel, code);
+  }catch(e){ alert(t('ui','networkErr')); }
+}
+async function saveCode(panel, code){
+  const st = CARD_STATE[code];
+  syncPayload(panel, code);
+  const errEl = panel.querySelector('.saveErr');
+  const okEl = panel.querySelector('.saveOk');
+  const btn = panel.querySelector('.saveBtn');
+  errEl.hidden = true; okEl.hidden = true;
+  if(!st.payload){ errEl.textContent = t('ui','saveErrEmpty'); errEl.hidden = false; return; }
+  btn.disabled = true; btn.textContent = t('ui','saving');
+  try{
+    const r = await fetch(`/api/codes/${encodeURIComponent(code)}`, {
+      method: 'PATCH', headers: {'Content-Type':'application/json'}, credentials: 'same-origin',
+      body: JSON.stringify({ type: st.type, payload: st.payload, style: st.style })
+    });
+    const d = await r.json().catch(() => ({}));
+    if(r.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+    if(!r.ok){ errEl.textContent = r.status === 403 ? t('ui','notYours') : (d.error || t('ui','networkErr')); errEl.hidden = false; return; }
+    // Sync the card header + stored copy
+    const rec = CODES.find(c => c.code === code);
+    if(rec){ rec.type = st.type; rec.payload = st.payload; rec.style = JSON.parse(JSON.stringify(st.style)); }
+    const cardEl = panel.closest('.codeCard');
+    if(cardEl){
+      const metaEl = cardEl.querySelector('.rowMeta');
+      if(metaEl){ const typeName = (g('types')[st.type] && g('types')[st.type][0]) || st.type; metaEl.innerHTML = `${esc(typeName)} &middot; ${t('ui','created')} ${fmtDate(rec ? rec.created_at : 0)} &middot; ${((rec && rec.totalScans) || 0).toLocaleString()} ${t('ui','totalScans').toLowerCase()}`; }
+    }
+    okEl.hidden = false;
+    dashTrack("dashboard_action",{type:"code_edit"});
+    setTimeout(() => { okEl.hidden = true; }, 4000);
+  }catch(e){ errEl.textContent = t('ui','networkErr'); errEl.hidden = false; }
+  finally{ btn.disabled = false; btn.textContent = t('ui','saveBtn'); }
+}
+// Download the code's QR (short URL + saved style + frame) as PNG / SVG / PDF / EPS.
+async function downloadCode(panel, code, format){
+  const st = CARD_STATE[code];
+  const style = st.style;
+  const data = location.origin + '/q/' + code;
+  dashTrack("dashboard_action",{type:"code_download", format:format});
+  try{
+    if(format === 'png'){
+      const qr = new QRCodeStyling(qrOpts(st.size, data, style));
+      const blob = await qr.getRawData('png');
+      // PNG cannot carry the frame border via the lib — composite through SVG when framed
+      if(style.frame !== 'none'){
+        const svgBlob = await qr.getRawData('svg');
+        const svgText = frameWrap(await svgBlob.text(), st.size, style);
+        const png = await svgToPng(svgText, st.size);
+        triggerDownload(png, `freeqrly-${code}.png`);
+      } else triggerDownload(blob, `freeqrly-${code}.png`);
+      return;
+    }
+    const qr = new QRCodeStyling(qrOpts(1024, data, style));
+    const svgBlob = await qr.getRawData('svg');
+    const svgText = frameWrap(await svgBlob.text(), 1024, style);
+    if(format === 'svg'){
+      triggerDownload(new Blob([svgText], {type:'image/svg+xml'}), `freeqrly-${code}.svg`);
+    } else if(format === 'pdf'){
+      const png = await svgToPng(svgText, 1024);
+      const b64 = await blobToB64(png);
+      const px = 1024;
+      const pdf = `%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 ${px} ${px}]/Resources<</XObject<</I1 4 0 R>>>>/Contents 5 0 R>>endobj\n4 0 obj<</Type/XObject/Subtype/Image/Width ${px}/Height ${px}/ColorSpace/DeviceRGB/BitsPerComponent 8/Filter/DCTDecode/Length ${b64.length}>>stream\n${atob(b64)}\nendstream\nendobj\n5 0 obj<</Length 44>>stream\nq ${px} 0 0 ${px} 0 0 cm /I1 Do Q\nendstream\nendobj\ntrailer<</Size 6/Root 1 0 R>>\n%%EOF`;
+      triggerDownload(new Blob([pdf], {type:'application/pdf'}), `freeqrly-${code}.pdf`);
+    } else if(format === 'eps'){
+      const png = await svgToPng(svgText, 1024);
+      const dataUrl = await blobToDataUrl(png);
+      const img = new Image();
+      await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = dataUrl; });
+      const canvas = document.createElement('canvas'); canvas.width = 1024; canvas.height = 1024;
+      const ctx = canvas.getContext('2d'); ctx.drawImage(img, 0, 0, 1024, 1024);
+      const data2 = ctx.getImageData(0, 0, 1024, 1024).data;
+      const fg = style.fg.replace('#','');
+      const r = (parseInt(fg.slice(0,2),16)/255).toFixed(3), gg = (parseInt(fg.slice(2,4),16)/255).toFixed(3), b = (parseInt(fg.slice(4,6),16)/255).toFixed(3);
+      let ps = `%!PS-Adobe-3.0 EPSF-3.0\n%%BoundingBox: 0 0 1024 1024\n%%Creator: FreeQrly\n${r} ${gg} ${b} setrgbcolor\n`;
+      const step = Math.max(1, Math.floor(1024 / 200));
+      for(let y = 0; y < 1024; y += step){
+        let xStart = -1;
+        for(let x = 0; x <= 1024; x += step){
+          const idx = ((y * 1024) + Math.min(x, 1023)) * 4;
+          const dark = data2[idx] < 128 && data2[idx+3] > 128;
+          if(dark && xStart === -1) xStart = x;
+          if(!dark && xStart !== -1){ ps += `${xStart} ${1024 - y - step} ${x - xStart} ${step} rectfill\n`; xStart = -1; }
+        }
+      }
+      ps += 'showpage\n';
+      triggerDownload(new Blob([ps], {type:'application/postscript'}), `freeqrly-${code}.eps`);
+    }
+  }catch(e){ alert(t('ui','networkErr')); }
+}
+function triggerDownload(blob, name){
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+}
+function svgToPng(svgText, px){
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(new Blob([svgText], {type:'image/svg+xml'}));
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      // Framed SVGs are taller than wide (CTA text) — use the SVG's own size
+      const w = img.naturalWidth || px, h = img.naturalHeight || px;
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h);
+      ctx.drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(b => b ? resolve(b) : reject(new Error('png')), 'image/png');
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('png')); };
+    img.src = url;
+  });
+}
+function blobToB64(blob){
+  return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result.split(',')[1]); r.onerror = rej; r.readAsDataURL(blob); });
+}
+function blobToDataUrl(blob){
+  return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = rej; r.readAsDataURL(blob); });
+}
+
+// ---------- boot ----------
+async function boot(){
+  // Language: ?lang= > saved preference > English (same key as the homepage).
+  const params = new URLSearchParams(location.search);
+  const qLang = params.get('lang');
+  const saved = localStorage.getItem('freeqrly-lang');
+  LANG = LANGS.includes(qLang) ? qLang : (LANGS.includes(saved) ? saved : 'en');
+  localStorage.setItem('freeqrly-lang', LANG);
+  // Fire all independent data fetches in parallel (one round trip, not four).
+  const i18nP = fetch('/preview-stats/i18n.json?v=stats10-20261029').then(r => r.ok ? r.json().catch(() => null) : null).catch(() => null);
+  const meP = fetch('/api/auth/me', { credentials: 'same-origin' }).catch(() => null);
+  const codesP = fetch('/api/me/codes', { credentials: 'same-origin' }).catch(() => null);
+  const tokensP = fetch('/api/tokens', { credentials: 'same-origin' }).then(r => r.ok ? r.json().catch(() => ({})) : {}).catch(() => ({}));
+  // Shared site header (same code as homepage): brand + nav + account + language + theme
+  const KEYMAP = { acctSignedInWith:'signedInWith', acctExport:'exportData', acctDelete:'deleteAccount', acctLogout:'logoutMenu', acctDeleteConfirm:'deleteAccountConfirm', acctDeleteFailed:'deleteFailed', acctNetErr:'networkErr', signin:'signin' };
+  const tShared = k => t('ui', KEYMAP[k] || k);
+  function dashNav(){
+    return [
+      { href: '/', text: t('ui','navGenerator') },
+      { href: '/scan/', text: t('ui','navScanner') },
+      { href: '/developers/', text: t('ui','navApiDocs') }
+    ];
+  }
+  // Render header IMMEDIATELY (before i18n/auth) with cached user + English fallback nav.
+  // Re-rendered with translations once i18n loads, and with fresh user once auth resolves.
+  function dashNavEn(){
+    return [
+      { href: '/', text: 'Generator' },
+      { href: '/scan/', text: 'Scanner' },
+      { href: '/developers/', text: 'API Docs' }
+    ];
+  }
+  var _cachedUser = (window.getCachedUser ? window.getCachedUser() : null);
+  function _dashOnDelete(tt){
+    if(!confirm(tt('acctDeleteConfirm'))) return;
+    const errEl = $('acctErr'); errEl.hidden = true;
+    fetch('/api/auth/delete-account', {method:'POST', credentials:'same-origin'})
+      .then(r => r.json().catch(()=>({})).then(d => ({ok:r.ok, d})))
+      .then(res => {
+        if(!res.ok){
+          errEl.textContent = res.d.error === 'reauth_required' ? t('ui','deleteReauth') : (res.d.error || tt('acctDeleteFailed'));
+          errEl.hidden = false; return;
+        }
+        location.href = '/';
+      })
+      .catch(() => { errEl.textContent = tt('acctNetErr'); errEl.hidden = false; });
+  }
+  if(window.initSiteHeader){
+    window.initSiteHeader({
+      nav: dashNavEn(),
+      t: function(k){ return k; },
+      lang: LANG,
+      langs: LANGS,
+      langNames: LANGN,
+      onLangChange: function(code){ LANG = code; localStorage.setItem('freeqrly-lang', LANG); applyLang(); },
+      user: _cachedUser,
+      showDashboard: false,
+      onDelete: _dashOnDelete
+    });
+  }
+  // i18n (already in flight)
+  I18N = (await i18nP) || FALLBACK;
+  // Re-render header with translated nav
+  if(window.renderSiteHeader){
+    window.renderSiteHeader({ nav: dashNav(), t: tShared });
+  }
+  // Session gate: not signed in -> login (with ?next= back)
+  const meR = await meP;
+  if(meR && meR.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+  if(meR){
+    const d = await meR.json().catch(() => ({}));
+    ME = d.user || null;
+    var dashUser = (ME && ME.email) ? { email: ME.email, name: ME.name, avatar: ME.avatar_url || null, authMethod: ME.authMethod } : null;
+    if(window.setCachedUser) window.setCachedUser(dashUser);
+    if(window.renderSiteHeader) window.renderSiteHeader({ user: dashUser });
+  }
+  if(ME) dashTrack("dashboard_view",{});
+  const codesR = await codesP;
+  if(codesR && codesR.status === 401){ location.href = '/login/?next=' + encodeURIComponent(location.pathname + location.search); return; }
+  if(codesR){
+    const d = await codesR.json().catch(() => ({}));
+    CODES = d.codes || [];
+    if(d.quota && ME) ME.quota = d.quota;
+  }else{ CODES = []; }
+  const tokensD = await tokensP;
+  TOKENS = tokensD.tokens || [];
+  wireTokens();
+  renderTokens();
+  loadPlan();
+  applyLang();
+}
+boot();
+</script>
+
+<div class="dashFootWrap"><footer>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
+        <div class="fmade">Made quietly — static codes in your browser.</div>
+      </div>
+      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a></div>
+      <div class="fcol"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/developers/">Developers · API &amp; MCP</a><a href="/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Company</h4><a href="/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer></div>
+</body></html>

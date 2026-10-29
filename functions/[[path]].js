@@ -32,7 +32,7 @@ const TOP_LEVEL = new Set([
   'google-maps-qr-code',
   'bitcoin-qr-code', 'coupon-qr-code', 'app-store-qr-code', 'mp3-qr-code',
   'black-friday-qr-code', 'christmas-qr-code',
-  'dynamic-qr-code', 'ticket-qr-code']);
+  'dynamic-qr-code', 'ticket-qr-code', 'preview-stats']);
 
 function isKnown(path) {
   if (path === '/') return true;
@@ -40,6 +40,7 @@ function isKnown(path) {
   if (path.startsWith('/api/')) return true;
   if (path === '/mcp') return true;
   if (path === '/dashboard/i18n.json') return true; // Dashboard translations (static JSON)
+  if (path === '/preview-stats/i18n.json') return true; // TEMP preview copy translations
   if (path === '/blog/' || path.startsWith('/blog/')) return true;
   const clean = path.replace(/\/$/, '');
   const seg = clean.slice(1);
