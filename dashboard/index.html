@@ -146,7 +146,8 @@ a.shortUrl:hover{text-decoration:underline}
 .sp-table tr.total td{font-weight:700;border-bottom:none}
 .sp-empty{font-size:13px;color:#8a7a5f;padding:10px 0}
 .sp-drop{display:none;position:relative}
-.sp-dropbtn{border:1.5px solid #E8DFC8;background:#fff;border-radius:99px;padding:7px 13px;font-size:13px;font-weight:700;color:#2F4A62;cursor:pointer;font-family:inherit;white-space:nowrap}
+.sp-dropbtn{display:inline-flex;align-items:center;gap:6px;border:1.5px solid #E8DFC8;background:#fff;border-radius:99px;padding:7px 13px;font-size:13px;font-weight:700;color:#2F4A62;cursor:pointer;font-family:inherit;white-space:nowrap}
+.sp-chev{display:inline-block;color:#C9BFA9;font-size:16px;line-height:1;transform:rotate(90deg)}
 .sp-menu{display:none;position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid #E8DFC8;border-radius:12px;box-shadow:0 8px 24px rgba(43,36,22,.14);padding:6px;z-index:5;min-width:120px}
 .sp-drop.open .sp-menu{display:block}
 .sp-menu button{display:block;width:100%;text-align:left;padding:9px 12px;border:0;background:none;border-radius:8px;font-size:14px;color:#22303F;cursor:pointer;font-family:inherit}
@@ -964,7 +965,7 @@ function spSeg(buttons, current, kind, mini){
     `<button type="button" data-sp="${kind}" data-v="${b[0]}" class="${String(b[0]) === String(current) ? 'on' : ''}">${b[1]}</button>`).join('') + `</span>`;
 }
 function spDrop(id, btnLabel, items, current){
-  return `<span class="sp-drop" id="${id}"><button class="sp-dropbtn" type="button" data-sp="drop">${btnLabel} ▾</button><div class="sp-menu">` + items.map(it =>
+  return `<span class="sp-drop" id="${id}"><button class="sp-dropbtn" type="button" data-sp="drop">${btnLabel}<span class="sp-chev" aria-hidden="true">›</span></button><div class="sp-menu">` + items.map(it =>
     `<button type="button" data-sp="dropItem" data-drop="${id}" data-v="${it[0]}" class="${String(it[0]) === String(current) ? 'on' : ''}">${it[1]}</button>`).join('') + `</div></span>`;
 }
 function spTrendLine(days, vals, uniq){
