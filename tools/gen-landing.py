@@ -117,6 +117,8 @@ HEADER = '''<div id="siteHeader"></div>
   var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
   var LANGN = {en:"English",zh:"中文",es:"Español",hi:"हिन्दी",ar:"العربية",pt:"Português",fr:"Français",ru:"Русский",de:"Deutsch",ja:"日本語"};
   function getLang(){
+    var m = location.pathname.match(/^\/(zh|es|hi|ar|pt|fr|ru|de|ja)(\/.*)?$/);
+    if(m) return m[1];
     try{
       var s = localStorage.getItem("freeqrly-lang");
       if(s && LANGS.indexOf(s) >= 0) return s;
@@ -160,7 +162,9 @@ HEADER = '''<div id="siteHeader"></div>
       langNames: LANGN,
       onLangChange: function(code){
         try{ localStorage.setItem("freeqrly-lang", code); }catch(e){}
-        location.reload();
+        var m = location.pathname.match(/^\/(zh|es|hi|ar|pt|fr|ru|de|ja)(\/.*)?$/);
+        var enPath = m ? (m[2] || "/") : location.pathname;
+        location.href = (code === "en" ? enPath : "/" + code + enPath);
       },
       user: getCachedUser(),
       showDashboard: true
@@ -796,7 +800,7 @@ def build(p):
             f'<meta property="og:locale:alternate" content="{lc}">' for lc in ("zh_CN", "es_ES", "hi_IN", "ar_AR", "pt_BR", "fr_FR", "ru_RU", "de_DE", "ja_JP"))
     compare_html = f'\n  <section class="compare" id="compare">\n{p["compare"]}\n  </section>\n' if p.get("compare") else ""
     return f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

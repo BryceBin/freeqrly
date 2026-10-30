@@ -1590,7 +1590,16 @@ function initAuthHeader(){
       lang: lang,
       langs: LANGS,
       langNames: LANGN,
-      onLangChange: (code) => { lang = code; applyLang(); },
+      onLangChange: (code) => {
+        if(document.body && document.body.hasAttribute("data-lp")){
+          try{ localStorage.setItem("freeqrly-lang", code); }catch(e){}
+          const m = location.pathname.match(/^\/(zh|es|hi|ar|pt|fr|ru|de|ja)(\/.*)?$/);
+          const enPath = m ? (m[2] || "/") : location.pathname;
+          location.href = (code === "en" ? enPath : "/" + code + enPath);
+          return;
+        }
+        lang = code; applyLang();
+      },
       user: user,
       showDashboard: true
     });
