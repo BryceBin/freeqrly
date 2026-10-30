@@ -36,15 +36,20 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3t-20261030">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3t-20261030">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3t-20261030">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3w-20261030">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3w-20261030">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3w-20261030">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"लोगो वाला QR कोड कैसे बनाएँ (और उसे scan होने लायक रखें) | FreeQrly","description":"अपना logo QR code के बीच में लगाएँ: एक square PNG upload करें, उसे code के ~30% से कम रखें, और error correction को अपना काम करने दें। Free, कोई watermark नहीं, फिर भी scan होगा।","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
@@ -117,9 +122,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3t-20261030"></script>
-<script src="/assets/js/acct-menu.js?v=b3t-20261030"></script>
-<script src="/assets/js/subpage-header.js?v=b3t-20261030"></script>
+<script src="/assets/js/site-header.js?v=b3w-20261030"></script>
+<script src="/assets/js/acct-menu.js?v=b3w-20261030"></script>
+<script src="/assets/js/subpage-header.js?v=b3w-20261030"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="Qly, FreeQrly का हाथी शुभंकर"></div>
     <div class="kicker" style="text-align:center">फ़ील्ड नोट्स</div>
@@ -154,6 +159,13 @@
 <p>आज़माएँ: <a href="/hi/qr-code-with-logo/">अपने logo वाला QR code बनाएँ</a> — free, static code के लिए कोई sign-up नहीं, कोई watermark नहीं।</p>
 
     </div>
+
+    <section class="sources">
+      <h2>स्रोत</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - QR कोड सिंबोलॉजी स्पेसिफिकेशन। चार एरर करेक्शन लेवल (L 7%, M 15%, Q 25%, H 30%) और 4-मॉड्यूल क्वाइट ज़ोन को परिभाषित करता है।</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly एक QR कोड दिखा रहा है"></div>
       <div>

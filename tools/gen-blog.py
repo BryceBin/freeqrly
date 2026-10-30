@@ -110,6 +110,10 @@ POSTS = [
     ("Why do free QR code generators push dynamic codes?",
      "Because dynamic codes require their server, which justifies a subscription. Many 'free' generators create dynamic codes tied to a trial — the code stops working when the trial ends."),
   ],
+  sources=[
+    ("https://www.qrcode-generator.com/", "QR Code Generator", "Free tool and PRO plans"),
+    ("https://www.qrcode-tiger.com/software-subscription", "QR Tiger pricing", "Free plan and paid plan limits"),
+  ],
  ),
 ]
 
@@ -236,7 +240,8 @@ POSTS += [{'body': '\n'
           '<p>Scan the code on two different phones (one iPhone, one Android if you can) before '
           'sending anything to print. Thirty seconds now saves a reprint later. Generate a test '
           'code in the <a href="/">free generator</a> and try it.</p>\n',
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': 'QR code not scanning? Seven real fixes: size, contrast, damage, quiet zone, and the '
           'expired-link trap — plus how to test before you print.',
   'faq': [('Why does my QR code scan on one phone but not another?',
@@ -297,7 +302,8 @@ POSTS += [{'body': '\n'
           '<p>A <a href="/qr-code-with-logo/">logo in the center</a> eats into the pattern, so '
           "give it room: 3x3 cm minimum in print, and keep the logo under ~30% of the code's "
           'area as a rule of thumb.</p>\n',
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': 'How big should a QR code be in print? Minimum sizes for business cards, flyers, and '
           'posters — plus resolution and quiet-zone rules that keep codes scannable.',
   'faq': [('What is the minimum size for a printed QR code?',
@@ -341,7 +347,8 @@ POSTS += [{'body': '\n'
           '<p>Nothing. These are static codes — no subscriptions, no scan limits, no "pro plan" to '
           "unlock the menu link. Print them once and they work for years. That's the whole "
           'pitch.</p>\n',
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': 'How restaurants use QR codes: digital menus, Google reviews, and guest WiFi. Free setup '
           'guide with printable codes — no fees.',
   'faq': [('What QR codes does a restaurant need?',
@@ -383,7 +390,8 @@ POSTS += [{'body': '\n'
           '<p>Pick any type in the <a href="/">free generator</a> — link, vCard, WiFi — download '
           'the PNG or SVG, and print it. No sign-up needed for a static code, no trial, no expiry date hiding in the fine '
           'print.</p>\n',
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': "Free QR codes that don't expire do exist — they're called static codes. How to spot "
           'trial-trap generators and make codes that last forever.',
   'faq': [('Do free QR codes expire?',
@@ -426,7 +434,8 @@ POSTS += [{'body': '\n'
           '<a href="/blog/why-is-my-qr-code-not-working/">why your QR code won\'t scan</a>. And if '
           'you need to <a href="/">make your own QR code</a> instead, that\'s the main studio — '
           'also free, also private.</p>\n',
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': 'Scan QR codes online for free: use your camera or upload an image. Decoded in your '
           'browser — nothing is ever uploaded. No app, no sign-up.',
   'faq': [('Is it safe to scan QR codes online?',
@@ -474,7 +483,8 @@ POSTS += [{'body': '\n'
           '<p>Screenshots often contain more than the QR code — chats, tickets, personal photos. '
           'Think twice before uploading them to a random decoder site. A <a href="/scan/">local '
           'decoder</a> never sees anything but your own browser tab.</p>\n',
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': 'How to scan a QR code from a picture, photo, or screenshot — on iPhone, Android, and '
           'PC. Free online decoder, no app needed.',
   'faq': [('How do I scan a QR code from a screenshot on iPhone?',
@@ -525,7 +535,8 @@ POSTS += [{'body': '\n'
           'think (the <a href="/blog/qr-code-print-size-guide/">1:10 distance rule of thumb</a>), keep '
           'contrast high, and test on both iPhone and Android before printing a hundred table '
           "cards. Static codes never expire, so last year's signage template still works.</p>\n",
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': 'How to use QR codes for events: check-in, registration, tickets, photo sharing, and '
           'add-to-calendar codes. Free generator.',
   'faq': [('How do I make a QR code for event check-in?',
@@ -566,7 +577,8 @@ POSTS += [{'body': '\n'
           '<p>Google Forms tallies responses automatically — meal choices included. Export to a '
           'sheet, share with the caterer, done. The whole pipeline costs nothing: free form, <a '
           'href="/">free QR code</a>, zero postage.</p>\n',
-  'date': '2026-10-14',
+  'date': 'October 14, 2026',
+  'datePublished': '2026-10-14',
   'desc': 'How to use QR codes for wedding RSVPs: link your RSVP form, print on invitations, track '
           'responses. Free generator.',
   'faq': [('How do I create a QR code for my wedding RSVP?',
@@ -950,6 +962,12 @@ POSTS += [
     ("Can I edit a free QR code after printing?",
      "Only if it is dynamic. Static codes are frozen at print time; dynamic codes point at a short link you control, so you can change the destination without reprinting."),
   ],
+  sources=[
+    ("https://www.qrcode-tiger.com/software-subscription", "QR Tiger pricing", "Free plan and paid plan limits"),
+    ("https://www.qrcode-monkey.com/", "QRCode Monkey", "Free static codes and PRO features"),
+    ("https://www.qrcode-generator.com/", "QR Code Generator", "Free tool and PRO plans"),
+    ("https://me-qr.com/faq", "ME-QR FAQ", "Free dynamic codes and unlimited scans"),
+  ],
   cta=dict(title="Compare for yourself",
            text="Make a code in the studio — free, no sign-up for static codes.",
            href="/#studio", btn="Open the studio"),
@@ -1297,6 +1315,9 @@ POSTS += [
     ("PNG or SVG for print?",
      "PNG up to 2048 px for most print jobs, or SVG when you need it infinitely scalable, like a banner."),
   ],
+  sources=[
+    ("http://www.iso.org/standard/83389.html", "ISO/IEC 18004:2024", "The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone."),
+  ],
   cta=dict(title="Make your logo QR code",
            text="Upload your logo, keep it centered, keep it scannable. Free.",
            href="/qr-code-with-logo/", btn="Open the studio"),
@@ -1333,6 +1354,13 @@ def build(p, all_posts=None):
             for u, label, note in p["sources"])
         sources_html = ('\n    <section class="sources">\n      <h2>Sources</h2>\n      <ul>\n'
                         + items + '\n      </ul>\n    </section>\n')
+    # Updated mechanism: shown only when a post actually carries an
+    # 'updated' (long display) + 'dateModified' (ISO) pair. Never rendered
+    # otherwise — no fabricated updated dates.
+    meta_line = f'{p["date"]} · 4 min read'
+    if p.get("updated"):
+        meta_line = f'{p["date"]} · Last updated: {p["updated"]} · 4 min read'
+    datemod_b = f',"dateModified":"{p["dateModified"]}"' if p.get("dateModified") else ""
     faq_html = "\n".join(
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
         for q, a in p["faq"])
@@ -1380,7 +1408,7 @@ def build(p, all_posts=None):
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3u-20261022">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"{p.get('datePublished','2026-10-13')}","author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
+{{"@context":"https://schema.org","@type":"Article","headline":"{p["title"]}","description":"{p["desc"]}","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"datePublished":"{p.get('datePublished','2026-10-13')}"{datemod_b},"author":{{"@type":"Organization","name":"FreeQrly"}},"publisher":{{"@type":"Organization","name":"FreeQrly"}}}}
 </script>
 <script type="application/ld+json">
 {{
@@ -1400,7 +1428,7 @@ def build(p, all_posts=None):
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">{p["h1"]}</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">{p["lede"]}</p>
-    <p class="meta" style="text-align:center">{p["date"]} · 4 min read</p>
+    <p class="meta" style="text-align:center">{meta_line}</p>
     <div class="prose" style="margin-top:40px">
 {p["body"]}
     </div>

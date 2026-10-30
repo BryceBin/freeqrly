@@ -744,6 +744,9 @@ EXTRA_CSS = '''
 .compare td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
 @media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+.lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
+.lp-hero .glance b{color:var(--ink);font-weight:700}
+.lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 '''
 
 def faq_json(faq):
@@ -799,6 +802,10 @@ def build(p):
         locale_alts = "\n".join(
             f'<meta property="og:locale:alternate" content="{lc}">' for lc in ("zh_CN", "es_ES", "hi_IN", "ar_AR", "pt_BR", "fr_FR", "ru_RU", "de_DE", "ja_JP"))
     compare_html = f'\n  <section class="compare" id="compare">\n{p["compare"]}\n  </section>\n' if p.get("compare") else ""
+    # Non-comparison pages only: comparison pages already carry these
+    # figures in their tables and their own checked dates.
+    glance_html = "" if p.get("compare") else '\n      <p class="glance"><b>At a glance:</b> 20 free dynamic codes (currently unlimited during the limited-time promotion) · up to 50 codes per batch · 17 code types · Pro $9/mo or $90/yr · unlimited scans</p>\n      <p class="updated">Last updated: October 30, 2026</p>'
+    datemod = '' if p.get("compare") else ',"dateModified":"2026-10-30"'
     return f'''<!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
@@ -824,7 +831,7 @@ def build(p):
 <link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3q-20261019">
 <style>{EXTRA_CSS}</style>
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — {p["kw"]}","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"offers":{{"@type":"Offer","price":"0"}},"url":"{url}","description":"{p["desc"]}"}}
+{{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — {p["kw"]}","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"offers":{{"@type":"Offer","price":"0"}},"url":"{url}","description":"{p["desc"]}"{datemod}}}
 </script>
 <script type="application/ld+json">
 {{
@@ -846,7 +853,7 @@ def build(p):
     <div>
       <div class="kicker">Free · Static codes need no sign-up · No watermark</div>
       <h1>{p["h1"]}</h1>
-      <p class="lede">{p["lede"]}</p>
+      <p class="lede">{p["lede"]}</p>{glance_html}
     </div>
     <ol class="steps" id="how">
 {steps_html}
