@@ -17,8 +17,8 @@
 <title>Connexion — FreeQrly</title>
 <meta name="description" content="Connectez-vous à FreeQrly pour gérer vos QR codes dynamiques.">
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3z-20261028">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3z-20261028">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261030">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261030">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:#FBF6EC;color:#22303F;padding:0}
@@ -97,9 +97,9 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-sy
 <body>
 <div style="max-width:1120px;margin:0 auto;padding:0 30px">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3z-20261028"></script>
-<script src="/assets/js/acct-menu.js?v=b3z-20261028"></script>
-<script src="/assets/js/subpage-header.js?v=b3z-20261028"></script>
+<script src="/assets/js/site-header.js?v=b3aa-20261030"></script>
+<script src="/assets/js/acct-menu.js?v=b3aa-20261030"></script>
+<script src="/assets/js/subpage-header.js?v=b3aa-20261030"></script>
 </div>
 <div class="shell">
   <div class="brand">
@@ -304,11 +304,26 @@ fetch('/api/auth/config').then(r => r.ok ? r.json() : null).then(cfg => {
 }).catch(()=>{});
 
 // --- Email + password: log in / create account ---
+/* privacy-first analytics: aggregate counts only (attempt counts, never emails
+   or passwords). Same /api/track endpoint as the generator. */
+function trk(event, props){
+  try{
+    let sid=""; try{ sid=sessionStorage.getItem("fq_sid")||""; if(!sid){ const a=new Uint8Array(8); crypto.getRandomValues(a); sid=Array.from(a,x=>x.toString(16).padStart(2,"0")).join(""); sessionStorage.setItem("fq_sid",sid); } }catch(e){ sid=""; }
+    const ref=(()=>{ try{ const r=document.referrer; if(!r) return "direct"; const h=new URL(r).hostname; if(/(^|\.)google\./.test(h)) return "google"; if(/(^|\.)baidu\.com$/.test(h)) return "baidu"; if(/(^|\.)bing\.com$/.test(h)) return "bing"; if(/(^|\.)(chatgpt|openai)\.com$/.test(h)||/(^|\.)perplexity\.ai$/.test(h)||/(^|\.)claude\.ai$/.test(h)) return "ai"; return "other"; }catch(e){ return "other"; } })();
+    const ua=navigator.userAgent||"";
+    const device=/Mobi|Android|iPhone|iPad/i.test(ua) ? "mobile" : "desktop";
+    const browser=/Edg\//.test(ua) ? "edge" : /Chrome\//.test(ua) ? "chrome" : /Firefox\//.test(ua) ? "firefox" : /Safari\//.test(ua) ? "safari" : "other";
+    const body=JSON.stringify(Object.assign({event:event, lang:document.documentElement.lang||"en", sid:sid, ref:ref, blang:(navigator.language||"").slice(0,8), device:device, browser:browser}, props||{}));
+    if(navigator.sendBeacon){ navigator.sendBeacon("/api/track", new Blob([body],{type:"application/json"})); }
+    else{ fetch("/api/track",{method:"POST",headers:{"Content-Type":"application/json"},body:body,keepalive:true}).catch(()=>{}); }
+  }catch(e){}
+}
 $('pwForm').addEventListener('submit', async e => {
   e.preventDefault();
   const email = $('pwEmail').value.trim();
   const password = $('pwPass').value;
   if(!email || !password) return;
+  trk("auth_click",{type:mode === 'login' ? 'login' : 'register'});
   $('pwErr').hidden = true;
   $('pwBtn').disabled = true;
   $('pwBtn').textContent = mode === 'login' ? 'Connexion en cours…' : 'Création du compte…';
@@ -367,6 +382,7 @@ $('pwForm').addEventListener('submit', async e => {
   function oauthGo(provider){
     $('oauthGoogle').disabled = true;
     $('oauthGithub').disabled = true;
+    trk("auth_click",{type:'oauth_'+provider});
     location.href = '/api/auth/oauth/' + provider + '?next=' + encodeURIComponent(NEXT) + '&turnstileToken=' + encodeURIComponent(tsToken());
   }
   $('oauthGoogle').addEventListener('click', () => oauthGo('google'));

@@ -16,6 +16,9 @@ const LANG_SLUGS = new Set([
   'bitcoin-qr-code', 'coupon-qr-code', 'app-store-qr-code', 'mp3-qr-code',
   'black-friday-qr-code', 'christmas-qr-code',
   'dynamic-qr-code', 'ticket-qr-code',
+  'freeqrly-vs-qr-tiger', 'freeqrly-vs-qr-code-monkey',
+  'freeqrly-vs-qr-code-generator', 'qr-tiger-alternative',
+  'qr-code-monkey-alternative',
   'about', 'privacy', 'terms', 'pricing', 'developers', 'scan', 'barcode-generator', 'login', 'reset',
 ]);
 
@@ -32,7 +35,10 @@ const TOP_LEVEL = new Set([
   'google-maps-qr-code',
   'bitcoin-qr-code', 'coupon-qr-code', 'app-store-qr-code', 'mp3-qr-code',
   'black-friday-qr-code', 'christmas-qr-code',
-  'dynamic-qr-code', 'ticket-qr-code', 'preview-stats']);
+  'dynamic-qr-code', 'ticket-qr-code', 'preview-stats',
+  'freeqrly-vs-qr-tiger', 'freeqrly-vs-qr-code-monkey',
+  'freeqrly-vs-qr-code-generator', 'qr-tiger-alternative',
+  'qr-code-monkey-alternative']);
 
 function isKnown(path) {
   if (path === '/') return true;

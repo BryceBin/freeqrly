@@ -532,6 +532,198 @@ dict(slug="ticket-qr-code", dtype="url",
        ("How big should I print it on a ticket?","At least 2 \u00d7 2 cm with a clear quiet margin, at 1024 px export or higher. At a busy entrance, bigger is safer \u2014 a code that scans first try keeps the line moving.")]),
 ]
 
+PAGES += [
+dict(slug="freeqrly-vs-qr-tiger", dtype="url",
+  title="FreeQrly vs QR Tiger: Free Dynamic Codes, Scan Limits, and Price | FreeQrly",
+  desc="FreeQrly vs QR Tiger on the free plan: 20 dynamic codes (currently unlimited) with no scan cap, versus 3 codes capped at 500 scans each. Static codes are free on both. Pro costs $9/month; QR Tiger Regular starts at $7/month.",
+  kw="freeqrly vs qr tiger",
+  h1='FreeQrly vs QR Tiger: <span class="hl hl-mint">where the free plan ends</span>.',
+  lede="If you only need static codes, both tools are free forever. The difference starts with dynamic codes: FreeQrly \u2014 freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with no published scan cap, while QR Tiger's free plan gives you 3 dynamic codes capped at 500 scans each. Pick by how many editable codes you print, and how many scans they will get.",
+  steps=[("Decide static or dynamic","Static fits anything that never changes: a homepage, a WiFi login, a business card. Dynamic fits anything you may repoint or measure: a sale page, a menu, a campaign poster."),
+         ("Make the code","Use the studio below. Static codes are free with no sign-up. For a dynamic code, sign in free and create it from your dashboard."),
+         ("Print once, edit later","A dynamic code keeps its printed pattern while you change the destination and check scan counts. A static code never changes and never expires.")],
+  studio_h2="Make your free QR code",
+  faq=[("Do I need an account for static codes on either tool?","No. FreeQrly static codes need no sign-up, and QR Tiger's free plan includes unlimited static codes. The account question only matters for dynamic codes, and both need a free account there."),
+       ("What happens when a QR Tiger free dynamic code reaches 500 scans?","QR Tiger lists a 500 scan limit on each free dynamic code. FreeQrly does not publish a scan cap for free dynamic codes, so a poster that takes off does not hit a ceiling at 500."),
+       ("Which paid plan is cheaper?","QR Tiger's Regular plan starts at $7 per month, below FreeQrly Pro at $9 per month (or $90 per year). The trade is allowance: Regular includes 12 dynamic codes, while FreeQrly Pro is unlimited. If you need more than 12 editable codes, the cheaper sticker price stops being cheaper per code."),
+       ("Can I edit a printed code on both free plans?","Yes. QR Tiger's free dynamic codes can be edited and tracked, and FreeQrly's free dynamic codes can be edited after printing with scan statistics. The difference is quantity and the scan cap, not the ability itself.")],
+  compare='''
+  <h2>FreeQrly vs QR Tiger at a glance</h2>
+  <p>FreeQrly \u2014 freeqrly.com, compared with QR Tiger (qrcode-tiger.com). Figures below are from each product's own pricing and plan pages, checked October 30, 2026.</p>
+  <table>
+    <thead><tr><th>Feature</th><th>FreeQrly</th><th>QR Tiger</th></tr></thead>
+    <tbody>
+      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, unlimited, never expire (free plan account required)</td></tr>
+      <tr><td><b>Free dynamic codes</b></td><td>20 with a free account (currently unlimited during the limited-time offer)</td><td>3</td></tr>
+      <tr><td><b>Scan cap on free dynamic codes</b></td><td>None published</td><td>500 scans each</td></tr>
+      <tr><td><b>Edit after printing (free)</b></td><td>Yes</td><td>Yes</td></tr>
+      <tr><td><b>Scan statistics (free)</b></td><td>Yes</td><td>Yes, basic tracking</td></tr>
+      <tr><td><b>Batch creation (free)</b></td><td>Yes, up to 50 per batch</td><td>No \u2014 bulk creation is an Advanced plan ($16/month) feature</td></tr>
+      <tr><td><b>Barcode generator</b></td><td>Yes, included</td><td>Not listed on the plan pages we checked</td></tr>
+      <tr><td><b>QR API</b></td><td>Yes (see <a href="/developers/">Developers</a>)</td><td>Regular ($7) and up: 500 requests per month</td></tr>
+      <tr><td><b>Paid plan entry</b></td><td>Pro $9/month or $90/year, unlimited dynamic codes</td><td>Regular $7/month, 12 dynamic codes</td></tr>
+    </tbody>
+  </table>
+  <p class="csrc">Sources: <a href="/pricing/">FreeQrly pricing</a>; <a href="https://www.qrcode-tiger.com/software-subscription">QR Tiger subscription plan page</a>.</p>
+  <h2>Who should pick which?</h2>
+  <p><b>Pick FreeQrly if</b> you print more than 3 editable codes, or any code that might pass 500 scans; if you want batch creation, a barcode generator, or a QR API without paying; or if you want free static codes with no account at all. If you ever cancel Pro, your codes keep working.</p>
+  <p><b>Pick QR Tiger if</b> you need its campaign extras \u2014 saved design templates, retargeting, password protection, expiry controls, geofencing, and white-label domains on Premium \u2014 or its enterprise seats and integrations (Canva, Monday.com, Zapier, HubSpot on higher tiers). For raw editable-code count, FreeQrly Pro is unlimited, so Tiger's edge is features and team tooling, not volume.</p>
+  <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pricing pages linked above before you decide.</p>
+'''),
+dict(slug="freeqrly-vs-qr-code-monkey", dtype="url",
+  title="FreeQrly vs QR Code Monkey: Free Static Codes, Plus Dynamic | FreeQrly",
+  desc="QR Code Monkey makes free static codes with logos and vector downloads. FreeQrly matches that and adds free dynamic codes you can edit, scan statistics, batch mode, a barcode generator, and a QR API.",
+  kw="freeqrly vs qr code monkey",
+  h1='FreeQrly vs QR Code Monkey: <span class="hl hl-honey">same free static codes, plus dynamic</span>.',
+  lede="For a one-off static code, both tools are free forever. QR Code Monkey stops there: its free tool makes static codes only, with no editing and no scan statistics. FreeQrly \u2014 freeqrly.com keeps static codes free with no sign-up and no watermark, and adds free dynamic codes with editing and statistics, batch mode, a barcode generator, and a QR API.",
+  steps=[("Decide static or dynamic","Static fits anything that never changes: a homepage, a business card, a poster. Dynamic fits anything you may repoint or measure: a sale page, a menu, a campaign."),
+         ("Make the code","Use the studio below. Static codes are free with no sign-up. For a dynamic code, sign in free and create it from your dashboard."),
+         ("Print once, edit later","A dynamic code keeps its printed pattern while you change the destination and check scan counts. A static code never changes and never expires.")],
+  studio_h2="Make your free QR code",
+  faq=[("Is QR Code Monkey really free?","Yes, for static codes: 100% free, including commercial use, with no expiry and no scan limits. The catch is only that the codes are static \u2014 you cannot edit them or track scans."),
+       ("Can I edit a Monkey code after printing?","No. Monkey's own pages say the only limitation of its static codes is that you cannot change the content once printed. For editing and statistics, Monkey points you to its PRO upsell. FreeQrly's free dynamic codes are editable after printing with scan statistics."),
+       ("Which has better design and download options?","Monkey's are genuinely good: logo upload, colors, shapes, templates, and PNG, SVG, PDF, and EPS downloads, with up to 30% error correction for a centered logo. FreeQrly offers logo upload, colors, and PNG and SVG downloads. If print-vector depth is your whole job, Monkey wins that row; if you also need editable codes, FreeQrly covers both."),
+       ("Do I need an account on either for static codes?","No. Monkey's generator works without an account, and FreeQrly static codes need no sign-up. You only sign in when you want dynamic codes, statistics, or a dashboard.")],
+  compare='''
+  <h2>FreeQrly vs QR Code Monkey at a glance</h2>
+  <p>FreeQrly \u2014 freeqrly.com, compared with QR Code Monkey at qrcode-monkey.com. Figures below are from each product's own pages, checked October 30, 2026.</p>
+  <table>
+    <thead><tr><th>Feature</th><th>FreeQrly</th><th>QR Code Monkey</th></tr></thead>
+    <tbody>
+      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, never expire, no scan limits, free for commercial use</td></tr>
+      <tr><td><b>Edit after printing</b></td><td>Yes, free dynamic codes</td><td>No \u2014 static only; editing lives in the PRO upsell</td></tr>
+      <tr><td><b>Scan statistics</b></td><td>Yes, free dynamic codes</td><td>No \u2014 statistics live in the PRO upsell</td></tr>
+      <tr><td><b>Batch creation</b></td><td>Yes, up to 50 per batch, free</td><td>No \u2014 bulk generation is a Premium feature</td></tr>
+      <tr><td><b>Barcode generator</b></td><td>Yes, included</td><td>Not listed on the free tool's pages we checked</td></tr>
+      <tr><td><b>Vector downloads</b></td><td>PNG and SVG</td><td>PNG, SVG, PDF, and EPS \u2014 Monkey's strongest row</td></tr>
+      <tr><td><b>Logo and design</b></td><td>Logo upload, colors, dot styles</td><td>Logo upload, colors, gradients, shapes, templates</td></tr>
+      <tr><td><b>Where static codes are made</b></td><td>In your browser; nothing leaves your device</td><td>On Monkey's site; generated image files are cached 24 hours</td></tr>
+      <tr><td><b>Paid option</b></td><td>Pro $9/month or $90/year, unlimited dynamic codes</td><td>PRO platform for dynamic codes and statistics (see our <a href="/freeqrly-vs-qr-code-generator/">QR Code Generator comparison</a>)</td></tr>
+    </tbody>
+  </table>
+  <p class="csrc">Sources: <a href="/pricing/">FreeQrly pricing</a>; <a href="https://www.qrcode-monkey.com/">QR Code Monkey homepage</a>.</p>
+  <h2>Who should pick which?</h2>
+  <p><b>Pick FreeQrly if</b> you want anything beyond a fixed code: editing after printing, scan counts, batch runs, barcodes, or an API \u2014 while keeping static codes free with no account.</p>
+  <p><b>Pick QR Code Monkey if</b> you only ever need fixed codes and you care most about print design depth: EPS and PDF vectors, templates, gradients, and a 30% logo area. For that one job, it is the best free tool we checked \u2014 FreeQrly does not beat it on vector formats.</p>
+  <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pages linked above before you decide.</p>
+'''),
+]
+
+PAGES += [
+dict(slug="freeqrly-vs-qr-code-generator", dtype="url",
+  title="FreeQrly vs QR Code Generator (Bitly): Free Static, Paid Dynamic | FreeQrly",
+  desc="QR Code Generator by Bitly gives you free static codes that never expire, but editing and scan tracking need the paid PRO version. FreeQrly includes 20 free dynamic codes (currently unlimited) with editing and statistics.",
+  kw="freeqrly vs qr code generator",
+  h1='FreeQrly vs QR Code Generator: <span class="hl hl-blush">free static on both, dynamic is the split</span>.',
+  lede="Both tools give you free static codes that never expire. The split is what happens after printing: QR Code Generator keeps editing and scan tracking in its paid PRO version, after a 14-day trial. FreeQrly \u2014 freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with editing and statistics included.",
+  steps=[("Decide static or dynamic","Static fits anything that never changes: a homepage, a business card, a poster. Dynamic fits anything you may repoint or measure: a sale page, a menu, a campaign."),
+         ("Make the code","Use the studio below. Static codes are free with no sign-up. For a dynamic code, sign in free and create it from your dashboard."),
+         ("Print once, edit later","A dynamic code keeps its printed pattern while you change the destination and check scan counts. A static code never changes and never expires.")],
+  studio_h2="Make your free QR code",
+  faq=[("Are static codes really free on both?","Yes. QR Code Generator's own FAQ says all of its static codes are free and yours forever, and FreeQrly static codes are free with no sign-up. Neither expires."),
+       ("What does the 14-day trial mean?","After signing up, QR Code Generator lets you try all features free for 14 days. Editing and tracking live in the PRO version, so when the trial ends you need a paid plan to keep them. FreeQrly's free dynamic codes have no trial clock."),
+       ("Do I need an account to download PNG or SVG?","On QR Code Generator, yes: high-resolution JPG is the free download, and PNG, SVG, or EPS downloads require account signup. On FreeQrly, static PNG and SVG downloads need no sign-up."),
+       ("Which paid plan is cheaper?","Close: QR Code Generator PRO starts at $9.99 per month billed annually for 2 dynamic codes, while FreeQrly Pro is $9 per month or $90 per year for unlimited dynamic codes. At the entry tier you pay about the same and get far more editable codes at FreeQrly; QR Code Generator's higher tiers add team seats, bulk creation, and API allowances that FreeQrly's single Pro tier does not itemize.")],
+  compare='''
+  <h2>FreeQrly vs QR Code Generator at a glance</h2>
+  <p>FreeQrly \u2014 freeqrly.com, compared with QR Code Generator at qr-code-generator.com, part of Bitly. This is not The QR Code Generator at the-qrcode-generator.com, a different product. Figures below are from each product's own pages, checked October 30, 2026.</p>
+  <table>
+    <thead><tr><th>Feature</th><th>FreeQrly</th><th>QR Code Generator</th></tr></thead>
+    <tbody>
+      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, never expire</td><td>Free, never expire (URL, vCard, text, email, SMS, Twitter, WiFi, Bitcoin)</td></tr>
+      <tr><td><b>Sign-up for PNG/SVG download</b></td><td>No</td><td>Yes, signup required</td></tr>
+      <tr><td><b>Edit after printing (free)</b></td><td>Yes, free dynamic codes</td><td>No \u2014 PRO version only</td></tr>
+      <tr><td><b>Scan statistics (free)</b></td><td>Yes, free dynamic codes</td><td>No \u2014 PRO version only</td></tr>
+      <tr><td><b>Free dynamic codes</b></td><td>20 (currently unlimited during the offer)</td><td>None free \u2014 14-day trial, then paid</td></tr>
+      <tr><td><b>Paid entry</b></td><td>Pro $9/month or $90/year, unlimited dynamic codes</td><td>Starter $9.99/month billed annually, 2 dynamic codes, 10,000 scans/month</td></tr>
+      <tr><td><b>Batch creation</b></td><td>Yes, up to 50 per batch, free</td><td>Paid tiers: 100 on Advanced, 500 on Professional</td></tr>
+      <tr><td><b>QR API</b></td><td>Yes (see <a href="/developers/">Developers</a>)</td><td>Yes, plan-limited: 3,000 requests on Advanced, 10,000 on Professional</td></tr>
+      <tr><td><b>Barcode generator</b></td><td>Yes, included</td><td>Not listed on the pages we checked</td></tr>
+      <tr><td><b>Content types</b></td><td>17, including Batch</td><td>22 (their homepage count)</td></tr>
+    </tbody>
+  </table>
+  <p class="csrc">Sources: <a href="/pricing/">FreeQrly pricing</a>; <a href="https://www.qr-code-generator.com/">QR Code Generator homepage</a>; <a href="https://www.qr-code-generator.com/blog/qr-code-generator-vs-qr-code-dynamic/">QR Code Generator PRO plans and pricing</a>.</p>
+  <h2>Who should pick which?</h2>
+  <p><b>Pick FreeQrly if</b> you want editable codes and statistics without a trial clock or a per-code allowance, plus batch runs, barcodes, and an API at no extra tier.</p>
+  <p><b>Pick QR Code Generator if</b> you run campaigns inside Bitly's ecosystem, need team seats and white-labeling at the top tier, or want its 22 code types and hosted pages. Its paid tiers are the more corporate setup; FreeQrly is the simpler free-first one.</p>
+  <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pages linked above before you decide.</p>
+'''),
+dict(slug="qr-tiger-alternative", dtype="url",
+  title="Best Free QR Tiger Alternative | FreeQrly",
+  desc="Looking for a free QR Tiger alternative? FreeQrly gives you 20 free dynamic codes (currently unlimited) with no 500-scan cap, free static codes with no sign-up, batch mode, and a QR API.",
+  kw="qr tiger alternative",
+  h1='The free QR Tiger alternative, <span class="hl hl-mint">without the 500-scan cap</span>.',
+  lede="If you are leaving QR Tiger because 3 free dynamic codes at 500 scans each run out too fast, FreeQrly \u2014 freeqrly.com is the straight swap: 20 free dynamic codes (currently unlimited during the limited-time offer) with no published scan cap, the same edit-after-printing and scan statistics, and free static codes with no sign-up.",
+  steps=[("Bring your links","List the destinations behind your current codes \u2014 sale pages, menus, listings, profiles. One link per code."),
+         ("Make the new codes","Use the studio below. Static codes are free with no sign-up; dynamic codes are free with a sign-in."),
+         ("Reprint once for dynamic codes","Static codes you already printed keep working, because the destination lives inside the pattern. Dynamic codes live on the maker's server, so remake those at FreeQrly and reprint once.")],
+  studio_h2="Make your free QR code",
+  faq=[("Why do people look for a QR Tiger alternative?","Usually the free plan's limits: 3 dynamic codes, 500 scans each. A poster that takes off hits the ceiling, and the next step is a paid plan from $7 a month."),
+       ("Do my printed QR Tiger codes stop working if I switch?","Static codes you already printed keep working wherever they were made, because the destination lives inside the pattern. Dynamic codes live on the maker's server, so those you remake at FreeQrly and reprint once."),
+       ("How many free dynamic codes do I get?","20 with a free account, and currently unlimited for everyone during the limited-time offer. Codes you already made keep working when the offer ends."),
+       ("What does FreeQrly Pro cost?","$9 per month or $90 per year for unlimited dynamic codes \u2014 against QR Tiger Regular at $7 per month for 12. If you need more than 12 editable codes, Pro is the cheaper per-code deal.")],
+  compare='''
+  <h2>FreeQrly vs QR Tiger at a glance</h2>
+  <p>FreeQrly \u2014 freeqrly.com, compared with QR Tiger (qrcode-tiger.com). Figures below are from each product's own pricing and plan pages, checked October 30, 2026.</p>
+  <table>
+    <thead><tr><th>Feature</th><th>FreeQrly</th><th>QR Tiger</th></tr></thead>
+    <tbody>
+      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, unlimited, never expire (free plan account required)</td></tr>
+      <tr><td><b>Free dynamic codes</b></td><td>20 with a free account (currently unlimited during the limited-time offer)</td><td>3</td></tr>
+      <tr><td><b>Scan cap on free dynamic codes</b></td><td>None published</td><td>500 scans each</td></tr>
+      <tr><td><b>Edit after printing (free)</b></td><td>Yes</td><td>Yes</td></tr>
+      <tr><td><b>Scan statistics (free)</b></td><td>Yes</td><td>Yes, basic tracking</td></tr>
+      <tr><td><b>Batch creation (free)</b></td><td>Yes, up to 50 per batch</td><td>No \u2014 bulk creation is an Advanced plan ($16/month) feature</td></tr>
+      <tr><td><b>Barcode generator</b></td><td>Yes, included</td><td>Not listed on the plan pages we checked</td></tr>
+      <tr><td><b>QR API</b></td><td>Yes (see <a href="/developers/">Developers</a>)</td><td>Regular ($7) and up: 500 requests per month</td></tr>
+      <tr><td><b>Paid plan entry</b></td><td>Pro $9/month or $90/year, unlimited dynamic codes</td><td>Regular $7/month, 12 dynamic codes</td></tr>
+    </tbody>
+  </table>
+  <p class="csrc">Sources: <a href="/pricing/">FreeQrly pricing</a>; <a href="https://www.qrcode-tiger.com/software-subscription">QR Tiger subscription plan page</a>.</p>
+  <h2>Switch to FreeQrly if, stay with QR Tiger if</h2>
+  <p><b>Switch to FreeQrly if</b> your codes keep hitting the 3-code or 500-scan ceiling, if you want batch creation, a barcode generator, or a QR API without paying, or if you want free static codes with no account at all. If you ever cancel Pro, your codes keep working.</p>
+  <p><b>Stay with QR Tiger if</b> you need its campaign extras \u2014 saved design templates, retargeting, password protection, expiry controls, geofencing, and white-label domains on Premium \u2014 or its enterprise seats and integrations. For raw editable-code count, FreeQrly Pro is unlimited, so Tiger's edge is features and team tooling, not volume.</p>
+  <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pricing pages linked above before you decide.</p>
+'''),
+dict(slug="qr-code-monkey-alternative", dtype="url",
+  title="Best QR Code Monkey Alternative with Dynamic Codes | FreeQrly",
+  desc="QR Code Monkey is great for free static codes but has no editable codes or scan statistics. FreeQrly is the alternative that keeps static codes free and adds dynamic codes, statistics, batch mode, and a QR API.",
+  kw="qr code monkey alternative",
+  h1='The QR Code Monkey alternative, <span class="hl hl-honey">with dynamic codes</span>.',
+  lede="Stay for the free static codes, switch for everything after printing. QR Code Monkey's free tool makes static codes only \u2014 no editing, no statistics. FreeQrly \u2014 freeqrly.com keeps static codes free with no sign-up and no watermark, and adds 20 free dynamic codes (currently unlimited) with editing and statistics, batch mode, a barcode generator, and a QR API.",
+  steps=[("Bring your links","List what your current codes open \u2014 homepages, menus, profiles, posters. One link per code."),
+         ("Make the new codes","Use the studio below. Static codes are free with no sign-up; dynamic codes are free with a sign-in."),
+         ("Reprint only what must change","Static codes you already printed keep working, because the destination lives inside the pattern. Only remake the ones you need to edit or measure \u2014 as dynamic codes.")],
+  studio_h2="Make your free QR code",
+  faq=[("Why switch from QR Code Monkey at all?","Monkey's free tool is excellent for fixed codes. The switch is for everything after printing: editing a destination, seeing scan counts, making codes in batches, or generating barcodes \u2014 none of which the free tool does."),
+       ("Do my printed Monkey codes stop working if I switch?","No. Static codes you already printed keep working forever, wherever they were made, because the destination lives inside the pattern. You only remake the codes you want to edit or measure."),
+       ("Do I need an account?","Not for static codes \u2014 FreeQrly static codes need no sign-up, same as Monkey's generator. You sign in free only when you want dynamic codes, statistics, or a dashboard."),
+       ("What does FreeQrly Pro cost?","$9 per month or $90 per year for unlimited dynamic codes. The free plan already covers 20 dynamic codes (currently unlimited during the offer), so most switchers never pay.")],
+  compare='''
+  <h2>FreeQrly vs QR Code Monkey at a glance</h2>
+  <p>FreeQrly \u2014 freeqrly.com, compared with QR Code Monkey at qrcode-monkey.com. Figures below are from each product's own pages, checked October 30, 2026.</p>
+  <table>
+    <thead><tr><th>Feature</th><th>FreeQrly</th><th>QR Code Monkey</th></tr></thead>
+    <tbody>
+      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, never expire, no scan limits, free for commercial use</td></tr>
+      <tr><td><b>Edit after printing</b></td><td>Yes, free dynamic codes</td><td>No \u2014 static only; editing lives in the PRO upsell</td></tr>
+      <tr><td><b>Scan statistics</b></td><td>Yes, free dynamic codes</td><td>No \u2014 statistics live in the PRO upsell</td></tr>
+      <tr><td><b>Batch creation</b></td><td>Yes, up to 50 per batch, free</td><td>No \u2014 bulk generation is a Premium feature</td></tr>
+      <tr><td><b>Barcode generator</b></td><td>Yes, included</td><td>Not listed on the free tool's pages we checked</td></tr>
+      <tr><td><b>Vector downloads</b></td><td>PNG and SVG</td><td>PNG, SVG, PDF, and EPS \u2014 Monkey's strongest row</td></tr>
+      <tr><td><b>Logo and design</b></td><td>Logo upload, colors, dot styles</td><td>Logo upload, colors, gradients, shapes, templates</td></tr>
+      <tr><td><b>Where static codes are made</b></td><td>In your browser; nothing leaves your device</td><td>On Monkey's site; generated image files are cached 24 hours</td></tr>
+      <tr><td><b>Paid option</b></td><td>Pro $9/month or $90/year, unlimited dynamic codes</td><td>PRO platform for dynamic codes and statistics (see our <a href="/freeqrly-vs-qr-code-generator/">QR Code Generator comparison</a>)</td></tr>
+    </tbody>
+  </table>
+  <p class="csrc">Sources: <a href="/pricing/">FreeQrly pricing</a>; <a href="https://www.qrcode-monkey.com/">QR Code Monkey homepage</a>.</p>
+  <h2>Switch to FreeQrly if, stay with QR Code Monkey if</h2>
+  <p><b>Switch to FreeQrly if</b> you want anything beyond a fixed code: editing after printing, scan counts, batch runs, barcodes, or an API \u2014 while keeping static codes free with no account.</p>
+  <p><b>Stay with QR Code Monkey if</b> you only ever need fixed codes and you care most about print design depth: EPS and PDF vectors, templates, gradients, and a 30% logo area. For that one job, it is the best free tool we checked \u2014 FreeQrly does not beat it on vector formats.</p>
+  <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pages linked above before you decide.</p>
+'''),
+]
+
 EXTRA_CSS = '''
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start;margin-bottom:72px}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
@@ -539,6 +731,15 @@ EXTRA_CSS = '''
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
+.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child{white-space:nowrap}
+.compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
+@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
 '''
 
 def faq_json(faq):
@@ -593,6 +794,7 @@ def build(p):
             + [f'<link rel="alternate" hreflang="x-default" href="{url}">'])
         locale_alts = "\n".join(
             f'<meta property="og:locale:alternate" content="{lc}">' for lc in ("zh_CN", "es_ES", "hi_IN", "ar_AR", "pt_BR", "fr_FR", "ru_RU", "de_DE", "ja_JP"))
+    compare_html = f'\n  <section class="compare" id="compare">\n{p["compare"]}\n  </section>\n' if p.get("compare") else ""
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -647,7 +849,7 @@ def build(p):
     </ol>
   </section>
 {studio}
-
+{compare_html}
   <section class="faq" id="faq">
     <h2>Good to know</h2>
 {faq_html}

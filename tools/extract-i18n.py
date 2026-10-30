@@ -194,7 +194,8 @@ LANDING = ["google-form-qr-code", "wifi-qr-code", "vcard-qr-code", "batch-qr-cod
            "pdf-qr-code", "multi-link-qr-code", "menu-qr-code",
            "payment-qr-code", "youtube-qr-code", "whatsapp-qr-code",
            "tiktok-qr-code", "spotify-qr-code", "facebook-qr-code",
-           "google-maps-qr-code", "bitcoin-qr-code", "coupon-qr-code", "app-store-qr-code", "mp3-qr-code", "black-friday-qr-code", "christmas-qr-code", "dynamic-qr-code", "ticket-qr-code"]
+           "google-maps-qr-code", "bitcoin-qr-code", "coupon-qr-code", "app-store-qr-code", "mp3-qr-code", "black-friday-qr-code", "christmas-qr-code", "dynamic-qr-code", "ticket-qr-code",
+           "freeqrly-vs-qr-tiger", "freeqrly-vs-qr-code-monkey", "freeqrly-vs-qr-code-generator", "qr-tiger-alternative", "qr-code-monkey-alternative"]
 for d in LANDING:
     PAGES[f"landing-{d}"] = f"{d}/index.html"
 for d in sorted(os.listdir(os.path.join(SITE, "blog"))):
