@@ -3082,7 +3082,7 @@
    "cumNote": "Cumulative",
    "rangeNote": "Changes with range",
    "rangeEmpty": "No scans in this range",
-   "cityNote": "Only {n} scans have city info", "noBrkData": "No breakdown data for this range"
+   "cityNote": "Only {n} scans have city info", "retryBtn": "Retry", "noBrkData": "No breakdown data for this range"
   },
   "zh": {
    "manageTitle": "控制台",
@@ -3204,7 +3204,7 @@
    "cumNote": "累计",
    "rangeNote": "随范围切换变化",
    "rangeEmpty": "该范围内暂无扫码",
-   "cityNote": "仅{n}次有城市信息", "noBrkData": "该范围内暂无分类数据"
+   "cityNote": "仅{n}次有城市信息", "retryBtn": "重试", "noBrkData": "该范围内暂无分类数据"
   },
   "es": {
    "manageTitle": "Panel",
