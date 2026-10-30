@@ -1070,7 +1070,8 @@
     "What is the difference between static and dynamic QR codes?": "静态二维码和动态二维码有什么区别？",
     "Do I need a dynamic QR code?": "我需要动态二维码吗？",
     "Why do free QR code generators push dynamic codes?": "为什么免费二维码生成器推动态码？",
-    "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrly 两种都做。静态码免费、无限量、不用账号——覆盖大多数日常需求。动态码也是免费的：登录（邮箱、Google 或 GitHub）就送 8 个可编辑、带扫码统计的码。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">怎么创建一个</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印出来之后怎么改</a>，以及<a href=\"/blog/dynamic-qr-code-statistics/\">统计能告诉你什么</a>。"
+    "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrly 两种都做。静态码免费、无限量、不用账号——覆盖大多数日常需求。动态码也是免费的：登录（邮箱、Google 或 GitHub）就送 8 个可编辑、带扫码统计的码。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">怎么创建一个</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印出来之后怎么改</a>，以及<a href=\"/blog/dynamic-qr-code-statistics/\">统计能告诉你什么</a>。",
+    "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrly 两种都做。静态码免费、无限量、不用账号——覆盖大多数日常需求。动态码也是免费的：登录（邮箱、Google 或 GitHub）就送 20 个免费动态码（限时活动期间不限量）、带扫码统计的码。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">怎么创建一个</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印出来之后怎么改</a>，以及<a href=\"/blog/dynamic-qr-code-statistics/\">统计能告诉你什么</a>。"
   },
   "blog-wedding-rsvp-qr-code": {
     "Wedding RSVP QR Codes: A Complete Guide | FreeQrly": "婚礼 RSVP 二维码：完整指南 | FreeQrly",
@@ -1587,7 +1588,9 @@
     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 8 editable codes with scan stats. No trial, no card, no expiry games.": "是的。静态码免费不限量，不用账号。动态码也免费：登录后得到 8 个可编辑的码，带扫码统计。没有试用期，不用绑卡，没有过期套路。",
     "~37 types": "约 37 种",
     "20 free, with scan stats": "20 个免费，带扫码统计",
-    "<strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.": "<strong>需要带统计的免费动态码？</strong>FreeQrly：20 个免费，印后可编辑，含扫码统计。"
+    "<strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.": "<strong>需要带统计的免费动态码？</strong>FreeQrly：20 个免费，印后可编辑，含扫码统计。",
+    "17 types": "17 种类型",
+    "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. No trial, no card, no expiry games.": "是的。静态码免费不限量，不用账号。动态码也免费：登录后得到 20 个免费动态码（限时活动期间不限量），带扫码统计。没有试用期，不用绑卡，没有过期套路。"
   },
   "blog-why-is-my-qr-code-blurry": {
     "2048 px PNG minimum, or SVG. A poster viewed from 2 meters needs far more pixels than a business card viewed from 30 cm — see the print size guide for the distance rule.": "PNG 至少 2048 像素，或者用 SVG。从 2 米外看的海报，比从 30 厘米外看的名片需要多得多的像素——距离规则看打印尺寸指南。",

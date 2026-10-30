@@ -100,7 +100,7 @@ POSTS = [
 </ul>
 
 <h2>Where FreeQrly stands</h2>
-<p>FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href="/blog/how-to-create-a-dynamic-qr-code/">How to create one</a>, <a href="/blog/how-to-edit-a-qr-code-after-printing/">how to edit after printing</a>, and <a href="/blog/dynamic-qr-code-statistics/">what the stats tell you</a>.</p>
+<p>FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. <a href="/blog/how-to-create-a-dynamic-qr-code/">How to create one</a>, <a href="/blog/how-to-edit-a-qr-code-after-printing/">how to edit after printing</a>, and <a href="/blog/dynamic-qr-code-statistics/">what the stats tell you</a>.</p>
 """,
   faq=[
     ("What is the difference between static and dynamic QR codes?",
@@ -924,7 +924,7 @@ POSTS += [
 <tr><td><strong>Free static codes</strong></td><td>Unlimited, no sign-up</td><td>Free, with logo / SVG / PDF / EPS</td><td>Free tool</td><td>Free tool</td><td>Free tool</td></tr>
 <tr><td><strong>Free dynamic codes</strong></td><td>20 free, with scan stats</td><td>Paid (via Bitly)</td><td>3 free</td><td>Paid plans</td><td>Free dynamic codes</td></tr>
 <tr><td><strong>Batch generation</strong></td><td>50 per batch, static</td><td>Not stated</td><td>Up to 3,000 per batch</td><td>Not stated</td><td>500–2,000 per batch</td></tr>
-<tr><td><strong>Type range</strong></td><td>12 types + batch</td><td>Core types</td><td>20–24 solutions</td><td>~37 types</td><td>52 types</td></tr>
+<tr><td><strong>Type range</strong></td><td>17 types</td><td>Core types</td><td>20–24 solutions</td><td>~37 types</td><td>52 types</td></tr>
 <tr><td><strong>Best for</strong></td><td>Free dynamic codes + privacy</td><td>Simple free static codes</td><td>Bulk + enterprise features</td><td>Longest track record (since 2009)</td><td>Widest type range</td></tr>
 </table>
 <p><small>Limits and prices change — check each site before you commit. Figures from public pages and comparisons, October 2026.</small></p>
@@ -954,7 +954,7 @@ POSTS += [
 """,
   faq=[
     ("Is FreeQrly really free?",
-     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 8 editable codes with scan stats. No trial, no card, no expiry games."),
+     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. No trial, no card, no expiry games."),
     ("Which QR code generator is best for beginners?",
      "Any of the five above will make a working code. Pick by what you need next: free dynamic editing (FreeQrly), bulk (QR Tiger), widest type range (ME-QR), or the simplest possible static code (QRCode Monkey)."),
     ("Do free QR codes expire?",

@@ -1071,7 +1071,8 @@
     "What is the difference between static and dynamic QR codes?": "静的QRコードと動的QRコードの違いは？",
     "Do I need a dynamic QR code?": "動的QRコードは必要？",
     "Why do free QR code generators push dynamic codes?": "無料のQRコードジェネレーターはなぜ動的コードを推すのか？",
-    "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrlyは両方作ります。静的コードは無料、無制限、アカウント不要 — ほとんどの日常のニーズをカバーします。動的コードも無料です。ログイン（メール、Google、GitHub）すれば、スキャン統計付きの編集可能なコードを8個もらえます。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">作り方</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印刷後の編集方法</a>、<a href=\"/blog/dynamic-qr-code-statistics/\">統計が教えてくれること</a>。"
+    "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 8 editable codes with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrlyは両方作ります。静的コードは無料、無制限、アカウント不要 — ほとんどの日常のニーズをカバーします。動的コードも無料です。ログイン（メール、Google、GitHub）すれば、スキャン統計付きの編集可能なコードを8個もらえます。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">作り方</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印刷後の編集方法</a>、<a href=\"/blog/dynamic-qr-code-statistics/\">統計が教えてくれること</a>。",
+    "FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. <a href=\"/blog/how-to-create-a-dynamic-qr-code/\">How to create one</a>, <a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">how to edit after printing</a>, and <a href=\"/blog/dynamic-qr-code-statistics/\">what the stats tell you</a>.": "FreeQrlyは両方作ります。静的コードは無料、無制限、アカウント不要 — ほとんどの日常のニーズをカバーします。動的コードも無料です。ログイン（メール、Google、GitHub）すれば、スキャン統計付きの無料の動的コードを20個（期間限定オファー中は無制限）もらえます。<a href=\"/blog/how-to-create-a-dynamic-qr-code/\">作り方</a>、<a href=\"/blog/how-to-edit-a-qr-code-after-printing/\">印刷後の編集方法</a>、<a href=\"/blog/dynamic-qr-code-statistics/\">統計が教えてくれること</a>。"
   },
   "blog-wedding-rsvp-qr-code": {
     "Wedding RSVP QR Codes: A Complete Guide | FreeQrly": "結婚式の出欠確認QRコード：完全ガイド | FreeQrly",
@@ -1676,7 +1677,9 @@
     "Which QR code generator is best for beginners?": "初心者におすすめのQRコードジェネレーターは？",
     "Can I edit a free QR code after printing?": "無料のQRコードを印刷後に編集できる？",
     "20 free, with scan stats": "無料20件、スキャン統計付き",
-    "<strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.": "<strong>無料の動的コードと統計がほしい？</strong>FreeQrly：無料20件、印刷後に編集可能、スキャン統計付き。"
+    "<strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.": "<strong>無料の動的コードと統計がほしい？</strong>FreeQrly：無料20件、印刷後に編集可能、スキャン統計付き。",
+    "17 types": "17種類",
+    "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. No trial, no card, no expiry games.": "はい。静的コードは無料・無制限でアカウント不要です。動的コードも無料です：登録すれば無料の動的コードを20個（期間限定オファー中は無制限）、スキャン統計付きで使えます。トライアルもカードも期限の仕掛けもありません。"
   },
   "blog-why-is-my-qr-code-blurry": {
     "Why Is My QR Code Blurry? Fixes That Work | FreeQrly": "QRコードがぼやけるのはなぜ？効く修正方法 | FreeQrly",
