@@ -21,7 +21,7 @@ FreeQrly is a free QR code generator built on a simple idea: the tool should liv
 **Generate**
 - 12 code types + batch mode: URL, text, WiFi, vCard, email, SMS, phone, location, calendar events, Bitcoin, coupons, App Store links
 - Batch generation — paste a list or drop a spreadsheet, download everything as one ZIP
-- Free **dynamic codes** (8 on a free sign-in): edit the destination after printing, with scan statistics by day, country, city and device
+- Free **dynamic codes** (20 on a free sign-in): edit the destination after printing, with scan statistics by day, country, city and device
 - Free **barcode generator**: Code 128, EAN-13, UPC-A, Code 39, ITF-14
 - Built-in **scanner**: decode from your camera or an uploaded image, fully on-device
 
