@@ -923,8 +923,8 @@ POSTS += [
 <tr><th></th><th>FreeQrly</th><th>QRCode Monkey</th><th>QR Tiger</th><th>QR Code Generator</th><th>ME-QR</th></tr>
 <tr><td><strong>Free static codes</strong></td><td>Unlimited, no sign-up</td><td>Free, with logo / SVG / PDF / EPS</td><td>Free tool</td><td>Free tool</td><td>Free tool</td></tr>
 <tr><td><strong>Free dynamic codes</strong></td><td>20 free, with scan stats</td><td>Paid (via Bitly)</td><td>3 free</td><td>Paid plans</td><td>Free dynamic codes</td></tr>
-<tr><td><strong>Batch generation</strong></td><td>50 per batch, static</td><td>Not stated</td><td>Up to 3,000 per batch</td><td>Not stated</td><td>500–2,000 per batch</td></tr>
-<tr><td><strong>Type range</strong></td><td>17 types</td><td>Core types</td><td>20–24 solutions</td><td>~37 types</td><td>52 types</td></tr>
+<tr><td><strong>Batch generation</strong></td><td>50 per batch, static</td><td>Not stated</td><td>Up to 3,000 per batch</td><td>Not stated</td><td>Supports bulk generation</td></tr>
+<tr><td><strong>Type range</strong></td><td>17 types</td><td>Core types</td><td>20–24 solutions</td><td>~37 types</td><td>50+ types</td></tr>
 <tr><td><strong>Best for</strong></td><td>Free dynamic codes + privacy</td><td>Simple free static codes</td><td>Bulk + enterprise features</td><td>Longest track record (since 2009)</td><td>Widest type range</td></tr>
 </table>
 <p><small>Limits and prices change — check each site before you commit. Figures from public pages and comparisons, October 2026.</small></p>
@@ -946,7 +946,7 @@ POSTS += [
 <li><strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.</li>
 <li><strong>Need bulk or enterprise features?</strong> QR Tiger: up to 3,000 codes per batch, CRM integrations, white-label.</li>
 <li><strong>Just want a quick free static code?</strong> QRCode Monkey is the classic — simple, free, no fuss.</li>
-<li><strong>Want the widest type range?</strong> ME-QR lists 52 types.</li>
+<li><strong>Want the widest type range?</strong> ME-QR lists 50+ types.</li>
 <li><strong>Want the longest-running brand?</strong> QR Code Generator (Egoditor, since 2009, now part of Bitly).</li>
 </ul>
 
