@@ -2197,7 +2197,12 @@
     "Do I need an account for static codes on either tool?": "两家的静态码都需要账号吗？",
     "What happens when a QR Tiger free dynamic code reaches 500 scans?": "QR Tiger 免费动态码扫满 500 次会怎样？",
     "Which paid plan is cheaper?": "哪家付费版更便宜？",
-    "Can I edit a printed code on both free plans?": "两家免费版都能改已印出的码吗？"
+    "Can I edit a printed code on both free plans?": "两家免费版都能改已印出的码吗？",
+    "FreeQrly vs QR Tiger on the free plan: 20 dynamic codes (currently unlimited) with unlimited scans, versus 3 codes capped at 500 scans each. Static codes are free on both. Pro costs $9/month; QR Tiger Regular starts at $7/month.": "免费版对比：FreeQrly 给 20 个动态码（限时活动期间不限量），扫描次数无限；QR Tiger 免费版是 3 个动态码，每个限 500 次扫描。两家静态码都免费。Pro 每月 $9；QR Tiger Regular 版每月 $7 起。",
+    "If you only need static codes, both tools are free forever. The difference starts with dynamic codes: FreeQrly — freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, while QR Tiger's free plan gives you 3 dynamic codes capped at 500 scans each. Pick by how many editable codes you print, and how many scans they will get.": "如果只需要静态码，两家工具都永久免费。分水岭在动态码：FreeQrly — freeqrly.com 给 20 个免费动态码（限时活动期间不限量），扫描次数无限；QR Tiger 免费版只给 3 个动态码，每个限 500 次扫描。按你要印多少个可编辑码、会扫多少次来选。",
+    "QR Tiger lists a 500 scan limit on each free dynamic code. FreeQrly gives unlimited scans on free dynamic codes, so a poster that takes off does not hit a ceiling at 500.": "QR Tiger 给每个免费动态码设了 500 次扫描上限。FreeQrly 免费动态码的扫描次数无限，所以爆了的海报不会卡在 500 次上。",
+    "Yes. QR Tiger's free dynamic codes can be edited and tracked, and FreeQrly's free dynamic codes can be edited after printing with scan statistics. The difference is quantity and the scan limit, not the ability itself.": "都能改。QR Tiger 的免费动态码可以编辑和追踪，FreeQrly 的免费动态码印后也能改链接、看扫描统计。差别在数量和扫描上限，不在能不能改。",
+    "Unlimited": "无限的扫描次数"
   },
   "landing-freeqrly-vs-qr-code-monkey": {
     "FreeQrly vs QR Code Monkey: Free Static Codes, Plus Dynamic | FreeQrly": "FreeQrly vs QR Code Monkey：免费静态码之外，还有动态码 | FreeQrly",
@@ -2260,7 +2265,9 @@
     "Is QR Code Monkey really free?": "QR Code Monkey 真的免费吗？",
     "Can I edit a Monkey code after printing?": "Monkey 的码印出后能改吗？",
     "Which has better design and download options?": "哪家设计和下载选项更好？",
-    "Do I need an account on either for static codes?": "两家做静态码都需要账号吗？"
+    "Do I need an account on either for static codes?": "两家做静态码都需要账号吗？",
+    "Yes, for static codes: 100% free, including commercial use, with no expiry. The catch is only that the codes are static — you cannot edit them or track scans.": "静态码是真的免费：100% 免费，商用也免费，永不过期。唯一的限制就是静态——印出后改不了内容，也看不到扫描数。",
+    "Free, never expire, free for commercial use": "免费，永不过期，商用免费"
   },
   "landing-freeqrly-vs-qr-code-generator": {
     "FreeQrly vs QR Code Generator (Bitly): Free Static, Paid Dynamic | FreeQrly": "FreeQrly vs QR Code Generator（Bitly）：静态免费，动态付费 | FreeQrly",
@@ -2384,7 +2391,11 @@
     "Why do people look for a QR Tiger alternative?": "大家为什么找 QR Tiger 的替代品？",
     "Do my printed QR Tiger codes stop working if I switch?": "换过去后，印好的 QR Tiger 码会失效吗？",
     "How many free dynamic codes do I get?": "免费动态码给几个？",
-    "What does FreeQrly Pro cost?": "FreeQrly Pro 多少钱？"
+    "What does FreeQrly Pro cost?": "FreeQrly Pro 多少钱？",
+    "Looking for a free QR Tiger alternative? FreeQrly gives you 20 free dynamic codes (currently unlimited) with unlimited scans, free static codes with no sign-up, batch mode, and a QR API.": "在找免费的 QR Tiger 替代品？FreeQrly 给 20 个免费动态码（限时活动期间不限量），扫描次数无限，静态码免费、不用注册，还有批量模式和 QR API。",
+    "The free QR Tiger alternative, <span class=\"hl hl-mint\">with unlimited scans</span>.": "免费的 QR Tiger 替代品，<span class=\"hl hl-mint\">无限的扫描次数</span>。",
+    "If you are leaving QR Tiger because 3 free dynamic codes at 500 scans each run out too fast, FreeQrly — freeqrly.com is the straight swap: 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, the same edit-after-printing and scan statistics, and free static codes with no sign-up.": "如果你因为 QR Tiger 免费版 3 个动态码、每个限 500 次扫描不够用而想换，FreeQrly — freeqrly.com 就是直接的替代：20 个免费动态码（限时活动期间不限量），扫描次数无限，印后编辑和扫描统计一样有，静态码免费、不用注册。",
+    "Unlimited": "无限的扫描次数"
   },
   "landing-qr-code-monkey-alternative": {
     "Best QR Code Monkey Alternative with Dynamic Codes | FreeQrly": "带动态码的最好 QR Code Monkey 替代品 | FreeQrly",
@@ -2447,6 +2458,7 @@
     "Why switch from QR Code Monkey at all?": "为什么要从 QR Code Monkey 换走？",
     "Do my printed Monkey codes stop working if I switch?": "换过去后，印好的 Monkey 码会失效吗？",
     "Do I need an account?": "需要账号吗？",
-    "What does FreeQrly Pro cost?": "FreeQrly Pro 多少钱？"
+    "What does FreeQrly Pro cost?": "FreeQrly Pro 多少钱？",
+    "Free, never expire, free for commercial use": "免费，永不过期，商用免费"
   }
 }

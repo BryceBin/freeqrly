@@ -539,18 +539,18 @@ dict(slug="ticket-qr-code", dtype="url",
 PAGES += [
 dict(slug="freeqrly-vs-qr-tiger", dtype="url",
   title="FreeQrly vs QR Tiger: Free Dynamic Codes, Scan Limits, and Price | FreeQrly",
-  desc="FreeQrly vs QR Tiger on the free plan: 20 dynamic codes (currently unlimited) with no scan cap, versus 3 codes capped at 500 scans each. Static codes are free on both. Pro costs $9/month; QR Tiger Regular starts at $7/month.",
+  desc="FreeQrly vs QR Tiger on the free plan: 20 dynamic codes (currently unlimited) with unlimited scans, versus 3 codes capped at 500 scans each. Static codes are free on both. Pro costs $9/month; QR Tiger Regular starts at $7/month.",
   kw="freeqrly vs qr tiger",
   h1='FreeQrly vs QR Tiger: <span class="hl hl-mint">where the free plan ends</span>.',
-  lede="If you only need static codes, both tools are free forever. The difference starts with dynamic codes: FreeQrly \u2014 freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with no published scan cap, while QR Tiger's free plan gives you 3 dynamic codes capped at 500 scans each. Pick by how many editable codes you print, and how many scans they will get.",
+  lede="If you only need static codes, both tools are free forever. The difference starts with dynamic codes: FreeQrly \u2014 freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, while QR Tiger's free plan gives you 3 dynamic codes capped at 500 scans each. Pick by how many editable codes you print, and how many scans they will get.",
   steps=[("Decide static or dynamic","Static fits anything that never changes: a homepage, a WiFi login, a business card. Dynamic fits anything you may repoint or measure: a sale page, a menu, a campaign poster."),
          ("Make the code","Use the studio below. Static codes are free with no sign-up. For a dynamic code, sign in free and create it from your dashboard."),
          ("Print once, edit later","A dynamic code keeps its printed pattern while you change the destination and check scan counts. A static code never changes and never expires.")],
   studio_h2="Make your free QR code",
   faq=[("Do I need an account for static codes on either tool?","No. FreeQrly static codes need no sign-up, and QR Tiger's free plan includes unlimited static codes. The account question only matters for dynamic codes, and both need a free account there."),
-       ("What happens when a QR Tiger free dynamic code reaches 500 scans?","QR Tiger lists a 500 scan limit on each free dynamic code. FreeQrly does not publish a scan cap for free dynamic codes, so a poster that takes off does not hit a ceiling at 500."),
+       ("What happens when a QR Tiger free dynamic code reaches 500 scans?","QR Tiger lists a 500 scan limit on each free dynamic code. FreeQrly gives unlimited scans on free dynamic codes, so a poster that takes off does not hit a ceiling at 500."),
        ("Which paid plan is cheaper?","QR Tiger's Regular plan starts at $7 per month, below FreeQrly Pro at $9 per month (or $90 per year). The trade is allowance: Regular includes 12 dynamic codes, while FreeQrly Pro is unlimited. If you need more than 12 editable codes, the cheaper sticker price stops being cheaper per code."),
-       ("Can I edit a printed code on both free plans?","Yes. QR Tiger's free dynamic codes can be edited and tracked, and FreeQrly's free dynamic codes can be edited after printing with scan statistics. The difference is quantity and the scan cap, not the ability itself.")],
+       ("Can I edit a printed code on both free plans?","Yes. QR Tiger's free dynamic codes can be edited and tracked, and FreeQrly's free dynamic codes can be edited after printing with scan statistics. The difference is quantity and the scan limit, not the ability itself.")],
   compare='''
   <h2>FreeQrly vs QR Tiger at a glance</h2>
   <p>FreeQrly \u2014 freeqrly.com, compared with QR Tiger (qrcode-tiger.com). Figures below are from each product's own pricing and plan pages, checked October 30, 2026.</p>
@@ -559,7 +559,7 @@ dict(slug="freeqrly-vs-qr-tiger", dtype="url",
     <tbody>
       <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, unlimited, never expire (free plan account required)</td></tr>
       <tr><td><b>Free dynamic codes</b></td><td>20 with a free account (currently unlimited during the limited-time offer)</td><td>3</td></tr>
-      <tr><td><b>Scan cap on free dynamic codes</b></td><td>None published</td><td>500 scans each</td></tr>
+      <tr><td><b>Scan cap on free dynamic codes</b></td><td>Unlimited</td><td>500 scans each</td></tr>
       <tr><td><b>Edit after printing (free)</b></td><td>Yes</td><td>Yes</td></tr>
       <tr><td><b>Scan statistics (free)</b></td><td>Yes</td><td>Yes, basic tracking</td></tr>
       <tr><td><b>Batch creation (free)</b></td><td>Yes, up to 50 per batch</td><td>No \u2014 bulk creation is an Advanced plan ($16/month) feature</td></tr>
@@ -584,7 +584,7 @@ dict(slug="freeqrly-vs-qr-code-monkey", dtype="url",
          ("Make the code","Use the studio below. Static codes are free with no sign-up. For a dynamic code, sign in free and create it from your dashboard."),
          ("Print once, edit later","A dynamic code keeps its printed pattern while you change the destination and check scan counts. A static code never changes and never expires.")],
   studio_h2="Make your free QR code",
-  faq=[("Is QR Code Monkey really free?","Yes, for static codes: 100% free, including commercial use, with no expiry and no scan limits. The catch is only that the codes are static \u2014 you cannot edit them or track scans."),
+  faq=[("Is QR Code Monkey really free?","Yes, for static codes: 100% free, including commercial use, with no expiry. The catch is only that the codes are static \u2014 you cannot edit them or track scans."),
        ("Can I edit a Monkey code after printing?","No. Monkey's own pages say the only limitation of its static codes is that you cannot change the content once printed. For editing and statistics, Monkey points you to its PRO upsell. FreeQrly's free dynamic codes are editable after printing with scan statistics."),
        ("Which has better design and download options?","Monkey's are genuinely good: logo upload, colors, shapes, templates, and PNG, SVG, PDF, and EPS downloads, with up to 30% error correction for a centered logo. FreeQrly offers logo upload, colors, and PNG and SVG downloads. If print-vector depth is your whole job, Monkey wins that row; if you also need editable codes, FreeQrly covers both."),
        ("Do I need an account on either for static codes?","No. Monkey's generator works without an account, and FreeQrly static codes need no sign-up. You only sign in when you want dynamic codes, statistics, or a dashboard.")],
@@ -594,7 +594,7 @@ dict(slug="freeqrly-vs-qr-code-monkey", dtype="url",
   <table>
     <thead><tr><th>Feature</th><th>FreeQrly</th><th>QR Code Monkey</th></tr></thead>
     <tbody>
-      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, never expire, no scan limits, free for commercial use</td></tr>
+      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, never expire, free for commercial use</td></tr>
       <tr><td><b>Edit after printing</b></td><td>Yes, free dynamic codes</td><td>No \u2014 static only; editing lives in the PRO upsell</td></tr>
       <tr><td><b>Scan statistics</b></td><td>Yes, free dynamic codes</td><td>No \u2014 statistics live in the PRO upsell</td></tr>
       <tr><td><b>Batch creation</b></td><td>Yes, up to 50 per batch, free</td><td>No \u2014 bulk generation is a Premium feature</td></tr>
@@ -654,10 +654,10 @@ dict(slug="freeqrly-vs-qr-code-generator", dtype="url",
 '''),
 dict(slug="qr-tiger-alternative", dtype="url",
   title="Best Free QR Tiger Alternative | FreeQrly",
-  desc="Looking for a free QR Tiger alternative? FreeQrly gives you 20 free dynamic codes (currently unlimited) with no 500-scan cap, free static codes with no sign-up, batch mode, and a QR API.",
+  desc="Looking for a free QR Tiger alternative? FreeQrly gives you 20 free dynamic codes (currently unlimited) with unlimited scans, free static codes with no sign-up, batch mode, and a QR API.",
   kw="qr tiger alternative",
-  h1='The free QR Tiger alternative, <span class="hl hl-mint">without the 500-scan cap</span>.',
-  lede="If you are leaving QR Tiger because 3 free dynamic codes at 500 scans each run out too fast, FreeQrly \u2014 freeqrly.com is the straight swap: 20 free dynamic codes (currently unlimited during the limited-time offer) with no published scan cap, the same edit-after-printing and scan statistics, and free static codes with no sign-up.",
+  h1='The free QR Tiger alternative, <span class="hl hl-mint">with unlimited scans</span>.',
+  lede="If you are leaving QR Tiger because 3 free dynamic codes at 500 scans each run out too fast, FreeQrly \u2014 freeqrly.com is the straight swap: 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, the same edit-after-printing and scan statistics, and free static codes with no sign-up.",
   steps=[("Bring your links","List the destinations behind your current codes \u2014 sale pages, menus, listings, profiles. One link per code."),
          ("Make the new codes","Use the studio below. Static codes are free with no sign-up; dynamic codes are free with a sign-in."),
          ("Reprint once for dynamic codes","Static codes you already printed keep working, because the destination lives inside the pattern. Dynamic codes live on the maker's server, so remake those at FreeQrly and reprint once.")],
@@ -674,7 +674,7 @@ dict(slug="qr-tiger-alternative", dtype="url",
     <tbody>
       <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, unlimited, never expire (free plan account required)</td></tr>
       <tr><td><b>Free dynamic codes</b></td><td>20 with a free account (currently unlimited during the limited-time offer)</td><td>3</td></tr>
-      <tr><td><b>Scan cap on free dynamic codes</b></td><td>None published</td><td>500 scans each</td></tr>
+      <tr><td><b>Scan cap on free dynamic codes</b></td><td>Unlimited</td><td>500 scans each</td></tr>
       <tr><td><b>Edit after printing (free)</b></td><td>Yes</td><td>Yes</td></tr>
       <tr><td><b>Scan statistics (free)</b></td><td>Yes</td><td>Yes, basic tracking</td></tr>
       <tr><td><b>Batch creation (free)</b></td><td>Yes, up to 50 per batch</td><td>No \u2014 bulk creation is an Advanced plan ($16/month) feature</td></tr>
@@ -709,7 +709,7 @@ dict(slug="qr-code-monkey-alternative", dtype="url",
   <table>
     <thead><tr><th>Feature</th><th>FreeQrly</th><th>QR Code Monkey</th></tr></thead>
     <tbody>
-      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, never expire, no scan limits, free for commercial use</td></tr>
+      <tr><td><b>Static codes</b></td><td>Free, unlimited, no sign-up, no watermark, never expire</td><td>Free, never expire, free for commercial use</td></tr>
       <tr><td><b>Edit after printing</b></td><td>Yes, free dynamic codes</td><td>No \u2014 static only; editing lives in the PRO upsell</td></tr>
       <tr><td><b>Scan statistics</b></td><td>Yes, free dynamic codes</td><td>No \u2014 statistics live in the PRO upsell</td></tr>
       <tr><td><b>Batch creation</b></td><td>Yes, up to 50 per batch, free</td><td>No \u2014 bulk generation is a Premium feature</td></tr>

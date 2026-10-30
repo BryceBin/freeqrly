@@ -2268,7 +2268,12 @@
     "Do I need an account for static codes on either tool?": "どちらのツールでも、静的コードにアカウントは必要ですか？",
     "What happens when a QR Tiger free dynamic code reaches 500 scans?": "QR Tigerの無料動的コードが500スキャンに達するとどうなりますか？",
     "Which paid plan is cheaper?": "有料プランはどちらが安いですか？",
-    "Can I edit a printed code on both free plans?": "両方の無料プランで、印刷済みのコードを編集できますか？"
+    "Can I edit a printed code on both free plans?": "両方の無料プランで、印刷済みのコードを編集できますか？",
+    "FreeQrly vs QR Tiger on the free plan: 20 dynamic codes (currently unlimited) with unlimited scans, versus 3 codes capped at 500 scans each. Static codes are free on both. Pro costs $9/month; QR Tiger Regular starts at $7/month.": "無料プランの比較：FreeQrlyは動的コード20個（現在は無制限）をスキャン無制限で提供しますが、QR Tigerの無料プランは3個で各500スキャンまで。静的コードは両方とも無料です。Proは月額$9、QR TigerのRegularは月額$7から。",
+    "If you only need static codes, both tools are free forever. The difference starts with dynamic codes: FreeQrly — freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, while QR Tiger's free plan gives you 3 dynamic codes capped at 500 scans each. Pick by how many editable codes you print, and how many scans they will get.": "静的コードだけが必要なら、どちらのツールも永久に無料です。違いが出るのは動的コードです。FreeQrly — freeqrly.comは無料の動的コードを20個（期間限定オファー中は無制限）提供し、スキャン回数は無制限です。一方、QR Tigerの無料プランは動的コード3個で、各500スキャンまでです。印刷する編集可能なコードの数と、スキャンされる回数で選んでください。",
+    "QR Tiger lists a 500 scan limit on each free dynamic code. FreeQrly gives unlimited scans on free dynamic codes, so a poster that takes off does not hit a ceiling at 500.": "QR Tigerは無料の動的コード1個あたり500スキャンの上限を設けています。FreeQrlyは無料の動的コードのスキャン回数を無制限にしています。そのため、話題になったポスターが500回で頭打ちになることはありません。",
+    "Yes. QR Tiger's free dynamic codes can be edited and tracked, and FreeQrly's free dynamic codes can be edited after printing with scan statistics. The difference is quantity and the scan limit, not the ability itself.": "はい。QR Tigerの無料動的コードは編集も計測もできますし、FreeQrlyの無料動的コードも印刷後に編集でき、スキャン統計も見られます。違うのは個数とスキャン上限であって、できること自体ではありません。",
+    "Unlimited": "無制限"
   },
   "landing-freeqrly-vs-qr-code-monkey": {
     "FreeQrly vs QR Code Monkey: Free Static Codes, Plus Dynamic | FreeQrly": "FreeQrly vs QR Code Monkey：無料の静的コードに、動的コードも | FreeQrly",
@@ -2331,7 +2336,9 @@
     "Is QR Code Monkey really free?": "QR Code Monkeyは本当に無料ですか？",
     "Can I edit a Monkey code after printing?": "Monkeyのコードは印刷後に編集できますか？",
     "Which has better design and download options?": "デザインとダウンロードの選択肢はどちらが優れていますか？",
-    "Do I need an account on either for static codes?": "どちらのツールでも、静的コードにアカウントは必要ですか？"
+    "Do I need an account on either for static codes?": "どちらのツールでも、静的コードにアカウントは必要ですか？",
+    "Yes, for static codes: 100% free, including commercial use, with no expiry. The catch is only that the codes are static — you cannot edit them or track scans.": "はい、静的コードについては無料です。100%無料で、商用利用もでき、期限もありません。ただし唯一の制限は静的であることです。内容を編集したりスキャンを計測したりはできません。",
+    "Free, never expire, free for commercial use": "無料、期限なし、商用利用も無料"
   },
   "landing-freeqrly-vs-qr-code-generator": {
     "FreeQrly vs QR Code Generator (Bitly): Free Static, Paid Dynamic | FreeQrly": "FreeQrly vs QR Code Generator（Bitly）：静的は無料、動的は有料 | FreeQrly",
@@ -2455,7 +2462,11 @@
     "Why do people look for a QR Tiger alternative?": "なぜQR Tigerの代替サービスを探す人がいるのですか？",
     "Do my printed QR Tiger codes stop working if I switch?": "乗り換えたら、印刷済みのQR Tigerコードは使えなくなりますか？",
     "How many free dynamic codes do I get?": "無料の動的コードはいくつもらえますか？",
-    "What does FreeQrly Pro cost?": "FreeQrly Proの料金はいくらですか？"
+    "What does FreeQrly Pro cost?": "FreeQrly Proの料金はいくらですか？",
+    "Looking for a free QR Tiger alternative? FreeQrly gives you 20 free dynamic codes (currently unlimited) with unlimited scans, free static codes with no sign-up, batch mode, and a QR API.": "無料のQR Tiger代替サービスをお探しですか？FreeQrlyは無料の動的コード20個（現在は無制限）をスキャン無制限で提供し、登録不要の無料静的コード、一括モード、QR APIも備えています。",
+    "The free QR Tiger alternative, <span class=\"hl hl-mint\">with unlimited scans</span>.": "無料のQR Tiger代替サービス、<span class=\"hl hl-mint\">スキャン無制限</span>。",
+    "If you are leaving QR Tiger because 3 free dynamic codes at 500 scans each run out too fast, FreeQrly — freeqrly.com is the straight swap: 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, the same edit-after-printing and scan statistics, and free static codes with no sign-up.": "QR Tigerの無料プランは動的コード3個で各500スキャンまでと、すぐ上限に達してしまうため乗り換えを考えているなら、FreeQrly — freeqrly.comがそのままの代替になります。無料の動的コード20個（期間限定オファー中は無制限）でスキャン回数は無制限、印刷後の編集とスキャン統計も同じように使え、静的コードは無料で登録不要です。",
+    "Unlimited": "無制限"
   },
   "landing-qr-code-monkey-alternative": {
     "Best QR Code Monkey Alternative with Dynamic Codes | FreeQrly": "動的コード付きの最高のQR Code Monkey代替サービス | FreeQrly",
@@ -2518,6 +2529,7 @@
     "Why switch from QR Code Monkey at all?": "なぜQR Code Monkeyから乗り換えるのですか？",
     "Do my printed Monkey codes stop working if I switch?": "乗り換えたら、印刷済みのMonkeyコードは使えなくなりますか？",
     "Do I need an account?": "アカウントは必要ですか？",
-    "What does FreeQrly Pro cost?": "FreeQrly Proの料金はいくらですか？"
+    "What does FreeQrly Pro cost?": "FreeQrly Proの料金はいくらですか？",
+    "Free, never expire, free for commercial use": "無料、期限なし、商用利用も無料"
   }
 }

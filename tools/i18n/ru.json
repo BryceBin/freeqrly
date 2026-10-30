@@ -2225,7 +2225,12 @@
     "Do I need an account for static codes on either tool?": "Нужна ли учётная запись для статических кодов в каком-то из инструментов?",
     "What happens when a QR Tiger free dynamic code reaches 500 scans?": "Что произойдёт, когда бесплатный динамический код QR Tiger наберёт 500 сканирований?",
     "Which paid plan is cheaper?": "Какой платный тариф дешевле?",
-    "Can I edit a printed code on both free plans?": "Можно ли редактировать напечатанный код на обоих бесплатных тарифах?"
+    "Can I edit a printed code on both free plans?": "Можно ли редактировать напечатанный код на обоих бесплатных тарифах?",
+    "FreeQrly vs QR Tiger on the free plan: 20 dynamic codes (currently unlimited) with unlimited scans, versus 3 codes capped at 500 scans each. Static codes are free on both. Pro costs $9/month; QR Tiger Regular starts at $7/month.": "На бесплатном тарифе: FreeQrly даёт 20 динамических кодов (сейчас безлимитно) с безлимитными сканированиями против 3 кодов у QR Tiger по 500 сканирований каждый. Статические коды бесплатны у обоих. Pro стоит $9/мес; Regular у QR Tiger — от $7/мес.",
+    "If you only need static codes, both tools are free forever. The difference starts with dynamic codes: FreeQrly — freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, while QR Tiger's free plan gives you 3 dynamic codes capped at 500 scans each. Pick by how many editable codes you print, and how many scans they will get.": "Если вам нужны только статические коды, оба инструмента бесплатны навсегда. Разница начинается с динамических кодов: FreeQrly — freeqrly.com даёт 20 бесплатных динамических кодов (сейчас безлимитно в рамках ограниченного по времени предложения) с безлимитными сканированиями, а бесплатный тариф QR Tiger даёт 3 динамических кода по 500 сканирований каждый. Выбирайте по тому, сколько редактируемых кодов вы напечатаете и сколько сканирований они получат.",
+    "QR Tiger lists a 500 scan limit on each free dynamic code. FreeQrly gives unlimited scans on free dynamic codes, so a poster that takes off does not hit a ceiling at 500.": "QR Tiger устанавливает лимит в 500 сканирований на каждый бесплатный динамический код. FreeQrly даёт безлимитные сканирования для бесплатных динамических кодов, так что взлетевший плакат не упрётся в потолок 500.",
+    "Yes. QR Tiger's free dynamic codes can be edited and tracked, and FreeQrly's free dynamic codes can be edited after printing with scan statistics. The difference is quantity and the scan limit, not the ability itself.": "Да. Бесплатные динамические коды QR Tiger можно редактировать и отслеживать, а бесплатные динамические коды FreeQrly можно редактировать после печати, со статистикой сканирований. Разница — в количестве и лимите сканирований, а не в самой возможности.",
+    "Unlimited": "Безлимитные"
   },
   "landing-freeqrly-vs-qr-code-monkey": {
     "FreeQrly vs QR Code Monkey: Free Static Codes, Plus Dynamic | FreeQrly": "FreeQrly vs QR Code Monkey: бесплатные статические коды — и динамические в придачу | FreeQrly",
@@ -2288,7 +2293,9 @@
     "Is QR Code Monkey really free?": "QR Code Monkey действительно бесплатен?",
     "Can I edit a Monkey code after printing?": "Можно ли редактировать код Monkey после печати?",
     "Which has better design and download options?": "У кого лучше дизайн и варианты скачивания?",
-    "Do I need an account on either for static codes?": "Нужна ли учётная запись в каком-то из инструментов для статических кодов?"
+    "Do I need an account on either for static codes?": "Нужна ли учётная запись в каком-то из инструментов для статических кодов?",
+    "Yes, for static codes: 100% free, including commercial use, with no expiry. The catch is only that the codes are static — you cannot edit them or track scans.": "Да, для статических кодов: 100% бесплатно, включая коммерческое использование, без истечения срока. Единственное ограничение — коды статические: их нельзя редактировать и нельзя отслеживать сканирования.",
+    "Free, never expire, free for commercial use": "Бесплатно, не истекают, бесплатно для коммерческого использования"
   },
   "landing-freeqrly-vs-qr-code-generator": {
     "FreeQrly vs QR Code Generator (Bitly): Free Static, Paid Dynamic | FreeQrly": "FreeQrly vs QR Code Generator (Bitly): статические бесплатно, динамические платно | FreeQrly",
@@ -2412,7 +2419,11 @@
     "Why do people look for a QR Tiger alternative?": "Почему люди ищут альтернативу QR Tiger?",
     "Do my printed QR Tiger codes stop working if I switch?": "Мои напечатанные коды QR Tiger перестанут работать, если я перейду?",
     "How many free dynamic codes do I get?": "Сколько бесплатных динамических кодов я получу?",
-    "What does FreeQrly Pro cost?": "Сколько стоит FreeQrly Pro?"
+    "What does FreeQrly Pro cost?": "Сколько стоит FreeQrly Pro?",
+    "Looking for a free QR Tiger alternative? FreeQrly gives you 20 free dynamic codes (currently unlimited) with unlimited scans, free static codes with no sign-up, batch mode, and a QR API.": "Ищете бесплатную альтернативу QR Tiger? FreeQrly даёт 20 бесплатных динамических кодов (сейчас безлимитно) с безлимитными сканированиями, бесплатные статические коды без регистрации, пакетный режим и QR API.",
+    "The free QR Tiger alternative, <span class=\"hl hl-mint\">with unlimited scans</span>.": "Бесплатная альтернатива QR Tiger, <span class=\"hl hl-mint\">с безлимитными сканированиями</span>.",
+    "If you are leaving QR Tiger because 3 free dynamic codes at 500 scans each run out too fast, FreeQrly — freeqrly.com is the straight swap: 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, the same edit-after-printing and scan statistics, and free static codes with no sign-up.": "Если вы уходите из QR Tiger, потому что 3 бесплатных динамических кода по 500 сканирований каждый заканчиваются слишком быстро, FreeQrly — freeqrly.com — прямая замена: 20 бесплатных динамических кодов (сейчас безлимитно в рамках ограниченного по времени предложения) с безлимитными сканированиями, с тем же редактированием после печати и той же статистикой — и бесплатными статическими кодами без регистрации.",
+    "Unlimited": "Безлимитные"
   },
   "landing-qr-code-monkey-alternative": {
     "Best QR Code Monkey Alternative with Dynamic Codes | FreeQrly": "Лучшая альтернатива QR Code Monkey с динамическими кодами | FreeQrly",
@@ -2475,6 +2486,7 @@
     "Why switch from QR Code Monkey at all?": "Зачем вообще переходить с QR Code Monkey?",
     "Do my printed Monkey codes stop working if I switch?": "Мои напечатанные коды Monkey перестанут работать, если я перейду?",
     "Do I need an account?": "Нужна ли учётная запись?",
-    "What does FreeQrly Pro cost?": "Сколько стоит FreeQrly Pro?"
+    "What does FreeQrly Pro cost?": "Сколько стоит FreeQrly Pro?",
+    "Free, never expire, free for commercial use": "Бесплатно, не истекают, бесплатно для коммерческого использования"
   }
 }

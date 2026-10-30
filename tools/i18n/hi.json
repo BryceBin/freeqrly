@@ -2266,7 +2266,12 @@
     "Do I need an account for static codes on either tool?": "क्या किसी भी टूल पर स्टैटिक कोड के लिए अकाउंट चाहिए?",
     "What happens when a QR Tiger free dynamic code reaches 500 scans?": "QR Tiger का मुफ़्त डायनामिक कोड 500 स्कैन तक पहुँचने पर क्या होता है?",
     "Which paid plan is cheaper?": "कौन सा पेड प्लान सस्ता है?",
-    "Can I edit a printed code on both free plans?": "क्या दोनों मुफ़्त प्लान पर छपा कोड एडिट कर सकता हूँ?"
+    "Can I edit a printed code on both free plans?": "क्या दोनों मुफ़्त प्लान पर छपा कोड एडिट कर सकता हूँ?",
+    "FreeQrly vs QR Tiger on the free plan: 20 dynamic codes (currently unlimited) with unlimited scans, versus 3 codes capped at 500 scans each. Static codes are free on both. Pro costs $9/month; QR Tiger Regular starts at $7/month.": "मुफ़्त प्लान पर FreeQrly vs QR Tiger: 20 डायनामिक कोड (अभी असीमित), असीमित स्कैन के साथ, बनाम 3 कोड, हर एक पर 500 स्कैन की सीमा। दोनों पर स्टैटिक कोड मुफ़्त हैं। Pro $9/माह; QR Tiger Regular $7/माह से शुरू।",
+    "If you only need static codes, both tools are free forever. The difference starts with dynamic codes: FreeQrly — freeqrly.com gives you 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, while QR Tiger's free plan gives you 3 dynamic codes capped at 500 scans each. Pick by how many editable codes you print, and how many scans they will get.": "अगर सिर्फ़ स्टैटिक कोड चाहिए, तो दोनों टूल हमेशा के लिए मुफ़्त हैं। फ़र्क डायनामिक कोड से शुरू होता है: FreeQrly — freeqrly.com 20 मुफ़्त डायनामिक कोड देता है (सीमित समय के ऑफ़र के दौरान अभी असीमित), असीमित स्कैन के साथ, जबकि QR Tiger के मुफ़्त प्लान में 3 डायनामिक कोड मिलते हैं, हर एक पर 500 स्कैन की सीमा के साथ। इस हिसाब से चुनें कि आप कितने एडिट किए जा सकने वाले कोड छापेंगे और वे कितनी बार स्कैन होंगे।",
+    "QR Tiger lists a 500 scan limit on each free dynamic code. FreeQrly gives unlimited scans on free dynamic codes, so a poster that takes off does not hit a ceiling at 500.": "QR Tiger हर मुफ़्त डायनामिक कोड पर 500 स्कैन की सीमा लगाता है। FreeQrly अपने मुफ़्त डायनामिक कोड पर असीमित स्कैन देता है, इसलिए जो पोस्टर चल निकला है, वह 500 पर अटकता नहीं है।",
+    "Yes. QR Tiger's free dynamic codes can be edited and tracked, and FreeQrly's free dynamic codes can be edited after printing with scan statistics. The difference is quantity and the scan limit, not the ability itself.": "हाँ। QR Tiger के मुफ़्त डायनामिक कोड एडिट और ट्रैक किए जा सकते हैं, और FreeQrly के मुफ़्त डायनामिक कोड छपने के बाद एडिट किए जा सकते हैं, स्कैन आँकड़ों के साथ। फ़र्क क्षमता और स्कैन सीमा में है, काबिलियत में नहीं।",
+    "Unlimited": "असीमित"
   },
   "landing-freeqrly-vs-qr-code-monkey": {
     "FreeQrly vs QR Code Monkey: Free Static Codes, Plus Dynamic | FreeQrly": "FreeQrly vs QR Code Monkey: मुफ़्त स्टैटिक कोड, साथ में डायनामिक | FreeQrly",
@@ -2329,7 +2334,9 @@
     "Is QR Code Monkey really free?": "क्या QR Code Monkey सच में मुफ़्त है?",
     "Can I edit a Monkey code after printing?": "क्या छपने के बाद Monkey कोड एडिट कर सकता हूँ?",
     "Which has better design and download options?": "किसके डिज़ाइन और डाउनलोड विकल्प बेहतर हैं?",
-    "Do I need an account on either for static codes?": "क्या स्टैटिक कोड के लिए किसी भी टूल पर अकाउंट चाहिए?"
+    "Do I need an account on either for static codes?": "क्या स्टैटिक कोड के लिए किसी भी टूल पर अकाउंट चाहिए?",
+    "Yes, for static codes: 100% free, including commercial use, with no expiry. The catch is only that the codes are static — you cannot edit them or track scans.": "हाँ, स्टैटिक कोड के लिए: 100% मुफ़्त, कमर्शियल इस्तेमाल सहित, बिना एक्सपायरी। एकमात्र पेंच यही है कि कोड स्टैटिक हैं — आप उन्हें एडिट नहीं कर सकते और न ही स्कैन ट्रैक कर सकते हैं।",
+    "Free, never expire, free for commercial use": "मुफ़्त, कभी एक्सपायर नहीं, कमर्शियल इस्तेमाल के लिए भी मुफ़्त"
   },
   "landing-freeqrly-vs-qr-code-generator": {
     "FreeQrly vs QR Code Generator (Bitly): Free Static, Paid Dynamic | FreeQrly": "FreeQrly vs QR Code Generator (Bitly): मुफ़्त स्टैटिक, पेड डायनामिक | FreeQrly",
@@ -2453,7 +2460,11 @@
     "Why do people look for a QR Tiger alternative?": "लोग QR Tiger का विकल्प क्यों ढूँढते हैं?",
     "Do my printed QR Tiger codes stop working if I switch?": "क्या स्विच करने पर मेरे छपे QR Tiger कोड काम करना बंद कर देंगे?",
     "How many free dynamic codes do I get?": "मुझे कितने मुफ़्त डायनामिक कोड मिलते हैं?",
-    "What does FreeQrly Pro cost?": "FreeQrly Pro की कीमत क्या है?"
+    "What does FreeQrly Pro cost?": "FreeQrly Pro की कीमत क्या है?",
+    "Looking for a free QR Tiger alternative? FreeQrly gives you 20 free dynamic codes (currently unlimited) with unlimited scans, free static codes with no sign-up, batch mode, and a QR API.": "मुफ़्त QR Tiger विकल्प ढूँढ रहे हैं? FreeQrly देता है 20 मुफ़्त डायनामिक कोड (अभी असीमित), असीमित स्कैन के साथ, बिना साइन-अप के मुफ़्त स्टैटिक कोड, बैच मोड और QR API।",
+    "The free QR Tiger alternative, <span class=\"hl hl-mint\">with unlimited scans</span>.": "मुफ़्त QR Tiger विकल्प, <span class=\"hl hl-mint\">असीमित स्कैन के साथ</span>।",
+    "If you are leaving QR Tiger because 3 free dynamic codes at 500 scans each run out too fast, FreeQrly — freeqrly.com is the straight swap: 20 free dynamic codes (currently unlimited during the limited-time offer) with unlimited scans, the same edit-after-printing and scan statistics, and free static codes with no sign-up.": "अगर आप QR Tiger छोड़ रहे हैं क्योंकि 500 स्कैन वाले 3 मुफ़्त डायनामिक कोड जल्दी खत्म हो जाते हैं, तो FreeQrly — freeqrly.com सीधा विकल्प है: 20 मुफ़्त डायनामिक कोड (सीमित समय के ऑफ़र के दौरान अभी असीमित), असीमित स्कैन के साथ, छपने के बाद एडिट और स्कैन आँकड़ों के साथ, और बिना साइन-अप के मुफ़्त स्टैटिक कोड।",
+    "Unlimited": "असीमित"
   },
   "landing-qr-code-monkey-alternative": {
     "Best QR Code Monkey Alternative with Dynamic Codes | FreeQrly": "डायनामिक कोड सहित सर्वश्रेष्ठ QR Code Monkey विकल्प | FreeQrly",
@@ -2516,6 +2527,7 @@
     "Why switch from QR Code Monkey at all?": "QR Code Monkey से स्विच ही क्यों करें?",
     "Do my printed Monkey codes stop working if I switch?": "क्या स्विच करने पर मेरे छपे Monkey कोड काम करना बंद कर देंगे?",
     "Do I need an account?": "क्या मुझे अकाउंट चाहिए?",
-    "What does FreeQrly Pro cost?": "FreeQrly Pro की कीमत क्या है?"
+    "What does FreeQrly Pro cost?": "FreeQrly Pro की कीमत क्या है?",
+    "Free, never expire, free for commercial use": "मुफ़्त, कभी एक्सपायर नहीं, कमर्शियल इस्तेमाल के लिए भी मुफ़्त"
   }
 }
