@@ -14,8 +14,8 @@ THEME_JS = ''
 POSTS = [
  dict(
   slug="do-qr-codes-expire",
-  title="Do QR Codes Expire? The Short Answer Is No — FreeQrly",
-  desc="Do QR codes expire? Static QR codes never expire — the pattern holds your link forever. Learn what actually stops working (and why paid codes die).",
+  title="Do QR Codes Expire? No — But Paid Ones Can Die | FreeQrly",
+  desc="Do QR codes expire? Static codes never expire — the pattern holds your link forever. What actually stops working is paid dynamic codes when the subscription ends.",
   h1="Do QR codes <span class='hl hl-mint'>expire</span>?",
   lede="Short answer: no — at least, not the kind you make here. The longer answer is worth knowing before you print a thousand of them.",
   date="October 13, 2026",
@@ -26,7 +26,7 @@ POSTS = [
 <h2>Then why do people say QR codes expire?</h2>
 <p>Three different things get tangled together:</p>
 <ul>
-<li><strong>Dynamic codes die when you stop paying.</strong> Many "free" generators actually make <em>dynamic</em> codes: instead of your link, the pattern holds a short URL on <em>their</em> server, which redirects to your link. Stop paying, and they switch the redirect off. Your code isn't expired — it's been taken hostage.</li>
+<li><strong>Dynamic codes die when you stop paying.</strong> Many "free" generators actually make <em>dynamic</em> codes: instead of your link, the pattern holds a short URL on <em>their</em> server, which redirects to your link. Stop paying, and they switch the redirect off. Your code isn't expired — it's been taken hostage. How the free quotas compare: <a href="/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a>.</li>
 <li><strong>Links rot; codes don't.</strong> If the page behind the code is deleted, scanning leads nowhere. That's the destination dying, not the code. A QR code pointing at a dead link is a perfectly healthy code with nothing to say.</li>
 <li><strong>Trial accounts get deactivated.</strong> Some services tie your codes to an account, then nudge you toward a subscription. The code didn't expire — the account did.</li>
 </ul>
@@ -42,7 +42,7 @@ POSTS = [
 <li><strong>Print too small.</strong> As a rule of thumb, keep codes at least 2 × 2 cm with a quiet margin. Tiny codes on business cards are a common scan failure.</li>
 <li><strong>Low contrast.</strong> Dark ink on a light background. That champagne-on-cream wedding code is beautiful and unreadable.</li>
 <li><strong>Damage.</strong> Outdoor codes fade and scratch. Higher error correction (we default to M, and bump it automatically when you add a logo) lets a code survive <a href="http://www.iso.org/standard/83389.html">up to 30% damage</a> at the High level defined in ISO/IEC 18004.</li>
-<li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Keep a list of where each code lives.</li>
+<li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Keep a list of where each code lives — or use a <a href="/dynamic-qr-code/">dynamic code</a> and repoint it instead of reprinting.</li>
 </ul>
 
 <h2>The FreeQrly angle</h2>
@@ -293,14 +293,15 @@ POSTS += [{'body': '\n'
           'one-tenth of the scanning distance. Scanning from 50 cm (a table card)? 5 cm code. From '
           '5 meters (a poster)? 50 cm code. Printers and signage folks use this ratio as a rule of thumb.</p>\n'
           '<h2>Cheat sheet by use case</h2>\n'
-          '<p><b>Business cards:</b> 2x2 cm minimum — see the <a '
-          'href="/business-card-qr-code/">business card generator</a>. Keep it clear of the card '
-          'edge.<br> '
-          "<b>Flyers &amp; menus:</b> 3x3 cm. People scan these at arm's length.<br> "
-          '<b>Table tents:</b> 4–5 cm, so guests scan from their seats.<br> '
-          '<b>Posters:</b> use the 1:10 ratio against expected viewing distance.<br> '
-          '<b>Packaging:</b> 2x2 cm minimum, and avoid curved surfaces that distort the '
-          'pattern.</p>\n'
+          '<table>\n'
+          '<tr><th>Use case</th><th>Minimum size</th><th>Notes</th></tr>\n'
+          '<tr><td>Business cards</td><td>2x2 cm</td><td>Keep it clear of the card edge. See the <a href="/business-card-qr-code/">business card generator</a>.</td></tr>\n'
+          '<tr><td>Flyers and menus</td><td>3x3 cm</td><td>People scan these at arm\'s length.</td></tr>\n'
+          '<tr><td>Table tents</td><td>4–5 cm</td><td>Guests scan from their seats.</td></tr>\n'
+          '<tr><td>Posters</td><td>1:10 ratio</td><td>A 50 cm code scans from 5 meters.</td></tr>\n'
+          '<tr><td>Packaging</td><td>2x2 cm</td><td>Avoid curved surfaces that distort the pattern.</td></tr>\n'
+          '<tr><td>Codes with a logo</td><td>3x3 cm</td><td>Keep the logo under about 30% of the code area.</td></tr>\n'
+          '</table>\n'
           '<h2>Resolution: export big</h2>\n'
           '<p>Print needs 300 dpi. A 2 cm code at 300 dpi is only ~240 px — but always export '
           'larger and let the designer scale down: <b>PNG at 1024 or 2048 px</b>, or <b>SVG</b> '
@@ -317,7 +318,7 @@ POSTS += [{'body': '\n'
   'date': 'October 14, 2026',
   'datePublished': '2026-10-14',
   'desc': 'How big should a QR code be in print? Minimum sizes for business cards, flyers, and '
-          'posters — plus resolution and quiet-zone rules that keep codes scannable.',
+          'posters — plus the 1:10 distance rule, resolution, and quiet-zone rules that keep codes scannable.',
   'faq': [('What is the minimum size for a printed QR code?',
            'As a rule of thumb, 2 x 2 cm (0.8 x 0.8 inches). Smaller codes fail on many phones, '
            'especially for data-heavy codes like vCards.'),
@@ -332,7 +333,7 @@ POSTS += [{'body': '\n'
           'with the distance rule of thumb printers actually use — is below.',
   'mascot': 'batch',
   'slug': 'qr-code-print-size-guide',
-  'title': 'QR Code Print Size Guide: How Big Should It Be? | FreeQrly',
+  'title': 'QR Code Print Size Guide: Business Cards to Posters | FreeQrly',
   'sources': [('http://www.iso.org/standard/83389.html', 'ISO/IEC 18004:2024', 'The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.')]},
  {'body': '\n'
           '<h2>1. The menu code</h2>\n'
@@ -355,6 +356,13 @@ POSTS += [{'body': '\n'
           '<p>Laminate table codes (spills happen), use at least 3x3 cm so guests scan from their '
           'seats, and keep contrast high — dim dining rooms punish pastel codes. Full sizing '
           'rules: <a href="/blog/qr-code-print-size-guide/">print size guide</a>.</p>\n'
+          '<h2>Setup checklist</h2>\n'
+          '<ul>\n'
+          '<li>Menu code: one per table, or a single framed code at the entrance.</li>\n'
+          '<li>Review code: on the receipt, the table tent, and the takeout bag.</li>\n'
+          '<li>WiFi code: one on each table.</li>\n'
+          '<li>Laminate table codes, print at least 3x3 cm, and keep contrast high.</li>\n'
+          '</ul>\n'
           '<h2>What it costs</h2>\n'
           '<p>Nothing. These are static codes — no subscriptions, no scan limits, no "pro plan" to '
           "unlock the menu link. Print them once and they work for years. That's the whole "
@@ -388,8 +396,12 @@ POSTS += [{'body': '\n'
           '<h2>The trial trap</h2>\n'
           '<p>Many "free QR code generators" quietly create dynamic codes on a short trial. '
           'Your printed flyers work beautifully — until the trial ends and every code goes dead. '
-          'Red flags: the site asks for your email before generating, mentions "scan analytics", '
-          'or talks about "campaigns". A truly free static generator needs none of that.</p>\n'
+          'Red flags:</p>\n'
+          '<ul>\n'
+          '<li>The site asks for your email before generating.</li>\n'
+          '<li>It mentions "scan analytics" or talks about "campaigns".</li>\n'
+          '</ul>\n'
+          '<p>A truly free static generator needs none of that.</p>\n'
           '<h2>The 30-second test</h2>\n'
           '<p>Before you trust a generator with your print run: generate a code <b>without '
           "creating an account</b>. If it works, it's static. Static codes from FreeQrly need no account, so there's nothing to expire. That's also why <a "
@@ -487,14 +499,17 @@ POSTS += [{'body': '\n'
           "scanner</a>. It's decoded in your browser, so the image is never uploaded anywhere — "
           'nice when the screenshot contains something private.</p>\n'
           '<h2>Tips for stubborn images</h2>\n'
-          '<p>Crop tight around the code before uploading — decoders work faster and more reliably '
-          'on a clean crop. If the photo is blurry or shot at an angle, no decoder can save it; '
-          'retake it straight-on. More in <a href="/blog/why-is-my-qr-code-not-working/">why your '
+          '<ul>\n'
+          '<li>Crop tight around the code before uploading — decoders work faster and more reliably on a clean crop.</li>\n'
+          '<li>If the photo is blurry or shot at an angle, no decoder can save it; retake it straight-on.</li>\n'
+          '</ul>\n'
+          '<p>More in <a href="/blog/why-is-my-qr-code-not-working/">why your '
           "QR code won't scan</a>.</p>\n"
           '<h2>Privacy note</h2>\n'
           '<p>Screenshots often contain more than the QR code — chats, tickets, personal photos. '
           'Think twice before uploading them to a random decoder site. A <a href="/scan/">local '
-          'decoder</a> never sees anything but your own browser tab.</p>\n',
+          'decoder</a> never sees anything but your own browser tab.</p>\n'
+          '<p>Making codes instead of reading them? <a href="/batch-qr-code/">Batch mode</a> makes one code per link — downloaded as a ZIP.</p>\n',
   'date': 'October 14, 2026',
   'datePublished': '2026-10-14',
   'desc': 'Your QR code is in a photo, not in front of your camera. Here is how to decode it on '
@@ -531,7 +546,7 @@ POSTS += [{'body': '\n'
           "<p>The most underused event code: one that drops the event straight into the guest's "
           'calendar. FreeQrly\'s <a href="/?type=event">event QR type</a> builds it in seconds — '
           'title, start/end time, location — and scanning it offers "add to calendar" on both '
-          'iPhone and Android. Print it on the invitation — one less step between the invite and the calendar may mean fewer no-shows.</p>\n'
+          'iPhone and Android. Print it on the invitation — one less step between the invite and the calendar may mean fewer no-shows. Planning a Christmas party? The same invitation trick works for the holidays — see the <a href="/christmas-qr-code/">Christmas QR code generator</a> for card, gift-tag, and party ideas.</p>\n'
           '<h2>3. The shared photo album</h2>\n'
           '<p>Every event has the same problem: the photos scatter across fifty phones. A code '
           'linking to a shared album (Google Photos, iCloud shared album) on table cards fixes it '
@@ -542,6 +557,14 @@ POSTS += [{'body': '\n'
           '<h2>5. Feedback &amp; follow-up</h2>\n'
           '<p>A code linking to a 2-question feedback form on the exit signage or closing slide. '
           'Guests answer while the event is still fresh, instead of ignoring a follow-up email days later.</p>\n'
+          '<h2>Event code checklist</h2>\n'
+          '<ul>\n'
+          '<li>Check-in: a code on the confirmation email, scanned at the door.</li>\n'
+          '<li>Add-to-calendar: on the invitation, so guests keep the date.</li>\n'
+          '<li>Photo album: on table cards, so shots land in one shared album.</li>\n'
+          '<li>Venue WiFi: on signage, so nobody spells the password over loud music.</li>\n'
+          '<li>Feedback: on exit signage or the closing slide, while the event is still fresh.</li>\n'
+          '</ul>\n'
           '<h2>Printing tips</h2>\n'
           '<p>Event codes get scanned in chaotic lighting by hurried people: go bigger than you '
           'think (the <a href="/blog/qr-code-print-size-guide/">1:10 distance rule of thumb</a>), keep '
@@ -573,10 +596,11 @@ POSTS += [{'body': '\n'
           'print it on the invitation suite, and guests scan → tap → done. No stamps, no lost '
           'reply cards, no deciphering handwriting.</p>\n'
           '<h2>Where to print it</h2>\n'
-          '<p><b>Invitations:</b> on the details card, at least 2x2 cm. <b>Save-the-dates:</b> '
-          'link it to your wedding website. <b>Table cards:</b> a second code linking to the <a '
-          'href="/wedding-qr-code/">shared photo album</a> — guests upload their shots all '
-          'night.</p>\n'
+          '<ul>\n'
+          '<li><b>Invitations:</b> on the details card, at least 2x2 cm.</li>\n'
+          '<li><b>Save-the-dates:</b> link it to your wedding website.</li>\n'
+          '<li><b>Table cards:</b> a second code linking to the <a href="/wedding-qr-code/">shared photo album</a> — guests upload their shots all night.</li>\n'
+          '</ul>\n'
           '<h2>The add-to-calendar trick</h2>\n'
           '<p>Pair the RSVP code with an <a href="/?type=event">event QR code</a> on the '
           'invitation. One scan drops your wedding — date, time, venue — into their calendar. '
@@ -591,8 +615,8 @@ POSTS += [{'body': '\n'
           'href="/">free QR code</a>, zero postage.</p>\n',
   'date': 'October 14, 2026',
   'datePublished': '2026-10-14',
-  'desc': 'How to use QR codes for wedding RSVPs: link your RSVP form, print on invitations, track '
-          'responses. Free generator.',
+  'desc': 'Wedding RSVP QR codes: link your RSVP form, print on invitations, track responses — '
+          'no stamps, no lost reply cards. Free generator.',
   'faq': [('How do I create a QR code for my wedding RSVP?',
            'Make your RSVP form (Google Forms works great), paste its link into a free QR '
            'generator, and print the code on your invitations at 2x2 cm or larger.'),
@@ -607,14 +631,14 @@ POSTS += [{'body': '\n'
           'the invitation — straight to your RSVP form — fixes the biggest wedding admin headache.',
   'mascot': 'wedding',
   'slug': 'wedding-rsvp-qr-code',
-  'title': 'Wedding RSVP QR Codes: A Complete Guide | FreeQrly'}]
+  'title': 'Wedding RSVP QR Codes: No More Chasing Replies | FreeQrly'}]
 
 
 POSTS += [
  dict(
   slug="how-to-create-a-dynamic-qr-code",
-  title="How to Create a Dynamic QR Code (Free & Editable) | FreeQrly",
-  desc="Create a dynamic QR code for free: sign in, pick a type, style it, print it. Edit the destination later without reprinting. 20 free codes.",
+  title="How to Create a Dynamic QR Code Free (Editable After Printing) | FreeQrly",
+  desc="Create a dynamic QR code free: sign in, pick a type, style it, print it. Edit the destination later without reprinting — 20 free codes, currently unlimited.",
   h1="How to create a <span class='hl hl-mint'>dynamic</span> QR code",
   lede="A dynamic QR code lets you change the destination after printing — and see how many people scanned. Here's how to make one, free, in about a minute.",
   date="October 16, 2026",
@@ -622,12 +646,12 @@ POSTS += [
   mascot="faq",
   body="""
 <p>Static codes are great — until the destination changes. The flyer is printed, the menu moved, the campaign URL wasn't final. A <strong>dynamic QR code</strong> fixes that: the printed pattern stays the same, but you can change where it points, any time, from your Dashboard. You also get scan counts, so you know whether anyone is actually scanning.</p>
-<p>On FreeQrly, dynamic codes are free. Sign in (email, Google, or GitHub), and you get 8 of them. No trial, no card, no expiry games. Here's the whole process.</p>
+<p>On FreeQrly, dynamic codes are free. Sign in (email, Google, or GitHub), and you get 20 of them (currently unlimited during the limited-time promotion). No trial, no card, no expiry games. Here's the whole process.</p>
 
 <ol>
 <li><b>Sign in — free.</b> Open the <a href="/login/">sign-in page</a> and create an account with email + password, Google, or GitHub. Static codes never need this; dynamic codes do, because the code has to belong to someone.</li>
 <li><b>Switch to Dynamic.</b> In the <a href="/?mode=dynamic">studio</a>, flip the toggle from Static to Dynamic. Everything else — types, styling, download — works exactly the same.</li>
-<li><b>Pick a type and fill it in.</b> Website, WiFi, contact, event — all 12 content types work as dynamic codes. (Batch stays static: one dynamic code per generation.)</li>
+<li><b>Pick a type and fill it in.</b> Website, WiFi, contact, event — all 17 content types work as dynamic codes. (<a href="/batch-qr-code/">Batch</a> stays static: one dynamic code per generation.)</li>
 <li><b>Style it if you want.</b> Dots, colors, logo, frame — the preview updates live. The style is saved with the code, so the Dashboard and the download match.</li>
 <li><b>Generate.</b> Hit Generate. You get a short link like <code>freeqrly.com/q/XXXXXXX</code> — that's what the QR pattern encodes. Print it, ship it, stick it on the wall.</li>
 <li><b>Manage it later.</b> Your codes live in the <a href="/dashboard/">Dashboard</a>: edit, check stats, or delete one to free a slot.</li>
@@ -638,12 +662,12 @@ POSTS += [
 
 <h2>The limits, stated plainly</h2>
 <ul>
-<li><strong>8 codes, free.</strong> That's the free quota. Delete a code and the slot frees up.</li>
+<li><strong>20 codes, free (currently unlimited during the limited-time promotion).</strong> That's the free quota. Delete a code and the slot frees up.</li>
 <li><strong>One at a time.</strong> Dynamic codes are generated one by one; batch generation stays static.</li>
 <li><strong>Editing changes the destination, not the pattern.</strong> The printed code keeps working through every edit — which is the entire point.</li>
 </ul>
 
-<p>Not sure whether you need dynamic at all? <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>. Already printed and need to fix a link? <a href="/blog/how-to-edit-a-qr-code-after-printing/">How to edit a QR code after printing</a>. Curious what the numbers look like? <a href="/blog/dynamic-qr-code-statistics/">What dynamic QR code statistics tell you</a>.</p>
+<p>Not sure whether you need dynamic at all? <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>. Already printed and need to fix a link? <a href="/blog/how-to-edit-a-qr-code-after-printing/">How to edit a QR code after printing</a>. Curious what the numbers look like? <a href="/blog/dynamic-qr-code-statistics/">What dynamic QR code statistics tell you</a>. Wondering how the free quota stacks up? <a href="/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> puts the free plans side by side.</p>
 """,
   howto=[
     ("Sign in — free",
@@ -651,7 +675,7 @@ POSTS += [
     ("Switch to Dynamic",
      "In the studio, flip the Static/Dynamic toggle to Dynamic."),
     ("Pick a type and fill it in",
-     "Website, WiFi, contact, event — all 12 content types work. Batch stays static."),
+     "Website, WiFi, contact, event — all 17 content types work. Batch stays static."),
     ("Style it",
      "Dots, colors, logo, frame. The preview updates live and the style is saved with the code."),
     ("Generate",
@@ -665,18 +689,18 @@ POSTS += [
     ("Do I need an account for a dynamic QR code?",
      "Yes — the code has to belong to someone so only you can edit it. Email + password, Google, or GitHub. Static codes never need an account."),
     ("How many dynamic QR codes can I have?",
-     "8 on the free account. Delete a code to free its slot."),
+     "20 on the free account (currently unlimited during the limited-time promotion). Delete a code to free its slot."),
     ("What does a dynamic QR code link to?",
      "A short FreeQrly link (freeqrly.com/q/XXXXXXX) that redirects to your destination. Scanners land on your page; the redirect is what makes editing and stats possible."),
   ],
   cta=dict(title="Make your first dynamic code",
-           text="Free sign-in, 8 codes, editable after printing. Start in the studio.",
+           text="Free sign-in, 20 codes (currently unlimited), editable after printing. Start in the studio.",
            href="/?mode=dynamic", btn="Create a dynamic code"),
  ),
  dict(
   slug="how-to-edit-a-qr-code-after-printing",
-  title="How to Edit a QR Code After Printing | FreeQrly",
-  desc="Printed the wrong link? Fix it without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.",
+  title="How to Edit a QR Code After Printing (Without Reprinting) | FreeQrly",
+  desc="Printed the wrong link? Fix it free, without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.",
   h1="Edit a QR code <span class='hl hl-blush'>after printing</span>",
   lede="The flyers are already out — and the link is wrong. With a dynamic code, that's a two-minute fix, not a reprint.",
   date="October 16, 2026",
@@ -734,8 +758,8 @@ POSTS += [
  ),
  dict(
   slug="dynamic-qr-code-statistics",
-  title="Dynamic QR Code Statistics: What You Can Track | FreeQrly",
-  desc="What dynamic QR code statistics tell you: total and unique scans, by day, country, city, device, and OS — and what FreeQrly never tracks.",
+  title="Dynamic QR Code Statistics: What Scans Actually Tell You | FreeQrly",
+  desc="Dynamic QR code statistics: total and unique scans, by day, country, city, device, and OS — free with your codes. And what FreeQrly never tracks.",
   h1="What dynamic QR <span class='hl hl-honey'>statistics</span> tell you",
   lede="A dynamic code reports home every time it's scanned. Here's what FreeQrly counts, how to read it, and what it never collects.",
   date="October 16, 2026",
@@ -771,7 +795,15 @@ POSTS += [
 <li><strong>Spikes need context.</strong> A burst of scans right after a post goes out is the post, not the poster. The 7-day chart makes this visible.</li>
 </ul>
 
-<p>Ready to try it? <a href="/blog/how-to-create-a-dynamic-qr-code/">Create your first dynamic code</a> — free sign-in, 8 codes — and check back after your first print run. Already printed and need a fix? <a href="/blog/how-to-edit-a-qr-code-after-printing/">How to edit a QR code after printing</a>.</p>
+<h2>Reading a real week</h2>
+<p>The same breakdowns, read as behavior rather than numbers:</p>
+<ul>
+<li><strong>Evening-only scans.</strong> A code that wakes up after work hours is probably on a commuter route or an evening venue — foot traffic, not office traffic.</li>
+<li><strong>A sudden new city.</strong> Scans spreading to a city you never printed in usually mean someone shared the code in a chat or a post — the code travelled without you.</li>
+<li><strong>Weekday-only scans.</strong> A code that goes quiet on weekends is probably on an office poster or a weekday venue, not a weekend one.</li>
+</ul>
+
+<p>Ready to try it? <a href="/blog/how-to-create-a-dynamic-qr-code/">Create your first dynamic code</a> — free sign-in, 20 codes (currently unlimited) — and check back after your first print run. Already printed and need a fix? <a href="/blog/how-to-edit-a-qr-code-after-printing/">How to edit a QR code after printing</a>.</p>
 """,
   faq=[
     ("What counts as a unique scan?",
@@ -805,8 +837,8 @@ SOURCES_CSS = """<style>
 POSTS += [
  dict(
   slug="qr-code-vs-barcode",
-  title="QR Code vs Barcode: What's the Difference? | FreeQrly",
-  desc="QR codes vs barcodes: what each holds, how much data fits, and when to use which. Barcodes for checkout, QR codes for everything else.",
+  title="QR Code vs Barcode: Which One Do You Actually Need? | FreeQrly",
+  desc="QR code vs barcode: what each one holds, how much data fits, and when to use which. Barcodes for checkout, QR codes for links, menus, and WiFi.",
   h1="QR code vs <span class='hl hl-mint'>barcode</span>",
   lede="Barcodes identify products at checkout. QR codes carry links, menus, WiFi passwords, contact cards. Same idea, very different jobs.",
   date="October 17, 2026",
@@ -854,8 +886,8 @@ POSTS += [
  ),
  dict(
   slug="make-qr-code-in-canva-excel-word",
-  title="How to Make a QR Code in Canva, Excel & Word | FreeQrly",
-  desc="No built-in QR tool in Canva, Excel, or Word? Make the code in FreeQrly (free, no sign-up), download PNG, and drop it into your design or document.",
+  title="How to Make a QR Code in Canva, Excel, or Word (Free) | FreeQrly",
+  desc="Canva, Excel, and Word have no built-in QR tool. Make the code in FreeQrly (free, no sign-up), download PNG, and drop it into your design or document.",
   h1="QR codes in <span class='hl hl-honey'>Canva, Excel & Word</span>",
   lede="None of these apps has a good built-in QR maker. The fast route: generate the code in FreeQrly, download a PNG, and drop it in. Two minutes, every time.",
   date="October 17, 2026",
@@ -940,6 +972,7 @@ POSTS += [
 <tr><td><strong>Best for</strong></td><td>Free dynamic codes + privacy</td><td>Simple free static codes</td><td>Bulk + enterprise features</td><td>Longest track record (since 2009)</td><td>Widest type range</td></tr>
 </table>
 <p><small>Limits and prices change — check each site before you commit. Figures from public pages and comparisons, October 2026.</small></p>
+<p>Want the full head-to-head? <a href="/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a>, <a href="/blog/freeqrly-vs-qr-code-monkey/">FreeQrly vs QRCode Monkey</a>, and <a href="/blog/freeqrly-vs-qr-code-generator/">FreeQrly vs QR Code Generator</a> put each free plan under the microscope.</p>
 
 <h2>What "free" actually means</h2>
 <p>A <strong>static</strong> code carries its content inside the pattern. It costs the provider nothing to serve, so genuinely free static codes — no watermark, no expiry — are the norm, and you should never pay for one. A <strong>dynamic</strong> code points at a short link on the provider's server, which is what makes editing and stats possible — and what costs them money. That is why dynamic codes are where the free tiers end. If a tool's "free" plan gives you dynamic codes, read the number: 3, 8, or unlimited changes everything. <a href="/blog/static-vs-dynamic-qr-codes/">Static vs dynamic, explained honestly</a>.</p>
@@ -956,8 +989,8 @@ POSTS += [
 <h2>The verdict</h2>
 <ul>
 <li><strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.</li>
-<li><strong>Need bulk or enterprise features?</strong> QR Tiger: up to 3,000 codes per batch, CRM integrations, white-label.</li>
-<li><strong>Just want a quick free static code?</strong> QRCode Monkey is the classic — simple, free, no fuss.</li>
+<li><strong>Need bulk or enterprise features?</strong> QR Tiger: up to 3,000 codes per batch, CRM integrations, white-label. (<a href="/blog/qr-tiger-alternative/">QR Tiger alternative</a>.)</li>
+<li><strong>Just want a quick free static code?</strong> QRCode Monkey is the classic — simple, free, no fuss. (<a href="/blog/qr-code-monkey-alternative/">QRCode Monkey alternative</a>.)</li>
 <li><strong>Want the widest type range?</strong> ME-QR lists 50+ types.</li>
 <li><strong>Want the longest-running brand?</strong> QR Code Generator (Egoditor, since 2009, now part of Bitly).</li>
 </ul>
@@ -986,8 +1019,8 @@ POSTS += [
  ),
  dict(
   slug="why-is-my-qr-code-blurry",
-  title="Why Is My QR Code Blurry? Fixes That Work | FreeQrly",
-  desc="Blurry QR code won't scan? The 5 usual causes: low-res export, wrong size, JPEG compression, stretching, and bad print. How to fix each.",
+  title="Why Is My QR Code Blurry? 5 Fixes That Work | FreeQrly",
+  desc="Blurry QR code won't scan? 5 usual causes — low-res export, wrong size, JPEG compression, stretching, bad print — and how to fix each one.",
   h1="Why is my QR code <span class='hl hl-blush'>blurry</span>?",
   lede="A blurry QR code is almost always a resolution problem: too few pixels stretched across too much space. The fix is to export bigger — or as SVG.",
   date="October 17, 2026",
@@ -1069,7 +1102,7 @@ POSTS += [
 </ul>
 
 <h2>Do you need a scanner app?</h2>
-<p>No — and that's the honest answer even though scanner apps exist. The built-in camera handles standard QR codes, and third-party scanner apps mostly add ads and tracking. The one exception: if your phone is old enough to lack a built-in reader, any reputable scanner app will do the job.</p>
+<p>No — and that's the honest answer even though scanner apps exist. The built-in camera handles standard QR codes, and third-party scanner apps mostly add ads and tracking. The one exception: if your phone is old enough to lack a built-in reader, any reputable scanner app will do the job — or use <a href="/scan/">the free scanner in your browser</a>, which needs no install at all.</p>
 
 <p>Want to test right now? Point your camera at any code on <a href="/scan/">our free scanner page</a> — or upload a photo of a code and decode it in your browser, nothing uploaded.</p>
 """,

@@ -13,7 +13,7 @@ STUDIO = m.group(0)
 PAGES = [
  dict(
   slug="google-form-qr-code", dtype="google-form",
-  title="Free Google Form QR Code Generator | FreeQrly",
+  title="Free Google Form QR Code Generator: Link Any Form in Seconds | FreeQrly",
   desc="Turn any Google Form link into a QR code in seconds. Free, no sign-up for static codes, no watermark. Paste your form URL and download a printable PNG or SVG.",
   kw="qr code generator for google form",
   h1="QR codes for Google Forms, without the fine print.",
@@ -85,7 +85,7 @@ PAGES = [
  ),
  dict(
   slug="batch-qr-code", dtype="batch",
-  title="Free Batch QR Code Generator | FreeQrly",
+  title="Free Batch QR Code Generator: Up to 50 Codes at Once | FreeQrly",
   desc="Generate dozens of QR codes at once and download them as a ZIP. Free, no sign-up for static codes, no limits games. One link per line — done.",
   kw="batch qr code generator",
   h1="Dozens of QR codes. One download.",
@@ -189,7 +189,7 @@ STUDIO_H2_RE = re.compile(r'<div class="shead"><div class="over" data-i18n="sOve
 
 PAGES += [
 dict(slug="business-card-qr-code", dtype="vcard",
-  title="Free Business Card QR Code Generator | FreeQrly",
+  title="Free Business Card QR Code Generator: One Scan Saves Your Contact | FreeQrly",
   desc="Put a scannable vCard QR code on your business card. Free, no sign-up for static codes \u2014 one scan saves your contact straight to their phone.",
   kw="qr code for business cards",
   h1='Your business card, <span class="hl hl-mint">but it introduces itself</span>.',
@@ -231,7 +231,7 @@ dict(slug="qr-code-with-logo", dtype="url",
        ("What size should I print it?","At least 2x2 cm, at 1024 px export or higher. Bigger is safer when a logo covers the center."),
        ("Is there a watermark or a fee?","No. Logo upload is free and unlimited, and for static codes your files never leave your browser.")]),
 dict(slug="wedding-qr-code", dtype="url",
-  title="Free Wedding QR Code Generator | FreeQrly",
+  title="Free Wedding QR Code Generator: RSVP, Photos & Menus | FreeQrly",
   desc="QR codes for weddings: RSVP forms, photo sharing, menus, seating charts. Free, no sign-up for static codes \u2014 one scan for your guests.",
   kw="qr code wedding",
   h1='One scan, <span class="hl hl-honey">zero wedding-day questions</span>.',
@@ -292,7 +292,7 @@ dict(slug="pdf-qr-code", dtype="url",
        ("What if the PDF is large?","Size does not matter for the code \u2014 it only encodes the link. Keep the PDF itself reasonable so it opens fast on phones."),
        ("Does it expire?","No. Static codes never expire and need no account.")]),
 dict(slug="multi-link-qr-code", dtype="url",
-  title="Free Multi-Link QR Code Generator | FreeQrly",
+  title="Free Multi-Link QR Code Generator: One Code, All Your Links | FreeQrly",
   desc="One QR code for all your links. Free, no sign-up for static codes. Point it at your Linktree, Beacons, or any link-in-bio page.",
   kw="multi link qr code",
   h1='All your links, <span class="hl hl-blush">one code</span>.',
@@ -306,7 +306,7 @@ dict(slug="multi-link-qr-code", dtype="url",
        ("Linktree or my own page \u2014 which is better?","Linktree and Beacons are fastest to set up. Your own page gives you full control over design and no third-party branding. Both work the same way with a QR code."),
        ("Does it expire?","No. Static codes never expire and need no account.")]),
 dict(slug="menu-qr-code", dtype="menu",
-  title="Free Menu QR Code Generator | FreeQrly",
+  title="Free Menu QR Code Generator: PDF or Online Menu | FreeQrly",
   desc="Turn your restaurant menu into a scannable QR code. Free, no sign-up for static codes. Link a PDF menu or an online menu page.",
   kw="menu qr code generator",
   h1='Your menu, <span class="hl hl-mint">on every table</span>.',
@@ -334,7 +334,7 @@ dict(slug="payment-qr-code", dtype="url",
        ("Can I preset the amount?","Yes, if your payment link supports it (PayPal.me lets you add an amount). The code opens whatever the link contains."),
        ("Does it expire?","No. Static codes never expire and need no account.")]),
 dict(slug="youtube-qr-code", dtype="url",
-  title="Free YouTube QR Code Generator | FreeQrly",
+  title="Free YouTube QR Code Generator: Video & Channel Codes | FreeQrly",
   desc="Turn any YouTube video or channel into a scannable QR code. Free, no sign-up for static codes. Print it for packaging, posters, and merch.",
   kw="youtube qr code generator",
   h1='Your video, <span class="hl hl-blush">one scan from playing</span>.',
@@ -348,7 +348,7 @@ dict(slug="youtube-qr-code", dtype="url",
        ("Can I add my logo?","Yes \u2014 upload your logo and set your brand colors. Keep contrast high so it scans in any light."),
        ("Does it expire if I rename the channel?","The code encodes the exact URL. Channel URLs with custom handles change if the handle changes \u2014 use the channel ID URL for permanence, or make a fresh code.")]),
 dict(slug="whatsapp-qr-code", dtype="url",
-  title="Free WhatsApp QR Code Generator | FreeQrly",
+  title="Free WhatsApp QR Code Generator: Chat in One Scan | FreeQrly",
   desc="Turn your WhatsApp number or chat link into a scannable QR code. Free, no sign-up for static codes. Customers scan and message you.",
   kw="whatsapp qr code generator",
   h1='Chat with you, <span class="hl hl-mint">one scan</span>.',
@@ -407,7 +407,7 @@ dict(slug="facebook-qr-code", dtype="url",
        ("Can I add my logo or brand colors?","Yes — upload your logo and set your brand colors. Keep contrast high so it scans in any light."),
        ("Does it expire?","No. Static codes never expire and need no account.")]),
 dict(slug="google-maps-qr-code", dtype="url",
-  title="Free Google Maps QR Code Generator | FreeQrly",
+  title="Free Google Maps QR Code Generator: Directions in One Scan | FreeQrly",
   desc="Turn any Google Maps location into a scannable QR code. Free, no sign-up for static codes. Customers scan and navigate straight to you.",
   kw="google maps qr code generator",
   h1='Directions, <span class="hl hl-mint">one scan</span>.',
@@ -463,7 +463,7 @@ dict(slug="app-store-qr-code", dtype="appstore",
        ("Can it detect the phone and route automatically?","This is a static code with your links \u2014 it opens the iOS link first. For automatic device detection you'd need a smart link service in front; the code still works as the front door."),
        ("Does it track installs?","No \u2014 static codes are private by design and phone nothing home. Your App Store Connect and Play Console already count installs.")]),
 dict(slug="mp3-qr-code", dtype="mp3",
-  title="Free MP3 QR Code Generator | FreeQrly",
+  title="Free MP3 QR Code Generator: Songs, Podcasts & Voice Notes | FreeQrly",
   desc="Link any audio \u2014 a song, a podcast episode, a voice note \u2014 to a QR code. Free, no sign-up for static codes.",
   kw="mp3 qr code generator",
   h1='Your sound, <span class="hl hl-blush">one scan away</span>.',
@@ -477,8 +477,16 @@ dict(slug="mp3-qr-code", dtype="mp3",
        ("Can I link Spotify or Apple Music?","Yes \u2014 paste the share link. Note listeners may need that app installed; a direct MP3 link plays everywhere."),
        ("Will it play automatically on scan?","Phones open the link in the browser or audio app; autoplay depends on the listener's settings. Most tap play once.")]),
 dict(slug="black-friday-qr-code", dtype="coupon",
-  title="Free Black Friday QR Code Generator | FreeQrly",
-  desc="Free QR codes for your Black Friday sale: coupon codes customers scan instead of typing, sale pages you can repoint all weekend. Static codes need no sign-up and never expire.",
+  title="Free Black Friday QR Code Generator: Coupons, Sale Pages & Doorbusters | FreeQrly",
+  desc="Free Black Friday QR codes: coupon codes customers scan instead of typing, sale pages you can repoint all weekend, and one code per product via batch. Static codes need no sign-up and never expire.",
+  uses_h2="Black Friday ideas worth a scan",
+  uses=[("Coupon codes customers scan, not type","Print the promo code as a code, not a string of characters to mistype. A coupon scanned at the till beats one copied by hand."),
+        ("One code per product, made in a batch","Fifty sale items, fifty codes: <a href=\"/batch-qr-code/\">Batch mode</a> makes one code per link and downloads them as a ZIP — one per shelf tag or hang tag."),
+        ("A sale page you repoint all weekend","Early access Thursday, doorbusters Friday, Cyber Monday leftovers Monday: a <a href=\"/dynamic-qr-code/\">dynamic code</a> keeps its printed pattern while you change where it goes."),
+        ("Doorbuster countdowns and hourly drops","Point the code at the drop page and repoint it as stock changes — the poster never needs reprinting."),
+        ("Window posters that scan through glass","Print 10 cm (4 in) or more and the code scans from the sidewalk. The size FAQ below has the rule."),
+        ("Receipt codes that outlive the sale","Print the code on the receipt, then repoint it after the weekend: next campaign, returns page, or loyalty sign-up."),
+        ("An early-access list, not a queue","A code on the teaser poster opens the early-access sign-up — or the waitlist page — before the doors open.")],
   kw="black friday qr code",
   h1='Black Friday deals, <span class="hl hl-blush">one scan away</span>.',
   lede="Put the sale on every surface \u2014 window posters, shelf tags, receipts, packaging. Turn the promo code into a scannable code, or link straight to the deal. When the offer changes mid-weekend, a dynamic code changes with it. The poster doesn\u2019t.",
@@ -491,8 +499,17 @@ dict(slug="black-friday-qr-code", dtype="coupon",
        ("What happens to my codes after the sale?","Nothing expires. Repoint dynamic codes to your next campaign, and keep the posters for next year \u2014 same codes, new offers."),
        ("How big should a window poster code be?","Big enough to scan through glass from the sidewalk \u2014 10 cm (4 in) or more. Our blog\u2019s print size guide has the full distance table.")]),
 dict(slug="christmas-qr-code", dtype="event",
-  title="Free Christmas QR Code Generator | FreeQrly",
-  desc="Free QR codes for Christmas: cards that play a video greeting, gift tags with a surprise inside, party invitations that add themselves to calendars. No sign-up for static codes.",
+  title="Free Christmas QR Code Generator: Cards, Gift Tags & Party Invites | FreeQrly",
+  desc="Free Christmas QR codes for greeting cards, gift tags, and party invitations — video greetings, photo albums, playlists, and calendar invites in one scan. Static codes need no sign-up, no watermark, and never expire.",
+  uses_h2="Christmas ideas worth a scan",
+  uses=[("Video greeting cards","Upload the greeting to any page with a shareable link — an unlisted YouTube video works — and print the code inside the card. One scan and it plays."),
+        ("Photo albums guests can open","Link the code to a shared album from the night itself, or to a year-in-review set. Guests open it in one tap, with no app to install."),
+        ("Playlists for the party","A code on the invitation that opens the evening's playlist — or a code on the table that lets guests add requests."),
+        ("Party invitations that add themselves to calendars","The Event type carries the title, time, and place; one scan drops the party into your guests' calendar apps."),
+        ("A different code on every gift tag","Make them all at once with <a href=\"/batch-qr-code/\">Batch mode</a>: one link per line, one code per tag, downloaded as a ZIP."),
+        ("An advent calendar with 24 doors","Print a code behind each door — a photo, a clue, a tiny video. Twenty-four codes fit comfortably inside one <a href=\"/batch-qr-code/\">Batch</a> run of up to 50."),
+        ("Market stall menus and price lists","A stall code that opens the menu, the price list, or the day's specials page. Update the page and the printed code still works."),
+        ("A thank-you note that outlives the tree","Print the thank-you code with the gifts, then repoint it after the holidays: a <a href=\"/dynamic-qr-code/\">dynamic code</a> keeps its printed pattern while you change where it goes.")],
   kw="christmas qr code",
   h1='Hide a little Christmas <span class="hl hl-mint">inside a code</span>.',
   lede="Tape a code inside a card and it plays your video greeting. Stick one on a gift tag. Or send party invitations that land straight in your guests\u2019 calendars \u2014 date, time and place, no typing. Free, and made in your browser.",
@@ -507,7 +524,7 @@ dict(slug="christmas-qr-code", dtype="event",
 ]
 PAGES += [
 dict(slug="dynamic-qr-code", dtype="url", mode="dynamic",
-  title="Free Dynamic QR Code Generator | FreeQrly",
+  title="Free Dynamic QR Code Generator: Edit After Printing | FreeQrly",
   desc="Create a free dynamic QR code you can edit after printing. Change the destination anytime, see scan counts \u2014 free sign-in, no expiry, no watermark.",
   kw="dynamic qr code",
   h1='A QR code you can <span class="hl hl-blush">change after printing</span>.',
@@ -802,6 +819,12 @@ def build(p):
         locale_alts = "\n".join(
             f'<meta property="og:locale:alternate" content="{lc}">' for lc in ("zh_CN", "es_ES", "hi_IN", "ar_AR", "pt_BR", "fr_FR", "ru_RU", "de_DE", "ja_JP"))
     compare_html = f'\n  <section class="compare" id="compare">\n{p["compare"]}\n  </section>\n' if p.get("compare") else ""
+    if p.get("uses"):
+        uses_cards = "\n".join(
+            '    <article class="use-card"><span class="use-dot" aria-hidden="true"></span><div class="use-body"><h3>%s</h3><p>%s</p></div></article>' % (t, d) for t, d in p["uses"])
+        uses_html = f'\n  <section class="uses" id="uses">\n    <h2>{p["uses_h2"]}</h2>\n    <div class="uses-grid">\n{uses_cards}\n    </div>\n  </section>\n'
+    else:
+        uses_html = ""
     # Non-comparison pages only: comparison pages already carry these
     # figures in their tables and their own checked dates.
     glance_html = "" if p.get("compare") else '\n      <p class="glance"><b>At a glance:</b> 20 free dynamic codes (currently unlimited during the limited-time promotion) · up to 50 codes per batch · 17 code types · Pro $9/mo or $90/yr · unlimited scans</p>\n      <p class="updated">Last updated: October 30, 2026</p>'
@@ -860,7 +883,7 @@ def build(p):
     </ol>
   </section>
 {studio}
-{compare_html}
+{compare_html}{uses_html}
   <section class="faq" id="faq">
     <h2>Good to know</h2>
 {faq_html}

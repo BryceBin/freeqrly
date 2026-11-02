@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¿Caducan los códigos QR? La respuesta corta es no — FreeQrly</title>
-<meta name="description" content="¿Caducan los códigos QR? Los códigos QR estáticos nunca caducan: el patrón guarda tu enlace para siempre. Aprende qué deja de funcionar en realidad (y por qué mueren los códigos de pago).">
+<title>¿Los códigos QR caducan? No, pero los de pago pueden morir | FreeQrly</title>
+<meta name="description" content="¿Los códigos QR caducan? Los estáticos nunca caducan: el patrón guarda tu enlace para siempre. Lo que realmente deja de funcionar son los códigos dinámicos de pago cuando termina la suscripción.">
 <link rel="canonical" href="https://freeqrly.com/es/blog/do-qr-codes-expire/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/do-qr-codes-expire/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/do-qr-codes-expire/">
@@ -18,8 +18,8 @@
 <link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/do-qr-codes-expire/">
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/do-qr-codes-expire/">
 <meta name="theme-color" content="#FAF5EA">
-<meta property="og:title" content="¿Caducan los códigos QR? La respuesta corta es no — FreeQrly">
-<meta property="og:description" content="¿Caducan los códigos QR? Los códigos QR estáticos nunca caducan: el patrón guarda tu enlace para siempre. Aprende qué deja de funcionar en realidad (y por qué mueren los códigos de pago).">
+<meta property="og:title" content="¿Los códigos QR caducan? No, pero los de pago pueden morir | FreeQrly">
+<meta property="og:description" content="¿Los códigos QR caducan? Los estáticos nunca caducan: el patrón guarda tu enlace para siempre. Lo que realmente deja de funcionar son los códigos dinámicos de pago cuando termina la suscripción.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://freeqrly.com/es/blog/do-qr-codes-expire/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3z-20261102">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3z-20261102">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3z-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"¿Caducan los códigos QR? La respuesta corta es no — FreeQrly","description":"¿Caducan los códigos QR? Los códigos QR estáticos nunca caducan: el patrón guarda tu enlace para siempre. Aprende qué deja de funcionar en realidad (y por qué mueren los códigos de pago).","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"¿Los códigos QR caducan? No, pero los de pago pueden morir | FreeQrly","description":"¿Los códigos QR caducan? Los estáticos nunca caducan: el patrón guarda tu enlace para siempre. Lo que realmente deja de funcionar son los códigos dinámicos de pago cuando termina la suscripción.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -90,9 +90,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3z-20261102"></script>
-<script src="/assets/js/acct-menu.js?v=b3z-20261102"></script>
-<script src="/assets/js/subpage-header.js?v=b3z-20261102"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/privacy.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notas de campo</div>
@@ -106,7 +106,7 @@
 <h2>Entonces, ¿por qué dice la gente que los códigos QR caducan?</h2>
 <p>Tres cosas distintas se mezclan:</p>
 <ul>
-<li><strong>Los códigos dinámicos mueren cuando dejas de pagar.</strong> Muchos generadores "gratis" en realidad crean códigos <em>dinámicos</em>: en lugar de tu enlace, el patrón guarda una URL corta en <em>su</em> servidor, que redirige a tu enlace. Deja de pagar y apagan la redirección. Tu código no caducó: lo tomaron de rehén.</li>
+<li><strong>Los códigos dinámicos mueren cuando dejas de pagar.</strong> Muchos generadores "gratis" en realidad crean códigos <em>dinámicos</em>: en lugar de tu enlace, el patrón guarda una URL corta en <em>su</em> servidor, que redirige a tu enlace. Deja de pagar y apagan la redirección. Tu código no caducó: lo tomaron de rehén. Cómo se comparan las cuotas gratuitas: <a href="/es/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a>.</li>
 <li><strong>Los enlaces se pudren; los códigos no.</strong> Si la página detrás del código se borra, escanear no lleva a ningún lado. Eso es el destino muriendo, no el código. Un código QR que apunta a un enlace muerto es un código perfectamente sano sin nada que decir.</li>
 <li><strong>Las cuentas de prueba se desactivan.</strong> Algunos servicios atan tus códigos a una cuenta y luego te empujan hacia una suscripción. El código no caducó: la cuenta sí.</li>
 </ul>
@@ -122,7 +122,7 @@
 <li><strong>Impresión demasiado pequeña.</strong> Como regla práctica, mantén los códigos de al menos 2 × 2 cm con un margen silencioso. Los códigos diminutos en tarjetas de visita son un fallo de escaneo común.</li>
 <li><strong>Bajo contraste.</strong> Tinta oscura sobre fondo claro. Ese código de boda champán sobre crema es hermoso e ilegible.</li>
 <li><strong>Daño.</strong> Los códigos al aire libre se decoloran y se rayan. Una mayor corrección de errores (por defecto usamos M, y la subimos sola cuando añades un logo) permite que un código sobreviva a <a href="http://www.iso.org/standard/83389.html">hasta un 30% de daño</a> en el nivel Alto definido en ISO/IEC 18004.</li>
-<li><strong>Cambios de enlace.</strong> ¿Mudaste tu sitio? El código viejo sigue apuntando a la URL vieja. Lleva una lista de dónde vive cada código.</li>
+<li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Guarda una lista de dónde vive cada código, o usa un <a href="/es/dynamic-qr-code/">código dinámico</a> y cambia su destino en vez de reimprimir.</li>
 </ul>
 
 <h2>El punto de vista de FreeQrly</h2>
@@ -148,7 +148,7 @@
       <div class="fl" style="margin-top:34px">Seguir leyendo</div>
       <div class="rel-grid">
         <a class="rel-card" href="/es/blog/how-to-scan-a-qr-code/"><b>Cómo escanear un código QR (iPhone y Android)</b></a>
-        <a class="rel-card" href="/es/blog/qr-code-print-size-guide/"><b>Guía de tamaño de impresión de códigos QR: ¿qué tan grande debe ser?</b></a>
+        <a class="rel-card" href="/es/blog/qr-code-print-size-guide/"><b>QR Code Guía de tamaño de impresión: Business Cards to Posters</b></a>
         <a class="rel-card" href="/es/blog/free-qr-codes-that-dont-expire/"><b>Códigos QR gratis que nunca caducan</b></a>
       </div>
     </div>
