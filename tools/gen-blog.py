@@ -60,8 +60,8 @@ POSTS = [
  ),
  dict(
   slug="static-vs-dynamic-qr-codes",
-  title="Static vs Dynamic QR Codes | FreeQrly",
-  desc="Static vs dynamic QR codes explained honestly: when you need an editable, trackable dynamic code — and when static is the smarter, free choice.",
+  title="Static vs Dynamic QR Codes: Free Forever or a Subscription? | FreeQrly",
+  desc="Static codes are free forever: no sign-up, no watermark, no expiry. Dynamic codes are editable and trackable — FreeQrly gives you 20 free (currently unlimited) with scan stats. Here is how to choose.",
   h1="Static vs <span class='hl hl-blush'>dynamic</span> QR codes",
   lede="One of them is free forever. The other is a subscription. Here's how to tell which one you actually need.",
   date="October 13, 2026",
@@ -73,6 +73,18 @@ POSTS = [
 <p>A <strong>static QR code</strong> contains your destination directly. Scan it and your phone reads the WiFi password, the vCard, or the URL straight out of the pattern. No middleman, no server, no account.</p>
 <p>A <strong>dynamic QR code</strong> contains a short link on the vendor's server. Scan it, your phone visits their server, and their server redirects you to the real destination. Because the destination lives on their server, the vendor can change it later — and count every scan.</p>
 <p>That's the entire difference. Everything else is consequences.</p>
+
+<h2>Static vs dynamic at a glance</h2>
+<table>
+<tr><th></th><th>Static code</th><th>Dynamic code</th></tr>
+<tr><td><strong>Where the destination lives</strong></td><td>In the pattern itself</td><td>On the vendor's server, behind a short link</td></tr>
+<tr><td><strong>Edit after printing</strong></td><td>No — print a new code</td><td>Yes — change the destination any time</td></tr>
+<tr><td><strong>Scan statistics</strong></td><td>None — scans are silent</td><td>Counts and more, from the vendor</td></tr>
+<tr><td><strong>Account needed</strong></td><td>No</td><td>Yes — a free account at minimum</td></tr>
+<tr><td><strong>Cost</strong></td><td>Free forever</td><td>Free up to a limit, then a subscription</td></tr>
+<tr><td><strong>Expiry</strong></td><td>Never — as long as the link works</td><td>Lives as long as the account and plan do</td></tr>
+<tr><td><strong>Privacy</strong></td><td>Scans touch nothing but the destination</td><td>Every scan pings the vendor's server</td></tr>
+</table>
 
 <h2>When dynamic actually makes sense</h2>
 <ul>
@@ -100,7 +112,7 @@ POSTS = [
 </ul>
 
 <h2>Where FreeQrly stands</h2>
-<p>FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. <a href="/blog/how-to-create-a-dynamic-qr-code/">How to create one</a>, <a href="/blog/how-to-edit-a-qr-code-after-printing/">how to edit after printing</a>, and <a href="/blog/dynamic-qr-code-statistics/">what the stats tell you</a>.</p>
+<p>FreeQrly makes both. Static codes are free, unlimited, no account — and cover most everyday needs. Dynamic codes are free too: sign in (email, Google, or GitHub) and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. <a href="/blog/how-to-create-a-dynamic-qr-code/">How to create one</a>, <a href="/blog/how-to-edit-a-qr-code-after-printing/">how to edit after printing</a>, and <a href="/blog/dynamic-qr-code-statistics/">what the stats tell you</a>. <a href="/dynamic-qr-code/">Make your first dynamic code</a> — free to start.</p>
 """,
   faq=[
     ("What is the difference between static and dynamic QR codes?",
@@ -324,7 +336,7 @@ POSTS += [{'body': '\n'
   'sources': [('http://www.iso.org/standard/83389.html', 'ISO/IEC 18004:2024', 'The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.')]},
  {'body': '\n'
           '<h2>1. The menu code</h2>\n'
-          '<p>Link it to your online menu — your website, a PDF, or your Google Business menu. '
+          '<p>Link it to your online menu — your website, a <a href="/pdf-qr-code/">PDF</a>, or your Google Business menu. '
           'Print one per table or a single framed code at the entrance. Generate it with the <a '
           'href="/google-form-qr-code/">link generator</a> in seconds, export at 1024 px, and '
           "you're done. Pro tip: link to a page you control, not a screenshot — when the menu "
@@ -436,8 +448,8 @@ POSTS += [{'body': '\n'
           'also free, also private.</p>\n',
   'date': 'October 14, 2026',
   'datePublished': '2026-10-14',
-  'desc': 'Scan QR codes online for free: use your camera or upload an image. Decoded in your '
-          'browser — nothing is ever uploaded. No app, no sign-up.',
+  'desc': 'Scan a QR code online in seconds: use your camera or upload a photo or screenshot. '
+          'Decoded in your browser, so nothing is ever uploaded. No app, no sign-up.',
   'faq': [('Is it safe to scan QR codes online?',
            'It depends where the image goes. Many online scanners upload your image to their '
            'server. FreeQrly decodes it locally in your browser, so nothing is transmitted '
@@ -450,7 +462,7 @@ POSTS += [{'body': '\n'
            'has loaded.')],
   'h1': 'Scan QR codes <span class="hl hl-mint">online</span>, privately',
   'howto': [('Open the scanner',
-             'Go to the FreeQrly scanner — no app to install, no account needed.'),
+             'Go to the <a href="/scan/">FreeQrly scanner</a> — no app to install, no account needed.'),
             ('Use your camera or upload',
              'Point your camera at the code, or upload a photo or screenshot that contains one.'),
             ('Get the result instantly',
@@ -460,7 +472,7 @@ POSTS += [{'body': '\n'
           'code is decoded right in your browser. Camera or image upload, free forever.',
   'mascot': 'scanner',
   'slug': 'scan-qr-code-online',
-  'title': 'Scan QR Codes Online — Free, No App, No Upload | FreeQrly',
+  'title': 'Scan Any QR Code Online Free — No App, No Upload | FreeQrly',
   'sources': [('https://github.com/cozmo/jsQR', 'jsQR on GitHub', 'A pure JavaScript QR code reading library. Takes in raw images and locates, extracts and parses any QR code found within.')]},
  {'body': '\n'
           '<h2>On iPhone</h2>\n'
@@ -485,8 +497,8 @@ POSTS += [{'body': '\n'
           'decoder</a> never sees anything but your own browser tab.</p>\n',
   'date': 'October 14, 2026',
   'datePublished': '2026-10-14',
-  'desc': 'How to scan a QR code from a picture, photo, or screenshot — on iPhone, Android, and '
-          'PC. Free online decoder, no app needed.',
+  'desc': 'Your QR code is in a photo, not in front of your camera. Here is how to decode it on '
+          'iPhone, Android, and PC — free, no app needed.',
   'faq': [('How do I scan a QR code from a screenshot on iPhone?',
            'Open the screenshot in Photos and long-press the code — iOS reads it directly from the '
            'image.'),
@@ -509,7 +521,7 @@ POSTS += [{'body': '\n'
           'Android, and desktop — no app required.',
   'mascot': 'scanner',
   'slug': 'scan-qr-code-from-image',
-  'title': 'How to Scan a QR Code from a Picture | FreeQrly'},
+  'title': 'How to Scan a QR Code from a Picture, Photo, or Screenshot | FreeQrly'},
  {'body': '\n'
           '<h2>1. Check-in &amp; registration</h2>\n'
           '<p>Put a code on the confirmation email linking to a check-in form (or a simple "I\'m '
@@ -1029,8 +1041,8 @@ POSTS += [
  ),
  dict(
   slug="how-to-scan-qr-code-on-phone",
-  title="How to Scan a QR Code on Your Phone (iPhone & Android) | FreeQrly",
-  desc="How to scan a QR code on your phone: iPhone Camera and Control Center, Android camera and Google Lens. No extra app needed, plus fixes when it won't scan.",
+  title="How to Scan a QR Code on Your Phone: iPhone & Android, No App Needed | FreeQrly",
+  desc="No app needed: point your camera at the code. iPhone Camera and Control Center, Android camera and Google Lens — plus fixes for when it won't scan.",
   h1="How to scan a QR code <span class='hl hl-mint'>on your phone</span>",
   lede="No app to install — your phone already knows how. Here's where the scanner lives on iPhone and Android, and what to do when it won't read.",
   date="October 19, 2026",
