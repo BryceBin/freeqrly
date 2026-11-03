@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate the 2 SEO blog posts for FreeQrly."""
+import math
 import os
+import re
 
 SITE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 
@@ -2109,9 +2111,14 @@ def build(p, all_posts=None):
     # Updated mechanism: shown only when a post actually carries an
     # 'updated' (long display) + 'dateModified' (ISO) pair. Never rendered
     # otherwise — no fabricated updated dates.
-    meta_line = f'{p["date"]} · 4 min read'
+    # Read time: computed from the post's own words (body + FAQ) at 200 wpm,
+    # rounded up, minimum 1 — never a hardcoded figure.
+    _read_text = re.sub(r'<[^>]+>', ' ', p["body"])
+    _read_text += ' ' + ' '.join(q + ' ' + a for q, a in p["faq"])
+    _read_min = max(1, math.ceil(len(_read_text.split()) / 200))
+    meta_line = f'{p["date"]} · {_read_min} min read'
     if p.get("updated"):
-        meta_line = f'{p["date"]} · Last updated: {p["updated"]} · 4 min read'
+        meta_line = f'{p["date"]} · Last updated: {p["updated"]} · {_read_min} min read'
     datemod_b = f',"dateModified":"{p["dateModified"]}"' if p.get("dateModified") else ""
     faq_html = "\n".join(
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
