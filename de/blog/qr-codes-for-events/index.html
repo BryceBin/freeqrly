@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"QR-Codes für Events: Check-in, Tickets & mehr | FreeQrly","description":"So nutzt du QR-Codes für Events: Check-in, Registrierung, Tickets, Fototeilen und Zum-Kalender-Hinzufügen-Codes. Kostenloser Generator.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"QR-Codes für Events: Check-in, Tickets & mehr | FreeQrly","description":"So nutzt du QR-Codes für Events: Check-in, Registrierung, Tickets, Fototeilen und Zum-Kalender-Hinzufügen-Codes. Kostenloser Generator.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "Wie mache ich einen QR-Code für den Event-Check-in?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Verlinke den Code auf dein Check-in-Formular oder deine Registrierungsseite, drucke ihn für den Eingang, und Gäste scannen bei der Ankunft, statt an einem Schalter Schlange zu stehen."
+        "text": "Verlinke den Code zu deinem Check-in-Formular oder deiner Anmeldeseite, drucke ihn für den Eingang, und Gäste scannen bei Ankunft, statt an einem Tresen Schlange zu stehen. Halte eine gedruckte Gästeliste neben dem Scanner als Ausweichlösung für Handys, die sterben, oder Bildschirme, die sich nicht lesen lassen."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "Kann ein QR-Code ein Event zu meinem Kalender hinzufügen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — Kalender-QR-Codes (VEVENT) öffnen eine „Zum Kalender hinzufügen“-Aufforderung auf iPhones und Androids. FreeQrly erzeugt sie kostenlos mit seinem Event-Typ."
+        "text": "Ja – Kalender-Codes (VEVENT) öffnen auf iPhones und Android-Geräten eine „Zum Kalender hinzufügen“-Aufforderung. FreeQrly generiert sie kostenlos mit seinem Event-Typ: Titel, Start- und Endzeit und Ort in einem Scan."
       }
     },
     {
@@ -75,7 +80,39 @@
       "name": "Welche QR-Codes brauche ich für ein Event?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mindestens: Check-in/Registrierung, ein geteiltes Fotoalbum und Location-WLAN. Zum-Kalender-Hinzufügen-Codes auf Einladungen sind das Extra mit hohem ROI."
+        "text": "Mindestens: Check-in/Anmeldung, ein geteiltes Fotoalbum und WLAN des Veranstaltungsorts. Codes zum Kalender hinzufügen auf Einladungen sind das hochwertige Extra. Für Konferenzen füge Programm- und Sprecher-Codes hinzu; für Events mit Tickets einen Code pro Ticket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sollten Event-Ticket-Codes statisch oder dynamisch sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Code pro Ticket, und dynamisch, wenn ein Ticket übertragen oder storniert werden kann oder wenn sich die Prüfseite ändern könnte – ein dynamischer Code lässt sich ohne Neudruck des Tickets umleiten. Ein einfaches, nicht übertragbares Ticket mit einer finalen Prüfseite kann einen statischen Code nutzen. Drucke nie einen gemeinsamen Code auf jedes Ticket: Er kann ein Ticket nicht vom anderen unterscheiden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was, wenn der Ticket-Code eines Gastes an der Tür nicht scannt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prüfe den Namen anhand der gedruckten Gästeliste, statt den Gast abzuweisen. Handys sterben, Bildschirme springen, und Screenshots kommen zu dunkel an, um sie zu lesen. Entscheide vor Türöffnung, was das Tür-Team tut, wenn ein Code schon benutzt wurde – ein zurückkehrender Gast oder ein Screenshot, der die Runde macht, braucht eine Regel, keine Debatte vor einer Schlange."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich Event-Beschilderung fürs nächste Event wiederverwenden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, wenn die Codes darauf dynamisch sind. Ein dynamischer Code auf einem wiederverwendbaren Schild lässt sich auf das Feedback-Formular oder Programm des nächsten Events umleiten, das Schild muss also nie neu gedruckt werden. Statische Codes sind besser für Andenken – Einladungen und gedruckte Programme, die jahrelang weiter funktionieren sollen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie groß sollten Event-QR-Codes gedruckt werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bemale jeden Code nach seiner tatsächlichen Scandistanz, mit der 1:10-Distanz-Faustregel aus dem Druckgrößen-Leitfaden: Ein Code, der aus einem Meter Entfernung gescannt wird, muss grob zehnmal größer sein als einer, der aus zehn Zentimetern gescannt wird. Halte den Kontrast hoch, lass einen klaren ruhigen Rand und teste den tatsächlichen Druck auf iPhone und Android bei Licht wie dem des Veranstaltungsorts, bevor du eine volle Auflage druckst."
       }
     }
   ]
@@ -93,52 +130,120 @@
     <div class="kicker" style="text-align:center">Feldnotizen</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">QR-Codes für <span class="hl hl-blush">Events</span>, richtig gemacht</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Check-in-Schlangen, Ticket-Chaos, „Wo sind die Fotos?“ — ein paar gut platzierte QR-Codes lösen die wiederkehrenden Event-Kopfschmerzen. Hier ist das Playbook.</p>
-    <p class="meta" style="text-align:center">14. Oktober 2026 · 4 Min. Lesezeit</p>
+    <p class="meta" style="text-align:center">14. Oktober 2026 · Zuletzt aktualisiert: 3. November 2026 · 15 Min. Lesezeit</p>
     <div class="prose" style="margin-top:40px">
-
-<h2>1. Check-in &amp; Registrierung</h2>
-<p>Setz einen Code in die Bestätigungs-E-Mail, der auf ein Check-in-Formular verlinkt (oder eine simple „Ich bin da“-Seite). Gäste scannen an der Tür, statt ihre Namen einem Freiwilligen mit Klemmbrett zu buchstabieren. Für Events mit Tickets: Jedes Ticket auf seine Validierungsseite verlinken.</p>
-<h2>2. Zum-Kalender-Hinzufügen-Codes</h2>
-<p>Der am meisten unterschätzte Event-Code: einer, der das Event direkt in den Kalender des Gastes wirft. FreeQrlys <a href="/de/?type=event">Event-QR-Typ</a> baut ihn in Sekunden — Titel, Start-/Endzeit, Ort — und das Scannen bietet „Zum Kalender hinzufügen“ auf iPhone und Android. Auf die Einladung drucken — ein Schritt weniger zwischen Einladung und Kalender kann weniger No-Shows bedeuten. Planst du eine Weihnachtsparty? Der gleiche Einladungstrick funktioniert auch an den Feiertagen — schau dir den <a href="/de/christmas-qr-code/">Weihnachts-QR-Code-Generator</a> für Karten-, Anhänger- und Party-Ideen an.</p>
-<h2>3. Das geteilte Fotoalbum</h2>
-<p>Jedes Event hat dasselbe Problem: Die Fotos verteilen sich auf fünfzig Handys. Ein Code, der auf ein geteiltes Album verlinkt (Google Fotos, geteiltes iCloud-Album), auf Tischkarten behebt es — Gäste laden ihre Fotos mit einem Tap hoch.</p>
-<h2>4. WLAN für die Location</h2>
-<p>Teilnehmer werden nach WLAN fragen. Ein <a href="/de/wifi-qr-code/">WLAN-QR-Code</a> auf Schildern verbindet sie mit einem Scan — kein Passwort-Buchstabieren über lauter Musik.</p>
-<h2>5. Feedback &amp; Nachbereitung</h2>
-<p>Ein Code, der auf ein 2-Fragen-Feedback-Formular auf der Ausgangsbeschilderung oder der Abschlussfolie verlinkt. Gäste antworten, während das Event noch frisch ist, statt Tage später eine Nachbereitungs-E-Mail zu ignorieren.</p>
+<p>Check-in-Schlangen, Ticket-Chaos, „Wo sind die Fotos?“ – ein paar gut platzierte QR-Codes lösen die wiederkehrenden Event-Kopfschmerzen. Der Trick ist nicht der Code selbst; es ist, jeden Code einem Moment in der Reise des Gastes zuzuordnen und für jeden Moment bewusst statisch oder dynamisch zu wählen. Ein Code auf der Einladung macht einen anderen Job als ein Code auf dem Ausgangsschild, und die falsche Art am falschen Ort zu drucken, ist der Weg, wie Events mit einer Wand aus Codes enden, die niemand scannt.</p>
+<p>Starte beim Gast, nicht bei der Technik. Ein Gast begegnet deinem Event in grob fünf Momenten: Er hört davon, er sagt zu, er kommt an, er nimmt teil und er geht. Jeder Moment hat eine Frage – wann ist es, bin ich dabei, wohin gehe ich, was passiert, was fand ich –, und jede Frage hat einen Code, der sie mit einem Scan beantwortet.</p>
+<h2>Die Event-Code-Karte</h2>
+<div class="table-scroll"><table>
+<tr><th>Gastmoment</th><th>Der Code</th><th>Wohin er gehört</th><th>Statisch oder dynamisch</th></tr>
+<tr><td>Vorher: Davon hören</td><td>Code zum Kalender hinzufügen (Event-Typ)</td><td>Einladung, Save-the-Date, E-Mail</td><td>Statisch – Datum, Uhrzeit und Ort ändern sich selten, und eine Einladung als Andenken sollte weiter funktionieren</td></tr>
+<tr><td>Vorher: Zusagen</td><td>RSVP- oder Anmeldeformular</td><td>Einladungs-Detailkarte, Event-Seite</td><td>Statisch, wenn der Formular-Link final ist; dynamisch, wenn das Formular umziehen könnte</td></tr>
+<tr><td>Vorher: Tickets</td><td>Ticket-Prüfseite, ein Code pro Ticket</td><td>Ticket-E-Mail, gedrucktes Ticket</td><td>Dynamisch, wenn ein Ticket übertragen oder storniert werden kann; statisch nur für ein einfaches, nicht übertragbares Ticket</td></tr>
+<tr><td>Ankunft: Check-in</td><td>Check-in-Formular oder „Ich bin da“-Seite</td><td>Bestätigungs-E-Mail, Eingangsschild</td><td>Dynamisch, wenn sich die Check-in-Seite oder der Tagesplan ändern könnte</td></tr>
+<tr><td>Währenddessen: Programm und Sprecher</td><td>Programmseite, Sprecher-Bios</td><td>Programmheft, Session-Schilder, Folienfußzeilen</td><td>Dynamisch – Programme ändern sich, Sprecher springen ab, Räume wechseln</td></tr>
+<tr><td>Währenddessen: Verbindung</td><td>WLAN des Veranstaltungsorts</td><td>Eingang und Tischbeschilderung</td><td>Statisch – das Netzwerk ändert sich am Tag selten</td></tr>
+<tr><td>Währenddessen: Fotos</td><td>Geteiltes Fotoalbum</td><td>Tischkarten, Fotowand, Abschlussfolie</td><td>Dynamisch, wenn du Alben wechseln könntest; statisch, wenn das Album feststeht</td></tr>
+<tr><td>Danach: Feedback</td><td>Kurzes Feedback-Formular</td><td>Ausgangsbeschilderung, Abschlussfolie, Danke-E-Mail</td><td>Dynamisch, wenn du das Schild fürs nächste Event wiederverwendest</td></tr>
+</table></div>
+<p>Das Muster in dieser Tabelle ist die ganze Strategie: Alles, was sich nach dem Druck ändern könnte, wird dynamisch, und alles Feste wird statisch. Ein statischer Code läuft nie ab – richtig für eine Einladung als Andenken, falsch für ein Programm, das am Morgen des Events noch bearbeitet wird.</p>
+<h2>Vor dem Event: Einladungen, Kalender und RSVP</h2>
+<p>Die Einladung ist der Ort, an dem die meisten Event-Codes versagen, denn Organisatoren drucken einen Code, der zu einer Homepage führt, und erwarten, dass Gäste das RSVP-Formular selbst finden. Verlinke den Code zum Formular, nicht zur Website. Baue zuerst dein RSVP-Formular – ein einfaches Formular-Tool reicht –, generiere dann den Code, drucke ihn auf die Einladungssuite, und Gäste scannen, tippen und antworten. Keine Briefmarken, keine verlorenen Antwortkarten, kein Entziffern von Handschrift. Nachdem die Antworten eingehen, zählt das Formular sie automatisch, Essenswünsche inklusive; exportiere in ein Blatt, teile es mit dem Caterer, und die Verwaltung ist erledigt.</p>
+<p>Kopple den RSVP-Code mit einem Code zum Kalender hinzufügen, dem am meisten unterschätzten Event-Code überhaupt. Ein Scan legt das Event – Titel, Start- und Endzeit, Ort – direkt in den Kalender des Gastes, sowohl auf iPhone als auch auf Android. Drucke ihn auf die Einladung, und ein Schritt weniger steht zwischen Einladung und Kalender, was weniger Nichterscheinen bedeuten kann. Eine Hochzeitseinladungs-Suite ist der klassische Fall: Der RSVP-Code kommt auf die Detailkarte, der Kalender-Code daneben, und der Fotoalbum-Code wartet auf die Tischkarten. Derselbe Einladungstrick funktioniert für Weihnachtsfeiern – siehe den <a href="/de/christmas-qr-code/">Weihnachts-QR-Code-Generator</a>.</p>
+<p>Formuliere den Einladungs-Code so, wie du eine Anweisung an einen Fremden formulieren würdest. Drucke genau daneben, was als Nächstes zu tun ist: „Scanne, um bis zum 1. Juni zuzusagen.“ Ältere Gäste brauchen vielleicht den Anstoß, und die wirklich Scan-Abgeneigten brauchen trotzdem eine Telefonnummer auf der Einladung. Jeder Code sollte neben einer kurzen gedruckten Alternative stehen – einem Link oder einer Telefonnummer –, sodass ein Gast mit leerem Akku, ohne Signal oder ohne Kamera-Handy nicht ausgesperrt ist.</p>
+<h2>Tickets: Ein Code pro Ticket, und was das wirklich heißt</h2>
+<p>Bei Events mit Tickets verlinke jedes Ticket mit seiner eigenen Prüfseite statt einen gemeinsamen Code auf jedes Ticket zu drucken. Ein gemeinsamer Code kann ein Ticket nicht vom anderen unterscheiden, er kann also kein Ticket erwischen, das zweimal gescannt wurde – und ein Screenshot eines gemeinsamen Codes ist ein Gratis-Ticket für jeden, der ihn erhält.</p>
+<p>Die Stapelerstellung verwandelt eine Liste von Ticket-Links in einem Download in einen Satz Codes. Benenne die Dateien nach Ticket oder Gast und test-scanne eine Stichprobe vor dem Versand. An der Tür braucht das Check-in-Team vor allem eines: eine Ausweichlösung. Handys sterben, Bildschirme springen, und Screenshots kommen zu dunkel an, um sie zu lesen. Halte eine gedruckte Gästeliste am Eingang bereit und schule das Tür-Team, einen Namen zu prüfen, wenn ein Code sich nicht lesen lässt.</p>
+<h2>An der Tür: Check-in ohne Klemmbrett-Schlange</h2>
+<p>Platziere einen Code in der Bestätigungs-E-Mail, der zu einem Check-in-Formular verlinkt, oder zu einer einfachen „Ich bin da“-Seite. Gäste scannen an der Tür, statt ihre Namen einem Freiwilligen mit Klemmbrett zu buchstabieren. Für ein kleines Event kann dieses Formular so einfach sein wie ein Namensfeld und ein Absenden-Knopf.</p>
+<p>Drei Details lassen Tür-Check-in funktionieren. Erstens: Drucke den Eingangs-Code groß und auf Brusthöhe, wo ein Gast, der ein Handy hält, es natürlicherweise hinrichtet – nicht auf einem Tisch, hinter dem Leute Schlange stehen, und nicht auf einer schwingenden Tür. Zweitens: Gib dem Tür-Team einen zweiten Weg hinein: einen gedruckten Link und die Gästeliste auf Papier. Drittens: Entscheide vor Türöffnung, was passiert, wenn ein Code schon benutzt wurde. Ein Ticket, das zweimal gescannt wurde, ist entweder ein zurückkehrender Gast oder ein Screenshot, der die Runde macht; das Tür-Team braucht eine Regel, keine Debatte vor einer Schlange.</p>
+<h2>Während des Events: Programm, Sprecher, WLAN und die Fotowand</h2>
+<h3>Programm und Sprecher-Bios</h3>
+<p>Ein Code auf dem Programm – oder in der Fußzeile jeder Session-Folie –, der zur Live-Programmseite verlinkt, erspart dir, das Programm jedes Mal neu zu drucken, wenn eine Session den Raum wechselt. Das ist der stärkste Fall für dynamische Codes bei einem Event: Das gedruckte Muster bleibt gleich, während sich das Ziel aus deinem Dashboard ändert. Sprecher-Bios funktionieren genauso.</p>
+<h3>WLAN des Veranstaltungsorts</h3>
+<p>Teilnehmer werden nach WLAN fragen. Ein <a href="/de/wifi-qr-code/">WLAN-QR-Code</a> auf Schildern verbindet sie mit einem Scan – kein Buchstabieren von Passwörtern über laute Musik, keine Schlange am Helpdesk. Platziere ihn dort, wo Leute zuerst danach suchen: am Eingang, am Anmeldetresen und auf den Tischen, nicht nur auf einer Folie, die nach dreißig Sekunden verschwindet. Ein ehrlicher Kompromiss: Jeder, der den gedruckten Code fotografiert, kann dem Netzwerk beitreten, behandle einen Veranstaltungs-WLAN-Code also wie einen Gastschlüssel.</p>
+<h3>Das geteilte Fotoalbum</h3>
+<p>Jedes Event hat dasselbe Problem: Die Fotos verstreuen sich über fünfzig Handys, und der Organisator verbringt die nächste Woche damit, darum zu betteln. Ein Code, der zu einem geteilten Album auf Tischkarten verlinkt, behebt es – Gäste laden ihre Aufnahmen mit einem Tipp hoch, die ganze Nacht, an einen Ort. Drucke ihn auf die Tischkarten, auf ein Fotowand-Schild und auf die Abschlussfolie, wo Gäste ihn sehen, wenn sie ein Foto machen. Prüfe die Freigabe-Einstellungen des Albums vor dem Event: Jeder mit dem Link kann meist zu einem geteilten Album hinzufügen. Wenn das Album nur für Gäste gedacht ist, halte den Code im Raum statt auf einer öffentlichen Event-Seite.</p>
+<h2>Nach dem Event: Feedback, solange es noch frisch ist</h2>
+<p>Ein Code, der zu einem kurzen Feedback-Formular auf der Ausgangsbeschilderung oder der Abschlussfolie verlinkt, erwischt Gäste, solange das Event noch frisch ist, statt mit einer Follow-up-E-Mail Tage später zu konkurrieren, die die meisten Gäste ignorieren werden. Halte das Formular bei zwei Fragen: einer Bewertung und einem offenen Feld für das, was zu ändern ist. Eine Zehn-Fragen-Umfrage am Ausgang wird abgebrochen; ein Zwei-Fragen-Formular wird auf dem Weg zum Auto beantwortet. Die Danke-E-Mail am nächsten Tag kann denselben Code erneut tragen, plus den Fotoalbum-Link, für Gäste, die zu schnell gegangen sind.</p>
+<p>Nach dem Event zahlt sich die Statisch-vs.-Dynamisch-Wahl ein zweites Mal aus. Ein dynamischer Code auf einem wiederverwendbaren Schild lässt sich auf das Feedback-Formular des nächsten Events umleiten, das Schild muss also nie neu gedruckt werden. Ein statischer Code auf einem Andenken funktioniert jahrelang als Erinnerung weiter. Entscheide vor dem Druck, welche Art von Nachleben jedes Schild haben soll.</p>
+<h2>Statisch oder dynamisch: der Vorher-Nachher-Unterschied</h2>
+<p>Der ehrliche Vergleich ist nicht „dynamisch ist besser“. Die zwei Arten versagen unterschiedlich, und ein Event ist genau der Ort, an dem sich beide Fehlermodi zeigen:</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>Statisch</th><th>Dynamisch</th></tr>
+<tr><td><strong>Was er enthält</strong></td><td>Das Ziel selbst, im Muster</td><td>Ein Kurzlink, der zum Ziel weiterleitet</td></tr>
+<tr><td><strong>Wenn sich das Ziel nach dem Druck ändert</strong></td><td>Der Code bricht; neu drucken</td><td>Das Ziel im Dashboard bearbeiten; jedes gedruckte Exemplar folgt</td></tr>
+<tr><td><strong>Wenn du wissen willst, was gescannt wurde</strong></td><td>Nichts wird aufgezeichnet; statische Codes melden sich nie nach Hause</td><td>Scan-Statistiken zeigen Summen, Zeiten und Aufschlüsselungen – siehe <a href="/de/blog/dynamic-qr-code-statistics/">Was dir Statistiken dynamischer QR-Codes sagen</a></td></tr>
+<tr><td><strong>Braucht ein Konto</strong></td><td>Nein – kostenlos, keine Anmeldung, kein Wasserzeichen, läuft nie ab</td><td>Ja – kostenlose Anmeldung, 20 Codes auf dem kostenlosen Konto, unbegrenzte Scans während der zeitlich begrenzten Aktion</td></tr>
+<tr><td><strong>Beste Event-Nutzungen</strong></td><td>Einladungen, Kalender-Codes, WLAN, Andenken</td><td>Programm, Check-in, Feedback, wiederverwendbare Beschilderung, alles, was sich bewegen könnte</td></tr>
+<tr><td><strong>Fehlermodus</strong></td><td>Leise: Ein geänderter Link heißt ein toter Code, den niemand meldet</td><td>Abhängig: Der Redirect-Dienst muss oben bleiben, damit der Code funktioniert</td></tr>
+</table></div>
+<p>Eine praktische Regel: Nutze dynamische Codes für alles, was das Event-Team am Tag kontrolliert – Programm, Check-in, Feedback –, und statische Codes für alles, was der Gast behält – Einladungen, Kalendereinträge, Fotoalben, die das Event überleben sollen. Wenn jemand ändern müssen könnte, wohin ein Code zeigt, nachdem er gedruckt ist, mach ihn dynamisch.</p>
+<h2>Drucken und Testen: der unspektakuläre Teil, der alles entscheidet</h2>
+<p>Event-Codes werden bei chaotischem Licht von eiligen Leuten gescannt. Drucke für diese Realität, nicht für ein Design-Mockup:</p>
+<ul>
+<li><strong>Größer wählen, als du denkst.</strong> Die <a href="/de/blog/qr-code-print-size-guide/">1:10-Distanz-Faustregel</a> ist ein guter Ausgangspunkt: Ein Code, der aus einem Meter Entfernung gescannt wird, muss grob zehnmal größer sein als einer, der aus zehn Zentimetern gescannt wird. Bemale jeden nach seiner tatsächlichen Distanz.</li>
+<li><strong>Kontrast hoch halten und den Rand frei lassen.</strong> Dunkle Tinte auf hellem Hintergrund, mit einem klaren ruhigen Rand um den Code. Ein Code, der über ein unruhiges Foto gedruckt wird, oder in Markenfarben mit niedrigem Kontrast, ist der häufigste Grund, warum ein sonst guter Code bei einem Event versagt.</li>
+<li><strong>Für Schaden drucken.</strong> Tickets werden gefaltet, Tischkarten werden bekleckert, Outdoor-Schilder werden verregnet. Der QR-Standard ISO/IEC 18004:2024 definiert vier Fehlerkorrekturstufen – L, M, Q und H –, die 7 %, 15 %, 25 % bzw. 30 % der Codewörter des Symbols wiederherstellen, ein Code mit einer höheren Stufe scannt also weiter, nachdem mehr von ihm beschädigt wurde. Nutze eine höhere Stufe für alles, was Gäste anfassen werden, und halte Logos klein und zentriert, damit sie diesen Spielraum nicht auffressen.</li>
+<li><strong>Auf iPhone und Android testen, bevor du hundert von irgendetwas druckst.</strong> Die eingebaute Kamera moderner Handys liest Codes ohne App – Apples Support-Seite beschreibt das Öffnen der Kamera oder des Kontrollzentrum-Scanners, das Halten des Handys, sodass der Code im Bild erscheint, und das Tippen auf den Link, der erscheint –, aber Kamera-Verhalten variiert zwischen Modellen, und ein Code, der auf einem Handy bei hellem Licht scannt, kann auf einem anderen in einer dunklen Halle versagen. Teste den tatsächlichen Druck, in tatsächlicher Größe, bei Licht wie dem des Veranstaltungsorts.</li>
+<li><strong>Ein Code pro Schild, mit Beschriftung.</strong> Zwei Codes nebeneinander lassen Gäste zögern und Kameras den falschen wählen. Beschrifte jeden Code mit dem, was er tut – „Scanne für WLAN“, „Scanne für Fotos“ –, denn ein nackter Code bei einem Event ist ein Code, an dem Gäste vorbeigehen.</li>
+</ul>
+<p>Eine weitere Zahl, die sich vor der Planung rund um Handys zu wissen lohnt: In der Pew-Research-Center-Umfrage 2026 unter Erwachsenen in den USA sagten 91 %, sie besäßen ein Smartphone, gegenüber 35 % in der ersten solchen Umfrage des Centers im Jahr 2011. Das ist eine US-Zahl, aus einer Umfrage unter 5.511 Erwachsenen, durchgeführt vom 30. Januar bis 18. Juni 2026 – keine globale Rate und kein Versprechen über deine spezielle Gästeliste. Ihre praktische Bedeutung ist bescheiden: Für die meisten Publika heißt Planung rund um Handykameras, Planung rund um das Gerät, das fast jeder schon trägt, während man trotzdem eine gedruckte Alternative für den Rest behält.</p>
+<h2>Was schiefgehen kann – und die Lösung für jedes</h2>
+<ul>
+<li><strong>Ein Code führt zu einer Seite, die umgezogen ist.</strong> Lösung: dynamische Codes für alles, was das Team bewegen könnte, und eine letzte Link-Prüfung am Morgen des Events, vom Handy aus, im Netzwerk des Veranstaltungsorts.</li>
+<li><strong>Gäste können sich nicht verbinden, weil der WLAN-Code auf einer Folie ist.</strong> Lösung: WLAN-Codes auf dauerhafter Beschilderung am Eingang und auf den Tischen, nicht nur auf einer Folie.</li>
+<li><strong>Das Fotoalbum füllt sich mit Uploads von Fremden.</strong> Lösung: Den Album-Code im Raum halten, die Freigabe-Einstellungen vor Türöffnung prüfen und den Album-Link nach dem Event ändern, wenn der Link entkommen ist.</li>
+<li><strong>Ein Ticket-Screenshot macht die Runde.</strong> Lösung: ein Code pro Ticket, eine Regel für zweite Scans an der Tür und die Papier-Gästeliste als Reserve.</li>
+<li><strong>Ältere Gäste oder Gäste ohne Smartphone stranden.</strong> Lösung: eine Telefonnummer auf der Einladung, eine Papierliste an der Tür und ein gedrucktes Programm neben dem Code. Der Code ist ein zusätzlicher Weg, nie der einzige.</li>
+</ul>
 <h2>Checkliste für Event-Codes</h2>
 <ul>
 <li>Check-in: ein Code in der Bestätigungsmail, an der Tür gescannt.</li>
 <li>Zum Kalender hinzufügen: auf der Einladung, damit die Gäste den Termin behalten.</li>
+<li>RSVP: auf der Detailkarte, verlinkt zum Formular.</li>
+<li>Tickets: ein Code pro Ticket, als Stapel generiert, vor dem Versand test-gescannt.</li>
+<li>Programm und Sprecher: auf dem Programm und in Folienfußzeilen, dynamisch.</li>
 <li>Fotoalbum: auf Tischkarten, damit alle Aufnahmen in einem gemeinsamen Album landen.</li>
 <li>WLAN vor Ort: auf Schildern, damit niemand das Passwort bei lauter Musik buchstabieren muss.</li>
-<li>Feedback: auf Ausgangsschildern oder der Abschlussfolie, solange das Event noch frisch ist.</li>
+<li>Feedback: auf Ausgangsbeschilderung und der Abschlussfolie, solange das Event noch frisch ist.</li>
 </ul>
-<h2>Drucktipps</h2>
-<p>Event-Codes werden in chaotischem Licht von eiligen Leuten gescannt: Geh größer als du denkst (die <a href="/de/blog/qr-code-print-size-guide/">1:10-Abstands-Faustregel</a>), halt den Kontrast hoch und teste auf iPhone und Android, bevor du hundert Tischkarten druckst. Statische Codes laufen nie ab, also funktioniert die Beschilderungsvorlage vom letzten Jahr noch.</p>
-
+<p>Zusammengesetzt: ein Code pro Gästefrage, dynamisch, wo sich Dinge ändern, statisch, wo Dinge halten sollen, jeder Code beschriftet, getestet und durch eine gedruckte Alternative abgesichert. Mach die Codes im <a href="/de/dynamic-qr-code/">Studio für dynamische QR-Codes</a> für alles, was das Event-Team ändern müssen könnte, oder als kostenlose statische Codes für die Einladungen und Andenken – und wenn du noch entscheidest, welche Art du brauchst, legt <a href="/de/blog/static-vs-dynamic-qr-codes/">statisch vs. dynamisch, ehrlich erklärt</a> den Kompromiss ohne Verkaufsgerede dar. Planst du speziell eine Hochzeit? Der <a href="/de/blog/wedding-rsvp-qr-code/">Hochzeits-RSVP-Leitfaden</a> behandelt die Einladungssuite im Detail.</p>
     </div>
+
+    <section class="sources">
+      <h2>Quellen</h2>
+      <ul>
+      <li><a href="https://support.apple.com/en-us/102680">Apple Support — Scan a QR code with your iPhone or iPad</a> – Belegt die Test-Scan-Methode: Kamera oder die Kontrollzentrum-Steuerung „Code scannen“ öffnen, das Handy so halten, dass der Code im Bild erscheint, und auf den Link tippen, der erscheint. Veröffentlicht am 14. September 2026.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024 — QR code bar code symbology specification</a> – Belegt die im Druckabschnitt genutzten Fehlerkorrekturstufen: L stellt 7 %, M 15 %, Q 25 % und H 30 % der Codewörter des Symbols wieder her. Ausgabe 2024 des Standards.</li>
+      <li><a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">Pew Research Center — Americans' Use of Mobile Devices in 2026</a> – Belegt: 91 % der Erwachsenen in den USA sagten, sie besäßen ein Smartphone, und 98 % sagten, sie besäßen irgendein Handy, gegenüber 35 % Smartphone-Besitz in der ersten solchen Umfrage des Centers im Jahr 2011. Basierend auf einer Umfrage unter 5.511 Erwachsenen in den USA, durchgeführt vom 30. Januar bis 18. Juni 2026, Fehlerspanne plus/minus 1,8 Prozentpunkte.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly präsentiert einen QR-Code"></div>
       <div>
         <h3>Probier's selbst aus — kostenlos</h3>
-        <p>Alles in diesem Artikel funktioniert jetzt im FreeQrly-Studio. Statische Codes, dreizehn Inhaltstypen, PNG- und SVG-Export.</p>
+        <p>Alles in diesem Artikel funktioniert im FreeQrly-Studio genau jetzt. Statische Codes, alle 17 Inhaltstypen, PNG- und SVG-Export.</p>
         <a class="btn" href="/de/#studio">Studio öffnen</a>
       </div>
     </div>
     <div class="related">
       <div class="fl" style="margin-top:34px">Weiterlesen</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/de/blog/how-to-create-a-dynamic-qr-code/"><b>How to Create a Dynamic QR Code Free (Editable After Printing)</b></a>
-        <a class="rel-card" href="/de/blog/dynamic-qr-code-statistics/"><b>Dynamic QR Code Statistics: What Scans Actually Tell You</b></a>
-        <a class="rel-card" href="/de/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
+        <a class="rel-card" href="/de/blog/how-to-create-a-dynamic-qr-code/"><b>So erstellst du kostenlos einen dynamischen QR-Code (nach dem Druck änderbar)</b></a>
+        <a class="rel-card" href="/de/blog/dynamic-qr-code-statistics/"><b>Statistiken dynamischer QR-Codes: Was Scans wirklich sagen</b></a>
+        <a class="rel-card" href="/de/blog/make-qr-code-in-canva-excel-word/"><b>So erstellst du einen QR-Code in Canva, Excel oder Word (kostenlos)</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Gut zu wissen</h2>
-    <details><summary><span>Wie mache ich einen QR-Code für den Event-Check-in?</span></summary><p>Verlinke den Code auf dein Check-in-Formular oder deine Registrierungsseite, drucke ihn für den Eingang, und Gäste scannen bei der Ankunft, statt an einem Schalter Schlange zu stehen.</p></details>
-    <details><summary><span>Kann ein QR-Code ein Event zu meinem Kalender hinzufügen?</span></summary><p>Ja — Kalender-QR-Codes (VEVENT) öffnen eine „Zum Kalender hinzufügen“-Aufforderung auf iPhones und Androids. FreeQrly erzeugt sie kostenlos mit seinem Event-Typ.</p></details>
-    <details><summary><span>Welche QR-Codes brauche ich für ein Event?</span></summary><p>Mindestens: Check-in/Registrierung, ein geteiltes Fotoalbum und Location-WLAN. Zum-Kalender-Hinzufügen-Codes auf Einladungen sind das Extra mit hohem ROI.</p></details>
+    <details><summary><span>Wie mache ich einen QR-Code für den Event-Check-in?</span></summary><p>Verlinke den Code zu deinem Check-in-Formular oder deiner Anmeldeseite, drucke ihn für den Eingang, und Gäste scannen bei Ankunft, statt an einem Tresen Schlange zu stehen. Halte eine gedruckte Gästeliste neben dem Scanner als Ausweichlösung für Handys, die sterben, oder Bildschirme, die sich nicht lesen lassen.</p></details>
+    <details><summary><span>Kann ein QR-Code ein Event zu meinem Kalender hinzufügen?</span></summary><p>Ja – Kalender-Codes (VEVENT) öffnen auf iPhones und Android-Geräten eine „Zum Kalender hinzufügen“-Aufforderung. FreeQrly generiert sie kostenlos mit seinem Event-Typ: Titel, Start- und Endzeit und Ort in einem Scan.</p></details>
+    <details><summary><span>Welche QR-Codes brauche ich für ein Event?</span></summary><p>Mindestens: Check-in/Anmeldung, ein geteiltes Fotoalbum und WLAN des Veranstaltungsorts. Codes zum Kalender hinzufügen auf Einladungen sind das hochwertige Extra. Für Konferenzen füge Programm- und Sprecher-Codes hinzu; für Events mit Tickets einen Code pro Ticket.</p></details>
+    <details><summary><span>Sollten Event-Ticket-Codes statisch oder dynamisch sein?</span></summary><p>Ein Code pro Ticket, und dynamisch, wenn ein Ticket übertragen oder storniert werden kann oder wenn sich die Prüfseite ändern könnte – ein dynamischer Code lässt sich ohne Neudruck des Tickets umleiten. Ein einfaches, nicht übertragbares Ticket mit einer finalen Prüfseite kann einen statischen Code nutzen. Drucke nie einen gemeinsamen Code auf jedes Ticket: Er kann ein Ticket nicht vom anderen unterscheiden.</p></details>
+    <details><summary><span>Was, wenn der Ticket-Code eines Gastes an der Tür nicht scannt?</span></summary><p>Prüfe den Namen anhand der gedruckten Gästeliste, statt den Gast abzuweisen. Handys sterben, Bildschirme springen, und Screenshots kommen zu dunkel an, um sie zu lesen. Entscheide vor Türöffnung, was das Tür-Team tut, wenn ein Code schon benutzt wurde – ein zurückkehrender Gast oder ein Screenshot, der die Runde macht, braucht eine Regel, keine Debatte vor einer Schlange.</p></details>
+    <details><summary><span>Kann ich Event-Beschilderung fürs nächste Event wiederverwenden?</span></summary><p>Ja, wenn die Codes darauf dynamisch sind. Ein dynamischer Code auf einem wiederverwendbaren Schild lässt sich auf das Feedback-Formular oder Programm des nächsten Events umleiten, das Schild muss also nie neu gedruckt werden. Statische Codes sind besser für Andenken – Einladungen und gedruckte Programme, die jahrelang weiter funktionieren sollen.</p></details>
+    <details><summary><span>Wie groß sollten Event-QR-Codes gedruckt werden?</span></summary><p>Bemale jeden Code nach seiner tatsächlichen Scandistanz, mit der 1:10-Distanz-Faustregel aus dem Druckgrößen-Leitfaden: Ein Code, der aus einem Meter Entfernung gescannt wird, muss grob zehnmal größer sein als einer, der aus zehn Zentimetern gescannt wird. Halte den Kontrast hoch, lass einen klaren ruhigen Rand und teste den tatsächlichen Druck auf iPhone und Android bei Licht wie dem des Veranstaltungsorts, bevor du eine volle Auflage druckst.</p></details>
     </section>
   </article>
   <footer>

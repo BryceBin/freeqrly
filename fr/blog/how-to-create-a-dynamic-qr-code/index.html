@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Comment créer un QR code dynamique gratuit (modifiable après impression) | FreeQrly","description":"Créez un QR code dynamique gratuit : connectez-vous, choisissez un type, personnalisez-le, imprimez-le. Modifiez la destination ensuite sans réimprimer : 20 codes gratuits, actuellement illimités.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Comment créer un QR code dynamique gratuit (modifiable après impression) | FreeQrly","description":"Créez un QR code dynamique gratuit : connectez-vous, choisissez un type, personnalisez-le, imprimez-le. Modifiez la destination ensuite sans réimprimer : 20 codes gratuits, actuellement illimités.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "Créer un QR code dynamique est-il vraiment gratuit ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. Connectez-vous gratuitement, créez jusqu'à 20 codes dynamiques, modifiez-les et consultez les statistiques. Aucune période d'essai, aucune carte requise. Les codes statiques restent gratuits et illimités, sans compte."
+        "text": "Oui. Connectez-vous gratuitement et créez jusqu'à 20 codes dynamiques, actuellement illimités pendant la promotion à durée limitée, avec des scans illimités. Pas de période d'essai, pas de carte bancaire pour commencer. Les codes statiques restent gratuits et illimités, sans aucun compte."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "Faut-il un compte pour un QR code dynamique ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui — le code doit appartenir à quelqu’un pour que vous seul puissiez le modifier. E-mail + mot de passe, Google ou GitHub. Les codes statiques n’ont jamais besoin de compte."
+        "text": "Oui : le code doit appartenir à quelqu'un pour que vous seul puissiez le modifier. Connectez-vous avec e-mail et mot de passe, Google ou GitHub. Les codes statiques n'exigent jamais de compte."
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "Combien de QR codes dynamiques puis-je avoir ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "20 sur le compte gratuit (actuellement illimités pendant l'offre à durée limitée). Supprimez un code pour libérer sa place."
+        "text": "20 sur le compte gratuit, actuellement illimités pendant la promotion à durée limitée. Supprimez un code pour libérer sa place — mais la suppression est définitive, et les exemplaires imprimés d'un code supprimé cessent de fonctionner."
       }
     },
     {
@@ -83,7 +88,39 @@
       "name": "Vers quoi pointe un QR code dynamique ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un lien court FreeQrly (freeqrly.com/q/XXXXXXX) qui redirige vers votre destination. Ceux qui scannent arrivent sur votre page ; la redirection est ce qui rend l’édition et les statistiques possibles."
+        "text": "Un lien court FreeQrly (freeqrly.com/q/XXXXXXX) qui redirige vers votre destination. Ceux qui scannent arrivent sur votre page ; la redirection est ce qui rend l'édition et les statistiques de scan possibles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je modifier un QR code dynamique après impression ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Modifier change la destination derrière le lien court, pas le motif imprimé, donc chaque exemplaire imprimé sert la nouvelle destination dès le scan suivant. Testez à nouveau le code après chaque modification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quand choisir le statique plutôt que le dynamique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quand la destination ne changera jamais — un lien fixe, un mot de passe WiFi, une carte de visite. Les codes statiques contiennent la destination dans le motif lui-même, n'exigent pas de compte, et continuent de fonctionner sans service de redirection à entretenir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je créer des codes dynamiques en lot ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non : les codes dynamiques sont générés un par un, parce que chacun exige son propre lien court et sa propre fiche dans le tableau de bord. La génération en lot reste statique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'arrive-t-il à mes scans si un code devient populaire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rien de grave sur FreeQrly : les scans sont illimités, donc un code populaire ne cesse pas de fonctionner parce qu'il a été trop scanné. Sur les offres gratuites d'autres fournisseurs, un plafond de scans peut arrêter un code — vérifiez la page de tarifs ou de FAQ du fournisseur avant d'imprimer."
       }
     }
   ]
@@ -94,32 +131,32 @@
     {
       "@type": "HowToStep",
       "name": "Connectez-vous — gratuit",
-      "text": "Créez un compte gratuit avec e-mail + mot de passe, Google ou GitHub. Les codes statiques sautent cette étape ; les dynamiques ont besoin d’un propriétaire."
+      "text": "Ouvrez la page de connexion et créez un compte avec e-mail et mot de passe, Google ou GitHub. Les codes statiques n'en ont jamais besoin ; les dynamiques, oui, parce que le code doit appartenir à quelqu'un qui seul peut le modifier."
     },
     {
       "@type": "HowToStep",
       "name": "Basculez en Dynamique",
-      "text": "Dans le studio, basculez l’interrupteur Statique/Dynamique sur Dynamique."
+      "text": "Dans le studio, passez de Statique à Dynamique. Types, style et téléchargement fonctionnent exactement pareil."
     },
     {
       "@type": "HowToStep",
       "name": "Choisissez un type et remplissez-le",
-      "text": "Site web, WiFi, contact, événement : les 17 types de contenu fonctionnent. Batch reste statique."
+      "text": "Site web, WiFi, contact, événement : les 17 types de contenu fonctionnent en codes dynamiques. La génération en lot reste statique : un code dynamique par génération, parce que chacun exige son propre lien court et sa propre fiche dans le tableau de bord."
     },
     {
       "@type": "HowToStep",
       "name": "Personnalisez-le",
-      "text": "Points, couleurs, logo, cadre. L’aperçu se met à jour en direct et le style est enregistré avec le code."
+      "text": "Points, couleurs, logo, cadre : l'aperçu se met à jour en direct, et le style est enregistré avec le code, donc la miniature du tableau de bord et le téléchargement correspondent. Gardez un contraste fort et ne recouvrez jamais les trois grands carrés de repérage dans les coins."
     },
     {
       "@type": "HowToStep",
       "name": "Generate",
-      "text": "Cliquez sur Générer. Vous obtenez un lien court comme freeqrly.com/q/XXXXXXX — c’est ce que le motif encode."
+      "text": "Cliquez sur Générer. Vous obtenez un lien court comme freeqrly.com/q/XXXXXXX — c'est ce que le motif du QR encode. Nommez le fichier téléchargé d'après l'endroit où le code vivra."
     },
     {
       "@type": "HowToStep",
       "name": "Gérez-le plus tard",
-      "text": "Retrouvez vos codes dans le tableau de bord : modifiez, consultez les statistiques, ou supprimez-en un pour libérer une place."
+      "text": "Vos codes vivent dans le tableau de bord : modifiez, consultez les statistiques, ou supprimez-en un pour libérer une place. Testez le code imprimé avec l'appareil photo de votre téléphone avant un tirage complet, et à nouveau après chaque modification."
     }
   ]}
 </script>
@@ -135,34 +172,106 @@
     <div class="kicker" style="text-align:center">Notes de terrain</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Comment créer un QR code <span class='hl hl-mint'>dynamique</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un QR code dynamique vous permet de changer la destination après impression — et de voir combien de personnes ont scanné. Voici comment en faire un, gratuitement, en environ une minute.</p>
-    <p class="meta" style="text-align:center">16 octobre 2026 · 4 min de lecture</p>
+    <p class="meta" style="text-align:center">16 octobre 2026 · Dernière mise à jour : 3 novembre 2026 · 14 min de lecture</p>
     <div class="prose" style="margin-top:40px">
+<p>Oui : vous pouvez créer un QR code dynamique gratuitement, en une minute environ, et changer sa destination après l'avoir imprimé. Choisissez le dynamique quand la destination n'est pas encore définitive, quand vous voulez compter les scans, ou quand un même code imprimé devra renvoyer vers une nouvelle page le mois prochain. Choisissez le statique quand la destination ne changera jamais : un lien fixe, un mot de passe WiFi ou une carte de visite n'exigent ni compte ni redirection. Ce guide explique la démarche FreeQrly, le mécanisme de redirection en langage simple, et les limites gratuites sans détour.</p>
+<p>Sur FreeQrly, les codes dynamiques sont gratuits. Connectez-vous avec e-mail et mot de passe, Google ou GitHub, et vous obtenez 20 codes dynamiques sur le compte gratuit, actuellement illimités pendant la promotion à durée limitée. Pas de période d'essai, pas de carte bancaire pour commencer, et des scans illimités. Vous pouvez modifier un code après impression, consulter ses statistiques de scan, générer des codes en lot sous forme statique, et utiliser l'API.</p>
 
-<p>Les codes statiques sont formidables — jusqu’à ce que la destination change. Le dépliant est imprimé, le menu a déménagé, l’URL de campagne n’était pas définitive. Un <strong>QR code dynamique</strong> règle cela : le motif imprimé reste le même, mais vous pouvez changer sa destination, à tout moment, depuis votre tableau de bord. Vous obtenez aussi le nombre de scans, pour savoir si quelqu’un scanne vraiment.</p>
-<p>Chez FreeQrly, les codes dynamiques sont gratuits. Connectez-vous (par e-mail, Google ou GitHub) et vous en recevez 20 (actuellement illimités pendant l'offre à durée limitée). Pas d'essai, pas de carte, pas de piège d'expiration. Voici tout le processus.</p>
+<h2>Dynamique ou statique ? Décidez avant d'imprimer</h2>
+<p>Une fois le code imprimé, il n'y a plus de retour en arrière. Un code statique contient la destination dans son motif, on ne peut donc jamais le rediriger ailleurs. Un code dynamique contient un lien court qui redirige vers la destination, qu'on peut donc modifier plus tard. Un code statique imprimé avec un mauvais lien exige une réimpression ; un code dynamique imprimé ne demande qu'une modification dans le tableau de bord.</p>
+<div class="table-scroll"><table>
+<tr><th>Votre situation</th><th>Choisissez</th><th>Pourquoi</th></tr>
+<tr><td>Le lien, le mot de passe WiFi ou les coordonnées ne changeront pas</td><td>Statique</td><td>Pas de compte, pas de redirection, rien à entretenir</td></tr>
+<tr><td>La page de destination n'est pas définitive, mais l'affiche doit partir à l'impression</td><td>Dynamique</td><td>Imprimez maintenant, redirigez plus tard</td></tr>
+<tr><td>Vous devez indiquer combien de personnes ont scanné</td><td>Dynamique</td><td>Seuls les codes dynamiques comptent les scans</td></tr>
+<tr><td>Menu saisonnier, événement ou campagne qui change souvent</td><td>Dynamique</td><td>Un seul tirage sert toutes les saisons</td></tr>
+</table></div>
+<p>Si vous hésitez encore, <a href="/fr/blog/static-vs-dynamic-qr-codes/">statique ou dynamique, expliqué honnêtement</a> donne d'autres exemples. En résumé : le dynamique achète souplesse et mesure au prix d'une dépendance à un service de redirection et à un compte ; le statique achète l'indépendance au prix d'une destination figée au moment de l'impression.</p>
 
+<h2>Comment un code dynamique fonctionne vraiment</h2>
+<p>Un code dynamique ne contient pas directement votre lien. Il contient un lien court FreeQrly, de la forme <code>freeqrly.com/q/XXXXXXX</code>, et c'est ce lien court que le motif encode. Quand quelqu'un scanne le code, son téléphone ouvre le lien court, le serveur FreeQrly retrouve la destination que vous avez définie, et la personne est redirigée vers elle. Elle arrive sur votre page ; le lien court n'est que le carrefour au milieu.</p>
+<p>Ce carrefour explique chaque fonction et chaque limite :</p>
+<ul>
+<li><strong>La modification marche parce que le motif ne change jamais.</strong> Le motif ne contient que le lien court. Modifier change la fiche derrière lui, donc chaque exemplaire imprimé sert la nouvelle destination dès le scan suivant.</li>
+<li><strong>Le comptage marche parce que chaque scan passe par le carrefour.</strong> Le serveur voit le scan en route vers la destination et l'ajoute aux statistiques. Un code statique ne touche jamais un serveur, il n'y a donc rien à compter.</li>
+<li><strong>Un compte est requis parce que le carrefour doit appartenir à quelqu'un.</strong> Seul le compte créateur peut changer la destination de son lien court. Sans propriétaire, n'importe qui pourrait rediriger le code imprimé d'un autre.</li>
+<li><strong>La suppression est définitive parce que le carrefour est retiré.</strong> Supprimez un code et son lien court cesse de rediriger, donc les exemplaires imprimés cessent de fonctionner. Pas de retour en arrière, et la place libérée peut servir à un nouveau code.</li>
+</ul>
+<p>Ceux qui scannent ne voient rien de tout cela : ils visent, touchent l'aperçu, et arrivent sur votre page. Une chose peut les frapper : une redirection qui affiche d'abord une publicité ou une page à la marque du fournisseur. Quand vous comparez des générateurs, scannez donc un code d'essai et regardez ce qui s'affiche avant le chargement de votre destination.</p>
+
+<h2>Pas à pas : créer un QR code dynamique</h2>
 <ol>
-<li><b>Connectez-vous — gratuit.</b> Ouvrez la <a href="/fr/login/">page de connexion</a> et créez un compte avec e-mail + mot de passe, Google ou GitHub. Les codes statiques n’en ont jamais besoin ; les dynamiques, oui, parce que le code doit appartenir à quelqu’un.</li>
-<li><b>Basculez en Dynamique.</b> Dans le <a href="/fr/?mode=dynamic">studio</a>, basculez de Statique à Dynamique. Tout le reste — types, style, téléchargement — fonctionne exactement pareil.</li>
-<li><b>Choisissez un type et remplissez-le.</b> Site web, WiFi, contact, événement : les 17 types de contenu fonctionnent en codes dynamiques. (<a href="/fr/batch-qr-code/">Batch</a> reste statique : un code dynamique par génération.)</li>
-<li><b>Personnalisez-le si vous voulez.</b> Points, couleurs, logo, cadre — l’aperçu se met à jour en direct. Le style est enregistré avec le code, donc le tableau de bord et le téléchargement correspondent.</li>
-<li><b>Générer.</b> Cliquez sur Générer. Vous obtenez un lien court comme <code>freeqrly.com/q/XXXXXXX</code> — c’est ce que le motif du QR encode. Imprimez-le, envoyez-le, collez-le au mur.</li>
-<li><b>Gérez-le plus tard.</b> Vos codes vivent dans le <a href="/dashboard/">tableau de bord</a> : modifiez, consultez les statistiques, ou supprimez-en un pour libérer une place.</li>
+<li><strong>Connectez-vous — gratuit.</strong> Ouvrez la <a href="/fr/login/">page de connexion</a> et créez un compte avec e-mail et mot de passe, Google ou GitHub. Les codes statiques n'en ont jamais besoin ; les dynamiques, oui, parce que le code doit appartenir à quelqu'un qui seul peut le modifier.</li>
+<li><strong>Basculez en Dynamique.</strong> Dans le <a href="/fr/?mode=dynamic">studio</a>, passez de Statique à Dynamique. Types, style et téléchargement fonctionnent exactement pareil.</li>
+<li><strong>Choisissez un type et remplissez-le.</strong> Site web, WiFi, contact, événement : les 17 types de contenu fonctionnent en codes dynamiques. (La <a href="/fr/batch-qr-code/">génération en lot</a> reste statique : un code dynamique par génération, parce que chacun exige son propre lien court et sa propre fiche dans le tableau de bord.)</li>
+<li><strong>Personnalisez-le si vous voulez.</strong> Points, couleurs, logo, cadre : l'aperçu se met à jour en direct, et le style est enregistré avec le code, donc la miniature du tableau de bord et le téléchargement correspondent. Gardez un contraste fort et ne recouvrez jamais les trois grands carrés de repérage dans les coins.</li>
+<li><strong>Générer.</strong> Cliquez sur Générer. Vous obtenez un lien court comme <code>freeqrly.com/q/XXXXXXX</code> — c'est ce que le motif encode. Nommez le fichier téléchargé d'après l'endroit où le code vivra, par exemple <code>cafe-window-menu.png</code>.</li>
+<li><strong>Gérez-le plus tard.</strong> Vos codes vivent dans le <a href="/dashboard/">tableau de bord</a> : modifiez, consultez les statistiques, ou supprimez-en un pour libérer une place. Testez le code imprimé avec l'appareil photo de votre téléphone avant un tirage complet, et à nouveau après chaque modification.</li>
 </ol>
 
-<h2>Ce que le QR code contient vraiment</h2>
-<p>Un code dynamique ne contient pas directement votre lien. Il contient un lien court FreeQrly, et notre serveur redirige ceux qui scannent vers votre destination. C’est le mécanisme qui rend l’édition et le comptage possibles — et c’est pourquoi les codes dynamiques ont besoin d’un compte, pas les statiques. Si un service vous dit un jour que ses codes « gratuits » ont besoin d’un compte, c’est ce mécanisme qui est à l’œuvre ; la différence ici, c’est que le compte est gratuit et que les codes ne meurent pas.</p>
+<h2>Choisir le type</h2>
+<p>Le type décide ce que la personne qui scanne voit et fait. Un code Site web ouvre une page. Un code WiFi propose de rejoindre un réseau. Un code Contact propose d'enregistrer une personne. Un code Événement propose d'enregistrer une date. Le bon type supprime une étape, et cela vaut généralement plus qu'un design plus malin. Un restaurant devrait utiliser un code Site web pointant vers sa page de menu, pas un code texte contenant le menu : la page peut être mise à jour, le code texte non. Un code WiFi invité devrait être un code WiFi, parce que le téléphone peut rejoindre le réseau dès le scan — voir <a href="/fr/blog/share-wifi-with-qr-code/">comment partager le WiFi avec un QR code</a>.</p>
+<p>Pointez vers une page que vous contrôlez, pas vers un fichier hébergé quelque part hors de votre contrôle : un fichier supprimé laisse un code qui fonctionne mais ne pointe vers rien. Et notez qu'un long texte donne un motif plus dense, qui exige une taille d'impression plus grande pour être scanné à la même distance ; voir le <a href="/fr/blog/qr-code-print-size-guide/">guide des tailles d'impression des QR codes</a>.</p>
 
-<h2>Les limites, clairement dites</h2>
+<h2>Personnaliser sans casser le scan</h2>
+<p>Les codes dynamiques acceptent le même style que les codes statiques : formes de points, couleurs, logo au centre, cadre avec texte. Trois règles gardent un code personnalisé lisible. D'abord, gardez un contraste élevé et un fond clair ; les lecteurs lisent des modules foncés sur fond clair. Ensuite, gardez le logo modeste et centré, et ne recouvrez jamais un carré de repérage. La correction d'erreur reconstruit les modules cachés derrière un petit logo central — au niveau Élevé de la norme ISO/IEC 18004, environ 30 % des mots de code peuvent être restaurés — mais ce budget couvre tous les dégâts cumulés, usure d'impression et saleté comprises, pas le logo seul. Enfin, gardez la zone de silence : la marge blanche autour du code, d'au moins 4 modules de large sur les quatre côtés selon ISO/IEC 18004, fait partie du code, ce n'est pas de la décoration. Pour en savoir plus sur les logos, voir <a href="/fr/blog/add-logo-to-qr-code/">comment ajouter un logo à un QR code</a>.</p>
+<p>Pour l'impression, testez une vraie épreuve imprimée, pas seulement l'aperçu à l'écran : un exemplaire à la taille prévue, sur le matériau prévu, scanné sur deux téléphones différents — un iPhone et un Android si possible — dans la lumière où il sera réellement utilisé. Un pelliculage brillant sous une lumière vive et un code enroulé autour d'une bouteille échouent d'une façon qu'un aperçu à l'écran ne montre jamais. Si l'épreuve scanne lentement, imprimez plus grand ; la taille est le correctif le moins cher qui soit.</p>
+
+<h2>Lire les statistiques honnêtement</h2>
+<p>Chaque code dynamique remonte dans votre tableau de bord : total des scans, scans du jour, scans uniques, et graphique sur sept jours, avec des répartitions par pays, ville, appareil et système d'exploitation. Le guide complet est dans <a href="/fr/blog/dynamic-qr-code-statistics/">ce que les statistiques des QR codes dynamiques vous apprennent</a>. Trois habitudes comptent le plus. Comparez les codes entre eux, pas à un repère imaginaire : un code en vitrine et un code sur un colis de livraison vivent dans des mondes différents. Traitez le zéro comme une donnée : un code sans scan pendant une semaine veut généralement dire que l'emplacement est mauvais, que l'appel à l'action manque, ou que le code est trop petit. Et donnez un contexte aux pics : une rafale de scans juste après la publication d'un post, c'est le post, pas l'affiche.</p>
+<p>Les statistiques FreeQrly sont uniquement des agrégats — des comptes par jour, pays, ville, appareil et système d'exploitation — sans fiche par visiteur et sans moyen d'identifier une personne qui scanne. Un scan unique est compté avec un hachage à sens unique, pas un nom ni une adresse.</p>
+
+<h2>Les cas où le dynamique vaut vraiment le coup</h2>
+<h3>Un menu de restaurant qui change avec les saisons</h3>
+<p>Imprimez un seul code sur les chevalets de table et pointez-le vers la page du menu. Quand la saison change, mettez la page à jour ou redirigez le code — les chevalets restent. Voir <a href="/fr/blog/qr-codes-for-restaurants/">les QR codes pour les restaurants</a>.</p>
+<h3>Une affiche d'événement imprimée avant que les détails soient définitifs</h3>
+<p>Les affiches partent à l'impression des semaines avant que le lieu, le lien de billetterie ou le programme soient figés. Un code dynamique permet à l'affiche de sortir en pointant vers une page d'attente, puis de passer à la page de billetterie à l'ouverture des ventes, et à une page de bilan après l'événement. Voir <a href="/fr/blog/qr-codes-for-events/">les QR codes pour les événements</a>.</p>
+<h3>Un produit ou un emballage qui survit à sa première campagne</h3>
+<p>L'emballage est imprimé en masse et vendu pendant des mois ou des années. Un code dynamique sur l'emballage peut commencer par une offre de lancement, passer à une page de mode d'emploi ou de garantie, puis à un produit successeur — sans réimpression. Gardez une liste de l'endroit où vit chaque code : un code introuvable dans le tableau de bord est un code qu'on ne peut pas corriger.</p>
+<h3>Un code par emplacement, sinon les chiffres mentent</h3>
+<p>Donnez à chaque emplacement son propre code. Partager un code entre un dépliant, une carte de visite et un stand de marché fusionne leurs statistiques en un seul chiffre qui n'explique rien. Un code près de la caisse qui ouvre une page d'avis fonctionne pareil ; voir <a href="/fr/blog/get-google-reviews-with-qr-code/">comment obtenir des avis Google avec un QR code</a>.</p>
+
+<h2>La comparaison honnête : ce que le dynamique coûte ailleurs</h2>
+<p>Les codes dynamiques ne sont pas gratuits partout de la même façon. Ce qui fait mal après l'impression, c'est le nombre de codes gratuits obtenus, si les scans sont plafonnés, et ce qui se passe à la fin d'une offre. Les chiffres ci-dessous sont les déclarations propres de chaque fournisseur sur sa page de tarifs ou de FAQ, vérifiées le 3 novembre 2026. Tarifs et limites changent, vérifiez donc la page du fournisseur avant d'imprimer quoi que ce soit qui doit durer.</p>
+<div class="table-scroll"><table>
+<tr><th>Fournisseur, offre gratuite, selon le fournisseur</th><th>Codes dynamiques gratuits</th><th>Limite gratuite de scans</th><th>Ce que le fournisseur dit qu'il se passe à la fin d'une offre</th></tr>
+<tr><td>FreeQrly, compte gratuit</td><td>20, actuellement illimités pendant la promotion à durée limitée</td><td>Scans illimités</td><td>Pas de période d'essai, pas de carte pour commencer ; supprimer un code arrête ses exemplaires imprimés et libère la place</td></tr>
+<tr><td>QR TIGER, offre freemium</td><td>3</td><td>500 scans par code</td><td>Les codes payants ont des scans illimités tant que l'abonnement est valide ; « If your plan expires, it will stop working »</td></tr>
+<tr><td>The QR Code Generator, offre gratuite</td><td>2</td><td>L'allocation gratuite, c'est les 2 codes</td><td>Après un essai, 2 codes restent actifs mais affichent des publicités ; sur la plateforme mère Uniqode, les codes d'essai deviennent inactifs sans offre payante</td></tr>
+</table></div>
+<p>Ce n'est pas un jugement sur un fournisseur — une offre payante avec plus de codes, un domaine personnalisé ou des places d'équipe peut être le bon achat pour une grande campagne — mais cela montre pourquoi l'offre gratuite doit être lue, pas survolée. Une offre gratuite plafonnée en scans, c'est un code qui peut mourir de son succès. Une offre gratuite liée à un essai, c'est un code avec un calendrier attaché. La question honnête pour n'importe quel générateur, FreeQrly compris, est : qu'arrive-t-il exactement à un code imprimé si je ne paie jamais, si j'arrête de payer, et si je supprime le code ? La réponse devrait tenir en une phrase chacune, sur la page de tarifs.</p>
+<p>Une dépendance mérite d'être dite clairement. Un code dynamique dépend du service de redirection du fournisseur tant qu'il circule — c'est vrai ici aussi. Si ce service disparaissait, les codes dynamiques cesseraient de rediriger, tandis que les codes statiques, qui contiennent la destination dans le motif, continueraient de fonctionner. C'est pourquoi le statique convient à tout ce qui doit marcher pendant des décennies sans personne pour l'entretenir, comme un panneau permanent. Le dynamique est pour du matériel vivant que quelqu'un suit encore ; le statique est pour du matériel qui doit se débrouiller seul.</p>
+
+<h2>Les erreurs qui gâchent un tirage</h2>
 <ul>
-<li><strong>20 codes, gratuits (actuellement illimités pendant l'offre à durée limitée).</strong> C'est le quota gratuit. Supprimez un code et la place se libère.</li>
-<li><strong>Un par un.</strong> Les codes dynamiques sont générés un par un ; la génération en lot reste statique.</li>
-<li><strong>Modifier change la destination, pas le motif.</strong> Le code imprimé continue de marcher à chaque modification — c’est tout l’intérêt.</li>
+<li><strong>Imprimer en statique alors que le lien n'était pas définitif.</strong> Si la destination peut changer, le code aurait dû être dynamique avant l'impression ; un code statique imprimé ne peut pas être sauvé par une modification.</li>
+<li><strong>Partager un code dynamique entre plusieurs emplacements.</strong> Un code, un emplacement, un relevé statistique — sinon les chiffres ne peuvent pas dire quel emplacement a marché.</li>
+<li><strong>Supprimer un code pour « faire du rangement ».</strong> La suppression est définitive et les exemplaires imprimés s'arrêtent net. Redirigez d'abord un code en fin de vie vers une page de clôture, et ne supprimez que quand plus aucun exemplaire imprimé ne circule.</li>
+<li><strong>Sauter l'épreuve imprimée.</strong> Un aperçu à l'écran prouve le design ; seule une épreuve imprimée à la vraie taille, sur le vrai matériau et dans la vraie lumière prouve le scan. Voir <a href="/fr/blog/why-is-my-qr-code-not-working/">pourquoi votre QR code ne fonctionne pas</a>.</li>
+<li><strong>Oublier l'appel à l'action.</strong> Un code nu demande à ceux qui scannent de deviner. Un cadre qui dit ce qu'ils obtiennent — menu, billets, WiFi, réduction — transforme une décoration en porte d'entrée.</li>
 </ul>
 
-<p>Vous ne savez pas si vous avez besoin du dynamique ? <a href="/fr/blog/static-vs-dynamic-qr-codes/">Statique vs dynamique, expliqué honnêtement</a>. Déjà imprimé et besoin de corriger un lien ? <a href="/fr/blog/how-to-edit-a-qr-code-after-printing/">Comment modifier un QR code après impression</a>. Curieux de voir les chiffres ? <a href="/fr/blog/dynamic-qr-code-statistics/">Ce que les statistiques des QR codes dynamiques vous disent</a>. Curieux de voir comment se compare le quota gratuit ? <a href="/fr/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> met les offres gratuites côte à côte.</p>
-
+<h2>Lot, API et limites, dit clairement</h2>
+<p>Les codes dynamiques sont générés un par un, parce que chacun exige son propre lien court et sa propre fiche dans le tableau de bord. Si vous avez besoin de beaucoup de codes d'un coup — un par produit, par table, par colis — la <a href="/fr/batch-qr-code/">génération en lot</a> reste statique ; voir <a href="/fr/blog/bulk-qr-codes/">les QR codes en lot</a>. Pour les programmes qui génèrent des codes depuis un autre système, FreeQrly propose aussi une API pour les codes dynamiques. Les limites gratuites, en un seul endroit :</p>
+<ul>
+<li><strong>20 codes, gratuits (actuellement illimités pendant la promotion à durée limitée).</strong> Supprimez un code et la place se libère.</li>
+<li><strong>Scans illimités.</strong> Un code populaire ne s'arrête pas parce qu'il a été trop scanné.</li>
+<li><strong>Un par un.</strong> Les codes dynamiques sont générés un par un ; la génération en lot reste statique.</li>
+<li><strong>Modifier change la destination, pas le motif.</strong> Le code imprimé continue de fonctionner à chaque modification.</li>
+<li><strong>La suppression est définitive.</strong> Les exemplaires imprimés cessent de fonctionner, sans retour possible : ne supprimez que les codes retirés.</li>
+</ul>
+<p>Vous ne savez pas si vous avez besoin du dynamique ? <a href="/fr/blog/static-vs-dynamic-qr-codes/">Statique ou dynamique, expliqué honnêtement</a>. Déjà imprimé et besoin de corriger un lien ? <a href="/fr/blog/how-to-edit-a-qr-code-after-printing/">Comment modifier un QR code après impression</a>. Curieux de voir à quoi ressemblent les chiffres ? <a href="/fr/blog/dynamic-qr-code-statistics/">Ce que les statistiques des QR codes dynamiques vous apprennent</a>. Prêt à en créer un ? Ouvrez le <a href="/fr/dynamic-qr-code/">générateur de QR code dynamique</a>, connectez-vous gratuitement, basculez en Dynamique, et imprimez un code que vous pourrez encore corriger le mois prochain.</p>
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La spécification de la symbologie QR Code, 4ᵉ édition, publiée en août 2024. Définit les niveaux de correction d'erreur, dont le niveau Élevé à environ 30 % des mots de code, et la zone de silence d'au moins 4 modules sur les quatre côtés.</li>
+      <li><a href="https://www.qrcode-tiger.com/faq">FAQ de QR TIGER</a> - Page FAQ du fournisseur, consultée le 2026-11-03 (aucune date de publication affichée sur la page). À l'appui : 3 codes dynamiques gratuits avec une limite de 500 scans chacun ; les codes dynamiques payants ont des scans illimités tant que l'abonnement est valide ; « If your plan expires, it will stop working » ; les codes statiques gratuits sont illimités et n'expirent jamais.</li>
+      <li><a href="https://www.qrcode-tiger.com/software-subscription">Gestion des abonnements QR TIGER</a> - Page d'abonnement du fournisseur, consultée le 2026-11-03 (aucune date de publication affichée sur la page). À l'appui : offre freemium avec 3 codes dynamiques à 500 scans chacun ; Regular à 7 $ US avec 12 codes dynamiques ; Advanced à 16 $ US avec 200 ; Premium à 37 $ US avec 600 ; Professional à 89 $ US avec 1 200.</li>
+      <li><a href="https://www.the-qrcode-generator.com/pricing?lng=en&signup_source=custom-qr-code_explore_plans">Tarifs de The QR Code Generator (TQRCG)</a> - Page de tarifs du fournisseur, consultée le 2026-11-03 (aucune date de publication affichée sur la page). À l'appui : offre gratuite avec 2 codes dynamiques et des codes statiques illimités ; après un essai gratuit, 2 codes dynamiques restent actifs mais affichent des publicités ; sur Uniqode, les codes d'essai deviennent inactifs sans offre payante ; offre Flex à 10 $ US/mois facturée à l'année.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly présentant un QR code"></div>
       <div>
@@ -174,17 +283,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Continuer la lecture</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/fr/blog/dynamic-qr-code-statistics/"><b>Dynamic QR Code Statistics: What Scans Actually Tell You</b></a>
-        <a class="rel-card" href="/fr/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
-        <a class="rel-card" href="/fr/blog/why-is-my-qr-code-blurry/"><b>Why Is My QR Code Blurry? 5 Fixes That Work</b></a>
+        <a class="rel-card" href="/fr/blog/dynamic-qr-code-statistics/"><b>Statistiques des QR codes dynamiques : ce que les scans disent vraiment</b></a>
+        <a class="rel-card" href="/fr/blog/make-qr-code-in-canva-excel-word/"><b>Comment créer un QR code dans Canva, Excel ou Word (gratuit)</b></a>
+        <a class="rel-card" href="/fr/blog/why-is-my-qr-code-blurry/"><b>Pourquoi mon QR code est-il flou ? 5 correctifs qui marchent</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bon à savoir</h2>
-    <details><summary><span>Créer un QR code dynamique est-il vraiment gratuit ?</span></summary><p>Oui. Connectez-vous gratuitement, créez jusqu'à 20 codes dynamiques, modifiez-les et consultez les statistiques. Aucune période d'essai, aucune carte requise. Les codes statiques restent gratuits et illimités, sans compte.</p></details>
-    <details><summary><span>Faut-il un compte pour un QR code dynamique ?</span></summary><p>Oui — le code doit appartenir à quelqu’un pour que vous seul puissiez le modifier. E-mail + mot de passe, Google ou GitHub. Les codes statiques n’ont jamais besoin de compte.</p></details>
-    <details><summary><span>Combien de QR codes dynamiques puis-je avoir ?</span></summary><p>20 sur le compte gratuit (actuellement illimités pendant l'offre à durée limitée). Supprimez un code pour libérer sa place.</p></details>
-    <details><summary><span>Vers quoi pointe un QR code dynamique ?</span></summary><p>Un lien court FreeQrly (freeqrly.com/q/XXXXXXX) qui redirige vers votre destination. Ceux qui scannent arrivent sur votre page ; la redirection est ce qui rend l’édition et les statistiques possibles.</p></details>
+    <details><summary><span>Créer un QR code dynamique est-il vraiment gratuit ?</span></summary><p>Oui. Connectez-vous gratuitement et créez jusqu'à 20 codes dynamiques, actuellement illimités pendant la promotion à durée limitée, avec des scans illimités. Pas de période d'essai, pas de carte bancaire pour commencer. Les codes statiques restent gratuits et illimités, sans aucun compte.</p></details>
+    <details><summary><span>Faut-il un compte pour un QR code dynamique ?</span></summary><p>Oui : le code doit appartenir à quelqu'un pour que vous seul puissiez le modifier. Connectez-vous avec e-mail et mot de passe, Google ou GitHub. Les codes statiques n'exigent jamais de compte.</p></details>
+    <details><summary><span>Combien de QR codes dynamiques puis-je avoir ?</span></summary><p>20 sur le compte gratuit, actuellement illimités pendant la promotion à durée limitée. Supprimez un code pour libérer sa place — mais la suppression est définitive, et les exemplaires imprimés d'un code supprimé cessent de fonctionner.</p></details>
+    <details><summary><span>Vers quoi pointe un QR code dynamique ?</span></summary><p>Un lien court FreeQrly (freeqrly.com/q/XXXXXXX) qui redirige vers votre destination. Ceux qui scannent arrivent sur votre page ; la redirection est ce qui rend l'édition et les statistiques de scan possibles.</p></details>
+    <details><summary><span>Puis-je modifier un QR code dynamique après impression ?</span></summary><p>Oui. Modifier change la destination derrière le lien court, pas le motif imprimé, donc chaque exemplaire imprimé sert la nouvelle destination dès le scan suivant. Testez à nouveau le code après chaque modification.</p></details>
+    <details><summary><span>Quand choisir le statique plutôt que le dynamique ?</span></summary><p>Quand la destination ne changera jamais — un lien fixe, un mot de passe WiFi, une carte de visite. Les codes statiques contiennent la destination dans le motif lui-même, n'exigent pas de compte, et continuent de fonctionner sans service de redirection à entretenir.</p></details>
+    <details><summary><span>Puis-je créer des codes dynamiques en lot ?</span></summary><p>Non : les codes dynamiques sont générés un par un, parce que chacun exige son propre lien court et sa propre fiche dans le tableau de bord. La génération en lot reste statique.</p></details>
+    <details><summary><span>Qu'arrive-t-il à mes scans si un code devient populaire ?</span></summary><p>Rien de grave sur FreeQrly : les scans sont illimités, donc un code populaire ne cesse pas de fonctionner parce qu'il a été trop scanné. Sur les offres gratuites d'autres fournisseurs, un plafond de scans peut arrêter un code — vérifiez la page de tarifs ou de FAQ du fournisseur avant d'imprimer.</p></details>
     </section>
   </article>
   <footer>

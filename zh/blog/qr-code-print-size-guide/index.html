@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"二维码打印尺寸指南：从名片到海报 | FreeQrly","description":"打印的二维码应该多大？名片、传单、海报的最小尺寸——再加上 1:10 距离规则、分辨率和留白规则，让码保持可扫。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"二维码打印尺寸指南：从名片到海报 | FreeQrly","description":"打印的二维码应该多大？名片、传单、海报的最小尺寸——再加上 1:10 距离规则、分辨率和留白规则，让码保持可扫。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "打印的二维码最小尺寸是多少？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "经验法则是 2×2 厘米（0.8×0.8 英寸）。更小的码在很多手机上扫不出来，尤其像 vCard 这种数据多的码。"
+        "text": "经验法则，2 × 2 cm（0.8 × 0.8 英寸）。更小的码在很多手机上都会失败，尤其是装着大量数据的码，比如 vCard。"
       }
     },
     {
@@ -80,7 +80,47 @@
       "name": "打印用 PNG 还是 SVG？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SVG 最好——无限放大不损失质量。如果你的印刷机需要位图，导出 2048 px 的 PNG。"
+        "text": "SVG 最好——它可以无限放大、没有任何质量损失。打印机需要位图时，导出 2048 px 的 PNG。绝不用 JPG：它的压缩会糊掉扫码器依赖的模块边缘。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "二维码需要留多少边距？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按 ISO/IEC 18004 的规定，每边至少留 4 个模块宽的静区，颜色跟码的背景是同样的浅色。2 cm 的码横向 29 个模块，算下来四周约 2.8 mm。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎么按扫码距离算尺寸？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "距离除以十，往大取整，永远不低于 2 cm 最低值。2 米外扫的码至少要 20 cm；10 米外扫，至少要 1 米。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "链接越长，印刷就要越大吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的。数据越多模块越多，同样印刷尺寸下模块越小、越难读。用短而干净的链接，或者用动态码——它的短跳转目标在印后可编辑。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "屏幕上的二维码应该多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "经验法则，不要低于约 200 × 200 像素。幻灯片和投影显示按投影宽度套用 1:10 比值，并考虑最远观众的距离。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么印出来的码在屏幕版能扫时却失败？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见原因是静区被裁掉、光面覆膜反光、带纹理纸张上的油墨洇散、网格被拉伸，或者 PNG 平滑放大。批量印刷之前，先按最终尺寸、最终材质印一份，用不止一部手机扫。"
       }
     }
   ]
@@ -98,42 +138,128 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">打印的二维码应该<span class="hl hl-mint">多大</span>？</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">简短回答：至少 2×2 厘米，300 dpi，留出清晰边距。长回答——带印刷厂实际用的距离经验法则——在下面。</p>
-    <p class="meta" style="text-align:center">2026 年 10 月 14 日 · 阅读约 4 分钟</p>
+    <p class="meta" style="text-align:center">2026年10月14日 · 最后更新：2026年11月3日 · 阅读约14分钟</p>
     <div class="prose" style="margin-top:40px">
+<p>简短回答：至少 2 × 2 cm，300 dpi，留出清晰边距。长回答——能让海报隔着房间也扫得出来、名片握手距离也扫得出来的那个——是两条经验法则加一张表。法则一：码永远别印得比 2 × 2 cm（0.8 × 0.8 英寸）小。法则二：码的宽度至少要是扫码距离的十分之一。50 cm 外扫的码需要 5 cm 的码；5 米外扫的海报需要 50 cm 的码。下面把这两条法则套用到你可能印的每种表面上，再加上格式、边距和打样这些决定尺寸是否真正管用的细节。</p>
 
 <h2>两个真正重要的规则</h2>
-<p><b>经验法则 1——最小尺寸：</b>2×2 厘米（0.8×0.8 英寸）。再小，手机相机就看不清模块了，尤其像 vCard 这种装了很多数据的码。</p>
-<p><b>经验法则 2——1:10 距离比：</b>二维码宽度至少是扫码距离的十分之一。从 50 厘米外扫（桌卡）？码要 5 厘米。从 5 米外扫（海报）？码要 50 厘米。印刷和招牌行业都用这个比值做经验法则。</p>
-<h2>按场景速查</h2>
-<table>
-<tr><th>用途</th><th>最小尺寸</th><th>说明</th></tr>
-<tr><td>名片</td><td>2x2 厘米</td><td>不要贴到名片边缘。见<a href="/zh/business-card-qr-code/">名片生成器</a>。</td></tr>
-<tr><td>传单和菜单</td><td>3x3 厘米</td><td>人们在手臂长度的距离扫码。</td></tr>
-<tr><td>桌卡</td><td>4–5 厘米</td><td>客人坐在座位上扫码。</td></tr>
-<tr><td>海报</td><td>1:10 比例</td><td>50 厘米的码可在 5 米外扫到。</td></tr>
-<tr><td>包装</td><td>2x2 厘米</td><td>避开会扭曲图案的曲面。</td></tr>
-<tr><td>带 Logo 的码</td><td>3x3 厘米</td><td>Logo 不要超过码面积的约 30%。</td></tr>
-</table>
-<h2>分辨率：导出大图</h2>
-<p>打印需要 300 dpi。2 厘米的码在 300 dpi 下只有约 240 px——但一定要导出更大的，让设计师往小缩：<b>PNG 导出 1024 或 2048 px</b>，或 <b>SVG</b>，可无限放大，是专业印刷的最佳选择。FreeQrly 两种都免费导出。</p>
-<h2>别忘了静区</h2>
-<p>按 ISO/IEC 18004 的规定，在二维码四周留<a href="http://www.iso.org/standard/83389.html">至少 4 个模块宽</a>的空白边距。被文字或图形挤占是二维码失败的主要原因之一——更多见<a href="/zh/blog/why-is-my-qr-code-not-working/">为什么你的码扫不出来</a>。</p>
-<h2>中间有 Logo？印大一点</h2>
-<p><a href="/zh/qr-code-with-logo/">中间的 Logo</a>会吃掉一部分图案，所以要给它留空间：打印最小 3×3 厘米，经验法则是 Logo 不超过二维码面积的约 30%。</p>
 
+<p><strong>经验法则 1——最小尺寸：</strong>2 × 2 cm（0.8 × 0.8 英寸）。再小，手机相机就没法可靠地分辨模块了，尤其是装着大量数据的码，比如 vCard。这是对近距离手持扫码的实际最低值，不是保证：同样尺寸下，数据密的码在 2 cm 时比短链接码脆弱得多，老手机也比新手机需要更多空间。</p>
+
+<p><strong>经验法则 2——1:10 距离比：</strong>码的宽度至少要是扫码距离的十分之一。50 cm 外扫（桌卡）？5 cm 的码。5 米外扫（海报）？50 cm 的码。印刷和招牌行业把这个比值当经验法则用——它是规划指南，不是二维码标准本身的一部分——稳妥的做法是往大取整而不是往小取，因为距离、光线和反光都会吃掉安全余量。</p>
+
+<p>这两条法则会互相作用。1:10 的比值可能算出比 2 cm 最低值还小的尺寸——15 cm 外扫的码按比值只需要 1.5 cm——这时最低值说了算：还是印 2 cm。</p>
+
+<h2>按场景速查</h2>
+
+<div class="table-scroll"><table>
+<tr><th>使用场景</th><th>典型扫码距离</th><th>最小尺寸</th><th>备注</th></tr>
+<tr><td>名片</td><td>20–25 cm，拿在手里</td><td>2 × 2 cm</td><td>离名片边缘保持距离。见<a href="/zh/business-card-qr-code/">名片二维码生成器</a>。</td></tr>
+<tr><td>传单和菜单</td><td>30–40 cm，一臂距离</td><td>3 × 3 cm</td><td>人们都是一臂距离扫这些；数据密的码做到 4 cm。</td></tr>
+<tr><td>桌卡</td><td>30–50 cm，从座位上</td><td>4–5 cm</td><td>客人从座位上扫，常常在暗光下——往大做。</td></tr>
+<tr><td>收据和票据</td><td>20–30 cm，拿在手里</td><td>2–3 cm</td><td>热敏打印会糊掉精细细节；用短链接，在实际打印机上测试。</td></tr>
+<tr><td>包装和标签</td><td>20–30 cm，拿在手里</td><td>2 × 2 cm</td><td>避开会扭曲图案的弯曲表面；用平板。</td></tr>
+<tr><td>带 Logo 的码</td><td>跟素码一样，或者更近</td><td>3 × 3 cm</td><td>Logo 控制在码面积的约 30% 以内。完整指南：<a href="/zh/blog/add-logo-to-qr-code/">给二维码加 Logo</a>。</td></tr>
+<tr><td>海报（A3/A2，贴墙上）</td><td>1–1.5 m</td><td>10–15 cm</td><td>按 1:10 比值定尺寸；在实际房间里核对观看距离。</td></tr>
+<tr><td>商店橱窗和布告栏</td><td>2–3 m</td><td>20–30 cm</td><td>注意玻璃反光；从外面测试。</td></tr>
+<tr><td>户外招牌和横幅</td><td>5 m 及更远</td><td>50 cm 及更大</td><td>先问一句人们是不是真的会从那么远扫——离人行道更近的小招牌常常效果更好。</td></tr>
+<tr><td>幻灯片和屏幕</td><td>一臂距离到几米</td><td>至少 200 × 200 px；随距离放大</td><td>投影幻灯片按投影宽度套用 1:10 比值，别按文件尺寸算。</td></tr>
+</table></div>
+
+<p>整张表有两个注意事项。第一，尺寸说的是码本身；静区是外加的，所以总占地面积更大。第二，码里数据多、带 Logo 或者要在弱光下扫时，尺寸都要往上加。</p>
+
+<h2>距离法则，算给你看</h2>
+
+<p>算尺寸时，把人们扫码的距离除以十，再往大取整——并且永远不低于 2 cm 最低值。几个算好的例子能让这个习惯成自然：</p>
+
+<div class="table-scroll"><table>
+<tr><th>扫码距离</th><th>距离 ÷ 10</th><th>至少印到</th></tr>
+<tr><td>30 cm（拿在手里的传单）</td><td>3 cm</td><td>3 cm</td></tr>
+<tr><td>50 cm（桌卡）</td><td>5 cm</td><td>5 cm</td></tr>
+<tr><td>1 m（墙上海报）</td><td>10 cm</td><td>10 cm</td></tr>
+<tr><td>2 m（公交站海报）</td><td>20 cm</td><td>20 cm</td></tr>
+<tr><td>5 m（停车场对面的招牌）</td><td>50 cm</td><td>50 cm</td></tr>
+<tr><td>10 m（广告牌）</td><td>100 cm</td><td>1 m</td></tr>
+</table></div>
+
+<p>要用的距离是人们实际会站的距离，不是你希望他们站的距离。走廊里的海报是从走廊宽度扫的；停车场对面的招牌是从人们走路的地方扫的，不是栏杆最远处。</p>
+
+<h2>为什么数据密度会改变答案</h2>
+
+<p>不是所有二维码的模块数都一样。数据放得越多，码需要的模块就越多：最小的码（版本 1）是 21 × 21 个模块，每个版本每边加 4 个模块，最多到 177 × 177。印在同样尺寸下，数据密的码模块更小，而模块越小相机越难分开——尤其是在弱光下。</p>
+
+<p>纠错也带来同样的权衡。级别越高越耐用，对带 Logo 的码或者可能被擦伤的表面有用，但也会增加模块。粗略举个例子，40 字符的网址在 M 级下能装进 29 × 29 的码，在 H 级下需要 37 × 37；在 2 cm 的码上，每个模块就从约 0.69 mm 缩到约 0.54 mm。实际结论是：内容保持短。用短而干净的链接，别用长跟踪链接，vCard 只填真正需要的字段，小印刷品非要装很多内容时就把码做大。动态码是另一种帮忙方式：它的目标在印后可编辑，所以你可以先印一个短跳转，以后再改它指向哪里，而不用编码一个逼出密网格的长链接——而且它带扫码统计，你能看到自己选的尺寸是不是真的有人扫。</p>
+
+<h2>分辨率：导出大图</h2>
+
+<p>印刷需要 300 dpi。2 cm 的码在 300 dpi 下只有约 240 px——但永远要导出更大的，让设计师往小缩：<strong>1024 或 2048 px 的 PNG</strong>，或者<strong>SVG</strong>，它可以无限放大，是专业印刷的最佳选择。FreeQrly 两种都免费导出。像素换算很简单：PNG 的像素宽度除以 300，得到它在英寸下的最大印刷宽度，再乘以 2.54 换算成厘米。600 px 的图片在 300 dpi 下是 2 英寸，约 5 cm——桌卡够用，海报远远不够。2048 px 的图片在 300 dpi 下约 17 cm，传单、菜单和小海报都覆盖了，商店橱窗不行；那种尺寸用 SVG。</p>
+
+<p>远距离观看的超大版面，印刷厂通常接受更低的有效分辨率——大海报用 150 dpi 左右是个可行的基准——因为人眼在几米外分辨不出精细细节。两条格式规则不随尺寸弯曲。别用 JPG 做二维码：它的压缩会糊掉扫码器依赖的锐利模块边缘。如果必须放大 PNG，用最近邻缩放（有时叫“硬边缘”或“不平滑”），按 2×、3×、4× 这样的整数倍放，这样每个模块都保持为清晰的方块，而不是软糊一片。更好的办法是导入 SVG，按需要的分辨率重新导出，而不是拉伸一张小 PNG。</p>
+
+<h2>别忘了静区</h2>
+
+<p>码周围留出空白边，<a href="http://www.iso.org/standard/83389.html">每边至少 4 个模块宽</a>，按 ISO/IEC 18004 的规定。被文字或图形挤占是码失败的首要原因之一——更多内容见<a href="/zh/blog/why-is-my-qr-code-not-working/">码为什么扫不出来</a>。一个模块就是网格里的一个小方格，所以物理边距取决于码：数一下你的码横向有几个方格，算出一个模块有多宽，每边留出 4 个模块宽的空。2 cm 的码横向 29 个模块，一个模块约 0.7 mm，所以四周需要约 2.8 mm 的净空——而且这个边距必须跟码的背景是同样的浅色，不是边框、裁切标记或折痕。</p>
+
+<p>静区也是排版软件悄悄捣乱的地方。把图片裁到可见图案的设计工具、裁掉边距的印刷出血，或者紧贴着码画的边框，都能在你正确设置边距之后把它吃掉。在最终稿上检查边距，不只在生成器里检查，而且要记住边距是占地面积的一部分——一个 2 cm 的码加上静区，在名片上需要的净空不止 2 cm。</p>
+
+<h2>屏幕上：用像素，不用厘米</h2>
+
+<p>印刷尺寸不能直接套到屏幕上，因为屏幕的物理尺寸各不相同。屏幕显示的工作经验法则是不要低于约 200 × 200 像素，越大越好——人们扫码时手机通常拿在一臂距离，屏幕上的小码还要跟反光和室内光竞争。幻灯片和投影显示就轮到距离法则：估计最远的观众坐多远，除以十，投影出来的码至少要那么宽。在你笔记本上看着很宽裕的码，到了礼堂墙上可能变得很小。</p>
+
+<h2>材质和表面：好尺寸在哪儿翻车</h2>
+
+<p>尺寸只是印出可靠码的一部分，表面能毁掉一个完美的尺寸。光面覆膜会反光；招牌和菜单用哑光面通常更安全，餐厅聚光灯下的桌卡应该在那盏聚光灯下测试，不是在办公室灯光下。弯曲表面会扭曲网格——包在小瓶子上的码比同样码平放时读得差，所以用平板或者印大一点。带纹理的卡纸和热敏收据纸会糊掉精细细节，这就是收据需要短链接、需要在实际打印机上测试的原因。深色纸上，把码印在一块白色底板上。户外，印大一点、用更高的纠错级别。</p>
+
+<h2>常见印刷错误</h2>
+
+<ul>
+<li><strong>印得太小。</strong>码在设计文件里看着没问题，拿到手里却失败，因为每个模块只有零点几毫米宽。做大一点，或者缩短内容。</li>
+<li><strong>拉伸或压扁。</strong>不锁定比例拖一个角会扭曲定位图案——就是扫码器用来定位码的三个大角方块。</li>
+<li><strong>从一张小而糊的 PNG 放大。</strong>普通平滑处理会把锐利边缘变成灰色模糊。用 SVG，或者最近邻缩放。</li>
+<li><strong>静区被裁掉。</strong>文字、边框或紧贴的裁切跑进边距，会让扫码器找不到码的边缘。</li>
+<li><strong>对比度低。</strong>屏幕上看着优雅的品牌色印出来可能失败，因为油墨和纸张会改变色调。永远是深色码在浅色底上——并且检查印好的样张。</li>
+<li><strong>Logo 对印刷尺寸来说太大了。</strong>带 Logo 的码印刷时最低要 3 × 3 cm，不是 2 × 2 cm，Logo 应该保持在码面积的约 30% 以内。<a href="/zh/blog/add-logo-to-qr-code/">Logo 指南</a>里讲了这笔权衡。</li>
+<li><strong>从来没打样。</strong>最贵的错误，因为它把上面每一条从可修复的细节变成了一次重印。</li>
+</ul>
+
+<h2>送文件之前的印前检查</h2>
+
+<ol>
+<li><strong>格式：</strong>专业印刷和任何大尺寸用 SVG；打印机需要位图时用 1024 或 2048 px 的 PNG，绝不用 JPG。</li>
+<li><strong>尺寸：</strong>2 cm 最低值和距离 ÷ 10 两者取大，往大取整，按真实扫码距离核对过。</li>
+<li><strong>密度：</strong>短链接、只填需要的字段，网格看着密就印大一点。</li>
+<li><strong>静区：</strong>四边都至少留 4 个模块的干净浅色边距，在最终稿上确认过。</li>
+<li><strong>对比度：</strong>深色模块在浅色底上，在印好的样张上验证过，不只在屏幕上看过。</li>
+<li><strong>表面处理：</strong>有反光风险的地方用哑光，弯曲物体上用平板，深色纸上用白色底板。</li>
+<li><strong>打样：</strong>按最终尺寸、最终材质印一份，在实际使用的光线下用不止一部手机扫，并且检查目标页面在移动数据下能打开。</li>
+</ol>
+
+<h2>老实对比：印刷 vs 屏幕，静态 vs 动态</h2>
+
+<p>印刷和屏幕奖励相反的习惯。屏幕上，码几秒钟就能重新生成、立刻测试，所以小码或试验码修起来不花成本。印刷里每次修复都是一次重印，这就是印刷要求保守选择的原因：SVG 胜过 PNG、尺寸往大选、静区给足、打样扫码。把印刷文件当屏幕文件对待——导出小、裁切紧、跳过打样——就是好设计在成品批量里变成死方块的路。</p>
+
+<p>静态和动态的选择在印刷里出于另一个原因重要：批量印完之后会发生什么。静态码直接编码目标，不用注册、没有水印、永不过期——固定目标的理想选择，比如首页或产品说明书。动态码编码的是跳转，所以目标在印后可编辑，还带扫码统计；目标可能变、或者需要知道自己选的尺寸和位置是不是起作用时，它是正确的选择。动态码做不到的是救活一个尺寸印坏的印刷品：改目标修不好小到读不出来的模块。先把印刷尺寸做对。</p>
+
+<p>还有一项对比值得明说，因为它决定预算：把码做大几乎不花钱，重印却不是。从名片上的 2 cm 做到 3 cm 印刷上不花钱；重印一千张名片花的是整批的钱。尺寸决定拿不准时，选大的几乎总是更便宜的选择——而且背后扫码不限的码无论多受欢迎都一直有用。</p>
+
+<p>在<a href="/zh/qr-code-with-logo/">免费生成器</a>里做你的码——17 种类型任选，最高 2048 px 的 PNG 或 SVG，静态码不用注册、不过期，或者免费动态码，印后可编辑。如果码带 Logo，先读<a href="/zh/blog/add-logo-to-qr-code/">Logo 指南</a>：带 Logo 的码需要这张表已经假定的那个更大的最低值。</p>
     </div>
 
     <section class="sources">
       <h2>参考来源</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - 二维码符号规范。定义了四种纠错等级（L 7%、M 15%、Q 25%、H 30%）和 4 模块静区。</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - QR Code 码制规范，2024 年 8 月出版（第 4 版）。佐证四档纠错级别（L 7%、M 15%、Q 25%、H 30%）和 4 模块静区。</li>
+      <li><a href="https://www.qrcodebarn.com/blog/qr-code-size-guide.html">QRCodeBarn — QR Code Size Guide: How to Resize a QR Code Properly</a> - 2026 年 10 月 13 日发布。佐证 2 cm 实际最低值、距离 ÷ 10 经验法则及算好的例子、4 模块静区（2 cm、29 模块的码上为 2.8 mm）、300 DPI 位图指南、600 px 在 300 DPI 下约等于 5 cm 的核对，以及 M 级 29 × 29 到 H 级 37 × 37 的例子。</li>
+      <li><a href="https://www.adobe.com/uk/creativecloud/photography/discover/image-resolution.html">Adobe — What Does Resolution Mean? Image Resolution Guide</a> - 页面上未显示发布日期；访问于 2026 年 11 月 3 日。佐证 300 DPI 是最佳印刷效果的最低值，150 DPI 对远距离观看的大幅印刷可行。</li>
+      <li><a href="https://pretty-qr.com/blog/qr-design-best-practices">Pretty QR — QR Code Design Rules: 10 Rules for Beautiful Codes That Still Scan</a> - 页面上未显示发布日期；访问于 2026 年 11 月 3 日。佐证 2 cm 印刷最低值、扫码距离 ÷ 10、4 模块静区，以及屏幕 200 × 200 px 最低值。</li>
+      <li><a href="https://www.notraqr.com/qr-codes-technical.html">NoTraQR — QR Code Technical Guide: Error Correction, File Formats and Barcode Comparison</a> - 页面上未显示发布日期；访问于 2026 年 11 月 3 日。佐证纠错表、2 cm / 3 cm 经验法则、D/10 尺寸计算，以及至少在两台设备（iOS 和 Android）上测试。</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
       <div>
         <h3>自己试试——免费</h3>
-        <p>这篇文章里的每样东西，现在都能在 FreeQrly 首页里用。静态码、十三种内容类型、PNG 和 SVG 导出。</p>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
         <a class="btn" href="/zh/#studio">打开生成器</a>
       </div>
     </div>
@@ -141,15 +267,20 @@
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
         <a class="rel-card" href="/zh/blog/free-qr-codes-that-dont-expire/"><b>永不过期的免费二维码</b></a>
-        <a class="rel-card" href="/zh/blog/scan-qr-code-from-image/"><b>How to Scan a QR Code from a Picture, Photo, or Screenshot</b></a>
-        <a class="rel-card" href="/zh/blog/wedding-rsvp-qr-code/"><b>Wedding RSVP QR Codes: No More Chasing Replies</b></a>
+        <a class="rel-card" href="/zh/blog/scan-qr-code-from-image/"><b>怎么从图片、照片或截屏扫二维码</b></a>
+        <a class="rel-card" href="/zh/blog/wedding-rsvp-qr-code/"><b>婚礼 RSVP 二维码：不用再追着要回复</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
-    <details><summary><span>打印的二维码最小尺寸是多少？</span></summary><p>经验法则是 2×2 厘米（0.8×0.8 英寸）。更小的码在很多手机上扫不出来，尤其像 vCard 这种数据多的码。</p></details>
+    <details><summary><span>打印的二维码最小尺寸是多少？</span></summary><p>经验法则，2 × 2 cm（0.8 × 0.8 英寸）。更小的码在很多手机上都会失败，尤其是装着大量数据的码，比如 vCard。</p></details>
     <details><summary><span>海报上的二维码应该多大？</span></summary><p>用 1:10 经验法则：二维码宽度至少是预期扫码距离的十分之一。5 米外扫的海报需要 50 厘米的码。</p></details>
-    <details><summary><span>打印用 PNG 还是 SVG？</span></summary><p>SVG 最好——无限放大不损失质量。如果你的印刷机需要位图，导出 2048 px 的 PNG。</p></details>
+    <details><summary><span>打印用 PNG 还是 SVG？</span></summary><p>SVG 最好——它可以无限放大、没有任何质量损失。打印机需要位图时，导出 2048 px 的 PNG。绝不用 JPG：它的压缩会糊掉扫码器依赖的模块边缘。</p></details>
+    <details><summary><span>二维码需要留多少边距？</span></summary><p>按 ISO/IEC 18004 的规定，每边至少留 4 个模块宽的静区，颜色跟码的背景是同样的浅色。2 cm 的码横向 29 个模块，算下来四周约 2.8 mm。</p></details>
+    <details><summary><span>怎么按扫码距离算尺寸？</span></summary><p>距离除以十，往大取整，永远不低于 2 cm 最低值。2 米外扫的码至少要 20 cm；10 米外扫，至少要 1 米。</p></details>
+    <details><summary><span>链接越长，印刷就要越大吗？</span></summary><p>是的。数据越多模块越多，同样印刷尺寸下模块越小、越难读。用短而干净的链接，或者用动态码——它的短跳转目标在印后可编辑。</p></details>
+    <details><summary><span>屏幕上的二维码应该多大？</span></summary><p>经验法则，不要低于约 200 × 200 像素。幻灯片和投影显示按投影宽度套用 1:10 比值，并考虑最远观众的距离。</p></details>
+    <details><summary><span>为什么印出来的码在屏幕版能扫时却失败？</span></summary><p>常见原因是静区被裁掉、光面覆膜反光、带纹理纸张上的油墨洇散、网格被拉伸，或者 PNG 平滑放大。批量印刷之前，先按最终尺寸、最终材质印一份，用不止一部手机扫。</p></details>
     </section>
   </article>
   <footer>

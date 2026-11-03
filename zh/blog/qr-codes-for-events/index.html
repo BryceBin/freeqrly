@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"活动二维码：签到、门票及更多 | FreeQrly","description":"活动二维码怎么用：签到、注册、门票、照片共享和添加到日历的二维码。免费生成器。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"活动二维码：签到、门票及更多 | FreeQrly","description":"活动二维码怎么用：签到、注册、门票、照片共享和添加到日历的二维码。免费生成器。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "活动签到二维码怎么做？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "把二维码链接到你的签到表单或注册页，打印出来放在入口，宾客到场扫码，不用在桌前排队。"
+        "text": "把码链到你的签到表或报名页，印出来放在入口，宾客到达时扫码，不用在桌前排队。在扫码器旁边留一份印好的宾客名单，作手机没电或屏幕读不出来的备用。"
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "二维码能把活动加到我的日历吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "能——日历（VEVENT）二维码会在 iPhone 和安卓上弹出“添加到日历”提示。FreeQrly 用它的活动类型免费生成。"
+        "text": "可以——日历（VEVENT）二维码能在 iPhone 和安卓上打开“加入日历”提示。FreeQrly 的活动类型免费生成：一次扫码就有标题、开始和结束时间、地点。"
       }
     },
     {
@@ -75,7 +80,39 @@
       "name": "一场活动需要哪些二维码？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "至少：签到/注册、共享相册和场馆 WiFi。请柬上的添加到日历二维码是高回报的额外项。"
+        "text": "最少要有：签到/报名、共享相册和场地 WiFi。邀请函上的加入日历码是高价值的额外项。会议再加议程和嘉宾码；售票活动再加一票一码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "活动票务码应该是静态还是动态？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一票一码，票可以转让或取消、或者核验页可能变时用动态——动态码不用重印票就能改指向。核验页定了的简单、不可转让的票可以用静态码。永远别在每张票上印一个共享码：它分不清一张票和另一张票。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "宾客的票务码在门口扫不出来怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "对照印好的宾客名单查姓名，别把宾客拒之门外。手机会没电，屏幕会碎，截屏会暗到读不出来。开门之前就定好门口团队在码已经被用过时怎么做——回来的宾客还是流传的截屏，需要一条规则，不是在队伍面前争论。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "活动指示牌能给下一场活动重复用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，如果上面的码是动态的。可重复使用牌子上的动态码可以改指向下一场活动的反馈表或议程，牌子永远不用重印。静态码更适合留念品——邀请函和印好的节目单应该用好几年。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "活动二维码应该印多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每个码按它的实际扫码距离定尺寸，用打印尺寸指南里的 1:10 距离经验法则：一米外扫的码，大约要比十厘米外扫的码大十倍。对比度保持高，留出清晰的静区，批量印刷之前先在跟场地相似的光线下，在 iPhone 和安卓上测实际印刷品。"
       }
     }
   ]
@@ -93,52 +130,120 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto"><span class="hl hl-blush">活动</span>二维码，正确做法</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">签到排队、门票混乱、“照片在哪？”——几个放对位置的二维码解决这些反复出现的活动头疼事。下面是玩法。</p>
-    <p class="meta" style="text-align:center">2026 年 10 月 14 日 · 阅读约 4 分钟</p>
+    <p class="meta" style="text-align:center">2026年10月14日 · 最后更新：2026年11月3日 · 阅读约15分钟</p>
     <div class="prose" style="margin-top:40px">
-
-<h2>1. 签到与注册</h2>
-<p>在确认邮件里放一个链接到签到表单的码（或一个简单的“我到了”页面）。宾客在门口扫码，不用对着拿写字板的志愿者拼名字。售票活动，把每张票链接到它的验证页面。</p>
-<h2>2. 添加到日历的二维码</h2>
-<p>最被低估的活动码：把活动直接放进宾客日历的那种。FreeQrly 的<a href="/zh/?type=event">活动二维码类型</a>几秒钟就能做好——标题、开始/结束时间、地点——扫一下，iPhone 和安卓都会提示“添加到日历”。印在请柬上——请柬到日历之间少一步，放鸽子的人可能就少一点。 筹备圣诞派对？同样的邀请技巧在节日里一样好用——看看<a href="/zh/christmas-qr-code/">圣诞二维码生成器</a>，有贺卡、礼物标签和派对点子。</p>
-<h2>3. 共享相册</h2>
-<p>每场活动都有同样的问题：照片散在五十台手机里。桌卡上一个链接到共享相册（Google Photos、iCloud 共享相册）的码就能解决——宾客点一下上传自己的照片。</p>
-<h2>4. 场馆 WiFi</h2>
-<p>参会者会问 WiFi。指示牌上的一个 <a href="/zh/wifi-qr-code/">WiFi 二维码</a>扫一下就连上——不用在吵闹的音乐声里拼密码。</p>
-<h2>5. 反馈与跟进</h2>
-<p>在出口指示牌或结束幻灯片上放一个链接到 2 个问题的反馈表单的码。宾客趁活动还新鲜就回答了，而不是几天后无视跟进邮件。</p>
+<p>签到排队、票务混乱、“照片在哪儿？”——几个放对地方的二维码能解决这些反复出现的活动难题。诀窍不在码本身，而在于让每个码对上宾客旅程中的一个时刻，并且为每个时刻认真选静态还是动态。邀请函上的码跟出口指示牌上的码干的活不一样，错的地方印错种类，就是活动最后竖起一墙没人扫的码的原因。</p>
+<p>从宾客出发，别从技术出发。宾客跟活动打交道大致有五个时刻：听说、确认、到达、参与、离开。每个时刻有一个问题——什么时候、我算不算数、往哪走、正在发生什么、我觉得怎么样——每个问题都有一个码，一次扫码就能回答。</p>
+<h2>活动码地图</h2>
+<div class="table-scroll"><table>
+<tr><th>宾客时刻</th><th>码</th><th>放在哪儿</th><th>静态还是动态</th></tr>
+<tr><td>之前：听说</td><td>加入日历码（活动类型）</td><td>邀请函、预留日期卡、邮件</td><td>静态——日期、时间和场地很少变，留念邀请函应该一直能用</td></tr>
+<tr><td>之前：确认</td><td>RSVP 或报名表</td><td>邀请函详情卡、活动页</td><td>表单链接定了就用静态；表单可能挪地方就用动态</td></tr>
+<tr><td>之前：票务</td><td>票务核验页，一票一码</td><td>票务邮件、印好的票</td><td>票可以转让或取消时用动态；简单、不可转让的票才用静态</td></tr>
+<tr><td>到达：签到</td><td>签到表或“我到了”页面</td><td>确认邮件、入口指示牌</td><td>签到页或当天日程可能变时用动态</td></tr>
+<tr><td>进行中：议程和嘉宾</td><td>议程页、嘉宾简介</td><td>节目单、场次指示牌、幻灯片页脚</td><td>动态——议程会变、嘉宾会退出、房间会换</td></tr>
+<tr><td>进行中：联网</td><td>场地 WiFi</td><td>入口和餐桌指示牌</td><td>静态——网络在当天很少变</td></tr>
+<tr><td>进行中：照片</td><td>共享相册</td><td>桌卡、照片墙、结束幻灯片</td><td>可能换相册时用动态；相册定了就用静态</td></tr>
+<tr><td>之后：反馈</td><td>简短反馈表</td><td>出口指示牌、结束幻灯片、感谢邮件</td><td>下一场活动还想用这块牌子时用动态</td></tr>
+</table></div>
+<p>这张表里的规律就是整个策略：印后可能变的东西用动态，定死的东西用静态。静态码永不过期——留念邀请函是对的，活动当天早上还要改的议程是错的。</p>
+<h2>活动之前：邀请函、日历和 RSVP</h2>
+<p>邀请函是大多数活动码失败的地方，因为主办方印了一个指向首页的码，指望宾客自己找到 RSVP 表。把码链到表上，别链到网站上。先建 RSVP 表——简单的表单工具就行——然后生成码，印在邀请函套装上，宾客扫码、点一下、回复。没有邮票，没有丢失的回函卡，没有难辨认的手写。回复进来之后，表自动统计，包括餐食选择；导出成表格，发给餐饮方，行政工作就完了。</p>
+<p>把 RSVP 码跟加入日历码配对，后者是最被低估的活动码。一次扫码就把活动——标题、开始和结束时间、地点——直接放进iPhone 和安卓的宾客日历。印在邀请函上，邀请和日历之间就少了一步，这可能意味着更少的缺席。婚礼邀请函套装是经典情形：RSVP 码放在详情卡上，日历码放在旁边，照片相册码等着上桌卡。同样的邀请函技巧也适用于节日派对——见<a href="/zh/christmas-qr-code/">圣诞二维码生成器</a>。</p>
+<p>邀请函上的码要像给陌生人写指示一样措辞。码旁边原样印出下一步要做什么：“6 月 1 日前扫码 RSVP。”年长的宾客可能需要这个提醒，真正不爱扫码的人仍然需要在邀请函上看到一个电话号码。每个码旁边都应该有一个简短的印刷替代方案——链接或电话号码——这样电池没电、没有信号或没有相机手机的宾客才不会被锁在门外。</p>
+<h2>票务：一票一码，以及这句话的真正含义</h2>
+<p>对售票活动来说，每张票链到它自己的核验页，别在每张票上印同一个共享码。共享码分不清一张票和另一张票，所以它逮不住一张票被扫两次——而共享码的截屏，对收到它的任何人来说都是一张免费票。</p>
+<p>批量生成能把一列票务链接一次下载成一套码。按票或宾客给文件命名，发送之前抽一个样张扫码测试。门口的签到团队最需要的只有一样东西：备用方案。手机会没电，屏幕会碎，截屏会暗到读不出来。入口处留一份印好的宾客名单，培训门口团队在码读不出来时核对姓名。</p>
+<h2>门口：不用写字板的签到排队</h2>
+<p>在确认邮件里放一个链到签到表或简单“我到了”页面的码。宾客在门口扫码，不用对着拿写字板的志愿者拼自己的名字。对小型活动来说，那张表可以简单到一个姓名字段加一个提交按钮。</p>
+<p>三个细节让门口签到管用。第一，把入口码印大，放在胸口高度——宾客拿着手机自然指向的位置——别放在桌子上让人们在后面排队，也别放在会晃的门上。第二，给门口团队第二条路：印好的链接和纸上的宾客名单。第三，开门之前就定好码已经被用过一次时怎么办。一张票被扫两次，要么是回来的宾客，要么是流传的截屏；门口团队需要一条规则，不是在队伍面前争论。</p>
+<h2>活动进行中：议程、嘉宾、WiFi 和照片墙</h2>
+<h3>议程和嘉宾简介</h3>
+<p>节目单上的码——或者每场幻灯片页脚里的码——链到实时议程页，能让你在场次换房间时不用每次都重印节目单。这是活动里动态码最有力的情形：印好的图案不变，目标从你的 Dashboard 里改。嘉宾简介也是同样道理。</p>
+<h3>场地 WiFi</h3>
+<p>与会者会问 WiFi。<a href="/zh/wifi-qr-code/">WiFi 二维码</a>放在指示牌上，一次扫码就能连上——不用在震耳的音乐声里拼密码，不用在服务台前排队。放在人们最先找它的地方：入口、登记台和餐桌，不只放在三十秒后就消失的幻灯片上。一个老实的权衡：任何拍下印好的码的人都能加入网络，所以要把场地 WiFi 码当成客房钥匙对待。</p>
+<h3>共享相册</h3>
+<p>每场活动都有同一个问题：照片散在五十部手机里，主办方接下来一周都在求人发照片。桌卡上一个链到共享相册的码能解决它——宾客整晚一次点按就能把照片传到同一个地方。印在桌卡上、照片墙指示牌上、结束幻灯片上，宾客拍照时就能看见它。活动之前先检查相册的分享设置：有链接的人通常都能往共享相册里加东西。如果相册只打算给宾客，码就留在房间里，别放在公开活动页上。</p>
+<h2>活动之后：趁还新鲜要反馈</h2>
+<p>出口指示牌或结束幻灯片上一个链到简短反馈表的码，能在活动还新鲜的时候逮住宾客，而不是跟几天后大多数宾客都会忽略的后续邮件竞争。表保持两个问题：一个评分，一个开放框写要改什么。出口处的十题问卷会被放弃；走到车边的路上，两题表会被答完。第二天的感谢邮件可以再带一次同一个码，外加照片相册链接，给那些走得太快的宾客。</p>
+<p>活动之后也是静态和动态选择第二次见效的时候。可重复使用的牌子上的动态码可以改指向下一场活动的反馈表，牌子永远不用重印。留念品上的静态码作为纪念品能用好几年。印刷之前先定好每块牌子应该有什么样的“身后事”。</p>
+<h2>静态还是动态：印前和印后的区别</h2>
+<p>老实的对比不是“动态更好”。两种码的失败方式不一样，而活动恰恰是两种失败模式都会出现的地方：</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>静态</th><th>动态</th></tr>
+<tr><td><strong>装的是什么</strong></td><td>目标本身，就在图案里</td><td>跳转到目标的短链接</td></tr>
+<tr><td><strong>印后目标变了</strong></td><td>码坏了；重印</td><td>在 Dashboard 里改目标；所有印好的版本都跟上</td></tr>
+<tr><td><strong>想知道什么被扫了</strong></td><td>什么都没记录；静态码永远不回传</td><td>扫码统计显示总数、时间和明细——见<a href="/zh/blog/dynamic-qr-code-statistics/">动态二维码统计告诉你什么</a></td></tr>
+<tr><td><strong>需要账号吗</strong></td><td>不用——免费，不用注册，没有水印，永不过期</td><td>要——免费登录，免费账号 20 个，限时活动期间扫码不限</td></tr>
+<tr><td><strong>最适合的活动用途</strong></td><td>邀请函、日历码、WiFi、留念品</td><td>议程、签到、反馈、可重复使用的指示牌、任何可能挪地方的东西</td></tr>
+<tr><td><strong>失败模式</strong></td><td>无声：链接一变就是个没人上报的死码</td><td>依赖：跳转服务必须在线，码才能工作</td></tr>
+</table></div>
+<p>一条实用的规则：活动团队在当天掌控的一切——议程、签到、反馈——都用动态码；宾客留着的一切——邀请函、日历条目、应该比活动活得久的相册——都用静态码。如果有人可能需要在印后改码指向的地方，就做动态。</p>
+<h2>印刷和测试：不起眼却决定一切的部分</h2>
+<p>活动码是在混乱灯光下被匆忙的人扫的。按这个现实印，别按设计稿印：</p>
+<ul>
+<li><strong>比你以为的印大一点。</strong><a href="/zh/blog/qr-code-print-size-guide/">1:10 距离经验法则</a>是个很好的起点：一米外扫的码，大约要比十厘米外扫的码大十倍。每个码按它的实际距离定尺寸。</li>
+<li><strong>对比度保持高，边距保持清晰。</strong>浅色底上的深色墨，码周围留出清晰的静区。印在花哨照片上、或者用低对比度品牌色的码，是活动里一个本来没问题的码失败的最常见原因。</li>
+<li><strong>按会受损来印。</strong>票会被折，桌卡会被洒上东西，户外招牌会被雨淋。二维码标准 ISO/IEC 18004:2024 定义了四档纠错级别——L、M、Q、H——分别恢复码字的 7%、15%、25% 和 30%，所以级别更高的码在更多部分受损后还能扫。宾客会拿的东西用更高的级别，Logo 保持小、居中，别吃掉这份余量。</li>
+<li><strong>印一百份任何东西之前，先在 iPhone 和安卓上都测过。</strong>现代手机的自带相机不用 App 就能读码——苹果的支持页描述了打开相机或控制中心扫码器、让码出现在画面里、点出现的链接——但不同型号的相机表现不一样，一个在强光下某部手机上能扫的码，在暗礼堂里另一部手机上可能失败。测实际印刷品、实际尺寸、在跟场地相似的光线下测。</li>
+<li><strong>一块牌子一个码，配上标签。</strong>两个码并排会让宾客犹豫、让相机挑错。每个码都标清它是干什么的——“扫码连 WiFi”、“扫码看照片”——因为活动里光秃秃的码是宾客走过去的码。</li>
+</ul>
+<p>还有一个数字值得在围绕手机做计划之前知道：皮尤研究中心 2026 年对美国成年人的调查里，91% 的人说自己拥有智能手机，高于该中心 2011 年第一次这类调查时的 35%。这是美国数字，来自 2026 年 1 月 30 日至 6 月 18 日对 5,511 名成年人做的调查——不是全球比率，也不是对你这份宾客名单的保证。它的实际含义不大：对大多数受众来说，围绕手机相机做计划，就是围绕几乎人人已经携带的设备做计划，同时还是要给其余人留一个印刷替代方案。</p>
+<h2>哪里会出问题——以及每个问题的修法</h2>
+<ul>
+<li><strong>码指向的页面搬家了。</strong>修法：团队可能挪地方的任何东西都用动态码，活动当天早上在场地网络上用手机做最后一次链接检查。</li>
+<li><strong>宾客连不上网，因为 WiFi 码只在一张幻灯片上。</strong>修法：WiFi 码放在入口和餐桌的永久指示牌上，不只放在幻灯片上。</li>
+<li><strong>相册里挤满陌生人传的照片。</strong>修法：相册码留在房间里，开门之前检查分享设置，链接外泄之后活动结束就换相册链接。</li>
+<li><strong>票的截屏在流传。</strong>修法：一票一码，门口对第二次扫码定好规则，纸质宾客名单作备用。</li>
+<li><strong>年长宾客或没有智能手机的宾客被晾在一边。</strong>修法：邀请函上留电话号码，门口留纸质名单，码旁边放印好的议程。码是多一条路，永远不是唯一的路。</li>
+</ul>
 <h2>活动用码清单</h2>
 <ul>
 <li>签到：确认邮件里的码，到场扫码。</li>
 <li>加入日历：放在请柬上，宾客就不会忘记日期。</li>
+<li>RSVP：放在详情卡上，链到表。</li>
+<li>票务：一票一码，批量生成，发送之前扫码测试。</li>
+<li>议程和嘉宾：放在节目单和幻灯片页脚，动态。</li>
 <li>照片集：放在桌卡上，照片都汇总到同一个共享相册。</li>
 <li>场地 WiFi：放在指示牌上，不用在嘈杂音乐里拼读密码。</li>
-<li>反馈：放在出口指示牌或结束页，趁活动还热乎。</li>
+<li>反馈：放在出口指示牌和结束幻灯片上，趁活动还新鲜。</li>
 </ul>
-<h2>打印提示</h2>
-<p>活动码是在混乱的光线下被匆忙的人扫的：印得比你想的更大（<a href="/zh/blog/qr-code-print-size-guide/">1:10 距离经验法则</a>），对比度保持高，印一百张桌卡之前先在 iPhone 和安卓上都测一下。静态码永不过期，所以去年的指示牌模板今年还能用。</p>
-
+<p>合起来：宾客每个问题一个码，可能变的地方用动态，应该长久的地方用静态，每个码贴标签、测过、有印刷替代方案。在<a href="/zh/dynamic-qr-code/">动态二维码工作室</a>里做活动团队可能需要改的码，邀请函和留念品做免费静态码——如果还在纠结需要哪一种，<a href="/zh/blog/static-vs-dynamic-qr-codes/">静态 vs 动态，实话实说</a>不带推销地讲清了这笔权衡。专门在筹备婚礼？<a href="/zh/blog/wedding-rsvp-qr-code/">婚礼 RSVP 指南</a>里有邀请函套装的详细内容。</p>
     </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="https://support.apple.com/en-us/102680">Apple Support — Scan a QR code with your iPhone or iPad</a> - 佐证测试扫码方法：打开相机或控制中心的“扫码”入口，让码出现在画面里，点出现的链接。2026 年 9 月 14 日发布。</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024 — QR code bar code symbology specification</a> - 佐证印刷一节里用的纠错级别：L 恢复码字的 7%，M 15%，Q 25%，H 30%。标准的 2024 年版。</li>
+      <li><a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">Pew Research Center — Americans' Use of Mobile Devices in 2026</a> - 佐证：91% 的美国成年人说自己拥有智能手机，98% 的人说自己拥有某种手机，高于该中心 2011 年第一次这类调查时的 35% 智能手机拥有率。基于 2026 年 1 月 30 日至 6 月 18 日对 5,511 名美国成年人做的调查，误差幅度正负 1.8 个百分点。</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
       <div>
         <h3>自己试试——免费</h3>
-        <p>这篇文章里的每样东西，现在都能在 FreeQrly 首页里用。静态码、十三种内容类型、PNG 和 SVG 导出。</p>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
         <a class="btn" href="/zh/#studio">打开生成器</a>
       </div>
     </div>
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/how-to-create-a-dynamic-qr-code/"><b>How to Create a Dynamic QR Code Free (Editable After Printing)</b></a>
-        <a class="rel-card" href="/zh/blog/dynamic-qr-code-statistics/"><b>Dynamic QR Code Statistics: What Scans Actually Tell You</b></a>
-        <a class="rel-card" href="/zh/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
+        <a class="rel-card" href="/zh/blog/how-to-create-a-dynamic-qr-code/"><b>怎么免费创建动态二维码（印后可编辑）</b></a>
+        <a class="rel-card" href="/zh/blog/dynamic-qr-code-statistics/"><b>动态二维码统计：扫码真正告诉你什么</b></a>
+        <a class="rel-card" href="/zh/blog/make-qr-code-in-canva-excel-word/"><b>怎么在 Canva、Excel 或 Word 里做二维码（免费）</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
-    <details><summary><span>活动签到二维码怎么做？</span></summary><p>把二维码链接到你的签到表单或注册页，打印出来放在入口，宾客到场扫码，不用在桌前排队。</p></details>
-    <details><summary><span>二维码能把活动加到我的日历吗？</span></summary><p>能——日历（VEVENT）二维码会在 iPhone 和安卓上弹出“添加到日历”提示。FreeQrly 用它的活动类型免费生成。</p></details>
-    <details><summary><span>一场活动需要哪些二维码？</span></summary><p>至少：签到/注册、共享相册和场馆 WiFi。请柬上的添加到日历二维码是高回报的额外项。</p></details>
+    <details><summary><span>活动签到二维码怎么做？</span></summary><p>把码链到你的签到表或报名页，印出来放在入口，宾客到达时扫码，不用在桌前排队。在扫码器旁边留一份印好的宾客名单，作手机没电或屏幕读不出来的备用。</p></details>
+    <details><summary><span>二维码能把活动加到我的日历吗？</span></summary><p>可以——日历（VEVENT）二维码能在 iPhone 和安卓上打开“加入日历”提示。FreeQrly 的活动类型免费生成：一次扫码就有标题、开始和结束时间、地点。</p></details>
+    <details><summary><span>一场活动需要哪些二维码？</span></summary><p>最少要有：签到/报名、共享相册和场地 WiFi。邀请函上的加入日历码是高价值的额外项。会议再加议程和嘉宾码；售票活动再加一票一码。</p></details>
+    <details><summary><span>活动票务码应该是静态还是动态？</span></summary><p>一票一码，票可以转让或取消、或者核验页可能变时用动态——动态码不用重印票就能改指向。核验页定了的简单、不可转让的票可以用静态码。永远别在每张票上印一个共享码：它分不清一张票和另一张票。</p></details>
+    <details><summary><span>宾客的票务码在门口扫不出来怎么办？</span></summary><p>对照印好的宾客名单查姓名，别把宾客拒之门外。手机会没电，屏幕会碎，截屏会暗到读不出来。开门之前就定好门口团队在码已经被用过时怎么做——回来的宾客还是流传的截屏，需要一条规则，不是在队伍面前争论。</p></details>
+    <details><summary><span>活动指示牌能给下一场活动重复用吗？</span></summary><p>可以，如果上面的码是动态的。可重复使用牌子上的动态码可以改指向下一场活动的反馈表或议程，牌子永远不用重印。静态码更适合留念品——邀请函和印好的节目单应该用好几年。</p></details>
+    <details><summary><span>活动二维码应该印多大？</span></summary><p>每个码按它的实际扫码距离定尺寸，用打印尺寸指南里的 1:10 距离经验法则：一米外扫的码，大约要比十厘米外扫的码大十倍。对比度保持高，留出清晰的静区，批量印刷之前先在跟场地相似的光线下，在 iPhone 和安卓上测实际印刷品。</p></details>
     </section>
   </article>
   <footer>

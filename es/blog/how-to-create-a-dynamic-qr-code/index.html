@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Cómo crear un código QR dinámico gratis (editable después de imprimir) | FreeQrly","description":"Crea un código QR dinámico gratis: inicia sesión, elige un tipo, personalízalo, imprímelo. Edita el destino después sin reimprimir: 20 códigos gratis, actualmente ilimitados.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Cómo crear un código QR dinámico gratis (editable después de imprimir) | FreeQrly","description":"Crea un código QR dinámico gratis: inicia sesión, elige un tipo, personalízalo, imprímelo. Edita el destino después sin reimprimir: 20 códigos gratis, actualmente ilimitados.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "¿Crear un código QR dinámico es de verdad gratis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Inicia sesión gratis, crea hasta 20 códigos dinámicos, edítalos y mira las estadísticas. Sin período de prueba y sin tarjeta. Los códigos estáticos siguen siendo gratis e ilimitados, sin cuenta."
+        "text": "Sí. Inicia sesión gratis y crea hasta 20 códigos dinámicos, actualmente sin límite durante la promoción por tiempo limitado, con escaneos ilimitados. No hay periodo de prueba ni tarjeta necesaria para empezar. Los códigos estáticos siguen siendo gratis e ilimitados sin ninguna cuenta."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "¿Necesito una cuenta para un código QR dinámico?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí: el código tiene que ser de alguien para que solo tú puedas editarlo. Correo + contraseña, Google o GitHub. Los códigos estáticos nunca necesitan cuenta."
+        "text": "Sí: el código tiene que ser de alguien para que solo tú puedas editarlo. Inicia sesión con correo y contraseña, Google o GitHub. Los códigos estáticos nunca necesitan una cuenta."
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "¿Cuántos códigos QR dinámicos puedo tener?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "20 en la cuenta gratuita (actualmente ilimitados durante la promoción por tiempo limitado). Borra un código para liberar su hueco."
+        "text": "20 con la cuenta gratuita, actualmente sin límite durante la promoción por tiempo limitado. Borra un código para liberar su hueco, pero borrar es definitivo y las copias impresas de un código borrado dejan de funcionar."
       }
     },
     {
@@ -83,7 +88,39 @@
       "name": "¿A qué enlaza un código QR dinámico?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A un enlace corto de FreeQrly (freeqrly.com/q/XXXXXXX) que redirige a tu destino. Quien escanea llega a tu página; la redirección es lo que hace posibles la edición y las estadísticas."
+        "text": "Un enlace corto de FreeQrly (freeqrly.com/q/XXXXXXX) que redirige a tu destino. Quien escanea llega a tu página; la redirección es lo que hace posibles la edición y las estadísticas de escaneo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo editar un código QR dinámico después de imprimirlo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Editar cambia el destino detrás del enlace corto, no el patrón impreso, así que cada copia impresa sirve el nuevo destino en el siguiente escaneo. Vuelve a probar el código después de cualquier edición."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo debería elegir estático en vez de dinámico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando el destino nunca vaya a cambiar: un enlace fijo, una contraseña de WiFi, una tarjeta de visita. Los códigos estáticos guardan el destino en el propio patrón, no necesitan cuenta y siguen funcionando sin ningún servicio de redirección que mantener."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo crear códigos dinámicos en lote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No: los códigos dinámicos se generan uno a la vez, porque cada uno necesita su propio enlace corto y su registro en el Panel. La generación por lotes queda estática."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué les pasa a mis escaneos si un código se vuelve popular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nada malo en FreeQrly: los escaneos son ilimitados, así que un código popular no deja de funcionar porque se haya escaneado demasiadas veces. En los planes gratuitos de otros proveedores, un tope de escaneos puede detener un código; revisa la página de precios o preguntas frecuentes del proveedor antes de imprimir."
       }
     }
   ]
@@ -94,32 +131,32 @@
     {
       "@type": "HowToStep",
       "name": "Inicia sesión, gratis",
-      "text": "Crea una cuenta gratis con correo + contraseña, Google o GitHub. Los códigos estáticos se saltan esto; los dinámicos necesitan un dueño."
+      "text": "Abre la página de inicio de sesión y crea una cuenta con correo y contraseña, Google o GitHub. Los códigos estáticos nunca necesitan esto; los dinámicos sí, porque el código tiene que ser de alguien que sea el único que pueda editarlo."
     },
     {
       "@type": "HowToStep",
       "name": "Cambia a Dinámico",
-      "text": "En el estudio, pasa el interruptor Estático/Dinámico a Dinámico."
+      "text": "En el estudio, pasa el interruptor de Estático a Dinámico. Los tipos, el estilo y la descarga funcionan exactamente igual."
     },
     {
       "@type": "HowToStep",
       "name": "Elige un tipo y rellénalo",
-      "text": "Web, WiFi, contacto, evento: los 17 tipos de contenido funcionan. Batch sigue siendo estático."
+      "text": "Web, WiFi, contacto, evento: los 17 tipos de contenido funcionan como códigos dinámicos. El lote queda estático: un código dinámico por generación, porque cada uno necesita su propio enlace corto y su registro en el Panel."
     },
     {
       "@type": "HowToStep",
       "name": "Dale estilo",
-      "text": "Puntos, colores, logo, marco. La vista previa se actualiza en vivo y el estilo se guarda con el código."
+      "text": "Puntos, colores, logo, marco: la vista previa se actualiza en vivo y el estilo se guarda con el código, así que la miniatura del Panel y la descarga coinciden. Mantén el contraste fuerte y nunca tapes los tres cuadrados grandes de posicionamiento de las esquinas."
     },
     {
       "@type": "HowToStep",
       "name": "Generate",
-      "text": "Pulsa Generar. Te sale un enlace corto como freeqrly.com/q/XXXXXXX; eso es lo que codifica el patrón."
+      "text": "Pulsa Generar. Te sale un enlace corto como freeqrly.com/q/XXXXXXX; eso es lo que codifica el patrón QR. Ponle al archivo descargado un nombre según dónde vivirá el código."
     },
     {
       "@type": "HowToStep",
       "name": "Gestiónalo después",
-      "text": "Encuentra tus códigos en el Panel: edita, revisa estadísticas o borra uno para liberar un hueco."
+      "text": "Tus códigos viven en el Panel: edita, revisa estadísticas o borra uno para liberar un hueco. Prueba el código impreso con la cámara de tu teléfono antes de una tirada completa, y otra vez después de cualquier edición."
     }
   ]}
 </script>
@@ -135,34 +172,106 @@
     <div class="kicker" style="text-align:center">Notas de campo</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Cómo crear un código QR <span class='hl hl-mint'>dinámico</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un código QR dinámico te deja cambiar el destino después de imprimir, y ver cuántas personas escanearon. Así se hace uno, gratis, en un minuto.</p>
-    <p class="meta" style="text-align:center">16 de octubre de 2026 · 4 min de lectura</p>
+    <p class="meta" style="text-align:center">16 de octubre de 2026 · Última actualización: 3 de noviembre de 2026 · 14 min de lectura</p>
     <div class="prose" style="margin-top:40px">
+<p>Sí: puedes crear un código QR dinámico gratis, en alrededor de un minuto, y cambiar adónde apunta después de haberlo impreso. Elige dinámico cuando el destino aún no esté cerrado, cuando quieras contar escaneos o cuando un mismo código impreso deba servir a una página nueva el mes que viene. Elige estático cuando el destino no vaya a cambiar nunca: un enlace fijo, una contraseña de WiFi o una tarjeta de visita no necesitan cuenta ni redirección. Esta guía explica el proceso en FreeQrly, el mecanismo de redirección en lenguaje claro y los límites gratuitos desde el principio.</p>
+<p>En FreeQrly, los códigos dinámicos son gratis. Inicia sesión con correo y contraseña, Google o GitHub, y tendrás 20 códigos dinámicos con la cuenta gratuita, actualmente sin límite durante la promoción por tiempo limitado. No hay periodo de prueba ni tarjeta necesaria para empezar, y los escaneos son ilimitados. Puedes editar un código después de imprimirlo, ver sus estadísticas de escaneo, generar códigos en lote en forma estática y usar la API.</p>
 
-<p>Los códigos estáticos son geniales, hasta que el destino cambia. El folleto ya está impreso, el menú se mudó, la URL de la campaña no era definitiva. Un <strong>código QR dinámico</strong> lo arregla: el patrón impreso queda igual, pero puedes cambiar a dónde apunta, cuando quieras, desde tu Panel. También tienes conteos de escaneos, así sabes si alguien está escaneando de verdad.</p>
-<p>En FreeQrly, los códigos dinámicos son gratis. Inicia sesión (con correo, Google o GitHub) y obtienes 20 (actualmente ilimitados durante la promoción por tiempo limitado). Sin pruebas, sin tarjeta, sin juegos de caducidad. Este es todo el proceso.</p>
+<h2>¿Dinámico o estático? Decídelo antes de imprimir</h2>
+<p>Una vez impreso el código, la decisión no tiene vuelta atrás. Un código estático guarda el destino dentro del patrón, así que nunca se puede redirigir a otro sitio. Un código dinámico guarda un enlace corto que redirige al destino, así que el destino se puede cambiar después. Un código estático impreso con un enlace erróneo exige reimprimir; un código dinámico impreso solo necesita una edición en el Panel.</p>
+<div class="table-scroll"><table>
+<tr><th>Tu caso</th><th>Elige</th><th>Por qué</th></tr>
+<tr><td>El enlace, la contraseña de WiFi o los datos de contacto no van a cambiar</td><td>Estático</td><td>Sin cuenta, sin redirección, sin nada que mantener</td></tr>
+<tr><td>La página de destino aún no está cerrada, pero el cartel tiene que ir a imprenta</td><td>Dinámico</td><td>Imprime ahora y redirige después</td></tr>
+<tr><td>Necesitas informar cuántas personas escanearon</td><td>Dinámico</td><td>Solo los códigos dinámicos informan de escaneos</td></tr>
+<tr><td>El menú de temporada, el evento o la campaña cambian a menudo</td><td>Dinámico</td><td>Una sola tirada sirve para todas las temporadas</td></tr>
+</table></div>
+<p>Si aún dudas, <a href="/es/blog/static-vs-dynamic-qr-codes/">estático frente a dinámico, explicado con honestidad</a> da más ejemplos. En resumen: lo dinámico compra flexibilidad y medición al precio de depender de un servicio de redirección y de una cuenta; lo estático compra independencia al precio de un destino congelado en el momento de imprimir.</p>
 
+<h2>Cómo funciona en realidad un código dinámico</h2>
+<p>Un código dinámico no guarda tu enlace directamente. Guarda un enlace corto de FreeQrly, con la forma <code>freeqrly.com/q/XXXXXXX</code>, y el patrón codifica ese enlace corto. Cuando alguien escanea el código, su teléfono abre el enlace corto, el servidor de FreeQrly busca el destino que tienes configurado en ese momento y redirige a quien escanea hacia allí. Quien escanea termina en tu página; el enlace corto es solo el cruce en medio.</p>
+<p>Ese cruce explica cada función y cada límite:</p>
+<ul>
+<li><strong>Editar funciona porque el patrón nunca cambia.</strong> El patrón solo guarda el enlace corto. Al editar cambias el registro que hay detrás, así que cada copia impresa sirve el nuevo destino en el siguiente escaneo.</li>
+<li><strong>Contar funciona porque cada escaneo pasa por el cruce.</strong> El servidor ve el escaneo de camino al destino y lo suma a las estadísticas. Un código estático nunca toca un servidor, así que no hay nada que contar.</li>
+<li><strong>Se necesita una cuenta porque el cruce tiene que ser de alguien.</strong> Solo la cuenta que lo creó puede cambiar adónde apunta su enlace corto. Sin dueño, cualquiera podría redirigir el código impreso de otra persona.</li>
+<li><strong>Borrar es definitivo porque el cruce se elimina.</strong> Borra un código y su enlace corto deja de redirigir, así que las copias impresas dejan de funcionar. No hay vuelta atrás, y el hueco liberado se puede usar para un código nuevo.</li>
+</ul>
+<p>Quien escanea no ve nada de esto: apunta, toca la vista previa y llega a tu página. Lo único que puede notar es una redirección que muestre primero un anuncio o una página con la marca del proveedor, así que al comparar generadores, escanea un código de muestra y fíjate en qué aparece antes de que cargue tu destino.</p>
+
+<h2>Paso a paso: crea un código QR dinámico</h2>
 <ol>
-<li><b>Inicia sesión, gratis.</b> Abre la <a href="/es/login/">página de inicio de sesión</a> y crea una cuenta con correo + contraseña, Google o GitHub. Los códigos estáticos nunca necesitan esto; los dinámicos sí, porque el código tiene que ser de alguien.</li>
-<li><b>Cambia a Dinámico.</b> En el <a href="/es/?mode=dynamic">estudio</a>, pasa el interruptor de Estático a Dinámico. Todo lo demás — tipos, estilo, descarga — funciona exactamente igual.</li>
-<li><b>Elige un tipo y complétalo.</b> Web, WiFi, contacto, evento: los 17 tipos de contenido funcionan como códigos dinámicos. (<a href="/es/batch-qr-code/">Batch</a> sigue siendo estático: un código dinámico por generación.)</li>
-<li><b>Dale estilo si quieres.</b> Puntos, colores, logo, marco: la vista previa se actualiza en vivo. El estilo se guarda con el código, así que el Panel y la descarga coinciden.</li>
-<li><b>Genera.</b> Pulsa Generar. Te sale un enlace corto como <code>freeqrly.com/q/XXXXXXX</code>; eso es lo que codifica el patrón QR. Imprímelo, envíalo, pégalo en la pared.</li>
-<li><b>Gestiónalo después.</b> Tus códigos viven en el <a href="/dashboard/">Panel</a>: edita, revisa estadísticas o borra uno para liberar un hueco.</li>
+<li><strong>Inicia sesión, gratis.</strong> Abre la <a href="/es/login/">página de inicio de sesión</a> y crea una cuenta con correo y contraseña, Google o GitHub. Los códigos estáticos nunca necesitan esto; los dinámicos sí, porque el código tiene que ser de alguien que sea el único que pueda editarlo.</li>
+<li><strong>Cambia a Dinámico.</strong> En el <a href="/es/?mode=dynamic">estudio</a>, pasa el interruptor de Estático a Dinámico. Los tipos, el estilo y la descarga funcionan exactamente igual.</li>
+<li><strong>Elige un tipo y rellénalo.</strong> Web, WiFi, contacto, evento: los 17 tipos de contenido funcionan como códigos dinámicos. (El <a href="/es/batch-qr-code/">lote</a> queda estático: un código dinámico por generación, porque cada uno necesita su propio enlace corto y su registro en el Panel.)</li>
+<li><strong>Dale estilo si quieres.</strong> Puntos, colores, logo, marco: la vista previa se actualiza en vivo y el estilo se guarda con el código, así que la miniatura del Panel y la descarga coinciden. Mantén el contraste fuerte y nunca tapes los tres cuadrados grandes de posicionamiento de las esquinas.</li>
+<li><strong>Genera.</strong> Pulsa Generar. Te sale un enlace corto como <code>freeqrly.com/q/XXXXXXX</code>; eso es lo que codifica el patrón. Ponle al archivo descargado un nombre según dónde vivirá el código, por ejemplo <code>cafe-window-menu.png</code>.</li>
+<li><strong>Gestiónalo después.</strong> Tus códigos viven en el <a href="/dashboard/">Panel</a>: edita, revisa estadísticas o borra uno para liberar un hueco. Prueba el código impreso con la cámara de tu teléfono antes de una tirada completa, y otra vez después de cualquier edición.</li>
 </ol>
 
-<h2>Qué contiene en realidad el código QR</h2>
-<p>Un código dinámico no guarda tu enlace directamente. Guarda un enlace corto de FreeQrly, y nuestro servidor redirige a quien escanea hacia tu destino. Ese es el mecanismo que hace posibles la edición y el conteo, y por eso los códigos dinámicos necesitan una cuenta y los estáticos no. Si un servicio te dice que sus códigos «gratis» necesitan una cuenta, este es el mecanismo en juego; la diferencia aquí es que la cuenta es gratis y los códigos no mueren.</p>
+<h2>Elegir el tipo</h2>
+<p>El tipo decide qué ve y qué hace quien escanea. Un código de Web abre una página. Un código de WiFi ofrece unirse a una red. Un código de contacto ofrece guardar una persona. Un código de evento ofrece guardar una fecha. El tipo adecuado elimina un paso, y eso suele valer más que un diseño más ingenioso. Un restaurante debería usar un código de Web que apunte a su página de menú, no un código de texto con el menú dentro: la página se puede actualizar, el código de texto no. Un código de WiFi para invitados debería ser un código de WiFi, porque el teléfono puede unirse desde el propio escaneo; mira <a href="/es/blog/share-wifi-with-qr-code/">cómo compartir WiFi con un código QR</a>.</p>
+<p>Apunta a una página que controles, no a un archivo alojado en un sitio que no controlas: un archivo borrado deja un código que funciona apuntando a la nada. Y ten en cuenta que un texto largo crea un patrón más denso, que necesita un tamaño de impresión mayor para escanearse a la misma distancia; mira la <a href="/es/blog/qr-code-print-size-guide/">guía de tamaño de impresión de códigos QR</a>.</p>
 
-<h2>Los límites, en claro</h2>
+<h2>Dar estilo sin romper el escaneo</h2>
+<p>Los códigos dinámicos admiten el mismo estilo que los estáticos: formas de punto, colores, un logo en el centro y un marco con texto. Tres reglas mantienen escaneable un código con estilo. Primera, mantén el contraste alto y el fondo claro; los escáneres leen módulos oscuros sobre claros. Segunda, mantén el logo discreto y centrado, y nunca tapes un cuadrado de posicionamiento. La corrección de errores reconstruye los módulos ocultos tras un logo central pequeño: en el nivel Alto de la norma ISO/IEC 18004 se puede restaurar hasta alrededor del 30% de las palabras de código, pero ese margen cubre todo el daño junto, incluido el desgaste de impresión y la suciedad, no solo el logo. Tercera, respeta la zona de silencio: el margen en blanco alrededor del código, de al menos 4 módulos de ancho por los cuatro lados según la ISO/IEC 18004, forma parte del código, no es decoración. Más sobre logos en <a href="/es/blog/add-logo-to-qr-code/">cómo añadir un logo a un código QR</a>.</p>
+<p>Para imprimir, prueba una muestra impresa de verdad, no solo la vista previa en pantalla: una copia al tamaño previsto, en el material previsto, escaneada en dos teléfonos distintos — un iPhone y un Android si puedes — con la luz en la que se usará de verdad. Un laminado brillante con luz intensa y un código envuelto alrededor de una botella fallan de maneras que una vista previa en pantalla nunca muestra. Si la muestra escanea lento, imprime más grande; el tamaño es el arreglo más barato que hay.</p>
+
+<h2>Leer las estadísticas con honestidad</h2>
+<p>Cada código dinámico informa a tu Panel: escaneos totales, escaneos de hoy, escaneos únicos y un gráfico de siete días, con desgloses por país, ciudad, dispositivo y sistema operativo. La guía completa está en <a href="/es/blog/dynamic-qr-code-statistics/">qué te dicen las estadísticas de códigos QR dinámicos</a>. Tres hábitos importan más que nada. Compara los códigos entre sí, no contra un referente imaginario: un código en un escaparate y un código en una caja de reparto viven en mundos distintos. Trata el cero como un dato: un código sin escaneos durante una semana suele significar que la ubicación está mal, que falta la llamada a la acción o que el código es demasiado pequeño. Y dale contexto a un pico: una ráfaga de escaneos justo después de publicar un post es el post, no el cartel.</p>
+<p>Las estadísticas de FreeQrly son solo agregados: recuentos por día, país, ciudad, dispositivo y sistema operativo, sin registro por visitante y sin forma de identificar a quien escanea. Un escaneo único se cuenta con un hash de un solo sentido, no con un nombre ni una dirección.</p>
+
+<h2>Casos en los que lo dinámico se gana su sitio</h2>
+<h3>Un menú de restaurante que cambia con la temporada</h3>
+<p>Imprime un código en los expositores de mesa y apúntalo a la página del menú. Cuando cambie la temporada, actualiza la página o redirige el código; los expositores se quedan. Mira <a href="/es/blog/qr-codes-for-restaurants/">códigos QR para restaurantes</a>.</p>
+<h3>Un cartel de evento impreso antes de cerrar los detalles</h3>
+<p>Los carteles van a imprenta semanas antes de cerrar el lugar, el enlace de entradas o el programa. Un código dinámico permite que el cartel salga apuntando a una página provisional, luego pase a la página de entradas cuando se abra la venta y a una página resumen después del evento. Mira <a href="/es/blog/qr-codes-for-events/">códigos QR para eventos</a>.</p>
+<h3>Un producto o envase que sobrevive a su primera campaña</h3>
+<p>El envase se imprime en grandes cantidades y se vende durante meses o años. Un código dinámico en el envase puede empezar en una oferta de lanzamiento, pasar a una página de manual o garantía y más tarde a un producto sucesor, sin reimprimir. Lleva una lista de dónde vive cada código: un código que no encuentras en el Panel es un código que no puedes arreglar.</p>
+<h3>Un código por ubicación, o los números mienten</h3>
+<p>Dale a cada ubicación su propio código. Compartir un código entre un folleto, una tarjeta de visita y un puesto de mercado mezcla sus estadísticas en un solo número que no explica nada. Un código junto a la caja que abre una página de reseñas funciona igual; mira <a href="/es/blog/get-google-reviews-with-qr-code/">cómo conseguir reseñas de Google con un código QR</a>.</p>
+
+<h2>La comparación honesta: qué cuesta lo dinámico en otros sitios</h2>
+<p>Los códigos dinámicos no son gratis en todos lados de la misma manera. Lo que duele después de imprimir es cuántos códigos gratis recibes, si los escaneos tienen tope y qué pasa cuando termina un plan. Las cifras de abajo son declaraciones de cada proveedor en su propia página de precios o preguntas frecuentes, verificadas el 3 de noviembre de 2026. Los precios y límites cambian, así que revisa la página del proveedor antes de imprimir algo que tenga que durar.</p>
+<div class="table-scroll"><table>
+<tr><th>Proveedor, plan gratuito, según el propio proveedor</th><th>Códigos dinámicos gratis</th><th>Límite de escaneos gratis</th><th>Qué dice el proveedor que pasa cuando termina un plan</th></tr>
+<tr><td>FreeQrly, cuenta gratuita</td><td>20, actualmente sin límite durante la promoción por tiempo limitado</td><td>Escaneos ilimitados</td><td>Sin periodo de prueba, sin tarjeta para empezar; borrar un código detiene sus copias impresas y libera el hueco</td></tr>
+<tr><td>QR TIGER, plan freemium</td><td>3</td><td>500 escaneos por código</td><td>Los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente; «Si tu plan caduca, dejará de funcionar»</td></tr>
+<tr><td>The QR Code Generator, plan gratuito</td><td>2</td><td>La asignación gratuita son los 2 códigos</td><td>Tras una prueba, 2 códigos siguen activos pero muestran anuncios; en la plataforma madre Uniqode, los códigos de prueba se inactivan sin un plan de pago</td></tr>
+</table></div>
+<p>Esto no es un veredicto sobre ningún proveedor: un plan de pago con más códigos, un dominio propio o puestos de equipo puede ser la compra acertada para una campaña grande, pero muestra por qué el plan gratuito hay que leerlo, no hojearlo. Un plan gratuito con tope de escaneos es un código que puede morir de éxito. Un plan gratuito atado a una prueba es un código con fecha de caducidad. La pregunta justa para cualquier generador, incluido FreeQrly, es: ¿qué le pasa exactamente a un código impreso si nunca pago, si dejo de pagar y si borro el código? La respuesta debería ser una frase para cada caso, en la página de precios.</p>
+<p>Una dependencia merece decirse sin rodeos. Un código dinámico depende del servicio de redirección del proveedor mientras circule; aquí también. Si ese servicio desapareciera, los códigos dinámicos dejarían de redirigir, mientras que los estáticos, que guardan el destino en el patrón, seguirían funcionando. Por eso lo estático es lo correcto para cualquier cosa que deba funcionar durante décadas sin que nadie la mantenga, como un cartel permanente. Lo dinámico es para material vivo que alguien sigue cuidando; lo estático, para material que debe cuidarse solo.</p>
+
+<h2>Errores que arruinan una tirada</h2>
 <ul>
-<li><strong>20 códigos, gratis (actualmente ilimitados durante la promoción por tiempo limitado).</strong> Esa es la cuota gratuita. Borra un código y el hueco queda libre.</li>
-<li><strong>Uno a la vez.</strong> Los códigos dinámicos se generan de uno en uno; la generación por lotes queda estática.</li>
-<li><strong>Editar cambia el destino, no el patrón.</strong> El código impreso sigue funcionando tras cada edición, que es justo la idea.</li>
+<li><strong>Imprimir en estático cuando el enlace no era definitivo.</strong> Si el destino podía cambiar, el código debería haber sido dinámico antes de imprimir; un código estático impreso no se salva con una edición.</li>
+<li><strong>Compartir un código dinámico entre ubicaciones.</strong> Un código, una ubicación, un registro de estadísticas; si no, los números no pueden decir qué ubicación funcionó.</li>
+<li><strong>Borrar un código para «ordenar».</strong> Borrar es definitivo y las copias impresas se detienen de inmediato. Redirige primero un código que se retira hacia una página de cierre, y bórralo solo cuando no quede ninguna copia impresa en circulación.</li>
+<li><strong>Saltarse la muestra impresa.</strong> Una vista previa en pantalla prueba el diseño; solo una muestra impresa al tamaño, material y luz reales prueba el escaneo. Mira <a href="/es/blog/why-is-my-qr-code-not-working/">por qué no funciona tu código QR</a>.</li>
+<li><strong>Olvidar la llamada a la acción.</strong> Un código pelado pide a quien escanea que adivine. Un marco que diga qué consigue — menú, entradas, WiFi, descuento — convierte una decoración en una puerta.</li>
 </ul>
 
-<p>¿No sabes si necesitas dinámico? <a href="/es/blog/static-vs-dynamic-qr-codes/">Estático o dinámico, explicado con honestidad</a>. ¿Ya imprimiste y necesitas arreglar un enlace? <a href="/es/blog/how-to-edit-a-qr-code-after-printing/">Cómo editar un código QR después de imprimir</a>. ¿Curiosidad por los números? <a href="/es/blog/dynamic-qr-code-statistics/">Qué te dicen las estadísticas de códigos QR dinámicos</a>. ¿Quieres ver cómo se compara la cuota gratuita? <a href="/es/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> pone los planes gratuitos lado a lado.</p>
-
+<h2>Lotes, API y límites, dichos sin rodeos</h2>
+<p>Los códigos dinámicos se generan uno a la vez, porque cada uno necesita su propio enlace corto y su registro en el Panel. Si necesitas muchos códigos a la vez — uno por producto, por mesa, por paquete — la <a href="/es/batch-qr-code/">generación por lotes</a> queda estática; mira <a href="/es/blog/bulk-qr-codes/">códigos QR en lote</a>. Para programas que generan códigos desde otro sistema, FreeQrly también ofrece una API para códigos dinámicos. Los límites gratuitos, en un solo sitio:</p>
+<ul>
+<li><strong>20 códigos, gratis (actualmente sin límite durante la promoción por tiempo limitado).</strong> Borra un código y el hueco queda libre.</li>
+<li><strong>Escaneos ilimitados.</strong> Un código popular no se detiene porque se haya escaneado demasiadas veces.</li>
+<li><strong>Uno a la vez.</strong> Los códigos dinámicos se generan de uno en uno; la generación por lotes queda estática.</li>
+<li><strong>Editar cambia el destino, no el patrón.</strong> El código impreso sigue funcionando tras cada edición.</li>
+<li><strong>Borrar es definitivo.</strong> Las copias impresas dejan de funcionar, sin vuelta atrás, así que borra solo códigos retirados.</li>
+</ul>
+<p>¿No sabes si necesitas lo dinámico? <a href="/es/blog/static-vs-dynamic-qr-codes/">Estático frente a dinámico, explicado con honestidad</a>. ¿Ya imprimiste y necesitas arreglar un enlace? <a href="/es/blog/how-to-edit-a-qr-code-after-printing/">Cómo editar un código QR después de imprimir</a>. ¿Tienes curiosidad por los números? <a href="/es/blog/dynamic-qr-code-statistics/">Qué te dicen las estadísticas de códigos QR dinámicos</a>. ¿Listo para hacer uno? Abre el <a href="/es/dynamic-qr-code/">generador de códigos QR dinámicos</a>, inicia sesión gratis, cambia a Dinámico e imprime un código que aún puedas arreglar el mes que viene.</p>
     </div>
+
+    <section class="sources">
+      <h2>Fuentes</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La especificación de la simbología de códigos QR, edición 4, publicada en agosto de 2024. Define los niveles de corrección de errores, incluido el Alto en alrededor del 30% de las palabras de código, y la zona de silencio de al menos 4 módulos por los cuatro lados.</li>
+      <li><a href="https://www.qrcode-tiger.com/faq">Preguntas frecuentes de QR TIGER</a> - Página de preguntas frecuentes del propio proveedor, consultada el 2026-11-03 (sin fecha de publicación en la página). Respalda: 3 códigos dinámicos gratis con un límite de 500 escaneos cada uno; los códigos dinámicos de pago tienen escaneos ilimitados mientras la suscripción esté vigente; «Si tu plan caduca, dejará de funcionar»; los códigos estáticos gratis son ilimitados y nunca caducan.</li>
+      <li><a href="https://www.qrcode-tiger.com/software-subscription">Gestión de planes de suscripción de QR TIGER</a> - Página de suscripción del propio proveedor, consultada el 2026-11-03 (sin fecha de publicación en la página). Respalda: plan freemium con 3 códigos dinámicos con un límite de 500 escaneos cada uno; Regular US$7 con 12 códigos dinámicos; Advanced US$16 con 200; Premium US$37 con 600; Professional US$89 con 1.200.</li>
+      <li><a href="https://www.the-qrcode-generator.com/pricing?lng=en&signup_source=custom-qr-code_explore_plans">Precios de The QR Code Generator (TQRCG)</a> - Página de precios del propio proveedor, consultada el 2026-11-03 (sin fecha de publicación en la página). Respalda: plan gratuito con 2 códigos dinámicos y códigos estáticos ilimitados; tras una prueba gratuita, 2 códigos dinámicos siguen activos pero muestran anuncios; en Uniqode, los códigos de prueba se inactivan sin un plan de pago; plan Flex a US$10/mes con facturación anual.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presentando un código QR"></div>
       <div>
@@ -174,17 +283,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Seguir leyendo</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/es/blog/dynamic-qr-code-statistics/"><b>Dynamic QR Code Statistics: What Scans Actually Tell You</b></a>
-        <a class="rel-card" href="/es/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
-        <a class="rel-card" href="/es/blog/why-is-my-qr-code-blurry/"><b>Why Is My QR Code Blurry? 5 Fixes That Work</b></a>
+        <a class="rel-card" href="/es/blog/dynamic-qr-code-statistics/"><b>Estadísticas de códigos QR dinámicos: qué te dicen en realidad los escaneos</b></a>
+        <a class="rel-card" href="/es/blog/make-qr-code-in-canva-excel-word/"><b>Cómo hacer un código QR en Canva, Excel o Word (gratis)</b></a>
+        <a class="rel-card" href="/es/blog/why-is-my-qr-code-blurry/"><b>¿Por qué sale borroso mi código QR? 5 arreglos que funcionan</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bueno saberlo</h2>
-    <details><summary><span>¿Crear un código QR dinámico es de verdad gratis?</span></summary><p>Sí. Inicia sesión gratis, crea hasta 20 códigos dinámicos, edítalos y mira las estadísticas. Sin período de prueba y sin tarjeta. Los códigos estáticos siguen siendo gratis e ilimitados, sin cuenta.</p></details>
-    <details><summary><span>¿Necesito una cuenta para un código QR dinámico?</span></summary><p>Sí: el código tiene que ser de alguien para que solo tú puedas editarlo. Correo + contraseña, Google o GitHub. Los códigos estáticos nunca necesitan cuenta.</p></details>
-    <details><summary><span>¿Cuántos códigos QR dinámicos puedo tener?</span></summary><p>20 en la cuenta gratuita (actualmente ilimitados durante la promoción por tiempo limitado). Borra un código para liberar su hueco.</p></details>
-    <details><summary><span>¿A qué enlaza un código QR dinámico?</span></summary><p>A un enlace corto de FreeQrly (freeqrly.com/q/XXXXXXX) que redirige a tu destino. Quien escanea llega a tu página; la redirección es lo que hace posibles la edición y las estadísticas.</p></details>
+    <details><summary><span>¿Crear un código QR dinámico es de verdad gratis?</span></summary><p>Sí. Inicia sesión gratis y crea hasta 20 códigos dinámicos, actualmente sin límite durante la promoción por tiempo limitado, con escaneos ilimitados. No hay periodo de prueba ni tarjeta necesaria para empezar. Los códigos estáticos siguen siendo gratis e ilimitados sin ninguna cuenta.</p></details>
+    <details><summary><span>¿Necesito una cuenta para un código QR dinámico?</span></summary><p>Sí: el código tiene que ser de alguien para que solo tú puedas editarlo. Inicia sesión con correo y contraseña, Google o GitHub. Los códigos estáticos nunca necesitan una cuenta.</p></details>
+    <details><summary><span>¿Cuántos códigos QR dinámicos puedo tener?</span></summary><p>20 con la cuenta gratuita, actualmente sin límite durante la promoción por tiempo limitado. Borra un código para liberar su hueco, pero borrar es definitivo y las copias impresas de un código borrado dejan de funcionar.</p></details>
+    <details><summary><span>¿A qué enlaza un código QR dinámico?</span></summary><p>Un enlace corto de FreeQrly (freeqrly.com/q/XXXXXXX) que redirige a tu destino. Quien escanea llega a tu página; la redirección es lo que hace posibles la edición y las estadísticas de escaneo.</p></details>
+    <details><summary><span>¿Puedo editar un código QR dinámico después de imprimirlo?</span></summary><p>Sí. Editar cambia el destino detrás del enlace corto, no el patrón impreso, así que cada copia impresa sirve el nuevo destino en el siguiente escaneo. Vuelve a probar el código después de cualquier edición.</p></details>
+    <details><summary><span>¿Cuándo debería elegir estático en vez de dinámico?</span></summary><p>Cuando el destino nunca vaya a cambiar: un enlace fijo, una contraseña de WiFi, una tarjeta de visita. Los códigos estáticos guardan el destino en el propio patrón, no necesitan cuenta y siguen funcionando sin ningún servicio de redirección que mantener.</p></details>
+    <details><summary><span>¿Puedo crear códigos dinámicos en lote?</span></summary><p>No: los códigos dinámicos se generan uno a la vez, porque cada uno necesita su propio enlace corto y su registro en el Panel. La generación por lotes queda estática.</p></details>
+    <details><summary><span>¿Qué les pasa a mis escaneos si un código se vuelve popular?</span></summary><p>Nada malo en FreeQrly: los escaneos son ilimitados, así que un código popular no deja de funcionar porque se haya escaneado demasiadas veces. En los planes gratuitos de otros proveedores, un tope de escaneos puede detener un código; revisa la página de precios o preguntas frecuentes del proveedor antes de imprimir.</p></details>
     </section>
   </article>
   <footer>

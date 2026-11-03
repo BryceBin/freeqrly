@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Comment scanner un QR code avec son téléphone : iPhone et Android, sans app | FreeQrly","description":"Pas d'app : pointez votre caméra vers le code. Appareil photo et Centre de contrôle sur iPhone, appareil photo et Google Lens sur Android — plus des solutions quand ça ne scanne pas.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Comment scanner un QR code avec son téléphone : iPhone et Android, sans app | FreeQrly","description":"Pas d'app : pointez votre caméra vers le code. Appareil photo et Centre de contrôle sur iPhone, appareil photo et Google Lens sur Android — plus des solutions quand ça ne scanne pas.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-19","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,15 +64,23 @@
       "name": "Comment scanner un QR code sur mon iPhone ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ouvrez l'app Appareil photo et pointez vers le code — une bannière de notification apparaît en haut. Touchez-la. Vous pouvez aussi ajouter le Scanner de code au Centre de contrôle (Réglages → Centre de contrôle) pour un scanner dédié."
+        "text": "Ouvrez l'application Appareil photo, tenez le téléphone pour que tout le code soit dans le cadre, et touchez le lien qui apparaît. Sinon, ouvrez le Centre de contrôle et touchez le bouton Scanner le code pour une vue de lecteur dédiée ; si le bouton manque, ajoutez-le depuis la galerie du Centre de contrôle."
       }
     },
     {
       "@type": "Question",
-      "name": "Comment scanner un QR code sur Android ?",
+      "name": "Comment scanner un QR code sur un téléphone Pixel ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ouvrez votre app appareil photo et pointez vers le code ; une fenêtre de lien apparaît. Si ça ne marche pas, activez « Scanner les QR codes » dans les réglages de l'appareil photo, ou utilisez Google Lens."
+        "text": "Ouvrez l'application Appareil photo et pointez-la vers le code, en vous assurant que tout le carré s'affiche à l'écran. Si rien n'apparaît, vérifiez que Suggestions de scan par l'appareil photo est activé dans les Réglages de l'application Appareil photo, puis Plus de réglages. La tuile Scanner le QR code des Réglages rapides est le repli le plus rapide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment scanner un QR code sur un téléphone Samsung Galaxy ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ouvrez l'application Appareil photo et pointez-la vers le code, puis touchez le message contextuel. Si rien n'apparaît, ouvrez les réglages de l'appareil photo et assurez-vous que l'interrupteur Scanner les QR codes est activé. Vous pouvez aussi balayer vers le bas pour les Réglages rapides et toucher Scanner le QR code, ou lire une photo enregistrée dans l'application Galerie avec Bixby Vision."
       }
     },
     {
@@ -80,7 +88,7 @@
       "name": "Dois-je télécharger une app de scan de QR code ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Non. Les iPhone et la plupart des téléphones Android lisent les QR codes avec l'appareil photo intégré. Les apps de scan sont inutiles pour les codes standards."
+        "text": "Non, pas pour les codes standards sur un téléphone moderne. L'appareil photo intégré les lit avec le même aperçu que n'importe quelle application. Un lecteur séparé n'est une réponse raisonnable que pour un téléphone sans lecteur intégré, ou pour un travail qui exige vraiment un historique de scans ou une lecture en masse."
       }
     },
     {
@@ -88,7 +96,23 @@
       "name": "Pourquoi mon téléphone ne scanne-t-il pas le QR code ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Généralement la distance, un reflet ou une impression abîmée. Tenez le téléphone pour que le code remplisse la moitié du viseur, évitez les reflets, et vérifiez que les trois carrés des coins ne sont pas déchirés."
+        "text": "Parcourez la liste de contrôle côté téléphone dans l'ordre : tout le code dans le cadre, vue photo normale plutôt que portrait ou vidéo, scan activé, objectif propre, bonne lumière sans reflets, carrés d'angle intacts et contraste, et enfin un test sur un deuxième téléphone. Si un autre téléphone le lit, le problème vient de votre téléphone ; si aucun ne le lit, c'est le code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je scanner un QR code qui est sur l'écran de mon propre téléphone ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pas avec l'appareil photo, puisqu'un appareil photo ne peut pas viser son propre écran. Faites une capture d'écran du code ou enregistrez l'image, puis lisez-la depuis l'image — voir le guide pour scanner un QR code depuis une photo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-il sûr de scanner un QR code dans un lieu public ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lisez l'aperçu avant de toucher, et vérifiez que le domaine correspond au panneau devant vous, que le code ne montre aucun signe de falsification comme un autocollant collé par-dessus un autre code, et que vous attendiez ce code à cet endroit. Échouer à l'un seul de ces contrôles suffit pour s'arrêter."
       }
     }
   ]
@@ -106,39 +130,73 @@
     <div class="kicker" style="text-align:center">Notes de terrain</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Comment scanner un QR code <span class='hl hl-mint'>avec son téléphone</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Aucune app à installer — votre téléphone sait déjà faire. Voici où se cache le scanner sur iPhone et Android, et quoi faire quand il ne lit pas.</p>
-    <p class="meta" style="text-align:center">19 octobre 2026 · 4 min de lecture</p>
+    <p class="meta" style="text-align:center">19 octobre 2026 · Dernière mise à jour : 3 novembre 2026 · 15 min de lecture</p>
     <div class="prose" style="margin-top:40px">
+<p><strong>Réponse courte : ouvrez l'application Appareil photo de votre téléphone, pointez-la vers le code, et touchez le lien qui apparaît.</strong> Pas besoin de télécharger une application de scan, de créer un compte, ni d'appuyer sur le déclencheur. Sur un iPhone ou un téléphone Android moderne, la lecture des QR est intégrée à l'appareil photo et à quelques raccourcis système autour de lui. Le savoir-faire, c'est de savoir quel raccourci convient à chaque situation : l'application Appareil photo pour un menu sur la table, une vue de lecteur dédiée pour une file de billets dans une lumière faible, et une méthode d'image enregistrée quand le code est déjà sur votre propre écran.</p>
 
-<p>Presque toutes les questions du type « comment je scanne ça » ont la même réponse : <strong>ouvrez votre appareil photo et pointez-le vers le code</strong>. Les téléphones modernes lisent les QR codes nativement — le scanner est intégré à l'app photo, ce n'est pas un téléchargement séparé. L'emplacement exact diffère légèrement entre iPhone et Android.</p>
+<p>Une habitude couvre tous les cas : lisez l'aperçu avant de toucher. Votre téléphone affiche le lien, le nom du réseau Wi-Fi, ou l'action que le code veut accomplir avant que quoi que ce soit s'ouvre. Cet aperçu est votre seule chance de repérer un code qui n'a rien à faire là où il se trouve. Si l'aperçu ne correspond pas au panneau devant vous, arrêtez-vous avant de toucher.</p>
 
-<h2>Sur iPhone</h2>
-<p><strong>Méthode 1 — l'app Appareil photo.</strong> Ouvrez Appareil photo, pointez vers le code et restez immobile une seconde. Une bannière de notification jaune apparaît en haut — touchez-la pour ouvrir le lien. C'est tout ; il n'y a rien à activer avant.</p>
-<p><strong>Méthode 2 — le Centre de contrôle.</strong> Balayez vers le bas depuis le coin supérieur droit, touchez l'icône QR code (un petit symbole de code). Si vous ne la voyez pas, allez dans Réglages → Centre de contrôle et ajoutez « Scanner de code ». Cela ouvre une vue de scanner dédiée, pratique en faible lumière.</p>
+<h2>Quel lecteur utiliser, en un coup d'œil</h2>
+<div class="table-scroll"><table>
+<tr><th>Situation</th><th>Prenez ceci d'abord</th><th>Pourquoi cela convient</th></tr>
+<tr><td>Un code sur papier, une affiche, un menu, ou un écran devant vous</td><td>L'application Appareil photo</td><td>Prêt tout de suite, fonctionne en vue photo normale</td></tr>
+<tr><td>Une file, un portail, ou une pièce sombre avec des scans répétés</td><td>Le raccourci de lecteur dédié</td><td>Ouvre directement le scan, lampe torche à portée de main</td></tr>
+<tr><td>Rien ne se passe dans l'application Appareil photo</td><td>La tuile de lecteur des Réglages rapides</td><td>Contourne les modes photo et va droit à la lecture</td></tr>
+<tr><td>Un code déjà sur votre propre écran ou dans une photo</td><td>La méthode d'image enregistrée pour votre téléphone</td><td>Un appareil photo ne peut pas viser son propre écran</td></tr>
+<tr><td>Un code petit, abîmé, ou en partie dans l'ombre</td><td>Google Lens, ou un deuxième téléphone</td><td>Un lecteur différent réussit parfois là où le premier a échoué</td></tr>
+</table></div>
 
-<h2>Sur Android</h2>
-<p><strong>Méthode 1 — l'app Appareil photo.</strong> Sur la plupart des téléphones Android (Samsung, Pixel et autres), ouvrez l'appareil photo et pointez vers le code. Une fenêtre de lien apparaît — touchez-la. Si rien ne se passe, vérifiez dans les réglages de l'appareil photo l'option « Scanner les QR codes » et activez-la.</p>
-<p><strong>Méthode 2 — Google Lens.</strong> Ouvrez l'app Google ou Google Lens, pointez vers le code et touchez le déclencheur. Lens lit le code et affiche le lien. Certains téléphones ont aussi une tuile QR dans les réglages rapides (balayez deux fois vers le bas depuis le haut).</p>
+<h2>Sur iPhone : Appareil photo, Scanner le code, et l'écran de verrouillage</h2>
+<p><strong>Méthode 1 — l'application Appareil photo.</strong> Ouvrez Appareil photo, tenez le téléphone pour que tout le code apparaisse dans le cadre, et attendez un instant. Pas besoin de prendre une photo. Un lien ou une action apparaît ; touchez-le pour ouvrir la destination. Apple décrit exactement ce parcours — ouvrir Appareil photo ou le lecteur de code, tenir l'appareil pour que le code apparaisse, puis toucher le lien — dans son guide d'assistance pour scanner un QR code avec un iPhone ou un iPad. Gardez tout le carré en vue, y compris les trois grands carrés d'angle. Si une partie du code est coupée par le bord du cadre, le lecteur doit deviner, et c'est là que les échecs commencent. Tenez le téléphone stable et à peu près parallèle à la surface.</p>
+<p><strong>Méthode 2 — la commande Scanner le code dans le Centre de contrôle.</strong> Ouvrez le Centre de contrôle et touchez le bouton Scanner le code pour ouvrir une vue de lecteur dédiée. Si vous ne la voyez pas, touchez longuement l'arrière-plan du Centre de contrôle, touchez le bouton Ajouter une commande, et choisissez Scanner le code dans la galerie. Configurez-la une fois et oubliez-la jusqu'au moment où vous en aurez besoin : dans une file de billets ou un restaurant sombre, un balayage et un toucher vous mettent dans un lecteur sans rien d'autre en travers, et la vue du lecteur comprend une lampe torche. L'application Appareil photo est meilleure quand vous voulez peut-être aussi une photo ; la commande Scanner le code est meilleure quand le scan est tout le travail. Les deux utilisent la même lecture intégrée, la différence est donc la vitesse, pas la capacité. Vous pouvez aussi ouvrir Appareil photo depuis l'écran de verrouillage, ce qui compte à un portail ou une caisse où un scan est un travail à une main, sous pression — même si la règle de l'aperçu s'applique toujours, même pressé.</p>
 
-<h2>Quand ça ne scanne pas</h2>
-<p>Neuf fois sur dix, c'est l'un de ceux-ci :</p>
-<ul>
-<li><strong>Trop loin ou trop près.</strong> Remplissez environ la moitié du viseur avec le code, puis restez immobile.</li>
-<li><strong>Reflet ou ombre.</strong> Inclinez légèrement le téléphone pour que les reflets s'éloignent du code.</li>
-<li><strong>Impression sale ou abîmée.</strong> Un code taché peut encore scanner — les QR codes tolèrent <a href="http://www.iso.org/standard/83389.html">jusqu'à 30 % de dommages</a> au niveau de correction d'erreur le plus élevé — mais un motif de repérage déchiré (les trois grands carrés) est fatal.</li>
-<li><strong>Ce n'est pas un QR code.</strong> Certains « codes » sur les emballages sont des codes-barres ou des marques propriétaires. Un QR code a toujours trois marques de positionnement carrées dans les coins.</li>
-</ul>
+<h2>Sur Pixel : suggestions de l'appareil photo et Réglages rapides</h2>
+<p><strong>Méthode 1 — l'application Appareil photo.</strong> Ouvrez l'application Appareil photo et pointez-la vers le code, en vous assurant que tout le code s'affiche à l'écran. Pas besoin de prendre une photo ; l'appareil photo reconnaît le code et affiche une bulle ou un lien, que vous touchez pour ouvrir. Le guide Pixel de Google ajoute un réglage à vérifier si rien n'apparaît : dans l'application Appareil photo, ouvrez Réglages, puis Plus de réglages, et assurez-vous que Suggestions de scan par l'appareil photo est activé. Ce seul interrupteur est la raison la plus fréquente pour laquelle un appareil photo Pixel reste muet devant un code parfaitement bon, et il vaut la peine d'être vérifié avant de conclure que le code est en cause.</p>
+<p><strong>Méthode 2 — le lecteur des Réglages rapides.</strong> Balayez vers le bas depuis le haut de l'écran pour ouvrir les Réglages rapides et touchez Scanner le QR code. Si vous ne voyez pas la tuile, balayez vers la gauche pour plus de boutons ou touchez l'icône crayon pour l'ajouter. Un lecteur dédié s'ouvre ; pointez-le vers le code. C'est le repli le plus rapide quand l'application Appareil photo fait des siennes. Le conseil de dépannage de Google est court : tenez stable, utilisez une bonne lumière sans reflets, essuyez un objectif maculé, et rapprochez-vous tout en gardant tout le carré dans le cadre. Un dernier détail de mode : sur les appareils photo basés sur le logiciel photo de Google, un code se lit en vue photo normale, pas en mode portrait ou vidéo, donc revenez d'abord à la vue normale si vous avez ouvert l'appareil photo pour filmer quelque chose.</p>
 
-<h2>Avez-vous besoin d'une app de scan ?</h2>
-<p>Non, et c'est la réponse honnête même s'il existe des apps de scan. L'appareil photo intégré lit les QR codes standards, et les apps tierces ajoutent surtout des pubs et du suivi. La seule exception : si votre téléphone est trop vieux pour avoir un lecteur intégré, n'importe quelle app de scan réputée fera l'affaire — ou utilisez <a href="/fr/scan/">le scanner gratuit dans votre navigateur</a>, sans rien installer.</p>
+<h2>Sur Samsung Galaxy : Appareil photo, Réglages rapides et Galerie</h2>
+<p>Le guide d'assistance Samsung, mis à jour en octobre 2026, énumère plusieurs portes d'entrée vers le même lecteur ; en pratique, commencez par l'application Appareil photo, gardez les Réglages rapides comme repli rapide, et utilisez la Galerie pour une photo enregistrée.</p>
+<p><strong>Méthode 1 — l'application Appareil photo.</strong> Ouvrez Appareil photo, pointez-la vers le code, et attendez le message contextuel ; touchez-le pour aller aux informations du code. Pas besoin de prendre une photo. Si rien n'apparaît, ouvrez les réglages de l'appareil photo avec l'icône d'engrenage et assurez-vous que l'interrupteur Scanner les QR codes est activé. Comme pour Pixel, cet interrupteur est la première chose à vérifier quand un appareil photo Samsung ignore un code, et le guide de Samsung le nomme explicitement comme le correctif pour un appareil photo qui ne veut pas scanner.</p>
+<p><strong>Méthode 2 — le panneau Réglages rapides.</strong> Balayez vers le bas depuis le haut de l'écran pour ouvrir les Réglages rapides et touchez Scanner le QR code ; l'application Appareil photo se lance en mode scan. Cette vue de lecteur donne un accès rapide à la lampe torche, vraiment utile dans un lieu sombre : un code sous la faible lumière d'un bar est souvent un problème d'éclairage, pas un problème de code. Si la tuile manque, ajoutez-la au panneau pour qu'elle soit là la prochaine fois que vous ferez la queue. <strong>Méthode 3 — Galerie.</strong> Si vous avez déjà photographié un code, ouvrez-le dans l'application Galerie Samsung, sélectionnez l'image, et touchez le bouton Bixby Vision ; le téléphone lit l'image et propose d'ouvrir le lien ou de le copier. Le lecteur des Réglages rapides offre un parcours similaire : ouvrez-le, touchez l'icône d'image de la galerie, choisissez la photo, et confirmez. Voir <a href="/fr/blog/scan-qr-code-from-image/">le guide pour scanner un QR code depuis une photo</a> pour ces parcours en détail.</p>
 
-<p>Envie de tester tout de suite ? Pointez votre appareil photo vers n'importe quel code sur <a href="/fr/scan/">notre page de scan gratuite</a> — ou importez une photo d'un code et décodez-la dans votre navigateur, sans rien envoyer.</p>
+<h2>Autres téléphones Android : le même schéma, d'autres libellés</h2>
+<p>Android n'a pas de lecteur unique, parce que chaque fabricant de téléphone arrange les mêmes pièces différemment. Le schéma, pourtant, est constant : une application Appareil photo qui lit les codes dans sa vue photo normale, une tuile Scanner le QR code dans les Réglages rapides, et Google Lens comme repli universel. Si votre téléphone n'est ni un Pixel ni un Samsung, parcourez le schéma dans cet ordre. D'abord, ouvrez l'application Appareil photo et pointez-la vers un code en vue photo normale. Si rien n'apparaît, cherchez dans les réglages de l'appareil photo un interrupteur de scan — le nom varie selon le fabricant, cherchez donc une formulation sur les QR codes, le scan ou les suggestions — et activez-le. S'il n'y a pas d'interrupteur, ou s'il est déjà activé et que rien ne se passe, balayez vers le bas pour les Réglages rapides et cherchez la tuile Scanner le QR code. Si elle manque aussi, ouvrez Google Lens depuis l'application Google ou depuis l'appareil photo et pointez-le vers le code. Lens lit aussi les images enregistrées dans Google Photos.</p>
+<p><strong>Un mot sur les téléphones anciens.</strong> Un téléphone assez vieux pour n'avoir aucun lecteur intégré est le seul cas où une application de scan séparée est une réponse raisonnable. Choisissez-en une dans la boutique officielle avec une demande d'autorisation claire et limitée — l'accès à l'appareil photo, et rien d'autre dont elle n'a pas besoin — et méfiez-vous de tout lecteur qui demande vos contacts, votre position ou un compte avant même de lire un seul code. Sinon, sautez carrément l'installation et utilisez <a href="/fr/scan/">le lecteur gratuit dans votre navigateur</a>, qui lit un code depuis votre appareil photo ou depuis une image téléversée sans aucune installation, et ne laisse rien derrière lui sur le téléphone quand vous avez fini.</p>
 
+<h2>Scénarios : adapter la méthode au moment</h2>
+<p><strong>À la table d'un restaurant,</strong> utilisez l'application Appareil photo ; le code est proche et vous voulez le menu en un toucher, en inclinant le téléphone si une carte plastifiée brillante éblouit sous un spot. <strong>À un portail ou un contrôle de billets,</strong> utilisez le raccourci de lecteur dédié et ouvrez-le avant d'arriver en tête de file, puisque les codes de billets sont souvent sensibles au temps. <strong>Sur une affiche ou une vitrine,</strong> reculez jusqu'à ce que tout le code entre confortablement dans le cadre, et souvenez-vous de la règle de taille du <a href="/fr/blog/qr-code-print-size-guide/">guide des tailles d'impression</a> : en règle générale, un code doit faire au moins un dixième de la distance à laquelle vous le scannez. Un code que vous n'arrivez pas à faire entrer dans le cadre depuis l'endroit où vous êtes est un code imprimé trop petit pour son emplacement, et aucun réglage du téléphone n'y remédiera. <strong>Sur un téléviseur, un portable ou l'écran d'un autre téléphone,</strong> pointez votre appareil photo vers l'autre écran comme vous le feriez vers du papier, mais attention aux reflets sur le verre et au scintillement propre à l'écran ; inclinez légèrement contre les reflets, tenez stable contre le scintillement, et scannez vite un code de connexion ou d'appairage, puisqu'un code actualisé remplace l'ancien.</p>
+
+<h2>Quand rien ne se passe : la liste de contrôle côté téléphone</h2>
+<ol>
+<li><strong>Tout le code dans le cadre ?</strong> Reculez jusqu'à ce que les quatre coins et la marge calme autour du code soient visibles.</li>
+<li><strong>Bon mode photo ?</strong> Utilisez la vue photo normale, pas le portrait ni la vidéo ; utilisez le raccourci de lecteur dédié si votre appareil photo en propose un.</li>
+<li><strong>Le scan est-il activé ?</strong> Vérifiez l'interrupteur : Suggestions de scan par l'appareil photo sur Pixel, Scanner les QR codes dans les réglages photo de Samsung, la commande Scanner le code sur iPhone.</li>
+<li><strong>Objectif propre ?</strong> Essuyez-le avec un chiffon doux ; un objectif maculé floute tous les codes pareillement.</li>
+<li><strong>La lumière aide-t-elle ou gêne-t-elle ?</strong> Ajoutez de la lumière dans une pièce sombre, supprimez les reflets dans une pièce lumineuse, gardez votre ombre hors du code.</li>
+<li><strong>Le code lui-même est-il lisible ?</strong> Vérifiez les trois carrés d'angle, le contraste, et tout dégât, effacement ou courbure qui déforme la grille.</li>
+<li><strong>Test du deuxième téléphone :</strong> si un autre téléphone lit le code et pas le vôtre, le problème vient des réglages, de l'objectif ou de la lumière de votre téléphone — pas du code.</li>
+</ol>
+<p>Si le code se lit mais que la destination échoue — un lien mort, une page déplacée, un formulaire qui n'existe plus — c'est une autre panne, avec un autre responsable. Le code a fait son travail ; la page derrière lui, non. Toute la chaîne des pannes côté code est traitée dans <a href="/fr/blog/why-is-my-qr-code-not-working/">pourquoi votre QR code ne scanne pas</a>, et l'impression floue en particulier dans <a href="/fr/blog/why-is-my-qr-code-blurry/">pourquoi votre QR code est flou</a>. Si aucune des sept étapes ci-dessus n'aide, l'étape suivante est un autre lecteur ou un autre téléphone, pas plus de bricolage avec le vôtre.</p>
+
+<h2>La comparaison honnête : le scan intégré contre les applications de scan</h2>
+<p>Les applications de scan existent, et pour un téléphone sans lecteur intégré elles sont une vraie solution. Pour tous les autres, elles sont une version moins bonne de quelque chose que le téléphone fait déjà. L'appareil photo intégré lit les codes standards, affiche le même aperçu, et ouvre les mêmes destinations, sans compte, sans écran d'abonnement, et sans un flux de publicités entre vous et un menu. Une application de scan ajoute un intermédiaire à une transaction qui n'en a pas besoin, et cet intermédiaire est généralement payé avec de l'attention, des données, ou les deux. Le cas pour une application est étroit mais réel : un téléphone ancien sans lecteur intégré en a besoin, ou d'un lecteur dans le navigateur, et une personne qui scanne des codes toute la journée pour le travail peut vouloir un historique ou une lecture en masse. Le cas contre une application, pour le scan de tous les jours, est tout aussi concret : beaucoup d'applications de scan affichent des publicités, et certaines demandent des autorisations bien au-delà de l'appareil photo — contacts, position, ou un compte qui lie votre historique de scans à une identité. L'appareil photo intégré, lui, lit le code et passe à autre chose ; il ne tient pas un journal de vos scans.</p>
+
+<h2>Sécurité : l'aperçu est toute la défense</h2>
+<p>Un QR code cache sa destination par construction. On ne peut pas lire une URL en regardant le motif, et c'est exactement pourquoi un code est un véhicule si efficace pour un lien sur lequel vous ne cliqueriez jamais si vous pouviez le voir. La défense n'est pas d'éviter les codes — c'est de lire l'aperçu, à chaque fois, et de traiter l'aperçu comme une décision, pas comme une formalité. La Federal Trade Commission américaine a mis en garde contre ce schéma dans une alerte aux consommateurs datée du 6 décembre 2023 : des escrocs recouvrent de vrais codes avec leurs propres autocollants — sur les parcmètres, par exemple — ou envoient des codes dans des messages inattendus, et un code scanné peut mener à un site contrefait qui semble réel, où tout ce qui est saisi peut être volé, ou à un logiciel malveillant. Le conseil de la FTC dans cette alerte est la même habitude que ce guide recommande : inspectez l'URL avant de l'ouvrir, cherchez les fautes d'orthographe ou une lettre échangée dans un nom familier, et ne scannez pas un code venu d'un message inattendu, surtout un message qui presse d'agir vite. Lisez l'aperçu, vérifiez les falsifications comme un autocollant collé par-dessus un autre code, et vérifiez le contexte : attendiez-vous ce code, à cet endroit, pour cet usage ? Échouer à l'un seul de ces contrôles suffit pour s'arrêter.</p>
+
+<h2>Créez un code et testez-le sur votre propre téléphone</h2>
+<p>Le moyen le plus rapide d'apprendre tout cela, c'est de créer un code et de le scanner vous-même. Le générateur FreeQrly couvre 17 types — liens, Wi-Fi, cartes de contact, événements, et plus — et un code statique créé là est gratuit sans inscription, sans filigrane et sans expiration, donc un code de test ne coûte rien et continue de fonctionner. Imprimez-le, placez-le là où vous l'utiliseriez, et scannez-le avec l'application Appareil photo, puis avec le raccourci de lecteur dédié, puis depuis une photo enregistrée. S'il se lit dans les trois cas, votre taille, votre contraste et votre zone de silence sont bons. Si la destination derrière votre code peut changer, un code dynamique est l'outil qu'il faut à la place : il reste modifiable après impression et rapporte des statistiques de scan, avec un compte gratuit. Les codes dynamiques sont gratuits pour 20 codes, actuellement avec une disponibilité illimitée pendant la période promotionnelle, et avec des scans illimités. Pour un lot de codes, la <a href="/fr/batch-qr-code/">génération en lot</a> crée un code par lien et les télécharge ensemble. Commencez par un seul code de test statique, scannez-le sur votre propre téléphone, et construisez à partir d'un résultat que vous avez réellement vu fonctionner.</p>
     </div>
 
     <section class="sources">
       <h2>Sources</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La spécification de la symbologie QR Code. Elle définit les quatre niveaux de correction d'erreur (L 7 %, M 15 %, Q 25 %, H 30 %).</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - REPRIS de l'article d'origine. La spécification de la symbologie QR Code ; la description d'origine indique qu'elle définit les quatre niveaux de correction d'erreur (L 7 %, M 15 %, Q 25 %, H 30 %). Le corps de l'article n'utilise que ces quatre pourcentages, plus la zone de silence de 4 modules de la même norme. Page consultée le 2026-11-03 ; la fiche ISO elle-même ne comporte aucun résumé public avec les chiffres, qui ont été corroborés avec des explications de la norme pendant la vérification.</li>
+      <li><a href="https://support.apple.com/en-us/102680">Assistance Apple : scanner un QR code avec votre iPhone ou iPad</a> - AJOUTÉ. Publié le 14 septembre 2026 (indiqué sur la page, vérifié en l'ouvrant le 2026-11-03). À l'appui : ouvrir Appareil photo ou le lecteur de code, tenir l'appareil pour que le code apparaisse, toucher le lien ; ajouter la commande Scanner le code en touchant longuement l'arrière-plan du Centre de contrôle et en touchant Ajouter une commande.</li>
+      <li><a href="https://support.google.com/pixelphone/answer/16561572?hl=en">Assistance Google : scanner des QR codes avec votre téléphone Pixel</a> - AJOUTÉ. Page consultée le 2026-11-03 ; aucune date de publication affichée sur la page. À l'appui : l'interrupteur Suggestions de scan par l'appareil photo (Réglages, puis Plus de réglages), la tuile Scanner le QR code des Réglages rapides, et la liste de dépannage (tenir stable, bonne lumière sans reflets, objectif propre, se rapprocher tout en gardant tout le carré dans le cadre).</li>
+      <li><a href="https://www.samsung.com/uk/support/mobile-devices/how-to-scan-qr-code-on-your-galaxy-phone-or-tablet/">Assistance Samsung : comment scanner des QR codes sur votre téléphone ou tablette Samsung</a> - AJOUTÉ. Mis à jour le 6 octobre 2026 (indiqué sur la page, vérifié en l'ouvrant le 2026-11-03). À l'appui : le scan par l'application Appareil photo, la tuile Scanner le QR code des Réglages rapides, l'interrupteur Scanner les QR codes dans les réglages de l'appareil photo, la Galerie avec Bixby Vision, et l'icône d'image de la galerie du lecteur des Réglages rapides pour les photos enregistrées.</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC : des escrocs cachent des liens malveillants dans des QR codes pour voler vos informations</a> - AJOUTÉ. Alerte aux consommateurs datée du 6 décembre 2023 (fiche FTC ; page vérifiée en l'ouvrant le 2026-11-03). À l'appui : des escrocs recouvrant de vrais codes avec leurs propres autocollants, y compris sur les parcmètres, et envoyant des codes dans des messages inattendus ; un code scanné peut mener à un site contrefait ou à un logiciel malveillant ; inspectez l'URL avant de l'ouvrir et ne scannez pas un code venu d'un message inattendu qui presse d'agir vite.</li>
+      <li><a href="https://support.google.com/camerafromgoogle/answer/12033278?hl=en">Assistance Google : scanner des QR codes avec Appareil photo de Google</a> - AJOUTÉ. Page consultée le 2026-11-03 via un résultat de recherche ; aucune date de publication affichée. À l'appui uniquement de la seule remarque de mode utilisée dans le corps : un QR code ne peut pas être scanné en mode portrait et vidéo sur Appareil photo de Google.</li>
       </ul>
     </section>
     <div class="cta-card">
@@ -154,15 +212,18 @@
       <div class="rel-grid">
         <a class="rel-card" href="/fr/blog/share-wifi-with-qr-code/"><b>Comment partager le Wi-Fi avec un QR code</b></a>
         <a class="rel-card" href="/fr/blog/add-logo-to-qr-code/"><b>Comment ajouter un logo au centre d'un QR code (et le garder lisible)</b></a>
-        <a class="rel-card" href="/fr/blog/static-vs-dynamic-qr-codes/"><b>Static vs QR codes dynamiques: Free Forever or a Subscription?</b></a>
+        <a class="rel-card" href="/fr/blog/do-qr-codes-expire/"><b>Les QR codes expirent-ils ? Non — mais les payants peuvent mourir</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bon à savoir</h2>
-    <details><summary><span>Comment scanner un QR code sur mon iPhone ?</span></summary><p>Ouvrez l'app Appareil photo et pointez vers le code — une bannière de notification apparaît en haut. Touchez-la. Vous pouvez aussi ajouter le Scanner de code au Centre de contrôle (Réglages → Centre de contrôle) pour un scanner dédié.</p></details>
-    <details><summary><span>Comment scanner un QR code sur Android ?</span></summary><p>Ouvrez votre app appareil photo et pointez vers le code ; une fenêtre de lien apparaît. Si ça ne marche pas, activez « Scanner les QR codes » dans les réglages de l'appareil photo, ou utilisez Google Lens.</p></details>
-    <details><summary><span>Dois-je télécharger une app de scan de QR code ?</span></summary><p>Non. Les iPhone et la plupart des téléphones Android lisent les QR codes avec l'appareil photo intégré. Les apps de scan sont inutiles pour les codes standards.</p></details>
-    <details><summary><span>Pourquoi mon téléphone ne scanne-t-il pas le QR code ?</span></summary><p>Généralement la distance, un reflet ou une impression abîmée. Tenez le téléphone pour que le code remplisse la moitié du viseur, évitez les reflets, et vérifiez que les trois carrés des coins ne sont pas déchirés.</p></details>
+    <details><summary><span>Comment scanner un QR code sur mon iPhone ?</span></summary><p>Ouvrez l'application Appareil photo, tenez le téléphone pour que tout le code soit dans le cadre, et touchez le lien qui apparaît. Sinon, ouvrez le Centre de contrôle et touchez le bouton Scanner le code pour une vue de lecteur dédiée ; si le bouton manque, ajoutez-le depuis la galerie du Centre de contrôle.</p></details>
+    <details><summary><span>Comment scanner un QR code sur un téléphone Pixel ?</span></summary><p>Ouvrez l'application Appareil photo et pointez-la vers le code, en vous assurant que tout le carré s'affiche à l'écran. Si rien n'apparaît, vérifiez que Suggestions de scan par l'appareil photo est activé dans les Réglages de l'application Appareil photo, puis Plus de réglages. La tuile Scanner le QR code des Réglages rapides est le repli le plus rapide.</p></details>
+    <details><summary><span>Comment scanner un QR code sur un téléphone Samsung Galaxy ?</span></summary><p>Ouvrez l'application Appareil photo et pointez-la vers le code, puis touchez le message contextuel. Si rien n'apparaît, ouvrez les réglages de l'appareil photo et assurez-vous que l'interrupteur Scanner les QR codes est activé. Vous pouvez aussi balayer vers le bas pour les Réglages rapides et toucher Scanner le QR code, ou lire une photo enregistrée dans l'application Galerie avec Bixby Vision.</p></details>
+    <details><summary><span>Dois-je télécharger une app de scan de QR code ?</span></summary><p>Non, pas pour les codes standards sur un téléphone moderne. L'appareil photo intégré les lit avec le même aperçu que n'importe quelle application. Un lecteur séparé n'est une réponse raisonnable que pour un téléphone sans lecteur intégré, ou pour un travail qui exige vraiment un historique de scans ou une lecture en masse.</p></details>
+    <details><summary><span>Pourquoi mon téléphone ne scanne-t-il pas le QR code ?</span></summary><p>Parcourez la liste de contrôle côté téléphone dans l'ordre : tout le code dans le cadre, vue photo normale plutôt que portrait ou vidéo, scan activé, objectif propre, bonne lumière sans reflets, carrés d'angle intacts et contraste, et enfin un test sur un deuxième téléphone. Si un autre téléphone le lit, le problème vient de votre téléphone ; si aucun ne le lit, c'est le code.</p></details>
+    <details><summary><span>Puis-je scanner un QR code qui est sur l'écran de mon propre téléphone ?</span></summary><p>Pas avec l'appareil photo, puisqu'un appareil photo ne peut pas viser son propre écran. Faites une capture d'écran du code ou enregistrez l'image, puis lisez-la depuis l'image — voir le guide pour scanner un QR code depuis une photo.</p></details>
+    <details><summary><span>Est-il sûr de scanner un QR code dans un lieu public ?</span></summary><p>Lisez l'aperçu avant de toucher, et vérifiez que le domaine correspond au panneau devant vous, que le code ne montre aucun signe de falsification comme un autocollant collé par-dessus un autre code, et que vous attendiez ce code à cet endroit. Échouer à l'un seul de ces contrôles suffit pour s'arrêter.</p></details>
     </section>
   </article>
   <footer>

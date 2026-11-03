@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Cómo escanear un código QR con el móvil: iPhone y Android, sin app | FreeQrly","description":"Sin app: apunta tu cámara al código. Cámara y Centro de control en iPhone, cámara y Google Lens en Android — más soluciones para cuando no escanea.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Cómo escanear un código QR con el móvil: iPhone y Android, sin app | FreeQrly","description":"Sin app: apunta tu cámara al código. Cámara y Centro de control en iPhone, cámara y Google Lens en Android — más soluciones para cuando no escanea.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-19","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,15 +64,23 @@
       "name": "¿Cómo escaneo un código QR con mi iPhone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Abre la app Cámara y apunta al código: aparece un aviso en la parte superior. Tócalo. Como alternativa, añade el Escáner de códigos al Centro de control (Ajustes → Centro de control) para tener un escáner dedicado."
+        "text": "Abre la app Cámara, sostén el teléfono de forma que el código entero esté en el encuadre y toca el enlace que aparece. Como alternativa, abre el Centro de control y toca el botón Escanear código para una vista de escáner dedicada; si falta el botón, añádelo desde la galería del Centro de control."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cómo escaneo un código QR en Android?",
+      "name": "¿Cómo escaneo un código QR con un teléfono Pixel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Abre tu app de cámara y apunta al código; aparece una ventana con el enlace. Si no funciona, activa «Escanear códigos QR» en los ajustes de la cámara o usa Google Lens."
+        "text": "Abre la app Cámara y apúntala al código, asegurándote de que todo el cuadrado se vea en pantalla. Si no aparece nada, comprueba que Sugerencias de escaneo de cámara esté activado en los Ajustes de la app Cámara, luego en Más ajustes. El mosaico Escanear código QR de los Ajustes rápidos es la alternativa más rápida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo escaneo un código QR con un teléfono Samsung Galaxy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Abre la app Cámara y apunta al código, luego toca la ventana emergente. Si no aparece nada, abre los ajustes de Cámara y comprueba que la opción Escanear códigos QR esté activada. También puedes deslizar hacia abajo para abrir los Ajustes rápidos y tocar Escanear código QR, o leer una foto guardada en la app Galería con Bixby Vision."
       }
     },
     {
@@ -80,7 +88,7 @@
       "name": "¿Necesito descargar una app de escáner de códigos QR?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Los iPhone y la mayoría de los teléfonos Android leen códigos QR con la cámara integrada. Las apps de escáner son innecesarias para códigos estándar."
+        "text": "No, no para códigos estándar en un teléfono moderno. La cámara integrada los lee con la misma vista previa que cualquier app. Un escáner aparte es una respuesta razonable solo para un teléfono sin lector integrado, o para un trabajo que de verdad necesite un historial de escaneos o lectura en lote."
       }
     },
     {
@@ -88,7 +96,23 @@
       "name": "¿Por qué mi teléfono no escanea el código QR?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Normalmente por la distancia, los brillos o una impresión dañada. Sostén el teléfono de forma que el código llene la mitad del visor, evita los reflejos y comprueba que los tres cuadrados de las esquinas no estén rasgados."
+        "text": "Sigue la lista del lado del teléfono en orden: código entero en el encuadre, vista normal de foto en vez de retrato o vídeo, escaneo activado, lente limpia, buena luz sin brillos, cuadrados de esquina intactos y contraste, y por último una prueba con un segundo teléfono. Si otro teléfono lo lee, el problema es tu teléfono; si ninguno lo hace, es el código."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo escanear un código QR que está en la pantalla de mi propio teléfono?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No con la cámara, ya que una cámara no puede apuntar a su propia pantalla. Haz una captura del código o guarda la imagen, luego léelo desde la imagen; mira la guía para escanear un código QR desde una foto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es seguro escanear un código QR en un lugar público?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lee la vista previa antes de tocar, y comprueba que el dominio coincida con el cartel que tienes delante, que el código no muestre señales de manipulación, como una pegatina pegada sobre otro código, y que esperabas este código en este lugar. Fallar en cualquiera de esas comprobaciones basta para detenerte."
       }
     }
   ]
@@ -106,39 +130,73 @@
     <div class="kicker" style="text-align:center">Notas de campo</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Cómo escanear un código QR <span class='hl hl-mint'>con tu teléfono</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">No hay que instalar ninguna app: tu teléfono ya sabe cómo hacerlo. Aquí te mostramos dónde vive el escáner en iPhone y Android, y qué hacer cuando no lee.</p>
-    <p class="meta" style="text-align:center">19 de octubre de 2026 · 4 min de lectura</p>
+    <p class="meta" style="text-align:center">19 de octubre de 2026 · Última actualización: 3 de noviembre de 2026 · 15 min de lectura</p>
     <div class="prose" style="margin-top:40px">
+<p><strong>La respuesta corta: abre la app Cámara de tu teléfono, apúntala al código y toca el enlace que aparece.</strong> No necesitas descargar una app de escáner, crear una cuenta ni pulsar el botón del obturador. En un iPhone o Android moderno, la lectura de QR viene integrada en la cámara y en algunos atajos del sistema a su alrededor. La habilidad está en saber qué atajo encaja en cada situación: la app Cámara para un menú en la mesa, una vista de escáner dedicada para una cola de entradas con poca luz y un método de imagen guardada cuando el código ya está en tu propia pantalla.</p>
 
-<p>Casi todas las preguntas del tipo «¿cómo escaneo esto?» tienen la misma respuesta: <strong>abre tu cámara y apúntala al código</strong>. Los teléfonos modernos leen códigos QR de forma nativa: el escáner viene integrado en la app de cámara, no es una descarga aparte. El lugar exacto varía un poco entre iPhone y Android.</p>
+<p>Un hábito sirve para todos: lee la vista previa antes de tocar. Tu teléfono muestra el enlace, el nombre de la red Wi-Fi o la acción que el código quiere realizar antes de que se abra nada. Esa vista previa es tu única oportunidad de detectar un código que no pertenece al lugar donde está. Si la vista previa no coincide con el cartel que tienes delante, detente antes de tocar.</p>
 
-<h2>En iPhone</h2>
-<p><strong>Método 1 — la app Cámara.</strong> Abre Cámara, apunta al código y mantén el teléfono quieto un segundo. Aparece un aviso amarillo en la parte superior: tócalo para abrir el enlace. Eso es todo; no hay nada que activar antes.</p>
-<p><strong>Método 2 — Centro de control.</strong> Desliza hacia abajo desde la esquina superior derecha y toca el icono del código QR (un pequeño símbolo de código). Si no lo ves, ve a Ajustes → Centro de control y añade «Escáner de códigos». Esto abre una vista de escáner dedicada, útil con poca luz.</p>
+<h2>Qué escáner usar, de un vistazo</h2>
+<div class="table-scroll"><table>
+<tr><th>Situación</th><th>Usa esto primero</th><th>Por qué encaja</th></tr>
+<tr><td>Un código en papel, un cartel, un menú o una pantalla delante de ti</td><td>La app Cámara</td><td>Lista al instante, funciona en la vista normal de foto</td></tr>
+<tr><td>Una cola, un control de acceso o una sala oscura con escaneos repetidos</td><td>El atajo de escáner dedicado</td><td>Abre directamente al escaneo, con la linterna a mano</td></tr>
+<tr><td>En la app Cámara no pasa nada</td><td>El mosaico de escáner de los Ajustes rápidos</td><td>Evita los modos de cámara y va directo a leer</td></tr>
+<tr><td>Un código que ya está en tu propia pantalla o en una foto</td><td>El método de imagen guardada para tu teléfono</td><td>Una cámara no puede apuntar a su propia pantalla</td></tr>
+<tr><td>Un código pequeño, dañado o en parte a la sombra</td><td>Google Lens o un segundo teléfono</td><td>Un lector distinto a veces logra lo que el primero no pudo</td></tr>
+</table></div>
 
-<h2>En Android</h2>
-<p><strong>Método 1 — la app Cámara.</strong> En la mayoría de los teléfonos Android (Samsung, Pixel y otros), abre la cámara y apunta al código. Aparece una ventana con el enlace: tócala. Si no pasa nada, revisa en los ajustes de la cámara la opción «Escanear códigos QR» y actívala.</p>
-<p><strong>Método 2 — Google Lens.</strong> Abre la app de Google o Google Lens, apunta al código y toca el botón del obturador. Lens lee el código y muestra el enlace. Algunos teléfonos también tienen un mosaico QR en los Ajustes rápidos (desliza dos veces hacia abajo desde la parte superior).</p>
+<h2>En iPhone: Cámara, Escanear código y la pantalla de bloqueo</h2>
+<p><strong>Método 1 — la app Cámara.</strong> Abre Cámara, sostén el teléfono de forma que el código entero aparezca en el encuadre y espera un momento. No necesitas hacer una foto. Aparece un enlace o una acción; tócalo para abrir el destino. Apple describe exactamente este flujo — abrir Cámara o Escáner de códigos, sostener el dispositivo de forma que aparezca el código y luego tocar el enlace — en su guía de soporte para escanear un código QR con un iPhone o iPad. Mantén todo el cuadrado a la vista, incluidos los tres cuadrados grandes de las esquinas. Si parte del código queda cortada por el borde del encuadre, el lector tiene que adivinar, y adivinar es donde empiezan los fallos. Sostén el teléfono quieto y más o menos paralelo a la superficie.</p>
+<p><strong>Método 2 — el control Escanear código en el Centro de control.</strong> Abre el Centro de control y toca el botón Escanear código para abrir una vista de escáner dedicada. Si no lo ves, mantén pulsado el fondo del Centro de control, toca el botón Añadir un control y elige Escanear código en la galería. Configúralo una vez y olvídate hasta que lo necesites: en una cola de entradas o en un restaurante con poca luz, un deslizamiento y un toque te ponen en un escáner sin nada más en medio, y la vista del escáner incluye una linterna. La app Cámara es mejor cuando también quieras hacer una foto; el control Escanear código es mejor cuando escanear es todo el trabajo. Ambos usan la misma lectura integrada, así que la diferencia es la velocidad, no la capacidad. También puedes abrir Cámara desde la pantalla de bloqueo, lo que importa en un control de acceso o en caja, donde escanear es un trabajo con una mano y con prisa, aunque la regla de la vista previa sigue valiendo, incluso con prisa.</p>
 
-<h2>Cuando no escanea</h2>
-<p>Nueve de cada diez veces es una de estas causas:</p>
-<ul>
-<li><strong>Demasiado lejos o demasiado cerca.</strong> Llena aproximadamente la mitad del visor con el código y mantén el teléfono quieto.</li>
-<li><strong>Brillos o sombras.</strong> Inclina un poco el teléfono para que los reflejos se aparten del código.</li>
-<li><strong>Impresión sucia o dañada.</strong> Un código manchado puede seguir escaneando: los códigos QR toleran <a href="http://www.iso.org/standard/83389.html">hasta un 30% de daño</a> en el nivel más alto de corrección de errores, pero un patrón de posicionamiento rasgado (los tres cuadrados grandes) es fatal.</li>
-<li><strong>No es un código QR.</strong> Algunos «códigos» en envases son códigos de barras o marcas propietarias. Un código QR siempre tiene tres marcas cuadradas de posicionamiento en las esquinas.</li>
-</ul>
+<h2>En Pixel: sugerencias de cámara y Ajustes rápidos</h2>
+<p><strong>Método 1 — la app Cámara.</strong> Abre la app Cámara y apúntala al código, asegurándote de que el código entero se vea en pantalla. No necesitas hacer una foto; la cámara reconoce el código y muestra un bocadillo o un enlace, que tocas para abrir. La guía de Pixel de Google añade un ajuste que vale la pena revisar si no aparece nada: en la app Cámara, abre Ajustes, luego Más ajustes, y comprueba que Sugerencias de escaneo de cámara esté activado. Ese único interruptor es la razón más común de que una cámara Pixel se quede muda ante un código perfectamente bueno, y vale la pena revisarlo antes de concluir que la culpa es del código.</p>
+<p><strong>Método 2 — el escáner de los Ajustes rápidos.</strong> Desliza hacia abajo desde la parte superior de la pantalla para abrir los Ajustes rápidos y toca Escanear código QR. Si no ves el mosaico, desliza a la izquierda para ver más botones o toca el icono del lápiz para añadirlo. Se abre un escáner dedicado; apúntalo al código. Es la alternativa más rápida cuando la app Cámara se pone terca. El consejo de Google para solucionar problemas es breve: mantén el teléfono quieto, usa buena luz sin brillos, limpia una lente empañada y acércate manteniendo todo el cuadrado en el encuadre. Un detalle más sobre los modos: en las cámaras basadas en el software de cámara de Google, un código se lee en la vista normal de foto, no en modo retrato ni vídeo, así que vuelve primero a la vista normal si abriste la cámara para grabar algo.</p>
 
-<h2>¿Necesitas una app de escáner?</h2>
-<p>No, y esa es la respuesta honesta aunque existan apps de escaneo. La cámara integrada lee los códigos QR estándar, y las apps de terceros casi solo añaden anuncios y rastreo. La única excepción: si tu teléfono es tan antiguo que no tiene lector integrado, cualquier app de escaneo reputada sirve, o usa <a href="/es/scan/">el escáner gratuito en tu navegador</a>, que no necesita instalación.</p>
+<h2>En Samsung Galaxy: Cámara, Ajustes rápidos y Galería</h2>
+<p>La guía de soporte de Samsung, actualizada en octubre de 2026, enumera varias puertas hacia el mismo escáner; en la práctica, empieza con la app Cámara, guarda los Ajustes rápidos como respaldo rápido y usa Galería para una foto guardada.</p>
+<p><strong>Método 1 — la app Cámara.</strong> Abre Cámara, apunta al código y espera el mensaje emergente; toca la ventana para ir a la información del código. No necesitas hacer una foto. Si no aparece nada, abre los ajustes de Cámara con el icono del engranaje y comprueba que la opción Escanear códigos QR esté activada. Como con Pixel, este interruptor es lo primero que hay que revisar cuando una cámara Samsung ignora un código, y la guía de Samsung lo nombra explícitamente como la solución para una cámara que no escanea.</p>
+<p><strong>Método 2 — el panel de Ajustes rápidos.</strong> Desliza hacia abajo desde la parte superior de la pantalla para abrir los Ajustes rápidos y toca Escanear código QR; la app Cámara se abre en modo escaneo. Esta vista del escáner da acceso rápido a la linterna, que de verdad sirve en un local oscuro: un código bajo la luz tenue de un bar suele ser un problema de iluminación, no un problema del código. Si falta el mosaico, añádelo al panel para que esté ahí la próxima vez que estés en una cola. <strong>Método 3 — Galería.</strong> Si ya fotografiaste un código, ábrelo en la app Galería de Samsung, selecciona la imagen y toca el botón Bixby Vision; el teléfono lee la imagen y ofrece abrir el enlace o copiarlo. El escáner de los Ajustes rápidos ofrece un camino parecido: ábrelo, toca el icono de imagen de la galería, elige la foto y confirma. Mira <a href="/es/blog/scan-qr-code-from-image/">la guía para escanear un código QR desde una foto</a> para ver estos caminos completos.</p>
 
-<p>¿Quieres probarlo ahora mismo? Apunta tu cámara a cualquier código en <a href="/es/scan/">nuestra página gratuita de escaneo</a>, o sube una foto de un código y decodifícala en tu navegador, sin subir nada.</p>
+<h2>Otros teléfonos Android: el mismo patrón, etiquetas distintas</h2>
+<p>Android no tiene un único escáner, porque cada fabricante ordena las mismas piezas de forma distinta. El patrón, sin embargo, es constante: una app Cámara que lee códigos en su vista normal de foto, un mosaico Escanear código QR en los Ajustes rápidos y Google Lens como respaldo universal. Si tu teléfono no es un Pixel ni un Samsung, sigue el patrón en ese orden. Primero, abre la app Cámara y apunta a un código en la vista normal de foto. Si no aparece nada, busca en los ajustes de la cámara un interruptor de escaneo — el nombre varía según el fabricante, así que busca palabras sobre códigos QR, escaneo o sugerencias — y actívalo. Si no hay tal interruptor, o ya está activado y no pasa nada, desliza hacia abajo para abrir los Ajustes rápidos y busca el mosaico Escanear código QR. Si tampoco está, abre Google Lens desde la app de Google o desde dentro de la cámara y apunta al código. Lens también lee imágenes guardadas en Google Fotos.</p>
+<p><strong>Una nota sobre los teléfonos antiguos.</strong> Un teléfono tan antiguo que no tenga ningún lector integrado es el único caso en el que una app de escáner aparte es una respuesta razonable. Elige una de la tienda oficial de apps con una solicitud de permisos clara y ajustada — acceso a la cámara y nada más que no necesite — y desconfía de cualquier escáner que pida contactos, ubicación o una cuenta antes de leer un solo código. Como alternativa, sáltate la instalación por completo y usa <a href="/es/scan/">el escáner gratuito en tu navegador</a>, que lee un código desde tu cámara o desde una imagen subida sin instalar nada, y no deja nada en el teléfono cuando terminas.</p>
 
+<h2>Casos: emparejar el método con el momento</h2>
+<p><strong>En la mesa de un restaurante,</strong> usa la app Cámara; el código está cerca y quieres el menú con un toque, inclinando el teléfono si una tarjeta plastificada brillante refleja bajo un foco. <strong>En un control de acceso o revisión de entradas,</strong> usa el atajo de escáner dedicado y tenlo abierto antes de llegar al frente de la cola, ya que los códigos de entradas suelen ser sensibles al tiempo. <strong>En un cartel o escaparate,</strong> retrocede hasta que el código entero quepa con holgura en el encuadre, y recuerda la regla de tamaño de la <a href="/es/blog/qr-code-print-size-guide/">guía de tamaño de impresión</a>: como regla práctica, un código debe tener al menos una décima parte del ancho de la distancia desde la que lo escaneas. Un código que no cabe en el encuadre desde donde estás es un código impreso demasiado pequeño para su sitio, y ningún ajuste del teléfono lo arregla. <strong>En un televisor, portátil o la pantalla de otro teléfono,</strong> apunta tu cámara a la otra pantalla igual que la apuntarías a papel, pero vigila los brillos en el cristal y el propio parpadeo de la pantalla; inclina un poco para los brillos, mantén el teléfono quieto para el parpadeo y escanea un código de inicio de sesión o emparejamiento con prontitud, ya que un código renovado reemplaza al viejo.</p>
+
+<h2>Cuando no pasa nada: la lista del lado del teléfono</h2>
+<ol>
+<li><strong>¿El código entero en el encuadre?</strong> Retrocede hasta que las cuatro esquinas y el margen silencioso alrededor del código sean visibles.</li>
+<li><strong>¿El modo de cámara correcto?</strong> Usa la vista normal de foto, no retrato ni vídeo; usa el atajo de escáner dedicado si tu cámara ofrece uno.</li>
+<li><strong>¿El escaneo activado?</strong> Revisa el interruptor: Sugerencias de escaneo de cámara en Pixel, Escanear códigos QR en los ajustes de cámara de Samsung, el control Escanear código en iPhone.</li>
+<li><strong>¿La lente limpia?</strong> Límpiala con un paño suave; una lente empañada difumina todos los códigos por igual.</li>
+<li><strong>¿La luz ayuda o estorba?</strong> Añade luz en una habitación oscura, quita los brillos en una luminosa, mantén tu sombra fuera del código.</li>
+<li><strong>¿El propio código es legible?</strong> Revisa los tres cuadrados de las esquinas, el contraste y cualquier daño, decoloración o curva que distorsione la rejilla.</li>
+<li><strong>Prueba con un segundo teléfono:</strong> si otro teléfono lee el código y el tuyo no, el problema son los ajustes, la lente o la luz de tu teléfono, no el código.</li>
+</ol>
+<p>Si el código se lee pero el destino falla — un enlace muerto, una página mudada, un formulario que ya no existe —, eso es otro fallo con otro responsable. El código hizo su trabajo; la página detrás no. La cadena completa de fallos del lado del código está en <a href="/es/blog/why-is-my-qr-code-not-working/">por qué no escanea tu código QR</a>, y la impresión borrosa en particular en <a href="/es/blog/why-is-my-qr-code-blurry/">por qué sale borroso tu código QR</a>. Si ninguno de los siete pasos de arriba ayuda, el siguiente paso es otro lector u otro teléfono, no seguir trasteando con el tuyo.</p>
+
+<h2>La comparación honesta: escaneo integrado frente a apps de escáner</h2>
+<p>Las apps de escáner existen, y para un teléfono sin lector integrado son una solución genuina. Para todos los demás, son una versión peor de algo que el teléfono ya hace. La cámara integrada lee códigos estándar, muestra la misma vista previa y abre los mismos destinos, sin cuenta, sin pantalla de suscripción y sin una ristra de anuncios entre tú y un menú. Una app de escáner añade un intermediario a una operación que no lo necesita, y ese intermediario suele pagarse con atención, datos o ambas cosas. El caso a favor de una app es estrecho pero real: un teléfono antiguo sin lector integrado necesita una, o un escáner de navegador, y una persona que escanea códigos todo el día por trabajo puede querer un historial o lectura en lote. El caso en contra, para el escaneo diario, es igual de concreto: muchas apps de escáner muestran anuncios, y algunas piden permisos mucho más allá de la cámara — contactos, ubicación o una cuenta que ata tu historial de escaneos a una identidad. La cámara integrada, en cambio, lee el código y sigue adelante; no lleva un diario de tus escaneos.</p>
+
+<h2>Seguridad: la vista previa es toda la defensa</h2>
+<p>Un código QR oculta su destino por diseño. No puedes leer una URL mirando el patrón, y justo por eso un código es un vehículo tan eficaz para un enlace que nunca tocarías si pudieras verlo. La defensa no es evitar los códigos: es leer la vista previa, siempre, y tratarla como una decisión, no como un trámite. La Comisión Federal de Comercio de Estados Unidos advirtió sobre este patrón en una alerta al consumidor del 6 de diciembre de 2023: los estafadores cubren códigos genuinos con sus propios adhesivos — en parquímetros, por ejemplo — o envían códigos en mensajes inesperados, y un código escaneado puede llevar a un sitio suplantado que parece real, donde cualquier cosa que introduzcas puede robarse, o a malware. El consejo de la FTC en esa alerta es el mismo hábito que recomienda esta guía: revisa la URL antes de abrirla, busca faltas de ortografía o una letra cambiada en un nombre familiar, y no escanees un código en un mensaje inesperado, sobre todo si urge a actuar de inmediato. Lee la vista previa, comprueba si hay manipulación, como una pegatina pegada sobre otro código, y revisa el contexto: ¿esperabas este código, en este lugar, para este propósito? Fallar en cualquiera de esas comprobaciones basta para detenerte.</p>
+
+<h2>Haz un código y pruébalo en tu propio teléfono</h2>
+<p>La forma más rápida de aprender todo esto es hacer un código y escanearlo tú mismo. El generador de FreeQrly cubre 17 tipos — enlaces, Wi-Fi, tarjetas de contacto, eventos y más — y un código estático hecho allí es gratis sin registro, sin marca de agua y sin caducidad, así que un código de prueba no cuesta nada y sigue funcionando. Imprímelo, colócalo donde lo usarías y escanéalo con la app Cámara, luego con el atajo de escáner dedicado y luego desde una foto guardada. Si se lee en los tres, tu tamaño, contraste y zona de silencio están bien. Si el destino detrás de tu código puede cambiar, un código dinámico es la herramienta adecuada: sigue siendo editable después de imprimir e informa de estadísticas de escaneo, con una cuenta gratuita. Los códigos dinámicos son gratis hasta 20 códigos, actualmente con disponibilidad ilimitada durante el periodo promocional, y con escaneos ilimitados. Para un lote de códigos, la <a href="/es/batch-qr-code/">generación por lotes</a> crea un código por enlace y los descarga juntos. Empieza con un código estático de prueba, escanéalo en tu propio teléfono y construye a partir de un resultado que hayas visto funcionar de verdad.</p>
     </div>
 
     <section class="sources">
       <h2>Fuentes</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La especificación de la simbología del código QR. Define los cuatro niveles de corrección de errores (L 7%, M 15%, Q 25%, H 30%).</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - CONSERVADO del artículo original. La especificación de la simbología del código QR; la descripción original afirma que define los cuatro niveles de corrección de errores (L 7%, M 15%, Q 25%, H 30%). El cuerpo usa solo esos cuatro porcentajes, además de la zona de silencio de 4 módulos de la misma norma. Página consultada el 2026-11-03; el listado de ISO en sí no lleva un resumen público con las cifras, que se corroboraron con explicaciones de la norma durante la verificación.</li>
+      <li><a href="https://support.apple.com/en-us/102680">Soporte de Apple: Escanear un código QR con tu iPhone o iPad</a> - AÑADIDO. Publicado el 14 de septiembre de 2026 (mostrado en la página, verificado al abrirla el 2026-11-03). Respalda: abrir Cámara o Escáner de códigos, sostener el dispositivo de forma que aparezca el código, tocar el enlace; añadir el control Escanear código manteniendo pulsado el fondo del Centro de control y tocando Añadir un control.</li>
+      <li><a href="https://support.google.com/pixelphone/answer/16561572?hl=en">Soporte de Google: Escanear códigos QR con tu teléfono Pixel</a> - AÑADIDO. Página consultada el 2026-11-03; sin fecha de publicación en la página. Respalda: el interruptor Sugerencias de escaneo de cámara (Ajustes, luego Más ajustes), el mosaico Escanear código QR de los Ajustes rápidos y la lista de solución de problemas (mantener quieto, buena luz sin brillos, lente limpia, acercarse manteniendo todo el cuadrado en el encuadre).</li>
+      <li><a href="https://www.samsung.com/uk/support/mobile-devices/how-to-scan-qr-code-on-your-galaxy-phone-or-tablet/">Soporte de Samsung: Cómo escanear códigos QR en tu teléfono Samsung</a> - AÑADIDO. Actualizado el 6 de octubre de 2026 (mostrado en la página, verificado al abrirla el 2026-11-03). Respalda: escaneo con la app Cámara, el mosaico Escanear código QR de los Ajustes rápidos, la opción Escanear códigos QR en los ajustes de Cámara, Galería con Bixby Vision y el icono de imagen de la galería del escáner de los Ajustes rápidos para fotos guardadas.</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC: Los estafadores ocultan enlaces dañinos en códigos QR para robar tu información</a> - AÑADIDO. Alerta al consumidor del 6 de diciembre de 2023 (listado de la FTC; página verificada al abrirla el 2026-11-03). Respalda: estafadores que cubren códigos genuinos con sus propios adhesivos, incluso en parquímetros, y que envían códigos en mensajes inesperados; un código escaneado puede llevar a un sitio suplantado o a malware; revisa la URL antes de abrirla y no escanees un código en un mensaje inesperado que urge a actuar de inmediato.</li>
+      <li><a href="https://support.google.com/camerafromgoogle/answer/12033278?hl=en">Soporte de Google: Escanear códigos QR en Cámara de Google</a> - AÑADIDO. Página consultada el 2026-11-03 a través de un resultado de búsqueda; sin fecha de publicación. Respalda solo la nota única de modo usada en el cuerpo: un código QR no se puede escanear en modo retrato y vídeo en Cámara de Google.</li>
       </ul>
     </section>
     <div class="cta-card">
@@ -154,15 +212,18 @@
       <div class="rel-grid">
         <a class="rel-card" href="/es/blog/share-wifi-with-qr-code/"><b>Cómo compartir WiFi con un código QR</b></a>
         <a class="rel-card" href="/es/blog/add-logo-to-qr-code/"><b>Cómo añadir un logo a un código QR (y que siga siendo escaneable)</b></a>
-        <a class="rel-card" href="/es/blog/static-vs-dynamic-qr-codes/"><b>Static vs Códigos QR dinámicos: Free Forever or a Subscription?</b></a>
+        <a class="rel-card" href="/es/blog/do-qr-codes-expire/"><b>¿Caducan los códigos QR? No, pero los de pago pueden morir</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bueno saberlo</h2>
-    <details><summary><span>¿Cómo escaneo un código QR con mi iPhone?</span></summary><p>Abre la app Cámara y apunta al código: aparece un aviso en la parte superior. Tócalo. Como alternativa, añade el Escáner de códigos al Centro de control (Ajustes → Centro de control) para tener un escáner dedicado.</p></details>
-    <details><summary><span>¿Cómo escaneo un código QR en Android?</span></summary><p>Abre tu app de cámara y apunta al código; aparece una ventana con el enlace. Si no funciona, activa «Escanear códigos QR» en los ajustes de la cámara o usa Google Lens.</p></details>
-    <details><summary><span>¿Necesito descargar una app de escáner de códigos QR?</span></summary><p>No. Los iPhone y la mayoría de los teléfonos Android leen códigos QR con la cámara integrada. Las apps de escáner son innecesarias para códigos estándar.</p></details>
-    <details><summary><span>¿Por qué mi teléfono no escanea el código QR?</span></summary><p>Normalmente por la distancia, los brillos o una impresión dañada. Sostén el teléfono de forma que el código llene la mitad del visor, evita los reflejos y comprueba que los tres cuadrados de las esquinas no estén rasgados.</p></details>
+    <details><summary><span>¿Cómo escaneo un código QR con mi iPhone?</span></summary><p>Abre la app Cámara, sostén el teléfono de forma que el código entero esté en el encuadre y toca el enlace que aparece. Como alternativa, abre el Centro de control y toca el botón Escanear código para una vista de escáner dedicada; si falta el botón, añádelo desde la galería del Centro de control.</p></details>
+    <details><summary><span>¿Cómo escaneo un código QR con un teléfono Pixel?</span></summary><p>Abre la app Cámara y apúntala al código, asegurándote de que todo el cuadrado se vea en pantalla. Si no aparece nada, comprueba que Sugerencias de escaneo de cámara esté activado en los Ajustes de la app Cámara, luego en Más ajustes. El mosaico Escanear código QR de los Ajustes rápidos es la alternativa más rápida.</p></details>
+    <details><summary><span>¿Cómo escaneo un código QR con un teléfono Samsung Galaxy?</span></summary><p>Abre la app Cámara y apunta al código, luego toca la ventana emergente. Si no aparece nada, abre los ajustes de Cámara y comprueba que la opción Escanear códigos QR esté activada. También puedes deslizar hacia abajo para abrir los Ajustes rápidos y tocar Escanear código QR, o leer una foto guardada en la app Galería con Bixby Vision.</p></details>
+    <details><summary><span>¿Necesito descargar una app de escáner de códigos QR?</span></summary><p>No, no para códigos estándar en un teléfono moderno. La cámara integrada los lee con la misma vista previa que cualquier app. Un escáner aparte es una respuesta razonable solo para un teléfono sin lector integrado, o para un trabajo que de verdad necesite un historial de escaneos o lectura en lote.</p></details>
+    <details><summary><span>¿Por qué mi teléfono no escanea el código QR?</span></summary><p>Sigue la lista del lado del teléfono en orden: código entero en el encuadre, vista normal de foto en vez de retrato o vídeo, escaneo activado, lente limpia, buena luz sin brillos, cuadrados de esquina intactos y contraste, y por último una prueba con un segundo teléfono. Si otro teléfono lo lee, el problema es tu teléfono; si ninguno lo hace, es el código.</p></details>
+    <details><summary><span>¿Puedo escanear un código QR que está en la pantalla de mi propio teléfono?</span></summary><p>No con la cámara, ya que una cámara no puede apuntar a su propia pantalla. Haz una captura del código o guarda la imagen, luego léelo desde la imagen; mira la guía para escanear un código QR desde una foto.</p></details>
+    <details><summary><span>¿Es seguro escanear un código QR en un lugar público?</span></summary><p>Lee la vista previa antes de tocar, y comprueba que el dominio coincida con el cartel que tienes delante, que el código no muestre señales de manipulación, como una pegatina pegada sobre otro código, y que esperabas este código en este lugar. Fallar en cualquiera de esas comprobaciones basta para detenerte.</p></details>
     </section>
   </article>
   <footer>

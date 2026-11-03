@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Por que meu QR code está borrado? 5 correções que funcionam | FreeQrly","description":"QR code borrado que não escaneia? 5 causas comuns — exportação em baixa resolução, tamanho errado, compressão JPEG, distorção, impressão ruim — e como corrigir cada uma.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Por que meu QR code está borrado? 5 correções que funcionam | FreeQrly","description":"QR code borrado que não escaneia? 5 causas comuns — exportação em baixa resolução, tamanho errado, compressão JPEG, distorção, impressão ruim — e como corrigir cada uma.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "Por que meu QR code parece embaçado, mas ainda escaneia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Celulares são tolerantes — a correção de erros recupera uma quantidade surpreendente de borrão. Mas um código que escaneia no seu escritório claro pode falhar com pouca luz ou à distância do braço. Nítido é seguro; quase-escaneando, não."
+        "text": "Os celulares são generosos — a correção de erros reconstrói palavras-código que voltam erradas ou ilegíveis. Mas um código que escaneia num escritório claro pode falhar com pouca luz ou à distância do braço. Nítido é seguro; mal escaneando, não."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "De qual resolução preciso para um pôster?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PNG de 2048 px no mínimo, ou SVG. Um pôster visto a 2 metros precisa de muito mais pixels que um cartão de visita visto a 30 cm — veja o guia de tamanho de impressão para a regra da distância."
+        "text": "O SVG é a melhor escolha, porque escala sem limite. Se a gráfica precisa de um arquivo raster, use PNG a 2048 px; um cartaz a 20 cm precisa de cerca de 2.360 px a 300 pixels por polegada, então uma exportação de 512 px vai parecer suave nesse tamanho."
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "PNG ou SVG para impressão?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SVG sempre que a gráfica ou o designer aceitar — ele escala infinitamente sem nenhum borrão. PNG em 1024–2048 px é a alternativa para impressão de escritório e apps que não aceitam SVG."
+        "text": "SVG sempre que a gráfica ou o designer aceitar — ele escala infinitamente com zero borrão. PNG a 1024 px para cartões e folhetos, ou 2048 px para cartazes, é a saída para impressão de escritório e apps que não aceitam SVG."
       }
     },
     {
@@ -83,7 +88,23 @@
       "name": "Dá para corrigir um código impresso embaçado sem reimprimir?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. O borrão está gravado na imagem impressa. Reimprima a partir de uma exportação em maior resolução (ou SVG). Editar um código dinâmico não ajuda — o padrão no papel é o que é."
+        "text": "Não. O borrão está grudado na imagem impressa. Reimprima a partir de uma exportação em resolução maior (ou SVG). Editar um código dinâmico não ajuda — o padrão no papel é o que é, mesmo que um código dinâmico permita mudar o destino por trás de uma impressão nova."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por que a mesma exportação parece boa na tela, mas suave na impressão?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uma tela mostra o código pequeno, então os pixels dele parecem justos. O papel mostra o código no tamanho real, então a mesma contagem de pixels espalhada por centímetros revela o borrão. Confira a exportação com o tamanho de impressão antes de mandar para a gráfica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ampliar ou um filtro de nitidez corrige um código borrado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Ampliar interpola entre os pixels que você já tem, então as bordas continuam suaves, só maiores. Um filtro de nitidez pode adicionar halos que confundem uma câmera, e converter um JPEG para PNG não desfaz o dano do JPEG. A única correção confiável é uma exportação nova a partir dos dados originais em resolução maior, ou em SVG."
       }
     }
   ]
@@ -93,23 +114,38 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"Por que meu QR code está borrado? 5 correções que funcionam | FreeQrly","description":"QR code borrado que não escaneia? 5 causas comuns — exportação em baixa resolução, tamanho errado, compressão JPEG, distorção, impressão ruim — e como corrigir cada uma.","step":[
     {
       "@type": "HowToStep",
+      "name": "Ache o arquivo original",
+      "text": "Se você só tem um JPEG, um print ou uma imagem encaminhada de chat, pare e gere de novo — nenhuma edição restaura detalhes que a compressão já jogou fora."
+    },
+    {
+      "@type": "HowToStep",
       "name": "Exporte no tamanho certo",
-      "text": "PNG em 1024 px para cartões e flyers, 2048 px para pôsteres. SVG sempre que a gráfica aceitar."
+      "text": "PNG a 1024 px para cartões e folhetos, 2048 px para cartazes, SVG sempre que a gráfica ou o designer aceitar. Acima de cerca de 20 cm, o SVG é o único formato que mantém as bordas exatas sem um arquivo enorme."
     },
     {
       "@type": "HowToStep",
       "name": "Use PNG ou SVG, nunca JPEG",
-      "text": "O JPEG borra as bordas nítidas de que um QR code é feito. PNG para telas e impressão de escritório, SVG para impressão profissional."
+      "text": "PNG para telas e impressão de escritório, SVG para impressão profissional. Se uma ferramenta insistir em JPEG, use a configuração de qualidade mais alta dela só para uma prévia na tela, nunca como matriz de impressão."
     },
     {
       "@type": "HowToStep",
       "name": "Mantenha as proporções ao redimensionar",
-      "text": "Segure Shift ou o ícone de cadeado para os quadrados continuarem quadrados. Nunca arraste um canto à mão livre."
+      "text": "Segure Shift ou o ícone de cadeado para os quadrados continuarem quadrados. Coloque a imagem no tamanho final, em vez de colocá-la pequena e esticá-la depois."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mantenha o código escuro sobre claro, com margem clara",
+      "text": "Borrão e baixo contraste se somam. Mantenha uma margem em branco de pelo menos 4 módulos de largura em todos os lados, conforme especificado na ISO/IEC 18004, e mantenha texto, logos e bordas decorativas fora dela."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Combine papel e impressora com o trabalho",
+      "text": "Papel liso ou revestido e impressora a laser para códigos pequenos; acabamento fosco onde o reflexo é um risco; tamanho maior e correção de erros mais alta para superfícies ásperas ou texturizadas."
     },
     {
       "@type": "HowToStep",
       "name": "Escaneie a impressão real para testar",
-      "text": "Imprima uma cópia no tamanho final, afaste-se até a distância real de leitura, escaneie com seu celular. Scan de primeira significa que o lote está seguro."
+      "text": "Imprima uma cópia no tamanho final, afaste-se até a distância real de leitura, e escaneie na iluminação real. Um escaneamento de primeira significa que o lote está seguro. Se hesitar, corrija a exportação ou o tamanho agora."
     }
   ]}
 </script>
@@ -125,31 +161,76 @@
     <div class="kicker" style="text-align:center">Anotações</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Por que meu QR code <span class='hl hl-blush'>está embaçado</span>?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Um QR code embaçado quase sempre é um problema de resolução: poucos pixels esticados em espaço demais. A correção é exportar maior — ou em SVG.</p>
-    <p class="meta" style="text-align:center">October 17, 2026 · 4 min de leitura</p>
+    <p class="meta" style="text-align:center">17 de outubro de 2026 · Última atualização: 3 de novembro de 2026 · 15 min de leitura</p>
     <div class="prose" style="margin-top:40px">
-
-<p>Um QR code parece nítido na tela e vira uma mancha no papel. A causa quase sempre é a mesma: a imagem não tinha pixels suficientes para o tamanho em que foi impressa. Um QR code é uma grade de quadradinhos — quando não há pixels suficientes, as bordas borram, os celulares não encontram a grade e os scans falham.</p>
-
-<h2>As 5 causas mais comuns</h2>
+<p>Um QR code borrado quase sempre é um problema de resolução: poucos pixels demais esticados por espaço demais. A correção é exportar maior — ou em SVG. Se o código parecia nítido na tela e virou uma papa no papel, a imagem não tinha pixels suficientes para o tamanho em que foi impressa. Um QR code é uma grade de quadradinhos chamados módulos; quando não há pixels suficientes, as bordas deles se misturam, os celulares não encontram a grade, e os escaneamentos falham. Comece pela exportação, e não por um design novo: gere de novo em resolução maior ou como arquivo vetorial, reimprima uma cópia no tamanho real, e escaneie na distância real de leitura antes de imprimir o lote.</p>
+<p>Essa resposta cobre a maioria dos casos, mas o borrão tem mais de uma causa, cada uma com uma correção diferente: uma exportação pequena, compressão JPEG, distorção, impressora ou papel, ou uma cópia de uma cópia. As seções abaixo separam essas causas, trazem uma tabela de números para a gráfica, passam pela correção em ordem, e cobrem códigos que parecem nítidos e mesmo assim não escaneiam — esses pertencem ao <a href="/pt/blog/why-is-my-qr-code-not-working/">por que o seu QR code não escaneia</a>.</p>
+<h2>O que o borrão de fato faz com um código</h2>
+<p>A câmera de um celular não lê um QR code como uma pessoa lê uma foto. Ela procura os três padrões grandes de localização nos cantos, deduz a grade a partir deles, e então decide, módulo por módulo, se cada quadradinho é escuro ou claro. O borrão ataca exatamente essa decisão: quando módulos vizinhos sangram um para dentro do outro, a câmera vê cinza onde precisava de preto ou branco, e começa a adivinhar. Um pouco de adivinhação é suportável, porque os QR codes carregam correção de erros embutida — dados extras que permitem ao leitor reconstruir palavras-código que voltam erradas ou ilegíveis. Essa proteção é medida em palavras-código, e não em área visível: os quatro níveis da ISO/IEC 18004 restauram aproximadamente 7% das palavras-código no nível L, 15% no M, 25% no Q e 30% no H. Uma mancha sobre um padrão de localização, ou um borrão espalhado pelo símbolo inteiro, pode derrotar um leitor muito antes de qualquer porcentagem arrumada sugerir que ele deveria sobreviver. Trate a correção de erros como uma rede de segurança, nunca como permissão para imprimir um código suave.</p>
+<p>A densidade piora o borrão. Um link curto produz uma grade espaçosa com módulos grandes; um link longo, um cartão de contato completo ou um código de Wi-Fi com senha longa produz uma grade mais densa com módulos menores, e módulos menores borram antes. É por isso que a mesma exportação pode parecer boa para uma URL curta e falhar para um código carregado de dados no mesmo tamanho de impressão. Se um código é ao mesmo tempo denso e impresso pequeno, encurte o destino onde der, imprima maior, ou os dois. Um código dinâmico ajuda de outro jeito: o padrão impresso codifica um link curto que você pode redirecionar depois, então a grade continua espaçosa mesmo que o destino final seja longo. Para um destino que nunca vai mudar, um código estático é mais simples: gratuito, sem conta, sem marca d'água, e não expira.</p>
+<h2>Os números: tamanho de impressão, pixels e formato</h2>
+<p>As gráficas falam de resolução em pontos ou pixels por polegada. Para impressos vistos de perto, 300 pixels por polegada no tamanho final de impressão é a base profissional amplamente usada para uma saída nítida. A tabela abaixo transforma essa base em contagens de pixels: largura de impressão em polegadas multiplicada por 300. Um código de 2 cm tem cerca de 0,8 polegada de largura, então precisa de cerca de 240 pixels a 300 pixels por polegada — e isso é o mínimo absoluto, não uma margem confortável. Exporte sempre maior do que o mínimo e deixe o designer reduzir, porque reduzir preserva a nitidez enquanto ampliar só aumenta o borrão.</p>
+<div class="table-scroll"><table>
+<tr><th>Largura de impressão</th><th>Pixels a 300 por polegada (mínimo)</th><th>Exportação a enviar</th></tr>
+<tr><td>2 cm (cartão de visita)</td><td>~240 px</td><td>PNG a 1024 px, ou SVG</td></tr>
+<tr><td>3 cm (folheto, cardápio)</td><td>~350 px</td><td>PNG a 1024 px, ou SVG</td></tr>
+<tr><td>5 cm (porta-cardápio de mesa, etiqueta)</td><td>~590 px</td><td>PNG a 1024 px, ou SVG</td></tr>
+<tr><td>10 cm (detalhe de cartaz)</td><td>~1.180 px</td><td>PNG a 2048 px, ou SVG</td></tr>
+<tr><td>20 cm (cartaz)</td><td>~2.360 px</td><td>SVG; PNG a 2048 px só como saída</td></tr>
+<tr><td>50 cm (cartaz grande, sinalização)</td><td>~5.900 px</td><td>SVG</td></tr>
+</table></div>
+<p>Duas regras práticas sustentam essa tabela. Primeira: o tamanho de impressão em centímetros, multiplicado por cerca de 100, dá um alvo rápido de pixels — um código de 5 cm quer cerca de 500 pixels no mínimo, um código de 10 cm cerca de 1.000. Segunda: a regra prática da proporção 1:10 do <a href="/pt/blog/qr-code-print-size-guide/">guia de tamanho de impressão</a>: a largura do código deve ser pelo menos um décimo da distância de escaneamento, então um código escaneado a 50 cm deve ter pelo menos 5 cm de largura, e um cartaz escaneado a 5 metros precisa de um código de 50 cm. Um código de cartaz visto a metros de distância tolera uma resolução efetiva menor do que um cartão segurado na mão, mas ainda precisa de pixels suficientes para o seu tamanho — e só um arquivo vetorial dá isso sem teto.</p>
+<div class="table-scroll"><table>
+<tr><th>Formato</th><th>Como se comporta</th><th>Use para</th></tr>
+<tr><td>SVG</td><td>Vetorial: sem pixels, escala sem limite, bordas ficam exatas</td><td>Impressão profissional, cartazes grandes, layouts de designer</td></tr>
+<tr><td>PNG</td><td>Raster sem perda: cada pixel preservado, sem borrão de compressão</td><td>Impressão de escritório, slides, apps que não aceitam SVG</td></tr>
+<tr><td>JPEG</td><td>Com perda: descarta detalhes e borra bordas nítidas</td><td>Só fotografias — nunca para um QR code</td></tr>
+<tr><td>Print ou imagem de chat</td><td>Recomprimido e muitas vezes reduzido pelo app de envio</td><td>Nada impresso — volte à exportação original</td></tr>
+</table></div>
+<h2>As 5 causas comuns, em detalhe</h2>
+<h3>1. Exportação em baixa resolução</h3>
+<p>Essa é a causa mais comum, e a mais generosa de corrigir. Um PNG de 512 px parece bom com 2 cm de largura; ampliado para um cartaz de 20 cm, cada módulo vira uma mancha, porque os mesmos 512 pixels agora cobrem dez vezes a área. A tela esconde o problema — o monitor mostra o código pequeno, então os pixels parecem justos — enquanto o papel mostra no tamanho real. A correção está na fonte: exporte de novo a 1024 px para cartões e folhetos, 2048 px para cartazes, ou SVG sempre que a gráfica aceitar. Ampliar o arquivo pequeno num editor não adiciona detalhe; só deixa o borrão existente maior. Se a exportação original sumiu, gere de novo a partir do mesmo destino em vez de esticar o arquivo que você tem.</p>
+<h3>2. Compressão JPEG</h3>
+<p>O JPEG foi feito para fotografias, e funciona descartando detalhes que o olho tem menos chance de notar numa foto. Essa troca é ruim para um QR code, que não é nada além de bordas nítidas e áreas planas — exatamente os recursos que o JPEG borra. Um código salvo como JPEG de baixa qualidade pode falhar mesmo em tamanhos pequenos, e o dano piora cada vez que o arquivo é salvo de novo como JPEG. O PNG usa compressão sem perda, preservando cada pixel exatamente, e o SVG não tem pixels para perder. A regra é simples: só PNG ou SVG. Se um designer, app de chat ou plataforma social devolver uma versão JPEG, trate como prévia, não como arte final, e troque pela PNG ou SVG original antes de imprimir.</p>
+<h3>3. Distorção</h3>
+<p>Arrastar um canto distorce a grade: quadrados viram retângulos, o espaçamento dos módulos muda de forma desigual, e os leitores desistem. Isso acontece mais em apresentações de slides, processadores de texto e ferramentas de diagramação, onde uma imagem é arrastada para preencher um espaço. Redimensione sempre proporcionalmente — segure Shift, ou use o ícone de cadeado, para largura e altura mudarem juntas e os quadrados continuarem quadrados. Um código distorcido e depois distorcido de volta não fica quadrado automaticamente, porque o arredondamento na ferramenta de layout pode deixá-lo levemente torto. Na dúvida, apague a imagem colocada e coloque uma exportação nova no tamanho pretendido.</p>
+<h3>4. Impressão ruim: impressora, tinta e papel</h3>
+<p>Impressoras de baixa resolução, sangramento de tinta em papel áspero ou absorvente, e reflexo de brilho, tudo suaviza as bordas. Uma impressora a jato de tinta num papel não revestido e absorvente deixa a tinta se espalhar pelas fibras, então os vãos brancos finos entre os módulos se fecham e o código parece pesado e lamacento. Uma impressora a laser num papel liso ou revestido segura as bordas muito melhor, e é por isso que papel fosco e impressora a laser vencem um jato de tinta num guardanapo. Laminação brilhante é diferente: o papel pode continuar nítido e mesmo assim devolver reflexos para a câmera — incline o impresso sob a luz para distinguir reflexo de borrão. Para tecido, bordado, gravação ou superfícies muito ásperas, espere que as bordas suavizem de qualquer jeito, e compense com um código maior, correção de erros mais alta e um teste físico antes.</p>
+<h3>5. Cópia de uma cópia</h3>
+<p>Tirar print de um código a partir de uma mensagem, e depois print desse print, perde resolução a cada vez. Apps de mensagem também recomprimem e reduzem as imagens, então um código encaminhado pelo chat pode chegar muito menor e mais suave do que a exportação original. Fotografar um código impresso para reutilizá-lo acrescenta distorção de perspectiva, luz desigual e suavidade de lente por cima da impressão original. Volte sempre à exportação original, ou gere de novo a partir do mesmo destino. Se o destino é um código dinâmico, gere um código novo para o mesmo link curto — nenhum arquivo antigo é necessário.</p>
+<h2>Como corrigir, passo a passo</h2>
 <ol>
-<li><b>Exportação em baixa resolução.</b> Um PNG de 512 px parece bom com 2 cm de largura. Ampliado para um pôster de 20 cm, cada módulo vira uma mancha. Quanto maior a impressão, mais pixels você precisa.</li>
-<li><b>Compressão JPEG.</b> O JPEG borra bordas nítidas — exatamente do que um QR code é feito. Um código salvo como JPEG de baixa qualidade pode falhar até em tamanhos pequenos. Só PNG ou SVG.</li>
-<li><b>Distorção.</b> Arrastar um canto da imagem distorce a grade: quadrados viram retângulos e os leitores desistem. Sempre redimensione proporcionalmente.</li>
-<li><b>Impressão ruim.</b> Impressoras de baixo DPI, vazamento de tinta em papel áspero ou absorvente e reflexo de papel brilhante suavizam as bordas. Papel fosco e impressora a laser ganham de jato de tinta em guardanapo.</li>
-<li><b>Cópia da cópia.</b> Tirar print de um código numa mensagem e depois print desse print perde resolução a cada vez. Sempre volte à exportação original.</li>
+<li><strong>Ache o arquivo original.</strong> Se você só tem um JPEG, um print ou uma imagem encaminhada de chat, pare e gere de novo — nenhuma edição restaura detalhes que a compressão já jogou fora.</li>
+<li><strong>Exporte no tamanho certo.</strong> PNG a 1024 px para cartões e folhetos, 2048 px para cartazes, SVG sempre que a gráfica ou o designer aceitar. Acima de cerca de 20 cm, o SVG é o único formato que mantém as bordas exatas sem um arquivo enorme.</li>
+<li><strong>Use PNG ou SVG, nunca JPEG.</strong> PNG para telas e impressão de escritório, SVG para impressão profissional. Se uma ferramenta insistir em JPEG, use a configuração de qualidade mais alta dela só para uma prévia na tela, nunca como matriz de impressão.</li>
+<li><strong>Mantenha as proporções ao redimensionar.</strong> Segure Shift ou o ícone de cadeado para os quadrados continuarem quadrados. Coloque a imagem no tamanho final, em vez de colocá-la pequena e esticá-la depois.</li>
+<li><strong>Mantenha o código escuro sobre claro, com margem clara.</strong> Borrão e baixo contraste se somam: um código cinza sobre fundo pálido que também está suave falha antes do que qualquer uma das falhas sozinha. Mantenha uma margem em branco de pelo menos 4 módulos de largura em todos os lados, conforme especificado na ISO/IEC 18004, e mantenha texto, logos e bordas decorativas fora dela.</li>
+<li><strong>Combine papel e impressora com o trabalho.</strong> Papel liso ou revestido e impressora a laser para códigos pequenos; acabamento fosco onde o reflexo é um risco; tamanho maior e correção de erros mais alta para superfícies ásperas ou texturizadas.</li>
+<li><strong>Escaneie a impressão real para testar.</strong> Imprima uma cópia no tamanho final, afaste-se até a distância real de leitura, e escaneie na iluminação real. Um escaneamento de primeira significa que o lote está seguro. Se hesitar, corrija a exportação ou o tamanho agora — uma tiragem de códigos suaves não se salva depois.</li>
 </ol>
-
-<h2>Como corrigir</h2>
-<ul>
-<li><strong>Exporte maior.</strong> PNG em 1024 px para cartões e flyers, 2048 px para pôsteres. Regra prática: o tamanho da impressão em cm, vezes ~100, é a quantidade de pixels que você quer.</li>
-<li><strong>Use SVG para impressão.</strong> SVG é vetor — escalável infinitamente sem nenhum borrão. Use sempre que a gráfica ou o designer aceitar.</li>
-<li><strong>Mantenha as proporções.</strong> Segure Shift (ou o ícone de cadeado) ao redimensionar para os quadrados continuarem quadrados.</li>
-<li><strong>Teste no tamanho final.</strong> Imprima uma cópia no tamanho real, afaste-se até a distância real de leitura e escaneie com seu celular. Se ler de primeira, o lote está seguro.</li>
-</ul>
-
-<p>Ainda não escaneia depois de uma reimpressão nítida? O problema é outro — tamanho, contraste ou dano. <a href="/pt/blog/why-is-my-qr-code-not-working/">O guia completo de solução de problemas</a> cobre esses casos. Para a regra de tamanho vs. distância, veja o <a href="/pt/blog/qr-code-print-size-guide/">guia de tamanho de impressão</a>.</p>
-
+<h2>Cenários: onde o borrão morde com mais força</h2>
+<h3>Folhetos, cardápios e porta-cardápios de mesa</h3>
+<p>Eles são escaneados à distância do braço, muitas vezes em salas escuras, então precisam de nitidez e tamanho: pelo menos 3 cm num folheto ou cardápio, 4–5 cm num porta-cardápio de mesa como regra prática. Cardápios acrescentam o risco da laminação: brilho sob luzes de teto pode refletir, enquanto laminação fosca mantém o código legível e limpa fácil. Para um cardápio que muda, aponte para uma página que você controla em vez de um print, para a impressão nunca ficar defasada — e um código dinâmico permite mudar esse destino depois de imprimir, com estatísticas de escaneamento mostrando quais mesas de fato escaneiam.</p>
+<h3>Cartazes e sinalização</h3>
+<p>Cartazes falham de outro jeito: a exportação geralmente é o problema, não a impressora. Um arquivo de 512 px que parecia bom na tela fica visivelmente suave a 20 cm ou 50 cm, e nenhuma impressora consegue inventar os pixels faltantes. Use SVG, aplique a regra prática da proporção 1:10, e faça a prova do painel do código em tamanho real antes da tiragem. Ao ar livre, leve o desbotamento em conta também: um código que começa nítido mas desbota no sol caminha para a falha ao longo de semanas, então um nível de correção de erros mais alto e uma posição abrigada importam mais do que uma primeira impressão marginalmente mais nítida.</p>
+<h3>Embalagens e etiquetas</h3>
+<p>Etiquetas pequenas combinam tamanho pequeno, dados densos e superfícies curvas ou texturizadas. Mantenha o código com 2 cm ou mais como regra prática, evite enrolá-lo numa curva fechada onde os módulos das bordas esticam, e teste no recipiente real — um código que escaneia plano pode falhar numa garrafa. Se o material é áspero ou a impressão é grosseira, imprima maior e mais simples: um link curto mantém a grade espaçosa, incluindo um link curto por trás de um código dinâmico.</p>
+<h2>Comparação honesta: o que corrige o borrão, e o que não corrige</h2>
+<p>Nem todo truque de nitidez funciona, e alguns conselhos populares desperdiçam uma tiragem. Ampliar um arquivo pequeno — num editor, com uma ferramenta de ampliação, ou exportando a mesma imagem pequena maior — não adiciona detalhe; interpola entre os pixels que você já tem, então as bordas continuam suaves, só maiores. Um filtro de nitidez pode deixar as bordas mais nítidas ao olho enquanto acrescenta halos que confundem uma câmera, então um código filtrado pode escanear pior. Converter um JPEG para PNG também não desfaz o dano do JPEG: o formato muda, mas os pixels borrados continuam borrados. A única correção confiável é uma exportação nova a partir dos dados originais em resolução maior, ou em SVG.</p>
+<p>A escolha de formato tem seus próprios prós e contras. O SVG é a melhor escolha para impressão, mas algumas ferramentas de escritório, apps mais antigos e plataformas sociais não o aceitam — nesses casos, um PNG em alta resolução é a saída certa, e não um motivo para voltar ao JPEG. O PDF pode ser um bom veículo para impressão porque pode conter o código vetorial, mas só se o código dentro do PDF for de fato vetorial; um PDF com um JPEG pequeno colado dentro é só um JPEG com uma embalagem mais bonita, então confira o que está dentro antes de confiar na extensão do arquivo.</p>
+<p>Por fim, nitidez é necessária, mas não suficiente. Um código perfeitamente nítido ainda pode falhar se for pequeno demais para a distância, se o contraste for fraco, se a zona de silêncio estiver lotada, se um logo cobrir demais o centro, ou se o próprio destino estiver morto. Essas são perguntas de diagnóstico, cobertas em ordem no <a href="/pt/blog/why-is-my-qr-code-not-working/">guia completo de solução de problemas</a>. Se a sua reimpressão está nítida e mesmo assim não escaneia, siga esse guia antes de reimprimir de novo — uma segunda reimpressão só ajuda se mudar aquilo que de fato está errado.</p>
+<p>Faça o próximo código nítido desde o início: gere no <a href="/pt/#studio">gerador gratuito</a>, escolha entre 17 tipos, e exporte PNG até 2048 px ou SVG infinitamente escalável — gratuito para códigos estáticos, sem cadastro, sem marca d'água e sem expiração. Para tamanhos por caso de uso, veja o <a href="/pt/blog/qr-code-print-size-guide/">guia de tamanho de impressão</a>, e para um código com logo, veja <a href="/pt/blog/add-logo-to-qr-code/">como adicionar um logo a um QR code</a>.</p>
     </div>
+
+    <section class="sources">
+      <h2>Fontes</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - A especificação da simbologia QR Code. A página da ISO mostra a 4ª edição, publicada em 2024-08 (página acessada em 2026-11-03). Sustenta os quatro níveis de correção de erros (L 7%, M 15%, Q 25%, H 30% das palavras-código) e a zona de silêncio de 4 módulos, conforme definidos no padrão.</li>
+      <li><a href="https://www.4over4.com/guide/understanding-image-resolution-dpi-in-print-vs-web-part2">4OVER4: Configurações de exportação para impressão vs web, tamanhos e DPI</a> - Sustenta 300 DPI como o padrão profissional de impressão para itens vistos de perto (cartões de visita, cartões-postais, folhetos, flyers) e resolução efetiva menor para itens de grande formato vistos à distância. Nenhuma data de publicação explícita na página; acessada em 2026-11-03.</li>
+      <li><a href="https://dev.to/bitran/image-formats-explained-jpg-vs-png-vs-webp-vs-avif-2hm7">Formatos de imagem explicados: JPG vs PNG vs WebP vs AVIF</a> - Sustenta o JPEG como compressão com perda que borra bordas nítidas e degrada ainda mais ao salvar de novo, versus o PNG como compressão sem perda que preserva cada pixel exatamente. Nenhuma data de publicação explícita na página; acessada em 2026-11-03.</li>
+      <li><a href="https://qrlynx.com/blog/iso-iec-18004-qr-code-standard-explained">ISO/IEC 18004:2024 explicada (QRLynx)</a> - Revisada em julho de 2026 com base na ISO e na DENSO WAVE. Sustenta a leitura em palavras-código das porcentagens de correção de erros (7% / 15% / 25% / 30% do total de palavras-código, e não uma tolerância garantida de área visível) e a zona de silêncio de quatro módulos especificada pela DENSO WAVE.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly apresentando um QR code"></div>
       <div>
@@ -161,17 +242,19 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Continue lendo</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/pt/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
+        <a class="rel-card" href="/pt/blog/get-google-reviews-with-qr-code/"><b>Como Conseguir Mais Avaliações no Google com um QR Code</b></a>
         <a class="rel-card" href="/pt/blog/bulk-qr-codes/"><b>QR Codes em Massa: Gere Dezenas de Uma Só Vez, Grátis</b></a>
-        <a class="rel-card" href="/pt/blog/do-qr-codes-expire/"><b>Do QR Codes Expire? No — But Paid Ones Can Die</b></a>
+        <a class="rel-card" href="/pt/blog/qr-code-troubleshooting-guide/"><b>Guia de Solução de Problemas de QR Code: Encontre e Corrija Qualquer Falha de Escaneamento</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bom saber</h2>
-    <details><summary><span>Por que meu QR code parece embaçado, mas ainda escaneia?</span></summary><p>Celulares são tolerantes — a correção de erros recupera uma quantidade surpreendente de borrão. Mas um código que escaneia no seu escritório claro pode falhar com pouca luz ou à distância do braço. Nítido é seguro; quase-escaneando, não.</p></details>
-    <details><summary><span>De qual resolução preciso para um pôster?</span></summary><p>PNG de 2048 px no mínimo, ou SVG. Um pôster visto a 2 metros precisa de muito mais pixels que um cartão de visita visto a 30 cm — veja o guia de tamanho de impressão para a regra da distância.</p></details>
-    <details><summary><span>PNG ou SVG para impressão?</span></summary><p>SVG sempre que a gráfica ou o designer aceitar — ele escala infinitamente sem nenhum borrão. PNG em 1024–2048 px é a alternativa para impressão de escritório e apps que não aceitam SVG.</p></details>
-    <details><summary><span>Dá para corrigir um código impresso embaçado sem reimprimir?</span></summary><p>Não. O borrão está gravado na imagem impressa. Reimprima a partir de uma exportação em maior resolução (ou SVG). Editar um código dinâmico não ajuda — o padrão no papel é o que é.</p></details>
+    <details><summary><span>Por que meu QR code parece embaçado, mas ainda escaneia?</span></summary><p>Os celulares são generosos — a correção de erros reconstrói palavras-código que voltam erradas ou ilegíveis. Mas um código que escaneia num escritório claro pode falhar com pouca luz ou à distância do braço. Nítido é seguro; mal escaneando, não.</p></details>
+    <details><summary><span>De qual resolução preciso para um pôster?</span></summary><p>O SVG é a melhor escolha, porque escala sem limite. Se a gráfica precisa de um arquivo raster, use PNG a 2048 px; um cartaz a 20 cm precisa de cerca de 2.360 px a 300 pixels por polegada, então uma exportação de 512 px vai parecer suave nesse tamanho.</p></details>
+    <details><summary><span>PNG ou SVG para impressão?</span></summary><p>SVG sempre que a gráfica ou o designer aceitar — ele escala infinitamente com zero borrão. PNG a 1024 px para cartões e folhetos, ou 2048 px para cartazes, é a saída para impressão de escritório e apps que não aceitam SVG.</p></details>
+    <details><summary><span>Dá para corrigir um código impresso embaçado sem reimprimir?</span></summary><p>Não. O borrão está grudado na imagem impressa. Reimprima a partir de uma exportação em resolução maior (ou SVG). Editar um código dinâmico não ajuda — o padrão no papel é o que é, mesmo que um código dinâmico permita mudar o destino por trás de uma impressão nova.</p></details>
+    <details><summary><span>Por que a mesma exportação parece boa na tela, mas suave na impressão?</span></summary><p>Uma tela mostra o código pequeno, então os pixels dele parecem justos. O papel mostra o código no tamanho real, então a mesma contagem de pixels espalhada por centímetros revela o borrão. Confira a exportação com o tamanho de impressão antes de mandar para a gráfica.</p></details>
+    <details><summary><span>Ampliar ou um filtro de nitidez corrige um código borrado?</span></summary><p>Não. Ampliar interpola entre os pixels que você já tem, então as bordas continuam suaves, só maiores. Um filtro de nitidez pode adicionar halos que confundem uma câmera, e converter um JPEG para PNG não desfaz o dano do JPEG. A única correção confiável é uma exportação nova a partir dos dados originais em resolução maior, ou em SVG.</p></details>
     </section>
   </article>
   <footer>

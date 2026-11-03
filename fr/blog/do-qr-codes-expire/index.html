@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Les QR codes expirent-ils ? Non, mais ceux payants peuvent mourir | FreeQrly","description":"Les QR codes expirent-ils ? Les codes statiques n'expirent jamais : le motif contient votre lien pour toujours. Ce qui cesse vraiment de fonctionner, ce sont les codes dynamiques payants quand l'abonnement se termine.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Les QR codes expirent-ils ? Non, mais ceux payants peuvent mourir | FreeQrly","description":"Les QR codes expirent-ils ? Les codes statiques n'expirent jamais : le motif contient votre lien pour toujours. Ce qui cesse vraiment de fonctionner, ce sont les codes dynamiques payants quand l'abonnement se termine.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "Les QR codes gratuits expirent-ils ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Non. Un QR code statique gratuit dure aussi longtemps que le lien vers lequel il pointe. Les codes qui « expirent » sont des codes dynamiques liés à un abonnement payant — le fournisseur les coupe quand vous arrêtez de payer."
+        "text": "Non, s'ils sont statiques. Un QR code statique gratuit dure aussi longtemps que le lien vers lequel il pointe. Les codes qui cessent de fonctionner sont généralement des codes dynamiques liés à un abonnement payant — le fournisseur coupe la redirection quand vous arrêtez de payer — ou des codes pointant vers une page supprimée."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Un QR code peut-il cesser de fonctionner ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, mais pas à cause de l’expiration. Les causes habituelles : la page de destination a été supprimée, le code a été imprimé trop petit ou à faible contraste, ou il a été physiquement endommagé."
+        "text": "Oui, mais pas à cause de l'expiration. Les causes habituelles sont : la page de destination a été supprimée, le code a été imprimé trop petit ou à faible contraste, il a été physiquement endommagé, sa zone de silence a été rognée, ou une offre dynamique a pris fin ou a atteint un plafond de scans."
       }
     },
     {
@@ -80,7 +80,47 @@
       "name": "Combien de temps durent les QR codes statiques ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Indéfiniment. Le motif encode vos données directement sans aucun serveur impliqué, donc il n’y a rien à entretenir ni à renouveler."
+        "text": "Indéfiniment, tant que la destination fonctionne encore. Le motif encode vos données directement sans aucun serveur, il n'y a donc rien à entretenir ni à renouveler."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'arrive-t-il aux codes dynamiques payants à la fin d'un abonnement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. La FAQ de QR TIGER dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The QR Code Generator dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Une limite de scans peut-elle arrêter un QR code ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, chez les fournisseurs qui plafonnent les scans dynamiques gratuits. L'offre freemium de QR TIGER, selon sa propre page d'abonnement, donne 3 codes dynamiques avec une limite de 500 scans chacun. Un code qui atteint son plafond cesse de servir sa destination même si le motif est intact. Les codes dynamiques FreeQrly ont des scans illimités."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les dégâts tuent-ils un QR code ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pas toujours. La correction d'erreur peut reconstruire des données manquantes : au niveau Élevé de la norme ISO/IEC 18004, environ 30 % des mots de code peuvent être restaurés. Cela compte des mots de code, pas de la surface visible — une petite rayure sur un carré de repérage d'angle peut bloquer un scan même quand le motif semble intact dans sa plus grande partie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment distinguer un lien mort d'un abonnement mort d'une mauvaise impression ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ouvrez la destination directement dans un navigateur ; scannez une épreuve imprimée sur deux téléphones ; lisez l'URL de l'aperçu du scan avant de toucher ; et, pour un code dynamique, vérifiez l'offre et le quota de scans du compte créateur. Chaque vérification pointe vers une couche différente, et chaque couche a un correctif différent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Un panneau permanent ou un emballage doit-il utiliser le statique ou le dynamique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Statique, si la destination est fixe. Un code statique vers une page que vous contrôlez n'exige ni compte ni renouvellement, il survit donc aux changements d'équipe et aux cycles budgétaires. N'utilisez le dynamique que si la destination doit vraiment changer et si quelqu'un gardera le compte en vie pendant toute la vie du code."
       }
     }
   ]
@@ -98,49 +138,105 @@
     <div class="kicker" style="text-align:center">Notes de terrain</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Les QR codes <span class='hl hl-mint'>expirent-ils</span> ?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Réponse courte : non — du moins, pas ceux que vous créez ici. La réponse longue vaut la peine d’être connue avant d’en imprimer un millier.</p>
-    <p class="meta" style="text-align:center">13 octobre 2026 · 4 min de lecture</p>
+    <p class="meta" style="text-align:center">13 octobre 2026 · Dernière mise à jour : 3 novembre 2026 · 15 min de lecture</p>
     <div class="prose" style="margin-top:40px">
-
-<p>Vous avez vu les avertissements : « les QR codes gratuits expirent ! » Généralement juste à côté d’une page de tarifs. Alors réglons ça clairement : un QR code statique <strong>ne peut pas expirer</strong>. Il n’y a pas d’horloge dans ces petits carrés. Un code statique, c’est juste votre lien, dessiné en motif. Tant que le lien fonctionne, le code fonctionne — imprimez-le aujourd’hui, scannez-le dans dix ans.</p>
+<p>Réponse courte : non — du moins, pas ceux que vous créez ici. Un QR code statique ne peut pas expirer, parce qu'il n'y a pas d'horloge dans ces petits carrés. Un code statique, c'est juste votre lien, dessiné en motif. Tant que le lien fonctionne, le code fonctionne — imprimez-le aujourd'hui, scannez-le dans dix ans. Ce qui cesse vraiment de fonctionner, c'est autre chose qui porte le même nom : un code dynamique payant dont l'abonnement a pris fin, un lien supprimé, ou une impression abîmée au point d'être illisible. Chacune de ces pannes exige un correctif différent, et une seule d'entre elles justifie d'acheter quoi que ce soit.</p>
+<p>La confusion se comprend, parce que l'avertissement arrive généralement à côté d'une page de tarifs : « les QR codes gratuits expirent ! » Ce qui expire dans cette phrase, c'est rarement le code. C'est l'essai gratuit, l'abonnement, ou la volonté du fournisseur de continuer à rediriger vos scans gratuitement.</p>
 
 <h2>Alors pourquoi dit-on que les QR codes expirent ?</h2>
 <p>Trois choses différentes s’emmêlent :</p>
 <ul>
-<li><strong>Les codes dynamiques meurent quand vous arrêtez de payer.</strong> Beaucoup de générateurs « gratuits » créent en fait des codes <em>dynamiques</em> : au lieu de votre lien, le motif contient une URL courte sur <em>leur</em> serveur, qui redirige vers votre lien. Arrêtez de payer, et ils coupent la redirection. Votre code n’a pas expiré — il a été pris en otage. Comment se comparent les quotas gratuits : <a href="/fr/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a>.</li>
-<li><strong>Les liens pourrissent ; les codes, non.</strong> Si la page derrière le code est supprimée, le scan ne mène nulle part. C’est la destination qui meurt, pas le code. Un QR code pointant vers un lien mort est un code en parfaite santé qui n’a rien à dire.</li>
-<li><strong>Les comptes d’essai sont désactivés.</strong> Certains services lient vos codes à un compte, puis vous poussent vers un abonnement. Le code n’a pas expiré — c’est le compte qui a expiré.</li>
+<li><strong>Les codes dynamiques meurent quand vous arrêtez de payer.</strong> Beaucoup de générateurs « gratuits » créent en fait des codes <em>dynamiques</em> : au lieu de votre lien, le motif contient une URL courte sur <em>leur</em> serveur, qui redirige vers votre lien. Arrêtez de payer, et ils coupent la redirection. Votre code n'a pas expiré — il a été pris en otage.</li>
+<li><strong>Les liens pourrissent ; les codes, non.</strong> Si la page derrière le code est supprimée, le scan ne mène nulle part. C'est la destination qui meurt, pas le code. Un QR code pointant vers un lien mort est un code en parfaite santé qui n'a rien à dire.</li>
+<li><strong>Les comptes d'essai sont désactivés.</strong> Certains services lient vos codes à un compte, puis vous poussent vers un abonnement. Le code n'a pas expiré — c'est le compte qui a expiré.</li>
 </ul>
+<p>Il y a un quatrième cas qui ressemble à une expiration mais n'est pas la faute du motif : les codes émis par le système de quelqu'un d'autre. Une carte d'embarquement, un billet ou un code de connexion à usage unique peut cesser de fonctionner parce que l'émetteur invalide la session, le billet ou la réservation derrière lui. Le motif reste lisible ; le système derrière lui a retiré l'autorisation. C'est une propriété des billets et des connexions, pas des QR codes en général.</p>
+
+<h2>Un motif sans horloge dedans</h2>
+<p>Le QR code a été développé en 1994 par DENSO WAVE pour dépasser les limites des codes-barres sur les lignes de production : les codes-barres alors utilisés ne pouvaient contenir qu'une vingtaine de caractères alphanumériques, alors que le suivi des pièces en exigeait bien plus. Le QR code qui les a remplacés pouvait stocker jusqu'à environ 7 000 caractères et a été diffusé avec des brevets et des spécifications ouverts, pour que tout le monde puisse l'utiliser. Le format a été conçu comme un moyen de transporter des données, pas comme un service avec un compte ou une date de renouvellement. L'édition actuelle de sa norme, ISO/IEC 18004:2024, spécifie la symbologie, l'encodage et les règles de correction d'erreur — et elle ne contient ni minuteur, ni vérification de licence, ni date d'expiration, parce qu'un motif imprimé n'a nulle part où en stocker une et personne à qui en rendre compte.</p>
+<p>C'est pourquoi le point de vue FreeQrly découle du design, pas d'un argument marketing. Chaque code statique créé ici est gratuit, et à vous — pas de compte, pas de serveur de redirection, rien à annuler. Il n'existe simplement aucun mécanisme par lequel il pourrait expirer. Le papier peut s'estomper, se déchirer ou être jeté, mais on ne peut pas l'éteindre à distance.</p>
 
 <h2>Statique vs dynamique, en un paragraphe</h2>
-<p>Un code <strong>statique</strong> encode la destination directement : <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> ou <code>https://your-site.com/menu</code>. Rien à entretenir, rien à facturer. Un code <strong>dynamique</strong> encode une redirection sur le serveur de quelqu’un, ce qui permet au propriétaire de changer la destination plus tard et de compter les scans. Utile pour les campagnes marketing — et un abonnement pour toujours.</p>
+<p>Un code <strong>statique</strong> encode la destination directement : <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> ou <code>https://your-site.com/menu</code>. Rien à entretenir, rien à facturer. Un code <strong>dynamique</strong> encode une redirection sur le serveur de quelqu'un, ce qui permet au propriétaire de changer la destination plus tard et de compter les scans. Utile pour les campagnes marketing — et un abonnement tant que le code doit continuer de fonctionner. La comparaison complète, avec les cas où chacun l'emporte, est dans <a href="/fr/blog/static-vs-dynamic-qr-codes/">QR codes statiques ou dynamiques</a>.</p>
 
-<blockquote>Règle générale : si la destination ne changera jamais — votre WiFi, votre carte de visite, votre menu de restaurant — le statique n’est pas l’option bon marché. C’est la <em>bonne</em> option.</blockquote>
+<blockquote>Règle générale : si la destination ne changera jamais — votre WiFi, votre carte de visite, votre menu de restaurant — le statique n'est pas l'option bon marché. C'est la <em>bonne</em> option.</blockquote>
+
+<h2>Ce qui arrête vraiment un code : un tableau de diagnostic</h2>
+<div class="table-scroll"><table>
+<tr><th>Ce que vous voyez au scan</th><th>Ce qui a réellement échoué</th><th>Correctif</th></tr>
+<tr><td>Rien ne se passe, sur aucun téléphone</td><td>Impression : trop petit, faible contraste, endommagé, ou pas de zone de silence</td><td>Réimprimez plus grand, plus foncé, avec une marge nette ; testez d'abord une épreuve</td></tr>
+<tr><td>Le code scanne, mais la page manque</td><td>Lien pourri : page supprimée, site déménagé, domaine expiré</td><td>Restaurez la page, ou redirigez un code dynamique ; un code statique exige une réimpression</td></tr>
+<tr><td>Le code scanne vers une page de mise à niveau ou de publicité du fournisseur</td><td>Abonnement ou essai terminé ; le fournisseur a coupé la redirection</td><td>Renouvelez chez ce fournisseur, ou remplacez le code par un code statique</td></tr>
+<tr><td>Le code scanne, puis s'arrête après beaucoup de scans</td><td>Plafond de scans sur une offre dynamique gratuite</td><td>Passez à une offre supérieure, ou remplacez par un code aux scans illimités</td></tr>
+<tr><td>Le code scanne sur un téléphone, pas sur l'autre</td><td>Qualité d'impression limite ou carré de repérage endommagé</td><td>Réimprimez plus grand et plus propre ; ne vous fiez pas au succès d'un seul téléphone</td></tr>
+</table></div>
+
+<h2>Étapes : découvrez quelle panne vous avez</h2>
+<ol>
+<li><strong>Ouvrez la destination directement.</strong> Tapez le lien dans un navigateur, sans scanner. Si la page elle-même manque, le code est innocent : restaurez la page ou, pour un code dynamique, redirigez-le. Si la page se charge, le problème vient du code, de l'impression ou de la redirection.</li>
+<li><strong>Scannez une épreuve imprimée sur deux téléphones.</strong> Un iPhone et un Android si possible. Si aucun ne le lit, suspectez la taille, le contraste, les dégâts ou une zone de silence rognée. Si un seul le lit, l'impression est limite — réimprimez plus grand plutôt que de faire confiance au téléphone qui a marché.</li>
+<li><strong>Lisez l'aperçu du scan, pas seulement le résultat.</strong> Avant de toucher, regardez l'URL que votre téléphone affiche. Un domaine court de fournisseur là où vous attendiez le vôtre veut dire qu'une redirection dynamique s'interpose. Une page de mise à niveau du fournisseur veut dire que la redirection a été coupée. Un domaine étrange veut dire un autocollant ou une contrefaçon, pas une expiration.</li>
+<li><strong>Vérifiez le compte et l'offre derrière un code dynamique.</strong> Connectez-vous au compte créateur et vérifiez si l'offre est active, si le code est dans son quota de scans, et s'il n'a pas été supprimé. Supprimer un code dynamique arrête ses exemplaires imprimés d'un coup, chez n'importe quel fournisseur, parce que la redirection est retirée.</li>
+<li><strong>Corrigez la bonne couche.</strong> Problème d'impression : réimprimez. Page morte : restaurez la page. Redirection morte : renouvelez, ou remplacez le code par un code statique pointant vers une page que vous contrôlez.</li>
+</ol>
 
 <h2>Ce qui va vraiment mal avec les codes imprimés</h2>
-<p>Puisque l’expiration n’existe pas, voici ce qu’il faut vraiment surveiller :</p>
+<p>Puisque l'expiration n'existe pas, surveillez plutôt ceci :</p>
 <ul>
-<li><strong>Impression trop petite.</strong> En règle générale, gardez les codes d’au moins 2 × 2 cm avec une marge calme. Les petits codes sur cartes de visite sont un échec de scan courant.</li>
+<li><strong>Impression trop petite.</strong> En règle générale, gardez les codes d'au moins 2 × 2 cm avec une marge calme. Les petits codes sur cartes de visite sont un échec de scan courant. Le guide complet des tailles, distance comprise, est dans le <a href="/fr/blog/qr-code-print-size-guide/">guide des tailles d'impression des QR codes</a>.</li>
 <li><strong>Faible contraste.</strong> Encre foncée sur fond clair. Ce code de mariage champagne-sur-crème est beau et illisible.</li>
-<li><strong>Dégâts.</strong> Les codes extérieurs s’estompent et se rayent. Une correction d’erreur plus élevée (nous utilisons M par défaut, et nous l’augmentons automatiquement quand vous ajoutez un logo) permet à un code de survivre à <a href="http://www.iso.org/standard/83389.html">jusqu’à 30 % de dégâts</a> au niveau Élevé défini dans ISO/IEC 18004.</li>
-<li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Gardez une liste de l'emplacement de chaque code, ou utilisez un <a href="/fr/dynamic-qr-code/">code dynamique</a> et changez sa destination au lieu de réimprimer.</li>
+<li><strong>Dégâts.</strong> Les codes extérieurs s'estompent et se rayent. Une correction d'erreur plus élevée aide : FreeQrly utilise le niveau M par défaut et l'augmente automatiquement quand vous ajoutez un logo. Au niveau Élevé de la norme ISO/IEC 18004, environ 30 % des mots de code peuvent être restaurés — des mots de code, pas de la surface visible, donc « 30 % de dégâts » induit en erreur. Une petite rayure sur un carré de repérage, le grand carré d'angle que le lecteur utilise pour localiser le code, peut bloquer un scan même quand le motif semble intact dans sa plus grande partie.</li>
+<li><strong>Pas de zone de silence.</strong> La marge blanche autour du code, d'au moins 4 modules de large sur les quatre côtés selon ISO/IEC 18004, fait partie du code. Du texte ou un design tassé dedans empêche les lecteurs de trouver les bords.</li>
+<li><strong>Changements de lien.</strong> Vous déménagez votre site ? L'ancien code pointe toujours vers l'ancienne URL. Gardez une liste de l'endroit où vit chaque code — ou utilisez un <a href="/fr/dynamic-qr-code/">code dynamique</a> et redirigez-le au lieu de réimprimer. Liste complète : <a href="/fr/blog/why-is-my-qr-code-not-working/">pourquoi votre QR code ne fonctionne pas</a>.</li>
 </ul>
 
-<h2>Le point de vue FreeQrly</h2>
-<p>Chaque code statique créé ici est gratuit, et à vous — pas de compte, pas de serveur de redirection, rien à annuler. Il n’existe simplement aucun mécanisme par lequel il pourrait expirer. Ce n’est pas un argument marketing ; c’est juste le fonctionnement des codes statiques quand personne ne s’interpose.</p>
+<h2>Scénarios : quels codes devraient survivre à leur créateur</h2>
+<h3>Une carte de visite</h3>
+<p>Une carte de visite est imprimée une fois et distribuée pendant des années. Un code statique contenant une carte de contact ou une page personnelle est le bon choix : pas de compte à entretenir, pas de redirection à continuer de payer, et personne qui puisse l'éteindre. Si l'intitulé du poste change, la carte est réimprimée de toute façon, donc la destination figée du code ne coûte rien.</p>
+<h3>Une invitation de mariage</h3>
+<p>Les invitations partent des mois avant le jour J, et les invités les gardent sur le frigo longtemps après. Un code statique vers une page RSVP que vous contrôlez fonctionnera encore quand les remerciements partiront, à condition que la page reste en ligne. Un code dynamique fonctionne aussi, mais seulement si quelqu'un s'occupe encore du compte dans un an — pour un événement d'un jour, la permanence bat la possibilité de modifier. Voir <a href="/fr/blog/wedding-rsvp-qr-code/">les QR codes RSVP de mariage</a> et <a href="/fr/blog/free-qr-codes-that-dont-expire/">les QR codes gratuits qui n'expirent pas</a>.</p>
+<h3>Un menu de restaurant ou une vitrine</h3>
+<p>Ici le choix se joue sur une question : la destination change-t-elle ? Une page de menu que vous mettez à jour sur place n'a besoin que d'un code statique pointant vers cette page — mettez la page à jour, pas le code. Un menu qui change de plateforme, ou une offre en vitrine qui change chaque mois, mérite un code dynamique, parce que réimprimer un panneau de vitrine chaque mois est l'option coûteuse. Voir <a href="/fr/blog/qr-codes-for-restaurants/">les QR codes pour les restaurants</a>.</p>
+<h3>Une affiche de campagne avec une échéance</h3>
+<p>Une affiche est le cas dynamique classique : elle doit s'imprimer avant que la page de destination soit définitive, et plus tard elle peut pointer vers un bilan ou une liste d'attente. Mais c'est aussi là que le piège de l'abonnement mord le plus fort, parce que l'affiche peut encore être sur les murs des mois après l'épuisement du budget de campagne. Avant d'imprimer un code de campagne chez un fournisseur, lisez ce que ce fournisseur fait à la fin de l'offre, et envisagez de pointer, en statique, vers une page de campagne qui vous appartient.</p>
+<h3>Un emballage vendu pendant des années</h3>
+<p>L'emballage est l'impression qui vit le plus longtemps, et le pire endroit pour un code dépendant d'un abonnement. Un code statique vers une page produit que vous contrôlez survit aux changements d'équipe et aux cycles budgétaires, parce que rien en lui n'a besoin d'être renouvelé. Un code dynamique sur un emballage ne se justifie que si la destination doit vraiment changer pendant la vie du produit, et si quelqu'un se charge de garder ce compte en vie pendant toute la durée de vie du produit en rayon.</p>
 
+<h2>La comparaison honnête : ce que les fournisseurs disent vraiment</h2>
+<p>Chaque fournisseur décrit son propre comportement d'expiration sur sa page de tarifs ou de FAQ, et ces pages sont la seule source équitable pour une comparaison. Les chiffres ci-dessous sont les déclarations propres de chaque fournisseur, vérifiées le 3 novembre 2026. Tarifs et limites changent, vérifiez donc la page du fournisseur avant d'imprimer quoi que ce soit qui doit durer — et lisez l'offre gratuite, pas le titre.</p>
+<div class="table-scroll"><table>
+<tr><th>Fournisseur, offre gratuite, selon le fournisseur</th><th>Codes dynamiques gratuits</th><th>Limite gratuite de scans</th><th>Ce que le fournisseur dit qu'il se passe à la fin d'une offre</th></tr>
+<tr><td>FreeQrly, compte gratuit</td><td>20, actuellement illimités pendant la promotion à durée limitée</td><td>Scans illimités</td><td>Les codes statiques n'expirent jamais et n'exigent pas de compte ; supprimer un code dynamique arrête ses exemplaires imprimés et libère la place</td></tr>
+<tr><td>QR TIGER, offre freemium</td><td>3</td><td>500 scans par code</td><td>Les codes payants ont des scans illimités tant que l'abonnement est valide ; « If your plan expires, it will stop working » ; les codes statiques sont déclarés ne jamais expirer</td></tr>
+<tr><td>The QR Code Generator, offre gratuite</td><td>2</td><td>L'allocation gratuite, c'est les 2 codes</td><td>Après un essai, 2 codes restent actifs mais affichent des publicités ; sur sa plateforme mère Uniqode, les codes d'essai deviennent inactifs sans offre payante</td></tr>
+</table></div>
+<p>Trois schémas de ce tableau valent la peine d'être appris à repérer. D'abord, un plafond de scans est une deuxième expiration : un code gratuit plafonné à 500 scans meurt de son succès, pas de son âge, au pire moment possible — quand la campagne marche. Ensuite, un essai est un calendrier : les codes créés pendant un essai peuvent continuer de fonctionner, continuer de fonctionner avec des publicités, ou s'arrêter tout à fait, selon le fournisseur, et c'est la page de tarifs ou de FAQ du fournisseur, pas la page de vente, qui dit la distinction. Enfin, « scans illimités » sur une offre payante veut dire illimités tant que l'abonnement est valide — un marché honnête pour une campagne en cours, un mauvais marché pour un panneau permanent.</p>
+<p>La position propre de FreeQrly : un code statique n'a ni compte ni redirection, il n'y a donc rien qui expire ou à renouveler. Un code dynamique est gratuit sur un compte gratuit avec des scans illimités, modifiable après impression, et compté dans le tableau de bord. En supprimer un l'arrête définitivement, parce que la redirection est retirée — ne supprimez donc que les codes dont plus aucun exemplaire imprimé ne circule.</p>
+
+<h2>Une remarque de sécurité que le débat sur l'expiration oublie généralement</h2>
+<p>Un code qui scanne n'est pas forcément un code en qui avoir confiance. Dans une alerte aux consommateurs datée du 6 décembre 2023, la Federal Trade Commission américaine a averti que des escrocs collent leurs propres autocollants QR par-dessus de vrais codes sur les parcmètres, et envoient des QR codes dans des messages inattendus en inventant des raisons urgentes de scanner — une livraison manquée, un problème de compte, un mot de passe à changer. Le code d'un escroc peut mener à un site contrefait ou à un logiciel malveillant. Le conseil de la FTC est la meilleure habitude : inspectez l'aperçu de l'URL avant d'ouvrir un code dans un endroit inattendu, cherchez les fautes d'orthographe ou une lettre échangée, et ne scannez pas un code venu d'un message inattendu qui presse d'agir vite — contactez plutôt l'entreprise par un numéro ou un site que vous connaissez déjà. Pour vos propres codes, vérifiez l'aperçu après chaque modification.</p>
+
+<h2>Le point de vue FreeQrly, et le choix qui en découle</h2>
+<p>Chaque code statique créé ici est gratuit, et à vous — pas de compte, pas de serveur de redirection, rien à annuler. Il n'existe simplement aucun mécanisme par lequel il pourrait expirer. C'est juste le fonctionnement des codes statiques quand personne ne s'interpose. Les codes dynamiques sont un autre échange, honnête : connectez-vous gratuitement, obtenez 20 codes (actuellement illimités pendant la promotion à durée limitée), modifiez-les après impression, et consultez leurs statistiques, avec des scans illimités — une dépendance à une redirection et à un compte, en échange de la possibilité de modifier et de mesurer.</p>
+<p>La question avant d'imprimer n'est donc pas « ce code va-t-il expirer ? » mais « qu'est-ce qui pourrait arrêter ce code, et qui le contrôle ? » Si la réponse est « rien, parce que la destination est dans le motif et que la page est à moi », imprimez en statique et arrêtez de vous inquiéter. Si la réponse est « la destination changera, et je serai là pour la changer », imprimez en dynamique, gardez le compte, et gardez la liste de l'endroit où vit chaque code. Si la réponse est « l'abonnement d'un fournisseur, et je ne suis pas sûr de le renouveler », n'imprimez pas ce code sur quoi que ce soit destiné à durer — pointez plutôt un code statique vers une page qui vous appartient. Commencez par un code statique dans le <a href="/fr/">générateur gratuit</a>, ou, quand la destination doit rester modifiable, avec <a href="/fr/blog/how-to-create-a-dynamic-qr-code/">comment créer un QR code dynamique</a> et le <a href="/fr/dynamic-qr-code/">générateur de QR code dynamique</a>. Déjà imprimé et besoin de corriger un lien ? <a href="/fr/blog/how-to-edit-a-qr-code-after-printing/">Comment modifier un QR code après impression</a> explique le correctif en deux minutes — pour les codes dynamiques, au moins.</p>
     </div>
 
     <section class="sources">
       <h2>Sources</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La spécification de la symbologie QR Code. Définit les quatre niveaux de correction d’erreur (L 7 %, M 15 %, Q 25 %, H 30 %) et la zone de silence de 4 modules.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - Repris de l'article d'origine. La spécification de la symbologie QR Code, 4ᵉ édition, publiée en août 2024. Définit les quatre niveaux de correction d'erreur (L 7 %, M 15 %, Q 25 %, H 30 % des mots de code) et la zone de silence de 4 modules.</li>
+      <li><a href="https://www.denso-wave.com/en/adcd/info/detail__190808_01.html">DENSO WAVE : 25ᵉ anniversaire du QR code</a> - Publié le 8 août 2019. À l'appui : QR code développé en 1994 ; les codes-barres alors utilisés ne pouvaient contenir qu'une vingtaine de caractères alphanumériques ; le QR code pouvait stocker jusqu'à environ 7 000 caractères ; diffusé avec des brevets et des spécifications ouverts.</li>
+      <li><a href="https://www.qrcode-tiger.com/faq">FAQ de QR TIGER</a> - Page FAQ du fournisseur, consultée le 2026-11-03 (aucune date de publication affichée sur la page). À l'appui : 3 codes dynamiques gratuits avec une limite de 500 scans chacun ; les codes dynamiques payants ont des scans illimités tant que l'abonnement est valide ; « If your plan expires, it will stop working » ; les codes statiques gratuits sont illimités et n'expirent jamais.</li>
+      <li><a href="https://www.qrcode-tiger.com/software-subscription">Gestion des abonnements QR TIGER</a> - Page d'abonnement du fournisseur, consultée le 2026-11-03 (aucune date de publication affichée sur la page). À l'appui : offre freemium avec 3 codes dynamiques à 500 scans chacun ; Regular à 7 $ US avec 12 codes dynamiques ; Advanced à 16 $ US avec 200 ; Premium à 37 $ US avec 600 ; Professional à 89 $ US avec 1 200.</li>
+      <li><a href="https://www.the-qrcode-generator.com/pricing?lng=en&signup_source=custom-qr-code_explore_plans">Tarifs de The QR Code Generator (TQRCG)</a> - Page de tarifs du fournisseur, consultée le 2026-11-03 (aucune date de publication affichée sur la page). À l'appui : offre gratuite avec 2 codes dynamiques et des codes statiques illimités ; après un essai gratuit, 2 codes dynamiques restent actifs mais affichent des publicités ; sur Uniqode, les codes d'essai deviennent inactifs sans offre payante.</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC : des escrocs cachent des liens malveillants dans des QR codes pour voler vos informations</a> - Alerte aux consommateurs datée du 6 décembre 2023. À l'appui : des escrocs recouvrant les QR codes des parcmètres avec leurs propres codes ; des QR codes envoyés dans des messages inattendus inventant des raisons urgentes de scanner ; conseil d'inspecter l'aperçu de l'URL et de chercher les fautes d'orthographe ou une lettre échangée.</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly présentant un QR code"></div>
       <div>
         <h3>Essayez vous-même — c’est gratuit</h3>
-        <p>Tout ce que décrit cet article fonctionne dès maintenant dans le studio FreeQrly. Codes statiques, treize types de contenu, export PNG et SVG.</p>
+        <p>Tout ce que cet article décrit fonctionne dans le studio FreeQrly dès maintenant. Codes statiques, les 17 types de contenu, export PNG et SVG.</p>
         <a class="btn" href="/fr/#studio">Ouvrir le studio</a>
       </div>
     </div>
@@ -148,15 +244,20 @@
       <div class="fl" style="margin-top:34px">Continuer la lecture</div>
       <div class="rel-grid">
         <a class="rel-card" href="/fr/blog/how-to-scan-a-qr-code/"><b>Comment scanner un QR code (iPhone et Android)</b></a>
-        <a class="rel-card" href="/fr/blog/qr-code-print-size-guide/"><b>QR Code Guide des tailles d'impression: Business Cards to Posters</b></a>
+        <a class="rel-card" href="/fr/blog/qr-code-print-size-guide/"><b>Guide des tailles d'impression des QR codes : des cartes de visite aux affiches</b></a>
         <a class="rel-card" href="/fr/blog/free-qr-codes-that-dont-expire/"><b>QR codes gratuits qui n’expirent jamais</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bon à savoir</h2>
-    <details><summary><span>Les QR codes gratuits expirent-ils ?</span></summary><p>Non. Un QR code statique gratuit dure aussi longtemps que le lien vers lequel il pointe. Les codes qui « expirent » sont des codes dynamiques liés à un abonnement payant — le fournisseur les coupe quand vous arrêtez de payer.</p></details>
-    <details><summary><span>Un QR code peut-il cesser de fonctionner ?</span></summary><p>Oui, mais pas à cause de l’expiration. Les causes habituelles : la page de destination a été supprimée, le code a été imprimé trop petit ou à faible contraste, ou il a été physiquement endommagé.</p></details>
-    <details><summary><span>Combien de temps durent les QR codes statiques ?</span></summary><p>Indéfiniment. Le motif encode vos données directement sans aucun serveur impliqué, donc il n’y a rien à entretenir ni à renouveler.</p></details>
+    <details><summary><span>Les QR codes gratuits expirent-ils ?</span></summary><p>Non, s'ils sont statiques. Un QR code statique gratuit dure aussi longtemps que le lien vers lequel il pointe. Les codes qui cessent de fonctionner sont généralement des codes dynamiques liés à un abonnement payant — le fournisseur coupe la redirection quand vous arrêtez de payer — ou des codes pointant vers une page supprimée.</p></details>
+    <details><summary><span>Un QR code peut-il cesser de fonctionner ?</span></summary><p>Oui, mais pas à cause de l'expiration. Les causes habituelles sont : la page de destination a été supprimée, le code a été imprimé trop petit ou à faible contraste, il a été physiquement endommagé, sa zone de silence a été rognée, ou une offre dynamique a pris fin ou a atteint un plafond de scans.</p></details>
+    <details><summary><span>Combien de temps durent les QR codes statiques ?</span></summary><p>Indéfiniment, tant que la destination fonctionne encore. Le motif encode vos données directement sans aucun serveur, il n'y a donc rien à entretenir ni à renouveler.</p></details>
+    <details><summary><span>Qu'arrive-t-il aux codes dynamiques payants à la fin d'un abonnement ?</span></summary><p>Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. La FAQ de QR TIGER dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The QR Code Generator dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante.</p></details>
+    <details><summary><span>Une limite de scans peut-elle arrêter un QR code ?</span></summary><p>Oui, chez les fournisseurs qui plafonnent les scans dynamiques gratuits. L'offre freemium de QR TIGER, selon sa propre page d'abonnement, donne 3 codes dynamiques avec une limite de 500 scans chacun. Un code qui atteint son plafond cesse de servir sa destination même si le motif est intact. Les codes dynamiques FreeQrly ont des scans illimités.</p></details>
+    <details><summary><span>Les dégâts tuent-ils un QR code ?</span></summary><p>Pas toujours. La correction d'erreur peut reconstruire des données manquantes : au niveau Élevé de la norme ISO/IEC 18004, environ 30 % des mots de code peuvent être restaurés. Cela compte des mots de code, pas de la surface visible — une petite rayure sur un carré de repérage d'angle peut bloquer un scan même quand le motif semble intact dans sa plus grande partie.</p></details>
+    <details><summary><span>Comment distinguer un lien mort d'un abonnement mort d'une mauvaise impression ?</span></summary><p>Ouvrez la destination directement dans un navigateur ; scannez une épreuve imprimée sur deux téléphones ; lisez l'URL de l'aperçu du scan avant de toucher ; et, pour un code dynamique, vérifiez l'offre et le quota de scans du compte créateur. Chaque vérification pointe vers une couche différente, et chaque couche a un correctif différent.</p></details>
+    <details><summary><span>Un panneau permanent ou un emballage doit-il utiliser le statique ou le dynamique ?</span></summary><p>Statique, si la destination est fixe. Un code statique vers une page que vous contrôlez n'exige ni compte ni renouvellement, il survit donc aux changements d'équipe et aux cycles budgétaires. N'utilisez le dynamique que si la destination doit vraiment changer et si quelqu'un gardera le compte en vie pendant toute la vie du code.</p></details>
     </section>
   </article>
   <footer>

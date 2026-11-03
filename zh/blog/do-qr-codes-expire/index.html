@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"二维码会过期吗？不会——但付费码会死 | FreeQrly","description":"二维码会过期吗？静态码永不过期——图案里就是你的链接，永久有效。真正会失效的是订阅结束后的付费动态码。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"二维码会过期吗？不会——但付费码会死 | FreeQrly","description":"二维码会过期吗？静态码永不过期——图案里就是你的链接，永久有效。真正会失效的是订阅结束后的付费动态码。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "免费二维码会过期吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不会。免费静态二维码的寿命跟它指向的链接一样长。那些会“过期”的码是绑了付费订阅的动态码——你停付，服务商就关掉它们。"
+        "text": "不会，如果是静态码。免费静态二维码能用多久，取决于它指向的链接能活多久。停工的码通常是绑定付费订阅的动态码——你停付，厂商就关掉跳转——或者指向被删页面的码。"
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "二维码会停止工作吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "会，但不是因为过期。常见原因：目标页面被删了、码印得太小或对比度太低，或者物理损坏。"
+        "text": "可以，但不是因为过期。常见原因是：目标页面被删了、码印得太小或对比度太低、物理破损、静区被裁掉了，或者动态套餐结束或触到扫码上限。"
       }
     },
     {
@@ -80,7 +80,47 @@
       "name": "静态二维码能用多久？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "无限期。图案直接编码你的数据，没有服务器参与，所以没什么要维护或续费。"
+        "text": "无限期，只要目标还能用。图案直接编码你的数据，没有服务器参与，所以没什么要维护或续费的。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "付费动态码在订阅结束时会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看厂商，厂商自己的 FAQ 页是核对的来源。QR TIGER 的 FAQ 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "扫码上限能让二维码停工吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，在限制免费动态扫码的厂商那里。QR TIGER 的免费增值套餐，按它自己订阅页的说法，给 3 个动态码，每个 500 次扫码上限。触到上限的码即使图案完好无损，也不再服务它的目标。FreeQrly 的动态码扫码不限。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "破损会杀死二维码吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不总是。纠错能把缺失的数据补回来：按 ISO/IEC 18004，高级别下大约 30% 的码字可以恢复。算的是码字，不是可见面积——角定位方块上一道小划痕，即使图案大体完好，也能让扫码停工。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎么区分死链、死订阅和印坏的码？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在浏览器里直接打开目标页面；在两部手机上扫印刷样张；点之前读扫码预览的链接；对动态码，查创建账号的套餐和扫码额度。每项检查指向不同的层次，每个层次有不同的修法。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "永久招牌或包装应该用静态还是动态？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "目标固定的用静态。指向你掌控页面的静态码不需要账号、不需要续费，所以能扛住人员变动和预算周期。只有在目标确实必须变化、并且有人会在码的整个生命周期里维持账号时，才用动态。"
       }
     }
   ]
@@ -98,49 +138,105 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">二维码会<span class='hl hl-mint'>过期</span>吗？</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">简短回答：不会——至少，在这里做的那种不会。长回答值得在你印一千张之前了解一下。</p>
-    <p class="meta" style="text-align:center">2026 年 10 月 13 日 · 阅读约 4 分钟</p>
+    <p class="meta" style="text-align:center">2026年10月13日 · 最后更新：2026年11月3日 · 阅读约15分钟</p>
     <div class="prose" style="margin-top:40px">
-
-<p>你见过这样的警告：“免费二维码会过期！”通常就在价格页面旁边。所以咱们说清楚：静态二维码<strong>不会过期</strong>。那些小方块里没有时钟。静态码就是你的链接，画成图案。链接在，码就在——今天印，十年后照样能扫。</p>
+<p>简短回答：不会——至少，在这里做的那种不会。静态二维码不会过期，因为那些小方块里没有时钟。静态码就是你的链接，画成图案。链接在，码就在——今天印，十年后照样能扫。真正停工的是顶着同一个名字的别的东西：订阅到期的付费动态码、被删掉的链接，或者破损到没法读的印刷品。这几种失败的修法各不相同，其中只有一种是需要花钱的理由。</p>
+<p>这种困惑可以理解，因为警告通常出现在价格页面旁边：“免费二维码会过期！”这句话里过期的很少是码本身。过期的是免费试用、订阅，或者厂商免费继续为你跳转扫码的意愿。</p>
 
 <h2>那为什么有人说二维码会过期？</h2>
 <p>三件不同的事被混在一起了：</p>
 <ul>
-<li><strong>动态码在你停付时死掉。</strong>很多“免费”生成器实际做的是<em>动态</em>码：图案里不是你的链接，而是<em>他们</em>服务器上的一个短链接，再跳转到你的链接。停付，他们就关掉跳转。你的码不是过期了——是被绑架了。 免费额度对比：<a href="/zh/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a>。</li>
+<li><strong>动态码在你停付时死掉。</strong>很多“免费”生成器实际做的是<em>动态</em>码：图案里不是你的链接，而是<em>他们</em>服务器上的一个短链接，再跳转到你的链接。停付，他们就关掉跳转。你的码不是过期了——是被绑架了。</li>
 <li><strong>链接会烂，码不会。</strong>如果码背后的页面被删了，扫出来无处可去。那是目标死了，不是码死了。指向死链的二维码，是一个完全健康却无话可说的码。</li>
 <li><strong>试用账号会被停用。</strong>有些服务把你的码绑到账号上，然后推你去订阅。码没过期——账号过期了。</li>
 </ul>
+<p>还有第四种看起来像过期、但不是图案的错的情况：别人系统发行的码。登机牌、票务码或一次性登录码可能停工，因为发行方作废了它背后的会话、票务或预订。图案依然能读；它背后的系统收回了许可。这是票务和登录的属性，不是二维码本身的属性。</p>
+
+<h2>一个里面没有时钟的图案</h2>
+<p>二维码是 DENSO WAVE 在 1994 年开发的，为的是克服工厂流水线上条形码的局限：当时用的条形码只能装大约 20 个字母数字字符，而零部件追踪需要多得多。取代它们的二维码能存大约 7,000 个字符，并且以开放专利和规范发布，任何人都能用。这种格式被设计成一种携带数据的方式，不是带账号或续费日期的服务。它现行标准 ISO/IEC 18004:2024 规定了码制、编码和纠错规则——里面没有计时器、没有许可证检查、没有过期日期，因为印出来的图案既没地方存这些，也没人可汇报。</p>
+<p>这就是为什么 FreeQrly 的立场是设计的必然结果，不是营销话术。在这里做的每个静态码都是免费的，而且是你的——没有账号、没有跳转服务器、没有什么可取消的东西。根本不存在能让它过期的机制。纸张会褪色、撕坏、被扔掉，但没法被远程关掉。</p>
 
 <h2>静态 vs 动态，一段话说清</h2>
-<p>一个<strong>静态</strong>码直接编码目标链接：<code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> 或 <code>https://your-site.com/menu</code>。不用维护，不用付费。一个<strong>动态</strong>码编码的是别人服务器上的跳转，拥有者可以以后改目标链接、统计扫码。适合营销活动——以及永远的订阅。</p>
+<p>一个<strong>静态</strong>码直接编码目标：<code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> 或者 <code>https://your-site.com/menu</code>。不用维护，不用付费。一个<strong>动态</strong>码编码的是某人服务器上的跳转，好处是主人以后能改目标、能统计扫码。适合营销活动——而且在码必须持续工作的整个时间里都是一份订阅。完整对比，以及各自胜出的情形，见<a href="/zh/blog/static-vs-dynamic-qr-codes/">静态 vs 动态二维码</a>。</p>
 
 <blockquote>经验法则：如果目标链接永远不会变——你的 WiFi、你的名片、你的餐厅菜单——静态不是便宜的选择。它是<em>正确</em>的选择。</blockquote>
 
+<h2>真正让码停工的东西：诊断表</h2>
+<div class="table-scroll"><table>
+<tr><th>扫码时看到的现象</th><th>真正出问题的地方</th><th>修法</th></tr>
+<tr><td>任何手机上都没反应</td><td>印刷：太小、对比度低、破损，或者没有静区</td><td>重印大一点、深一点，留出清晰边距；先测样张</td></tr>
+<tr><td>码能扫，但页面不见了</td><td>链接腐烂：页面被删、网站搬家、域名过期</td><td>恢复页面，或者给动态码改指向；静态码需要重印</td></tr>
+<tr><td>码扫出来跳到厂商的升级页或广告页</td><td>订阅或试用结束了；厂商关掉了跳转</td><td>向该厂商续费，或者换成静态码</td></tr>
+<tr><td>码扫出来，扫了很多次之后停了</td><td>免费动态套餐的扫码上限</td><td>升级，或者换成扫码不限的码</td></tr>
+<tr><td>码在一部手机上能扫，另一部上不行</td><td>印刷质量勉强，或者定位方块破损</td><td>重印大一点、干净一点；别只信那部能扫的手机</td></tr>
+</table></div>
+
+<h2>步骤：查清你是哪种失败</h2>
+<ol>
+<li><strong>直接打开目标页面。</strong>不扫码，把链接输入浏览器。如果页面本身不见了，码是无辜的：恢复页面，或者对动态码改指向。如果页面能打开，问题在码、印刷或跳转。</li>
+<li><strong>在两部手机上扫印刷样张。</strong>条件允许一部 iPhone、一部安卓。两部都读不出来，就怀疑尺寸、对比度、破损或被裁掉的静区。只有一部能读出来，印刷就是勉强过关——重印大一点，别信那部能扫的手机。</li>
+<li><strong>读扫码预览，不只看结果。</strong>点之前，先看手机显示的链接。你以为是自己的域名、实际却是个厂商短域名，说明中间有个动态跳转。厂商升级页说明跳转已经被关掉。奇怪的域名说明是贴纸或仿冒，不是过期。</li>
+<li><strong>查动态码背后的账号和套餐。</strong>登录创建账号，查套餐是否有效、码是否在扫码额度内、码有没有被删掉。删掉动态码会立刻让它印好的版本停工，任何厂商都一样，因为跳转被拆掉了。</li>
+<li><strong>修对层次。</strong>印刷问题：重印。页面死了：恢复页面。跳转死了：续费，或者换成指向你掌控页面的静态码。</li>
+</ol>
+
 <h2>打印的二维码真正会出什么问题</h2>
-<p>既然过期不存在，这里是真正要注意的：</p>
+<p>既然过期并不存在，提防这些：</p>
 <ul>
-<li><strong>印得太小。</strong>经验法则：二维码至少 2×2 厘米，周围留静区。名片上过小的码是常见的扫码失败原因。</li>
+<li><strong>印得太小。</strong>经验法则，码保持至少 2 × 2 cm，留出静区。名片上过小的码是常见的扫码失败。完整尺寸指南，包括距离，见<a href="/zh/blog/qr-code-print-size-guide/">二维码打印尺寸指南</a>。</li>
 <li><strong>对比度太低。</strong>深色前景配浅色背景。香槟色配奶油色的婚礼码很美，但读不出来。</li>
-<li><strong>损坏。</strong>户外的码会褪色、刮花。更高的纠错等级（我们默认 M，加 Logo 时自动提高）让二维码在 ISO/IEC 18004 定义的“高”等级下能承受<a href="http://www.iso.org/standard/83389.html">最多 30% 的损坏</a>。</li>
-<li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. 记下每个码都贴在哪里——或者用<a href="/zh/dynamic-qr-code/">动态码</a>，改指向即可，不用重印。</li>
+<li><strong>破损。</strong>户外码会褪色、刮花。更高的纠错级别有帮助：FreeQrly 默认 M 级，加 Logo 时会自动提高。按 ISO/IEC 18004，高级别下大约 30% 的码字可以恢复——说的是码字，不是可见面积，所以“30% 破损”这个说法会误导。定位方块上一道小划痕——就是扫码器用来定位码的那个大角方块——即使图案大体完好，也能让扫码停工。</li>
+<li><strong>没有静区。</strong>码周围的空白边，按 ISO/IEC 18004 的规定四边都至少 4 个模块宽，是码的一部分。文字或设计挤进来，会让扫码器根本找不到边缘。</li>
+<li><strong>链接变了。</strong>网站要搬家？旧码还是指向旧链接。记一张清单，写清每个码都在哪——或者用<a href="/zh/dynamic-qr-code/">动态码</a>，改指向而不重印。完整清单见<a href="/zh/blog/why-is-my-qr-code-not-working/">二维码为什么扫不出来</a>。</li>
 </ul>
 
-<h2>FreeQrly 的做法</h2>
-<p>在这里做的每个静态码都免费，而且是你的——不用账号，没有跳转服务器，没有需要取消的东西。它根本没有会过期的机制。这不是营销话术；只是当没人插在中间时，静态码本来的样子。</p>
+<h2>场景：哪些码应该比它们的制作者活得久</h2>
+<h3>名片</h3>
+<p>名片印一次，要发好几年。装着联系人名片或个人页面的静态码是正确的选择：没有账号要维护，没有跳转要持续付费，没有人能把它关掉。职位变了，反正名片要重印，所以码的目标定死不花任何成本。</p>
+<h3>婚礼请柬</h3>
+<p>请柬在婚礼前几个月就发出去了，宾客在婚礼后很久还把它们贴在冰箱上。指向你掌控的 RSVP 页面的静态码，在写感谢卡的时候依然能用，只要页面还在线。动态码也能用，但前提是一年后还有人照看那个账号——对一天的活动来说，永久比可编辑更重要。见<a href="/zh/blog/wedding-rsvp-qr-code/">婚礼 RSVP 二维码</a>和<a href="/zh/blog/free-qr-codes-that-dont-expire/">不过期的免费二维码</a>。</p>
+<h3>餐厅菜单或商店橱窗</h3>
+<p>这里的选择取决于一个问题：目标变不变？在原地更新的菜单页只需要一个指向那个页面的静态码——更新页面，不用动码。换平台的菜单，或者每月换一次的橱窗优惠，配得上一个动态码，因为每月重印橱窗招牌才是贵的那个选项。见<a href="/zh/blog/qr-codes-for-restaurants/">餐厅二维码</a>。</p>
+<h3>有截止日期的营销海报</h3>
+<p>海报是经典的动态码情形：必须在落地页定下来之前就印刷，之后还能指向回顾页或等候名单。但这里也是订阅陷阱咬得最狠的地方，因为营销预算花完几个月后，海报可能还贴在墙上。在任何厂商那里印营销码之前，先读清该厂商在套餐结束时会怎么做，并且考虑改用静态码指向一个你自己的营销页。</p>
+<h3>卖好几年的包装</h3>
+<p>包装是所有印刷品里活得最久的，也是最不适合订阅依赖型码的地方。指向你掌控的产品页的静态码能扛住人员变动和预算周期，因为它没有任何需要续费的东西。包装上的动态码只有在目标确实必须在产品整个生命周期里变化、并且有人负责在产品整个货架寿命里维持那个账号时才合理。</p>
 
+<h2>老实对比：厂商实际是怎么说的</h2>
+<p>每个厂商都在自己的定价页或 FAQ 页上描述自己的过期行为，那些页面是做对比唯一公平的来源。下面的数字分别是各厂商自己的说法，核查于 2026 年 11 月 3 日。价格和额度会变，印任何必须长久存在的东西之前，先去厂商页面核对——而且要读免费档，不是看标题。</p>
+<div class="table-scroll"><table>
+<tr><th>厂商、免费套餐，按厂商自己的说法</th><th>免费动态码</th><th>免费扫码上限</th><th>厂商说套餐结束时会发生什么</th></tr>
+<tr><td>FreeQrly，免费账号</td><td>20 个，限时活动期间目前不限量</td><td>扫码次数不限</td><td>静态码永不过期、不需要账号；删除动态码会让印好的码停工并腾出位置</td></tr>
+<tr><td>QR TIGER，免费增值套餐</td><td>3</td><td>每个码 500 次扫码</td><td>付费码在订阅有效期内扫码不限；“如果你的套餐过期，它就会停工”；静态码据称永不过期</td></tr>
+<tr><td>The QR Code Generator，免费套餐</td><td>2</td><td>免费额度是 2 个码</td><td>试用结束之后，2 个码保持可用但显示广告；在母平台 Uniqode 上，试用码没有付费套餐就会停用</td></tr>
+</table></div>
+<p>这张表里有三种模式值得学会识别。第一，扫码上限是第二种过期：上限 500 次扫码的免费码死于受欢迎，不是死于年纪，而且死在最糟糕的时刻——营销活动正起作用的时候。第二，试用是个日历：试用期间做的码可能继续工作、可能带着广告继续工作，也可能彻底停工，取决于厂商，而区分的依据在厂商的定价页或 FAQ 页，不在销售页。第三，付费套餐上的“扫码不限”指的是订阅有效期内不限——对进行中的营销活动是公平交易，对永久招牌是糟糕交易。</p>
+<p>FreeQrly 自己的立场：静态码没有账号、没有跳转，所以没有什么会过期或需要续费。动态码在免费账号上免费，扫码不限，印后可编辑，在 Dashboard 里计数。删掉一个就永久停工，因为跳转被拆掉了——所以只删没有印好的版本还在流通的码。</p>
+
+<h2>过期争论通常会跳过的一条安全提示</h2>
+<p>能扫的码不一定是值得信任的码。美国联邦贸易委员会在 2023 年 12 月 6 日的一则消费者提醒里警告：骗子把自己的二维码贴纸贴在停车计费表上真的码上面，还在意料之外的消息里发二维码，编出紧急扫码的理由——错过的快递、账号问题、必须改的密码。骗子的码可能指向钓鱼网站或恶意软件。FTC 的建议是最好的习惯：在意料之外的地方扫码之前先检查链接预览，留意拼写错误或被换掉的字母，别扫意料之外的消息里催你马上行动的码——改用你本来就知道的电话或网站联系那家公司。对自己的码，每次编辑之后都检查预览。</p>
+
+<h2>FreeQrly 的立场，以及随之而来的选择</h2>
+<p>在这里做的每个静态码都是免费的，而且是你的——没有账号、没有跳转服务器、没有什么可取消的东西。根本不存在能让它过期的机制。这就是没有中间人插手的静态码的本来样子。动态码是另一种诚实的交易：免费登录，得到 20 个码（限时活动期间目前不限量），印后可编辑，能看统计，扫码不限——用对跳转和账号的依赖，换可编辑性和可测量性。</p>
+<p>所以印之前的问题不是“这个码会过期吗？”，而是“什么能让这个码停工，谁掌控它？”如果答案是“没什么，因为目标就在图案里，页面是我的”，就印静态，别再担心。如果答案是“目标会变，而且我会在这里改它”，就印动态，留住账号，留住每个码在哪的清单。如果答案是“厂商的订阅，而且我不确定会不会续费”，就别把那个码印在任何打算长久存在的东西上——改用静态码指向一个你自己的页面。先在<a href="/zh/">免费生成器</a>里做一个静态码，或者在目标必须保持可编辑时，看<a href="/zh/blog/how-to-create-a-dynamic-qr-code/">怎么创建动态二维码</a>和<a href="/zh/dynamic-qr-code/">动态二维码生成器</a>。已经印好、需要修链接？<a href="/zh/blog/how-to-edit-a-qr-code-after-printing/">二维码印出来之后怎么改</a>讲的是两分钟的修复——至少对动态码是这样。</p>
     </div>
 
     <section class="sources">
       <h2>参考来源</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - 二维码符号规范。定义了四种纠错等级（L 7%、M 15%、Q 25%、H 30%）和 4 模块静区。</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - 原帖保留。QR Code 码制规范，第 4 版，2024 年 8 月出版。定义了四档纠错级别（L 7%、M 15%、Q 25%、H 30% 的码字）和 4 模块静区。</li>
+      <li><a href="https://www.denso-wave.com/en/adcd/info/detail__190808_01.html">DENSO WAVE: 25th Anniversary of the QR Code</a> - 2019 年 8 月 8 日发布。佐证：二维码开发于 1994 年；当时用的条形码只能装大约 20 个字母数字字符；二维码能存大约 7,000 个字符；以开放专利和规范发布。</li>
+      <li><a href="https://www.qrcode-tiger.com/faq">QR TIGER FAQ</a> - 厂商自己的 FAQ 页，访问于 2026 年 11 月 3 日（页面上未显示发布日期）。佐证：3 个免费动态码，每个 500 次扫码上限；付费动态码在订阅有效期内扫码不限；“如果你的套餐过期，它就会停工”；免费静态码不限量、永不过期。</li>
+      <li><a href="https://www.qrcode-tiger.com/software-subscription">QR TIGER Subscription Plan Management</a> - 厂商自己的订阅页，访问于 2026 年 11 月 3 日（页面上未显示发布日期）。佐证：免费增值套餐含 3 个动态码，每个 500 次扫码上限；Regular 7 美元含 12 个动态码；Advanced 16 美元含 200 个；Premium 37 美元含 600 个；Professional 89 美元含 1,200 个。</li>
+      <li><a href="https://www.the-qrcode-generator.com/pricing?lng=en&signup_source=custom-qr-code_explore_plans">The QR Code Generator (TQRCG) Pricing</a> - 厂商自己的定价页，访问于 2026 年 11 月 3 日（页面上未显示发布日期）。佐证：免费套餐含 2 个动态码和不限量的静态码；免费试用结束之后，2 个动态码保持可用但显示广告；在 Uniqode 上，试用码没有付费套餐就会停用。</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC: Scammers hide harmful links in QR codes to steal your information</a> - 消费者提醒，日期为 2023 年 12 月 6 日。佐证：骗子用自己的码盖住停车计费表上的二维码；在意料之外的消息里发二维码，编出紧急扫码的理由；建议检查链接预览，留意拼写错误或被换掉的字母。</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
       <div>
         <h3>自己试试——免费</h3>
-        <p>这篇文章里的每样东西，现在都能在 FreeQrly 首页里用。静态码、十三种内容类型、PNG 和 SVG 导出。</p>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
         <a class="btn" href="/zh/#studio">打开生成器</a>
       </div>
     </div>
@@ -148,15 +244,20 @@
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
         <a class="rel-card" href="/zh/blog/how-to-scan-a-qr-code/"><b>怎么扫二维码（iPhone 与安卓）</b></a>
-        <a class="rel-card" href="/zh/blog/qr-code-print-size-guide/"><b>QR Code 打印尺寸指南: Business Cards to Posters</b></a>
+        <a class="rel-card" href="/zh/blog/qr-code-print-size-guide/"><b>二维码打印尺寸指南：从名片到海报</b></a>
         <a class="rel-card" href="/zh/blog/free-qr-codes-that-dont-expire/"><b>永不过期的免费二维码</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
-    <details><summary><span>免费二维码会过期吗？</span></summary><p>不会。免费静态二维码的寿命跟它指向的链接一样长。那些会“过期”的码是绑了付费订阅的动态码——你停付，服务商就关掉它们。</p></details>
-    <details><summary><span>二维码会停止工作吗？</span></summary><p>会，但不是因为过期。常见原因：目标页面被删了、码印得太小或对比度太低，或者物理损坏。</p></details>
-    <details><summary><span>静态二维码能用多久？</span></summary><p>无限期。图案直接编码你的数据，没有服务器参与，所以没什么要维护或续费。</p></details>
+    <details><summary><span>免费二维码会过期吗？</span></summary><p>不会，如果是静态码。免费静态二维码能用多久，取决于它指向的链接能活多久。停工的码通常是绑定付费订阅的动态码——你停付，厂商就关掉跳转——或者指向被删页面的码。</p></details>
+    <details><summary><span>二维码会停止工作吗？</span></summary><p>可以，但不是因为过期。常见原因是：目标页面被删了、码印得太小或对比度太低、物理破损、静区被裁掉了，或者动态套餐结束或触到扫码上限。</p></details>
+    <details><summary><span>静态二维码能用多久？</span></summary><p>无限期，只要目标还能用。图案直接编码你的数据，没有服务器参与，所以没什么要维护或续费的。</p></details>
+    <details><summary><span>付费动态码在订阅结束时会怎样？</span></summary><p>看厂商，厂商自己的 FAQ 页是核对的来源。QR TIGER 的 FAQ 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。</p></details>
+    <details><summary><span>扫码上限能让二维码停工吗？</span></summary><p>可以，在限制免费动态扫码的厂商那里。QR TIGER 的免费增值套餐，按它自己订阅页的说法，给 3 个动态码，每个 500 次扫码上限。触到上限的码即使图案完好无损，也不再服务它的目标。FreeQrly 的动态码扫码不限。</p></details>
+    <details><summary><span>破损会杀死二维码吗？</span></summary><p>不总是。纠错能把缺失的数据补回来：按 ISO/IEC 18004，高级别下大约 30% 的码字可以恢复。算的是码字，不是可见面积——角定位方块上一道小划痕，即使图案大体完好，也能让扫码停工。</p></details>
+    <details><summary><span>怎么区分死链、死订阅和印坏的码？</span></summary><p>在浏览器里直接打开目标页面；在两部手机上扫印刷样张；点之前读扫码预览的链接；对动态码，查创建账号的套餐和扫码额度。每项检查指向不同的层次，每个层次有不同的修法。</p></details>
+    <details><summary><span>永久招牌或包装应该用静态还是动态？</span></summary><p>目标固定的用静态。指向你掌控页面的静态码不需要账号、不需要续费，所以能扛住人员变动和预算周期。只有在目标确实必须变化、并且有人会在码的整个生命周期里维持账号时，才用动态。</p></details>
     </section>
   </article>
   <footer>

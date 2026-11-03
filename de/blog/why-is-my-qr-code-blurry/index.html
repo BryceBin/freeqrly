@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Warum ist mein QR-Code unscharf? 5 Lösungen, die funktionieren | FreeQrly","description":"Unscharfer QR-Code, der sich nicht scannen lässt? 5 übliche Ursachen — Export in niedriger Auflösung, falsche Größe, JPEG-Komprimierung, Verzerrung, schlechter Druck — und wie man jede behebt.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Warum ist mein QR-Code unscharf? 5 Lösungen, die funktionieren | FreeQrly","description":"Unscharfer QR-Code, der sich nicht scannen lässt? 5 übliche Ursachen — Export in niedriger Auflösung, falsche Größe, JPEG-Komprimierung, Verzerrung, schlechter Druck — und wie man jede behebt.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "Warum sieht mein QR-Code verschwommen aus, scannt aber trotzdem?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Handys sind nachsichtig — die Fehlerkorrektur fängt eine überraschende Menge Unschärfe ab. Aber ein Code, der in deinem hellen Büro scannt, kann bei schwachem Licht oder auf Armlänge versagen. Scharf ist sicher; kaum-scannend ist es nicht."
+        "text": "Handys sind nachsichtig – die Fehlerkorrektur stellt Codewörter wieder her, die falsch oder unlesbar zurückkommen. Aber ein Code, der in einem hellen Büro scannt, kann bei schwachem Licht oder aus Armlänge versagen. Scharf ist sicher; kaum scannend ist es nicht."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "Welche Auflösung brauche ich für ein Poster?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mindestens 2048-px-PNG oder SVG. Ein Poster, das aus 2 Metern betrachtet wird, braucht weit mehr Pixel als eine Visitenkarte aus 30 cm — siehe den Druckgrößen-Guide für die Abstandsregel."
+        "text": "SVG ist die beste Wahl, weil es ohne Grenze skaliert. Wenn der Drucker eine Rasterdatei braucht, nutze PNG mit 2048 px; ein Plakat mit 20 cm braucht grob 2.360 px bei 300 Pixeln pro Zoll, ein 512-px-Export wird bei dieser Größe also weich aussehen."
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "PNG oder SVG für den Druck?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SVG, wann immer der Drucker oder Designer es akzeptiert — es skaliert unendlich ohne Unschärfe. PNG mit 1024–2048 px ist die Alternative für Büro-Druck und Apps, die kein SVG nehmen."
+        "text": "SVG, wann immer der Drucker oder Designer es akzeptiert – es skaliert unendlich ohne jede Unschärfe. PNG mit 1024 px für Karten und Flyer oder 2048 px für Plakate ist die Ausweichlösung für Bürodruck und Apps, die kein SVG nehmen."
       }
     },
     {
@@ -83,7 +88,23 @@
       "name": "Kann ich einen verschwommen gedruckten Code ohne Neudruck reparieren?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Die Unschärfe ist ins gedruckte Bild eingebrannt. Drucke aus einem höher aufgelösten Export (oder SVG) neu. Das Bearbeiten eines dynamischen Codes hilft nicht — das Muster auf Papier ist, was es ist."
+        "text": "Nein. Die Unschärfe ist in das gedruckte Bild eingebrannt. Drucke von einem Export in höherer Auflösung (oder SVG) neu. Das Bearbeiten eines dynamischen Codes hilft nicht – das Muster auf Papier ist, was es ist, auch wenn ein dynamischer Code dich das Ziel hinter einem frischen Druck ändern lässt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum sieht derselbe Export auf dem Bildschirm gut aus, im Druck aber weich?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Bildschirm zeigt den Code klein, seine Pixel wirken also eng. Papier zeigt den Code in wahrer Größe, dieselbe Pixelzahl, über Zentimeter verteilt, offenbart also die Unschärfe. Prüfe den Export anhand der Druckgröße, bevor du ihn in Druck gibst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Beheben Hochskalieren oder ein Schärfungsfilter einen unscharfen Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Hochskalieren interpoliert zwischen den Pixeln, die du schon hast, Kanten bleiben also weich, nur größer. Ein Schärfungsfilter kann Halos hinzufügen, die eine Kamera verwirren, und ein JPEG in PNG umzuwandeln, macht JPEG-Schaden nicht rückgängig. Die einzige verlässliche Reparatur ist ein frischer Export aus den Originaldaten in höherer Auflösung oder als SVG."
       }
     }
   ]
@@ -93,23 +114,38 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"Warum ist mein QR-Code unscharf? 5 Lösungen, die funktionieren | FreeQrly","description":"Unscharfer QR-Code, der sich nicht scannen lässt? 5 übliche Ursachen — Export in niedriger Auflösung, falsche Größe, JPEG-Komprimierung, Verzerrung, schlechter Druck — und wie man jede behebt.","step":[
     {
       "@type": "HowToStep",
+      "name": "Die Originaldatei finden",
+      "text": "Wenn du nur ein JPEG, einen Screenshot oder ein weitergeleitetes Chat-Bild hast, stoppe und generiere neu – keine Bearbeitung stellt Details wieder her, die die Komprimierung schon weggeworfen hat."
+    },
+    {
+      "@type": "HowToStep",
       "name": "In der richtigen Größe exportieren",
-      "text": "PNG mit 1024 px für Karten und Flyer, 2048 px für Poster. SVG, wann immer der Drucker es akzeptiert."
+      "text": "PNG mit 1024 px für Karten und Flyer, 2048 px für Plakate, SVG, wann immer der Drucker oder Designer es akzeptiert. Oberhalb von etwa 20 cm ist SVG das einzige Format, das Kanten exakt hält, ohne eine riesige Datei."
     },
     {
       "@type": "HowToStep",
       "name": "PNG oder SVG nutzen, niemals JPEG",
-      "text": "JPEG verschmiert die scharfen Kanten, aus denen ein QR-Code besteht. PNG für Bildschirme und Büro-Druck, SVG für professionellen Druck."
+      "text": "PNG für Bildschirme und Bürodruck, SVG für professionellen Druck. Wenn ein Werkzeug auf JPEG besteht, nutze seine höchste Qualitätsstufe nur für eine Bildschirmvorschau, nie als Druckvorlage."
     },
     {
       "@type": "HowToStep",
       "name": "Beim Skalieren Proportionen behalten",
-      "text": "Halte Shift oder das Schloss-Symbol gedrückt, damit die Quadrate Quadrate bleiben. Nie eine Ecke freihändig ziehen."
+      "text": "Shift oder das Schloss-Symbol halten, sodass die Quadrate quadratisch bleiben. Das Bild in der endgültigen Größe platzieren, statt es klein zu platzieren und später zu strecken."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Den Code dunkel auf hell halten, mit einem klaren Rand",
+      "text": "Unschärfe und niedriger Kontrast verstärken sich gegenseitig. Halte einen leeren Rand von mindestens 4 Modulen Breite auf jeder Seite, wie in ISO/IEC 18004 festgelegt, und halte Text, Logos und dekorative Rahmen daraus heraus."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Papier und Drucker zur Aufgabe passend wählen",
+      "text": "Glattes oder gestrichenes Material und ein Laserdrucker für kleine Codes; matte Oberfläche, wo Blendung ein Risiko ist; größere Größe und höhere Fehlerkorrektur für raue oder strukturierte Flächen."
     },
     {
       "@type": "HowToStep",
       "name": "Den echten Druck test-scannen",
-      "text": "Drucke ein Exemplar in Endgröße, geh auf den echten Betrachtungsabstand zurück, scanne mit deinem Handy. Ein Scan beim ersten Versuch bedeutet: Die Charge ist sicher."
+      "text": "Ein Exemplar in endgültiger Größe drucken, auf die echte Betrachtungsdistanz zurücktreten und es bei echtem Licht scannen. Ein Scan beim ersten Versuch heißt, die Auflage ist sicher. Wenn er zögert, behebe jetzt den Export oder die Größe."
     }
   ]}
 </script>
@@ -125,31 +161,76 @@
     <div class="kicker" style="text-align:center">Feldnotizen</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Warum ist mein QR-Code <span class='hl hl-blush'>verschwommen</span>?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Ein verschwommener QR-Code ist fast immer ein Auflösungsproblem: zu wenige Pixel, über zu viel Fläche gestreckt. Die Lösung: größer exportieren — oder als SVG.</p>
-    <p class="meta" style="text-align:center">17. Oktober 2026 · 4 Min. Lesezeit</p>
+    <p class="meta" style="text-align:center">17. Oktober 2026 · Zuletzt aktualisiert: 3. November 2026 · 15 Min. Lesezeit</p>
     <div class="prose" style="margin-top:40px">
-
-<p>Ein QR-Code sieht auf dem Bildschirm scharf aus und wird auf Papier zu Matsch. Die Ursache ist fast immer dieselbe: Das Bild hatte nicht genug Pixel für die Größe, in der es gedruckt wurde. Ein QR-Code ist ein Raster aus winzigen Quadraten — wenn es nicht genug Pixel gibt, verschmieren die Kanten, Handys finden das Raster nicht, und Scans schlagen fehl.</p>
-
-<h2>Die 5 üblichen Ursachen</h2>
+<p>Ein unscharfer QR-Code ist fast immer ein Auflösungsproblem: zu wenige Pixel, die über zu viel Fläche gezogen werden. Die Lösung ist, größer zu exportieren – oder als SVG. Wenn der Code auf dem Bildschirm scharf aussah und auf Papier zu Matsch wurde, hatte das Bild nicht genug Pixel für die Größe, in der es gedruckt wurde. Ein QR-Code ist ein Raster aus winzigen Quadraten, Modulen genannt; wenn es nicht genug Pixel gibt, verschmieren ihre Kanten ineinander, Handys finden das Raster nicht, und Scans scheitern. Starte beim Export, nicht bei einem neuen Design: Generiere mit höherer Auflösung oder als Vektordatei neu, drucke ein Exemplar in echter Größe neu und scanne es aus der echten Betrachtungsdistanz, bevor du die Auflage druckst.</p>
+<p>Diese Antwort deckt die meisten Fälle ab, aber Unschärfe hat mehr als eine Ursache, jede mit einer anderen Lösung: ein kleiner Export, JPEG-Komprimierung, Strecken, Drucker oder Papier oder eine Kopie von einer Kopie. Die Abschnitte unten trennen diese Ursachen, geben dir eine Zahlentabelle für den Drucker, gehen die Lösung der Reihe nach durch und behandeln Codes, die scharf aussehen und trotzdem nicht scannen – die gehören zu <a href="/de/blog/why-is-my-qr-code-not-working/">Warum dein QR-Code nicht scannt</a>.</p>
+<h2>Was Unschärfe tatsächlich mit einem Code macht</h2>
+<p>Eine Handykamera liest einen QR-Code nicht so, wie ein Mensch ein Bild liest. Sie sucht die drei großen quadratischen Suchmuster in den Ecken, leitet daraus das Raster ab und entscheidet dann Modul für Modul, ob jedes kleine Quadrat dunkel oder hell ist. Unschärfe greift genau diese Entscheidung an: Wenn benachbarte Module ineinander verlaufen, sieht die Kamera Grau, wo sie Schwarz oder Weiß braucht, und sie fängt an zu raten. Ein bisschen Raten ist überlebbar, denn QR-Codes tragen eine eingebaute Fehlerkorrektur – zusätzliche Daten, die es einem Leser erlauben, Codewörter wiederherzustellen, die falsch oder unlesbar zurückkommen. Dieser Schutz wird in Codewörtern gemessen, nicht in sichtbarer Fläche: Die vier Stufen nach ISO/IEC 18004 stellen etwa 7 % der Codewörter bei Stufe L, 15 % bei M, 25 % bei Q und 30 % bei H wieder her. Ein Schmierer über einem Suchmuster oder Unschärfe, die sich über das ganze Symbol verteilt, kann einen Leser besiegen, lange bevor ein hübscher Prozentwert nahelegt, dass er überleben sollte. Behandle Fehlerkorrektur als Sicherheitsnetz, nie als Erlaubnis, einen weichen Code zu drucken.</p>
+<p>Dichte macht Unschärfe schlimmer. Ein kurzer Link ergibt ein luftiges Raster mit großen Modulen; ein langer Link, eine vollständige Kontaktkarte oder ein WLAN-Code mit einem langen Passwort ergibt ein dichteres Raster mit kleineren Modulen, und kleinere Module verwischen früher. Darum kann derselbe Export für eine kurze URL gut aussehen und für einen datenreichen Code bei derselben Druckgröße versagen. Wenn ein Code sowohl dicht als auch klein gedruckt ist, kürze das Ziel, wo du kannst, drucke größer oder beides. Ein dynamischer Code hilft anders: Das gedruckte Muster codiert einen Kurzlink, den du später umleiten kannst, das Raster bleibt also luftig, selbst wenn das endgültige Ziel lang ist. Für ein Ziel, das sich nie ändern wird, ist ein statischer Code einfacher: kostenlos, kein Konto, kein Wasserzeichen, und er läuft nicht ab.</p>
+<h2>Die Zahlen: Druckgröße, Pixel und Format</h2>
+<p>Drucker sprechen von Auflösung in Punkten oder Pixeln pro Zoll. Für Druck, der aus der Nähe betrachtet wird, sind 300 Pixel pro Zoll bei der endgültigen Druckgröße die weit verbreitete professionelle Basis für scharfe Ausgabe. Die Tabelle unten verwandelt diese Basis in Pixelzahlen: Druckbreite in Zoll multipliziert mit 300. Ein 2-cm-Code ist etwa 0,8 Zoll breit, er braucht also grob 240 Pixel bei 300 Pixeln pro Zoll – und das ist das bloße Minimum, kein bequemer Spielraum. Exportiere immer größer als das Minimum und lass den Designer herunterskalieren, denn Herunterskalieren erhält Schärfe, während Hochskalieren nur die Unschärfe vergrößert.</p>
+<div class="table-scroll"><table>
+<tr><th>Druckbreite</th><th>Pixel bei 300 pro Zoll (Minimum)</th><th>Zu schickender Export</th></tr>
+<tr><td>2 cm (Visitenkarte)</td><td>~240 px</td><td>PNG mit 1024 px oder SVG</td></tr>
+<tr><td>3 cm (Flyer, Speisekarte)</td><td>~350 px</td><td>PNG mit 1024 px oder SVG</td></tr>
+<tr><td>5 cm (Tischaufsteller, Etikett)</td><td>~590 px</td><td>PNG mit 1024 px oder SVG</td></tr>
+<tr><td>10 cm (Plakatdetail)</td><td>~1.180 px</td><td>PNG mit 2048 px oder SVG</td></tr>
+<tr><td>20 cm (Plakat)</td><td>~2.360 px</td><td>SVG; PNG mit 2048 px nur als Ausweichlösung</td></tr>
+<tr><td>50 cm (großes Plakat, Beschilderung)</td><td>~5.900 px</td><td>SVG</td></tr>
+</table></div>
+<p>Zwei Faustregeln stecken hinter dieser Tabelle. Erstens: Die Druckgröße in Zentimetern, multipliziert mit grob 100, ergibt eine schnelle Pixel-Zielgröße – ein 5-cm-Code will mindestens rund 500 Pixel, ein 10-cm-Code rund 1.000. Zweitens: die 1:10-Distanz-Faustregel aus dem <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Leitfaden</a>: Die Codebreite sollte mindestens ein Zehntel der Scandistanz betragen, ein Code, der aus 50 cm gescannt wird, sollte also mindestens 5 cm breit sein, und ein Plakat, das aus 5 Metern gescannt wird, braucht einen 50-cm-Code. Ein Plakat-Code, der aus Metern Entfernung betrachtet wird, verträgt eine niedrigere effektive Auflösung als eine Karte, die in der Hand gehalten wird, aber er braucht trotzdem genug Pixel für seine Größe – und nur eine Vektordatei gibt dir das ohne Obergrenze.</p>
+<div class="table-scroll"><table>
+<tr><th>Format</th><th>Wie es sich verhält</th><th>Wofür nutzen</th></tr>
+<tr><td>SVG</td><td>Vektor: keine Pixel, skaliert ohne Grenze, Kanten bleiben exakt</td><td>Professioneller Druck, große Plakate, Designer-Layouts</td></tr>
+<tr><td>PNG</td><td>Verlustfreies Raster: jedes Pixel erhalten, kein Komprimierungs-Schmierer</td><td>Bürodruck, Folien, Apps, die kein SVG akzeptieren</td></tr>
+<tr><td>JPEG</td><td>Verlustbehaftet: verwirft Details und verschmiert scharfe Kanten</td><td>Nur für Fotos – nie für einen QR-Code</td></tr>
+<tr><td>Screenshot oder Chat-Bild</td><td>Wird von der sendenden App erneut komprimiert und oft herunterskaliert</td><td>Nichts im Druck – geh zurück zum Original-Export</td></tr>
+</table></div>
+<h2>Die 5 üblichen Ursachen, im Detail</h2>
+<h3>1. Export in niedriger Auflösung</h3>
+<p>Das ist die häufigste Ursache und die am nachsichtigsten zu behebende. Ein 512-px-PNG sieht bei 2 cm Breite gut aus; auf ein 20-cm-Plakat aufgeblasen, wird jedes Modul zu einem Schmierer, weil dieselben 512 Pixel nun die zehnfache Fläche abdecken. Der Bildschirm versteckt das Problem – ein Display zeigt den Code klein, die Pixel wirken also eng –, während Papier ihn in wahrer Größe zeigt. Die Lösung liegt an der Quelle: neu exportieren mit 1024 px für Karten und Flyer, 2048 px für Plakate oder SVG, wann immer der Drucker es akzeptiert. Das Vergrößern der kleinen Datei in einem Editor fügt keine Details hinzu; es macht nur die vorhandene Unschärfe größer. Wenn der Original-Export weg ist, generiere vom selben Ziel neu, statt die Datei zu strecken, die du hast.</p>
+<h3>2. JPEG-Komprimierung</h3>
+<p>JPEG ist für Fotos gebaut und funktioniert, indem es Details verwirft, die das Auge bei einem Foto am ehesten nicht bemerkt. Dieser Handel ist schlecht für einen QR-Code, der nichts als scharfe Kanten und flache Flächen ist – genau die Merkmale, die JPEG verschmiert. Ein Code, der als JPEG in niedriger Qualität gespeichert wurde, kann selbst bei kleinen Größen versagen, und der Schaden wird jedes Mal schlimmer, wenn die Datei erneut als JPEG gespeichert wird. PNG nutzt verlustfreie Komprimierung und erhält jedes Pixel exakt, und SVG hat keine Pixel zu verlieren. Die Regel ist einfach: nur PNG oder SVG. Wenn dir ein Designer, eine Chat-App oder eine Social-Plattform eine JPEG-Version zurückgibt, behandle sie als Vorschau, nicht als Druckvorlage, und ersetze sie vor dem Druck durch das Original-PNG oder -SVG.</p>
+<h3>3. Strecken</h3>
+<p>Das Ziehen an einer Ecke verzerrt das Raster: Quadrate werden zu Rechtecken, Modulabstände ändern sich ungleichmäßig, und Scanner geben auf. Das passiert am häufigsten in Folien-Decks, Textverarbeitungen und Layout-Tools, wo ein Bild gezogen wird, um eine Lücke zu füllen. Immer proportional skalieren – Shift halten oder das Schloss-Symbol nutzen –, sodass Breite und Höhe sich gemeinsam ändern und die Quadrate quadratisch bleiben. Ein Code, der gestreckt und dann zurückgestreckt wurde, ist nicht automatisch wieder quadratisch, weil Rundungen im Layout-Tool ihn leicht schief lassen können. Im Zweifel lösche das platzierte Bild und platziere einen frischen Export in der vorgesehenen Größe.</p>
+<h3>4. Schlechter Druck: Drucker, Tinte und Papier</h3>
+<p>Drucker in niedriger Auflösung, Tintenverlauf auf rauem oder saugfähigem Papier und Glanz-Blendung weichen alle Kanten auf. Ein Tintenstrahler auf ungestrichenem, saugfähigem Material lässt Tinte in die Fasern laufen, sodass dünne weiße Lücken zwischen Modulen sich füllen und der Code fett und matschig aussieht. Ein Laserdrucker auf glattem oder gestrichenem Material hält Kanten weit besser, weshalb mattes Papier und ein Laserdrucker einen Tintenstrahler auf einer Serviette schlagen. Glänzende Laminierung ist anders: Das Papier kann scharf bleiben und trotzdem Reflexionen zur Kamera zurückwerfen – neige den Druck unter dem Licht, um Blendung von Unschärfe zu unterscheiden. Bei Stoff, Stickerei, Gravur oder sehr rauen Flächen rechne damit, dass Kanten ohnehin weicher werden, und gleiche das mit einem größeren Code, höherer Fehlerkorrektur und zuerst einem physischen Test aus.</p>
+<h3>5. Kopie von einer Kopie</h3>
+<p>Einen Code aus einer Nachricht zu screenshotten und dann diesen Screenshot erneut zu screenshotten, verliert jedes Mal Auflösung. Nachrichten-Apps komprimieren und skalieren Bilder außerdem herunter, sodass ein Code, der per Chat weitergeleitet wurde, weit kleiner und weicher ankommen kann als der Original-Export. Einen gedruckten Code zu fotografieren, um ihn wiederzuverwenden, fügt Perspektivverzerrung, ungleichmäßiges Licht und Linsenweichheit zum Originaldruck hinzu. Geh immer zurück zum Original-Export oder generiere vom selben Ziel neu. Wenn das Ziel ein dynamischer Code ist, generiere einen frischen Code für denselben Kurzlink – keine alte Datei nötig.</p>
+<h2>So behebst du es, Schritt für Schritt</h2>
 <ol>
-<li><b>Export in niedriger Auflösung.</b> Ein 512-px-PNG sieht bei 2 cm Breite gut aus. Auf ein 20-cm-Poster aufgeblasen, wird jedes Modul zum Fleck. Je größer der Druck, desto mehr Pixel brauchst du.</li>
-<li><b>JPEG-Kompression.</b> JPEG verschmiert scharfe Kanten — genau das, woraus ein QR-Code besteht. Ein Code, der als JPEG in niedriger Qualität gespeichert wurde, kann selbst bei kleinen Größen fehlschlagen. Nur PNG oder SVG.</li>
-<li><b>Verzerrung.</b> Das Ziehen an einer Ecke des Bildes verzerrt das Raster: Quadrate werden zu Rechtecken, und Scanner geben auf. Immer proportional skalieren.</li>
-<li><b>Schlechter Druck.</b> Drucker mit niedriger DPI, auslaufende Tinte auf rauem oder saugfähigem Papier und Glanzreflexe weichen alle Kanten auf. Mattes Papier und ein Laserdrucker schlagen einen Tintenstrahler auf einer Serviette.</li>
-<li><b>Kopie einer Kopie.</b> Einen Code aus einer Nachricht zu screenshotten und dann den Screenshot erneut zu screenshotten, verliert jedes Mal Auflösung. Immer zum Original-Export zurückkehren.</li>
+<li><strong>Die Originaldatei finden.</strong> Wenn du nur ein JPEG, einen Screenshot oder ein weitergeleitetes Chat-Bild hast, stoppe und generiere neu – keine Bearbeitung stellt Details wieder her, die die Komprimierung schon weggeworfen hat.</li>
+<li><strong>In der richtigen Größe exportieren.</strong> PNG mit 1024 px für Karten und Flyer, 2048 px für Plakate, SVG, wann immer der Drucker oder Designer es akzeptiert. Oberhalb von etwa 20 cm ist SVG das einzige Format, das Kanten exakt hält, ohne eine riesige Datei.</li>
+<li><strong>PNG oder SVG nutzen, nie JPEG.</strong> PNG für Bildschirme und Bürodruck, SVG für professionellen Druck. Wenn ein Werkzeug auf JPEG besteht, nutze seine höchste Qualitätsstufe nur für eine Bildschirmvorschau, nie als Druckvorlage.</li>
+<li><strong>Proportionen beim Skalieren behalten.</strong> Shift oder das Schloss-Symbol halten, sodass die Quadrate quadratisch bleiben. Das Bild in der endgültigen Größe platzieren, statt es klein zu platzieren und später zu strecken.</li>
+<li><strong>Den Code dunkel auf hell halten, mit einem klaren Rand.</strong> Unschärfe und niedriger Kontrast verstärken sich gegenseitig: Ein grauer Code auf blassem Hintergrund, der auch noch weich ist, versagt früher als jeder Fehler allein. Halte einen leeren Rand von mindestens 4 Modulen Breite auf jeder Seite, wie in ISO/IEC 18004 festgelegt, und halte Text, Logos und dekorative Rahmen daraus heraus.</li>
+<li><strong>Papier und Drucker zur Aufgabe passend wählen.</strong> Glattes oder gestrichenes Material und ein Laserdrucker für kleine Codes; matte Oberfläche, wo Blendung ein Risiko ist; größere Größe und höhere Fehlerkorrektur für raue oder strukturierte Flächen.</li>
+<li><strong>Den echten Druck test-scannen.</strong> Ein Exemplar in endgültiger Größe drucken, auf die echte Betrachtungsdistanz zurücktreten und es bei echtem Licht scannen. Ein Scan beim ersten Versuch heißt, die Auflage ist sicher. Wenn er zögert, behebe jetzt den Export oder die Größe – eine Auflage weicher Codes lässt sich nachher nicht retten.</li>
 </ol>
-
-<h2>So behebst du es</h2>
-<ul>
-<li><strong>Größer exportieren.</strong> PNG mit 1024 px für Karten und Flyer, 2048 px für Poster. Faustregel: Druckgröße in cm mal ~100 ergibt die Pixel, die du brauchst.</li>
-<li><strong>SVG für den Druck nutzen.</strong> SVG ist Vektor — unendlich skalierbar ohne jede Unschärfe. Nutze es, wann immer der Drucker oder Designer es akzeptiert.</li>
-<li><strong>Proportionen behalten.</strong> Halte beim Skalieren Shift (oder das Schloss-Symbol) gedrückt, damit die Quadrate Quadrate bleiben.</li>
-<li><strong>In Endgröße testen.</strong> Drucke ein Exemplar in echter Größe, geh auf den echten Betrachtungsabstand zurück und scanne es mit deinem Handy. Wenn es beim ersten Versuch liest, ist die Charge sicher.</li>
-</ul>
-
-<p>Nach einem scharfen Neudruck immer noch kein Scan? Das Problem liegt woanders — Größe, Kontrast oder Beschädigung. <a href="/de/blog/why-is-my-qr-code-not-working/">Der komplette Troubleshooting-Guide</a> deckt diese ab. Für die Größen-Abstands-Regel, siehe den <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Guide</a>.</p>
-
+<h2>Szenarien: Wo Unschärfe am härtesten zuschlägt</h2>
+<h3>Flyer, Speisekarten und Tischaufsteller</h3>
+<p>Diese werden aus Armlänge gescannt, oft in dunklen Räumen, sie brauchen also beides, Schärfe und Größe: mindestens 3 cm auf einem Flyer oder einer Speisekarte, 4–5 cm auf einem Tischaufsteller als Faustregel. Speisekarten fügen Laminierungsrisiko hinzu: Glanz unter Deckenlichtern kann blenden, während matte Laminierung den Code lesbar hält und sich sauber abwischen lässt. Für eine Speisekarte, die sich ändert, verlinke auf eine Seite, die du kontrollierst, statt auf einen Screenshot, damit der Druck nie veraltet – und ein dynamischer Code lässt dich dieses Ziel nach dem Druck ändern, mit Scan-Stats, die zeigen, welche Tische tatsächlich scannen.</p>
+<h3>Plakate und Beschilderung</h3>
+<p>Plakate versagen anders: Meist ist der Export das Problem, nicht der Drucker. Eine 512-px-Datei, die auf dem Bildschirm gut aussah, wird bei 20 cm oder 50 cm sichtbar weich, und kein Drucker kann die fehlenden Pixel erfinden. Nutze SVG, wende die 1:10-Distanz-Faustregel an und prüfe das Code-Feld vor der Auflage in voller Größe. Draußen rechne auch mit Verblassen: Ein Code, der scharf startet, aber in der Sonne verblasst, driftet über Wochen Richtung Versagen, eine höhere Fehlerkorrekturstufe und eine geschützte Position zählen also mehr als ein marginal schärferer Erstdruck.</p>
+<h3>Verpackungen und Etiketten</h3>
+<p>Kleine Etiketten kombinieren kleine Größe, dichte Daten und gewölbte oder strukturierte Flächen. Halte den Code als Faustregel bei 2 cm oder größer, vermeide es, ihn um eine enge Kurve zu wickeln, wo Randmodule sich strecken, und teste auf dem tatsächlichen Behälter – ein Code, der flach scannt, kann auf einer Flasche versagen. Wenn das Material rau ist oder der Druck grob, drucke größer und einfacher: Ein kurzer Link hält das Raster luftig, inklusive eines Kurzlinks hinter einem dynamischen Code.</p>
+<h2>Ehrlicher Vergleich: Was Unschärfe behebt und was nicht</h2>
+<p>Nicht jeder Schärfungstrick funktioniert, und mancher beliebte Rat verschwendet eine Druckauflage. Das Hochskalieren einer kleinen Datei – in einem Editor, mit einem Vergrößerungs-Tool oder indem man dasselbe kleine Bild größer exportiert – fügt keine Details hinzu; es interpoliert zwischen den Pixeln, die du schon hast, Kanten bleiben also weich, nur größer. Ein Schärfungsfilter kann Kanten fürs Auge schärfer aussehen lassen, während er Halos hinzufügt, die eine Kamera verwirren, ein gefilterter Code kann also schlechter scannen. Ein JPEG in PNG umzuwandeln, macht JPEG-Schaden auch nicht rückgängig: Das Format ändert sich, aber die verschmierten Pixel bleiben verschmiert. Die einzige verlässliche Reparatur ist ein frischer Export aus den Originaldaten in höherer Auflösung oder als SVG.</p>
+<p>Auch die Formatwahl hat ihre Kompromisse. SVG ist die beste Wahl für Druck, aber manche Büro-Tools, ältere Apps und Social-Plattformen akzeptieren es nicht – in diesen Fällen ist ein hochauflösendes PNG die richtige Ausweichlösung, kein Grund, auf JPEG zurückzufallen. PDF kann ein guter Träger für Druck sein, weil es den Vektor-Code halten kann, aber nur, wenn der Code in der PDF tatsächlich Vektor ist; eine PDF mit einem kleinen hineingeklebten JPEG ist nur ein JPEG mit einer schickeren Hülle, prüfe also, was drin ist, bevor du der Dateiendung traust.</p>
+<p>Schließlich ist Schärfe notwendig, aber nicht ausreichend. Ein perfekt scharfer Code kann trotzdem versagen, wenn er für seine Distanz zu klein ist, wenn der Kontrast schwach ist, wenn die Ruhezone bedrängt ist, wenn ein Logo zu viel von der Mitte verdeckt oder wenn das Ziel selbst tot ist. Das sind Diagnosefragen, die der Reihe nach in <a href="/de/blog/why-is-my-qr-code-not-working/">der vollständigen Fehlerbehebungsanleitung</a> behandelt werden. Wenn dein Neudruck scharf ist und trotzdem nicht scannt, arbeite diese Anleitung durch, bevor du erneut druckst – ein zweiter Neudruck hilft nur, wenn er das ändert, was tatsächlich falsch ist.</p>
+<p>Mach den nächsten Code von Anfang an scharf: Generiere ihn im <a href="/de/#studio">kostenlosen Generator</a>, wähle aus 17 Typen und exportiere PNG bis zu 2048 px oder unendlich skalierbares SVG – kostenlos für statische Codes, ohne Anmeldung, ohne Wasserzeichen und ohne Ablauf. Für Größen nach Anwendungsfall siehe den <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Leitfaden</a>, und für einen Logo-Code siehe <a href="/de/blog/add-logo-to-qr-code/">So fügst du einem QR-Code ein Logo hinzu</a>.</p>
     </div>
+
+    <section class="sources">
+      <h2>Quellen</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> – Die Spezifikation der QR-Code-Symbologie. Die ISO-Seite zeigt Ausgabe 4, veröffentlicht 2024-08 (Seite abgerufen am 2026-11-03). Belegt die vier Fehlerkorrekturstufen (L 7 %, M 15 %, Q 25 %, H 30 % der Codewörter) und die Ruhezone von 4 Modulen, wie im Standard definiert.</li>
+      <li><a href="https://www.4over4.com/guide/understanding-image-resolution-dpi-in-print-vs-web-part2">4OVER4: Export Settings for Print vs Web, Sizes and DPI</a> – Belegt 300 DPI als professionellen Druckstandard für aus der Nähe betrachtete Stücke (Visitenkarten, Postkarten, Broschüren, Flyer) und niedrigere effektive Auflösung für Großformat-Stücke, die aus der Distanz betrachtet werden. Kein explizites Veröffentlichungsdatum auf der Seite; abgerufen am 2026-11-03.</li>
+      <li><a href="https://dev.to/bitran/image-formats-explained-jpg-vs-png-vs-webp-vs-avif-2hm7">Image Formats Explained: JPG vs PNG vs WebP vs AVIF</a> – Belegt JPEG als verlustbehaftete Komprimierung, die scharfe Kanten verschmiert und sich beim erneuten Speichern weiter verschlechtert, gegenüber PNG als verlustfreie Komprimierung, die jedes Pixel exakt erhält. Kein explizites Veröffentlichungsdatum auf der Seite; abgerufen am 2026-11-03.</li>
+      <li><a href="https://qrlynx.com/blog/iso-iec-18004-qr-code-standard-explained">ISO/IEC 18004:2024 Explained (QRLynx)</a> – Im Juli 2026 gegen ISO und DENSO WAVE geprüft. Belegt die Codewort-Lesart der Fehlerkorrektur-Prozentwerte (7 % / 15 % / 25 % / 30 % der Gesamt-Codewörter, keine garantierte Toleranz für sichtbare Fläche) und die von DENSO WAVE festgelegte Ruhezone von vier Modulen.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly präsentiert einen QR-Code"></div>
       <div>
@@ -161,17 +242,19 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Weiterlesen</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/de/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
+        <a class="rel-card" href="/de/blog/get-google-reviews-with-qr-code/"><b>So bekommst du mehr Google-Bewertungen mit einem QR-Code</b></a>
         <a class="rel-card" href="/de/blog/bulk-qr-codes/"><b>QR-Codes in großen Mengen: Dutzende auf einmal erstellen, kostenlos</b></a>
-        <a class="rel-card" href="/de/blog/do-qr-codes-expire/"><b>Do QR Codes Expire? No — But Paid Ones Can Die</b></a>
+        <a class="rel-card" href="/de/blog/qr-code-troubleshooting-guide/"><b>QR-Code-Fehlerbehebungsleitfaden: Jeden Scan-Fehler finden und beheben</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Gut zu wissen</h2>
-    <details><summary><span>Warum sieht mein QR-Code verschwommen aus, scannt aber trotzdem?</span></summary><p>Handys sind nachsichtig — die Fehlerkorrektur fängt eine überraschende Menge Unschärfe ab. Aber ein Code, der in deinem hellen Büro scannt, kann bei schwachem Licht oder auf Armlänge versagen. Scharf ist sicher; kaum-scannend ist es nicht.</p></details>
-    <details><summary><span>Welche Auflösung brauche ich für ein Poster?</span></summary><p>Mindestens 2048-px-PNG oder SVG. Ein Poster, das aus 2 Metern betrachtet wird, braucht weit mehr Pixel als eine Visitenkarte aus 30 cm — siehe den Druckgrößen-Guide für die Abstandsregel.</p></details>
-    <details><summary><span>PNG oder SVG für den Druck?</span></summary><p>SVG, wann immer der Drucker oder Designer es akzeptiert — es skaliert unendlich ohne Unschärfe. PNG mit 1024–2048 px ist die Alternative für Büro-Druck und Apps, die kein SVG nehmen.</p></details>
-    <details><summary><span>Kann ich einen verschwommen gedruckten Code ohne Neudruck reparieren?</span></summary><p>Nein. Die Unschärfe ist ins gedruckte Bild eingebrannt. Drucke aus einem höher aufgelösten Export (oder SVG) neu. Das Bearbeiten eines dynamischen Codes hilft nicht — das Muster auf Papier ist, was es ist.</p></details>
+    <details><summary><span>Warum sieht mein QR-Code verschwommen aus, scannt aber trotzdem?</span></summary><p>Handys sind nachsichtig – die Fehlerkorrektur stellt Codewörter wieder her, die falsch oder unlesbar zurückkommen. Aber ein Code, der in einem hellen Büro scannt, kann bei schwachem Licht oder aus Armlänge versagen. Scharf ist sicher; kaum scannend ist es nicht.</p></details>
+    <details><summary><span>Welche Auflösung brauche ich für ein Poster?</span></summary><p>SVG ist die beste Wahl, weil es ohne Grenze skaliert. Wenn der Drucker eine Rasterdatei braucht, nutze PNG mit 2048 px; ein Plakat mit 20 cm braucht grob 2.360 px bei 300 Pixeln pro Zoll, ein 512-px-Export wird bei dieser Größe also weich aussehen.</p></details>
+    <details><summary><span>PNG oder SVG für den Druck?</span></summary><p>SVG, wann immer der Drucker oder Designer es akzeptiert – es skaliert unendlich ohne jede Unschärfe. PNG mit 1024 px für Karten und Flyer oder 2048 px für Plakate ist die Ausweichlösung für Bürodruck und Apps, die kein SVG nehmen.</p></details>
+    <details><summary><span>Kann ich einen verschwommen gedruckten Code ohne Neudruck reparieren?</span></summary><p>Nein. Die Unschärfe ist in das gedruckte Bild eingebrannt. Drucke von einem Export in höherer Auflösung (oder SVG) neu. Das Bearbeiten eines dynamischen Codes hilft nicht – das Muster auf Papier ist, was es ist, auch wenn ein dynamischer Code dich das Ziel hinter einem frischen Druck ändern lässt.</p></details>
+    <details><summary><span>Warum sieht derselbe Export auf dem Bildschirm gut aus, im Druck aber weich?</span></summary><p>Ein Bildschirm zeigt den Code klein, seine Pixel wirken also eng. Papier zeigt den Code in wahrer Größe, dieselbe Pixelzahl, über Zentimeter verteilt, offenbart also die Unschärfe. Prüfe den Export anhand der Druckgröße, bevor du ihn in Druck gibst.</p></details>
+    <details><summary><span>Beheben Hochskalieren oder ein Schärfungsfilter einen unscharfen Code?</span></summary><p>Nein. Hochskalieren interpoliert zwischen den Pixeln, die du schon hast, Kanten bleiben also weich, nur größer. Ein Schärfungsfilter kann Halos hinzufügen, die eine Kamera verwirren, und ein JPEG in PNG umzuwandeln, macht JPEG-Schaden nicht rückgängig. Die einzige verlässliche Reparatur ist ein frischer Export aus den Originaldaten in höherer Auflösung oder als SVG.</p></details>
     </section>
   </article>
   <footer>

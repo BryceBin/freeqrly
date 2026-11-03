@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Guía de tamaños de impresión de códigos QR: de tarjetas de visita a pósteres | FreeQrly","description":"¿Qué tamaño debe tener un código QR impreso? Tamaños mínimos para tarjetas de visita, folletos y pósteres, más la regla de distancia 1:10, resolución y reglas de zona de silencio que mantienen los códigos escaneables.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Guía de tamaños de impresión de códigos QR: de tarjetas de visita a pósteres | FreeQrly","description":"¿Qué tamaño debe tener un código QR impreso? Tamaños mínimos para tarjetas de visita, folletos y pósteres, más la regla de distancia 1:10, resolución y reglas de zona de silencio que mantienen los códigos escaneables.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "¿Cuál es el tamaño mínimo para un código QR impreso?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Como regla práctica, 2 x 2 cm (0.8 x 0.8 pulgadas). Los códigos más pequeños fallan en muchos teléfonos, sobre todo en códigos con muchos datos como las vCards."
+        "text": "Como regla práctica, 2 × 2 cm (0,8 × 0,8 pulgadas). Los códigos más pequeños fallan en muchos teléfonos, sobre todo en códigos con muchos datos como las vCards."
       }
     },
     {
@@ -80,7 +80,47 @@
       "name": "¿PNG o SVG para imprimir?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SVG es lo mejor: escala infinitamente sin pérdida de calidad. Si tu impresor necesita ráster, exporta PNG a 2048 px."
+        "text": "SVG es lo mejor: escala infinitamente sin pérdida de calidad. Si tu impresora necesita mapa de bits, exporta PNG a 2048 px. Nunca uses JPG: su compresión difumina los bordes de los módulos de los que depende un escáner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto margen necesita un código QR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una zona de silencio de al menos 4 módulos de ancho por cada lado, del mismo color claro que el fondo del código, como especifica la ISO/IEC 18004. Para un código de 2 cm con 29 módulos a lo ancho, eso es unos 2,8 mm alrededor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo calculo el tamaño para una distancia de escaneo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide la distancia entre diez y redondea hacia arriba, nunca por debajo del mínimo de 2 cm. Un código escaneado desde 2 metros necesita al menos 20 cm; desde 10 metros, al menos 1 metro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Una URL más larga necesita una impresión más grande?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Más datos significan más módulos, y más módulos al mismo tamaño de impresión significan módulos más pequeños y más difíciles de leer. Usa una URL corta y limpia, o un código dinámico cuyo destino de redirección corta puedas editar después de imprimir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tamaño debe tener un código QR en una pantalla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Como regla práctica, no por debajo de unos 200 × 200 píxeles. Para diapositivas y pantallas proyectadas, aplica la proporción 1:10 al ancho proyectado y a la distancia del espectador más lejano."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué falla mi código impreso cuando la versión en pantalla escanea?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las causas comunes son una zona de silencio recortada, brillo en laminado brillante, extensión de tinta en papel texturizado, una rejilla estirada o un PNG ampliado con suavizado. Prueba una copia a tamaño final, sobre el material final, y escanéala con más de un teléfono antes de la tirada completa."
       }
     }
   ]
@@ -98,42 +138,128 @@
     <div class="kicker" style="text-align:center">Notas de campo</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">¿Qué tan <span class="hl hl-mint">grande</span> debe ser un código QR impreso?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">La respuesta corta: al menos 2x2 cm, a 300 dpi, con un margen claro. La respuesta larga, con la regla de distancia que los impresores usan en realidad, está abajo.</p>
-    <p class="meta" style="text-align:center">14 de octubre de 2026 · 4 min de lectura</p>
+    <p class="meta" style="text-align:center">14 de octubre de 2026 · Última actualización: 3 de noviembre de 2026 · 14 min de lectura</p>
     <div class="prose" style="margin-top:40px">
+<p>La respuesta corta: al menos 2 × 2 cm, a 300 dpi, con un margen claro. La respuesta larga — la que mantiene un cartel escaneable desde el otro lado de una sala y una tarjeta de visita escaneable desde un apretón de manos — son dos reglas prácticas más una tabla. Regla uno: nunca imprimas un código menor de 2 × 2 cm (0,8 × 0,8 pulgadas). Regla dos: el ancho del código debe ser al menos una décima parte de la distancia de escaneo. Un código escaneado desde 50 cm necesita un código de 5 cm; un cartel escaneado desde 5 metros necesita un código de 50 cm. Todo lo de abajo desarrolla esas dos reglas para cada superficie en la que probablemente imprimas, más los detalles de formato, margen y prueba que deciden si el tamaño funciona de verdad.</p>
 
 <h2>Las dos reglas que importan</h2>
-<p><b>Regla práctica 1 — tamaño mínimo:</b> 2 x 2 cm (0.8 x 0.8 pulgadas). Por debajo de eso, las cámaras de los teléfonos no pueden resolver los módulos de forma confiable, sobre todo códigos con muchos datos como las vCards.</p>
-<p><b>Regla práctica 2 — la proporción de distancia 1:10:</b> el ancho del código debe ser al menos una décima parte de la distancia de escaneo. ¿Escaneando desde 50 cm (una tarjeta de mesa)? Código de 5 cm. ¿Desde 5 metros (un cartel)? Código de 50 cm. Los impresores y la gente de señalización usan esta proporción como regla práctica.</p>
-<h2>Guía rápida por caso de uso</h2>
-<table>
-<tr><th>Caso de uso</th><th>Tamaño mínimo</th><th>Notas</th></tr>
-<tr><td>Tarjetas de visita</td><td>2x2 cm</td><td>Mantenlo alejado del borde de la tarjeta. Ver el <a href="/es/business-card-qr-code/">generador de tarjetas de visita</a>.</td></tr>
-<tr><td>Folletos y menús</td><td>3x3 cm</td><td>La gente los escanea a distancia de un brazo.</td></tr>
-<tr><td>Tarjetas de mesa</td><td>4–5 cm</td><td>Los invitados escanean desde sus asientos.</td></tr>
-<tr><td>Pósteres</td><td>Proporción 1:10</td><td>Un código de 50 cm se escanea desde 5 metros.</td></tr>
-<tr><td>Embalaje</td><td>2x2 cm</td><td>Evita superficies curvas que distorsionan el patrón.</td></tr>
-<tr><td>Códigos con logo</td><td>3x3 cm</td><td>Mantén el logo por debajo del 30% del área del código.</td></tr>
-</table>
-<h2>Resolución: exporta en grande</h2>
-<p>La impresión necesita 300 dpi. Un código de 2 cm a 300 dpi son solo ~240 px, pero siempre exporta más grande y deja que el diseñador reduzca: <b>PNG a 1024 o 2048 px</b>, o <b>SVG</b>, que es infinitamente escalable y la mejor opción para impresión profesional. FreeQrly exporta ambos, gratis.</p>
-<h2>No olvides la zona de silencio</h2>
-<p>Deja un margen en blanco alrededor del código <a href="http://www.iso.org/standard/83389.html">de al menos 4 módulos de ancho</a> en cada lado, como especifica ISO/IEC 18004. Amontonarlo con texto o gráficos es una de las principales razones por las que los códigos fallan: más en <a href="/es/blog/why-is-my-qr-code-not-working/">por qué no se escanea tu código</a>.</p>
-<h2>¿Logo en el centro? Hazlo más grande</h2>
-<p>Un <a href="/es/qr-code-with-logo/">logo en el centro</a> se come parte del patrón, así que dale espacio: mínimo 3x3 cm en impresión, y mantén el logo por debajo del ~30% del área del código como regla práctica.</p>
 
+<p><strong>Regla práctica 1 — tamaño mínimo:</strong> 2 × 2 cm (0,8 × 0,8 pulgadas). Por debajo, las cámaras de los teléfonos no pueden resolver los módulos con fiabilidad, sobre todo en códigos con muchos datos como las vCards. Este es un mínimo práctico para escaneo cercano, en la mano, no una garantía: un código denso a 2 cm es mucho más frágil que un código de URL corta al mismo tamaño, y los teléfonos antiguos necesitan más espacio que los nuevos.</p>
+
+<p><strong>Regla práctica 2 — la proporción de distancia 1:10:</strong> el ancho del código debe ser al menos una décima parte de la distancia de escaneo. ¿Escaneando desde 50 cm (una tarjeta de mesa)? Código de 5 cm. ¿Desde 5 metros (un cartel)? Código de 50 cm. Los impresores y la gente de señalización usan esta proporción como regla práctica — es una pauta de planificación, no parte de la propia norma QR —, y el hábito seguro es redondear hacia arriba en vez de hacia abajo, porque la distancia, la iluminación y los brillos se comen el margen de seguridad.</p>
+
+<p>Esas dos reglas interactúan. La proporción 1:10 puede exigir menos que el mínimo de 2 cm — un código escaneado desde 15 cm solo necesitaría 1,5 cm según la proporción —, y en ese caso gana el mínimo: imprime 2 cm de todos modos.</p>
+
+<h2>Guía rápida por caso de uso</h2>
+
+<div class="table-scroll"><table>
+<tr><th>Caso de uso</th><th>Distancia típica de escaneo</th><th>Tamaño mínimo</th><th>Notas</th></tr>
+<tr><td>Tarjetas de visita</td><td>20–25 cm, en la mano</td><td>2 × 2 cm</td><td>Mantenlo lejos del borde de la tarjeta. Mira el <a href="/es/business-card-qr-code/">generador de tarjetas de visita</a>.</td></tr>
+<tr><td>Folletos y menús</td><td>30–40 cm, a distancia de brazo</td><td>3 × 3 cm</td><td>La gente los escanea a distancia de brazo; sube a 4 cm para códigos densos.</td></tr>
+<tr><td>Expositores de mesa</td><td>30–50 cm, desde un asiento</td><td>4–5 cm</td><td>Los invitados escanean desde sus asientos, a menudo con poca luz: aumenta el tamaño.</td></tr>
+<tr><td>Recibos y entradas</td><td>20–30 cm, en la mano</td><td>2–3 cm</td><td>La impresión térmica difumina el detalle fino; usa una URL corta y prueba en la impresora real.</td></tr>
+<tr><td>Envases y etiquetas</td><td>20–30 cm, en la mano</td><td>2 × 2 cm</td><td>Evita superficies curvas que distorsionen el patrón; usa un panel plano.</td></tr>
+<tr><td>Códigos con logo</td><td>Como la versión simple, o más cerca</td><td>3 × 3 cm</td><td>Mantén el logo por debajo de alrededor del 30% del área del código. Guía completa: <a href="/es/blog/add-logo-to-qr-code/">añadir un logo a un código QR</a>.</td></tr>
+<tr><td>Carteles (A3/A2, en una pared)</td><td>1–1,5 m</td><td>10–15 cm</td><td>Dimensiona según la proporción 1:10; comprueba la distancia de visión en la sala real.</td></tr>
+<tr><td>Escaparates y tablones de anuncios</td><td>2–3 m</td><td>20–30 cm</td><td>Cuidado con el brillo del cristal; prueba desde fuera.</td></tr>
+<tr><td>Señalización exterior y banners</td><td>5 m y más</td><td>50 cm y más</td><td>Pregúntate si la gente escaneará de verdad desde tan lejos: un cartel más pequeño más cerca del paso a menudo funciona mejor.</td></tr>
+<tr><td>Diapositivas y pantallas</td><td>De distancia de brazo a varios metros</td><td>Al menos 200 × 200 px; escala con la distancia</td><td>Para una diapositiva proyectada, aplica la proporción 1:10 al ancho proyectado, no al tamaño del archivo.</td></tr>
+</table></div>
+
+<p>Dos advertencias valen para toda la tabla. Primera, los tamaños son para el propio código; la zona de silencio va encima, así que la huella total es mayor. Segunda, aumenta el tamaño siempre que el código guarde muchos datos, lleve un logo o se escanee con poca luz.</p>
+
+<h2>La regla de distancia, desarrollada</h2>
+
+<p>Para calcular un tamaño, divide la distancia desde la que escaneará la gente entre diez, luego redondea hacia arriba, y nunca por debajo del mínimo de 2 cm. Unos pocos ejemplos desarrollados vuelven automático el hábito:</p>
+
+<div class="table-scroll"><table>
+<tr><th>Distancia de escaneo</th><th>Distancia ÷ 10</th><th>Imprime al menos</th></tr>
+<tr><td>30 cm (un folleto en la mano)</td><td>3 cm</td><td>3 cm</td></tr>
+<tr><td>50 cm (una tarjeta de mesa)</td><td>5 cm</td><td>5 cm</td></tr>
+<tr><td>1 m (un cartel en la pared)</td><td>10 cm</td><td>10 cm</td></tr>
+<tr><td>2 m (un cartel en una parada de autobús)</td><td>20 cm</td><td>20 cm</td></tr>
+<tr><td>5 m (un cartel al otro lado de un aparcamiento)</td><td>50 cm</td><td>50 cm</td></tr>
+<tr><td>10 m (una valla)</td><td>100 cm</td><td>1 m</td></tr>
+</table></div>
+
+<p>La distancia que hay que usar es la distancia a la que la gente se parará de verdad, no la distancia que desearías que usara. Un cartel en un pasillo se escanea desde el ancho del pasillo; un cartel al otro lado de un aparcamiento se escanea desde donde camina la gente, no desde la valla lejana.</p>
+
+<h2>Por qué la densidad de datos cambia la respuesta</h2>
+
+<p>No todos los códigos QR tienen el mismo número de módulos. Cuantos más datos pongas, más módulos necesita el código: el código más pequeño (versión 1) es de 21 × 21 módulos, y cada versión superior añade cuatro módulos por lado, hasta un máximo de 177 × 177. Impreso al mismo tamaño, un código más denso tiene módulos más pequeños, y los módulos más pequeños son más difíciles de separar para una cámara, sobre todo con poca luz.</p>
+
+<p>La corrección de errores añade el mismo equilibrio. Los niveles más altos son más robustos, lo que sirve para códigos con logo o en superficies que pueden rayarse, pero también añaden módulos. Como ejemplo aproximado, una dirección web de 40 caracteres cabe en un código de 29 × 29 en el nivel M, pero necesita 37 × 37 en el nivel H; en un código de 2 cm, eso reduce cada módulo de unos 0,69 mm a unos 0,54 mm. La conclusión práctica: mantén el contenido corto. Usa una URL corta y limpia en vez de un enlace de seguimiento largo, incluye solo los campos de vCard que de verdad necesites, y si un artículo impreso pequeño debe guardar mucho, haz el código más grande. Un código dinámico ayuda de otra manera: su destino es editable después de imprimir, así que puedes imprimir una redirección corta una vez y cambiar adónde apunta después, en vez de codificar una URL larga que obligue a una rejilla densa; y lleva estadísticas de escaneo, así que puedes ver si el tamaño que elegiste se está escaneando de verdad.</p>
+
+<h2>Resolución: exporta en grande</h2>
+
+<p>La impresión necesita 300 dpi. Un código de 2 cm a 300 dpi son solo unos 240 px, pero exporta siempre más grande y deja que el diseñador reduzca: <strong>PNG a 1024 o 2048 px</strong>, o <strong>SVG</strong>, que es infinitamente escalable y la mejor opción para impresión profesional. FreeQrly exporta ambos, gratis. La matemática de píxeles es simple: divide el ancho en píxeles de un PNG entre 300 para obtener su ancho máximo de impresión en pulgadas, y multiplica por 2,54 para centímetros. Una imagen de 600 px da 2 pulgadas, unos 5 cm, a 300 dpi: bien para una tarjeta de mesa, demasiado pequeña para un cartel. Una imagen de 2048 px da unos 17 cm a 300 dpi, lo que cubre folletos, menús y carteles pequeños, pero no un escaparate; para eso, usa SVG.</p>
+
+<p>Para formatos muy grandes vistos desde lejos, las impresoras suelen aceptar resoluciones efectivas más bajas — alrededor de 150 dpi es una referencia viable para carteles grandes —, porque el ojo no puede resolver el detalle fino desde metros de distancia. Dos reglas de formato no se doblan con el tamaño. Evita JPG para códigos QR: su compresión difumina los bordes nítidos de los módulos de los que depende un escáner. Si debes agrandar un PNG, usa escalado por vecino más cercano (a veces llamado «bordes duros» o «sin suavizado») por un número entero como 2×, 3× o 4×, que mantiene cada módulo como un bloque nítido en vez de un difuminado blando. Mejor aún, importa el SVG y vuelve a exportar a la resolución requerida en vez de estirar un PNG pequeño.</p>
+
+<h2>No olvides la zona de silencio</h2>
+
+<p>Deja un margen en blanco alrededor del código <a href="http://www.iso.org/standard/83389.html">de al menos 4 módulos de ancho</a> por cada lado, como especifica la ISO/IEC 18004. Abarrotarlo con texto o gráficos es una de las principales razones de que los códigos fallen; más en <a href="/es/blog/why-is-my-qr-code-not-working/">por qué no escanea tu código</a>. Un módulo es un cuadradito de la rejilla, así que el margen físico depende del código: cuenta los cuadrados a lo ancho de tu código, calcula cuánto mide un módulo y deja cuatro de esos anchos libres por cada lado. Para un código de 2 cm con 29 módulos a lo ancho, un módulo mide unos 0,7 mm, así que necesitas unos 2,8 mm de espacio libre alrededor; y ese margen debe ser del mismo color claro que el fondo del código, no un marco, una marca de corte o un pliegue.</p>
+
+<p>La zona de silencio es también donde el software de maquetación te sabotea en silencio. Una herramienta de diseño que recorta una imagen hasta su patrón visible, un sangrado de impresora que recorta el margen o un marco dibujado ajustado alrededor del código pueden comerse el margen después de que lo fijaste correctamente. Revisa el margen en el arte final, no solo en el generador, y recuerda que el margen forma parte de la huella: un código de 2 cm con su zona de silencio necesita más de 2 cm de espacio libre en la tarjeta.</p>
+
+<h2>En pantallas: píxeles en vez de centímetros</h2>
+
+<p>Los tamaños de impresión no se traducen directamente a pantallas, porque el tamaño físico de una pantalla varía. La regla práctica de trabajo para mostrar en pantalla es no bajar de unos 200 × 200 píxeles, y cuanto más, mejor: la gente suele sostener el teléfono a distancia de brazo al escanear, y un código pequeño en pantalla compite con brillos y luz de la sala. Para diapositivas y pantallas proyectadas, manda la regla de distancia: estima a qué distancia se sienta el espectador más lejano, divide entre diez y haz que el código proyectado tenga al menos ese ancho. Un código que parece generoso en tu portátil puede ser diminuto en la pared de una sala.</p>
+
+<h2>Materiales y superficies: dónde se tuercen los buenos tamaños</h2>
+
+<p>El tamaño es solo una parte de un código impreso fiable, y la superficie puede deshacer un tamaño perfecto. Los laminados brillantes causan brillos; un acabado mate suele ser más seguro para carteles y menús, y un código de mesa bajo un foco de restaurante debería probarse bajo ese foco, no con la iluminación de la oficina. Las superficies curvas distorsionan la rejilla: un código envuelto alrededor de una botella pequeña se lee peor que el mismo código en plano, así que usa un panel plano o imprime más grande. La cartulina texturizada y el papel térmico de recibos difuminan el detalle fino, y por eso los recibos necesitan URLs cortas y una prueba en la impresora real. Sobre papel oscuro, imprime el código sobre un parche blanco. Al aire libre, imprime más grande y usa un nivel mayor de corrección de errores.</p>
+
+<h2>Errores comunes de impresión</h2>
+
+<ul>
+<li><strong>Impreso demasiado pequeño.</strong> El código se ve bien en el archivo de diseño y falla en la mano, porque cada módulo mide una fracción de milímetro de ancho. Aumenta el tamaño o acorta el contenido.</li>
+<li><strong>Estirado o aplastado.</strong> Arrastrar una esquina sin bloquear las proporciones distorsiona los patrones de posicionamiento: los tres cuadrados grandes de las esquinas que usan los escáneres para localizar el código.</li>
+<li><strong>Ampliado desde un PNG pequeño y borroso.</strong> El suavizado normal convierte bordes nítidos en difuminado gris. Usa SVG, o escalado por vecino más cercano.</li>
+<li><strong>Zona de silencio recortada.</strong> Texto, bordes o un recorte ajustado que invade el margen impiden que el escáner encuentre los bordes del código.</li>
+<li><strong>Bajo contraste.</strong> Los colores de marca que se ven elegantes en pantalla pueden fallar en impresión, donde tinta y papel cambian los tonos. Código oscuro sobre fondo claro, siempre, y revisa la prueba impresa.</li>
+<li><strong>Logo demasiado grande para el tamaño de impresión.</strong> Un código con logo necesita un mínimo de 3 × 3 cm en impresión, no 2 × 2 cm, y el logo debería mantenerse por debajo de alrededor del 30% del área del código. La <a href="/es/blog/add-logo-to-qr-code/">guía del logo</a> cubre el equilibrio.</li>
+<li><strong>Nunca probado.</strong> El error más caro, porque convierte cada punto de arriba, de un detalle arreglable, en una reimpresión.</li>
+</ul>
+
+<h2>Lista de verificación antes de enviar el archivo</h2>
+
+<ol>
+<li><strong>Formato:</strong> SVG para impresión profesional y cualquier cosa grande; PNG a 1024 o 2048 px si la impresora necesita mapa de bits, nunca JPG.</li>
+<li><strong>Tamaño:</strong> el mayor entre el mínimo de 2 cm y la distancia ÷ 10, redondeado hacia arriba, comprobado con la distancia real de escaneo.</li>
+<li><strong>Densidad:</strong> URL corta, solo los campos necesarios, y una impresión más grande si la rejilla se ve densa.</li>
+<li><strong>Zona de silencio:</strong> al menos cuatro módulos de margen claro y luminoso por los cuatro lados, confirmados en el arte final.</li>
+<li><strong>Contraste:</strong> módulos oscuros sobre fondo claro, verificados en la prueba impresa, no solo en pantalla.</li>
+<li><strong>Acabado y superficie:</strong> mate donde el brillo sea un riesgo, paneles planos en objetos curvos, un parche blanco sobre papel oscuro.</li>
+<li><strong>Prueba:</strong> una copia a tamaño final, sobre el material final, escaneada con más de un teléfono con la iluminación donde se usará, más una comprobación de que el destino abre con datos móviles.</li>
+</ol>
+
+<h2>La comparación honesta: impresión frente a pantalla, estático frente a dinámico</h2>
+
+<p>La impresión y la pantalla premian hábitos opuestos. En pantalla, un código se puede regenerar en segundos y probar al instante, así que un código pequeño o experimental no cuesta nada arreglar. En impresión, cada arreglo es una reimpresión, y por eso la impresión exige las opciones conservadoras: SVG antes que PNG, el tamaño mayor, la zona de silencio completa, el escaneo de prueba. Tratar un archivo de impresión como un archivo de pantalla — exportar pequeño, recortar ajustado, saltarse la prueba — es como los buenos diseños se vuelven cuadrados muertos en una tirada terminada.</p>
+
+<p>La elección entre estático y dinámico importa en impresión por otra razón: qué pasa después de la tirada. Un código estático codifica su destino directamente, no necesita registro, no lleva marca de agua y nunca caduca: ideal para un destino fijo como una página principal o un manual de producto. Un código dinámico codifica una redirección, así que su destino se puede editar después de imprimir y lleva estadísticas de escaneo; esa es la opción adecuada cuando el destino puede cambiar, o cuando necesitas saber si el tamaño y la colocación que elegiste están funcionando. Lo que un código dinámico no puede hacer es rescatar una impresión mal dimensionada: editar el destino no arregla módulos demasiado pequeños para leer. Dimensiona primero la impresión correctamente.</p>
+
+<p>Una comparación más vale la pena hacerla sin rodeos, porque decide presupuestos: un código más grande es casi gratis, y una reimpresión no. Pasar de 2 cm a 3 cm en una tarjeta de visita no cuesta nada en impresión; reimprimir mil tarjetas cuesta toda la tirada. Cuando la decisión de tamaño está ajustada, el tamaño mayor es casi siempre la opción más barata, y un código con escaneos ilimitados detrás sigue siendo útil por popular que se vuelva.</p>
+
+<p>Haz el tuyo en el <a href="/es/qr-code-with-logo/">generador gratuito</a> — cualquiera de los 17 tipos, PNG hasta 2048 px o SVG, códigos estáticos sin registro y sin caducidad, o un código dinámico gratis que puedes editar después de imprimir. Si el código lleva tu logo, lee primero la <a href="/es/blog/add-logo-to-qr-code/">guía del logo</a>: un código con logo necesita el mínimo mayor que esta tabla ya supone.</p>
     </div>
 
     <section class="sources">
       <h2>Fuentes</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La especificación de simbología del código QR. Define los cuatro niveles de corrección de errores (L 7%, M 15%, Q 25%, H 30%) y la zona de silencio de 4 módulos.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La especificación de la simbología del código QR, publicada en 2024-08 (edición 4). Respalda los cuatro niveles de corrección de errores (L 7%, M 15%, Q 25%, H 30%) y la zona de silencio de 4 módulos.</li>
+      <li><a href="https://www.qrcodebarn.com/blog/qr-code-size-guide.html">QRCodeBarn — Guía de tamaño de códigos QR: cómo cambiar el tamaño de un código QR correctamente</a> - Publicada el 13 de octubre de 2026. Respalda el mínimo práctico de 2 cm, la regla práctica de distancia ÷ 10 con ejemplos desarrollados, la zona de silencio de 4 módulos (2,8 mm en un código de 2 cm y 29 módulos), la orientación de mapa de bits a 300 DPI, la comprobación de 600 px = unos 5 cm a 300 DPI, y el ejemplo de 29 × 29 a 37 × 37 en niveles M/H.</li>
+      <li><a href="https://www.adobe.com/uk/creativecloud/photography/discover/image-resolution.html">Adobe — ¿Qué significa resolución? Guía de resolución de imagen</a> - Sin fecha de publicación en la página; consultada el 2026-11-03. Respalda 300 DPI como mínimo para los mejores resultados de impresión y 150 DPI como viable para impresiones grandes vistas desde lejos.</li>
+      <li><a href="https://pretty-qr.com/blog/qr-design-best-practices">Pretty QR — Reglas de diseño de códigos QR: 10 reglas para códigos bonitos que aún escanean</a> - Sin fecha de publicación en la página; consultada el 2026-11-03. Respalda el mínimo de impresión de 2 cm, la distancia de escaneo ÷ 10, la zona de silencio de 4 módulos y el mínimo de 200 × 200 px para pantallas.</li>
+      <li><a href="https://www.notraqr.com/qr-codes-technical.html">NoTraQR — Guía técnica de códigos QR: corrección de errores, formatos de archivo y comparación con códigos de barras</a> - Sin fecha de publicación en la página; consultada el 2026-11-03. Respalda la tabla de corrección de errores, las reglas prácticas de 2 cm / 3 cm, el dimensionado D/10 y las pruebas en al menos dos dispositivos (iOS y Android).</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presentando un código QR"></div>
       <div>
         <h3>Pruébalo tú mismo — gratis</h3>
-        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, trece tipos de contenido, exportación a PNG y SVG.</p>
+        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, los 17 tipos de contenido, exportación en PNG y SVG.</p>
         <a class="btn" href="/es/#studio">Abrir el generador</a>
       </div>
     </div>
@@ -141,15 +267,20 @@
       <div class="fl" style="margin-top:34px">Seguir leyendo</div>
       <div class="rel-grid">
         <a class="rel-card" href="/es/blog/free-qr-codes-that-dont-expire/"><b>Códigos QR gratis que nunca caducan</b></a>
-        <a class="rel-card" href="/es/blog/scan-qr-code-from-image/"><b>How to Scan a QR Code from a Picture, Photo, or Screenshot</b></a>
-        <a class="rel-card" href="/es/blog/wedding-rsvp-qr-code/"><b>Wedding RSVP QR Codes: No More Chasing Replies</b></a>
+        <a class="rel-card" href="/es/blog/scan-qr-code-from-image/"><b>Cómo escanear un código QR desde una foto o captura de pantalla</b></a>
+        <a class="rel-card" href="/es/blog/wedding-rsvp-qr-code/"><b>Códigos QR de confirmación para bodas: no más perseguir respuestas</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bueno saberlo</h2>
-    <details><summary><span>¿Cuál es el tamaño mínimo para un código QR impreso?</span></summary><p>Como regla práctica, 2 x 2 cm (0.8 x 0.8 pulgadas). Los códigos más pequeños fallan en muchos teléfonos, sobre todo en códigos con muchos datos como las vCards.</p></details>
+    <details><summary><span>¿Cuál es el tamaño mínimo para un código QR impreso?</span></summary><p>Como regla práctica, 2 × 2 cm (0,8 × 0,8 pulgadas). Los códigos más pequeños fallan en muchos teléfonos, sobre todo en códigos con muchos datos como las vCards.</p></details>
     <details><summary><span>¿Qué tan grande debe ser un código QR en un cartel?</span></summary><p>Usa la regla práctica de 1:10: el ancho del código debe ser al menos una décima parte de la distancia de escaneo esperada. Un cartel escaneado desde 5 metros necesita un código de 50 cm.</p></details>
-    <details><summary><span>¿PNG o SVG para imprimir?</span></summary><p>SVG es lo mejor: escala infinitamente sin pérdida de calidad. Si tu impresor necesita ráster, exporta PNG a 2048 px.</p></details>
+    <details><summary><span>¿PNG o SVG para imprimir?</span></summary><p>SVG es lo mejor: escala infinitamente sin pérdida de calidad. Si tu impresora necesita mapa de bits, exporta PNG a 2048 px. Nunca uses JPG: su compresión difumina los bordes de los módulos de los que depende un escáner.</p></details>
+    <details><summary><span>¿Cuánto margen necesita un código QR?</span></summary><p>Una zona de silencio de al menos 4 módulos de ancho por cada lado, del mismo color claro que el fondo del código, como especifica la ISO/IEC 18004. Para un código de 2 cm con 29 módulos a lo ancho, eso es unos 2,8 mm alrededor.</p></details>
+    <details><summary><span>¿Cómo calculo el tamaño para una distancia de escaneo?</span></summary><p>Divide la distancia entre diez y redondea hacia arriba, nunca por debajo del mínimo de 2 cm. Un código escaneado desde 2 metros necesita al menos 20 cm; desde 10 metros, al menos 1 metro.</p></details>
+    <details><summary><span>¿Una URL más larga necesita una impresión más grande?</span></summary><p>Sí. Más datos significan más módulos, y más módulos al mismo tamaño de impresión significan módulos más pequeños y más difíciles de leer. Usa una URL corta y limpia, o un código dinámico cuyo destino de redirección corta puedas editar después de imprimir.</p></details>
+    <details><summary><span>¿Qué tamaño debe tener un código QR en una pantalla?</span></summary><p>Como regla práctica, no por debajo de unos 200 × 200 píxeles. Para diapositivas y pantallas proyectadas, aplica la proporción 1:10 al ancho proyectado y a la distancia del espectador más lejano.</p></details>
+    <details><summary><span>¿Por qué falla mi código impreso cuando la versión en pantalla escanea?</span></summary><p>Las causas comunes son una zona de silencio recortada, brillo en laminado brillante, extensión de tinta en papel texturizado, una rejilla estirada o un PNG ampliado con suavizado. Prueba una copia a tamaño final, sobre el material final, y escanéala con más de un teléfono antes de la tirada completa.</p></details>
     </section>
   </article>
   <footer>

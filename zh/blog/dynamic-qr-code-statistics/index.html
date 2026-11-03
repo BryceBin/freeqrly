@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"动态二维码统计：扫码数据到底告诉你什么 | FreeQrly","description":"动态二维码统计：总扫码与独立扫码，按日、国家、城市、设备和系统划分——随你的码免费提供。以及 FreeQrly 从不追踪什么。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"动态二维码统计：扫码数据到底告诉你什么 | FreeQrly","description":"动态二维码统计：总扫码与独立扫码，按日、国家、城市、设备和系统划分——随你的码免费提供。以及 FreeQrly 从不追踪什么。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -67,7 +72,7 @@
       "name": "静态二维码统计扫码吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不统计。静态码从不碰服务器——目标地址就在图案里——所以没什么可数的。只有动态码汇报扫码。"
+        "text": "不是。静态码永远不碰服务器——目标就装在图案里——所以没什么可计的。只有动态码汇报扫码。"
       }
     },
     {
@@ -83,7 +88,39 @@
       "name": "我能看到谁扫了我的二维码吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不能——这是特意这样设计的。FreeQrly 只数扫码，不识别扫码的人。"
+        "text": "不是——而且这是刻意设计的。FreeQrly 统计扫码，不识别扫码者。扫码不带身份，所以如果决策需要知道谁回应了，在码后面放一个表单，让人们在那里自愿表明身份。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么一个码的总扫码数比独立扫码数多那么多？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因为同样的人在反复扫。总数远远跑在独立数前面，符合常客看到的码，比如柜台招牌或菜单；总数贴近独立数，符合大多被路人看到的码。把两个数字放在一起比较——只看总数会掩盖重复使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的码显示零扫码——是坏了吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不一定。先用自己的手机测一下印刷品：如果能扫，问题按顺序是位置、尺寸、对比度，或者没有扫码的理由。一周零扫码是关于位置的数据，不是码失败的证明。如果扫不出来，下关于受众的结论之前先检查破损、对比度和尺寸。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎么公平地比较两个位置？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每个位置给它自己的动态码，指向同一个目标，跑同样的时间、经过同样的工作日和周末，看数据之前先定好行动——如果一个超过另一个，你会做什么。把那周还发生的其他事，比如帖子发出去，记在图表旁边。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么这篇文章引用的外部统计这么少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因为外部数字只有附上测量、人群和日期才可用。这篇文章引用了两个带着这三样从原始发布者那里来的数字——ISO 二维码纠错级别和皮尤的美国智能手机调查——其余依靠你自己的 Dashboard。一个二手转述、剥离了方法的数字，在这里被排除在决策之外。"
       }
     }
   ]
@@ -101,49 +138,104 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">动态二维码<span class='hl hl-honey'>统计</span>能告诉你什么</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">动态码每次被扫都会回传一次。下面讲 FreeQrly 统计什么、怎么看，以及它永远不收集什么。</p>
-    <p class="meta" style="text-align:center">2026 年 10 月 16 日 · 阅读约 4 分钟</p>
+    <p class="meta" style="text-align:center">2026年10月16日 · 最后更新：2026年11月3日 · 阅读约15分钟</p>
     <div class="prose" style="margin-top:40px">
-
-<p>静态码是沉默的：它从不回传，所以没人——包括你——知道它被扫过多少次。动态码每次扫码都会向你的 Dashboard 汇报。下面讲 FreeQrly 统计什么、怎么看，以及它刻意不收集什么。</p>
-
-<h2>每张卡片上的数字</h2>
+<p>静态码是沉默的：它永远不回传，所以没人知道它被扫过多少次——包括你。动态码会把每次扫码汇报到你的 Dashboard。下面讲 FreeQrly 统计什么、怎么读它、它刻意永远不收集什么，以及怎么用你自己的数字做决策——外加这篇文章引用的仅有的外部数字，每个都附了原始来源，你可以自己核对。</p>
+<p>先说简短答案：扫码统计只回答三个问题，而且只有三个。哪个位置得到了关注？什么时候得到的？在什么样的设备上、大致从哪儿得到的？其他一切——扫码有没有变成顾客、海报好不好——都是你在此之上加的解读，而大多数误读都来自把解读当成测量。</p>
+<h2>FreeQrly 统计什么</h2>
+<p>在 Dashboard 里打开一个动态码，你看到的都是同一套数字。定义很重要，因为两种最常见的误读都来自把“总数”和“独立”混淆、把“今天”和“全部时间”混淆。</p>
+<div class="table-scroll"><table>
+<tr><th>数字</th><th>含义</th><th>怎么读</th></tr>
+<tr><td><strong>总扫码数</strong></td><td>全部时间每次扫码</td><td>这个码一生的足迹。总数只在投放时间相同的码之间比较。</td></tr>
+<tr><td><strong>今天</strong></td><td>今天到目前为止的扫码数</td><td>实时脉搏，不是结论。安静的上午说明不了晚上什么。</td></tr>
+<tr><td><strong>独立扫码数</strong></td><td>不同的扫码者，每天计一次。同一人同一天扫两次计为一次独立扫码。</td><td>最接近“多少人”的数字。如果总数远远高于独立数，就是一小群人在反复扫——或者一个码在被人传来传去。</td></tr>
+<tr><td><strong>近 7 天</strong></td><td>覆盖今天和前六天的每日柱状图——永远是七根柱子，安静的日子是零高度的柱子</td><td>形状比高度重要。空缺、傍晚扎堆、只在工作日出现的模式一眼就能看出来。</td></tr>
+<tr><td><strong>按国家</strong></td><td>扫码来自哪里，按扫码者的大致位置</td><td>适合发现一个走远了的码——新国家通常意味着有人把它分享到了网上。</td></tr>
+<tr><td><strong>按城市</strong></td><td>同样的大致位置，精确到城市</td><td>适合比较两个街区或两个场地。大致就是大致：把城市当成区域，别当成地址。</td></tr>
+<tr><td><strong>按设备</strong></td><td>手机、平板或桌面</td><td>中午出现桌面扫码的海报，很可能是从截屏里扫的，不是墙上扫的。</td></tr>
+<tr><td><strong>按操作系统</strong></td><td>iOS、Android 及其他</td><td>对你的受众和测试的合理性检查：如果几乎所有扫码都在一个系统上，先在那个系统上测试目标页面。</td></tr>
+</table></div>
+<p>每项明细都带数量和百分比。百分比是这个码扫码数的份额，不是任何更大整体的份额——一个码大多是 iOS 扫码，不意味着你的顾客大多用 iPhone。它的意思是扫这个码的人大多用 iPhone 扫。</p>
+<h2>两个外部数字，附来源</h2>
+<p>这篇文章刻意很少引用外部数字，原因值得明说：从汇总文章里借来的二维码统计，通常缺少让一个数字可用的三个事实——测的是什么、针对谁、什么时候测的。下面的两个数字带着这三样，从原始发布者那里来。</p>
+<h3>二维码标准本身：码能扛住多少损伤</h3>
+<p>扫码统计只是印刷决策的一半；另一半是码能不能扛住拿取。二维码标准 ISO/IEC 18004:2024 定义了四档纠错级别，每档说明码字的多少在受损时可以恢复：</p>
+<div class="table-scroll"><table>
+<tr><th>级别</th><th>可恢复的码字</th><th>典型用途</th></tr>
+<tr><td>L</td><td>7%</td><td>干净的数字显示</td></tr>
+<tr><td>M</td><td>15%</td><td>日常室内印刷</td></tr>
+<tr><td>Q</td><td>25%</td><td>会被拿取或放在户外的印刷品</td></tr>
+<tr><td>H</td><td>30%</td><td>中间带 Logo 的码，或者粗暴对待</td></tr>
+</table></div>
+<p>来源：ISO/IEC 18004:2024，二维码条码码制规范，经 ISO 标准页（<a href="http://www.iso.org/standard/83389.html">iso.org/standard/83389.html</a>）。仔细读这些百分比：它们说的是码字，不是印刷表面积。H 级的码扛不住印刷品上任何可能的 30% 的洞，更高的级别是通过把码的更多部分花在冗余上来买韧性。对统计来说，实际意义是：放在会被拿取的表面上、用低级别印的码会低报它的真实受众——人们试着扫了，码失败了，没有扫码被记录下来。</p>
+<h3>谁带着相机手机：皮尤的美国调查</h3>
+<p>读设备明细时，了解上限有帮助：受众里有多少人根本能扫。皮尤研究中心 2026 年移动设备情况说明书报告，91% 的美国成年人说自己拥有智能手机，98% 的人说自己拥有某种手机，高于该中心 2011 年第一次这类调查时的 35% 智能手机拥有率。来源：皮尤研究中心《Americans' Use of Mobile Devices in 2026》（<a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">pewresearch.org/internet/fact-sheet/mobile/</a>），基于 2026 年 1 月 30 日至 6 月 18 日对 5,511 名美国成年人做的调查，总体误差幅度正负 1.8 个百分点。</p>
+<p>三个提醒跟着这个数字走，而且适用于你遇到的任何外部数字。第一，人群：这是美国成年人，不是全世界，也不是你活动的宾客名单。第二，测量：自我报告的拥有率，不是扫码行为。第三，日期：2026 年的调查描述的是 2026 年。一个脱离了人群、测量或日期的数字不再是证据，变成了装饰。</p>
+<h2>怎么读你自己的数字：五个问题</h2>
+<p>你的 Dashboard 数字不需要外部基准就有用。按它行动之前，先让每次解读都过这五个问题：</p>
+<ol>
+<li><strong>跟什么比？</strong>一个码的总数单独看没什么意义。比较同一时期、类似位置、同一优惠的码。同一周的传单码和海报码可以比；去年春天的传单码和这周的海报码不能比，因为季节、优惠和受众在这期间都变了。</li>
+<li><strong>什么时期？</strong>7 日图表的存在就是为了阻止单日解读。周一看似死了的码，可能是傍晚码、周末码或通勤路线码。判断一天的高度之前，先读一周的形状。</li>
+<li><strong>总数还是独立数？</strong>总数远远跑在独立数前面，说明同样的人在回来——对菜单或时刻表是好事，对一次性优惠是警告信号。独立数贴近总数，说明每次扫码都是不同的人，码是在广度上触达而不是深度上触达。</li>
+<li><strong>那天还发生了什么？</strong>高峰需要背景。帖子发出去之后立刻出现的一波扫码，是帖子的功劳，不是海报的。改目标那天出现的一波，是新目标的功劳，不是旧位置的。在图表旁边记下外部事件——帖子、提及、价格变动——否则图表会以十足的把握误导你。</li>
+<li><strong>扫码通向了什么？</strong>扫码是一瞥，不是转化。把扫码统计跟目标本身衡量的东西配对——表单提交、订单、注册——按目标的结果评判码，不只按扫码数。</li>
+</ol>
+<h2>读真实的一周：模式，不只是总数</h2>
+<p>同样的明细，当成行为而不是数字来读：</p>
 <ul>
-<li><strong>总扫码。</strong>这个码有史以来的每一次扫码。</li>
-<li><strong>今日。</strong>今天到目前为止的扫码。</li>
-<li><strong>独立扫码。</strong>不同的扫码人，每天计一次。同一个人同一天扫两次，只算一次独立扫码。</li>
-<li><strong>最近 7 天。</strong>按天统计的柱状图，覆盖今天和前六天——永远是七根柱，没扫码的日子是零高度的柱，这样空缺一目了然。</li>
-</ul>
-
-<h2>细分数据</h2>
-<p>在码上打开统计，你会看到四组细分，每组都有数量和百分比：</p>
-<ul>
-<li><strong>按国家和城市。</strong>扫码来自哪里，根据扫码人的大概位置。</li>
-<li><strong>按设备。</strong>手机、平板还是电脑。</li>
-<li><strong>按系统。</strong>iOS、Android 以及其他的。</li>
-</ul>
-<p>像做活动一样用它们：传单发到两个街区，看哪个街区效果好；一张海报中午收到电脑端扫码，多半是有人在扫截图，不是扫墙上的。</p>
-
-<h2>FreeQrly 永远不收集什么</h2>
-<p>统计都是汇总数据——没有任何按访客的记录可看。“独立扫码”是扫码人 IP 地址、浏览器和日期的单向哈希：足够按天数不同的扫码人，不可能反推出具体某个人。没有姓名，没有邮箱，没有精确位置，没有跨码追踪个人。静态码什么都不统计——它们从不碰服务器，所以没什么可数的。</p>
-
-<h2>老老实实看数字</h2>
-<ul>
-<li><strong>扫码不是顾客。</strong>一次扫码只是一瞥。拿码跟码比，不要跟想象中的基准比。</li>
-<li><strong>零也是数据。</strong>一个码一周没人扫，是在告诉你位置放错了，不是码错了。</li>
-<li><strong>峰值需要背景。</strong>帖子发出去之后立刻来一波扫码，那是帖子的功劳，不是海报的。7 天图表能把这个看清楚。</li>
-</ul>
-
-<h2>读懂真实的一周</h2>
-<p>同样的细分数据，换个读法——看行为而不是数字：</p>
-<ul>
-<li><strong>只在晚上被扫。</strong>下班后才活跃起来的码，很可能在通勤路线或晚间场所——是客流，不是办公人流。</li>
-<li><strong>突然出现的新城市。</strong>扫码扩散到你从未投放过的城市，通常意味着有人在聊天或帖子里分享了这个码——码自己跑出去了。</li>
+<li><strong>只在傍晚扫。</strong>下班后才醒来的码，很可能在通勤路线或晚间场地——是晚间访客，不是办公室访客。</li>
+<li><strong>突然出现的新城市。</strong>扫码扩散到一个你从没印过的城市，通常意味着有人在聊天或帖子里分享了码——码在你不知情的情况下走远了。检查码指向哪里：被分享的码会把陌生人送到你的目标，所以目标对陌生人也应该说得通。</li>
 <li><strong>只在工作日被扫。</strong>周末安静下来的码，很可能在办公室海报或工作日场所，而不是周末场所。</li>
+<li><strong>桌面扫码占大头。</strong>出现桌面扫码的海报，很可能是从截屏或转发图片里扫的，不是墙上扫的。墙上的版本可能没问题；是截屏版本在干活，目标也应该在桌面屏幕上检查一遍，不只在手机上检查。</li>
+<li><strong>零也是数据。</strong>一周没有扫码的码是在告诉你位置错了，不是码错了。印好的码很少无声失败——要么能扫要么不能扫，用你自己的手机几秒钟就能测出来。如果能扫却没人扫，问题按顺序是位置、尺寸、对比度，或者没有扫码的理由。</li>
 </ul>
-
-<p>准备试试？<a href="/zh/blog/how-to-create-a-dynamic-qr-code/">创建你的第一个动态码</a>——免费登录，20 个码（目前不限量）——首批印完后再回来看数据。已经印好需要改？<a href="/zh/blog/how-to-edit-a-qr-code-after-printing/">印后如何修改二维码</a>。</p>
-
+<h2>一个算给你看的例子，算术都摆出来</h2>
+<p>示意例子——下面的数字是假设的，只用来展示算术，不是任何真实营销活动的测量。假设两个码在同样的两周里指向同一个页面。A 码在柜台招牌上，记录了 120 次总扫码、90 次独立扫码。B 码在橱窗海报上，记录了 60 次总扫码、55 次独立扫码。得出三个解读，每个对应不同的行动：</p>
+<ul>
+<li><strong>触达：</strong>A 码触达了更多不同的人（90 对 55），所以柜台招牌是更广的位置。</li>
+<li><strong>重复使用：</strong>A 码的总数比独立数多 30 次，B 码只多 5 次，所以柜台访客反复扫，而海报访客大多只扫一次。这符合常客看到的柜台招牌和路人看到的海报——而且这提示柜台码的目标应该奖励第二次到访，海报码的目标应该一次就把话说清楚。</li>
+<li><strong>下一步测试：</strong>先什么都别换。把 B 码的海报移到柜台一周，把 A 码的招牌移到橱窗，再比较一次。如果模式跟着位置走，原因就是位置。如果模式跟着码走，原因就是目标或设计。一次对调胜过一个月关于哪块牌子更好的争论。</li>
+</ul>
+<p>这个例子里的重点是方法，不是数字：同一时期、同一目标、一次只改一个变量，测试开始之前就写好决策规则。</p>
+<h2>搭一个可信的对比</h2>
+<ol>
+<li><strong>每个位置给它自己的动态码。</strong>一个位置一个码——柜台、橱窗、传单、收据——都指向同一个目标。共享码分不清位置，建立在共享码上的对比是带图表的猜测。</li>
+<li><strong>目标保持完全相同。</strong>两个码指向不同页面，你测的是页面，不是位置。一次只测一个变量。</li>
+<li><strong>跑同样长的时间。</strong>一起开始、一起结束，经过同样的工作日和周末。跑过节假周末的码，跟跑过普通一周的码没法比。</li>
+<li><strong>记下还发生了什么。</strong>在图表旁边留一行日志：帖子发布了、价格变了、场地关了。没有备注的高峰会变成谜。</li>
+<li><strong>看数据之前先定好行动。</strong>写下如果 A 超过 B 你会做什么——移动 B、重印 B、停用 B——然后再打开统计。</li>
+<li><strong>按结果行动，然后重新测量。</strong>移动弱的码、改强的码的目标，或者停用沉默的码——再看下一张 7 日图表有没有变化。一个从不改变决策的统计是娱乐，不是测量。</li>
+</ol>
+<h2>FreeQrly 永远不收集什么</h2>
+<p>统计是聚合的——没有任何针对单个访客的记录可查。“独立扫码”是扫码者 IP 地址、浏览器和日期的单向哈希：足够按天数不同的扫码者，不可能反推成一个人。没有姓名、没有邮箱、没有精确位置、没有跨码追踪个人。静态码什么都不追踪——它们永远不碰服务器，所以没什么可计的。</p>
+<p>这个限制决定了你应该向统计问什么。你可以问哪个位置赢了、什么时候赢的、在什么设备上赢的。你不能问谁扫了：扫码不带身份，任何附着的身份都是从别处来的。如果你的决策确实需要知道谁回应了，在码后面放一个表单，让人们在那里自愿表明身份。</p>
+<h2>扫码统计告诉不了你什么</h2>
+<ul>
+<li><strong>扫码不是顾客。</strong>扫码是一瞥。有人可能出于好奇、误触，或者为了给朋友看而扫，这些都不是一笔销售。按目标的结果评判，别只按扫码数。</li>
+<li><strong>扫码不是满意度。</strong>投诉表上扫码很多不是成功故事。把目标的内容和数量一起读。</li>
+<li><strong>平均数掩盖了形状。</strong>每周总数相同的两个码可能有相反的模式——一个平稳，一个起伏——平稳的那个通常是更健康的位置。永远读 7 日图表，不只读总数。</li>
+<li><strong>沉默有多种含义。</strong>零扫码可能意味着位置不好、印刷破损、目标换了，或者码印在了没人看的地方。下关于受众的结论之前，先用自己的手机测一下印刷品。</li>
+<li><strong>外部基准的误导多于帮助。</strong>一个没有人群、测量和日期的数字没法跟你的码比较，因为你不知道它数了什么。厂商发布的数字值得多查一步：把它当成厂商对自己用户的自述，找说明调查对象和方法的方法论页面。一个原始页面说明了方法的数字可以带着它的范围使用；一个二手转述、剥离了方法的数字，应该完全排除在你的决策之外。这就是为什么这篇文章依靠你自己的 Dashboard 和两个标准级的来源，而不是一堆借来的百分比。</li>
+</ul>
+<h2>每周十分钟的例行工作</h2>
+<ul>
+<li>打开每个在用的码，先读 7 日图表的形状，再读总数。</li>
+<li>比较并排跑过、同一时期、同一目标的位置。</li>
+<li>移动、改指向或停用最弱的位置——改一处，不是五处。</li>
+<li>在那周扫码者用得最多的设备上检查目标页面。</li>
+<li>在图表旁边记下任何外部事件，这样下周的高峰到来时解释已经准备好了。</li>
+</ul>
+<p>这样每周做一个月，统计就成了一种习惯：移动招牌、停用死位置。</p>
+<p>准备好试试了？<a href="/zh/blog/how-to-create-a-dynamic-qr-code/">创建你的第一个动态码</a>——免费登录，免费账号 20 个，限时活动期间扫码不限——第一次印刷之后再回来看看。已经印好、需要修复？<a href="/zh/blog/how-to-edit-a-qr-code-after-printing/">二维码印出来之后怎么改</a>讲的是不用重印改目标的方法。</p>
     </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024 — QR code bar code symbology specification</a> - 佐证纠错表：L 恢复码字的 7%，M 15%，Q 25%，H 30%。标准的 2024 年版。</li>
+      <li><a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">Pew Research Center — Americans' Use of Mobile Devices in 2026</a> - 佐证：91% 的美国成年人说自己拥有智能手机，98% 的人说自己拥有某种手机，高于该中心 2011 年第一次这类调查时的 35% 智能手机拥有率。基于 2026 年 1 月 30 日至 6 月 18 日对 5,511 名美国成年人做的调查，误差幅度正负 1.8 个百分点。</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
       <div>
@@ -155,17 +247,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
-        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-blurry/"><b>Why Is My QR Code Blurry? 5 Fixes That Work</b></a>
-        <a class="rel-card" href="/zh/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
+        <a class="rel-card" href="/zh/blog/make-qr-code-in-canva-excel-word/"><b>怎么在 Canva、Excel 或 Word 里做二维码（免费）</b></a>
+        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-blurry/"><b>我的二维码为什么发糊？5 个管用的修复办法</b></a>
+        <a class="rel-card" href="/zh/blog/get-google-reviews-with-qr-code/"><b>怎么用二维码获得更多 Google 评价</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
     <details><summary><span>什么算一次独立扫码？</span></summary><p>一个扫码人，每天一次。FreeQrly 用 IP 地址、浏览器和日期的单向哈希数不同的扫码人——同一个人一天扫两次只算一次。</p></details>
-    <details><summary><span>静态二维码统计扫码吗？</span></summary><p>不统计。静态码从不碰服务器——目标地址就在图案里——所以没什么可数的。只有动态码汇报扫码。</p></details>
+    <details><summary><span>静态二维码统计扫码吗？</span></summary><p>不是。静态码永远不碰服务器——目标就装在图案里——所以没什么可计的。只有动态码汇报扫码。</p></details>
     <details><summary><span>访客数据私密吗？</span></summary><p>私密。统计只有汇总数据：按天、国家、城市、设备、系统分的计数。没有姓名、邮箱、精确位置，也没有按访客的记录。独立扫码用的是不可逆哈希。</p></details>
-    <details><summary><span>我能看到谁扫了我的二维码吗？</span></summary><p>不能——这是特意这样设计的。FreeQrly 只数扫码，不识别扫码的人。</p></details>
+    <details><summary><span>我能看到谁扫了我的二维码吗？</span></summary><p>不是——而且这是刻意设计的。FreeQrly 统计扫码，不识别扫码者。扫码不带身份，所以如果决策需要知道谁回应了，在码后面放一个表单，让人们在那里自愿表明身份。</p></details>
+    <details><summary><span>为什么一个码的总扫码数比独立扫码数多那么多？</span></summary><p>因为同样的人在反复扫。总数远远跑在独立数前面，符合常客看到的码，比如柜台招牌或菜单；总数贴近独立数，符合大多被路人看到的码。把两个数字放在一起比较——只看总数会掩盖重复使用。</p></details>
+    <details><summary><span>我的码显示零扫码——是坏了吗？</span></summary><p>不一定。先用自己的手机测一下印刷品：如果能扫，问题按顺序是位置、尺寸、对比度，或者没有扫码的理由。一周零扫码是关于位置的数据，不是码失败的证明。如果扫不出来，下关于受众的结论之前先检查破损、对比度和尺寸。</p></details>
+    <details><summary><span>怎么公平地比较两个位置？</span></summary><p>每个位置给它自己的动态码，指向同一个目标，跑同样的时间、经过同样的工作日和周末，看数据之前先定好行动——如果一个超过另一个，你会做什么。把那周还发生的其他事，比如帖子发出去，记在图表旁边。</p></details>
+    <details><summary><span>为什么这篇文章引用的外部统计这么少？</span></summary><p>因为外部数字只有附上测量、人群和日期才可用。这篇文章引用了两个带着这三样从原始发布者那里来的数字——ISO 二维码纠错级别和皮尤的美国智能手机调查——其余依靠你自己的 Dashboard。一个二手转述、剥离了方法的数字，在这里被排除在决策之外。</p></details>
     </section>
   </article>
   <footer>

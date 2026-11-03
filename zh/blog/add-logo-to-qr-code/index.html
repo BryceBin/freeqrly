@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"二维码中间加Logo怎么做，还能保证扫得出来 | FreeQrly","description":"把 Logo 放到二维码中间：上传一张方形 PNG，面积控制在约 30% 以内，让纠错来兜底。免费、无水印，照样扫得出来。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"二维码中间加Logo怎么做，还能保证扫得出来 | FreeQrly","description":"把 Logo 放到二维码中间：上传一张方形 PNG，面积控制在约 30% 以内，让纠错来兜底。免费、无水印，照样扫得出来。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "Logo 会把二维码搞坏吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "只要面积在约 30% 以内就不会。加 Logo 时纠错等级会自动提高，被盖住的中间部分不会影响扫码。"
+        "text": "不会，只要它保持在码面积约 30% 以内——这是生成器采用的上限——想要安全余量就靠近 20–25%。加 Logo 时纠错会自动提高，所以盖住的中间不会阻止扫码。"
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Logo 用什么文件最好？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "一张方形透明底 PNG。长方形 Logo 和带白底框的 Logo 既占地方又跟图案打架。"
+        "text": "方形透明底 PNG。长方形 Logo 和带白框的 Logo 浪费空间、跟图案打架。先简化图形：细小的字和标语在码中间的尺寸下会消失。"
       }
     },
     {
@@ -89,6 +89,38 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "多数印刷用最高 2048 px 的 PNG；像横幅那样需要无限放大时用 SVG。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么 Logo 必须留在中间？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "中间不含定位数据，所以是盖住最安全的地方，居中还能让图形远离四个角上的定位图案。哪怕盖住一个定位图案，也可能彻底阻止扫码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "带 Logo 的码印刷时应该印多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "至少 3 × 3 cm，而不是素码可以用的 2 × 2 cm，数据多或者要在弱光下扫的话还要更大。打印尺寸指南里有完整的表格。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷之前怎么测试带 Logo 的码？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "测最终尺寸、最终材质的印好的成品，至少用两部手机——一部 iPhone、一部安卓——在真实距离和真实光线下测。把犹豫当成失败：缩小 Logo、提高对比度或者印大一点，再测一次。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什么时候该跳过 Logo？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "超小印刷、数据很密的码、会被擦伤或风吹日晒的表面，或者码会被以你没选过的尺寸复制时。这些情况下素码更宽容。"
       }
     }
   ]
@@ -130,40 +162,127 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">你的 Logo，<span class='hl hl-blush'>放在中间</span>——照样能扫</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">有了 Logo，二维码就是你的了。同时它也盖住了图案的一部分。下面讲怎么两全：Logo 稳居正中，第一次扫就成功。</p>
-    <p class="meta" style="text-align:center">2026年10月28日 · 4分钟阅读</p>
+    <p class="meta" style="text-align:center">2026年10月28日 · 最后更新：2026年11月3日 · 阅读约14分钟</p>
     <div class="prose" style="margin-top:40px">
+<p>二维码中间的 Logo 在三个条件同时成立时才管用：Logo 保持小、码的纠错级别设得高、重要的东西都没被盖住。实际操作就是：方形透明底 Logo、居中、面积控制在约 30% 以内作为上限——想要安全余量就再小一点——深色印在浅色上，整个码周围留出清晰边距。做到这些，在两部手机上测一下印好的成品，码第一次扫就能读出来，同时一眼就能看出是你的品牌。</p>
 
-<p>素二维码能用。带 Logo 的二维码既能用又能被认出来——印在包装上、名片上、隔着房间的海报上都一样。但风险是真实存在的：Logo 压在图案上面，而手机读的正是图案。比例失衡，码就扫不出来；比例对了，没人会注意到背后的技术——大家只看到你的品牌。</p>
+<p>这个简短版藏着一个老实的矛盾，本指南不回避它：30% 是上限，不是目标。最高纠错级别大约能恢复 30% 的数据，所以 Logo 一接近这个上限，留给印刷擦伤、暗光房间或老手机的余地就几乎没有了。很多设计指南因此建议把居中 Logo 控制在码面积的 20–25% 左右，这样磨损还有被吸收的空间。如果你的 Logo 非大不可，本指南后面讲拿什么去换——更短的内容、更大的印刷尺寸，或者更简单的图形——而不是指望上限来救你。</p>
 
-<h2>三条规则</h2>
-<ol>
-<li><b>方形 PNG 加透明底。</b>方形透明底 Logo 放在中间最干净。长方形 Logo 或带白底框的 Logo 既占地方又跟图案打架。</li>
-<li><b>面积控制在约 30% 以内。</b>这是生成器本身采用的经验值：小到剩下的图案还能承载数据，大到一眼就能认出来。</li>
-<li><b>让纠错来兜底。</b>二维码天生耐损——最高纠错等级下，图案缺失 30% 照样能读。加上 Logo 后，纠错等级会自动提高，被盖住的中间部分就不成问题了。</li>
-</ol>
+<h2>Logo 为什么能成立：纠错</h2>
 
-<h2>一步一步来</h2>
-<p>先做码——任何类型加 Logo 都行：链接、电子名片、WiFi 网络都一样。然后在工作台的 Logo 步骤上传 Logo，放到中间，下载。打印用最高 2048 px 的 PNG，需要无限放大就用 SVG。Logo 步骤适用于所有码类型，同一张 Logo 也能应用到整批。</p>
+<p>二维码不只是一张你链接的图片。它是由深浅方格（叫作模块）组成的网格，再加上编织在网格里的冗余数据，好让读取器把缺失的部分补回来。冗余程度由纠错级别决定，按二维码标准 ISO/IEC 18004 定义：</p>
 
-<h2>四个会让扫码失败的错误</h2>
+<div class="table-scroll"><table>
+<tr><th>级别</th><th>大约能恢复</th><th>用在哪</th></tr>
+<tr><td>L（低）</td><td>7%</td><td>干净、只在屏幕上用的码，没有 Logo</td></tr>
+<tr><td>M（中）</td><td>15%</td><td>普通印刷码；很好的默认值</td></tr>
+<tr><td>Q（四分）</td><td>25%</td><td>会磨损、沾灰、擦伤的印刷品</td></tr>
+<tr><td>H（高）</td><td>30%</td><td>任何带 Logo 的码，或者粗糙表面</td></tr>
+</table></div>
+
+<p>加上 Logo 后，被盖住的中间就等于损伤，读取器靠分布在其余码上的冗余数据把它重建出来。这就是纠错级别比 Logo 文件本身更重要的原因：在 L 级或 M 级上，Logo 还没到打印机就吃掉了你大部分安全余量；而在 H 级上，同样的 Logo 处在一个大得多的预算里。FreeQrly 在你加 Logo 时会自动提高纠错级别，所以你不用手动设级别——但你仍然要尊重它买来的东西。更高的级别也会增加模块，让同样的内容更密：一个在 M 级下能装进 29 × 29 网格的短地址，在 H 级下需要 37 × 37，所以在同样印刷尺寸下每个模块都变小了。目标保持短，带 Logo 的码比素码印大一点。</p>
+
+<h2>Logo 尺寸：上限、安全区，以及面积和宽度的陷阱</h2>
+
+<p>Logo 尺寸的建议很容易读错，因为指南用两种方式引用它。一个占码<em>宽度</em> 30% 的 Logo 只占<em>面积</em>的约 9%，而一个占<em>面积</em> 30% 的 Logo 占宽度约 55%。本指南说“码面积的约 30% 以内”时，说的是面积——Logo 盖住整个方块的份额——这也是 FreeQrly 生成器采用的上限。任何接近这个上限的情况，都要当成一个已经没有余地的码来对待。</p>
+
+<div class="table-scroll"><table>
+<tr><th>Logo 占码面积的份额</th><th>实际意味着什么</th></tr>
+<tr><td>约 20% 以内</td><td>舒服。印刷差异、反光和磨损还有余地。</td></tr>
+<tr><td>约 20–25%</td><td>大多数设计指南推荐的品牌码实际上限范围。</td></tr>
+<tr><td>接近 30%</td><td>上限。干净条件下能扫，但一道擦伤或暗光就能让它完蛋。</td></tr>
+<tr><td>超过 30%</td><td>超出了纠错能恢复的范围。缩小 Logo 或者缩短内容。</td></tr>
+</table></div>
+
+<p>另外两条放置规则是绝对的，不是品味问题。第一，Logo 必须放在正中间。中间不含定位数据，是盖住最安全的地方，居中还能让图形远离四个角上三个大的定位图案——相机最先找来定位、定向和摆正码的方块。哪怕盖住一个定位图案，也可能彻底阻止扫码，不管纠错级别多高。第二，Logo 绝不能碰静区，就是码周围的空白边，标准规定每边最少 4 个模块宽。Logo 边缘渗进这个边距，能让相机根本找不到码的边缘。</p>
+
+<p>如果 Logo 非大不可——宽版文字标、细节繁复的徽章——你有三个老实的办法。缩短目标，因为数据越少图案越宽松、模块越大。把码印大一点，因为模块越大容忍的损伤越多；<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>里讲了名片、传单和海报的尺寸。或者简化图形：用紧凑的符号而不是完整组合，把完整版留给码周围的包装。</p>
+
+<h2>准备 Logo 文件</h2>
+
+<p>你上传的文件决定了成品在小尺寸下看起来有多干净。方形透明底 PNG 放在中间最干净：没有白框跟图案打架，没有浪费的边角。长方形 Logo 被拉成方形会让图形变形；裁一个均衡的方形版本符号，别硬把整个横版组合塞进中间。</p>
+
 <ul>
-<li><strong>Logo 太大。</strong>超过面积约 30%，连纠错也补不回缺失的数据。Logo 非要做大不可的话，就用更短的链接——数据越少，图案越宽松。</li>
-<li><strong>Logo 对比度太低。</strong>浅色 Logo 放在浅色码上，或者 Logo 跟方块融为一体，都会让相机犯糊涂。深色 Logo、浅色底、对比强烈——跟二维码本身的规则一样。</li>
-<li><strong>码后面的背景太花。</strong>带 Logo 的码再放在照片或花纹上，等于同时打两场仗。给二维码一块干净的浅色区域安放，留白边距留干净。</li>
-<li><strong>把码拉变形了。</strong>不成比例缩放会扭曲网格。等比例缩放，让方块保持方形。</li>
+<li><strong>上传之前先简化。</strong>细小的字和微小的细节在缩小到码中间时会消失。如果你的 Logo 有标语，把标语从码版本里去掉。</li>
+<li><strong>给 Logo 加一块白色衬垫。</strong>图形周围一小圈浅色底把它跟周围模块分开，相机就不会把 Logo 边缘当成码数据来读。</li>
+<li><strong>用深色版图形。</strong>浅色 Logo 放在浅色码上会让相机糊涂。如果你的品牌图形是浅色的，把它放在一块对比鲜明的白色底板上。</li>
 </ul>
 
-<h2>能证明一切的测试</h2>
-<p>批量印刷之前，用两部手机各扫一遍（微信扫一扫或相机都行）——一部 iPhone、一部 Android——而且要扫打印件，别只扫屏幕。两部都一次读出来，就可以印了。哪部迟疑，就把 Logo 缩小一档或提高对比度再测一次。这里花三十秒，能省一次重印。</p>
+<h2>颜色和对比度：比 Logo 更重要的规则</h2>
 
-<p>试试：<a href="/zh/qr-code-with-logo/">制作带 Logo 的二维码</a>——免费，静态码不用注册，无水印。</p>
+<p>带 Logo 的码失败在颜色上的次数远远多于失败在 Logo 尺寸上。规则永远不变：深色模块在浅色底上，对比度要强。品牌颜色欢迎，但前提是深色一边确实够深、浅色一边确实够浅。实践指南通常把 4.5:1 或更高的对比度作为起点，搭配越素，能扛住的手机和光线范围就越广。</p>
 
+<ul>
+<li><strong>渐变有风险。</strong>渐变的浅色一端常常丢对比度，而且不同手机对颜色的呈现不一样。检查它最浅的部分是不是依然明显够浅，并且要测印好的成品，不只测屏幕预览。</li>
+<li><strong>反色码是场赌博。</strong>深色底上的浅色模块是标准允许的，大多数现代手机相机能读，但有的老扫码 App 不能。除非你能在观众实际用的设备上测试，否则模块保持深色。</li>
+<li><strong>永远别把定位图案改到看不见。</strong>三个角方块可以做样式——圆角和圆点眼睛通常能扫——但把外方块和内方块之间的浅色环填满，或者把眼睛涂得比码的其他部分还浅，会破坏相机最先搜索的东西。</li>
+<li><strong>花哨背景是第二场仗。</strong>照片上的带 Logo 的码迫使相机同时分清背景、Logo 和图案。给码一块干净的浅色区域安放，静区保持清晰。</li>
+</ul>
+
+<h2>形状、边框和边线</h2>
+
+<p>圆角模块和圆点样式图案没问题，因为网格本身保持规整。真正破坏扫码的是网格变形：把码拉伸到方格不再是方形、为了配合设计把它扭曲，或者把它包在小瓶子那样的紧弯曲面上。等比例缩放，保持码是方形，弯曲表面实在避不开就印大一点、在实物上测试。</p>
+
+<p>边框和边线属于静区之外，永远别进静区。圆角边框、品牌色边线或者“扫我”说明文字都可以，只要它们在 4 模块边距之外、不碰图案。包装上的折痕和接缝也是同样道理：如果折痕穿过码或它的边距，把码移到一块平板上。</p>
+
+<h2>一步一步来</h2>
+
+<ol>
+<li><strong>做码。</strong>任何类型都能加 Logo：链接、vCard、WiFi 网络，以及 FreeQrly 提供的每一种类型。目标越短图案越宽松。</li>
+<li><strong>上传方形 PNG。</strong>透明底效果最好。Logo 控制在码面积约 30% 以内作为上限，想要安全余量就靠近 20–25%。</li>
+<li><strong>让纠错自动调整。</strong>加 Logo 时它会自动提高，盖住的中间就不会阻止扫码。导出之前检查定位图案和静区没有被碰到。</li>
+<li><strong>印刷之前实测。</strong>两部手机，一部 iPhone、一部安卓，测印好的成品本身——不只测屏幕。如果两部第一次都读出来，就可以发了。如果任何一部犹豫，把 Logo 缩小一档、提高对比度或者印大一点，再测一次。</li>
+</ol>
+
+<p>印刷下载最高 2048 px 的 PNG，横幅或展会墙用 SVG。<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>里有完整的尺寸表，包括为什么带 Logo 的码印刷时最低要 3 × 3 cm，而素码可以用 2 × 2 cm。</p>
+
+<h2>怎么正确测试带 Logo 的码</h2>
+
+<p>在自己新手机、好光线、屏幕上测试，几乎证明不了什么。印好的带 Logo 的码会遇到更差的条件：油墨洇散、覆膜反光、暗房间、老相机。一个有用的测试方法要故意苛刻：</p>
+
+<ul>
+<li><strong>测最终尺寸、最终材质的印好的成品。</strong>屏幕上能扫的码可能在光面覆膜或带纹理的卡纸上失败，因为反光和油墨洇散改变了对比度。</li>
+<li><strong>最少测两部手机——一部 iPhone、一部安卓——能借到老手机也测一下。</strong>新旗舰原谅的东西很多；你的顾客手里的手机未必原谅。</li>
+<li><strong>在真实距离和角度、真实光线下测。</strong>桌卡是从座位上、在餐厅灯光下扫的；海报是从几米外、可能隔着玻璃扫的。</li>
+<li><strong>测目标页面，不只测解码。</strong>码应该打开正确的页面，并且在移动数据下加载得快。</li>
+<li><strong>把犹豫当成失败。</strong>扫一次要几秒钟或者要试好几次，这个码就是勉强过关。缩小 Logo、提高对比度或者印大一点——然后再测一次。</li>
+</ul>
+
+<p>码还是拒绝扫码的话，原因通常是最初四种错误之一：Logo 超过上限、对比度低、背景拥挤，或者网格被拉伸。<a href="/zh/blog/why-is-my-qr-code-not-working/">故障排查指南</a>会带你走一遍，<a href="/zh/blog/why-is-my-qr-code-blurry/">发糊码指南</a>讲分辨率。</p>
+
+<h2>带 Logo 的码在哪儿值回功夫</h2>
+
+<p>只要码本身是品牌表面的一部分，而不只是一个工具，带 Logo 的码就值得多花这份心。包装上，把图形放进码里，整个包装看起来就是一个设计。名片上，带 Logo 的码把一个容易忘的方块变成一个能认出来的方块，而且名片是在近距离扫的，带 Logo 的码在近距离最宽容。活动上，徽章或海报上的带 Logo 的码隔着房间就能认出来，这在十个参展商都有素黑方块时很重要。菜单上，Logo 让客人安心，这个码属于这家餐厅。</p>
+
+<p>批量使用是讲究一致性见效的地方。一条有二十个变体的产品线，每个码上都应该有同样的图形、同样的颜色、同样的静区——一次应用到整批，而不是每个单品重做。如果这些码背后的目标以后需要变，动态码能让印好的成品保持有效：它的目标在印后可编辑，还带扫码统计。静态码相反，不用注册、没有水印、永不过期——目标固定时是正确的选择，比如首页或产品说明书。</p>
+
+<h2>老实对比：带 Logo 的码 vs 素码</h2>
+
+<p>素码在每个维度上都比带 Logo 的码更宽容：它容忍更小的印刷尺寸、更低的对比度、更密的数据、更粗糙的表面，因为它的图案没有哪部分是故意藏起来的。带 Logo 的码用一部分宽容换识别度。这笔交易在码是品牌表面、印刷受控时值得做——包装、名片、海报、菜单。在四种情况下是亏本交易：</p>
+
+<ul>
+<li><strong>超小印刷。</strong>2 cm 的码上，Logo 剩下的图案很少，而每个模块本来就已经很小。要么印大一点，要么去掉 Logo。</li>
+<li><strong>数据很密。</strong>长链接或完整 vCard 本来就让网格很密。再加 Logo 就是双重挤压——先缩短内容。</li>
+<li><strong>恶劣环境。</strong>户外招牌和车间标签需要把全部纠错预算留给生存，不是装饰。</li>
+<li><strong>不受控的复制。</strong>码会被复印、传真、被合作方缩小，或者被别人以你没选过的尺寸重印，素码在这一路上的存活能力更强。</li>
+</ul>
+
+<p>还有一个品牌一致性方面的理由反对过度设计：一个简化图形、一种颜色搭配、一条静区规则，在整批里重复使用，看起来像一个系统。每个码上不同的 Logo 处理看起来像噪音，而噪音正是扫码器吃力的东西。</p>
+
+<h2>整批的品牌一致性</h2>
+
+<p>定一次系统，然后重复：同样的简化方形图形，即使周围包装换颜色，深浅搭配也不变，同样的静区和最低印刷尺寸，用在每个表面上。一个码同时出现在名片和海报上时，海报版不是拉伸的名片版；它是在海报尺寸下生成的同一个码，Logo 占比相同。批量生成很多码，Logo 一次应用到全部，然后在每种表面类型上各抽一个样张扫码验证，再投入整批。FreeQrly 的批量模式和 API 覆盖这个流程，每个码扫码不限。</p>
+
+<p>试试：<a href="/zh/qr-code-with-logo/">做一个带你 Logo 的二维码</a>——免费，静态码不用注册、没有水印。先把图形做到码的约五分之一，印一张样张，在两部手机上扫，只有那时再决定 Logo 是不是配得上更大的空间。尺寸方面，<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>里有从名片到广告牌的完整表格。</p>
     </div>
 
     <section class="sources">
       <h2>参考来源</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - 二维码符号规范。定义了四种纠错等级（L 7%、M 15%、Q 25%、H 30%）和 4 模块静区。</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - QR Code 码制规范，2024 年 8 月出版（第 4 版）。佐证四档纠错级别（L 7%、M 15%、Q 25%、H 30%）和 4 模块静区。</li>
+      <li><a href="https://pretty-qr.com/blog/qr-design-best-practices">Pretty QR — QR Code Design Rules: 10 Rules for Beautiful Codes That Still Scan</a> - 页面上未显示发布日期；访问于 2026 年 11 月 3 日。佐证 20–25% 的 Logo 面积建议、4.5:1 对比度起点、定位图案完整，以及在真实手机上测试。</li>
+      <li><a href="https://www.qrcodebarn.com/blog/qr-code-size-guide.html">QRCodeBarn — QR Code Size Guide: How to Resize a QR Code Properly</a> - 2026 年 10 月 13 日发布。佐证 2 cm 实际最低值、距离 ÷ 10 经验法则、4 模块静区，以及 40 字符地址在 M 级 29 × 29 到 H 级 37 × 37 的例子。</li>
+      <li><a href="https://www.notraqr.com/qr-codes-technical.html">NoTraQR — QR Code Technical Guide: Error Correction, File Formats and Barcode Comparison</a> - 页面上未显示发布日期；访问于 2026 年 11 月 3 日。佐证纠错表（L 7%、M 15%、Q 25%、H 30%）、带 Logo 覆盖用 H 级，以及 2 cm / 3 cm 经验法则。</li>
       </ul>
     </section>
     <div class="cta-card">
@@ -177,17 +296,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/static-vs-dynamic-qr-codes/"><b>Static vs 动态二维码: Free Forever or a Subscription?</b></a>
-        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-not-working/"><b>二维码不好用？7 个有用的修复</b></a>
-        <a class="rel-card" href="/zh/blog/qr-codes-for-restaurants/"><b>餐厅二维码 — 免费指南</b></a>
+        <a class="rel-card" href="/zh/blog/do-qr-codes-expire/"><b>二维码会过期吗？不会——但付费码会死</b></a>
+        <a class="rel-card" href="/zh/blog/how-to-scan-a-qr-code/"><b>怎么扫二维码（iPhone 与安卓）</b></a>
+        <a class="rel-card" href="/zh/blog/qr-code-print-size-guide/"><b>二维码打印尺寸指南：从名片到海报</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
-    <details><summary><span>Logo 会把二维码搞坏吗？</span></summary><p>只要面积在约 30% 以内就不会。加 Logo 时纠错等级会自动提高，被盖住的中间部分不会影响扫码。</p></details>
-    <details><summary><span>Logo 用什么文件最好？</span></summary><p>一张方形透明底 PNG。长方形 Logo 和带白底框的 Logo 既占地方又跟图案打架。</p></details>
+    <details><summary><span>Logo 会把二维码搞坏吗？</span></summary><p>不会，只要它保持在码面积约 30% 以内——这是生成器采用的上限——想要安全余量就靠近 20–25%。加 Logo 时纠错会自动提高，所以盖住的中间不会阻止扫码。</p></details>
+    <details><summary><span>Logo 用什么文件最好？</span></summary><p>方形透明底 PNG。长方形 Logo 和带白框的 Logo 浪费空间、跟图案打架。先简化图形：细小的字和标语在码中间的尺寸下会消失。</p></details>
     <details><summary><span>任何二维码类型都能加 Logo 吗？</span></summary><p>可以——链接、电子名片、WiFi 以及所有其他类型都行。同一张 Logo 也能应用到整批。</p></details>
     <details><summary><span>打印用 PNG 还是 SVG？</span></summary><p>多数印刷用最高 2048 px 的 PNG；像横幅那样需要无限放大时用 SVG。</p></details>
+    <details><summary><span>为什么 Logo 必须留在中间？</span></summary><p>中间不含定位数据，所以是盖住最安全的地方，居中还能让图形远离四个角上的定位图案。哪怕盖住一个定位图案，也可能彻底阻止扫码。</p></details>
+    <details><summary><span>带 Logo 的码印刷时应该印多大？</span></summary><p>至少 3 × 3 cm，而不是素码可以用的 2 × 2 cm，数据多或者要在弱光下扫的话还要更大。打印尺寸指南里有完整的表格。</p></details>
+    <details><summary><span>印刷之前怎么测试带 Logo 的码？</span></summary><p>测最终尺寸、最终材质的印好的成品，至少用两部手机——一部 iPhone、一部安卓——在真实距离和真实光线下测。把犹豫当成失败：缩小 Logo、提高对比度或者印大一点，再测一次。</p></details>
+    <details><summary><span>什么时候该跳过 Logo？</span></summary><p>超小印刷、数据很密的码、会被擦伤或风吹日晒的表面，或者码会被以你没选过的尺寸复制时。这些情况下素码更宽容。</p></details>
     </section>
   </article>
   <footer>

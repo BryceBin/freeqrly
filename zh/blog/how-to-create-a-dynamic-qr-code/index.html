@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"免费创建动态二维码（打印后仍可编辑）| FreeQrly","description":"免费创建动态二维码：登录、选类型、美化、打印。之后改指向不用重印——20 个免费码，目前不限量。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"免费创建动态二维码（打印后仍可编辑）| FreeQrly","description":"免费创建动态二维码：登录、选类型、美化、打印。之后改指向不用重印——20 个免费码，目前不限量。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "创建动态二维码真的免费吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "真的。免费登录，最多创建 20 个动态码，随便编辑，看统计。没有试用期，不用绑卡。静态码依然完全免费、无限量，不用账号。"
+        "text": "可以。免费登录，最多创建 20 个动态码，限时活动期间目前不限量，扫码次数不限。开始用没有试用期、不用绑卡。静态码仍然免费不限量，完全不用账号。"
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "动态二维码需要账号吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "需要——码必须属于某个人，这样只有你能编辑它。邮箱 + 密码、Google 或 GitHub 都行。静态码永远不需要账号。"
+        "text": "可以——码必须属于某个人，这样只有你能编辑它。用邮箱加密码、Google 或 GitHub 登录。静态码永远不需要账号。"
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "我能有多少个动态二维码？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "免费账号 20 个（限时活动期间目前不限量）。删掉一个码即可空出名额。"
+        "text": "免费账号 20 个，限时活动期间目前不限量。删一个码就腾出一个位置——但删除是永久的，删掉的码的印好的版本会停工。"
       }
     },
     {
@@ -83,7 +88,39 @@
       "name": "动态二维码链接到哪里？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "一个 FreeQrly 短链接（freeqrly.com/q/XXXXXXX），重定向到你的目标地址。扫码的人落在你的页面上；正是这个重定向让编辑和统计成为可能。"
+        "text": "一个 FreeQrly 短链接（freeqrly.com/q/XXXXXXX），跳转到你的目标。扫码者落在你的页面上；正是这个跳转让编辑和扫码统计成为可能。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "动态二维码印出来之后还能改吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。编辑改的是短链接背后的目标，不是印好的图案，所以每一张印好的码下次被扫时都会服务新目标。任何一次编辑之后再测一次码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什么时候该选静态而不是动态？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "目标永远不会变的时候——固定链接、WiFi 密码、名片。静态码把目标装在图案本身里，不用账号，也不用维护跳转服务就能一直工作。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "动态码能批量创建吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能——动态码一次生成一个，因为每个都需要自己的短链接和 Dashboard 记录。批量生成还是静态的。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "码要是火了，我的扫码数会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在 FreeQrly 上没什么不好的：扫码次数不限，所以受欢迎的码不会因为被扫太多次而停工。在有的厂商免费套餐上，扫码上限能让码停工——印刷之前先查厂商的定价页或 FAQ 页。"
       }
     }
   ]
@@ -94,32 +131,32 @@
     {
       "@type": "HowToStep",
       "name": "登录——免费",
-      "text": "用邮箱 + 密码、Google 或 GitHub 创建免费账号。静态码跳过这一步；动态码需要一个主人。"
+      "text": "打开登录页，用邮箱加密码、Google 或 GitHub 创建账号。静态码永远不需要这一步；动态码需要，因为码必须属于一个能独自编辑它的人。"
     },
     {
       "@type": "HowToStep",
       "name": "切换到动态",
-      "text": "在工作室里，把静态/动态开关拨到动态。"
+      "text": "在工作室里，把开关从静态拨到动态。类型、样式、下载的用法完全一样。"
     },
     {
       "@type": "HowToStep",
       "name": "选类型，填内容",
-      "text": "网站、WiFi、联系方式、活动——全部 17 种内容类型都可用。批量仍是静态码。"
+      "text": "网址、WiFi、联系人、活动——17 种内容类型都能做动态码。批量还是静态的：一次生成一个动态码，因为每个都需要自己的短链接和 Dashboard 记录。"
     },
     {
       "@type": "HowToStep",
       "name": "做样式",
-      "text": "圆点、颜色、Logo、边框。预览实时更新，样式跟码一起保存。"
+      "text": "圆点、颜色、Logo、边框——预览实时更新，样式跟码一起保存，所以 Dashboard 缩略图和下载文件是一致的。对比度保持够强，三个大的角定位方块永远别盖住。"
     },
     {
       "@type": "HowToStep",
       "name": "Generate",
-      "text": "点“生成”。你会得到一个短链接，比如 freeqrly.com/q/XXXXXXX——图案编码的就是它。"
+      "text": "点“生成”。你会得到一个短链接，比如 freeqrly.com/q/XXXXXXX——二维码图案编码的就是它。按码将要待的地方给下载文件起个名字。"
     },
     {
       "@type": "HowToStep",
       "name": "之后管理",
-      "text": "在 Dashboard 里找到你的码：编辑、看统计，或者删一个腾位置。"
+      "text": "你的码都在 Dashboard 里：编辑、看统计，或者删一个腾个位置。批量印刷之前先用手机相机测一下印好的码，任何一次编辑之后再测一次。"
     }
   ]}
 </script>
@@ -135,34 +172,106 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">怎么创建<span class='hl hl-mint'>动态</span>二维码</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">动态二维码打印后还能改目标地址，还能看到多少人扫过。下面讲怎么免费做一个，大约一分钟。</p>
-    <p class="meta" style="text-align:center">2026 年 10 月 16 日 · 阅读约 4 分钟</p>
+    <p class="meta" style="text-align:center">2026年10月16日 · 最后更新：2026年11月3日 · 阅读约14分钟</p>
     <div class="prose" style="margin-top:40px">
+<p>可以——在 FreeQrly 上创建动态二维码是免费的，大约一分钟就能做好，印出来之后还能改它指向的地方。目标还没最终确定时、想统计扫码次数时，或者一张印好的码下个月要服务一个新页面时，选动态。目标永远不会变时选静态：固定链接、WiFi 密码或者名片，不用账号、不用跳转。本指南讲 FreeQrly 的操作流程，用大白话讲跳转机制，并把免费额度摆在明处。</p>
+<p>在 FreeQrly 上，动态码是免费的。用邮箱加密码、Google 或 GitHub 登录，免费账号就能有 20 个动态码，限时活动期间目前不限量。开始用没有试用期、不用绑卡，扫码次数不限。印后可以编辑码，看扫码统计，批量生成是静态形式，还可以用 API。</p>
 
-<p>静态码很好——直到目标地址变了。传单印好了，菜单搬了，活动链接还没定稿。<strong>动态二维码</strong>就是解决这个的：印出来的图案不变，但你可以随时在 Dashboard 里改它指向哪里。还能看扫码数，知道到底有没有人扫。</p>
-<p>在 FreeQrly，动态码免费。登录（邮箱、Google 或 GitHub）即可获得 20 个（限时活动期间目前不限量）。没有试用、不用绑卡、没有过期套路。下面是完整流程。</p>
+<h2>动态还是静态？印之前先定</h2>
+<p>这个决定对已经印出来的码是不可逆的。静态码把目标装在图案里，所以永远没法改指向。动态码装的是一个跳转到目标的短链接，所以目标以后可以改。印好的静态码链接错了就得重印；印好的动态码只需要在 Dashboard 里改一下。</p>
+<div class="table-scroll"><table>
+<tr><th>你的情况</th><th>选哪个</th><th>为什么</th></tr>
+<tr><td>链接、WiFi 密码或联系方式不会变</td><td>静态</td><td>不用账号、不用跳转、不用维护</td></tr>
+<tr><td>落地页还没定，但海报必须送印</td><td>动态</td><td>现在就印，以后再改指向</td></tr>
+<tr><td>需要汇报有多少人扫了</td><td>动态</td><td>只有动态码能汇报扫码数</td></tr>
+<tr><td>季节菜单、活动或营销活动经常变</td><td>动态</td><td>一次印刷管所有季节</td></tr>
+</table></div>
+<p>还拿不准的话，<a href="/zh/blog/static-vs-dynamic-qr-codes/">静态 vs 动态，实话实说</a>里有更多例子。简而言之：动态是用对跳转服务和账号的依赖，换灵活性和可测量性；静态是用印出来就定死的目标，换独立性。</p>
 
+<h2>动态码实际上是怎么工作的</h2>
+<p>动态码并不直接装你的链接。它装的是一个 FreeQrly 短链接，形式是 <code>freeqrly.com/q/XXXXXXX</code>，图案编码的就是这个短链接。有人扫码时，手机打开短链接，FreeQrly 的服务器查到你当前设置的目标，再把扫码者跳转过去。扫码者最终落在你的页面上；短链接只是中间的交汇点。</p>
+<p>这个交汇点解释了所有功能和限制：</p>
+<ul>
+<li><strong>能编辑，是因为图案永远不变。</strong>图案里只有短链接。编辑改的是它背后的记录，所以每一张印好的码下次被扫时都会服务新目标。</li>
+<li><strong>能计数，是因为每次扫码都要经过交汇点。</strong>服务器在去往目标的路上看到这次扫码，就把它计入统计。静态码永远不碰服务器，所以没什么可计的。</li>
+<li><strong>需要账号，是因为交汇点必须属于某个人。</strong>只有创建账号才能改它短链接的指向。没有归属，任何人都能改别人印好的码的指向。</li>
+<li><strong>删除是永久的，是因为交汇点被拆掉了。</strong>删掉一个码，它的短链接就不再跳转，印好的码也就停工了。没有撤销，腾出来的位置可以给新码用。</li>
+</ul>
+<p>扫码者看不到这些——他们对准、点预览、落在你的页面上。有一件事他们能注意到：跳转之前先出现广告或者厂商品牌页面，所以比较生成器时，先扫一个示例码，看看目标加载之前出现了什么。</p>
+
+<h2>一步一步：创建动态二维码</h2>
 <ol>
-<li><b>登录——免费。</b>打开<a href="/zh/login/">登录页</a>，用邮箱 + 密码、Google 或 GitHub 创建账号。静态码永远不用这一步；动态码需要，因为码必须属于某个人。</li>
-<li><b>切换到动态。</b>在<a href="/zh/?mode=dynamic">工作室</a>里，把开关从静态拨到动态。其他一切——类型、样式、下载——用法完全一样。</li>
-<li><b>选一种类型并填写。</b>网站、WiFi、联系方式、活动——全部 17 种内容类型都可做动态码。（<a href="/zh/batch-qr-code/">批量</a>仍是静态码：每次生成一个动态码。）</li>
-<li><b>想做样式就做。</b>圆点、颜色、Logo、边框——预览实时更新。样式跟码一起保存，Dashboard 里看到的和下载下来的是一样的。</li>
-<li><b>生成。</b>点“生成”。你会得到一个短链接，比如 <code>freeqrly.com/q/XXXXXXX</code>——二维码图案编码的就是它。打印出来，发出去，贴墙上。</li>
-<li><b>之后管理。</b>你的码都在<a href="/dashboard/">Dashboard</a> 里：编辑、看统计，或者删一个腾个位置。</li>
+<li><strong>登录——免费。</strong>打开<a href="/zh/login/">登录页</a>，用邮箱加密码、Google 或 GitHub 创建账号。静态码永远不需要这一步；动态码需要，因为码必须属于一个能独自编辑它的人。</li>
+<li><strong>切换到动态。</strong>在<a href="/zh/?mode=dynamic">工作室</a>里，把开关从静态拨到动态。类型、样式、下载的用法完全一样。</li>
+<li><strong>选类型，填内容。</strong>网址、WiFi、联系人、活动——17 种内容类型都能做动态码。（<a href="/zh/batch-qr-code/">批量</a>还是静态的：一次生成一个动态码，因为每个都需要自己的短链接和 Dashboard 记录。）</li>
+<li><strong>想做样式就做。</strong>圆点、颜色、Logo、边框——预览实时更新，样式跟码一起保存，所以 Dashboard 缩略图和下载文件是一致的。对比度保持够强，三个大的角定位方块永远别盖住。</li>
+<li><strong>生成。</strong>点“生成”。你会得到一个短链接，比如 <code>freeqrly.com/q/XXXXXXX</code>——二维码图案编码的就是它。按码将要待的地方给下载文件起个名字，比如 <code>cafe-window-menu.png</code>。</li>
+<li><strong>之后管理。</strong>你的码都在<a href="/dashboard/">Dashboard</a> 里：编辑、看统计，或者删一个腾个位置。批量印刷之前先用手机相机测一下印好的码，任何一次编辑之后再测一次。</li>
 </ol>
 
-<h2>二维码里到底装了什么</h2>
-<p>动态码并不直接装你的链接。它装的是一个 FreeQrly 短链接，服务器把扫码的人重定向到你的目标地址。正是这个机制让编辑和计数成为可能——也是动态码需要账号、静态码不需要的原因。如果哪家服务告诉你它的“免费”码需要账号，就是这个机制在起作用；这里的不同是，账号免费，码也不会死。</p>
+<h2>选类型</h2>
+<p>类型决定扫码者看到什么、做什么。网址码打开页面。WiFi 码提示加入网络。联系人码提示保存一个人。活动码提示保存一个日期。合适的类型能省一步，这通常比更花哨的设计更有价值。餐厅应该用指向菜单页的网址码，别用装着菜单的文本码：页面可以更新，文本码不能。访客 WiFi 码就该是 WiFi 码，因为手机可以从扫码本身直接加入——见<a href="/zh/blog/share-wifi-with-qr-code/">怎么用二维码分享 WiFi</a>。</p>
+<p>指向一个你掌控的页面，别指向一个你掌控不了的地方托管的文件：文件一删，能用的码就指向了空气。还要注意，文字越长图案越密，在同样距离下扫出来需要的印刷尺寸就越大；见<a href="/zh/blog/qr-code-print-size-guide/">二维码打印尺寸指南</a>。</p>
 
-<h2>限制，明明白白说清楚</h2>
+<h2>做样式但不破坏扫码</h2>
+<p>动态码支持跟静态码一样的样式：圆点形状、颜色、中间的 Logo、带文字的边框。三条规则能让带样式的码保持可扫。第一，对比度保持高、背景保持浅；扫码器读的是浅色上的深色模块。第二，Logo 保持适度并居中，永远别盖住定位方块。纠错能把藏在小小中央 Logo 后面的模块补回来——按 ISO/IEC 18004，高级别下大约 30% 的码字可以恢复——但这份预算要覆盖所有损伤的总和，包括印刷磨损和脏污，不只是 Logo 一个。第三，保持静区：码周围的空白边，按 ISO/IEC 18004 的规定四边都至少 4 个模块宽，是码的一部分，不是装饰。关于 Logo 的更多内容见<a href="/zh/blog/add-logo-to-qr-code/">怎么给二维码加 Logo</a>。</p>
+<p>印刷要测真实印出来的样张，不只测屏幕预览：按目标尺寸、目标材质印一张，在实际使用的光线下，用两部不同的手机扫——条件允许一部 iPhone、一部安卓。强光下的光面覆膜和包在瓶子上的码，失败方式是屏幕预览永远显示不出来的。如果样张扫起来慢，印大一点；尺寸是最便宜的修法。</p>
+
+<h2>老实看统计</h2>
+<p>每个动态码都会向你的 Dashboard 汇报：总扫码数、今日扫码数、独立扫码数和七日图表，还有按国家、城市、设备和操作系统分的明细。完整指南见<a href="/zh/blog/dynamic-qr-code-statistics/">动态二维码统计告诉你什么</a>。三条习惯最重要。拿码跟码比，别跟想象中的基准比：橱窗码和快递箱码活在不同的世界里。把零当成数据：一个码一周没有扫码，通常说明位置不对、行动号召缺失，或者码太小。再给高峰一个背景：帖子发出去之后立刻出现的一波扫码，是帖子的功劳，不是海报的。</p>
+<p>FreeQrly 的统计只有聚合数据——按日、国家、城市、设备和操作系统计的数——没有针对单个访客的记录，也没法认出任何一个扫码者。独立扫码是用单向哈希计的，不是名字或地址。</p>
+
+<h2>动态码值回票价的场景</h2>
+<h3>随季节变的餐厅菜单</h3>
+<p>桌卡上印一个码，指向菜单页。季节一换，更新页面或者给码改指向——桌卡不用动。见<a href="/zh/blog/qr-codes-for-restaurants/">餐厅二维码</a>。</p>
+<h3>细节还没定就先印的活动海报</h3>
+<p>海报要在场地、票务链接或日程定下来几周前就送印。动态码能让海报先指着一个占位页发出去，售票开始时移到票务页，活动结束后再移到回顾页。见<a href="/zh/blog/qr-codes-for-events/">活动二维码</a>。</p>
+<h3>比第一波营销活动活得久的产品或包装</h3>
+<p>包装是批量印的，要卖几个月甚至几年。包装上的动态码可以先指向首发优惠，再移到说明书或保修页，之后再移到后续产品——不用重印。记一张清单，写清每个码都在哪：一个在 Dashboard 里找不到的码，就是一个你修不了的码。</p>
+<h3>一个位置一个码，否则数字会撒谎</h3>
+<p>每个位置给它自己的码。一个码同时用在传单、名片和集市摊位上，会把它们的统计合并成一个什么都说明不了的数字。收银台边打开评价页的码也是同一个道理；见<a href="/zh/blog/get-google-reviews-with-qr-code/">怎么用二维码获得 Google 评价</a>。</p>
+
+<h2>老实对比：动态码在别处要花什么</h2>
+<p>动态码不是在所有地方都以同样的方式免费。印后真正会痛的是：免费码有几个、扫码有没有上限、套餐结束时会发生什么。下面的数字分别是各厂商在自己的定价页或 FAQ 页上的说法，核查于 2026 年 11 月 3 日。价格和额度会变，印任何必须长久存在的东西之前，先去厂商页面核对。</p>
+<div class="table-scroll"><table>
+<tr><th>厂商、免费套餐，按厂商自己的说法</th><th>免费动态码</th><th>免费扫码上限</th><th>厂商说套餐结束时会发生什么</th></tr>
+<tr><td>FreeQrly，免费账号</td><td>20 个，限时活动期间目前不限量</td><td>扫码次数不限</td><td>没有试用期，开始不用绑卡；删除码会让印好的码停工并腾出位置</td></tr>
+<tr><td>QR TIGER，免费增值套餐</td><td>3</td><td>每个码 500 次扫码</td><td>付费码在订阅有效期内扫码不限；“如果你的套餐过期，它就会停工”</td></tr>
+<tr><td>The QR Code Generator，免费套餐</td><td>2</td><td>免费额度是 2 个码</td><td>试用结束之后，2 个码保持可用但显示广告；在母平台 Uniqode 上，试用码没有付费套餐就会停用</td></tr>
+</table></div>
+<p>这不是对任何厂商的裁决——对大型营销活动来说，带更多码、自定义域名或团队席位的付费套餐可能是正确的购买——但它说明了免费档需要细读，不是粗看。一个有扫码上限的免费档，是一个可能因为太受欢迎而死掉的码。一个绑定试用的免费档，是一个带日历的码。对任何生成器（包括 FreeQrly）都该问的公平问题是：如果我永远不付费、如果我停止付费、如果我删除码，印好的码到底会怎样？答案应该在定价页上一句话各说清。</p>
+<p>有一项依赖值得明说。动态码在它流通的整个时间里都依赖厂商的跳转服务——这里也一样。如果那个服务没了，动态码就不再跳转，而静态码把目标装在图案里，会继续工作。这就是为什么静态码适合任何必须几十年无人维护也能用的东西，比如永久招牌。动态码是给还有人照看的活物料用的；静态码是给必须自己照顾自己的物料用的。</p>
+
+<h2>浪费一次印刷的错误</h2>
 <ul>
-<li><strong>20 个码，免费（限时活动期间目前不限量）。</strong>这就是免费额度。删掉一个码，名额就空出来了。</li>
-<li><strong>一次一个。</strong>动态码一个一个生成；批量生成还是静态的。</li>
-<li><strong>编辑改的是目标地址，不是图案。</strong>印出来的码每次编辑后都照常能用——这就是它的意义所在。</li>
+<li><strong>链接还没定就印了静态码。</strong>目标可能变的话，码在印刷之前就该是动态的；印好的静态码靠编辑是救不回来的。</li>
+<li><strong>一个动态码用在多个位置。</strong>一个码、一个位置、一条统计记录——否则数字说不清是哪个位置起了作用。</li>
+<li><strong>为了“整理一下”删码。</strong>删除是永久的，印好的码立刻停工。先把要退役的码改指向一个收尾页，等没有印好的码还在流通时再删。</li>
+<li><strong>跳过印刷样张。</strong>屏幕预览证明的是设计；只有按真实尺寸、真实材质、真实光线印出来的样张才能证明扫码。见<a href="/zh/blog/why-is-my-qr-code-not-working/">二维码为什么扫不出来</a>。</li>
+<li><strong>忘了行动号召。</strong>光秃秃的码是让扫码者猜。边框上写清他们能得到什么——菜单、票、WiFi、折扣——才能把装饰品变成入口。</li>
 </ul>
 
-<p>不确定到底需不需要动态码？<a href="/zh/blog/static-vs-dynamic-qr-codes/">静态还是动态，老实讲清楚</a>。已经印出来了、需要改链接？<a href="/zh/blog/how-to-edit-a-qr-code-after-printing/">印出来之后怎么改二维码</a>。好奇数据长什么样？<a href="/zh/blog/dynamic-qr-code-statistics/">动态二维码统计能告诉你什么</a>。 想知道免费额度对比如何？<a href="/zh/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> 把两家的免费方案并排比较。</p>
-
+<h2>批量、API 和额度，明明白白</h2>
+<p>动态码一次生成一个，因为每个都需要自己的短链接和 Dashboard 记录。如果你一次需要很多码——每个产品、每张桌子、每个包裹各一个——<a href="/zh/batch-qr-code/">批量生成</a>还是静态的；见<a href="/zh/blog/bulk-qr-codes/">批量二维码</a>。对需要从另一个系统生成码的程序，FreeQrly 也提供动态码 API。免费额度，集中写在这里：</p>
+<ul>
+<li><strong>20 个码，免费（限时活动期间目前不限量）。</strong>删一个码，位置就腾出来了。</li>
+<li><strong>扫码次数不限。</strong>受欢迎的码不会因为被扫太多次而停工。</li>
+<li><strong>一次一个。</strong>动态码一个一个生成；批量生成还是静态的。</li>
+<li><strong>编辑改的是目标，不是图案。</strong>印好的码在每次编辑后都继续工作。</li>
+<li><strong>删除是永久的。</strong>印好的码停工，没有撤销，所以只删已经退役的码。</li>
+</ul>
+<p>不确定自己到底需不需要动态码？看<a href="/zh/blog/static-vs-dynamic-qr-codes/">静态 vs 动态，实话实说</a>。已经印好、需要修链接？看<a href="/zh/blog/how-to-edit-a-qr-code-after-printing/">二维码印出来之后怎么改</a>。好奇数字长什么样？看<a href="/zh/blog/dynamic-qr-code-statistics/">动态二维码统计告诉你什么</a>。准备好做一个了？打开<a href="/zh/dynamic-qr-code/">动态二维码生成器</a>，免费登录，切换到动态，印一个下个月还能修的码。</p>
     </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - QR Code 码制规范，第 4 版，2024 年 8 月出版。定义了纠错级别，包括高级别下约 30% 的码字，以及四边都至少 4 个模块宽的静区。</li>
+      <li><a href="https://www.qrcode-tiger.com/faq">QR TIGER FAQ</a> - 厂商自己的 FAQ 页，访问于 2026 年 11 月 3 日（页面上未显示发布日期）。佐证：3 个免费动态码，每个 500 次扫码上限；付费动态码在订阅有效期内扫码不限；“如果你的套餐过期，它就会停工”；免费静态码不限量、永不过期。</li>
+      <li><a href="https://www.qrcode-tiger.com/software-subscription">QR TIGER Subscription Plan Management</a> - 厂商自己的订阅页，访问于 2026 年 11 月 3 日（页面上未显示发布日期）。佐证：免费增值套餐含 3 个动态码，每个 500 次扫码上限；Regular 7 美元含 12 个动态码；Advanced 16 美元含 200 个；Premium 37 美元含 600 个；Professional 89 美元含 1,200 个。</li>
+      <li><a href="https://www.the-qrcode-generator.com/pricing?lng=en&signup_source=custom-qr-code_explore_plans">The QR Code Generator (TQRCG) Pricing</a> - 厂商自己的定价页，访问于 2026 年 11 月 3 日（页面上未显示发布日期）。佐证：免费套餐含 2 个动态码和不限量的静态码；免费试用结束之后，2 个动态码保持可用但显示广告；在 Uniqode 上，试用码没有付费套餐就会停用；Flex 套餐按年付费每月 10 美元。</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
       <div>
@@ -174,17 +283,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/dynamic-qr-code-statistics/"><b>Dynamic QR Code Statistics: What Scans Actually Tell You</b></a>
-        <a class="rel-card" href="/zh/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
-        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-blurry/"><b>Why Is My QR Code Blurry? 5 Fixes That Work</b></a>
+        <a class="rel-card" href="/zh/blog/dynamic-qr-code-statistics/"><b>动态二维码统计：扫码真正告诉你什么</b></a>
+        <a class="rel-card" href="/zh/blog/make-qr-code-in-canva-excel-word/"><b>怎么在 Canva、Excel 或 Word 里做二维码（免费）</b></a>
+        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-blurry/"><b>我的二维码为什么发糊？5 个管用的修复办法</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
-    <details><summary><span>创建动态二维码真的免费吗？</span></summary><p>真的。免费登录，最多创建 20 个动态码，随便编辑，看统计。没有试用期，不用绑卡。静态码依然完全免费、无限量，不用账号。</p></details>
-    <details><summary><span>动态二维码需要账号吗？</span></summary><p>需要——码必须属于某个人，这样只有你能编辑它。邮箱 + 密码、Google 或 GitHub 都行。静态码永远不需要账号。</p></details>
-    <details><summary><span>我能有多少个动态二维码？</span></summary><p>免费账号 20 个（限时活动期间目前不限量）。删掉一个码即可空出名额。</p></details>
-    <details><summary><span>动态二维码链接到哪里？</span></summary><p>一个 FreeQrly 短链接（freeqrly.com/q/XXXXXXX），重定向到你的目标地址。扫码的人落在你的页面上；正是这个重定向让编辑和统计成为可能。</p></details>
+    <details><summary><span>创建动态二维码真的免费吗？</span></summary><p>可以。免费登录，最多创建 20 个动态码，限时活动期间目前不限量，扫码次数不限。开始用没有试用期、不用绑卡。静态码仍然免费不限量，完全不用账号。</p></details>
+    <details><summary><span>动态二维码需要账号吗？</span></summary><p>可以——码必须属于某个人，这样只有你能编辑它。用邮箱加密码、Google 或 GitHub 登录。静态码永远不需要账号。</p></details>
+    <details><summary><span>我能有多少个动态二维码？</span></summary><p>免费账号 20 个，限时活动期间目前不限量。删一个码就腾出一个位置——但删除是永久的，删掉的码的印好的版本会停工。</p></details>
+    <details><summary><span>动态二维码链接到哪里？</span></summary><p>一个 FreeQrly 短链接（freeqrly.com/q/XXXXXXX），跳转到你的目标。扫码者落在你的页面上；正是这个跳转让编辑和扫码统计成为可能。</p></details>
+    <details><summary><span>动态二维码印出来之后还能改吗？</span></summary><p>可以。编辑改的是短链接背后的目标，不是印好的图案，所以每一张印好的码下次被扫时都会服务新目标。任何一次编辑之后再测一次码。</p></details>
+    <details><summary><span>什么时候该选静态而不是动态？</span></summary><p>目标永远不会变的时候——固定链接、WiFi 密码、名片。静态码把目标装在图案本身里，不用账号，也不用维护跳转服务就能一直工作。</p></details>
+    <details><summary><span>动态码能批量创建吗？</span></summary><p>不能——动态码一次生成一个，因为每个都需要自己的短链接和 Dashboard 记录。批量生成还是静态的。</p></details>
+    <details><summary><span>码要是火了，我的扫码数会怎样？</span></summary><p>在 FreeQrly 上没什么不好的：扫码次数不限，所以受欢迎的码不会因为被扫太多次而停工。在有的厂商免费套餐上，扫码上限能让码停工——印刷之前先查厂商的定价页或 FAQ 页。</p></details>
     </section>
   </article>
   <footer>

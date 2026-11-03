@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"¿Los códigos QR caducan? No, pero los de pago pueden morir | FreeQrly","description":"¿Los códigos QR caducan? Los estáticos nunca caducan: el patrón guarda tu enlace para siempre. Lo que realmente deja de funcionar son los códigos dinámicos de pago cuando termina la suscripción.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"¿Los códigos QR caducan? No, pero los de pago pueden morir | FreeQrly","description":"¿Los códigos QR caducan? Los estáticos nunca caducan: el patrón guarda tu enlace para siempre. Lo que realmente deja de funcionar son los códigos dinámicos de pago cuando termina la suscripción.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "¿Caducan los códigos QR gratis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Un código QR estático gratis dura tanto como el enlace al que apunta. Los códigos que "caducan" son códigos dinámicos atados a una suscripción de pago: el proveedor los apaga cuando dejas de pagar."
+        "text": "No, si son estáticos. Un código QR estático gratis dura tanto como el enlace al que apunta. Los códigos que dejan de funcionar suelen ser códigos dinámicos atados a una suscripción de pago — el proveedor apaga la redirección cuando dejas de pagar — o códigos que apuntan a una página borrada."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "¿Un código QR puede dejar de funcionar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, pero no por caducidad. Las causas usuales: la página de destino se borró, el código se imprimió demasiado pequeño o con bajo contraste, o se dañó físicamente."
+        "text": "Sí, pero no por caducidad. Las causas usuales son: la página de destino se borró, el código se imprimió demasiado pequeño o con bajo contraste, se dañó físicamente, su zona de silencio se recortó o un plan dinámico terminó o alcanzó su tope de escaneos."
       }
     },
     {
@@ -80,7 +80,47 @@
       "name": "¿Cuánto duran los códigos QR estáticos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Indefinidamente. El patrón codifica tus datos directamente sin servidor de por medio, así que no hay nada que mantener ni renovar."
+        "text": "Indefinidamente, mientras el destino siga funcionando. El patrón codifica tus datos directamente sin ningún servidor de por medio, así que no hay nada que mantener ni renovar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué les pasa a los códigos dinámicos de pago cuando termina una suscripción?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del proveedor, y la página de preguntas frecuentes del propio proveedor es la fuente que hay que revisar. Las preguntas frecuentes de QR TIGER dicen que los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente y que «Si tu plan caduca, dejará de funcionar». The QR Code Generator dice que tras una prueba, 2 códigos siguen activos pero muestran anuncios, mientras que en su plataforma madre Uniqode los códigos de prueba se inactivan sin un plan de pago."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede un límite de escaneos detener un código QR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, en proveedores que limitan los escaneos dinámicos gratuitos. El plan freemium de QR TIGER, según su propia página de suscripción, da 3 códigos dinámicos con un límite de 500 escaneos cada uno. Un código que alcanza su tope deja de servir a su destino aunque el patrón esté intacto. Los códigos dinámicos de FreeQrly tienen escaneos ilimitados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El daño mata un código QR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No siempre. La corrección de errores puede reconstruir datos perdidos: en el nivel Alto de la ISO/IEC 18004 se puede restaurar hasta alrededor del 30% de las palabras de código. Eso cuenta palabras de código, no área visible: un pequeño rasguño sobre un cuadrado de posicionamiento de esquina puede detener un escaneo aunque la mayor parte del patrón parezca intacta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo distingo un enlace muerto de una suscripción muerta o de una mala impresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Abre el destino directamente en un navegador; escanea una muestra impresa en dos teléfonos; lee la URL de la vista previa del escaneo antes de tocar; y, para un código dinámico, revisa el plan y la asignación de escaneos de la cuenta que lo creó. Cada comprobación apunta a una capa distinta, y cada capa tiene un arreglo distinto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un cartel permanente o un envase deben usar estático o dinámico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estático, si el destino es fijo. Un código estático hacia una página que controles no necesita cuenta ni renovación, así que sobrevive a cambios de personal y ciclos de presupuesto. Usa dinámico solo cuando el destino de verdad deba cambiar y alguien mantenga la cuenta viva durante toda la vida del código."
       }
     }
   ]
@@ -98,49 +138,105 @@
     <div class="kicker" style="text-align:center">Notas de campo</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">¿Los códigos QR <span class='hl hl-mint'>caducan</span>?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Respuesta corta: no, al menos no la clase que haces aquí. La respuesta larga vale la pena conocerla antes de imprimir mil de ellos.</p>
-    <p class="meta" style="text-align:center">13 de octubre de 2026 · 4 min de lectura</p>
+    <p class="meta" style="text-align:center">13 de octubre de 2026 · Última actualización: 3 de noviembre de 2026 · 15 min de lectura</p>
     <div class="prose" style="margin-top:40px">
-
-<p>Ya viste las advertencias: "¡los códigos QR gratis caducan!" Por lo general justo al lado de una página de precios. Así que aclaremos sin rodeos: un código QR estático <strong>no puede caducar</strong>. No hay reloj dentro de esos cuadraditos. Un código estático es solo tu enlace, dibujado como un patrón. Mientras el enlace funcione, el código funciona: imprímelo hoy, escanealo dentro de diez años.</p>
+<p>Respuesta corta: no, al menos no la clase que haces aquí. Un código QR estático no puede caducar, porque no hay ningún reloj dentro de esos cuadraditos. Un código estático es solo tu enlace, dibujado como un patrón. Mientras el enlace funcione, el código funciona: imprímelo hoy y escanéalo dentro de diez años. Lo que de verdad deja de funcionar es otra cosa con el mismo nombre: un código dinámico de pago cuya suscripción terminó, un enlace borrado o una impresión dañada más allá de lo legible. Cada uno de esos fallos necesita un arreglo distinto, y solo uno de ellos es motivo para comprar algo.</p>
+<p>La confusión se entiende, porque la advertencia suele llegar junto a una página de precios: «¡los códigos QR gratis caducan!». Lo que caduca en esa frase rara vez es el código. Es la prueba gratuita, la suscripción o la voluntad del proveedor de seguir redirigiendo tus escaneos gratis.</p>
 
 <h2>Entonces, ¿por qué dice la gente que los códigos QR caducan?</h2>
 <p>Tres cosas distintas se mezclan:</p>
 <ul>
-<li><strong>Los códigos dinámicos mueren cuando dejas de pagar.</strong> Muchos generadores "gratis" en realidad crean códigos <em>dinámicos</em>: en lugar de tu enlace, el patrón guarda una URL corta en <em>su</em> servidor, que redirige a tu enlace. Deja de pagar y apagan la redirección. Tu código no caducó: lo tomaron de rehén. Cómo se comparan las cuotas gratuitas: <a href="/es/blog/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a>.</li>
+<li><strong>Los códigos dinámicos mueren cuando dejas de pagar.</strong> Muchos generadores «gratis» en realidad crean códigos <em>dinámicos</em>: en lugar de tu enlace, el patrón guarda una URL corta en <em>su</em> servidor, que redirige a tu enlace. Deja de pagar y apagan la redirección. Tu código no caducó: lo tomaron de rehén.</li>
 <li><strong>Los enlaces se pudren; los códigos no.</strong> Si la página detrás del código se borra, escanear no lleva a ningún lado. Eso es el destino muriendo, no el código. Un código QR que apunta a un enlace muerto es un código perfectamente sano sin nada que decir.</li>
 <li><strong>Las cuentas de prueba se desactivan.</strong> Algunos servicios atan tus códigos a una cuenta y luego te empujan hacia una suscripción. El código no caducó: la cuenta sí.</li>
 </ul>
+<p>Hay un cuarto caso que parece caducidad pero no es culpa del patrón: los códigos emitidos por el sistema de otra persona. Una tarjeta de embarque, una entrada o un código de inicio de sesión de un solo uso pueden dejar de funcionar porque el emisor invalida la sesión, la entrada o la reserva que hay detrás. El patrón sigue siendo legible; el sistema detrás retiró el permiso. Eso es propio de las entradas y los inicios de sesión, no de los códigos QR en general.</p>
+
+<h2>Un patrón sin reloj dentro</h2>
+<p>El código QR lo desarrolló DENSO WAVE en 1994 para superar los límites de los códigos de barras en las líneas de fábrica: los códigos de barras de entonces solo podían guardar unos 20 caracteres alfanuméricos, mientras que el seguimiento de piezas necesitaba muchos más. El código QR que los reemplazó podía almacenar hasta unos 7.000 caracteres y se lanzó con patentes y especificaciones abiertas, así que cualquiera podía usarlo. El formato se diseñó como una forma de llevar datos, no como un servicio con cuenta o fecha de renovación. La edición vigente de su norma, ISO/IEC 18004:2024, especifica la simbología, la codificación y las reglas de corrección de errores, y no contiene ningún temporizador, ninguna comprobación de licencia ni ninguna fecha de caducidad, porque un patrón impreso no tiene dónde guardarlos ni a quién reportarlos.</p>
+<p>Por eso el punto de vista de FreeQrly es una consecuencia del diseño, no una afirmación de marketing. Cada código estático creado aquí es gratis y tuyo: sin cuenta, sin servidor de redirección, sin nada que cancelar. Simplemente no hay mecanismo por el cual pudiera caducar. El papel puede desteñirse, romperse o tirarse, pero no se puede apagar a distancia.</p>
 
 <h2>Estático vs. dinámico, en un párrafo</h2>
-<p>Un código <strong>estático</strong> codifica el destino directamente: <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> o <code>https://your-site.com/menu</code>. Nada que mantener, nada que cobrar. Un código <strong>dinámico</strong> codifica una redirección en el servidor de alguien, lo que permite al dueño cambiar el destino después y contar escaneos. Útil para campañas de marketing, y una suscripción para siempre.</p>
+<p>Un código <strong>estático</strong> codifica el destino directamente: <code>WIFI:T:WPA;S:MyCafe;P:secret;;</code> o <code>https://your-site.com/menu</code>. Nada que mantener, nada que cobrar. Un código <strong>dinámico</strong> codifica una redirección en el servidor de alguien, lo que permite al dueño cambiar el destino después y contar escaneos. Útil para campañas de marketing, y una suscripción mientras el código deba seguir funcionando. La comparación completa, con los casos en los que gana cada uno, está en <a href="/es/blog/static-vs-dynamic-qr-codes/">códigos QR estáticos y dinámicos</a>.</p>
 
 <blockquote>Regla práctica: si el destino nunca cambiará — tu WiFi, tu tarjeta de visita, el menú de tu restaurante — lo estático no es la opción barata. Es la opción <em>correcta</em>.</blockquote>
 
+<h2>Qué detiene en realidad un código: una tabla de diagnóstico</h2>
+<div class="table-scroll"><table>
+<tr><th>Qué ves al escanear</th><th>Qué falló en realidad</th><th>Arreglo</th></tr>
+<tr><td>No pasa nada, en ningún teléfono</td><td>Impresión: demasiado pequeña, bajo contraste, dañada o sin zona de silencio</td><td>Reimprime más grande, más oscuro, con un margen claro; prueba primero una muestra</td></tr>
+<tr><td>El código escanea, pero falta la página</td><td>Enlace podrido: página borrada, sitio mudado, dominio vencido</td><td>Restaura la página o redirige un código dinámico; un código estático necesita reimpresión</td></tr>
+<tr><td>El código escanea hacia una página de mejora o anuncios del proveedor</td><td>Suscripción o prueba terminada; el proveedor apagó la redirección</td><td>Renueva con ese proveedor o reemplaza el código por uno estático</td></tr>
+<tr><td>El código escanea y luego se detiene tras muchos escaneos</td><td>Tope de escaneos en un plan dinámico gratuito</td><td>Mejora el plan o reemplázalo por un código con escaneos ilimitados</td></tr>
+<tr><td>El código escanea en un teléfono y en otro no</td><td>Calidad de impresión justa o un cuadrado de posicionamiento dañado</td><td>Reimprime más grande y más limpio; no te fíes del éxito de un solo teléfono</td></tr>
+</table></div>
+
+<h2>Pasos: averigua qué fallo tienes</h2>
+<ol>
+<li><strong>Abre el destino directamente.</strong> Escribe el enlace en un navegador, sin escanear. Si falta la propia página, el código es inocente: restaura la página o, si es un código dinámico, redirígelo. Si la página carga, el problema es el código, la impresión o la redirección.</li>
+<li><strong>Escanea una muestra impresa en dos teléfonos.</strong> Un iPhone y un Android si puedes. Si ninguno lo lee, sospecha del tamaño, el contraste, el daño o una zona de silencio recortada. Si solo uno lo lee, la impresión es justa: reimprime más grande en vez de confiar en el teléfono que funcionó.</li>
+<li><strong>Lee la vista previa del escaneo, no solo el resultado.</strong> Antes de tocar, mira la URL que muestra tu teléfono. Un dominio corto del proveedor donde esperabas el tuyo significa que hay una redirección dinámica en medio. Una página de mejora del proveedor significa que la redirección se apagó. Un dominio raro significa una pegatina o una suplantación, no una caducidad.</li>
+<li><strong>Revisa la cuenta y el plan detrás de un código dinámico.</strong> Entra en la cuenta que lo creó y comprueba si el plan está activo, si el código está dentro de su asignación de escaneos y si no se ha borrado. Borrar un código dinámico detiene sus copias impresas de inmediato, en cualquier proveedor, porque la redirección se elimina.</li>
+<li><strong>Arregla la capa correcta.</strong> Problema de impresión: reimprime. Página muerta: restáurala. Redirección muerta: renueva o reemplaza el código por uno estático que apunte a una página que controles.</li>
+</ol>
+
 <h2>Qué sale mal en realidad con los códigos impresos</h2>
-<p>Como la caducidad no existe, esto es lo que hay que vigilar en realidad:</p>
+<p>Como la caducidad no existe, vigila esto en su lugar:</p>
 <ul>
-<li><strong>Impresión demasiado pequeña.</strong> Como regla práctica, mantén los códigos de al menos 2 × 2 cm con un margen silencioso. Los códigos diminutos en tarjetas de visita son un fallo de escaneo común.</li>
+<li><strong>Impresión demasiado pequeña.</strong> Como regla práctica, mantén los códigos de al menos 2 × 2 cm con un margen silencioso. Los códigos diminutos en tarjetas de visita son un fallo de escaneo común. La guía completa de tamaños, incluida la distancia, está en la <a href="/es/blog/qr-code-print-size-guide/">guía de tamaño de impresión de códigos QR</a>.</li>
 <li><strong>Bajo contraste.</strong> Tinta oscura sobre fondo claro. Ese código de boda champán sobre crema es hermoso e ilegible.</li>
-<li><strong>Daño.</strong> Los códigos al aire libre se decoloran y se rayan. Una mayor corrección de errores (por defecto usamos M, y la subimos sola cuando añades un logo) permite que un código sobreviva a <a href="http://www.iso.org/standard/83389.html">hasta un 30% de daño</a> en el nivel Alto definido en ISO/IEC 18004.</li>
-<li><strong>Link changes.</strong> Moving your site? The old code still points at the old URL. Guarda una lista de dónde vive cada código, o usa un <a href="/es/dynamic-qr-code/">código dinámico</a> y cambia su destino en vez de reimprimir.</li>
+<li><strong>Daño.</strong> Los códigos al aire libre se decoloran y se rayan. Una mayor corrección de errores ayuda: FreeQrly usa por defecto el nivel M y lo sube solo cuando añades un logo. En el nivel Alto de la ISO/IEC 18004 se puede restaurar hasta alrededor del 30% de las palabras de código; palabras de código, no área visible, así que «30% de daño» engaña. Un pequeño rasguño sobre un cuadrado de posicionamiento, el cuadrado grande de la esquina que el escáner usa para localizar el código, puede detener un escaneo aunque la mayor parte del patrón parezca intacta.</li>
+<li><strong>Sin zona de silencio.</strong> El margen en blanco alrededor del código, de al menos 4 módulos de ancho por los cuatro lados según la ISO/IEC 18004, forma parte del código. El texto o el diseño amontonados en él hacen que los escáneres no encuentren los bordes.</li>
+<li><strong>Cambios de enlace.</strong> ¿Mudaste tu sitio? El código viejo sigue apuntando a la URL vieja. Lleva una lista de dónde vive cada código, o usa un <a href="/es/dynamic-qr-code/">código dinámico</a> y redirígelo en vez de reimprimir. Lista completa: <a href="/es/blog/why-is-my-qr-code-not-working/">por qué no funciona tu código QR</a>.</li>
 </ul>
 
-<h2>El punto de vista de FreeQrly</h2>
-<p>Cada código estático creado aquí es gratis y tuyo: sin cuenta, sin servidor de redirección, sin nada que cancelar. Simplemente no hay mecanismo por el cual pudiera caducar. Eso no es una afirmación de marketing; es así como funcionan los códigos estáticos cuando nadie se mete en medio.</p>
+<h2>Casos: qué códigos deberían sobrevivir a quien los creó</h2>
+<h3>Una tarjeta de visita</h3>
+<p>Una tarjeta de visita se imprime una vez y se reparte durante años. Un código estático con una tarjeta de contacto o una página personal es la decisión acertada: sin cuenta que mantener, sin redirección que seguir pagando y sin nadie que pueda apagarlo. Si cambia el cargo, la tarjeta se reimprime de todos modos, así que el destino congelado del código no cuesta nada.</p>
+<h3>Una invitación de boda</h3>
+<p>Las invitaciones salen meses antes del día y los invitados las guardan en la nevera mucho después. Un código estático hacia una página de confirmación que controles seguirá funcionando cuando salgan las notas de agradecimiento, siempre que la página siga activa. Un código dinámico también funciona, pero solo si alguien sigue cuidando la cuenta dentro de un año; para un evento de un día, la permanencia vence a la editabilidad. Mira <a href="/es/blog/wedding-rsvp-qr-code/">códigos QR de confirmación para bodas</a> y <a href="/es/blog/free-qr-codes-that-dont-expire/">códigos QR gratis que no caducan</a>.</p>
+<h3>Un menú de restaurante o un escaparate</h3>
+<p>Aquí la decisión depende de una pregunta: ¿cambia el destino? Una página de menú que actualizas en su sitio solo necesita un código estático que apunte a esa página: actualiza la página, no el código. Un menú que cambia de plataforma o una oferta de escaparate que cambia cada mes se gana un código dinámico, porque reimprimir un cartel de escaparate cada mes es la opción cara. Mira <a href="/es/blog/qr-codes-for-restaurants/">códigos QR para restaurantes</a>.</p>
+<h3>Un cartel de campaña con fecha límite</h3>
+<p>Un cartel es el caso dinámico clásico: debe imprimirse antes de que la página de destino esté cerrada, y después puede apuntar a un resumen o una lista de espera. Pero también es donde la trampa de la suscripción muerde más fuerte, porque el cartel puede seguir en las paredes meses después de que se acabe el presupuesto de la campaña. Antes de imprimir un código de campaña en cualquier proveedor, lee qué hace ese proveedor cuando termina el plan y considera apuntar, en estático, a una página de campaña que sea tuya.</p>
+<h3>Envases vendidos durante años</h3>
+<p>El envase es la impresión más longeva de todas y el peor sitio para un código dependiente de una suscripción. Un código estático hacia una página de producto que controles sobrevive a cambios de personal y ciclos de presupuesto, porque nada de él necesita renovarse. Un código dinámico en un envase solo se justifica cuando el destino de verdad debe cambiar durante la vida del producto y cuando alguien se encarga de mantener esa cuenta viva durante toda la vida útil del producto.</p>
 
+<h2>La comparación honesta: qué dicen en realidad los proveedores</h2>
+<p>Cada proveedor describe su propio comportamiento ante la caducidad en su página de precios o preguntas frecuentes, y esas páginas son la única fuente justa para una comparación. Las cifras de abajo son declaraciones de cada proveedor, verificadas el 3 de noviembre de 2026. Los precios y límites cambian, así que revisa la página del proveedor antes de imprimir algo que tenga que durar, y lee el plan gratuito, no el titular.</p>
+<div class="table-scroll"><table>
+<tr><th>Proveedor, plan gratuito, según el propio proveedor</th><th>Códigos dinámicos gratis</th><th>Límite de escaneos gratis</th><th>Qué dice el proveedor que pasa cuando termina un plan</th></tr>
+<tr><td>FreeQrly, cuenta gratuita</td><td>20, actualmente sin límite durante la promoción por tiempo limitado</td><td>Escaneos ilimitados</td><td>Los códigos estáticos nunca caducan y no necesitan cuenta; borrar un código dinámico detiene sus copias impresas y libera el hueco</td></tr>
+<tr><td>QR TIGER, plan freemium</td><td>3</td><td>500 escaneos por código</td><td>Los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente; «Si tu plan caduca, dejará de funcionar»; se afirma que los códigos estáticos nunca caducan</td></tr>
+<tr><td>The QR Code Generator, plan gratuito</td><td>2</td><td>La asignación gratuita son los 2 códigos</td><td>Tras una prueba, 2 códigos siguen activos pero muestran anuncios; en su plataforma madre Uniqode, los códigos de prueba se inactivan sin un plan de pago</td></tr>
+</table></div>
+<p>Tres patrones de esa tabla vale la pena aprender a detectar. Primero, un tope de escaneos es una segunda caducidad: un código gratis con tope de 500 escaneos muere de éxito, no de edad, en el peor momento posible: cuando la campaña funciona. Segundo, una prueba es un calendario: los códigos creados durante una prueba pueden seguir funcionando, seguir funcionando con anuncios o detenerse por completo, según el proveedor, y la distinción vive en la página de precios o preguntas frecuentes del proveedor, no en la de ventas. Tercero, «escaneos ilimitados» en un plan de pago significa ilimitados mientras la suscripción esté vigente: un trato justo para una campaña activa, un mal trato para un cartel permanente.</p>
+<p>La posición propia de FreeQrly: un código estático no tiene cuenta ni redirección, así que no hay nada que caduque o renueve. Un código dinámico es gratis con una cuenta gratuita, con escaneos ilimitados, editable después de imprimir y contado en el Panel. Borrar uno lo detiene de forma permanente, porque la redirección se elimina; así que borra solo códigos sin ninguna copia impresa en circulación.</p>
+
+<h2>Una nota de seguridad que el debate sobre la caducidad suele saltarse</h2>
+<p>Un código que escanea no es necesariamente un código en el que debas confiar. En una alerta al consumidor del 6 de diciembre de 2023, la Comisión Federal de Comercio de EE. UU. advirtió que los estafadores pegan sus propios adhesivos QR sobre códigos reales en parquímetros y envían códigos QR en mensajes inesperados inventando motivos urgentes para escanear: una entrega perdida, un problema de cuenta, una contraseña que hay que cambiar. El código de un estafador puede llevar a un sitio suplantado o a malware. El consejo de la FTC es el mejor hábito: revisa la vista previa de la URL antes de abrir un código en un lugar inesperado, busca faltas de ortografía o una letra cambiada, y no escanees un código de un mensaje inesperado que urge a actuar de inmediato; contacta con la empresa por un número o sitio que ya conozcas. Para tus propios códigos, revisa la vista previa después de cada edición.</p>
+
+<h2>El punto de vista de FreeQrly, y la decisión que sigue</h2>
+<p>Cada código estático creado aquí es gratis y tuyo: sin cuenta, sin servidor de redirección, sin nada que cancelar. Simplemente no hay mecanismo por el cual pudiera caducar. Así funcionan los códigos estáticos cuando nadie se mete en medio. Los códigos dinámicos son otro trato honesto: inicia sesión gratis, consigue 20 códigos (actualmente sin límite durante la promoción por tiempo limitado), edítalos después de imprimir y mira sus estadísticas, con escaneos ilimitados; dependencia de una redirección y una cuenta, a cambio de editabilidad y medición.</p>
+<p>Así que la pregunta antes de imprimir no es «¿caducará este código?» sino «¿qué podría detener este código y quién lo controla?». Si la respuesta es «nada, porque el destino está en el patrón y la página es mía», imprime en estático y deja de preocuparte. Si la respuesta es «el destino cambiará y yo estaré aquí para cambiarlo», imprime en dinámico, conserva la cuenta y guarda la lista de dónde vive cada código. Si la respuesta es «la suscripción de un proveedor, y no estoy seguro de renovarla», no imprimas ese código en nada pensado para durar; apunta un código estático a una página que sea tuya. Empieza con un código estático en el <a href="/es/">generador gratuito</a> o, cuando el destino deba seguir siendo editable, con <a href="/es/blog/how-to-create-a-dynamic-qr-code/">cómo crear un código QR dinámico</a> y el <a href="/es/dynamic-qr-code/">generador de códigos QR dinámicos</a>. ¿Ya imprimiste y necesitas arreglar un enlace? <a href="/es/blog/how-to-edit-a-qr-code-after-printing/">Cómo editar un código QR después de imprimir</a> explica el arreglo de dos minutos, al menos para códigos dinámicos.</p>
     </div>
 
     <section class="sources">
       <h2>Fuentes</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La especificación de simbología del código QR. Define los cuatro niveles de corrección de errores (L 7%, M 15%, Q 25%, H 30%) y la zona de silencio de 4 módulos.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - Conservado del artículo original. La especificación de la simbología de códigos QR, edición 4, publicada en agosto de 2024. Define los cuatro niveles de corrección de errores (L 7%, M 15%, Q 25%, H 30% de las palabras de código) y la zona de silencio de 4 módulos.</li>
+      <li><a href="https://www.denso-wave.com/en/adcd/info/detail__190808_01.html">DENSO WAVE: 25.º aniversario del código QR</a> - Publicado el 8 de agosto de 2019. Respalda: código QR desarrollado en 1994; los códigos de barras de entonces solo podían guardar unos 20 caracteres alfanuméricos; el código QR podía almacenar hasta unos 7.000 caracteres; lanzado con patentes y especificaciones abiertas.</li>
+      <li><a href="https://www.qrcode-tiger.com/faq">Preguntas frecuentes de QR TIGER</a> - Página de preguntas frecuentes del propio proveedor, consultada el 2026-11-03 (sin fecha de publicación en la página). Respalda: 3 códigos dinámicos gratis con un límite de 500 escaneos cada uno; los códigos dinámicos de pago tienen escaneos ilimitados mientras la suscripción esté vigente; «Si tu plan caduca, dejará de funcionar»; los códigos estáticos gratis son ilimitados y nunca caducan.</li>
+      <li><a href="https://www.qrcode-tiger.com/software-subscription">Gestión de planes de suscripción de QR TIGER</a> - Página de suscripción del propio proveedor, consultada el 2026-11-03 (sin fecha de publicación en la página). Respalda: plan freemium con 3 códigos dinámicos con un límite de 500 escaneos cada uno; Regular US$7 con 12 códigos dinámicos; Advanced US$16 con 200; Premium US$37 con 600; Professional US$89 con 1.200.</li>
+      <li><a href="https://www.the-qrcode-generator.com/pricing?lng=en&signup_source=custom-qr-code_explore_plans">Precios de The QR Code Generator (TQRCG)</a> - Página de precios del propio proveedor, consultada el 2026-11-03 (sin fecha de publicación en la página). Respalda: plan gratuito con 2 códigos dinámicos y códigos estáticos ilimitados; tras una prueba gratuita, 2 códigos dinámicos siguen activos pero muestran anuncios; en Uniqode, los códigos de prueba se inactivan sin un plan de pago.</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC: Los estafadores ocultan enlaces dañinos en códigos QR para robar tu información</a> - Alerta al consumidor del 6 de diciembre de 2023. Respalda: estafadores que cubren códigos QR en parquímetros con sus propios códigos; códigos QR enviados en mensajes inesperados inventando motivos urgentes para escanear; consejo de revisar la vista previa de la URL y buscar faltas de ortografía o una letra cambiada.</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presentando un código QR"></div>
       <div>
         <h3>Pruébalo tú mismo — gratis</h3>
-        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, trece tipos de contenido, exportación a PNG y SVG.</p>
+        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, los 17 tipos de contenido, exportación en PNG y SVG.</p>
         <a class="btn" href="/es/#studio">Abrir el generador</a>
       </div>
     </div>
@@ -148,15 +244,20 @@
       <div class="fl" style="margin-top:34px">Seguir leyendo</div>
       <div class="rel-grid">
         <a class="rel-card" href="/es/blog/how-to-scan-a-qr-code/"><b>Cómo escanear un código QR (iPhone y Android)</b></a>
-        <a class="rel-card" href="/es/blog/qr-code-print-size-guide/"><b>QR Code Guía de tamaño de impresión: Business Cards to Posters</b></a>
+        <a class="rel-card" href="/es/blog/qr-code-print-size-guide/"><b>Guía de tamaño de impresión de códigos QR: de tarjetas de visita a carteles</b></a>
         <a class="rel-card" href="/es/blog/free-qr-codes-that-dont-expire/"><b>Códigos QR gratis que nunca caducan</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bueno saberlo</h2>
-    <details><summary><span>¿Caducan los códigos QR gratis?</span></summary><p>No. Un código QR estático gratis dura tanto como el enlace al que apunta. Los códigos que "caducan" son códigos dinámicos atados a una suscripción de pago: el proveedor los apaga cuando dejas de pagar.</p></details>
-    <details><summary><span>¿Un código QR puede dejar de funcionar?</span></summary><p>Sí, pero no por caducidad. Las causas usuales: la página de destino se borró, el código se imprimió demasiado pequeño o con bajo contraste, o se dañó físicamente.</p></details>
-    <details><summary><span>¿Cuánto duran los códigos QR estáticos?</span></summary><p>Indefinidamente. El patrón codifica tus datos directamente sin servidor de por medio, así que no hay nada que mantener ni renovar.</p></details>
+    <details><summary><span>¿Caducan los códigos QR gratis?</span></summary><p>No, si son estáticos. Un código QR estático gratis dura tanto como el enlace al que apunta. Los códigos que dejan de funcionar suelen ser códigos dinámicos atados a una suscripción de pago — el proveedor apaga la redirección cuando dejas de pagar — o códigos que apuntan a una página borrada.</p></details>
+    <details><summary><span>¿Un código QR puede dejar de funcionar?</span></summary><p>Sí, pero no por caducidad. Las causas usuales son: la página de destino se borró, el código se imprimió demasiado pequeño o con bajo contraste, se dañó físicamente, su zona de silencio se recortó o un plan dinámico terminó o alcanzó su tope de escaneos.</p></details>
+    <details><summary><span>¿Cuánto duran los códigos QR estáticos?</span></summary><p>Indefinidamente, mientras el destino siga funcionando. El patrón codifica tus datos directamente sin ningún servidor de por medio, así que no hay nada que mantener ni renovar.</p></details>
+    <details><summary><span>¿Qué les pasa a los códigos dinámicos de pago cuando termina una suscripción?</span></summary><p>Depende del proveedor, y la página de preguntas frecuentes del propio proveedor es la fuente que hay que revisar. Las preguntas frecuentes de QR TIGER dicen que los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente y que «Si tu plan caduca, dejará de funcionar». The QR Code Generator dice que tras una prueba, 2 códigos siguen activos pero muestran anuncios, mientras que en su plataforma madre Uniqode los códigos de prueba se inactivan sin un plan de pago.</p></details>
+    <details><summary><span>¿Puede un límite de escaneos detener un código QR?</span></summary><p>Sí, en proveedores que limitan los escaneos dinámicos gratuitos. El plan freemium de QR TIGER, según su propia página de suscripción, da 3 códigos dinámicos con un límite de 500 escaneos cada uno. Un código que alcanza su tope deja de servir a su destino aunque el patrón esté intacto. Los códigos dinámicos de FreeQrly tienen escaneos ilimitados.</p></details>
+    <details><summary><span>¿El daño mata un código QR?</span></summary><p>No siempre. La corrección de errores puede reconstruir datos perdidos: en el nivel Alto de la ISO/IEC 18004 se puede restaurar hasta alrededor del 30% de las palabras de código. Eso cuenta palabras de código, no área visible: un pequeño rasguño sobre un cuadrado de posicionamiento de esquina puede detener un escaneo aunque la mayor parte del patrón parezca intacta.</p></details>
+    <details><summary><span>¿Cómo distingo un enlace muerto de una suscripción muerta o de una mala impresión?</span></summary><p>Abre el destino directamente en un navegador; escanea una muestra impresa en dos teléfonos; lee la URL de la vista previa del escaneo antes de tocar; y, para un código dinámico, revisa el plan y la asignación de escaneos de la cuenta que lo creó. Cada comprobación apunta a una capa distinta, y cada capa tiene un arreglo distinto.</p></details>
+    <details><summary><span>¿Un cartel permanente o un envase deben usar estático o dinámico?</span></summary><p>Estático, si el destino es fijo. Un código estático hacia una página que controles no necesita cuenta ni renovación, así que sobrevive a cambios de personal y ciclos de presupuesto. Usa dinámico solo cuando el destino de verdad deba cambiar y alguien mantenga la cuenta viva durante toda la vida del código.</p></details>
     </section>
   </article>
   <footer>

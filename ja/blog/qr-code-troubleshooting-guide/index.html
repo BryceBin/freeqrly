@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRコードトラブルシューティングガイド：あらゆるスキャン失敗の発見と修正 | FreeQrly</title>
+<meta name="description" content="QRコードがスキャンできない？11の原因すべて — サイズ、ぼやけ、コントラスト、クワイエットゾーン、ロゴ、破損、リンク切れ、光、カメラ — を1つのハブに集め、それぞれの対処法とともに。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-troubleshooting-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QRコードトラブルシューティングガイド：あらゆるスキャン失敗の発見と修正 | FreeQrly">
+<meta property="og:description" content="QRコードがスキャンできない？11の原因すべて — サイズ、ぼやけ、コントラスト、クワイエットゾーン、ロゴ、破損、リンク切れ、光、カメラ — を1つのハブに集め、それぞれの対処法とともに。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/qr-code-troubleshooting-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QRコードトラブルシューティングガイド：あらゆるスキャン失敗の発見と修正 | FreeQrly","description":"QRコードがスキャンできない？11の原因すべて — サイズ、ぼやけ、コントラスト、クワイエットゾーン、ロゴ、破損、リンク切れ、光、カメラ — を1つのハブに集め、それぞれの対処法とともに。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "QRコードが片方のスマホではスキャンできるのに、もう片方ではできないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それなら、コードもリンクも両方問題ありません。失敗しているスマホが問題です。レンズを拭き、カメラへのアクセスを許可し、コード全体を枠に入れてしっかり構え、より良い光で試してください。そのスマホだけでまだ失敗するなら、サードパーティのスキャナーアプリではなく、内蔵カメラの経路を使ってください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコードがときどきスキャンできますが、常にではありません。問題ないですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。ときどきスキャンできるコードは、ぎりぎりのコードです。自分の机では通っても、客の手では失敗します。壊れているものとして扱い、良い光を願うのではなく、根本的な原因 — 通常はサイズ、コントラスト、グレア、混雑したクワイエットゾーン — を直してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷したQRコードはどのくらい大きくすべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "目安として、最低2×2cm、そして予想されるスキャン距離の最低10分の1です。50cmからスキャンするテーブルカードには幅約5cmのコードが必要で、5メートルからスキャンするポスターには幅約50cmのコードが必要です。長いリンクを持つ密なコードは、短いリンクより多くの余裕が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコードのどれだけをロゴが覆えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "小さく保ちます。最も高い誤り訂正レベルを使い、プレーンなコードより大きく印刷し、スキャナーが模様の向きを定めるために必要な3つの大きな角の四角を決して覆わないでください。目安として、印刷サイズガイドはコード面積の約30%未満を提案しています。そして、印刷する前に必ず完成したコードを2台のスマホでテストスキャンしてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "コードはスキャンできるのにページがありません。コードが壊れているのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。模様は完璧にデコードされました。行き先が失敗しました。移転または削除されたページ、打ち間違えたアドレス、アカウントやリダイレクトが無効にされた動的コードは、すべてこのように見えます。ページや動的リダイレクトをあなたが管理しているなら、復旧または差し替えしてください。刷り直しは不要です。静的コードは差し替えできません。裏側のページだけが復旧できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "コードをテストするのにスキャナーアプリは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。iPhoneではカメラアプリまたはコントロールセンターのコードスキャナーを使い、Androidでは内蔵カメラまたはLensを使います。すでにスマホ自身の画面上にあるコード — 写真やスクリーンショットの中 — については、カメラを自分のディスプレイに向けるのではなく、画像ファイルをデコードします。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/error.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QRコード<span class='hl hl-mint'>トラブルシューティング</span>、最初から最後まで</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">スキャンできない、ときどきスキャンできる、どこにもつながらない？表で自分の失敗を見つけ、その対処法に従い、再テストしてください。ほとんどのコードは刷り直さずに直ります。</p>
+    <p class="meta" style="text-align:center">2026年11月3日 · 約15分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+<p>スキャンできないQRコードは、めったに謎ではありません。ほとんどの失敗は11の原因のいずれかに帰着し、3つの質問に分かれます。模様が読めないのか、スマホが苦労しているのか、それともコードは問題なくスキャンできたのに行き先が期待に応えなかったのか。まずそれに答えれば、健全なコードを刷り直すことも、リンクが死んでいるのに模様を直すこともありません。</p>
+
+<h2>まずこの3つを確認する</h2>
+<ol>
+<li><strong>別のスマホで試す。</strong>別のスマホがコードを読めば、模様は問題ありません。以下のスマホのチェックへ進んでください。</li>
+<li><strong>画面ではなくコードを見る。</strong>小さいか、淡いか、近くの文字に混雑しているか、ロゴに覆われているか、傷ついているか、色褪せているか。そのいずれも模様を読めなくします。元のファイルの新しいコピーも試してください。新しいコピーがスキャンできれば、データではなく元の印刷が失敗しました。</li>
+<li><strong>スキャンの返りを読む。</strong>スマホがコードを認識するのに、ページが決して読み込まれないか、予想外の場所に着地するなら、模様は仕事を果たしました。行き先が問題です。削除されたページ、打ち間違えたリンク、無効にされた動的コードです。</li>
+</ol>
+<p>全体を通して1つの区別が重要です。<em>決して</em>スキャンできないコードは模様かカメラの問題があり、<em>ときどき</em>スキャンできるコード — 明るい光ではできるが暗い光ではできない、近くではできるが腕の長さではできない — はぎりぎりのコードです。ぎりぎりのコードは自分の机では通っても、客の手では失敗します。ときどきスキャンできるコードは壊れているものとして扱ってください。</p>
+
+<h2>原因表：よくある失敗をすべて一目で</h2>
+<div class="table-scroll"><table>
+<tr><th>原因</th><th>症状</th><th>素早いテスト</th><th>対処法</th><th>詳しい解説</th></tr>
+<tr><td><strong>小さすぎる</strong></td><td>非常に近くでのみスキャンできる</td><td>近くではスキャンできるか？サイズが原因です</td><td>より大きく印刷する</td><td><a href="/ja/blog/qr-code-print-size-guide/">サイズガイド</a></td></tr>
+<tr><td><strong>ぼやけ／低解像度</strong></td><td>柔らかい輪郭、にじんだ四角</td><td>ファイルの中で柔らかいか？悪い書き出しです</td><td>PNGまたはSVGとして再書き出しする</td><td><a href="/ja/blog/why-is-my-qr-code-blurry/">ぼやけの対処法</a></td></tr>
+<tr><td><strong>低コントラスト</strong></td><td>明るい光ではスキャンでき、暗い光では失敗する</td><td>白黒でも読めますか？</td><td>明るい背景上の暗いコード</td><td><a href="/ja/blog/why-is-my-qr-code-not-working/">診断</a></td></tr>
+<tr><td><strong>クワイエットゾーンの混雑</strong></td><td>切り取ってスキャンでき、デザインでは失敗する</td><td>近くの文字を覆う。今スキャンできるか？</td><td>4モジュール幅のきれいな余白を復旧する</td><td><a href="/ja/blog/why-is-my-qr-code-not-working/">診断</a></td></tr>
+<tr><td><strong>ロゴが大きすぎる</strong></td><td>ロゴ前はスキャンでき、ロゴ後は失敗する</td><td>ロゴなしで再生成する</td><td>より小さいロゴ、より高い誤り訂正</td><td><a href="/ja/blog/add-logo-to-qr-code/">ロゴ入りコード</a></td></tr>
+<tr><td><strong>破損や汚れ</strong></td><td>新しいときは動いたが、扱ったあとに失敗する</td><td>新しい印刷物と比べる</td><td>きれいにする、保護する、刷り直す</td><td><a href="/ja/blog/why-is-my-qr-code-not-working/">診断</a></td></tr>
+<tr><td><strong>リンク切れ</strong></td><td>スキャンできるが、ページが欠けているか間違っている</td><td>パソコンでリンクを開く</td><td>行き先を復旧または差し替える</td><td><a href="/ja/blog/do-qr-codes-expire/">コードに期限はある？</a></td></tr>
+<tr><td><strong>光とグレア</strong></td><td>ある角度ではスキャンでき、別の角度では失敗する</td><td>光から傾ける</td><td>光を移し、マット仕上げを使う</td><td><a href="/ja/blog/why-is-my-qr-code-not-working/">診断</a></td></tr>
+<tr><td><strong>カメラの許可／ピント</strong></td><td>1台のスマホでのみ失敗する</td><td>2台目のスマホでのテストと、レンズ拭き</td><td>アクセスを許可し、レンズをきれいにし、しっかり構える</td><td><a href="/ja/blog/how-to-scan-a-qr-code/">スキャン方法</a></td></tr>
+<tr><td><strong>動的コードの無効化</strong></td><td>エラーページへスキャンする</td><td>ダッシュボードでコードを確認する</td><td>再有効化するか、置き換える</td><td><a href="/ja/blog/do-qr-codes-expire/">コードに期限はある？</a></td></tr>
+<tr><td><strong>自身の画面上のコード</strong></td><td>カメラは自分のディスプレイに向けられない</td><td>予想されることであって、故障ではありません</td><td>代わりに画像ファイルをデコードする</td><td><a href="/ja/blog/scan-qr-code-from-image/">画像から</a></td></tr>
+</table></div>
+
+<h2>模様自体：コードが読めなくなる6つの方法</h2>
+
+<h3>1. スキャン距離に対して小さすぎる</h3>
+<p>小さいコードが失敗するのは、枠の中で小さいときに、カメラが個々のモジュール — 小さな四角 — を解像できないからです。目安として、印刷したコードは最低2×2cmに保ち、距離に応じて拡大します。コードの幅は、予想されるスキャン距離の最低10分の1にすべきです。50cmからスキャンするテーブルカードには幅約5cmのコードが必要で、5メートルからスキャンするポスターには幅約50cmのコードが必要です。長いリンクを持つ密なコードは、短いリンクより多くの余裕が必要です。完全なサイズ表は<a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a>にあります。</p>
+
+<h3>2. ぼやけや低解像度</h3>
+<p>ぼやけとは、広すぎる面積にピクセルが少なすぎて引き伸ばされ、モジュールの輪郭同士がにじみ合うことです。よくある犯人は、低解像度の書き出し、鋭い輪郭を甘くするJPEG保存、スクリーンショットのスクリーンショット、四角が長方形になるほど比率を崩して引き伸ばされたファイルです。元のファイルで直します。高解像度PNGとして、またはぼやけずに拡大できるSVGとして再書き出しし、比率を保ってのみサイズ変更します。すでにぼやけた印刷物をシャープに戻すことはできません。きれいなファイルから刷り直してください。5つの原因とその対処法は<a href="/ja/blog/why-is-my-qr-code-blurry/">QRコードがぼやける理由</a>にあります。</p>
+
+<h3>3. 低コントラスト</h3>
+<p>スキャナーは、明るい背景上の暗いモジュールを探します。白上の薄いグレー、パステルのブランドカラー、写真の上のコード、暗い背景上の暗いモジュールは、すべてカメラが必要とする違いを消します。これは最も一般的なデザイン由来の失敗であり、最も回避可能です。白地に黒は常に機能し、どんな色の組み合わせも白黒で読めるべきです。反転したコードや、背景が模様と競合する忙しい画像の上のコードに注意してください。コードが明るい光ではスキャンできるのに暗い部屋ではできないなら、コントラストが最初の容疑者です。</p>
+
+<h3>4. クワイエットゾーンの混雑や切り取り</h3>
+<p>コードの周りの空白の余白は装飾ではありません。スキャナーはそれを使って模様の端を見つけ、規格は全4辺に最低4モジュール幅 — コード自身の小さな四角4つ分 — のクワイエットゾーンを定めています（ISO/IEC 18004で定義）。その余白に混み合う文字や模様は検出を混乱させ、スマホはデータを決して読みません。この失敗は見逃しやすいです。コード自体が完璧に見えるからです。コードの周りのすべてを覆ってテストします。きれいにスキャンできれば、余白を復旧して空に保ちます。</p>
+
+<h3>5. 模様を覆いすぎるロゴ</h3>
+<p>中央のロゴが機能するのは、誤り訂正が覆われたデータを再構成するからだけです。ISO/IEC 18004は4つの誤り訂正レベル — L、M、Q、H — を定め、おおよそのコードワード復元はそれぞれ7%、15%、25%、30%です。これらの割合はコードワードの復元を表し、覆ってもよい見た目の面積の保証された割合ではありません。目安として、ロゴは小さく保ちます。印刷サイズガイドはコード面積の約30%未満を提案しています。最も高い誤り訂正レベルを使い、プレーンなコードより大きく印刷し、スキャナーが模様の向きを定めるために必要な3つの大きな角の四角を決して覆わないでください。まず2台のスマホでテストスキャンします。詳しくは<a href="/ja/blog/add-logo-to-qr-code/">QRコードにロゴを入れる方法</a>と<a href="/ja/qr-code-with-logo/">ロゴ入りコードジェネレーター</a>をご覧ください。</p>
+
+<h3>6. 破損、汚れ、色褪せ</h3>
+<p>折れ、傷、こぼれ、色褪せ、摩耗したステッカーは、すべて模様を食い込みます。誤り訂正が再構成できるのはそこまでです。角の四角への損傷は特に致命的です。それがなければ、スキャナーはコードをまったく見つけられません。現実世界のコード — メニュー、ラベル、屋外の看板 — では、修理より予防が勝ちます。表面をラミネートし、より高い誤り訂正レベルを選び、予備を印刷し、最も古いコピーをまず点検してください。模様自体が摩耗してしまったら、破損したコピーを補修するのではなく、元のファイルから刷り直してください。</p>
+
+<h2>行き先：コードはスキャンできるのに良いことが何も起きないとき</h2>
+<p>エラーページ、欠けたページ、予想しなかったランディングページを返すスキャンは、壊れた行き先の成功したスキャンです。パソコンでリンクを開き、一文字ずつ読んでください。移転または削除されたページ、打ち間違えたアドレス、停止中のサイト、所有者が行き先を変えた短いリンクが、よくある原因です。</p>
+<p>1つの構造的な違いが、修正がそもそも可能かどうかを決めます。静的コードは行き先を直接模様の中に持つため、リンクが動く限り機能します。リンクが死ねば、裏側のページを復旧するか、コードを刷り直すしかありません。動的コードは代わりに短いリダイレクトを持つため、所有者は刷り直さずに行き先を変えられます。ただ、コードはそのアカウントとサービスが有効であり続けることに依存します。そのアカウントが失効したり、サービスがリダイレクトを切ったりすれば、模様が完璧でも、印刷されたコードは役立つ場所へつながらなくなります。これが、ほとんどの「コードに期限が来た」という話の裏側の仕組みで、<a href="/ja/blog/do-qr-codes-expire/">コードに期限はある？</a>で説明しています。刷り直す前に、まず行き先を復旧できるか、差し替えられるか確認してください。</p>
+
+<h2>スマホとその瞬間：許可、ピント、光、画面</h2>
+<ul>
+<li><strong>カメラの許可。</strong>カメラへのアクセスを決して許可されていないスキャナーは、何も見ることができません。カメラへのアクセスを許可してから、再試行してください。FreeQrlyのスキャナーは、あなたの端末上のブラウザ内でデコードします — <a href="/ja/scan/">スキャナーページ</a>をご覧ください — ただし、ブラウザはカメラを開くためにやはり許可を必要とします。</li>
+<li><strong>汚れたレンズ。</strong>柔らかい布でレンズを拭きます。汚れたレンズは、まさにQRコードが作られている細部をぼやけさせます。</li>
+<li><strong>ピントと距離。</strong>スマホをしっかり構え、コード全体とそのクワイエットゾーンを枠に入れ、ピントが合うまでゆっくり動かします。非常に近いことが常に良いとは限りません。ほとんどのカメラは数センチ離れたところではピントを合わせられません。</li>
+<li><strong>光とグレア。</strong>光沢ラミネート、画面、スポットライトは、光をカメラへ反射してモジュールを洗い流すことがあります。コードやスマホを傾け、直接の光から外れるか、マット仕上げに切り替えます。傾けると動くグレアは、破損ではなくグレアです。</li>
+<li><strong>曲面や斜めの面。</strong>ボトルに巻いたコードや急な角度で撮影したコードはゆがみ、スキャナーが許容できるのはその程度までです。平らにできるものは平らにし、できるだけ正面から撮影してください。</li>
+<li><strong>スマホ自身の画面上のコード。</strong>スマホのカメラを自分のディスプレイに向けることはできません。同じスマホ上の写真、スクリーンショット、メッセージの中のコードについては、代わりに画像ファイルをデコードします。iPhoneなら写真アプリでコードを長押しし、Androidなら写真アプリのLensを使い、パソコンならFreeQrlyの<a href="/ja/scan/">スキャナー</a>のようなデコーダーにアップロードします。完全な手順は<a href="/ja/blog/scan-qr-code-from-image/">画像からQRコードをスキャンする方法</a>に、スマホごとのカメラ手順は<a href="/ja/blog/how-to-scan-qr-code-on-phone/">スマホでQRコードをスキャンする方法</a>にあります。</li>
+</ul>
+<p>Apple自身のガイドが基準を確認しています。iPhoneでは、カメラアプリまたはコントロールセンターのコードスキャナーを開き、コードが枠に映るようにスマホを構え、表示されるリンクをタップします。その経路が、他のスマホが読むコードで何もしないなら、不足しているスキャナーアプリではなく、許可、ピント、光を疑ってください。iPhoneとAndroid両方の一般的な手順は<a href="/ja/blog/how-to-scan-a-qr-code/">QRコードのスキャン方法</a>にあります。</p>
+
+<h2>場面別：印刷、画面、屋外</h2>
+<h3>印刷されたコード：チラシ、カード、メニュー、包装</h3>
+<p>印刷の失敗は、通常サイズ、解像度、コントラスト、摩耗の順です。画面ではなく最終サイズでテストします。1部印刷し、実際の視認距離まで下がり、2台のスマホでスキャンします。レイアウトツールは余白を切り取るため、プレビューだけでなく完成したレイアウトでクワイエットゾーンを確認します。扱われるコードはラミネートし、元の書き出しを保管します。</p>
+<h3>画面上のコード：スライド、テレビ、ビデオ通話、Webサイト</h3>
+<p>画面のコードは、グレア、リフレッシュのちらつき、視聴者までの距離に対するサイズで失敗します。スライド上でコードを大きくし、一瞬で通り過ぎさせるのではなく数秒間画面に保持し、動く背景の上に置かないでください。スマホ同士の表示では、明るさを上げ、天井の照明から傾けます。</p>
+<h3>屋外のコード：ポスター、看板、車両、ショーウィンドウ</h3>
+<p>屋外のコードは、すべての失敗を一度に直面します。距離、日光、グレア、天候、色褪せです。10分の1ルールでたっぷり大きくし、マット紙に高コントラストで印刷し、耐候性を持たせ、実際の通行人の距離と角度でテストします。ショーウィンドウのコードは特別なチェックが必要です。内側からは見えない反射がコードを洗い流すことがあるため、昼光の中でガラスの外からスキャンします。</p>
+
+<h2>正直な比較：無料コード、有料コード、「期限切れ」コード</h2>
+<p>正直なジェネレーターの静的コードは、どれも同じ性質を持ちます。行き先は模様に焼き込まれているため、期限切れになるものも、更新するものも、失効してコードを道連れにするアカウントもありません。FreeQrlyの静的コードは無料、登録不要、透かしなし、期限なしです。静的コードにお金を払っても、その寿命については何も買えません。サーバーを決して必要としなかったコードの契約は、それを生かし続けてはいません。</p>
+<p>動的コードは別の商品で、正直な取引はこうです。印刷後の編集とスキャン統計を得る代わりに、アカウントとサービスへの依存を受け入れます。FreeQrlyの動的コードは無料で開始できます。ログインすれば、無料の動的コードを20個手に入れられます（期間限定キャンペーン中は現在無制限）。編集、統計、スキャン無制限付きです。依存は、価格ゼロでも現実です。アカウントを削除すればコードも消えます。だから、動的コードは、所有者より長生きしなければならない行き先の唯一のコピーにしてはいけません。メンテナンスなしで長持ちしなければならないもの — WiFiパスワード、名刺、銘板 — には、静的が構造的により安全です。</p>
+<p>同じ論理は、他社の有料動的コードにも当てはまります。1つが動かなくなったとき、模様が問題であることはほとんど決してありません。契約、アカウント、リダイレクトです。刷り直す前に、ベンダーのダッシュボード、アカウントの状態、リダイレクトが指す行き先を確認してください。安く刷り直せない印刷ロットについては、まずこう問います。支払いを止めたら、印刷されたコードは動き続けますか？答えが、コードを買っているのか、借りているのかを教えてくれます。</p>
+
+<h2>作り直す、刷り直す、それとも行き先を直す？</h2>
+<ul>
+<li><strong>行き先を修正する</strong>。コードはスキャンできるがページが間違っているか欠けていて、ページやリダイレクトをあなたが管理している場合です。刷り直しは不要です。</li>
+<li><strong>元のファイルから刷り直す</strong>。新しいコピーはスキャンできるのに、設置されたコピーができない場合です。印刷、表面、配置が失敗しました。</li>
+<li><strong>コードを作り直す</strong>。新しいコピーも失敗する場合、データが間違っている場合、デザイン — サイズ、コントラスト、ロゴ、余白 — に問題がある場合です。きれいなコードを生成し、2台のスマホでテストしてから、印刷してください。</li>
+<li><strong>コードの種類を切り替える</strong>。繰り返し起きる構造的な失敗に対してです。変わる行き先は動的コードに属し、アカウントに決して依存してはいけないものは静的コードに属します。</li>
+</ul>
+<p>新しい、大きく、白地に黒で、余白がはっきりした印刷物でも、2台のスマホでコードがまだ失敗するなら、データ自体 — 長すぎるリンクや打ち間違えたアドレス — を疑います。リンクを短くし、再生成してください。</p>
+
+<h2>きれいな置き換えを作る</h2>
+<p>評決が「作り直す」なら、古いファイルを補修するのではなく、きれいな書き出しから始めてください。置き換えは<a href="/ja/">無料ジェネレーター</a>で生成します。全17種類のコンテンツタイプが登録なしで静的コードとして利用でき、編集と統計付きの動的コードはログイン後に無料です。コードにロゴが必要なら、<a href="/ja/qr-code-with-logo/">ロゴジェネレーター</a>を使い、ロゴを小さく、高い誤り訂正レベルで保ちます。多くのコードを一度に必要なら、<a href="/ja/batch-qr-code/">一括生成</a>がリンクごとに1つ作ります。印刷する前に、<a href="/ja/scan/">スキャナー</a>と2台目のスマホでテストしてください。上でリンクした詳しい解説 — <a href="/ja/blog/why-is-my-qr-code-not-working/">段階的な診断</a>、<a href="/ja/blog/why-is-my-qr-code-blurry/">ぼやけの対処法</a>、<a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a> — がそれぞれ1つの原因をさらに深掘りします。</p>
+    </div>
+
+    <section class="sources">
+      <h2>出典</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> — 第4版、2024年8月発行。規格の身元、版、発行日は2026-11-03にISOのページで確認済みで、その要約は規格が誤り訂正規則を定めることを確認しています。誤り訂正レベルL 7%、M 15%、Q 25%、H 30%（おおよそのコードワード復元）と、全辺に最低4モジュール幅のクワイエットゾーンを裏付けます。規格で定められた通りです。</li>
+      <li><a href="https://support.apple.com/en-us/102680">Appleサポート：iPhoneやiPadでQRコードをスキャンする</a> — 2026年9月14日発行、ページ上に表示され、2026-11-03に確認済み。記事が引用する内蔵スキャン手順を裏付けます。カメラアプリまたはコントロールセンターのコードスキャナーを開き、コードが枠に映るようにスマホを構え、表示されるリンクをタップする。このページからは数値の主張は取っていません。</li>
+      <li><a href="https://freeqrly.com/ja/blog/qr-code-print-size-guide/">FreeQrly：QRコード印刷サイズガイド</a> — サイト内部の情報源であって、外部の規格ではありません。ハブページが目安として明示的にラベル付けした数字を裏付けます。最小印刷サイズ2×2cm、1:10の距離ルール（コードの幅はスキャン距離の最低10分の1）、コード面積の約30%未満のロゴです。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>自分で試す — 無料</h3>
+        <p>この記事のすべては、今FreeQrlyスタジオで動作します。静的コード、全17種類のコンテンツタイプ、PNGとSVGの書き出しです。</p>
+        <a class="btn" href="/ja/#studio">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/static-vs-dynamic-qr-codes/"><b>静的と動的のQRコード：永遠に無料か、契約か</b></a>
+        <a class="rel-card" href="/ja/blog/why-is-my-qr-code-not-working/"><b>QRコードが動作しない？役立つ7つの修正</b></a>
+        <a class="rel-card" href="/ja/blog/qr-codes-for-restaurants/"><b>飲食店向けQRコード — 無料ガイド</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>QRコードが片方のスマホではスキャンできるのに、もう片方ではできないのはなぜですか？</span></summary><p>それなら、コードもリンクも両方問題ありません。失敗しているスマホが問題です。レンズを拭き、カメラへのアクセスを許可し、コード全体を枠に入れてしっかり構え、より良い光で試してください。そのスマホだけでまだ失敗するなら、サードパーティのスキャナーアプリではなく、内蔵カメラの経路を使ってください。</p></details>
+    <details><summary><span>QRコードがときどきスキャンできますが、常にではありません。問題ないですか？</span></summary><p>いいえ。ときどきスキャンできるコードは、ぎりぎりのコードです。自分の机では通っても、客の手では失敗します。壊れているものとして扱い、良い光を願うのではなく、根本的な原因 — 通常はサイズ、コントラスト、グレア、混雑したクワイエットゾーン — を直してください。</p></details>
+    <details><summary><span>印刷したQRコードはどのくらい大きくすべきですか？</span></summary><p>目安として、最低2×2cm、そして予想されるスキャン距離の最低10分の1です。50cmからスキャンするテーブルカードには幅約5cmのコードが必要で、5メートルからスキャンするポスターには幅約50cmのコードが必要です。長いリンクを持つ密なコードは、短いリンクより多くの余裕が必要です。</p></details>
+    <details><summary><span>QRコードのどれだけをロゴが覆えますか？</span></summary><p>小さく保ちます。最も高い誤り訂正レベルを使い、プレーンなコードより大きく印刷し、スキャナーが模様の向きを定めるために必要な3つの大きな角の四角を決して覆わないでください。目安として、印刷サイズガイドはコード面積の約30%未満を提案しています。そして、印刷する前に必ず完成したコードを2台のスマホでテストスキャンしてください。</p></details>
+    <details><summary><span>コードはスキャンできるのにページがありません。コードが壊れているのですか？</span></summary><p>いいえ。模様は完璧にデコードされました。行き先が失敗しました。移転または削除されたページ、打ち間違えたアドレス、アカウントやリダイレクトが無効にされた動的コードは、すべてこのように見えます。ページや動的リダイレクトをあなたが管理しているなら、復旧または差し替えしてください。刷り直しは不要です。静的コードは差し替えできません。裏側のページだけが復旧できます。</p></details>
+    <details><summary><span>コードをテストするのにスキャナーアプリは必要ですか？</span></summary><p>いいえ。iPhoneではカメラアプリまたはコントロールセンターのコードスキャナーを使い、Androidでは内蔵カメラまたはLensを使います。すでにスマホ自身の画面上にあるコード — 写真やスクリーンショットの中 — については、カメラを自分のディスプレイに向けるのではなく、画像ファイルをデコードします。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>動的コード無制限 — 期間限定オファー。</h3>
+        <p>無料でサインインして、必要なだけ作成できます。すべてのコードは印刷後も編集でき、有効期限はありません。</p>
+      </div>
+      <a class="fctaBtn" href="/ja/login/">無料で始める</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
+        <div class="fmade">静的コードはブラウザで作成。</div>
+      </div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
+      <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
+      <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
+      <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

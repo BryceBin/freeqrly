@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Estatísticas de QR codes dinâmicos: o que as leituras realmente dizem | FreeQrly","description":"Estatísticas de QR codes dinâmicos: leituras totais e únicas, por dia, país, cidade, dispositivo e sistema operacional — grátis com seus códigos. E o que o FreeQrly nunca rastreia.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Estatísticas de QR codes dinâmicos: o que as leituras realmente dizem | FreeQrly","description":"Estatísticas de QR codes dinâmicos: leituras totais e únicas, por dia, país, cidade, dispositivo e sistema operacional — grátis com seus códigos. E o que o FreeQrly nunca rastreia.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -67,7 +72,7 @@
       "name": "QR codes estáticos rastreiam escaneamentos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. Códigos estáticos nunca tocam um servidor — o destino vive no padrão — então não há o que contar. Só códigos dinâmicos reportam scans."
+        "text": "Não. Códigos estáticos nunca tocam um servidor — o destino vive no padrão — então não há nada para contar. Só os códigos dinâmicos informam escaneamentos."
       }
     },
     {
@@ -83,7 +88,39 @@
       "name": "Posso ver quem escaneou meu QR code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não — e isso é por design. O FreeQrly conta scans; não identifica quem escaneou."
+        "text": "Não — e isso é de propósito. O FreeQrly conta escaneamentos; não identifica quem escaneia. Um escaneamento não carrega identidade, então se uma decisão precisa saber quem respondeu, coloque um formulário por trás do código e deixe as pessoas se identificarem lá voluntariamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por que um código mostra muito mais escaneamentos totais do que únicos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque as mesmas pessoas estão escaneando repetidamente. Um total muito à frente da contagem única combina com um código visto por frequentadores, como uma placa de balcão ou um cardápio; um total perto da contagem única combina com um código visto majoritariamente por passantes. Compare os dois números juntos — o total sozinho esconde o uso repetido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meu código mostra zero escaneamentos — está quebrado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não necessariamente. Primeiro teste o impresso com o seu próprio celular: se ele escaneia, o problema é local, tamanho, contraste, ou falta de um motivo para escanear, nessa ordem. Zero escaneamentos por uma semana é dado sobre o local, e não prova de que o código falhou. Se ele não escaneia, confira dano, contraste e tamanho antes de concluir qualquer coisa sobre o público."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como comparo dois locais de forma justa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dê a cada local o seu próprio código dinâmico apontando para o mesmo destino, rode pelo mesmo período passando pelos mesmos dias úteis e fins de semana, e decida a ação antes de olhar — o que você vai fazer se um superar o outro. Anote qualquer outra coisa que aconteceu naquela semana, como um post saindo no ar, ao lado do gráfico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por que este post cita tão poucas estatísticas externas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque um número externo só é utilizável com a sua medida, a sua população e a sua data anexadas. Este post cita dois números que chegam com os três a partir dos seus editores originais — os níveis de correção de erros QR da ISO e a pesquisa de smartphones do Pew nos Estados Unidos — e se apoia no seu próprio Painel para o resto. Um número carregado de segunda mão, sem o método, fica fora das decisões aqui."
       }
     }
   ]
@@ -101,49 +138,104 @@
     <div class="kicker" style="text-align:center">Anotações</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">O que as <span class='hl hl-honey'>estatísticas</span> do QR code dinâmico dizem</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Um código dinâmico reporta a cada scan. Veja o que o FreeQrly conta, como interpretar e o que ele nunca coleta.</p>
-    <p class="meta" style="text-align:center">October 16, 2026 · 4 min de leitura</p>
+    <p class="meta" style="text-align:center">16 de outubro de 2026 · Última atualização: 3 de novembro de 2026 · 15 min de leitura</p>
     <div class="prose" style="margin-top:40px">
-
-<p>Um código estático é silencioso: ele nunca reporta, então ninguém — nem você — sabe quantas vezes foi escaneado. Um código dinâmico reporta cada scan ao seu Painel. Veja o que o FreeQrly conta, como interpretar e o que ele deliberadamente nunca coleta.</p>
-
-<h2>Os números em cada cartão</h2>
+<p>Um código estático é silencioso: ele nunca informa de volta, então ninguém — incluindo você — sabe com que frequência foi escaneado. Um código dinâmico informa cada escaneamento ao seu Painel. Aqui está o que o FreeQrly conta, como ler, o que ele deliberadamente nunca coleta, e como usar os seus próprios números para tomar decisões — mais os únicos números externos que este post cita, cada um com a fonte original, para você conferir por conta própria.</p>
+<p>A resposta curta primeiro: as estatísticas de escaneamento respondem a três perguntas, e só três. Qual local chamou atenção? Quando chamou? E em que tipo de aparelho e de aproximadamente onde? Todo o resto — se um escaneamento virou cliente, se o cartaz era bom — é uma interpretação que você acrescenta por cima, e a maioria das leituras erradas vem de tratar uma interpretação como se fosse uma medição.</p>
+<h2>O que o FreeQrly conta</h2>
+<p>Abra um código dinâmico no seu Painel e você vê o mesmo conjunto de números para todos os códigos. As definições importam, porque duas das leituras erradas mais comuns vêm de confundir “total” com “único” e “hoje” com “todo o período”.</p>
+<div class="table-scroll"><table>
+<tr><th>Número</th><th>O que significa</th><th>Como ler</th></tr>
+<tr><td><strong>Total de escaneamentos</strong></td><td>Todo escaneamento do código, em todo o período</td><td>A pegada vitalícia daquele código. Compare totais só entre códigos que estão circulando há o mesmo tempo.</td></tr>
+<tr><td><strong>Hoje</strong></td><td>Escaneamentos até agora hoje</td><td>Um pulso ao vivo, não um veredito. Uma manhã quieta não diz nada sobre a noite.</td></tr>
+<tr><td><strong>Escaneamentos únicos</strong></td><td>Leitores distintos, contados uma vez por dia. Dois escaneamentos pela mesma pessoa no mesmo dia contam como um único escaneamento único.</td><td>O mais próximo de “quantas pessoas”. Se o total está muito acima do único, um grupo pequeno está escaneando repetidamente — ou um código está sendo repassado.</td></tr>
+<tr><td><strong>Últimos 7 dias</strong></td><td>Um gráfico de barras diário cobrindo hoje e os seis dias anteriores — sempre sete barras, com barras de altura zero para os dias quietos</td><td>A forma importa mais do que a altura. Lacunas, concentrações noturnas e padrões só de dias úteis saltam aos olhos.</td></tr>
+<tr><td><strong>Por país</strong></td><td>De onde os escaneamentos vieram, a partir da localização aproximada de quem escaneou</td><td>Útil para perceber um código que viajou — um país novo geralmente significa que alguém o compartilhou online.</td></tr>
+<tr><td><strong>Por cidade</strong></td><td>A mesma localização aproximada, em nível de cidade</td><td>Útil para comparar dois bairros ou dois locais. Aproximado quer dizer aproximado: trate uma cidade como uma região, não um endereço.</td></tr>
+<tr><td><strong>Por aparelho</strong></td><td>Celular, tablet ou desktop</td><td>Um cartaz que recebe escaneamentos de desktop ao meio-dia provavelmente está sendo escaneado a partir de um print, e não da parede.</td></tr>
+<tr><td><strong>Por sistema operacional</strong></td><td>iOS, Android e o resto</td><td>Uma verificação de sanidade do seu público e dos seus testes: se quase todos os escaneamentos são num único sistema, teste o destino nesse sistema primeiro.</td></tr>
+</table></div>
+<p>Cada detalhamento vem com contagens e porcentagens. As porcentagens são participações nos escaneamentos daquele código, e não participações em nada maior — um código com maioria de escaneamentos iOS não significa que a maioria dos seus clientes usa iPhone. Significa que a maioria das pessoas que escanearam aquele código o fez num iPhone.</p>
+<h2>Dois números externos, com as fontes anexadas</h2>
+<p>Este post cita deliberadamente pouquíssimos números externos, e o motivo vale ser dito com clareza: uma estatística de QR emprestada de uma compilação geralmente chega sem os três fatos que tornam um número utilizável — o que foi medido, sobre quem, e quando. Os dois números abaixo chegam com os três, dos seus editores originais.</p>
+<h3>O próprio padrão QR: quanto dano um código aguenta</h3>
+<p>As estatísticas de escaneamento são só metade de uma decisão de impressão; a outra metade é se o código sobrevive ao manuseio. O padrão QR, ISO/IEC 18004:2024, define quatro níveis de correção de erros, cada um declarando quanto das palavras-código do símbolo pode ser recuperado se danificado:</p>
+<div class="table-scroll"><table>
+<tr><th>Nível</th><th>Palavras-código recuperáveis</th><th>Uso típico</th></tr>
+<tr><td>L</td><td>7%</td><td>Exibição digital limpa</td></tr>
+<tr><td>M</td><td>15%</td><td>Impressão comum em ambientes internos</td></tr>
+<tr><td>Q</td><td>25%</td><td>Impressão manuseada ou ao ar livre</td></tr>
+<tr><td>H</td><td>30%</td><td>Códigos com logo central, ou manuseio pesado</td></tr>
+</table></div>
+<p>Fonte: ISO/IEC 18004:2024, a especificação da simbologia de código de barras QR code, via a página do padrão ISO (<a href="http://www.iso.org/standard/83389.html">iso.org/standard/83389.html</a>). Leia as porcentagens com cuidado: elas descrevem palavras-código, e não área de superfície impressa. Um código no nível H não sobrevive a qualquer buraco possível de 30% na impressão, e um nível mais alto compra resiliência gastando mais do código em redundância. Para estatísticas, o ponto prático: um código impresso num nível baixo numa superfície manuseada vai subnotificar o seu público real — as pessoas tentaram escanear, o código falhou, e nenhum escaneamento foi registrado.</p>
+<h3>Quem carrega um celular com câmera: a pesquisa do Pew nos Estados Unidos</h3>
+<p>Ao ler um detalhamento por aparelho, ajuda saber o teto: quantas pessoas do público poderiam escanear. A ficha de dados móveis de 2026 do Pew Research Center informa que 91% dos adultos dos Estados Unidos disseram ter um smartphone, e 98% disseram ter um celular de algum tipo, contra 35% de posse de smartphone na primeira pesquisa do Centro em 2011. Fonte: Pew Research Center, “Americans' Use of Mobile Devices in 2026” (<a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">pewresearch.org/internet/fact-sheet/mobile/</a>), com base numa pesquisa com 5.511 adultos dos Estados Unidos realizada de 30 de janeiro a 18 de junho de 2026, com uma margem geral de erro de mais ou menos 1,8 ponto percentual.</p>
+<p>Três cautelas acompanham esse número, e valem para qualquer número externo que você encontrar. Primeira, população: são adultos dos Estados Unidos, não o mundo, e não a lista de convidados do seu evento. Segunda, medida: posse autodeclarada, e não comportamento de escaneamento. Terceira, data: uma pesquisa de 2026 descreve 2026. Um número usado fora da sua população, da sua medida ou da sua data deixa de ser evidência e vira decoração.</p>
+<h2>Como ler os seus próprios números: cinco perguntas</h2>
+<p>Os números do seu Painel não precisam de nenhum parâmetro externo para serem úteis. Passe cada leitura por estas cinco perguntas antes de agir com base nela:</p>
+<ol>
+<li><strong>Comparado com o quê?</strong> O total de um código significa pouco sozinho. Compare códigos que rodaram no mesmo período, em locais parecidos, para a mesma oferta. Um código de folheto e um código de cartaz da mesma semana podem ser comparados; um código de folheto da primavera passada e um código de cartaz desta semana, não, porque a estação, a oferta e o público mudaram entre eles.</li>
+<li><strong>Em que período?</strong> O gráfico de 7 dias existe para impedir leituras de um único dia. Um código que parece morto numa segunda-feira pode ser um código noturno, de fim de semana, ou de rota de commuter. Leia a forma da semana antes de julgar a altura de um dia.</li>
+<li><strong>Total ou único?</strong> Se o total corre muito à frente do único, as mesmas pessoas estão voltando — o que é bom para um cardápio ou horário, e um sinal de alerta para uma oferta única. Se o único corre perto do total, cada escaneamento é uma pessoa diferente, e o código está alcançando amplamente em vez de profundamente.</li>
+<li><strong>O que mais aconteceu naquele dia?</strong> Picos precisam de contexto. Uma enxurrada de escaneamentos logo depois que um post sai no ar é o post, e não o cartaz. Uma enxurrada num dia em que você mudou o destino é o novo destino, e não o local antigo. Anote eventos externos — um post, uma menção, uma mudança de preço — ao lado do gráfico, ou o gráfico vai enganar você com perfeita confiança.</li>
+<li><strong>O que o escaneamento levou a?</strong> Um escaneamento é um olhar, não uma conversão. Combine as estatísticas de escaneamento com o que o próprio destino mede — envios de formulário, pedidos, inscrições — e julgue o código pelo resultado do destino, e não só pela contagem de escaneamentos.</li>
+</ol>
+<h2>Lendo uma semana real: padrões, e não só totais</h2>
+<p>Os mesmos detalhamentos, lidos como comportamento em vez de números:</p>
 <ul>
-<li><strong>Total de escaneamentos.</strong> Todos os scans do código, desde sempre.</li>
-<li><strong>Hoje.</strong> Escaneamentos até agora hoje.</li>
-<li><strong>Escaneamentos únicos.</strong> Escaneadores distintos, contados uma vez por dia. Dois scans da mesma pessoa no mesmo dia contam como um único escaneamento único.</li>
-<li><strong>Últimos 7 dias.</strong> Um gráfico de barras diário cobrindo hoje e os seis dias anteriores — sempre sete barras, com barras de altura zero nos dias parados, para você ver as lacunas de relance.</li>
-</ul>
-
-<h2>As divisões</h2>
-<p>Abra Estatísticas em um código e você recebe quatro divisões, cada uma com contagens e percentuais:</p>
-<ul>
-<li><strong>Por país e por cidade.</strong> De onde vieram os scans, a partir da localização aproximada de quem escaneou.</li>
-<li><strong>Por dispositivo.</strong> Celular, tablet ou computador.</li>
-<li><strong>Por sistema operacional.</strong> iOS, Android e o resto.</li>
-</ul>
-<p>Use como uma campanha usaria: um folheto em dois bairros mostra qual atrai mais; um pôster com scans de computador ao meio-dia provavelmente está sendo escaneado de uma captura de tela, não da parede.</p>
-
-<h2>O que o FreeQrly nunca coleta</h2>
-<p>As estatísticas são agregados — não há registro por visitante para olhar. Um "escaneamento único" é um hash de mão única do endereço IP, navegador e data de quem escaneou: o bastante para contar escaneadores distintos por dia, impossível de reverter para uma pessoa. Sem nomes, sem e-mails, sem localizações exatas, sem rastrear indivíduos entre códigos. E códigos estáticos não rastreiam nada — nunca tocam um servidor, então não há o que contar.</p>
-
-<h2>Lendo os números com honestidade</h2>
-<ul>
-<li><strong>Scans não são clientes.</strong> Um scan é um olhar. Compare códigos entre si, não com um parâmetro imaginário.</li>
-<li><strong>Zero também é dado.</strong> Um código sem scans por uma semana está dizendo que o local está errado, não o código.</li>
-<li><strong>Picos precisam de contexto.</strong> Uma rajada de scans logo depois que um post sai é o post, não o pôster. O gráfico de 7 dias deixa isso visível.</li>
-</ul>
-
-<h2>Lendo uma semana real</h2>
-<p>As mesmas divisões, lidas como comportamento em vez de números:</p>
-<ul>
-<li><strong>Leituras só à noite.</strong> Um código que acorda após o expediente provavelmente está numa rota de commuters ou num local noturno: tráfego de pedestres, não de escritório.</li>
-<li><strong>Uma cidade nova de repente.</strong> Leituras se espalhando para uma cidade onde você nunca imprimiu geralmente significam que alguém compartilhou o código num chat ou post: o código viajou sem você.</li>
+<li><strong>Escaneamentos só à noite.</strong> Um código que acorda depois do horário de trabalho provavelmente está numa rota de commuter ou num local noturno — visitantes noturnos, e não visitantes de escritório.</li>
+<li><strong>Uma cidade nova de repente.</strong> Escaneamentos se espalhando para uma cidade onde você nunca imprimiu geralmente significam que alguém compartilhou o código num chat ou num post — o código viajou sem você. Confira para onde o código está apontando: um código compartilhado manda estranhos para o seu destino, então o destino deve fazer sentido para um estranho.</li>
 <li><strong>Leituras só em dias úteis.</strong> Um código que silencia nos fins de semana provavelmente está num cartaz de escritório ou local de semana, não de fim de semana.</li>
+<li><strong>Escaneamentos predominantemente de desktop.</strong> Um cartaz que recebe escaneamentos de desktop provavelmente está sendo escaneado a partir de um print ou de uma imagem encaminhada, e não da parede. A versão da parede pode estar boa; a versão do print é que está fazendo o trabalho, e o destino deve ser conferido também numa tela de desktop, e não só no celular.</li>
+<li><strong>Zero é dado.</strong> Um código sem nenhum escaneamento por uma semana está dizendo que o local está errado, e não o código. Códigos raramente falham em silêncio — um código impresso ou escaneia ou não escaneia, e um teste rápido com o seu próprio celular resolve isso em segundos. Se ele escaneia e ninguém o escaneia, o problema é posição, tamanho, contraste, ou falta de um motivo para escanear, nessa ordem.</li>
 </ul>
-
-<p>Pronto para tentar? <a href="/pt/blog/how-to-create-a-dynamic-qr-code/">Crie seu primeiro código dinâmico</a> — login grátis, 20 códigos (atualmente ilimitados) — e volte depois da sua primeira tiragem. Já imprimiu e precisa corrigir? <a href="/pt/blog/how-to-edit-a-qr-code-after-printing/">Como editar um QR code após imprimir</a>.</p>
-
+<h2>Um exemplo resolvido, com a conta mostrada</h2>
+<p>Exemplo ilustrativo — os números abaixo são hipotéticos, usados só para mostrar a conta, e não medições de nenhuma campanha real. Suponha que dois códigos apontem para a mesma página durante as mesmas duas semanas. O Código A, numa placa de balcão, registra 120 escaneamentos totais e 90 escaneamentos únicos. O Código B, num cartaz de vitrine, registra 60 escaneamentos totais e 55 escaneamentos únicos. Três leituras seguem, cada uma com uma ação diferente:</p>
+<ul>
+<li><strong>Alcance:</strong> o Código A alcançou mais pessoas distintas (90 contra 55), então a placa de balcão é o local mais amplo.</li>
+<li><strong>Uso repetido:</strong> o total do Código A corre 30 escaneamentos à frente da contagem única dele, enquanto o do Código B corre só 5 à frente, então os visitantes do balcão escaneiam repetidamente enquanto os visitantes do cartaz escaneiam majoritariamente uma vez. Isso combina com uma placa de balcão vista por frequentadores e um cartaz visto por passantes — e sugere que o destino do código do balcão deve recompensar uma segunda visita, enquanto o destino do código do cartaz deve defender o seu caso numa única visita.</li>
+<li><strong>Próximo teste:</strong> não troque nada ainda. Mova o cartaz do Código B para o balcão por uma semana e a placa do Código A para a vitrine, depois compare de novo. Se o padrão acompanhar o local, o local era a causa. Se o padrão acompanhar o código, o destino ou o design era a causa. Uma troca vence um mês de debate sobre qual placa é melhor.</li>
+</ul>
+<p>A disciplina nesse exemplo é o ponto, e não os números: mesmo período, mesmo destino, uma mudança de cada vez, e uma regra de decisão escrita antes de o teste rodar.</p>
+<h2>Monte uma comparação em que você pode confiar</h2>
+<ol>
+<li><strong>Dê a cada local o seu próprio código dinâmico.</strong> Um código por local — balcão, vitrine, folheto, recibo — todos apontando para o mesmo destino. Códigos compartilhados não distinguem locais, e uma comparação construída sobre um código compartilhado é palpite com gráfico.</li>
+<li><strong>Mantenha o destino idêntico.</strong> Se dois códigos apontam para páginas diferentes, você está testando páginas, e não locais. Teste uma variável de cada vez.</li>
+<li><strong>Rode pelo mesmo período.</strong> Comece e termine juntos, passando pelos mesmos dias úteis e fins de semana. Um código que rodou num fim de semana de feriado não é comparável com um que rodou numa semana comum.</li>
+<li><strong>Anote o que mais aconteceu.</strong> Mantenha um registro de uma linha ao lado do gráfico: post publicado, preço alterado, local fechado. Picos sem notas viram mistérios.</li>
+<li><strong>Decida a ação antes de olhar.</strong> Anote o que você vai fazer se A superar B — mover B, reimprimir B, aposentar B — antes de abrir as estatísticas.</li>
+<li><strong>Aja com base no resultado, depois meça de novo.</strong> Mova o código fraco, mude o destino do forte, ou aposente o silencioso — e observe o próximo gráfico de 7 dias para ver a mudança. Uma estatística que nunca muda uma decisão era entretenimento, e não medição.</li>
+</ol>
+<h2>O que o FreeQrly nunca coleta</h2>
+<p>As estatísticas são agregados — não há nenhum registro por visitante para olhar. Um “escaneamento único” é um hash de mão única do endereço IP, do navegador e da data de quem escaneou: o bastante para contar leitores distintos por dia, impossível de reverter para uma pessoa. Sem nomes, sem e-mails, sem localizações exatas, sem rastreamento de indivíduos entre códigos. E os códigos estáticos não rastreiam nada — eles nunca tocam um servidor, então não há nada para contar.</p>
+<p>Esse limite molda o que você deve pedir às estatísticas. Você pode perguntar qual local venceu, quando venceu, e em que aparelhos. Não pode perguntar quem escaneou: um escaneamento não carrega identidade, e qualquer identidade grudada nele veio de outro lugar. Se a sua decisão realmente precisa saber quem respondeu, coloque um formulário por trás do código e deixe as pessoas se identificarem lá, voluntariamente.</p>
+<h2>O que as estatísticas de escaneamento não dizem</h2>
+<ul>
+<li><strong>Escaneamentos não são clientes.</strong> Um escaneamento é um olhar. Alguém pode escanear por curiosidade, por acidente, ou para mostrar a um amigo, e nada disso é uma venda. Julgue o resultado do destino, e não a contagem de escaneamentos.</li>
+<li><strong>Escaneamentos não são satisfação.</strong> Um código muito escaneado num formulário de reclamação não é uma história de sucesso. Leia o conteúdo do destino junto com as contagens.</li>
+<li><strong>Médias escondem a forma.</strong> Dois códigos com o mesmo total semanal podem ter padrões opostos — um estável, um com picos — e o estável geralmente é o local mais saudável. Leia sempre o gráfico de 7 dias, e não só o total.</li>
+<li><strong>Silêncio é ambíguo.</strong> Zero escaneamentos pode significar um local ruim, uma impressão danificada, um destino alterado, ou um código impresso onde ninguém olha. Teste o impresso com o seu próprio celular antes de concluir qualquer coisa sobre o público.</li>
+<li><strong>Parâmetros externos enganam mais do que ajudam.</strong> Um número citado sem a sua população, medida e data não pode ser comparado com os seus códigos, porque você não sabe o que ele contou. Números publicados por fornecedores merecem uma verificação extra: leia-os como o relato do próprio fornecedor sobre os próprios usuários, e procure a página de metodologia que declare quem foi pesquisado e como. Um número cuja página original declare o método pode ser usado, com o alcance anexado; um número carregado de segunda mão, sem o método, deve ficar fora da sua decisão por completo. É por isso que este post se apoia no seu próprio Painel e em duas fontes de nível de padrão em vez de numa compilação de porcentagens emprestadas.</li>
+</ul>
+<h2>Uma rotina semanal que leva dez minutos</h2>
+<ul>
+<li>Abra cada código ativo e leia primeiro a forma do gráfico de 7 dias, e os totais depois.</li>
+<li>Compare locais que rodaram lado a lado, mesmo período, mesmo destino.</li>
+<li>Mova, redirecione ou aposente o local mais fraco — uma mudança, não cinco.</li>
+<li>Confira o destino no aparelho que a maioria dos leitores usou naquela semana.</li>
+<li>Anote qualquer evento externo ao lado do gráfico, para que o pico da próxima semana já tenha uma explicação pronta.</li>
+</ul>
+<p>Faça isso semanalmente por um mês e as estatísticas viram um hábito que move placas e aposenta locais mortos.</p>
+<p>Pronto para tentar? <a href="/pt/blog/how-to-create-a-dynamic-qr-code/">Crie o seu primeiro código dinâmico</a> — login gratuito, 20 códigos na conta gratuita com escaneamentos ilimitados durante a promoção por tempo limitado — e volte depois da sua primeira tiragem. Já imprimiu e precisa de uma correção? <a href="/pt/blog/how-to-edit-a-qr-code-after-printing/">Como editar um QR code depois de imprimir</a> mostra como mudar o destino sem reimprimir.</p>
     </div>
+
+    <section class="sources">
+      <h2>Fontes</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024 — Especificação da simbologia de código de barras QR code</a> - Sustenta a tabela de correção de erros: L recupera 7%, M 15%, Q 25% e H 30% das palavras-código do símbolo. Edição 2024 do padrão.</li>
+      <li><a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">Pew Research Center — Uso de dispositivos móveis pelos americanos em 2026</a> - Sustenta: 91% dos adultos dos Estados Unidos disseram ter um smartphone e 98% disseram ter um celular de algum tipo, contra 35% de posse de smartphone na primeira pesquisa do Centro em 2011. Com base numa pesquisa com 5.511 adultos dos Estados Unidos realizada de 30 de janeiro a 18 de junho de 2026, margem de erro de mais ou menos 1,8 ponto percentual.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly apresentando um QR code"></div>
       <div>
@@ -155,17 +247,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Continue lendo</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/pt/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
-        <a class="rel-card" href="/pt/blog/why-is-my-qr-code-blurry/"><b>Why Is My QR Code Blurry? 5 Fixes That Work</b></a>
-        <a class="rel-card" href="/pt/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
+        <a class="rel-card" href="/pt/blog/make-qr-code-in-canva-excel-word/"><b>Como Criar um QR Code no Canva, Excel ou Word (Grátis)</b></a>
+        <a class="rel-card" href="/pt/blog/why-is-my-qr-code-blurry/"><b>Por Que Meu QR Code Está Borrado? 5 Correções Que Funcionam</b></a>
+        <a class="rel-card" href="/pt/blog/get-google-reviews-with-qr-code/"><b>Como Conseguir Mais Avaliações no Google com um QR Code</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bom saber</h2>
     <details><summary><span>O que conta como um escaneamento único?</span></summary><p>Um escaneador, uma vez por dia. O FreeQrly conta escaneadores distintos usando um hash de mão única de endereço IP, navegador e data — a mesma pessoa escaneando duas vezes no mesmo dia conta uma vez.</p></details>
-    <details><summary><span>QR codes estáticos rastreiam escaneamentos?</span></summary><p>Não. Códigos estáticos nunca tocam um servidor — o destino vive no padrão — então não há o que contar. Só códigos dinâmicos reportam scans.</p></details>
+    <details><summary><span>QR codes estáticos rastreiam escaneamentos?</span></summary><p>Não. Códigos estáticos nunca tocam um servidor — o destino vive no padrão — então não há nada para contar. Só os códigos dinâmicos informam escaneamentos.</p></details>
     <details><summary><span>Os dados dos visitantes são privados?</span></summary><p>Sim. As estatísticas são só agregados: contagens por dia, país, cidade, dispositivo e sistema operacional. Sem nomes, e-mails, localizações exatas ou registros por visitante. Escaneamentos únicos usam um hash irreversível.</p></details>
-    <details><summary><span>Posso ver quem escaneou meu QR code?</span></summary><p>Não — e isso é por design. O FreeQrly conta scans; não identifica quem escaneou.</p></details>
+    <details><summary><span>Posso ver quem escaneou meu QR code?</span></summary><p>Não — e isso é de propósito. O FreeQrly conta escaneamentos; não identifica quem escaneia. Um escaneamento não carrega identidade, então se uma decisão precisa saber quem respondeu, coloque um formulário por trás do código e deixe as pessoas se identificarem lá voluntariamente.</p></details>
+    <details><summary><span>Por que um código mostra muito mais escaneamentos totais do que únicos?</span></summary><p>Porque as mesmas pessoas estão escaneando repetidamente. Um total muito à frente da contagem única combina com um código visto por frequentadores, como uma placa de balcão ou um cardápio; um total perto da contagem única combina com um código visto majoritariamente por passantes. Compare os dois números juntos — o total sozinho esconde o uso repetido.</p></details>
+    <details><summary><span>Meu código mostra zero escaneamentos — está quebrado?</span></summary><p>Não necessariamente. Primeiro teste o impresso com o seu próprio celular: se ele escaneia, o problema é local, tamanho, contraste, ou falta de um motivo para escanear, nessa ordem. Zero escaneamentos por uma semana é dado sobre o local, e não prova de que o código falhou. Se ele não escaneia, confira dano, contraste e tamanho antes de concluir qualquer coisa sobre o público.</p></details>
+    <details><summary><span>Como comparo dois locais de forma justa?</span></summary><p>Dê a cada local o seu próprio código dinâmico apontando para o mesmo destino, rode pelo mesmo período passando pelos mesmos dias úteis e fins de semana, e decida a ação antes de olhar — o que você vai fazer se um superar o outro. Anote qualquer outra coisa que aconteceu naquela semana, como um post saindo no ar, ao lado do gráfico.</p></details>
+    <details><summary><span>Por que este post cita tão poucas estatísticas externas?</span></summary><p>Porque um número externo só é utilizável com a sua medida, a sua população e a sua data anexadas. Este post cita dois números que chegam com os três a partir dos seus editores originais — os níveis de correção de erros QR da ISO e a pesquisa de smartphones do Pew nos Estados Unidos — e se apoia no seu próprio Painel para o resto. Um número carregado de segunda mão, sem o método, fica fora das decisões aqui.</p></details>
     </section>
   </article>
   <footer>

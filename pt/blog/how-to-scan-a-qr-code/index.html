@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Como Escanear um QR Code (iPhone e Android) | FreeQrly","description":"Como escanear um QR code no iPhone e no Android — sem app. Use a câmera embutida, a Central de Controle ou o Google Lens, e conserte quando não escanear.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Como Escanear um QR Code (iPhone e Android) | FreeQrly","description":"Como escanear um QR code no iPhone e no Android — sem app. Use a câmera embutida, a Central de Controle ou o Google Lens, e conserte quando não escanear.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,15 +64,23 @@
       "name": "Preciso de um app para escanear QR codes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. iPhones e praticamente todos os celulares Android escaneiam QR codes com a câmera embutida. Apps de scanner de terceiros são desnecessários e geralmente cheios de anúncios. <a href=\"https://support.apple.com/en-ca/102680\">O guia da Apple</a> cobre o app Câmera e o Scanner de Código no iPhone."
+        "text": "Não. iPhones e praticamente todos os celulares Android escaneiam QR codes com a câmera embutida. Apps de leitura de terceiros são desnecessários para códigos padrão, e são uma resposta razoável só para um celular sem leitor embutido ou para um trabalho que precise de histórico ou leitura em massa."
       }
     },
     {
       "@type": "Question",
-      "name": "Como escaneio um QR code de uma captura de tela?",
+      "name": "O que acontece depois que eu escaneio um QR code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No iPhone, abra a captura de tela no Fotos e pressione e segure o código. No Android, abra no Google Fotos e toque no botão Lens."
+        "text": "Depende do que o código contém: um link abre uma página da web, um código de Wi-Fi oferece entrar numa rede, um código de contato oferece salvar uma pessoa, um código de texto mostra palavras, e um código de evento oferece um item de calendário. A prévia do seu celular diz qual tipo é antes de qualquer coisa abrir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como escaneio um QR code que está na tela do meu próprio celular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tire um print do código ou salve a imagem, depois leia a partir da imagem: no iPhone, abra no Fotos e toque e segure o código; no Android, abra no Google Fotos e toque em Lens. Uma câmera não consegue apontar para a própria tela."
       }
     },
     {
@@ -80,7 +88,39 @@
       "name": "Por que minha câmera não escaneia o QR code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Geralmente o código é pequeno demais, tem baixo contraste, está danificado ou não há zona de silêncio ao redor. Limpe a lente, aproxime-se e veja a lista completa de correções no nosso guia de solução de problemas."
+        "text": "Siga a cadeia de falhas em ordem: código inteiro no quadro, vista normal de foto, leitura ligada, foco firme, boa luz sem reflexo, lente limpa, quadrados dos cantos intactos e contraste, e tamanho para a distância. Termine com um teste de segundo celular: se outro celular ler, o problema é o seu celular; se nenhum ler, é o código."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre um QR code e um código de barras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Um QR code é o padrão quadrado com três quadrados grandes nos cantos, que são os pontos de referência do leitor. Um padrão sem esses quadrados dos cantos não é um QR code, e nenhum leitor de QR vai lê-lo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meu QR code escaneia, mas o link não funciona. O código está quebrado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O código fez o trabalho dele; o destino é o problema — a página mudou, o site está fora do ar, ou o formulário não existe mais. Entre em contato com o remetente para um código novo, ou, se foi você quem o emitiu, use um código cujo destino você controla ou um código dinâmico que continua editável."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "É seguro escanear um QR code que encontro em público?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leia a prévia antes de tocar: o domínio deve combinar com a placa à sua frente, o código não deve mostrar adulteração como um adesivo colado sobre outro código, e você deve ter esperado esse código nesse lugar. Falhar em qualquer uma dessas verificações já basta para parar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como testo um QR code que imprimi antes de outras pessoas escanearem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Escaneie a prova impressa, e não só a versão na tela, em dois celulares se puder — um iPhone e um Android — na luz e a partir da distância onde ele de fato vai ser usado. Um código que lê em todas essas condições tem tamanho, contraste e zona de silêncio certos."
       }
     }
   ]
@@ -90,33 +130,33 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"Como Escanear um QR Code (iPhone e Android) | FreeQrly","description":"Como escanear um QR code no iPhone e no Android — sem app. Use a câmera embutida, a Central de Controle ou o Google Lens, e conserte quando não escanear.","step":[
     {
       "@type": "HowToStep",
-      "name": "Aponte sua câmera para o código",
-      "text": "Abra o app Câmera embutido e aponte para o QR code, mantendo o quadrado inteiro no quadro."
+      "name": "Enquadre o código inteiro",
+      "text": "Abra o app Câmera embutido e segure o celular de modo que o quadrado inteiro, incluindo a margem em branco ao redor, fique dentro do quadro. Não aperte o botão de foto."
     },
     {
       "@type": "HowToStep",
-      "name": "Toque na notificação",
-      "text": "Um banner ou prévia de link aparece — toque para abrir o destino."
+      "name": "Segure firme e deixe a câmera focar",
+      "text": "Dê um segundo para a câmera se estabilizar; um celular em movimento produz um padrão borrado."
     },
     {
       "@type": "HowToStep",
-      "name": "No iPhone, use os atalhos embutidos",
-      "text": "Abra a Central de Controle e toque no ícone do scanner de QR, ou pressione e segure o ícone da Câmera. Para escanear um código dentro de uma foto, abra no Fotos e pressione e segure o código."
+      "name": "Leia a prévia",
+      "text": "Um link, um nome de rede ou uma ação aparece na tela. Leia tudo antes de tocar — o domínio, e não só as primeiras palavras."
     },
     {
       "@type": "HowToStep",
-      "name": "No Android, use o Lens ou as Configurações rápidas",
-      "text": "Use o Google Lens na câmera ou no app Google, ou o bloco Escanear QR code nas Configurações rápidas (Samsung). Para uma imagem salva, abra no Google Fotos e toque no botão Lens."
+      "name": "Toque para abrir, e responda à confirmação",
+      "text": "Tocar abre o destino ou dispara a ação. Leia qualquer confirmação do mesmo jeito, como uma segunda prévia."
     },
     {
       "@type": "HowToStep",
-      "name": "Se nada acontecer, conserte o código, não o celular",
-      "text": "Aproxime-se, limpe a lente e confira o código em si: pequeno demais, baixo contraste, danificado ou impresso em curva. Veja a lista completa de solução de problemas."
+      "name": "Se nada aparecer, siga a cadeia de falhas",
+      "text": "Confira em ordem: código inteiro no quadro, vista normal de foto, leitura ligada, foco firme, boa luz sem reflexo, lente limpa, quadrados dos cantos intactos e contraste, tamanho para a distância — depois um teste com um segundo celular."
     },
     {
       "@type": "HowToStep",
-      "name": "Confira a prévia antes de abrir",
-      "text": "Olhe a URL antes de tocar, especialmente em códigos que você encontra em lugares públicos — adesivos sobre códigos reais são um golpe conhecido."
+      "name": "Se o código já está na sua própria tela, leia a imagem",
+      "text": "Tire um print do código, ou salve a imagem, e leia a partir da imagem: no iPhone, abra no Fotos e toque e segure o código; no Android, abra no Google Fotos e toque em Lens."
     }
   ]}
 </script>
@@ -132,57 +172,113 @@
     <div class="kicker" style="text-align:center">Anotações</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Como <span class="hl hl-mint">escanear</span> um QR code</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Sem app. Todo iPhone e celular Android moderno escaneia QR codes com a câmera que já tem. Veja como — e o que fazer quando nada acontece.</p>
-    <p class="meta" style="text-align:center">2026-10-14 · 4 min de leitura</p>
+    <p class="meta" style="text-align:center">14 de outubro de 2026 · Última atualização: 3 de novembro de 2026 · 15 min de leitura</p>
     <div class="prose" style="margin-top:40px">
+<p><strong>Resposta curta: aponte a câmera do seu celular para o código, espere a prévia, leia-a e toque nela.</strong> Sem app para instalar, sem conta para criar, sem foto para tirar. Todo iPhone e Android moderno lê QR codes com a câmera que já tem, e o trabalho inteiro leva alguns segundos quando você já conhece o ritmo: enquadrar o código inteiro, segurar firme, ler a prévia, tocar. Este guia cobre o que cada tipo de código faz, o que o seu celular pede no caminho, o hábito de segurança que mais importa, e uma cadeia de falhas para o momento em que nada acontece.</p>
 
+<p>Comece reconhecendo o que você está vendo. Um QR code é o padrão quadrado com três quadrados grandes nos cantos; esses cantos são os pontos de referência do leitor, e um padrão sem eles não é um QR code — pode ser um código de barras comum, uma marca proprietária ou um padrão decorativo, e nenhum leitor de QR vai lê-lo. Um QR code genuíno pode conter vários tipos de conteúdo, e saber qual tipo você escaneou muda o que você deve esperar em seguida. Um link abre uma página, um código de Wi-Fi oferece uma rede, um código de contato oferece uma pessoa para salvar, um código de texto mostra palavras, um código de evento oferece um item de calendário, e um código de pagamento ou ingresso abre um app ou checkout. A prévia do seu celular diz qual tipo é antes de qualquer coisa acontecer.</p>
+
+<h2>O que um escaneamento entrega, por tipo de código</h2>
+<div class="table-scroll"><table>
+<tr><th>O código contém</th><th>Depois da prévia, espere</th><th>Confira antes de confirmar</th></tr>
+<tr><td>Um link da web</td><td>Uma página no navegador</td><td>O domínio combina com a placa ou o remetente</td></tr>
+<tr><td>Dados de Wi-Fi</td><td>Um convite para entrar numa rede</td><td>O nome da rede combina com a placa</td></tr>
+<tr><td>Dados de contato</td><td>Um convite para salvar um contato</td><td>O nome e a empresa parecem certos</td></tr>
+<tr><td>Texto simples</td><td>O próprio texto, com opção de copiar</td><td>Nada para confirmar — só leia</td></tr>
+<tr><td>Um evento</td><td>Um convite para adicionar ao seu calendário</td><td>Data, hora e local combinam com o convite</td></tr>
+<tr><td>Um pagamento ou ingresso</td><td>Um app, um checkout ou uma tela de validação</td><td>Nome do comerciante ou do evento, e o valor</td></tr>
+</table></div>
+
+<h2>Os passos, do código ao destino</h2>
 <ol>
-<li><b>Aponte sua câmera para o código</b> Abra o app Câmera embutido e aponte para o QR code, mantendo o quadrado inteiro no quadro.</li>
-<li><b>Toque na notificação</b> Um banner ou prévia de link aparece — toque para abrir o destino.</li>
-<li><b>No iPhone, use os atalhos embutidos</b> Scanner de QR da Central de Controle, ou pressione e segure o ícone da Câmera. Para um código dentro de uma foto, pressione e segure nele no Fotos.</li>
-<li><b>No Android, use o Lens ou as Configurações rápidas</b> Google Lens na câmera ou no app Google, ou o bloco Escanear QR code nas Configurações rápidas. Para uma imagem salva, Google Fotos + Lens.</li>
-<li><b>Se nada acontecer, conserte o código, não o celular</b> Aproxime-se, limpe a lente e confira o código em si: pequeno demais, baixo contraste, danificado ou impresso em curva.</li>
-<li><b>Confira a prévia antes de abrir</b> Olhe a URL antes de tocar, especialmente em códigos que você encontra em lugares públicos.</li>
+<li><strong>Enquadre o código inteiro.</strong> Abra o app Câmera embutido e segure o celular de modo que o quadrado inteiro, incluindo a margem em branco ao redor, fique dentro do quadro. Não é preciso apertar o botão de foto. Se parte do código ficar cortada, afaste-se até os quatro cantos ficarem visíveis.</li>
+<li><strong>Segure firme e deixe a câmera focar.</strong> Dê um segundo para a câmera se estabilizar; um celular em movimento produz um padrão borrado.</li>
+<li><strong>Leia a prévia.</strong> Um link, um nome de rede ou uma ação aparece na tela. Leia tudo antes de tocar — o domínio, e não só as primeiras palavras. Esse passo é o hábito de segurança, e está detalhado abaixo.</li>
+<li><strong>Toque para abrir, e responda à confirmação.</strong> Tocar abre o destino; leia qualquer confirmação do mesmo jeito, como uma segunda prévia.</li>
+<li><strong>Se nada aparecer, siga a cadeia de falhas.</strong> Não fique apontando e torcendo. As verificações em ordem abaixo separam um problema de celular de um problema de luz e de um problema de código em cerca de um minuto.</li>
+<li><strong>Se o código já está na sua própria tela, leia a imagem.</strong> Tire um print do código, ou salve a imagem, e leia a partir da imagem (Fotos no iPhone, Google Fotos com Lens no Android). A versão completa está no <a href="/pt/blog/scan-qr-code-from-image/">guia para escanear um QR code a partir de uma foto</a>.</li>
 </ol>
-<h2>No iPhone</h2>
-<p>Abra o app Câmera e aponte para o código — segure firme por um segundo. Uma notificação amarela aparece; toque nela. Só isso. Funciona em qualquer iPhone moderno — <a href="https://support.apple.com/en-ca/102680">o guia da Apple</a> cobre o app Câmera e o Scanner de Código.</p>
-<p>Dois atalhos que vale conhecer: abra a <b>Central de Controle</b> e toque no ícone do scanner de QR (adicione em Ajustes → Central de Controle se estiver faltando), ou pressione e segure o ícone da Câmera na tela de bloqueio. Se o código estiver em uma foto ou captura de tela, abra no app Fotos e pressione e segure o código — o iOS o detecta direto na imagem.</p>
-<h2>No Android</h2>
-<p>A maioria dos celulares Android também escaneia pela câmera embutida: aponte, espere o aviso, toque. No Pixel e em muitos outros, o <b>Google Lens</b> na câmera ou no app Google resolve. Celulares Samsung têm um scanner dedicado no painel de Configurações rápidas — deslize para baixo e procure "Escanear QR code". E, como no iPhone, você pode abrir uma imagem salva no Google Fotos e tocar no botão Lens.</p>
-<h2>Quando nada acontece</h2>
-<p>Nove em cada dez vezes é o código, não seu celular: pequeno demais, baixo contraste, danificado ou impresso em curva. Há uma lista completa em <a href="/pt/blog/why-is-my-qr-code-not-working/">por que meu QR code não escaneia</a>. A lente suja da câmera é o clássico esquecido — limpe e tente de novo.</p>
-<h2>Um hábito de segurança de 3 segundos</h2>
-<p>Seu celular mostra uma prévia do link antes de abri-lo. Olhe. Se um código em um poste promete um parquímetro mas a URL parece uma sequência aleatória de caracteres, não toque — <a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">adesivos sobre códigos reais são um golpe conhecido sobre o qual a FTC já alertou</a>. Códigos que você mesmo gera com o <a href="/pt/">FreeQrly</a> são estáticos e contêm exatamente o que você digitou, nada escondido.</p>
 
+<h2>Antes de tocar: permissões e confirmações</h2>
+<p>Escanear pede muito pouco de você, e isso faz parte do apelo — mas as poucas coisas que pede merecem atenção. Um leitor baseado no navegador pode pedir permissão de câmera da primeira vez; permita enquanto estiver usando a página, e revogue depois. Ele não precisa das suas fotos, contatos ou localização, e qualquer pedido assim é motivo para parar.</p>
+<p>Depois da prévia, as confirmações seguem o tipo de código. Um código de Wi-Fi pede para você entrar numa rede — confira o nome com a placa antes de entrar, já que uma rede falsa com um nome plausível é um truque real, e entrar na rede errada é pior do que não conseguir entrar na certa. Um código de contato pede para salvar uma pessoa, e um código de app pede para abrir um app — confira os dois com o que você esperava. Um download deve fazer você parar: um arquivo é um compromisso maior do que uma página. E um formulário de login acessado a partir de um código público merece um segundo olhar antes de qualquer senha chegar perto dele.</p>
+
+<h2>Cenários: o mesmo ritmo, riscos diferentes</h2>
+<p><strong>Cardápios, cartazes e horários</strong> são os escaneamentos de menor risco, e o ritmo é o mais simples: enquadrar, prévia, tocar. As falhas aqui geralmente são físicas: incline para o reflexo, aproxime-se para o tamanho, adicione luz para a escuridão. <strong>Ingressos e check-ins</strong> têm risco maior porque são sensíveis ao tempo e muitas vezes de uso único. Deixe o código pronto antes de chegar à fila, e escaneie sem demora se ele atualizar.</p>
+
+<h2>O hábito de segurança, na íntegra</h2>
+<p>Um QR code esconde o destino por design. Não dá para ler uma URL olhando para o padrão, e é exatamente por isso que um código é um veículo tão eficaz para um link que você jamais tocaria se pudesse vê-lo. A defesa não é evitar códigos — é ler a prévia, sempre, e tratar a prévia como uma decisão, não uma formalidade. A Federal Trade Commission dos Estados Unidos alertou sobre esse padrão num alerta ao consumidor datado de 6 de dezembro de 2023: golpistas cobrem códigos genuínos com os próprios adesivos — em parquímetros, por exemplo — ou enviam códigos em mensagens inesperadas, e um código escaneado pode levar a um site falso que parece real, onde qualquer coisa digitada pode ser roubada, ou a um malware. O conselho da FTC nesse alerta é o mesmo hábito que este guia recomenda: inspecione a URL antes de abri-la, procure erros de ortografia ou uma letra trocada num nome conhecido, e não escaneie um código numa mensagem inesperada, principalmente se ela pedir ação imediata.</p>
+<p>Transforme esse conselho em três verificações: o domínio, letra por letra, combina com o negócio ou a placa à sua frente; o código não mostra adulteração, como um adesivo colado sobre outro código; e o contexto faz sentido — você esperava esse código, nesse lugar, para esse fim. Falhar em qualquer uma dessas verificações já basta para parar. Uma prévia mostrando só um link encurtado esconde o destino final tão completamente quanto o próprio código; se você não reconhece o remetente, isso é motivo para parar, e não para tocar e descobrir.</p>
+
+<h2>Quando nada acontece: a cadeia de falhas, em ordem</h2>
+<p>Siga essa cadeia em ordem. Cada passo leva segundos, e a ordem importa: ela vai das correções mais baratas ao teste mais conclusivo, para você parar assim que achar a falha em vez de tentar tudo ao acaso. As versões específicas de cada celular desses passos — as chaves e atalhos exatos no iPhone, Pixel e Samsung — estão no <a href="/pt/blog/how-to-scan-qr-code-on-phone/">guia de escaneamento no celular</a>; essa cadeia é a lógica por baixo deles.</p>
+<ol>
+<li><strong>Enquadramento.</strong> O código inteiro, incluindo a margem de silêncio, está dentro do quadro? Afaste-se até os quatro cantos ficarem visíveis. Um código cortado pela borda do quadro é a causa mais comum de silêncio.</li>
+<li><strong>Modo.</strong> Use a vista normal de foto, e não retrato ou vídeo, ou use o atalho do leitor dedicado do seu celular.</li>
+<li><strong>Configuração.</strong> Uma chave desligada por uma atualização parece exatamente um código quebrado; confira primeiro as configurações da sua câmera.</li>
+<li><strong>Foco e firmeza.</strong> Segure firme e aproxime ou afaste devagar até o padrão ficar nítido.</li>
+<li><strong>Luz.</strong> Adicione luz num quarto escuro, remova o reflexo num ambiente claro, e incline levemente para um código atrás de vidro.</li>
+<li><strong>Lente.</strong> A lente está limpa? Limpe com um pano macio. Uma lente embaçada borra todos os códigos por igual, e é por isso que uma lente suja é tão confundida com uma impressão ruim.</li>
+<li><strong>Integridade do código.</strong> Os quadrados dos cantos estão intactos, o contraste é escuro sobre claro, e o código está livre de danos, desbotamento ou curva que distorça?</li>
+<li><strong>Tamanho e distância.</strong> O código é grande o bastante para a distância? Segundo o <a href="/pt/blog/qr-code-print-size-guide/">guia de tamanho de impressão</a>, um código deve ter pelo menos um décimo da largura da distância de escaneamento e pelo menos 2 × 2 cm impresso; aproxime-se se ele for pequeno demais para a distância.</li>
+<li><strong>Teste com um segundo celular.</strong> Se outro celular ler, o problema é o seu celular; se nenhum ler, é o código.</li>
+</ol>
+
+<h2>Aprofundando: borrão, dano e zona de silêncio</h2>
+<p>Três falhas do lado do código merecem mais do que uma linha numa cadeia, porque são as que as pessoas mais diagnosticam errado. <strong>Borrão</strong> é a primeira. Um código pode sair borrado na criação — uma exportação em baixa resolução esticada até o tamanho de um cartaz — ou na captura — um celular em movimento, uma mão trêmula, um código fotografado com pouca luz. O borrão de captura se corrige segurando firme, adicionando luz e fotografando de novo; o borrão de criação só se corrige com um original melhor. O tratamento completo está em <a href="/pt/blog/why-is-my-qr-code-blurry/">por que o seu QR code está borrado</a>.</p>
+<p><strong>Dano</strong> é a segunda. Segundo a ISO/IEC 18004, quatro níveis de correção de erros — L, M, Q, H — permitem que um leitor reconstrua um padrão danificado: cerca de 7% das palavras-código no L, 15% no M, 25% no Q e 30% no H. Então um código arranhado muitas vezes ainda lê, e um código com logo central lê porque a correção absorve o meio faltante. O limite são os quadrados dos cantos: danifique um seriamente e o leitor não consegue orientar o padrão, por melhor que seja a correção de erros no resto. É por isso que um canto rasgado falha enquanto um meio arranhado funciona.</p>
+<p><strong>A zona de silêncio</strong> é a terceira, e a mais frequentemente eliminada pelo design. A margem em branco ao redor de um código, com pelo menos quatro módulos de largura em todos os lados segundo o padrão, é o que permite ao leitor encontrar as bordas do código. Um design que amontoa o código com texto, bordas ou gráficos até a borda dele não está sendo estiloso; está removendo a margem que o leitor precisa para encontrar o padrão. Amontoamento, cores claras sobre branco e um logo cobrindo um quadrado do canto são as escolhas de design que mais transformam um código funcionando numa decoração; veja <a href="/pt/blog/why-is-my-qr-code-not-working/">por que o seu QR code não escaneia</a>.</p>
+
+<h2>A comparação honesta: leitura embutida, leitores de navegador e apps de leitura</h2>
+<p>Três tipos de leitor competem pelo mesmo trabalho, e a classificação honesta é curta. A câmera embutida é o melhor padrão: já instalada, já atualizada com o celular, e lê códigos padrão com a mesma prévia de qualquer outro leitor, sem conta nem anúncio entre você e um cardápio. Um leitor de navegador é o melhor backup: não precisa de instalação, funciona no celular ou no computador, e — quando decodifica no seu navegador em vez de enviar a sua imagem — é a ferramenta certa para um código numa imagem salva ou na tela do computador. Apps de leitura são o padrão mais fraco para o escaneamento diário: acrescentam uma instalação, uma tela de permissão e muitas vezes anúncios ou uma conta, em troca de uma capacidade que o seu celular já tem.</p>
+<p>As exceções são reais, mas restritas. Um celular velho o bastante para não ter leitor embutido precisa de um app ou de um leitor de navegador. Uma pessoa que escaneia códigos o dia todo a trabalho — estoque, ingressos, etiquetas de ativos — pode querer um histórico, leitura em massa ou exportações, e uma ferramenta dedicada pode se justificar ali. E um código numa imagem salva num celular cujas ferramentas de galeria não oferecem um leitor pode precisar de um decodificador de navegador, que é uma resposta melhor do que um app para um único código. Para todo o resto, o argumento contra um app é concreto: muitos apps de leitura exibem anúncios, e alguns pedem permissões muito além da câmera — contatos, localização ou uma conta que amarra o seu histórico de escaneamentos a uma identidade. Um leitor que sabe cada cardápio, ingresso e cartaz para o qual você já apontou sabe muito sobre os seus movimentos, e esse conhecimento é o produto vendido quando o app em si não custa nada. A câmera embutida lê o código e segue em frente; ela não guarda um diário dos seus escaneamentos.</p>
+
+<h2>Quando o escaneamento funciona, mas o destino não</h2>
+<p>Às vezes tudo acima dá certo e o resultado ainda decepciona: um link morto, uma página mudada, um formulário que não existe mais, um ingresso que já foi usado. Isso não é uma falha de escaneamento; é uma falha de destino, e a correção pertence a quem emitiu o código. Um código estático guarda o destino diretamente, então se o destino sumiu, o código não tem nada para dizer. Se o destino mudou, só o emissor pode apontar o código para outro lugar — que é exatamente para o que serve um código dinâmico: ele continua editável depois de imprimir, com estatísticas de escaneamento, numa conta gratuita. Se é você quem está escaneando e o link está morto, não fique escaneando de novo; peça ao remetente um código novo.</p>
+
+<h2>Testando os seus próprios códigos antes de qualquer outra pessoa escaneá-los</h2>
+<p>Se você imprime códigos para outras pessoas — um cardápio, um cartaz, um ingresso, um cartão de visita — teste-os do jeito que o seu público vai escaneá-los, e não do jeito que você os criou. Escaneie a prova impressa, e não só a versão na tela, porque a impressão muda tamanho, contraste e nitidez. Escaneie em dois celulares se puder, um iPhone e um Android, porque um código que lê num e não no outro tem um problema real escondido no tamanho, no contraste ou na zona de silêncio. Escaneie na luz e a partir da distância onde ele de fato vai ser usado. Trinta segundos de teste por código economizam uma reimpressão, uma fila de clientes confusos e um cartaz que é decoração em vez de porta.</p>
+
+<h2>Crie o seu primeiro código e escaneie você mesmo</h2>
+<p>O jeito mais rápido de aprender tudo isso é criar um código e escaneá-lo você mesmo. O gerador do FreeQrly cobre 17 tipos — links, Wi-Fi, cartões de contato, eventos e mais — e um código estático feito lá é gratuito, sem cadastro, sem marca d'água e sem expiração, então um código de teste não custa nada e continua funcionando. Imprima, coloque onde você de fato o usaria, e teste com luz pior, de mais longe e num segundo celular. Se o destino por trás do seu código pode mudar — um cardápio que atualiza a cada estação, um cartaz indo para a gráfica antes de a página de destino existir — um código dinâmico é a ferramenta certa: ele continua editável depois de imprimir e informa estatísticas de escaneamento, com uma conta gratuita. Os códigos dinâmicos são gratuitos para 20 códigos, atualmente com disponibilidade ilimitada durante o período promocional, e com escaneamentos ilimitados. Para um lote de códigos, a <a href="/pt/batch-qr-code/">geração em lote</a> cria um código por link. Comece com um código de teste estático, escaneie no seu próprio celular e avance a partir de um resultado que você realmente viu funcionar.</p>
     </div>
 
     <section class="sources">
       <h2>Fontes</h2>
       <ul>
-      <li><a href="https://support.apple.com/en-ca/102680">Suporte da Apple: Escaneie um QR code com seu iPhone ou iPad</a> — Como escanear com o app Câmera ou o Scanner de Código.</li>
-      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC: Golpistas escondem links nocivos em QR codes</a> — A FTC sobre QR codes cobrindo os reais, sites falsificados e conferir a URL antes de abrir.</li>
+      <li><a href="https://support.apple.com/en-ca/102680">Suporte Apple: Escaneie um QR code com seu iPhone ou iPad</a> - MANTIDO do post original (URL original mantida literalmente). O mesmo guia, verificado na página atual em inglês, publicada em 14 de setembro de 2026, descreve abrir a Câmera ou o Leitor de Código, segurar o aparelho de modo que o código apareça, e tocar no link.</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC: Golpistas escondem links nocivos em QR codes para roubar suas informações</a> - MANTIDO do post original. Alerta ao consumidor datado de 6 de dezembro de 2023 (listagem da FTC; página verificada ao abri-la em 2026-11-03). Sustenta: golpistas cobrindo códigos genuínos com os próprios adesivos, incluindo em parquímetros, e enviando códigos em mensagens inesperadas; um código escaneado pode levar a um site falso ou a um malware; inspecione a URL antes de abri-la e não escaneie um código numa mensagem inesperada pedindo ação imediata.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - ADICIONADO. A especificação da simbologia QR Code. Sustenta os números do corpo: quatro níveis de correção de erros (L cerca de 7%, M cerca de 15%, Q cerca de 25%, H cerca de 30% das palavras-código) e a zona de silêncio de pelo menos 4 módulos em todos os lados. Página acessada em 2026-11-03; a listagem da ISO em si não traz um resumo público com os números, que foram corroborados com explicadores do padrão durante a verificação.</li>
+      <li><a href="https://support.google.com/pixelphone/answer/16561572?hl=en">Suporte Google: Escaneie QR codes com seu celular Pixel</a> - ADICIONADO. Página acessada em 2026-11-03; nenhuma data de publicação mostrada na página. Sustenta os passos genéricos de solução de problemas refletidos na cadeia de falhas (segurar firme, boa luz sem reflexo, lente limpa, aproximar-se mantendo o quadrado inteiro no quadro).</li>
+      <li><a href="https://www.samsung.com/uk/support/mobile-devices/how-to-scan-qr-code-on-your-galaxy-phone-or-tablet/">Suporte Samsung: Como escanear QR codes no seu celular Samsung</a> - ADICIONADO. Atualizado em 6 de outubro de 2026 (mostrado na página, verificado ao abri-la em 2026-11-03). Sustenta os passos específicos de cada celular para os quais o guia geral aponta (app Câmera, bloco Ler QR code dos Ajustes Rápidos, chave Ler QR codes das configurações da Câmera).</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly apresentando um QR code"></div>
       <div>
         <h3>Teste você mesmo — grátis</h3>
-        <p>Tudo neste artigo funciona no estúdio do FreeQrly agora mesmo. Códigos estáticos, treze tipos de conteúdo, exportação em PNG e SVG.</p>
+        <p>Tudo neste artigo funciona no estúdio do FreeQrly agora mesmo. Códigos estáticos, os 17 tipos de conteúdo, exportação em PNG e SVG.</p>
         <a class="btn" href="/pt/#studio">Abrir o estúdio</a>
       </div>
     </div>
     <div class="related">
       <div class="fl" style="margin-top:34px">Continue lendo</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/pt/blog/qr-code-print-size-guide/"><b>QR Code Guia de tamanho de impressão: Business Cards to Posters</b></a>
+        <a class="rel-card" href="/pt/blog/qr-code-print-size-guide/"><b>Guia de Tamanho de Impressão de QR Code: de Cartões de Visita a Cartazes</b></a>
         <a class="rel-card" href="/pt/blog/free-qr-codes-that-dont-expire/"><b>QR Codes Grátis Que Nunca Expiram</b></a>
-        <a class="rel-card" href="/pt/blog/scan-qr-code-from-image/"><b>How to Scan a QR Code from a Picture, Photo, or Screenshot</b></a>
+        <a class="rel-card" href="/pt/blog/scan-qr-code-from-image/"><b>Como Escanear um QR Code a Partir de uma Foto, Imagem ou Print</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bom saber</h2>
-    <details><summary><span>Preciso de um app para escanear QR codes?</span></summary><p>Não. iPhones e praticamente todos os celulares Android escaneiam QR codes com a câmera embutida. Apps de scanner de terceiros são desnecessários e geralmente cheios de anúncios. <a href="https://support.apple.com/en-ca/102680">O guia da Apple</a> cobre o app Câmera e o Scanner de Código no iPhone.</p></details>
-    <details><summary><span>Como escaneio um QR code de uma captura de tela?</span></summary><p>No iPhone, abra a captura de tela no Fotos e pressione e segure o código. No Android, abra no Google Fotos e toque no botão Lens.</p></details>
-    <details><summary><span>Por que minha câmera não escaneia o QR code?</span></summary><p>Geralmente o código é pequeno demais, tem baixo contraste, está danificado ou não há zona de silêncio ao redor. Limpe a lente, aproxime-se e veja a lista completa de correções no nosso guia de solução de problemas.</p></details>
+    <details><summary><span>Preciso de um app para escanear QR codes?</span></summary><p>Não. iPhones e praticamente todos os celulares Android escaneiam QR codes com a câmera embutida. Apps de leitura de terceiros são desnecessários para códigos padrão, e são uma resposta razoável só para um celular sem leitor embutido ou para um trabalho que precise de histórico ou leitura em massa.</p></details>
+    <details><summary><span>O que acontece depois que eu escaneio um QR code?</span></summary><p>Depende do que o código contém: um link abre uma página da web, um código de Wi-Fi oferece entrar numa rede, um código de contato oferece salvar uma pessoa, um código de texto mostra palavras, e um código de evento oferece um item de calendário. A prévia do seu celular diz qual tipo é antes de qualquer coisa abrir.</p></details>
+    <details><summary><span>Como escaneio um QR code que está na tela do meu próprio celular?</span></summary><p>Tire um print do código ou salve a imagem, depois leia a partir da imagem: no iPhone, abra no Fotos e toque e segure o código; no Android, abra no Google Fotos e toque em Lens. Uma câmera não consegue apontar para a própria tela.</p></details>
+    <details><summary><span>Por que minha câmera não escaneia o QR code?</span></summary><p>Siga a cadeia de falhas em ordem: código inteiro no quadro, vista normal de foto, leitura ligada, foco firme, boa luz sem reflexo, lente limpa, quadrados dos cantos intactos e contraste, e tamanho para a distância. Termine com um teste de segundo celular: se outro celular ler, o problema é o seu celular; se nenhum ler, é o código.</p></details>
+    <details><summary><span>Qual a diferença entre um QR code e um código de barras?</span></summary><p>Um QR code é o padrão quadrado com três quadrados grandes nos cantos, que são os pontos de referência do leitor. Um padrão sem esses quadrados dos cantos não é um QR code, e nenhum leitor de QR vai lê-lo.</p></details>
+    <details><summary><span>Meu QR code escaneia, mas o link não funciona. O código está quebrado?</span></summary><p>Não. O código fez o trabalho dele; o destino é o problema — a página mudou, o site está fora do ar, ou o formulário não existe mais. Entre em contato com o remetente para um código novo, ou, se foi você quem o emitiu, use um código cujo destino você controla ou um código dinâmico que continua editável.</p></details>
+    <details><summary><span>É seguro escanear um QR code que encontro em público?</span></summary><p>Leia a prévia antes de tocar: o domínio deve combinar com a placa à sua frente, o código não deve mostrar adulteração como um adesivo colado sobre outro código, e você deve ter esperado esse código nesse lugar. Falhar em qualquer uma dessas verificações já basta para parar.</p></details>
+    <details><summary><span>Como testo um QR code que imprimi antes de outras pessoas escanearem?</span></summary><p>Escaneie a prova impressa, e não só a versão na tela, em dois celulares se puder — um iPhone e um Android — na luz e a partir da distância onde ele de fato vai ser usado. Um código que lê em todas essas condições tem tamanho, contraste e zona de silêncio certos.</p></details>
     </section>
   </article>
   <footer>

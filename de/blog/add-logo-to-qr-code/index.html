@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"So fügst du ein Logo in einen QR-Code ein – und er bleibt scanbar | FreeQrly","description":"Logo in die Mitte eines QR-Codes setzen: Quadratisches PNG hochladen, unter ~30 % der Codefläche bleiben, die Fehlerkorrektur ihre Arbeit machen lassen. Kostenlos, kein Wasserzeichen, trotzdem scanbar.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"So fügst du ein Logo in einen QR-Code ein – und er bleibt scanbar | FreeQrly","description":"Logo in die Mitte eines QR-Codes setzen: Quadratisches PNG hochladen, unter ~30 % der Codefläche bleiben, die Fehlerkorrektur ihre Arbeit machen lassen. Kostenlos, kein Wasserzeichen, trotzdem scanbar.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-28","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "Macht mein Logo den QR-Code kaputt?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein, solange es unter ~30 % der Codefläche bleibt. Die Fehlerkorrektur wird beim Hinzufügen eines Logos automatisch erhöht, sodass die verdeckte Mitte den Scan nicht stoppt."
+        "text": "Nicht, wenn es unter etwa 30 % der Codefläche bleibt, was die Obergrenze ist, die der Generator nutzt, und näher bei 20–25 %, wenn du einen Sicherheitsabstand willst. Die Fehlerkorrektur wird automatisch erhöht, wenn ein Logo hinzugefügt wird, die verdeckte Mitte stoppt den Scan also nicht."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Welche Logodatei funktioniert am besten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ein quadratisches PNG mit Transparenz. Rechteckige Logos und Logos mit weißem Kasten verschwenden Platz und stören das Muster."
+        "text": "Ein quadratisches PNG mit transparentem Hintergrund. Rechteckige Logos und Logos in weißer Box verschwenden Platz und kämpfen gegen das Muster. Vereinfache das Zeichen zuerst: Feine Schrift und Slogans verschwinden bei Code-Mitten-Größe."
       }
     },
     {
@@ -89,6 +89,38 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "PNG bis 2048 px für die meisten Druckaufträge oder SVG, wenn du es unendlich skalierbar brauchst, etwa für ein Banner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum muss das Logo in der Mitte bleiben?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Mitte enthält keine Positionsdaten, sie ist also der sicherste Ort zum Verdecken, und Zentrieren hält das Zeichen fern von den drei Suchmustern in den Ecken. Schon ein verdecktes Suchmuster kann einen Scan vollständig stoppen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie groß sollte ein Logo-Code im Druck sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mindestens 3 × 3 cm, statt der 2 × 2 cm, mit denen ein schlichter Code auskommt, und größer, wenn der Code viele Daten trägt oder bei schlechtem Licht gescannt wird. Der Druckgrößen-Leitfaden hat die vollständige Tabelle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie sollte ich einen Logo-Code vor dem Druck testen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scanne das gedruckte Stück, in endgültiger Größe und auf endgültigem Material, mit mindestens zwei Handys – einem iPhone, einem Android-Gerät –, aus echter Distanz und bei echtem Licht. Behandle Zögern als Versagen: Logo verkleinern, Kontrast erhöhen oder größer drucken und erneut testen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wann sollte ich das Logo weglassen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei winzigem Druck, bei sehr dichten Codes, auf Flächen, die zerkratzt oder bewettert werden, oder wenn der Code in einer Größe reproduziert wird, die du nicht gewählt hast. In diesen Fällen ist ein schlichter Code nachsichtiger."
       }
     }
   ]
@@ -130,40 +162,127 @@
     <div class="kicker" style="text-align:center">Feldnotizen</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Dein Logo, <span class='hl hl-blush'>in der Mitte</span> – trotzdem scanbar</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Ein Logo macht einen Code zu deinem. Es verdeckt aber auch einen Teil des Musters. So bekommst du beides: Logo genau in der Mitte, Code scannt beim ersten Versuch.</p>
-    <p class="meta" style="text-align:center">28. Oktober 2026 · 4 Min. Lesezeit</p>
+    <p class="meta" style="text-align:center">28. Oktober 2026 · Zuletzt aktualisiert: 3. November 2026 · 14 Min. Lesezeit</p>
     <div class="prose" style="margin-top:40px">
+<p>Ein Logo in der Mitte eines QR-Codes funktioniert, wenn drei Dinge stimmen: Das Logo bleibt klein, die Fehlerkorrektur des Codes ist hoch eingestellt und nichts Wichtiges ist verdeckt. In der Praxis heißt das: ein quadratisches Logo mit transparentem Hintergrund, zentriert, gehalten unter etwa 30 % der Codefläche als Obergrenze – und kleiner, wenn du einen Sicherheitsabstand willst –, dunkel auf hell gedruckt, mit einem klaren Rand um den ganzen Code. Mach das, teste das gedruckte Stück auf zwei Handys, und der Code liest sich beim ersten Versuch, während er trotzdem unverkennbar nach deiner Marke aussieht.</p>
 
-<p>Ein schlichter QR-Code funktioniert. Ein QR-Code mit Logo funktioniert und wird erkannt – auf der Verpackung, auf der Visitenkarte, auf einem Plakat quer durch den Raum. Der Haken ist real: Das Logo liegt über dem Muster, und das Muster ist es, was das Smartphone liest. Wer die Balance falsch trifft, dessen Code scannt nicht mehr. Wer sie richtig trifft, dem sieht niemand die Technik an – man sieht nur die Marke.</p>
+<p>Diese Kurzversion versteckt eine ehrliche Spannung, und diese Anleitung weicht ihr nicht aus: 30 % ist eine Obergrenze, kein Ziel. Die höchste Fehlerkorrekturstufe kann etwa 30 % der Daten wiederherstellen, ein Logo, das sich dieser Grenze nähert, lässt also fast nichts als Reserve für einen zerkratzten Druck, einen dunklen Raum oder ein älteres Handy. Viele Design-Leitfäden raten daher, ein zentriertes Logo bei etwa 20–25 % der Codefläche zu halten, damit Verschleiß noch aufgefangen werden kann. Wenn dein Logo groß sein muss, zeigt der Rest dieser Anleitung, was du dafür eintauschen kannst – kürzere Inhalte, einen größeren Druck oder ein einfacheres Zeichen –, statt zu hoffen, die Obergrenze werde dich retten.</p>
 
-<h2>Die drei Regeln</h2>
-<ol>
-<li><b>Quadratisches PNG mit Transparenz.</b> Ein quadratisches Logo mit transparentem Hintergrund sitzt am saubersten in der Mitte. Ein rechteckiges Logo oder eines mit weißem Kasten verschwendet Platz und stört das Muster.</li>
-<li><b>Unter ~30 % der Codefläche bleiben.</b> Das ist die Faustregel, die auch der Generator selbst verwendet: klein genug, dass das übrige Muster die Daten noch trägt, groß genug, um auf einen Blick erkennbar zu sein.</li>
-<li><b>Die Fehlerkorrektur ihre Arbeit machen lassen.</b> QR-Codes sind dafür gebaut, Beschädigungen zu überstehen – bis zu 30 % des Musters dürfen fehlen, und der Code liest sich trotzdem. Wenn du ein Logo hinzufügst, wird die Fehlerkorrektur automatisch erhöht, sodass die verdeckte Mitte nichts ausmacht.</li>
-</ol>
+<h2>Warum ein Logo überhaupt funktionieren kann: Fehlerkorrektur</h2>
 
-<h2>Schritt für Schritt</h2>
-<p>Erst den Code erstellen – jeder Typ funktioniert mit Logo: ein Link, eine vCard, ein WLAN-Netzwerk. Dann im Logo-Schritt des Studios das Logo hochladen, in der Mitte platzieren und herunterladen. PNG bis 2048 px für den Druck oder SVG, wenn du es unendlich skalierbar brauchst. Der Logo-Schritt funktioniert mit jedem Codetyp, und dasselbe Logo lässt sich auf einen ganzen Batch anwenden.</p>
+<p>Ein QR-Code ist nicht nur ein Bild deines Links. Er ist ein Raster aus dunklen und hellen Quadraten, Modulen genannt, plus redundante Daten, die durch das Raster gewoben sind, sodass ein Leser fehlende Stücke wiederherstellen kann. Diese Redundanz wird durch die Fehlerkorrekturstufe festgelegt, definiert im QR-Code-Standard ISO/IEC 18004:</p>
 
-<h2>Vier Fehler, die Scans scheitern lassen</h2>
+<div class="table-scroll"><table>
+<tr><th>Stufe</th><th>Stellt etwa wieder her</th><th>Wofür nutzen</th></tr>
+<tr><td>L (Niedrig)</td><td>7 %</td><td>Saubere Codes nur für den Bildschirm ohne Logo</td></tr>
+<tr><td>M (Mittel)</td><td>15 %</td><td>Schlichte gedruckte Codes; ein guter Standard</td></tr>
+<tr><td>Q (Quartil)</td><td>25 %</td><td>Druck, der Verschleiß, Schmutz oder Kratzern ausgesetzt ist</td></tr>
+<tr><td>H (Hoch)</td><td>30 %</td><td>Jeder Code mit einem Logo oder einer rauen Oberfläche</td></tr>
+</table></div>
+
+<p>Wenn du ein Logo hinzufügst, zählt die verdeckte Mitte als Schaden, und der Leser rekonstruiert sie aus den redundanten Daten, die über den Rest des Codes verteilt sind. Darum zählt die Fehlerkorrekturstufe mehr als die Logo-Datei selbst: Auf Stufe L oder M frisst ein Logo den Großteil deines Sicherheitsspielraums, bevor der Code je einen Drucker erreicht, während dasselbe Logo auf Stufe H in einem weit größeren Budget sitzt. FreeQrly erhöht die Fehlerkorrektur automatisch, wenn ein Logo hinzugefügt wird, du stellst die Stufe also nicht von Hand ein – aber du musst trotzdem respektieren, was sie dir kauft. Eine höhere Stufe fügt auch Module hinzu und macht denselben Inhalt dichter: Eine kurze Adresse, die auf Stufe M in ein 29 × 29-Raster passt, braucht auf Stufe H 37 × 37, jedes Modul wird also bei derselben Druckgröße kleiner. Halte das Ziel kurz und drucke Logo-Codes etwas größer als schlichte.</p>
+
+<h2>Logo-Größe: die Obergrenze, die sicherere Zone und die Falle Fläche vs. Breite</h2>
+
+<p>Logo-Größen-Ratschläge lassen sich leicht falsch lesen, denn Leitfäden zitieren sie auf zwei verschiedene Arten. Ein Logo, das 30 % der <em>Breite</em> des Codes überspannt, verdeckt nur etwa 9 % seiner <em>Fläche</em>, während ein Logo, das 30 % der <em>Fläche</em> verdeckt, etwa 55 % der Breite überspannt. Wenn diese Anleitung sagt „unter etwa 30 % der Codefläche“, meint sie Fläche – den Anteil des ganzen Quadrats, den das Logo versteckt –, und das ist die Obergrenze, die der FreeQrly-Generator nutzt. Behandle alles nahe dieser Obergrenze als einen Code ohne Reserve.</p>
+
+<div class="table-scroll"><table>
+<tr><th>Logo-Anteil an der Codefläche</th><th>Was es in der Praxis bedeutet</th></tr>
+<tr><td>Bis zu etwa 20 %</td><td>Bequem. Raum übrig für Druckschwankungen, Blendung und Verschleiß.</td></tr>
+<tr><td>Etwa 20–25 %</td><td>Der Bereich, den die meisten Design-Leitfäden als praktisches Maximum für Marken-Codes empfehlen.</td></tr>
+<tr><td>Annähernd 30 %</td><td>Die Obergrenze. Er kann unter sauberen Bedingungen scannen, aber ein Kratzer oder schwaches Licht kann ihn erledigen.</td></tr>
+<tr><td>Über 30 %</td><td>Jenseits dessen, was die Fehlerkorrektur wiederherstellen kann. Logo verkleinern oder Inhalt kürzen.</td></tr>
+</table></div>
+
+<p>Zwei andere Platzierungsregeln sind absolut, keine Geschmacksfrage. Erstens: Das Logo kommt genau in die Mitte. Die Mitte enthält keine Positionsdaten, sie ist also der sicherste Ort zum Verdecken, und Zentrieren hält das Zeichen fern von den drei großen Suchmustern in den Ecken – den Quadraten, nach denen eine Kamera zuerst sucht, um den Code zu finden, zu orientieren und geradezurichten. Schon ein verdecktes Suchmuster kann einen Scan vollständig stoppen, egal welche Fehlerkorrekturstufe. Zweitens: Das Logo darf nie die Ruhezone berühren, den leeren Rand um den Code, den der Standard auf mindestens vier Module Breite auf jeder Seite festlegt. Eine Logokante, die in diesen Rand hineinblutet, kann verhindern, dass die Kamera die Kanten des Codes überhaupt findet.</p>
+
+<p>Wenn das Logo groß sein muss – ein breiter Schriftzug, ein detailreiches Wappen –, hast du drei ehrliche Hebel. Kürze das Ziel, denn weniger Daten bedeuten ein luftigeres Muster mit größeren Modulen. Drucke den Code größer, denn größere Module verzeihen mehr Schaden; der <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Leitfaden</a> arbeitet die Größen für Karten, Flyer und Plakate durch. Oder vereinfache das Zeichen: Nutze das kompakte Symbol statt des vollständigen Logos und spare die Vollversion für die Verpackung um den Code herum auf.</p>
+
+<h2>Die Logo-Datei vorbereiten</h2>
+
+<p>Die Datei, die du hochlädst, entscheidet, wie sauber das Ergebnis bei kleinen Größen aussieht. Ein quadratisches PNG mit transparentem Hintergrund sitzt am saubersten in der Mitte: keine weiße Box, die gegen das Muster kämpft, keine verschwendeten Ecken. Ein rechteckiges Logo, das in ein Quadrat gezogen wird, verzerrt das Zeichen; schneide stattdessen eine ausgewogene, quadratische Version deines Symbols zu, statt den ganzen horizontalen Schriftzug in die Mitte zu zwingen.</p>
+
 <ul>
-<li><strong>Logo zu groß.</strong> Ab ~30 % der Fläche kann selbst die Fehlerkorrektur die fehlenden Daten nicht mehr rekonstruieren. Muss das Logo groß sein, nimm einen kürzeren Link – weniger Daten bedeuten ein luftigeres Muster.</li>
-<li><strong>Logo mit zu wenig Kontrast.</strong> Ein blasses Logo auf einem hellen Code oder ein Logo, das mit den Modulen verschwimmt, verwirrt Kameras. Dunkles Logo, heller Hintergrund, starker Kontrast – dieselbe Regel wie für den Code selbst.</li>
-<li><strong>Unruhiger Hintergrund hinter dem Code.</strong> Ein Logo-Code auf einem Foto oder Muster ist ein doppelter Kampf. Gib dem Code eine saubere, helle Fläche, auf der er sitzen kann, mit freiem Rand (Ruhezone).</li>
-<li><strong>Code verzerren.</strong> Nicht-proportionales Skalieren verzerrt das Raster. Gleichmäßig skalieren, damit die Quadrate Quadrate bleiben.</li>
+<li><strong>Vor dem Hochladen vereinfachen.</strong> Feine Schrift und winzige Details verschwinden, wenn ein Zeichen auf die Mitte eines Codes verkleinert wird. Wenn dein Logo einen Slogan hat, lass ihn aus der Code-Version weg.</li>
+<li><strong>Dem Logo ein weißes Polster geben.</strong> Eine kleine helle Unterlage um das Zeichen herum trennt es von den umgebenden Modulen, sodass die Kamera Logokanten nicht als Code-Daten liest.</li>
+<li><strong>Die dunkle Version deines Zeichens nutzen.</strong> Ein blasses Logo auf einem hellen Code verwirrt Kameras. Wenn dein Markenzeichen hell ist, lege es auf ein kontrastierendes weißes Feld.</li>
 </ul>
 
-<h2>Der Test, der es beweist</h2>
-<p>Bevor du eine Auflage druckst, scanne den Code mit zwei Smartphones – einem iPhone und einem Android-Gerät – und scanne den Ausdruck, nicht nur den Bildschirm. Wenn beide beim ersten Versuch lesen, ab damit. Wenn eines zögert, das Logo eine Stufe kleiner machen oder den Kontrast erhöhen und erneut testen. Dreißig Sekunden hier sparen einen Nachdruck.</p>
+<h2>Farbe und Kontrast: die Regeln, die mehr zählen als das Logo</h2>
 
-<p>Probier es aus: <a href="/de/qr-code-with-logo/">Erstelle einen QR-Code mit deinem Logo</a> – kostenlos, keine Anmeldung für statische Codes, kein Wasserzeichen.</p>
+<p>Ein Logo-Code versagt weit häufiger an Farbe als an Logo-Größe. Die Regel ändert sich nie: dunkle Module auf hellem Hintergrund, mit starkem Kontrast. Markenfarben sind willkommen, aber nur, wenn die dunkle Seite klar dunkel und die helle Seite klar hell bleibt. Praxis-Leitfäden nutzen häufig ein Kontrastverhältnis von 4,5:1 oder höher als Ausgangspunkt, und je schlichter die Paarung, desto größer die Bandbreite an Handys und Licht, die sie überlebt.</p>
 
+<ul>
+<li><strong>Verläufe sind ein Risiko.</strong> Das helle Ende eines Verlaufs verliert oft Kontrast, und Handys belichten Farben unterschiedlich. Prüfe, ob sein hellster Teil noch klar hell liest, und teste das gedruckte Stück, nicht nur die Bildschirmvorschau.</li>
+<li><strong>Invertierte Codes sind ein Glücksspiel.</strong> Helle Module auf dunklem Hintergrund sind im Standard erlaubt und die meisten aktuellen Handykameras lesen sie, aber manche älteren Scanner-Apps nicht. Solange du nicht auf den Geräten testen kannst, die dein Publikum tatsächlich nutzt, halte die Module dunkel.</li>
+<li><strong>Die Suchmuster nie in Unsichtbarkeit umfärben.</strong> Du kannst die drei Eckquadrate stylen – abgerundete Ecken und gepunktete Augen scannen meist gut –, aber das Ausfüllen des hellen Rings zwischen Außen- und Innenquadrat oder das Färben der Augen heller als der Rest des Codes bricht das, wonach die Kamera zuerst sucht.</li>
+<li><strong>Unruhige Hintergründe sind ein zweiter Kampf.</strong> Ein Logo-Code auf einem Foto zwingt die Kamera, Hintergrund, Logo und Muster auf einmal zu trennen. Gib dem Code ein sauberes, helles Feld, auf dem er sitzt, mit klarer Ruhezone.</li>
+</ul>
+
+<h2>Form, Rahmen und Ränder</h2>
+
+<p>Abgerundete Module und Punktmuster sind in Ordnung, denn das Raster selbst bleibt regelmäßig. Was das Scannen bricht, ist Verzerrung des Rasters: einen Code strecken, sodass die Quadrate aufhören, Quadrate zu sein, ihn verformen, damit er einem Design folgt, oder ihn um eine enge Kurve wickeln wie bei einer kleinen Flasche. Gleichmäßig skalieren, den Code quadratisch halten, und wenn eine gewölbte Fläche unvermeidbar ist, größer drucken und auf dem tatsächlichen Objekt testen.</p>
+
+<p>Rahmen und Ränder gehören außerhalb der Ruhezone, nie hinein. Ein abgerundeter Rahmen, ein Rand in Markenfarbe oder eine „Scanne mich“-Bildunterschrift können alle funktionieren, vorausgesetzt, sie liegen jenseits des Vier-Modul-Rands und berühren das Muster nicht. Dasselbe gilt für Falze und Nähte auf Verpackungen: Wenn ein Falz durch den Code oder seinen Rand läuft, bring den Code auf ein flaches Feld.</p>
+
+<h2>Schritt für Schritt</h2>
+
+<ol>
+<li><strong>Den Code erstellen.</strong> Jeder Typ funktioniert mit einem Logo: ein Link, eine vCard, ein WLAN-Netzwerk und jeder andere Typ, den FreeQrly anbietet. Kürzere Ziele ergeben luftigere Muster.</li>
+<li><strong>Ein quadratisches PNG hochladen.</strong> Transparenz funktioniert am besten. Halte das Logo unter etwa 30 % der Codefläche als Obergrenze und näher bei 20–25 % für einen Sicherheitsabstand.</li>
+<li><strong>Die Fehlerkorrektur sich anpassen lassen.</strong> Sie steigt automatisch, wenn ein Logo hinzugefügt wird, die verdeckte Mitte stoppt den Scan also nicht. Prüfe, ob Suchmuster und Ruhezone unberührt sind, bevor du exportierst.</li>
+<li><strong>Vor dem Druck test-scannen.</strong> Zwei Handys, ein iPhone und ein Android-Gerät, auf dem Druck selbst – nicht nur auf dem Bildschirm. Wenn beide beim ersten Versuch lesen, raus damit. Wenn eines zögert, verkleinere das Logo eine Stufe, erhöhe den Kontrast oder drucke größer und teste erneut.</li>
+</ol>
+
+<p>Für den Druck PNG bis zu 2048 px herunterladen oder SVG für ein Banner oder eine Messewand. Der <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Leitfaden</a> deckt die vollständige Größentabelle ab, inklusive warum Logo-Codes im Druck ein Minimum von 3 × 3 cm brauchen statt der 2 × 2 cm, mit denen schlichte Codes auskommen.</p>
+
+<h2>So testest du einen Logo-Code richtig</h2>
+
+<p>Auf dem eigenen neuen Handy, bei gutem Licht, auf einem Bildschirm zu testen, beweist fast nichts. Ein gedruckter Logo-Code trifft auf schlechtere Bedingungen: Tintenverlauf, Laminat-Blendung, dunkle Räume und ältere Kameras. Eine nützliche Testmethode ist bewusst unfreundlich:</p>
+
+<ul>
+<li><strong>Das gedruckte Stück testen, in endgültiger Größe, auf endgültigem Material.</strong> Ein Code, der auf dem Bildschirm scannt, kann auf Glanzlaminat oder strukturierter Karte versagen, wo Blendung und Tintenverlauf den Kontrast verändern.</li>
+<li><strong>Mindestens zwei Handys testen – ein iPhone, ein Android-Gerät – und ein älteres Handy, wenn du eines leihen kannst.</strong> Neue Flaggschiffe verzeihen viel; das Handy, das dein Kunde besitzt, vielleicht nicht.</li>
+<li><strong>Aus echter Distanz und echtem Winkel testen, bei echtem Licht.</strong> Eine Tischkarte wird von einem Sitzplatz aus gescannt, unter Restaurantbeleuchtung; ein Plakat aus Metern Entfernung, möglicherweise durch Glas.</li>
+<li><strong>Das Ziel testen, nicht nur das Decodieren.</strong> Der Code sollte die richtige Seite öffnen und über mobile Daten schnell laden.</li>
+<li><strong>Zögern als Versagen behandeln.</strong> Wenn ein Scann michhrere Sekunden dauert oder mehrere Versuche braucht, ist der Code grenzwertig. Logo verkleinern, Kontrast erhöhen oder größer drucken – dann erneut testen.</li>
+</ul>
+
+<p>Wenn ein Code sich weiterhin weigert zu scannen, ist die Ursache meist einer der vier ursprünglichen Fehler: ein Logo jenseits der Obergrenze, niedriger Kontrast, ein bedrängter Hintergrund oder ein gestrecktes Raster. Der <a href="/de/blog/why-is-my-qr-code-not-working/">Fehlerbehebungsleitfaden</a> geht sie durch, und der <a href="/de/blog/why-is-my-qr-code-blurry/">Leitfaden für unscharfe Codes</a> behandelt Auflösung.</p>
+
+<h2>Wo Logo-Codes sich lohnen</h2>
+
+<p>Ein Logo-Code ist die zusätzliche Sorgfalt wert, wo der Code selbst Teil der Markenfläche ist, nicht nur ein Hilfsmittel. Auf Verpackungen lässt das Zeichen im Code die ganze Packung wie ein Design lesen. Auf einer Visitenkarte verwandelt ein Logo-Code ein vergessliches Quadrat in ein wiedererkennbares, und die Karte wird aus nächster Nähe gescannt, wo ein Logo-Code am nachsichtigsten ist. Auf Events ist ein Logo-Code auf einem Badge oder Plakat von der anderen Raumseite aus wiedererkennbar, was zählt, wenn zehn Aussteller alle schlichte schwarze Quadrate haben. Auf Speisekarten beruhigt das Logo Gäste, dass der Code zum Restaurant gehört.</p>
+
+<p>Bei Stapel-Nutzung zahlt sich Konsistenz aus. Eine Produktlinie mit zwanzig Varianten sollte auf jedem Code dasselbe Zeichen, dieselben Farben und dieselbe Ruhezone tragen – einmal über den Stapel angewendet statt pro Artikel neu gebaut. Wenn sich das Ziel hinter diesen Codes je ändern muss, hält ein dynamischer Code das gedruckte Stück gültig: Sein Ziel ist nach dem Druck änderbar, und er trägt Scan-Statistiken. Statische Codes brauchen dagegen keine Anmeldung, tragen kein Wasserzeichen und laufen nie ab – die richtige Wahl, wenn das Ziel feststeht, etwa eine Homepage oder ein Produkthandbuch.</p>
+
+<h2>Der ehrliche Vergleich: Logo-Code vs. schlichter Code</h2>
+
+<p>Ein schlichter Code ist in jeder Hinsicht nachsichtiger als ein Logo-Code: Er verträgt kleineren Druck, niedrigeren Kontrast, dichtere Daten und rauere Flächen, weil kein Teil seines Musters absichtlich versteckt ist. Ein Logo-Code tauscht einen Teil dieser Nachsicht gegen Wiedererkennbarkeit. Dieser Handel lohnt sich, wenn der Code eine Markenfläche ist und der Druck kontrolliert wird – Verpackungen, Karten, Plakate, Speisekarten. Er ist in vier Situationen ein schlechter Handel:</p>
+
+<ul>
+<li><strong>Winziger Druck.</strong> Auf einem 2-cm-Code lässt ein Logo sehr wenig Muster übrig, und jedes Modul ist schon klein. Entweder größer drucken oder das Logo weglassen.</li>
+<li><strong>Dichte Daten.</strong> Eine lange URL oder eine vollständige vCard ergibt schon ein dichtes Raster. Ein Logo obendrauf ist zwei Engpässe auf einmal – zuerst den Inhalt kürzen.</li>
+<li><strong>Raue Umgebungen.</strong> Outdoor-Beschilderung und Werkstatt-Etiketten brauchen ihr volles Fehlerkorrektur-Budget zum Überleben, nicht zur Deko.</li>
+<li><strong>Unkontrollierte Reproduktion.</strong> Wenn ein Code fotokopiert, gefaxt, von einem Partner verkleinert oder von jemand anderem in einer Größe neu gedruckt wird, die du nicht gewählt hast, überlebt ein schlichter Code die Reise besser.</li>
+</ul>
+
+<p>Es gibt auch ein Marken-Konsistenz-Argument gegen Überdesign: ein vereinfachtes Zeichen, eine Farbpaarung, eine Ruhezonen-Regel, über die ganze Auflage wiederholt, liest sich als System. Eine andere Logo-Behandlung auf jedem Code liest sich als Rauschen, und Rauschen ist genau das, womit ein Scanner kämpft.</p>
+
+<h2>Markenkonsistenz über eine ganze Auflage</h2>
+
+<p>Entscheide das System einmal und wiederhole es dann: dasselbe vereinfachte quadratische Zeichen, dieselbe Dunkel-auf-Hell-Paarung, auch wenn die umgebende Verpackung ihre Farbe ändert, dieselbe Ruhezone und Mindestdruckgröße, auf jeder Fläche. Wenn ein Code sowohl auf einer Karte als auch auf einem Plakat erscheint, ist die Plakatversion keine gestreckte Kartenversion; es ist derselbe Code, der in der Plakatgröße generiert wurde, mit demselben Logo-Anteil. Generiere viele Codes als Stapel mit dem Logo, das über alle angewendet wird, und prüfe dann einen Proof-Scan von jedem Flächentyp, bevor du dich auf die Auflage festlegst. FreeQrlys Stapelmodus und API decken diesen Ablauf ab, mit unbegrenzten Scans auf jedem Code.</p>
+
+<p>Probier es aus: <a href="/de/qr-code-with-logo/">Erstelle einen QR-Code mit deinem Logo</a> – kostenlos, keine Anmeldung für statische Codes, kein Wasserzeichen. Starte mit dem Zeichen bei etwa einem Fünftel des Codes, drucke einen Proof, scanne ihn auf zwei Handys und entscheide erst dann, ob das Logo mehr Raum verdient. Für Größen hat der <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Leitfaden</a> die vollständige Tabelle, von Visitenkarten bis zu Plakatwänden.</p>
     </div>
 
     <section class="sources">
       <h2>Quellen</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> – Die QR-Code-Symbologiespezifikation. Definiert die vier Fehlerkorrekturstufen (L 7 %, M 15 %, Q 25 %, H 30 %) und die 4-Module-Ruhezone.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> – Die Spezifikation der QR-Code-Symbologie, veröffentlicht 2024-08 (Ausgabe 4). Belegt die vier Fehlerkorrekturstufen (L 7 %, M 15 %, Q 25 %, H 30 %) und die Ruhezone von 4 Modulen.</li>
+      <li><a href="https://pretty-qr.com/blog/qr-design-best-practices">Pretty QR — QR Code Design Rules: 10 Rules for Beautiful Codes That Still Scan</a> – Kein Veröffentlichungsdatum auf der Seite angegeben; abgerufen am 2026-11-03. Belegt die 20–25-%-Logoflächen-Empfehlung, den 4,5:1-Kontrast-Ausgangspunkt, intakte Suchmuster und das Testen auf echten Handys.</li>
+      <li><a href="https://www.qrcodebarn.com/blog/qr-code-size-guide.html">QRCodeBarn — QR Code Size Guide: How to Resize a QR Code Properly</a> – Veröffentlicht am 13. Oktober 2026. Belegt das praktische Minimum von 2 cm, die Distanz-÷-10-Faustregel, die Ruhezone von 4 Modulen und das Beispiel 29 × 29 (Stufe M) zu 37 × 37 (Stufe H) für eine 40-Zeichen-Adresse.</li>
+      <li><a href="https://www.notraqr.com/qr-codes-technical.html">NoTraQR — QR Code Technical Guide: Error Correction, File Formats and Barcode Comparison</a> – Kein Veröffentlichungsdatum auf der Seite angegeben; abgerufen am 2026-11-03. Belegt die Fehlerkorrektur-Tabelle (L 7 %, M 15 %, Q 25 %, H 30 %), Stufe H für Logo-Überlagerungen und die 2-cm-/3-cm-Faustregeln.</li>
       </ul>
     </section>
     <div class="cta-card">
@@ -177,17 +296,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Weiterlesen</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/de/blog/static-vs-dynamic-qr-codes/"><b>Static vs Dynamische QR-Codes: Free Forever or a Subscription?</b></a>
-        <a class="rel-card" href="/de/blog/why-is-my-qr-code-not-working/"><b>QR-Code funktioniert nicht? 7 Fixes, die helfen</b></a>
-        <a class="rel-card" href="/de/blog/qr-codes-for-restaurants/"><b>QR-Codes für Restaurants — Kostenlose Anleitung</b></a>
+        <a class="rel-card" href="/de/blog/do-qr-codes-expire/"><b>Laufen QR-Codes ab? Nein – aber bezahlte können sterben</b></a>
+        <a class="rel-card" href="/de/blog/how-to-scan-a-qr-code/"><b>So scannst du einen QR-Code (iPhone & Android)</b></a>
+        <a class="rel-card" href="/de/blog/qr-code-print-size-guide/"><b>QR-Code-Druckgrößen-Leitfaden: Von Visitenkarten bis zu Plakaten</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Gut zu wissen</h2>
-    <details><summary><span>Macht mein Logo den QR-Code kaputt?</span></summary><p>Nein, solange es unter ~30 % der Codefläche bleibt. Die Fehlerkorrektur wird beim Hinzufügen eines Logos automatisch erhöht, sodass die verdeckte Mitte den Scan nicht stoppt.</p></details>
-    <details><summary><span>Welche Logodatei funktioniert am besten?</span></summary><p>Ein quadratisches PNG mit Transparenz. Rechteckige Logos und Logos mit weißem Kasten verschwenden Platz und stören das Muster.</p></details>
+    <details><summary><span>Macht mein Logo den QR-Code kaputt?</span></summary><p>Nicht, wenn es unter etwa 30 % der Codefläche bleibt, was die Obergrenze ist, die der Generator nutzt, und näher bei 20–25 %, wenn du einen Sicherheitsabstand willst. Die Fehlerkorrektur wird automatisch erhöht, wenn ein Logo hinzugefügt wird, die verdeckte Mitte stoppt den Scan also nicht.</p></details>
+    <details><summary><span>Welche Logodatei funktioniert am besten?</span></summary><p>Ein quadratisches PNG mit transparentem Hintergrund. Rechteckige Logos und Logos in weißer Box verschwenden Platz und kämpfen gegen das Muster. Vereinfache das Zeichen zuerst: Feine Schrift und Slogans verschwinden bei Code-Mitten-Größe.</p></details>
     <details><summary><span>Kann ich ein Logo bei jedem QR-Code-Typ verwenden?</span></summary><p>Ja – Link, vCard, WLAN und jeder andere Typ. Dasselbe Logo lässt sich auch auf einen ganzen Batch anwenden.</p></details>
     <details><summary><span>PNG oder SVG für den Druck?</span></summary><p>PNG bis 2048 px für die meisten Druckaufträge oder SVG, wenn du es unendlich skalierbar brauchst, etwa für ein Banner.</p></details>
+    <details><summary><span>Warum muss das Logo in der Mitte bleiben?</span></summary><p>Die Mitte enthält keine Positionsdaten, sie ist also der sicherste Ort zum Verdecken, und Zentrieren hält das Zeichen fern von den drei Suchmustern in den Ecken. Schon ein verdecktes Suchmuster kann einen Scan vollständig stoppen.</p></details>
+    <details><summary><span>Wie groß sollte ein Logo-Code im Druck sein?</span></summary><p>Mindestens 3 × 3 cm, statt der 2 × 2 cm, mit denen ein schlichter Code auskommt, und größer, wenn der Code viele Daten trägt oder bei schlechtem Licht gescannt wird. Der Druckgrößen-Leitfaden hat die vollständige Tabelle.</p></details>
+    <details><summary><span>Wie sollte ich einen Logo-Code vor dem Druck testen?</span></summary><p>Scanne das gedruckte Stück, in endgültiger Größe und auf endgültigem Material, mit mindestens zwei Handys – einem iPhone, einem Android-Gerät –, aus echter Distanz und bei echtem Licht. Behandle Zögern als Versagen: Logo verkleinern, Kontrast erhöhen oder größer drucken und erneut testen.</p></details>
+    <details><summary><span>Wann sollte ich das Logo weglassen?</span></summary><p>Bei winzigem Druck, bei sehr dichten Codes, auf Flächen, die zerkratzt oder bewettert werden, oder wenn der Code in einer Größe reproduziert wird, die du nicht gewählt hast. In diesen Fällen ist ein schlichter Code nachsichtiger.</p></details>
     </section>
   </article>
   <footer>

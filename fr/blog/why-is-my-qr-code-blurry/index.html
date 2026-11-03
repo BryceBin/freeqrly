@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Pourquoi mon QR code est-il flou ? 5 solutions qui marchent | FreeQrly","description":"Un QR code flou qui ne se scanne pas ? 5 causes habituelles — export basse résolution, mauvaise taille, compression JPEG, étirement, mauvaise impression — et comment corriger chacune.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Pourquoi mon QR code est-il flou ? 5 solutions qui marchent | FreeQrly","description":"Un QR code flou qui ne se scanne pas ? 5 causes habituelles — export basse résolution, mauvaise taille, compression JPEG, étirement, mauvaise impression — et comment corriger chacune.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "Pourquoi mon QR code semble flou mais se scanne quand même ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les téléphones sont indulgents — la correction d'erreur récupère une quantité surprenante de flou. Mais un code qui se scanne dans votre bureau lumineux peut échouer en faible lumière ou à bout de bras. Net, c'est sûr ; à peine scannable, ça ne l'est pas."
+        "text": "Les téléphones pardonnent — la correction d'erreur reconstruit les mots de code revenus faux ou illisibles. Mais un code qui scanne dans un bureau lumineux peut échouer dans une lumière faible ou à bout de bras. Net, c'est sûr ; à peine scannable, non."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "Quelle résolution pour une affiche ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PNG 2048 px minimum, ou SVG. Une affiche vue à 2 mètres demande bien plus de pixels qu'une carte de visite vue à 30 cm — voir le guide des tailles d'impression pour la règle de distance."
+        "text": "Le SVG est le meilleur choix, parce qu'il s'étend sans limite. Si l'imprimeur a besoin d'un fichier tramé, utilisez le PNG à 2048 px ; une affiche à 20 cm exige environ 2 360 px à 300 pixels par pouce, donc un export de 512 px semblera flou à cette taille."
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "PNG ou SVG pour l'impression ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SVG dès que l'imprimeur ou le designer l'accepte — il s'étend à l'infini sans aucun flou. PNG à 1024–2048 px en solution de repli pour l'impression de bureau et les apps qui n'acceptent pas SVG."
+        "text": "SVG dès que l'imprimeur ou le graphiste l'accepte — il s'étend à l'infini sans aucun flou. Le PNG à 1024 px pour les cartes et dépliants, ou 2048 px pour les affiches, est le repli pour l'impression de bureau et les applications qui n'acceptent pas le SVG."
       }
     },
     {
@@ -83,7 +88,23 @@
       "name": "Puis-je corriger un code imprimé flou sans réimprimer ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Non. Le flou est cuit dans l'image imprimée. Réimprimez depuis un export en plus haute résolution (ou SVG). Modifier un code dynamique n'aidera pas — le motif sur papier est ce qu'il est."
+        "text": "Non. Le flou est cuit dans l'image imprimée. Réimprimez depuis un export en plus haute résolution (ou SVG). Modifier un code dynamique n'aidera pas — le motif sur papier est ce qu'il est, même si un code dynamique permet de changer la destination derrière un nouveau tirage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi le même export semble-t-il net à l'écran mais flou à l'impression ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un écran montre le code petit, donc ses pixels semblent serrés. Le papier montre le code à sa vraie taille, donc le même nombre de pixels étalé sur des centimètres révèle le flou. Vérifiez l'export par rapport à la taille d'impression avant d'envoyer à l'impression."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Un agrandissement ou un filtre d'accentuation corrigera-t-il un code flou ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. L'agrandissement interpole entre les pixels que vous avez déjà, donc les bords restent flous, seulement plus grands. Un filtre d'accentuation peut ajouter des halos qui perturbent un appareil photo, et convertir un JPEG en PNG n'annule pas les dégâts du JPEG. La seule réparation fiable est un nouvel export depuis les données d'origine en plus haute résolution, ou en SVG."
       }
     }
   ]
@@ -93,23 +114,38 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"Pourquoi mon QR code est-il flou ? 5 solutions qui marchent | FreeQrly","description":"Un QR code flou qui ne se scanne pas ? 5 causes habituelles — export basse résolution, mauvaise taille, compression JPEG, étirement, mauvaise impression — et comment corriger chacune.","step":[
     {
       "@type": "HowToStep",
+      "name": "Retrouver le fichier d'origine",
+      "text": "Si vous n'avez qu'un JPEG, une capture d'écran, ou une image transférée par conversation, arrêtez-vous et régénérez — aucune retouche ne restaure un détail que la compression a déjà jeté."
+    },
+    {
+      "@type": "HowToStep",
       "name": "Exportez à la bonne taille",
-      "text": "PNG à 1024 px pour cartes et flyers, 2048 px pour affiches. SVG dès que l'imprimeur l'accepte."
+      "text": "PNG à 1024 px pour les cartes et dépliants, 2048 px pour les affiches, SVG dès que l'imprimeur ou le graphiste l'accepte. Au-delà d'environ 20 cm, le SVG est le seul format qui garde les bords exacts sans un fichier énorme."
     },
     {
       "@type": "HowToStep",
       "name": "PNG ou SVG, jamais JPEG",
-      "text": "Le JPEG bave les bords nets dont un QR code est fait. PNG pour écrans et impression de bureau, SVG pour l'impression professionnelle."
+      "text": "PNG pour les écrans et l'impression de bureau, SVG pour l'impression professionnelle. Si un outil exige le JPEG, utilisez son réglage de qualité la plus haute pour un aperçu écran seulement, jamais comme original d'impression."
     },
     {
       "@type": "HowToStep",
       "name": "Gardez les proportions en redimensionnant",
-      "text": "Maintenez Maj ou l'icône de cadenas pour que les carrés restent carrés. Ne tirez jamais un coin à main levée."
+      "text": "Maintenez Maj ou l'icône de cadenas pour que les carrés restent carrés. Placez l'image à la taille finale, plutôt que de la placer petite et de l'étirer ensuite."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Garder le code foncé sur clair, avec une marge nette",
+      "text": "Le flou et le faible contraste se cumulent. Gardez une marge blanche d'au moins 4 modules de large de chaque côté, comme spécifié dans ISO/IEC 18004, et gardez texte, logos et bordures décoratives hors de cette marge."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Adapter papier et imprimante au travail",
+      "text": "Papier lisse ou couché et imprimante laser pour les petits codes ; fini mat là où les reflets sont un risque ; taille plus grande et correction d'erreur plus élevée pour les surfaces rugueuses ou texturées."
     },
     {
       "@type": "HowToStep",
       "name": "Testez l'impression réelle",
-      "text": "Imprimez un exemplaire à taille finale, reculez à la distance réelle de lecture, scannez avec votre téléphone. Un scan du premier coup signifie que le lot est bon."
+      "text": "Imprimez un exemplaire à la taille finale, reculez à la vraie distance de lecture, et scannez-le dans la vraie lumière. Un scan du premier coup veut dire que le lot est sûr. S'il hésite, corrigez l'export ou la taille maintenant."
     }
   ]}
 </script>
@@ -125,31 +161,76 @@
     <div class="kicker" style="text-align:center">Notes de terrain</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Pourquoi mon QR code est-il <span class='hl hl-blush'>flou</span> ?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un QR code flou est presque toujours un problème de résolution : trop peu de pixels étirés sur trop d'espace. La solution : exporter plus grand — ou en SVG.</p>
-    <p class="meta" style="text-align:center">17 octobre 2026 · 4 min de lecture</p>
+    <p class="meta" style="text-align:center">17 octobre 2026 · Dernière mise à jour : 3 novembre 2026 · 15 min de lecture</p>
     <div class="prose" style="margin-top:40px">
-
-<p>Un QR code semble net à l'écran et devient de la bouillie sur papier. La cause est presque toujours la même : l'image n'avait pas assez de pixels pour la taille à laquelle elle a été imprimée. Un QR code est une grille de minuscules carrés — quand il n'y a pas assez de pixels, les bords bavent, les téléphones ne trouvent plus la grille, et les scans échouent.</p>
-
-<h2>Les 5 causes habituelles</h2>
+<p>Un QR code flou est presque toujours un problème de résolution : trop peu de pixels étirés sur trop d'espace. Le correctif est d'exporter plus grand — ou en SVG. Si le code semblait net à l'écran et s'est transformé en bouillie sur papier, l'image n'avait pas assez de pixels pour la taille à laquelle elle a été imprimée. Un QR code est une grille de petits carrés appelés modules ; quand il n'y a pas assez de pixels, leurs bords se brouillent les uns dans les autres, les téléphones ne trouvent plus la grille, et les scans échouent. Commencez par l'export, pas par un nouveau design : régénérez en plus haute résolution ou en fichier vectoriel, réimprimez un exemplaire à la vraie taille, et scannez-le à la vraie distance de lecture avant d'imprimer le lot.</p>
+<p>Cette réponse couvre la plupart des cas, mais le flou a plus d'une cause, chacune avec un correctif différent : un petit export, la compression JPEG, l'étirement, l'imprimante ou le papier, ou une copie d'une copie. Les sections ci-dessous séparent ces causes, donnent un tableau de chiffres pour l'imprimeur, parcourent le correctif dans l'ordre, et traitent les codes qui semblent nets mais ne scannent toujours pas — ceux-là relèvent de <a href="/fr/blog/why-is-my-qr-code-not-working/">pourquoi votre QR code ne scanne pas</a>.</p>
+<h2>Ce que le flou fait réellement à un code</h2>
+<p>Un appareil photo de téléphone ne lit pas un QR code comme une personne lit une image. Il cherche les trois grands motifs carrés de repérage dans les coins, en déduit la grille, puis décide, module par module, si chaque petit carré est foncé ou clair. Le flou attaque exactement cette décision : quand des modules voisins bavent les uns dans les autres, l'appareil photo voit du gris là où il lui faut du noir ou du blanc, et il commence à deviner. Un peu de devinette est survivable, parce que les QR codes portent une correction d'erreur intégrée — des données supplémentaires qui permettent à un lecteur de reconstruire les mots de code revenus faux ou illisibles. Cette protection se mesure en mots de code, pas en surface visible : les quatre niveaux d'ISO/IEC 18004 restaurent environ 7 % des mots de code au niveau L, 15 % en M, 25 % en Q, et 30 % en H. Une tache sur un motif de repérage, ou un flou étalé sur tout le symbole, peut vaincre un lecteur bien avant que n'importe quel pourcentage net suggère qu'il devrait survivre. Traitez la correction d'erreur comme un filet de sécurité, jamais comme une permission d'imprimer un code flou.</p>
+<p>La densité aggrave le flou. Un lien court produit une grille aérée avec de grands modules ; un lien long, une carte de contact complète, ou un code Wi-Fi avec un long mot de passe produit une grille plus dense avec des modules plus petits, et les modules plus petits se brouillent plus tôt. C'est pourquoi le même export peut sembler correct pour une URL courte et échouer pour un code chargé en données à la même taille d'impression. Si un code est à la fois dense et imprimé petit, raccourcissez la destination quand vous pouvez, imprimez plus grand, ou les deux. Un code dynamique aide différemment : le motif imprimé encode un lien court que vous pouvez rediriger plus tard, donc la grille reste aérée même si la destination finale est longue. Pour une destination qui ne changera jamais, un code statique est plus simple : gratuit, pas de compte, pas de filigrane, et il n'expire pas.</p>
+<h2>Les chiffres : taille d'impression, pixels et format</h2>
+<p>Les imprimeurs parlent de résolution en points ou pixels par pouce. Pour l'impression vue de près, 300 pixels par pouce à la taille finale d'impression est la base professionnelle largement utilisée pour un rendu net. Le tableau ci-dessous transforme cette base en nombres de pixels : largeur d'impression en pouces multipliée par 300. Un code de 2 cm fait environ 0,8 pouce de large, il lui faut donc environ 240 pixels à 300 pixels par pouce — et c'est le strict minimum, pas une marge confortable. Exportez toujours plus grand que le minimum et laissez le graphiste réduire, parce que réduire préserve la netteté alors qu'agrandir ne fait qu'élargir le flou.</p>
+<div class="table-scroll"><table>
+<tr><th>Largeur d'impression</th><th>Pixels à 300 par pouce (minimum)</th><th>Export à envoyer</th></tr>
+<tr><td>2 cm (carte de visite)</td><td>~240 px</td><td>PNG à 1024 px, ou SVG</td></tr>
+<tr><td>3 cm (dépliant, menu)</td><td>~350 px</td><td>PNG à 1024 px, ou SVG</td></tr>
+<tr><td>5 cm (chevalet de table, étiquette)</td><td>~590 px</td><td>PNG à 1024 px, ou SVG</td></tr>
+<tr><td>10 cm (détail d'affiche)</td><td>~1,180 px</td><td>PNG à 2048 px, ou SVG</td></tr>
+<tr><td>20 cm (affiche)</td><td>~2,360 px</td><td>SVG ; PNG à 2048 px seulement en repli</td></tr>
+<tr><td>50 cm (grande affiche, signalétique)</td><td>~5,900 px</td><td>SVG</td></tr>
+</table></div>
+<p>Deux règles empiriques se cachent derrière ce tableau. D'abord, la taille d'impression en centimètres, multipliée par environ 100, donne une cible rapide en pixels — un code de 5 cm veut environ 500 pixels au minimum, un code de 10 cm environ 1 000. Ensuite, la règle empirique du 1:10 pour la distance du <a href="/fr/blog/qr-code-print-size-guide/">guide des tailles d'impression</a> : la largeur du code doit faire au moins un dixième de la distance de scan, donc un code scanné depuis 50 cm doit faire au moins 5 cm de large, et une affiche scannée depuis 5 mètres exige un code de 50 cm. Un code d'affiche vu à des mètres de distance peut tolérer une résolution effective plus faible qu'une carte tenue en main, mais il lui faut quand même assez de pixels pour sa taille — et seul un fichier vectoriel vous donne cela sans plafond.</p>
+<div class="table-scroll"><table>
+<tr><th>Format</th><th>Comment il se comporte</th><th>Utilisez-le pour</th></tr>
+<tr><td>SVG</td><td>Vectoriel : pas de pixels, s'étend sans limite, bords exacts</td><td>Impression professionnelle, grandes affiches, mises en page de graphiste</td></tr>
+<tr><td>PNG</td><td>Trame sans perte : chaque pixel préservé, aucun brouillage de compression</td><td>Impression de bureau, diapositives, applications qui n'acceptent pas le SVG</td></tr>
+<tr><td>JPEG</td><td>Avec pertes : écarte du détail et brouille les bords nets</td><td>Photographies seulement — jamais pour un QR code</td></tr>
+<tr><td>Capture d'écran ou image de conversation</td><td>Recompressée et souvent réduite par l'application d'envoi</td><td>Rien à l'impression — revenez à l'export d'origine</td></tr>
+</table></div>
+<h2>Les 5 causes habituelles, en détail</h2>
+<h3>1. Export basse résolution</h3>
+<p>C'est la cause la plus fréquente, et la plus indulgente à corriger. Un PNG de 512 px semble correct à 2 cm de large ; soufflé en affiche de 20 cm, chaque module devient une tache, parce que les mêmes 512 pixels couvrent maintenant dix fois la surface. L'écran cache le problème — un affichage montre le code petit, donc les pixels semblent serrés — tandis que le papier le montre à vraie taille. Le correctif est à la source : réexportez à 1024 px pour les cartes et dépliants, 2048 px pour les affiches, ou SVG dès que l'imprimeur l'accepte. Agrandir le petit fichier dans un éditeur n'ajoute pas de détail ; cela ne fait qu'agrandir le flou existant. Si l'export d'origine a disparu, régénérez depuis la même destination plutôt que d'étirer le fichier que vous avez.</p>
+<h3>2. Compression JPEG</h3>
+<p>Le JPEG est fait pour les photographies, et il fonctionne en écartant le détail que l'œil risque le moins de remarquer dans une photo. Ce compromis est mauvais pour un QR code, qui n'est que bords nets et zones plates — exactement les traits que le JPEG brouille. Un code enregistré en JPEG basse qualité peut échouer même à petite taille, et les dégâts empirent chaque fois que le fichier est réenregistré en JPEG. Le PNG utilise une compression sans perte, préservant chaque pixel exactement, et le SVG n'a pas de pixels à perdre. La règle est simple : PNG ou SVG seulement. Si un graphiste, une application de conversation ou une plateforme sociale vous rend une version JPEG, traitez-la comme un aperçu, pas comme un original d'impression, et remplacez-la par le PNG ou le SVG d'origine avant d'imprimer.</p>
+<h3>3. Étirement</h3>
+<p>Tirer un coin déforme la grille : les carrés deviennent des rectangles, l'espacement des modules change de façon inégale, et les lecteurs abandonnent. Cela arrive le plus souvent dans les diaporamas, les traitements de texte et les outils de mise en page, où une image est tirée pour combler un vide. Redimensionnez toujours proportionnellement — maintenez Maj, ou utilisez l'icône de cadenas, pour que largeur et hauteur changent ensemble et que les carrés restent carrés. Un code étiré puis ramené n'est pas automatiquement carré à nouveau, parce que l'arrondi dans l'outil de mise en page peut le laisser légèrement décalé. Dans le doute, supprimez l'image placée et placez un nouvel export à la taille prévue.</p>
+<h3>4. Mauvaise impression : imprimante, encre et papier</h3>
+<p>Les imprimantes basse résolution, le débordement d'encre sur papier rugueux ou absorbant, et les reflets du brillant adoucissent tous les bords. Un jet d'encre sur papier non couché et absorbant laisse l'encre se répandre dans les fibres, donc les fins écarts blancs entre modules se remplissent et le code semble gras et boueux. Une imprimante laser sur papier lisse ou couché tient les bords bien mieux, c'est pourquoi le papier mat et une imprimante laser battent un jet d'encre sur une serviette. Le pelliculage brillant est différent : le papier peut rester net tout en renvoyant des reflets vers l'appareil photo — inclinez le tirage sous la lumière pour distinguer les reflets du flou.</p>
+<h3>5. Copie d'une copie</h3>
+<p>Capturer un code depuis un message, puis capturer cette capture, perd de la résolution à chaque fois. Les applications de messagerie recompressent et réduisent aussi les images, donc un code transféré par conversation peut arriver bien plus petit et plus flou que l'export d'origine. Photographier un code imprimé pour le réutiliser ajoute une distorsion de perspective, une lumière inégale, et le flou de l'objectif par-dessus le tirage d'origine. Revenez toujours à l'export d'origine, ou régénérez depuis la même destination. Si la destination est un code dynamique, générez un code tout neuf pour le même lien court — pas besoin d'ancien fichier.</p>
+<h2>Comment corriger, pas à pas</h2>
 <ol>
-<li><b>Export basse résolution.</b> Un PNG de 512 px semble correct à 2 cm de large. Agrandi en affiche de 20 cm, chaque module devient une tache. Plus l'impression est grande, plus il faut de pixels.</li>
-<li><b>Compression JPEG.</b> Le JPEG bave les bords nets — exactement ce dont un QR code est fait. Un code enregistré en JPEG basse qualité peut échouer même en petit. PNG ou SVG uniquement.</li>
-<li><b>Étirement.</b> Tirer un coin de l'image déforme la grille : les carrés deviennent des rectangles, et les scanners abandonnent. Redimensionnez toujours proportionnellement.</li>
-<li><b>Mauvaise impression.</b> Imprimantes basse résolution, encre qui bave sur papier rugueux ou absorbant, et reflets brillants adoucissent tous les bords. Papier mat et imprimante laser battent un jet d'encre sur une serviette.</li>
-<li><b>Copie d'une copie.</b> Faire une capture d'écran d'un code reçu dans un message, puis une capture de cette capture, perd de la résolution à chaque fois. Revenez toujours à l'export d'origine.</li>
+<li><strong>Retrouvez le fichier d'origine.</strong> Si vous n'avez qu'un JPEG, une capture d'écran, ou une image transférée par conversation, arrêtez-vous et régénérez — aucune retouche ne restaure un détail que la compression a déjà jeté.</li>
+<li><strong>Exportez à la bonne taille.</strong> PNG à 1024 px pour les cartes et dépliants, 2048 px pour les affiches, SVG dès que l'imprimeur ou le graphiste l'accepte. Au-delà d'environ 20 cm, le SVG est le seul format qui garde les bords exacts sans un fichier énorme.</li>
+<li><strong>Utilisez PNG ou SVG, jamais JPEG.</strong> PNG pour les écrans et l'impression de bureau, SVG pour l'impression professionnelle. Si un outil exige le JPEG, utilisez son réglage de qualité la plus haute pour un aperçu écran seulement, jamais comme original d'impression.</li>
+<li><strong>Gardez les proportions en redimensionnant.</strong> Maintenez Maj ou l'icône de cadenas pour que les carrés restent carrés. Placez l'image à la taille finale, plutôt que de la placer petite et de l'étirer ensuite.</li>
+<li><strong>Gardez le code foncé sur clair, avec une marge nette.</strong> Flou et faible contraste se cumulent : un code gris sur fond pâle qui est aussi flou échoue plus tôt que l'une ou l'autre faute seule. Gardez une marge blanche d'au moins 4 modules de large de chaque côté, comme spécifié dans ISO/IEC 18004, et gardez texte, logos et bordures décoratives hors de cette marge.</li>
+<li><strong>Adaptez papier et imprimante au travail.</strong> Papier lisse ou couché et imprimante laser pour les petits codes ; fini mat là où les reflets sont un risque ; taille plus grande et correction d'erreur plus élevée pour les surfaces rugueuses ou texturées.</li>
+<li><strong>Testez le vrai tirage au scan.</strong> Imprimez un exemplaire à la taille finale, reculez à la vraie distance de lecture, et scannez-le dans la vraie lumière. Un scan du premier coup veut dire que le lot est sûr. S'il hésite, corrigez l'export ou la taille maintenant — un tirage de codes flous ne peut pas être sauvé après coup.</li>
 </ol>
-
-<h2>Comment corriger ça</h2>
-<ul>
-<li><strong>Exportez plus grand.</strong> PNG à 1024 px pour cartes et flyers, 2048 px pour affiches. Règle de base : la taille d'impression en cm, multipliée par ~100, donne les pixels qu'il vous faut.</li>
-<li><strong>Utilisez SVG pour l'impression.</strong> Le SVG est vectoriel — extensible à l'infini sans aucun flou. Utilisez-le dès que l'imprimeur ou le designer l'accepte.</li>
-<li><strong>Gardez les proportions.</strong> Maintenez Maj (ou l'icône de cadenas) en redimensionnant pour que les carrés restent carrés.</li>
-<li><strong>Testez à taille réelle.</strong> Imprimez un exemplaire à la taille réelle, reculez à la distance réelle de lecture, et scannez-le avec votre téléphone. S'il se lit du premier coup, le lot est bon.</li>
-</ul>
-
-<p>Toujours pas de scan après une réimpression nette ? Le problème est ailleurs — taille, contraste ou dégâts. <a href="/fr/blog/why-is-my-qr-code-not-working/">Le guide de dépannage complet</a> couvre ces cas. Pour la règle taille-distance, voir le <a href="/fr/blog/qr-code-print-size-guide/">guide des tailles d'impression</a>.</p>
-
+<h2>Scénarios : là où le flou mord le plus fort</h2>
+<h3>Dépliants, menus et chevalets de table</h3>
+<p>Ceux-ci sont scannés à bout de bras, souvent dans des pièces sombres, ils exigent donc à la fois netteté et taille : au moins 3 cm sur un dépliant ou un menu, 4–5 cm sur un chevalet de table en règle générale. Les menus ajoutent le risque du pelliculage : le brillant sous les plafonniers peut éblouir, tandis que le pelliculage mat garde le code lisible et s'essuie proprement. Pour un menu qui change, liez vers une page que vous contrôlez plutôt qu'une capture d'écran, pour que le tirage ne devienne jamais périmé — et un code dynamique permet de changer cette destination après impression, avec des statistiques de scan pour montrer quelles tables scannent réellement.</p>
+<h3>Affiches et signalétique</h3>
+<p>Les affiches échouent différemment : l'export est généralement le problème, pas l'imprimante. Un fichier de 512 px qui semblait correct à l'écran devient visiblement flou à 20 cm ou 50 cm, et aucune imprimante ne peut inventer les pixels manquants. Utilisez le SVG, appliquez la règle empirique du 1:10 pour la distance, et vérifiez le panneau de code en taille réelle avant le tirage.</p>
+<h3>Emballages et étiquettes</h3>
+<p>Les petites étiquettes combinent petite taille, données denses, et surfaces courbes ou texturées. Gardez le code à 2 cm ou plus en règle générale, évitez de l'enrouler autour d'une courbe serrée où les modules de bord s'étirent, et testez sur le contenant réel — un code qui scanne à plat peut échouer sur une bouteille. Si le matériau est rugueux ou l'impression grossière, imprimez plus grand et plus simple : un lien court garde la grille aérée, y compris un lien court derrière un code dynamique.</p>
+<h2>Comparaison honnête : ce qui corrige le flou, et ce qui ne le corrige pas</h2>
+<p>Toutes les astuces d'accentuation ne fonctionnent pas, et certains conseils populaires gaspillent un tirage. Agrandir un petit fichier — dans un éditeur, avec un outil d'agrandissement, ou en exportant la même petite image plus grande — n'ajoute pas de détail ; cela interpole entre les pixels que vous avez déjà, donc les bords restent flous, seulement plus grands. Un filtre d'accentuation peut rendre les bords plus nets à l'œil tout en ajoutant des halos qui perturbent un appareil photo, donc un code filtré peut scanner plus mal. Convertir un JPEG en PNG n'annule pas non plus les dégâts du JPEG : le format change, mais les pixels brouillés restent brouillés. La seule réparation fiable est un nouvel export depuis les données d'origine en plus haute résolution, ou en SVG.</p>
+<p>Le choix de format a ses propres compromis. Le SVG est le meilleur choix pour l'impression, mais certains outils de bureau, applications anciennes et plateformes sociales ne l'acceptent pas — dans ces cas un PNG haute résolution est le bon repli, pas une raison de retomber sur le JPEG. Le PDF peut être un bon support pour l'impression parce qu'il peut contenir le code vectoriel, mais seulement si le code dans le PDF est réellement vectoriel ; un PDF avec un petit JPEG collé dedans n'est qu'un JPEG avec un emballage plus chic, vérifiez donc ce qu'il y a dedans avant de faire confiance à l'extension du fichier.</p>
+<p>Enfin, la netteté est nécessaire mais pas suffisante. Un code parfaitement net peut encore échouer s'il est trop petit pour sa distance, si le contraste est faible, si la zone de silence est encombrée, si un logo recouvre trop le centre, ou si la destination elle-même est morte. Ce sont des questions de diagnostic, traitées dans l'ordre dans <a href="/fr/blog/why-is-my-qr-code-not-working/">le guide complet de dépannage</a>. Si votre réimpression est nette et ne scanne toujours pas, parcourez ce guide avant de réimprimer à nouveau — une deuxième réimpression n'aide que si elle change la chose qui est réellement fausse.</p>
+<p>Faites en sorte que le prochain code soit net dès le départ : générez-le dans le <a href="/fr/#studio">générateur gratuit</a>, choisissez parmi 17 types, et exportez en PNG jusqu'à 2048 px ou en SVG infiniment extensible — gratuit pour les codes statiques, sans inscription, sans filigrane et sans expiration. Pour les tailles par cas d'usage, voir le <a href="/fr/blog/qr-code-print-size-guide/">guide des tailles d'impression</a>, et pour un code avec logo, voir <a href="/fr/blog/add-logo-to-qr-code/">comment ajouter un logo à un QR code</a>.</p>
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - La spécification de la symbologie QR Code. La page ISO indique la 4ᵉ édition, publiée en 2024-08 (page récupérée le 2026-11-03). À l'appui des quatre niveaux de correction d'erreur (L 7 %, M 15 %, Q 25 %, H 30 % des mots de code) et de la zone de silence de 4 modules, tels que définis dans la norme.</li>
+      <li><a href="https://www.4over4.com/guide/understanding-image-resolution-dpi-in-print-vs-web-part2">4OVER4 : réglages d'export pour l'impression contre le web, tailles et DPI</a> - À l'appui du 300 DPI comme norme d'impression professionnelle pour les articles vus de près (cartes de visite, cartes postales, brochures, dépliants) et d'une résolution effective plus faible pour les grands formats vus de loin. Aucune date de publication explicite sur la page ; consultée le 2026-11-03.</li>
+      <li><a href="https://dev.to/bitran/image-formats-explained-jpg-vs-png-vs-webp-vs-avif-2hm7">Formats d'image expliqués : JPG contre PNG contre WebP contre AVIF</a> - À l'appui du JPEG comme compression avec pertes qui brouille les bords nets et se dégrade davantage à chaque réenregistrement, contre le PNG comme compression sans perte qui préserve chaque pixel exactement. Aucune date de publication explicite sur la page ; consultée le 2026-11-03.</li>
+      <li><a href="https://qrlynx.com/blog/iso-iec-18004-qr-code-standard-explained">ISO/IEC 18004:2024 expliquée (QRLynx)</a> - Relue en juillet 2026 par rapport à ISO et DENSO WAVE. À l'appui de la lecture en mots de code des pourcentages de correction d'erreur (7 % / 15 % / 25 % / 30 % du total des mots de code, pas une tolérance garantie de surface visible) et de la zone de silence de quatre modules spécifiée par DENSO WAVE.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly présentant un QR code"></div>
       <div>
@@ -161,17 +242,19 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Continuer la lecture</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/fr/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
+        <a class="rel-card" href="/fr/blog/get-google-reviews-with-qr-code/"><b>Comment obtenir plus d'avis Google avec un QR code</b></a>
         <a class="rel-card" href="/fr/blog/bulk-qr-codes/"><b>Codes QR en masse : générez des dizaines de codes d'un coup, gratuitement</b></a>
-        <a class="rel-card" href="/fr/blog/do-qr-codes-expire/"><b>Do QR Codes Expire? No — But Paid Ones Can Die</b></a>
+        <a class="rel-card" href="/fr/blog/qr-code-troubleshooting-guide/"><b>Guide de dépannage des QR codes : trouver et corriger toute panne de scan</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bon à savoir</h2>
-    <details><summary><span>Pourquoi mon QR code semble flou mais se scanne quand même ?</span></summary><p>Les téléphones sont indulgents — la correction d'erreur récupère une quantité surprenante de flou. Mais un code qui se scanne dans votre bureau lumineux peut échouer en faible lumière ou à bout de bras. Net, c'est sûr ; à peine scannable, ça ne l'est pas.</p></details>
-    <details><summary><span>Quelle résolution pour une affiche ?</span></summary><p>PNG 2048 px minimum, ou SVG. Une affiche vue à 2 mètres demande bien plus de pixels qu'une carte de visite vue à 30 cm — voir le guide des tailles d'impression pour la règle de distance.</p></details>
-    <details><summary><span>PNG ou SVG pour l'impression ?</span></summary><p>SVG dès que l'imprimeur ou le designer l'accepte — il s'étend à l'infini sans aucun flou. PNG à 1024–2048 px en solution de repli pour l'impression de bureau et les apps qui n'acceptent pas SVG.</p></details>
-    <details><summary><span>Puis-je corriger un code imprimé flou sans réimprimer ?</span></summary><p>Non. Le flou est cuit dans l'image imprimée. Réimprimez depuis un export en plus haute résolution (ou SVG). Modifier un code dynamique n'aidera pas — le motif sur papier est ce qu'il est.</p></details>
+    <details><summary><span>Pourquoi mon QR code semble flou mais se scanne quand même ?</span></summary><p>Les téléphones pardonnent — la correction d'erreur reconstruit les mots de code revenus faux ou illisibles. Mais un code qui scanne dans un bureau lumineux peut échouer dans une lumière faible ou à bout de bras. Net, c'est sûr ; à peine scannable, non.</p></details>
+    <details><summary><span>Quelle résolution pour une affiche ?</span></summary><p>Le SVG est le meilleur choix, parce qu'il s'étend sans limite. Si l'imprimeur a besoin d'un fichier tramé, utilisez le PNG à 2048 px ; une affiche à 20 cm exige environ 2 360 px à 300 pixels par pouce, donc un export de 512 px semblera flou à cette taille.</p></details>
+    <details><summary><span>PNG ou SVG pour l'impression ?</span></summary><p>SVG dès que l'imprimeur ou le graphiste l'accepte — il s'étend à l'infini sans aucun flou. Le PNG à 1024 px pour les cartes et dépliants, ou 2048 px pour les affiches, est le repli pour l'impression de bureau et les applications qui n'acceptent pas le SVG.</p></details>
+    <details><summary><span>Puis-je corriger un code imprimé flou sans réimprimer ?</span></summary><p>Non. Le flou est cuit dans l'image imprimée. Réimprimez depuis un export en plus haute résolution (ou SVG). Modifier un code dynamique n'aidera pas — le motif sur papier est ce qu'il est, même si un code dynamique permet de changer la destination derrière un nouveau tirage.</p></details>
+    <details><summary><span>Pourquoi le même export semble-t-il net à l'écran mais flou à l'impression ?</span></summary><p>Un écran montre le code petit, donc ses pixels semblent serrés. Le papier montre le code à sa vraie taille, donc le même nombre de pixels étalé sur des centimètres révèle le flou. Vérifiez l'export par rapport à la taille d'impression avant d'envoyer à l'impression.</p></details>
+    <details><summary><span>Un agrandissement ou un filtre d'accentuation corrigera-t-il un code flou ?</span></summary><p>Non. L'agrandissement interpole entre les pixels que vous avez déjà, donc les bords restent flous, seulement plus grands. Un filtre d'accentuation peut ajouter des halos qui perturbent un appareil photo, et convertir un JPEG en PNG n'annule pas les dégâts du JPEG. La seule réparation fiable est un nouvel export depuis les données d'origine en plus haute résolution, ou en SVG.</p></details>
     </section>
   </article>
   <footer>

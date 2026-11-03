@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR-Code-Fehlerbehebungsleitfaden: Jeden Scan-Fehler finden und beheben | FreeQrly</title>
+<meta name="description" content="QR-Code scannt nicht? Ein Hub für alle elf Ursachen – Größe, Unschärfe, Kontrast, Ruhezone, Logo, Schaden, tote Links, Licht und Kamera – mit der Lösung für jede.">
+<link rel="canonical" href="https://freeqrly.com/de/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-troubleshooting-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QR-Code-Fehlerbehebungsleitfaden: Jeden Scan-Fehler finden und beheben | FreeQrly">
+<meta property="og:description" content="QR-Code scannt nicht? Ein Hub für alle elf Ursachen – Größe, Unschärfe, Kontrast, Ruhezone, Logo, Schaden, tote Links, Licht und Kamera – mit der Lösung für jede.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/de/blog/qr-code-troubleshooting-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QR-Code-Fehlerbehebungsleitfaden: Jeden Scan-Fehler finden und beheben | FreeQrly","description":"QR-Code scannt nicht? Ein Hub für alle elf Ursachen – Größe, Unschärfe, Kontrast, Ruhezone, Logo, Schaden, tote Links, Licht und Kamera – mit der Lösung für jede.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Warum scannt mein QR-Code auf einem Handy, aber nicht auf einem anderen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dann sind Code und Link beide in Ordnung – das versagende Handy ist das Problem. Wische seine Linse ab, erlaube Kamera-Zugriff, halte ruhig mit dem ganzen Code im Bild und versuch es bei besserem Licht. Wenn er auf diesem Handy allein weiterhin versagt, nutze den eingebauten Kamera-Weg statt einer Scanner-App von Dritten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein QR-Code scannt manchmal, aber nicht immer – ist er in Ordnung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Ein Manchmal-Code ist ein grenzwertiger Code: Er besteht an deinem Schreibtisch und versagt in den Händen eines Kunden. Behandle ihn als kaputt und behebe die zugrundeliegende Ursache – meist Größe, Kontrast, Blendung oder eine bedrängte Ruhezone –, statt auf gutes Licht zu hoffen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie groß sollte ein gedruckter QR-Code sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Als Faustregel mindestens 2 × 2 cm und mindestens ein Zehntel der erwarteten Scandistanz: Eine Tischkarte, die aus 50 cm gescannt wird, braucht einen Code von etwa 5 cm Breite, und ein Plakat, das aus 5 Metern gescannt wird, braucht einen von etwa 50 cm Breite. Dichte Codes mit langen Links brauchen mehr Raum als kurze Links."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viel von einem QR-Code kann ein Logo verdecken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Halte es klein. Nutze die höchste Fehlerkorrekturstufe, drucke größer als für einen schlichten Code und verdecke nie die drei großen Eckquadrate, die der Scanner braucht, um das Muster zu orientieren. Als Faustregel schlägt der Druckgrößen-Leitfaden unter etwa 30 % der Codefläche vor – und test-scanne den fertigen Code immer auf zwei Handys vor dem Druck."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein Code scannt, aber die Seite ist weg – ist der Code kaputt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Das Muster hat perfekt decodiert; das Ziel ist gescheitert. Eine Seite, die umgezogen oder gelöscht wurde, eine vertippte Adresse oder ein dynamischer Code, dessen Konto oder Redirect abgeschaltet wurde, sehen alle so aus. Wenn du die Seite oder den dynamischen Redirect kontrollierst, stelle sie wieder her oder leite sie um – kein Neudruck nötig. Ein statischer Code lässt sich nicht umleiten; nur die Seite dahinter kann wiederhergestellt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich eine Scanner-App, um meinen Code zu testen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Auf dem iPhone nutze die Kamera-App oder den Code-Scanner im Kontrollzentrum; auf Android nutze die eingebaute Kamera oder Lens. Für einen Code, der schon auf dem eigenen Bildschirm des Handys ist – in einem Foto oder Screenshot –, decodiere stattdessen die Bilddatei, statt die Kamera auf das eigene Display zu richten."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/error.webp" alt="Qly, das FreeQrly-Elefantenmaskottchen"></div>
+    <div class="kicker" style="text-align:center">Feldnotizen</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QR-Code-<span class='hl hl-mint'>Fehlerbehebung</span>, von Anfang bis Ende</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Scannt nicht, scannt manchmal oder scannt ins Nichts? Finde deinen Fehler in der Tabelle, folge seiner Lösung und teste erneut – die meisten Codes werden ohne Neudruck repariert.</p>
+    <p class="meta" style="text-align:center">3. November 2026 · 15 Min. Lesezeit</p>
+    <div class="prose" style="margin-top:40px">
+<p>Ein QR-Code, der nicht scannt, ist selten ein Rätsel. Die meisten Fehler laufen auf eine von elf Ursachen hinaus, und sie teilen sich in drei Fragen auf: Ist das Muster unlesbar, kämpft das Handy, oder hat der Code einwandfrei gescannt und das Ziel hat dich im Stich gelassen? Beantworte diese zuerst, und du wirst weder einen einwandfreien Code neu drucken noch ein Muster reparieren, wenn der Link tot ist.</p>
+
+<h2>Prüfe zuerst diese drei</h2>
+<ol>
+<li><strong>Versuch ein zweites Handy.</strong> Wenn ein anderes Handy den Code liest, ist das Muster in Ordnung. Spring unten zu den Handy-Prüfungen.</li>
+<li><strong>Schau auf den Code, nicht auf den Bildschirm.</strong> Ist er klein, blass, von nahem Text bedrängt, von einem Logo verdeckt, zerkratzt oder verblasst? Jeder einzelne davon kann ein Muster unlesbar machen. Versuch auch eine frische Kopie der Originaldatei: Wenn die frische Kopie scannt, ist der Originaldruck gescheitert, nicht die Daten.</li>
+<li><strong>Lies, was der Scan zurückgibt.</strong> Wenn das Handy den Code erkennt, die Seite aber nie lädt oder irgendwo Unerwartetem landet, hat das Muster seine Arbeit getan. Das Ziel ist das Problem: eine gelöschte Seite, ein vertippter Link oder ein abgeschalteter dynamischer Code.</li>
+</ol>
+<p>Eine Unterscheidung zählt durchgehend: Ein Code, der <em>nie</em> scannt, hat ein Muster- oder Kamera-Problem, während ein Code, der <em>manchmal</em> scannt – bei hellem Licht, aber nicht bei schwachem Licht, aus der Nähe, aber nicht aus Armlänge –, ein grenzwertiger Code ist. Grenzwerte Codes bestehen an deinem Schreibtisch und versagen in den Händen eines Kunden: Behandle einen Manchmal-Code als kaputt.</p>
+
+<h2>Die Ursachentabelle: jeder häufige Fehler auf einen Blick</h2>
+<div class="table-scroll"><table>
+<tr><th>Ursache</th><th>Symptom</th><th>Schnelltest</th><th>Lösung</th><th>Vertiefung</th></tr>
+<tr><td><strong>Zu klein</strong></td><td>Scannt nur aus nächster Nähe</td><td>Scannt aus der Nähe? Größe ist der Fehler</td><td>Größer drucken</td><td><a href="/de/blog/qr-code-print-size-guide/">Größen-Leitfaden</a></td></tr>
+<tr><td><strong>Unscharf / niedrige Auflösung</strong></td><td>Weiche Kanten, verschmierte Quadrate</td><td>Weich in der Datei? Schlechter Export</td><td>Als PNG oder SVG neu exportieren</td><td><a href="/de/blog/why-is-my-qr-code-blurry/">Unschärfe-Lösungen</a></td></tr>
+<tr><td><strong>Niedriger Kontrast</strong></td><td>Scannt bei hellem Licht, versagt bei schwachem Licht</td><td>Würde er in Schwarz-Weiß lesen?</td><td>Dunkler Code auf hellem Hintergrund</td><td><a href="/de/blog/why-is-my-qr-code-not-working/">Diagnose</a></td></tr>
+<tr><td><strong>Ruhezone bedrängt</strong></td><td>Scannt beschnitten, versagt im Design</td><td>Naheliegenden Text abdecken: scannt er jetzt?</td><td>Einen klaren Rand wiederherstellen, 4 Module breit</td><td><a href="/de/blog/why-is-my-qr-code-not-working/">Diagnose</a></td></tr>
+<tr><td><strong>Logo zu groß</strong></td><td>Scannte vor dem Logo, versagt danach</td><td>Ohne das Logo neu generieren</td><td>Kleineres Logo, höhere Fehlerkorrektur</td><td><a href="/de/blog/add-logo-to-qr-code/">Logo-Codes</a></td></tr>
+<tr><td><strong>Schaden oder Schmutz</strong></td><td>Funktionierte neu, versagt nach Handhabung</td><td>Mit einem frischen Druck vergleichen</td><td>Reinigen, schützen oder neu drucken</td><td><a href="/de/blog/why-is-my-qr-code-not-working/">Diagnose</a></td></tr>
+<tr><td><strong>Toter Link</strong></td><td>Scannt, aber Seite fehlt oder ist falsch</td><td>Den Link auf einem Computer öffnen</td><td>Das Ziel wiederherstellen oder umleiten</td><td><a href="/de/blog/do-qr-codes-expire/">Laufen Codes ab?</a></td></tr>
+<tr><td><strong>Licht und Blendung</strong></td><td>Scannt aus einem Winkel, versagt aus einem anderen</td><td>Vom Licht weg neigen</td><td>Das Licht bewegen, matte Oberfläche nutzen</td><td><a href="/de/blog/why-is-my-qr-code-not-working/">Diagnose</a></td></tr>
+<tr><td><strong>Kamera-Berechtigung / Fokus</strong></td><td>Versagt nur auf einem Handy</td><td>Test mit einem zweiten Handy, plus Linse abwischen</td><td>Zugriff erlauben, Linse reinigen, ruhig halten</td><td><a href="/de/blog/how-to-scan-a-qr-code/">So scannst du</a></td></tr>
+<tr><td><strong>Dynamischer Code abgeschaltet</strong></td><td>Scannt auf eine Fehlerseite</td><td>Den Code in seinem Dashboard prüfen</td><td>Reaktivieren oder ersetzen</td><td><a href="/de/blog/do-qr-codes-expire/">Laufen Codes ab?</a></td></tr>
+<tr><td><strong>Code auf dem eigenen Bildschirm</strong></td><td>Kamera kann nicht auf das eigene Display zeigen</td><td>Erwartet, kein Fehler</td><td>Die Bilddatei stattdessen decodieren</td><td><a href="/de/blog/scan-qr-code-from-image/">Aus einem Bild</a></td></tr>
+</table></div>
+
+<h2>Das Muster selbst: sechs Wege, wie ein Code unlesbar wird</h2>
+
+<h3>1. Zu klein für die Scandistanz</h3>
+<p>Kleine Codes versagen, weil Kameras die einzelnen Module – die kleinen Quadrate – nicht auflösen können, wenn sie im Bild winzig sind. Als Faustregel halte gedruckte Codes bei mindestens 2 × 2 cm und skaliere mit der Distanz hoch: Die Codebreite sollte mindestens ein Zehntel der erwarteten Scandistanz betragen. Eine Tischkarte, die aus 50 cm gescannt wird, braucht einen Code von etwa 5 cm Breite; ein Plakat, das aus 5 Metern gescannt wird, braucht einen von etwa 50 cm Breite. Dichte Codes mit langen Links brauchen mehr Raum als kurze Links. Die vollständigen Größentabellen stehen im <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Leitfaden</a>.</p>
+
+<h3>2. Unscharf oder niedrige Auflösung</h3>
+<p>Unschärfe heißt zu wenige Pixel, die über zu viel Fläche gezogen werden, sodass Modulkanten ineinander verschmieren. Die üblichen Schuldigen sind ein Export in niedriger Auflösung, ein JPEG-Speichern, das scharfe Kanten aufweicht, ein Screenshot von einem Screenshot oder eine Datei, die außer Proportion gestreckt wurde, sodass Quadrate zu Rechtecken werden. Behebe es an der Quelldatei: Neu exportieren als hochauflösendes PNG oder als SVG, das ohne Unschärfe skaliert, und nur proportional skalieren. Ein schon unscharfer Druck lässt sich nicht zurückschärfen – vom sauberen File neu drucken. Die fünf Ursachen und ihre Lösungen stehen in <a href="/de/blog/why-is-my-qr-code-blurry/">Warum dein QR-Code unscharf ist</a>.</p>
+
+<h3>3. Niedriger Kontrast</h3>
+<p>Scanner suchen dunkle Module auf hellem Hintergrund. Hellgrau auf Weiß, pastellfarbene Markenfarben, ein Code über einem Foto oder dunkle Module auf dunklem Hintergrund entfernen alle den Unterschied, den die Kamera braucht. Das ist der häufigste designbedingte Fehler und der am leichtesten vermeidbare: Schwarz auf Weiß funktioniert immer, und jedes Farbpaar sollte noch in Schwarz-Weiß lesen. Vorsicht bei invertierten Codes und Codes über unruhigen Bildern, wo der Hintergrund mit dem Muster konkurriert. Wenn ein Code bei hellem Licht scannt, aber nicht in einem dunklen Raum, ist Kontrast der erste Verdächtige.</p>
+
+<h3>4. Ruhezone bedrängt oder beschnitten</h3>
+<p>Der leere Rand um einen Code ist keine Deko. Scanner nutzen ihn, um die Kanten des Musters zu finden, und der Standard legt eine Ruhezone von mindestens 4 Modulen Breite fest – vier der eigenen kleinen Quadrate des Codes – auf allen vier Seiten, wie in ISO/IEC 18004 definiert. Text oder Muster, die in diesen Rand drängen, verwirren die Erkennung, das Handy liest die Daten also nie. Dieser Fehler lässt sich leicht übersehen, weil der Code selbst perfekt aussieht. Teste ihn, indem du alles um den Code herum abdeckst: Wenn er sauber scannt, stelle den Rand wieder her und halte ihn leer.</p>
+
+<h3>5. Ein Logo, das zu viel vom Muster verdeckt</h3>
+<p>Ein zentrales Logo funktioniert nur, weil die Fehlerkorrektur die verdeckten Daten wiederherstellt. ISO/IEC 18004 definiert vier Fehlerkorrekturstufen – L, M, Q und H – mit einer ungefähren Codewort-Wiederherstellung von 7 %, 15 %, 25 % bzw. 30 %. Diese Prozentwerte beschreiben die Wiederherstellung von Codewörtern, nicht einen garantierten Anteil sichtbarer Fläche, den du verdecken darfst. Als Faustregel halte das Logo klein – der Druckgrößen-Leitfaden schlägt unter etwa 30 % der Codefläche vor –, nutze die höchste Fehlerkorrekturstufe, drucke größer als für einen schlichten Code und verdecke nie die drei großen Eckquadrate, die der Scanner braucht, um das Muster zu orientieren. Test-scanne zuerst auf zwei Handys. Siehe <a href="/de/blog/add-logo-to-qr-code/">So fügst du einem QR-Code ein Logo hinzu</a> und den <a href="/de/qr-code-with-logo/">Logo-Code-Generator</a>.</p>
+
+<h3>6. Schaden, Schmutz und Verblassen</h3>
+<p>Knicke, Kratzer, Flecken, Verblassen und abgenutzte Aufkleber fressen alle ins Muster, und die Fehlerkorrektur kann nur so viel wiederherstellen. Schaden an den Eckquadraten ist besonders tödlich: Ohne sie kann der Scanner den Code überhaupt nicht finden. Bei Codes aus der echten Welt – Speisekarten, Etiketten, Outdoor-Schilder – schlägt Vorbeugung Reparatur: laminiere die Fläche, wähle eine höhere Fehlerkorrekturstufe, drucke ein Ersatzexemplar und inspiziere zuerst die ältesten Exemplare. Wenn das Muster selbst abgenutzt ist, drucke von der Originaldatei neu, statt die beschädigte Kopie zu flicken.</p>
+
+<h2>Das Ziel: Wenn der Code scannt, aber nichts Gutes passiert</h2>
+<p>Ein Scan, der eine Fehlerseite, eine fehlende Seite oder eine Landingpage zurückgibt, die du nicht erwartet hast, ist ein erfolgreicher Scan eines kaputten Ziels. Öffne den Link auf einem Computer und lies ihn Zeichen für Zeichen: eine umgezogene oder gelöschte Seite, eine vertippte Adresse, eine Website, die down ist, oder ein Kurzlink, dessen Eigentümer sein Ziel geändert hat, sind die üblichen Ursachen.</p>
+<p>Eine strukturelle Version entscheidet, ob eine Lösung überhaupt möglich ist. Ein statischer Code hält das Ziel direkt in seinem Muster, er funktioniert also, solange der Link funktioniert – und wenn der Link stirbt, kann nur die Seite dahinter wiederhergestellt oder der Code neu gedruckt werden. Ein dynamischer Code hält stattdessen einen kurzen Redirect, sein Eigentümer kann also das Ziel ändern, ohne neu zu drucken – aber der Code hängt dann davon ab, dass dieses Konto und dieser Dienst aktiv bleiben. Wenn dieses Konto verfällt oder der Dienst den Redirect abschaltet, hört der gedruckte Code auf, irgendwo Nützliches hinzuführen, obwohl das Muster makellos ist. Das ist der Mechanismus hinter den meisten „Mein Code ist abgelaufen“-Geschichten, erklärt in <a href="/de/blog/do-qr-codes-expire/">Laufen QR-Codes ab?</a>. Prüfe zuerst, ob das Ziel wiederhergestellt oder umgeleitet werden kann, bevor du neu druckst.</p>
+
+<h2>Das Handy und der Moment: Berechtigung, Fokus, Licht und Bildschirme</h2>
+<ul>
+<li><strong>Kamera-Berechtigung.</strong> Ein Scanner, dem nie Kamera-Zugriff gewährt wurde, kann überhaupt nichts sehen. Erlaube Kamera-Zugriff und versuch es dann erneut. FreeQrlys Scanner decodiert in deinem Browser auf deinem eigenen Gerät – siehe die <a href="/de/scan/">Scanner-Seite</a> –, aber der Browser braucht trotzdem die Berechtigung, die Kamera zu öffnen.</li>
+<li><strong>Eine schmutzige Linse.</strong> Wische die Linse mit einem weichen Tuch ab. Eine verschmierte Linse verwischt genau die feinen Details, aus denen ein QR-Code gemacht ist.</li>
+<li><strong>Fokus und Distanz.</strong> Halte das Handy ruhig, halte den ganzen Code und seine Ruhezone im Bild und bewege dich langsam, bis der Fokus einrastet. Sehr nah ist nicht immer besser: Die meisten Kameras können aus wenigen Zentimetern Entfernung nicht fokussieren.</li>
+<li><strong>Licht und Blendung.</strong> Glänzende Laminierung, ein Bildschirm oder ein Spot kann Licht zurück in die Kamera reflektieren und die Module auswaschen. Neige den Code oder das Handy, geh aus direktem Licht heraus oder wechsle zu matter Oberfläche. Blendung, die sich beim Neigen bewegt, ist Blendung, kein Schaden.</li>
+<li><strong>Gewölbte oder schräge Flächen.</strong> Ein Code, der sich um eine Flasche wickelt oder aus einem steilen Winkel aufgenommen wird, ist verzerrt, und Scanner tolerieren nur so viel davon. Glätte, was du kannst, und nimm so gerade von vorn wie möglich auf.</li>
+<li><strong>Ein Code auf dem eigenen Bildschirm des Handys.</strong> Du kannst die Kamera eines Handys nicht auf das eigene Display richten. Für einen Code in einem Foto, Screenshot oder einer Nachricht auf demselben Handy decodiere stattdessen die Bilddatei: Auf dem iPhone halte den Code in Fotos lange gedrückt; auf Android nutze Lens in Fotos; auf einem Computer lade sie in einen Decoder hoch, etwa FreeQrlys <a href="/de/scan/">Scanner</a>. Die vollständigen Schritte stehen in <a href="/de/blog/scan-qr-code-from-image/">So scannst du einen QR-Code aus einem Bild</a>, und die Schritte Kamera für Kamera stehen in <a href="/de/blog/how-to-scan-qr-code-on-phone/">So scannst du einen QR-Code mit deinem Handy</a>.</li>
+</ul>
+<p>Apples eigene Anleitung bestätigt die Basis: Auf dem iPhone öffne die Kamera-App oder den Code-Scanner im Kontrollzentrum, halte das Handy so, dass der Code im Bild erscheint, und tippe auf den Link, der erscheint. Wenn dieser Weg bei einem Code, den andere Handys lesen, nichts tut, vermute Berechtigung, Fokus und Licht – keine fehlende Scanner-App. Die allgemeinen Schritte für iPhone und Android stehen in <a href="/de/blog/how-to-scan-a-qr-code/">So scannst du einen QR-Code</a>.</p>
+
+<h2>Nach Szene: Druck, Bildschirm und draußen</h2>
+<h3>Gedruckte Codes: Flyer, Karten, Speisekarten, Verpackungen</h3>
+<p>Druckfehler sind meist Größe, Auflösung, Kontrast oder Verschleiß – in dieser Reihenfolge. Teste in endgültiger Größe, nicht auf dem Bildschirm: Drucke ein Exemplar, tritt auf die echte Betrachtungsdistanz zurück und scanne es mit zwei Handys. Prüfe die Ruhezone im fertigen Layout, nicht nur in der Vorschau, denn Layout-Tools schneiden Ränder weg. Laminiere angefasste Codes und behalte den Original-Export.</p>
+<h3>Codes auf Bildschirmen: Folien, TV, Videoanrufe, Websites</h3>
+<p>Bildschirm-Codes versagen an Blendung, Bildwiederhol-Flimmern und Größe im Verhältnis zur Distanz des Betrachters. Mach den Code groß auf der Folie, halte ihn mehrere Sekunden auf dem Bildschirm, statt ihn vorbeiflashen zu lassen, und vermeide es, ihn über einen bewegten Hintergrund zu legen. Bei Handy-zu-Handy-Anzeige Helligkeit erhöhen und von Deckenlichtern weg neigen.</p>
+<h3>Outdoor-Codes: Plakate, Schilder, Fahrzeuge, Schaufenster</h3>
+<p>Outdoor-Codes stehen allen Fehlern auf einmal gegenüber: Distanz, Sonnenlicht, Blendung, Wetter und Verblassen. Wähle großzügig größer nach der Ein-Zehntel-Regel, drucke mit hohem Kontrast auf mattem Material, mache sie wetterfest und teste aus echter Passanten-Distanz und echtem Winkel. Schaufenster-Codes brauchen eine besondere Prüfung: Scanne von außerhalb des Glases, bei Tageslicht, denn Reflexionen, die von innen unsichtbar sind, können den Code auswaschen.</p>
+
+<h2>Ein ehrlicher Vergleich: kostenlose Codes, bezahlte Codes und „abgelaufene“ Codes</h2>
+<p>Ein statischer Code von jedem ehrlichen Generator hat dieselbe Eigenschaft: Das Ziel ist ins Muster eingebrannt, es gibt also nichts, das ablaufen könnte, nichts zu verlängern und kein Konto, das verfallen und den Code mitnehmen könnte. FreeQrlys statische Codes sind kostenlos, brauchen keine Registrierung, tragen kein Wasserzeichen und laufen nie ab. Für einen statischen Code zu zahlen, kauft dir nichts über seine Lebensdauer: Ein Abo für einen Code, der nie einen Server brauchte, hält ihn nicht am Leben.</p>
+<p>Ein dynamischer Code ist ein anderes Produkt, und der ehrliche Handel ist dieser: Du gewinnst Bearbeiten nach dem Druck und Scan-Statistiken, und du akzeptierst eine Abhängigkeit von einem Konto und einem Dienst. FreeQrlys dynamische Codes sind kostenlos zum Starten – anmelden, und du bekommst 20 kostenlose dynamische Codes, aktuell während der zeitlich begrenzten Aktion unbegrenzt –, mit Bearbeiten, Statistiken und unbegrenzten Scans. Die Abhängigkeit ist selbst bei null Preis real: Lösche das Konto und die Codes gehen mit, ein dynamischer Code sollte also nie die einzige Kopie eines Ziels sein, das seinen Eigentümer überleben muss. Für alles, was ohne Pflege halten muss – ein WLAN-Passwort, eine Visitenkarte, eine Plakette –, ist statisch strukturell sicherer.</p>
+<p>Dieselbe Logik gilt für bezahlte dynamische Codes anderswo: Wenn einer aufhört zu funktionieren, ist das Muster fast nie das Problem – das Abo, das Konto oder der Redirect ist es. Bevor du neu druckst, prüfe das Dashboard des Anbieters, den Kontostatus und das Ziel, auf das der Redirect zeigt. Für eine Druckauflage, die sich nicht billig neu drucken lässt, frage zuerst: Wenn ich aufhöre zu zahlen, funktioniert der gedruckte Code weiter? Die Antwort sagt dir, ob du einen Code kaufst oder mietest.</p>
+
+<h2>Neu machen, neu drucken oder das Ziel reparieren?</h2>
+<ul>
+<li><strong>Das Ziel reparieren</strong>, wenn der Code scannt, die Seite aber falsch ist oder fehlt, und du die Seite oder den Redirect kontrollierst. Kein Neudruck nötig.</li>
+<li><strong>Von der Originaldatei neu drucken</strong>, wenn die frische Kopie scannt, die installierte Kopie aber nicht: Druck, Fläche oder Platzierung sind gescheitert.</li>
+<li><strong>Den Code neu machen</strong>, wenn auch die frische Kopie versagt, die Daten falsch sind oder das Design – Größe, Kontrast, Logo, Rand – schuld ist. Generiere einen sauberen Code, teste ihn auf zwei Handys und drucke erst dann.</li>
+<li><strong>Code-Typ wechseln</strong> bei wiederkehrenden strukturellen Fehlern: Ein sich änderndes Ziel gehört in einen dynamischen Code; eines, das nie von einem Konto abhängen darf, gehört in einen statischen.</li>
+</ul>
+<p>Wenn ein Code auf zwei Handys weiterhin versagt, von einem frischen, großen, Schwarz-auf-Weiß-Druck mit klarem Rand, vermute die Daten selbst – einen überlangen Link oder eine vertippte Adresse. Kürze den Link und generiere neu.</p>
+
+<h2>Mach einen sauberen Ersatz</h2>
+<p>Wenn das Urteil „neu machen“ lautet, starte von einem sauberen Export statt die alte Datei zu flicken. Generiere den Ersatz im <a href="/de/">kostenlosen Generator</a> – alle 17 Inhaltstypen sind als statische Codes ohne Registrierung verfügbar, und dynamische Codes mit Bearbeiten und Statistiken sind nach Anmeldung kostenlos. Wenn der Code ein Logo braucht, nutze den <a href="/de/qr-code-with-logo/">Logo-Generator</a> und halte das Logo klein bei hoher Fehlerkorrekturstufe; wenn du viele Codes auf einmal brauchst, erstellt die <a href="/de/batch-qr-code/">Stapelerstellung</a> einen pro Link. Vor dem Druck teste ihn mit dem <a href="/de/scan/">Scanner</a> und auf einem zweiten Handy. Die Vertiefungen, die oben verlinkt sind – die <a href="/de/blog/why-is-my-qr-code-not-working/">Schritt-für-Schritt-Diagnose</a>, die <a href="/de/blog/why-is-my-qr-code-blurry/">Unschärfe-Lösungen</a> und der <a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Leitfaden</a> –, nehmen jede Ursache weiter.</p>
+    </div>
+
+    <section class="sources">
+      <h2>Quellen</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> – Ausgabe 4, veröffentlicht 2024-08; Standard-Identität, Ausgabe und Veröffentlichungsdatum auf der ISO-Seite am 2026-11-03 verifiziert, deren Abstract bestätigt, dass der Standard Fehlerkorrekturregeln festlegt. Belegt die Fehlerkorrekturstufen L 7 %, M 15 %, Q 25 %, H 30 % (ungefähre Codewort-Wiederherstellung) und die Ruhezone von mindestens 4 Modulen auf allen Seiten, wie in diesem Standard definiert.</li>
+      <li><a href="https://support.apple.com/en-us/102680">Apple Support: Scan a QR code with your iPhone or iPad</a> – Veröffentlicht am 14. September 2026, wie auf der Seite angegeben und am 2026-11-03 verifiziert. Belegt die zitierten eingebauten Scan-Schritte: Kamera-App oder Code-Scanner im Kontrollzentrum öffnen, das Handy so halten, dass der Code im Bild erscheint, und auf den Link tippen, der erscheint. Keine numerische Behauptung wird von dieser Seite übernommen.</li>
+      <li><a href="https://freeqrly.com/de/blog/qr-code-print-size-guide/">FreeQrly: QR Code Druckgrößen-Guide</a> – Seiteninterne Quelle, kein externer Standard. Belegt die Zahlen, die die Hub-Seite ausdrücklich als Faustregeln kennzeichnet: Mindestdruckgröße 2 × 2 cm, die 1:10-Distanzregel (Codebreite mindestens ein Zehntel der Scandistanz) und ein Logo unter etwa 30 % der Codefläche.</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly präsentiert einen QR-Code"></div>
+      <div>
+        <h3>Probier's selbst aus — kostenlos</h3>
+        <p>Alles in diesem Artikel funktioniert im FreeQrly-Studio genau jetzt. Statische Codes, alle 17 Inhaltstypen, PNG- und SVG-Export.</p>
+        <a class="btn" href="/de/#studio">Studio öffnen</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Weiterlesen</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/de/blog/static-vs-dynamic-qr-codes/"><b>Statische vs. dynamische QR-Codes: Für immer kostenlos oder ein Abo?</b></a>
+        <a class="rel-card" href="/de/blog/why-is-my-qr-code-not-working/"><b>QR-Code funktioniert nicht? 7 Fixes, die helfen</b></a>
+        <a class="rel-card" href="/de/blog/qr-codes-for-restaurants/"><b>QR-Codes für Restaurants — Kostenlose Anleitung</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Gut zu wissen</h2>
+    <details><summary><span>Warum scannt mein QR-Code auf einem Handy, aber nicht auf einem anderen?</span></summary><p>Dann sind Code und Link beide in Ordnung – das versagende Handy ist das Problem. Wische seine Linse ab, erlaube Kamera-Zugriff, halte ruhig mit dem ganzen Code im Bild und versuch es bei besserem Licht. Wenn er auf diesem Handy allein weiterhin versagt, nutze den eingebauten Kamera-Weg statt einer Scanner-App von Dritten.</p></details>
+    <details><summary><span>Mein QR-Code scannt manchmal, aber nicht immer – ist er in Ordnung?</span></summary><p>Nein. Ein Manchmal-Code ist ein grenzwertiger Code: Er besteht an deinem Schreibtisch und versagt in den Händen eines Kunden. Behandle ihn als kaputt und behebe die zugrundeliegende Ursache – meist Größe, Kontrast, Blendung oder eine bedrängte Ruhezone –, statt auf gutes Licht zu hoffen.</p></details>
+    <details><summary><span>Wie groß sollte ein gedruckter QR-Code sein?</span></summary><p>Als Faustregel mindestens 2 × 2 cm und mindestens ein Zehntel der erwarteten Scandistanz: Eine Tischkarte, die aus 50 cm gescannt wird, braucht einen Code von etwa 5 cm Breite, und ein Plakat, das aus 5 Metern gescannt wird, braucht einen von etwa 50 cm Breite. Dichte Codes mit langen Links brauchen mehr Raum als kurze Links.</p></details>
+    <details><summary><span>Wie viel von einem QR-Code kann ein Logo verdecken?</span></summary><p>Halte es klein. Nutze die höchste Fehlerkorrekturstufe, drucke größer als für einen schlichten Code und verdecke nie die drei großen Eckquadrate, die der Scanner braucht, um das Muster zu orientieren. Als Faustregel schlägt der Druckgrößen-Leitfaden unter etwa 30 % der Codefläche vor – und test-scanne den fertigen Code immer auf zwei Handys vor dem Druck.</p></details>
+    <details><summary><span>Mein Code scannt, aber die Seite ist weg – ist der Code kaputt?</span></summary><p>Nein. Das Muster hat perfekt decodiert; das Ziel ist gescheitert. Eine Seite, die umgezogen oder gelöscht wurde, eine vertippte Adresse oder ein dynamischer Code, dessen Konto oder Redirect abgeschaltet wurde, sehen alle so aus. Wenn du die Seite oder den dynamischen Redirect kontrollierst, stelle sie wieder her oder leite sie um – kein Neudruck nötig. Ein statischer Code lässt sich nicht umleiten; nur die Seite dahinter kann wiederhergestellt werden.</p></details>
+    <details><summary><span>Brauche ich eine Scanner-App, um meinen Code zu testen?</span></summary><p>Nein. Auf dem iPhone nutze die Kamera-App oder den Code-Scanner im Kontrollzentrum; auf Android nutze die eingebaute Kamera oder Lens. Für einen Code, der schon auf dem eigenen Bildschirm des Handys ist – in einem Foto oder Screenshot –, decodiere stattdessen die Bilddatei, statt die Kamera auf das eigene Display zu richten.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Unbegrenzte dynamische Codes — zeitlich begrenztes Angebot.</h3>
+        <p>Kostenlos anmelden und so viele erstellen, wie Sie brauchen. Jeder Code bleibt nach dem Druck bearbeitbar und läuft nie ab.</p>
+      </div>
+      <a class="fctaBtn" href="/de/login/">Kostenlos starten</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/de/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Schöne QR-Codes, erstellt in Ihrem Browser. Statische Codes laufen nie ab.</p>
+        <div class="fmade">Statische Codes, im Browser erstellt.</div>
+      </div>
+      <div class="fcol"><h4>Produkt</h4><a href="/de/">QR-Generator</a><a href="/de/batch-qr-code/">QR-Codes im Batch</a><a href="/de/qr-code-with-logo/">QR-Code mit Logo</a><a href="/de/scan/">QR-Scanner</a><a href="/de/barcode-generator/">Barcode-Generator</a><a href="/de/pricing/">Preise</a></div>
+      <div class="fcol"><h4>Ressourcen</h4><a href="/de/blog/">Blog</a><a href="/de/developers/">Entwickler · API &amp; MCP</a><a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Guide</a><a href="/de/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Unternehmen</h4><a href="/de/about/">Über uns</a><a href="mailto:hello@freeqrly.com">Kontakt</a></div>
+      <div class="fcol"><h4>Rechtliches</h4><a href="/de/privacy/">Datenschutz</a><a href="/de/terms/">Nutzungsbedingungen</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

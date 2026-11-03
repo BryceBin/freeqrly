@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Dynamische QR-Code-Statistiken: Was Scans wirklich verraten | FreeQrly","description":"Dynamische QR-Code-Statistiken: Gesamt- und eindeutige Scans, nach Tag, Land, Stadt, Gerät und Betriebssystem — kostenlos zu deinen Codes. Und was FreeQrly nie erfasst.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Dynamische QR-Code-Statistiken: Was Scans wirklich verraten | FreeQrly","description":"Dynamische QR-Code-Statistiken: Gesamt- und eindeutige Scans, nach Tag, Land, Stadt, Gerät und Betriebssystem — kostenlos zu deinen Codes. Und was FreeQrly nie erfasst.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-16","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -67,7 +72,7 @@
       "name": "Tracken statische QR-Codes Scans?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Statische Codes berühren nie einen Server — das Ziel lebt im Muster —, also gibt es nichts zu zählen. Nur dynamische Codes melden Scans."
+        "text": "Nein. Statische Codes berühren nie einen Server – das Ziel lebt im Muster –, es gibt also nichts zu zählen. Nur dynamische Codes melden Scans."
       }
     },
     {
@@ -83,7 +88,39 @@
       "name": "Kann ich sehen, wer meinen QR-Code gescannt hat?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein — und das ist Absicht. FreeQrly zählt Scans; es identifiziert keine Scanner."
+        "text": "Nein – und das ist Absicht. FreeQrly zählt Scans; es identifiziert keine Scanner. Ein Scan trägt keine Identität, wenn eine Entscheidung also wissen muss, wer reagiert hat, lege ein Formular hinter den Code und lass Leute sich dort freiwillig identifizieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum zeigt ein Code weit mehr Gesamt-Scans als eindeutige Scans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weil dieselben Leute wiederholt scannen. Eine Summe, die weit vor der eindeutigen Zahl liegt, passt zu einem Code, den Stammkunden sehen, etwa einem Tresenschild oder einer Speisekarte; eine Summe nah an der eindeutigen Zahl passt zu einem Code, den meist Passanten sehen. Vergleiche die zwei Zahlen zusammen – allein verbirgt „gesamt“ wiederholte Nutzung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein Code zeigt null Scans – ist er kaputt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nicht unbedingt. Teste zuerst den Druck mit deinem eigenen Handy: Wenn er scannt, ist das Problem Platzierung, Größe, Kontrast oder das Fehlen eines Scan-Grunds, in dieser Reihenfolge. Null Scans über eine Woche sind Daten über die Platzierung, kein Beweis, dass der Code versagt hat. Wenn er nicht scannt, prüfe Schaden, Kontrast und Größe, bevor du irgendetwas über das Publikum schließt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie vergleiche ich zwei Platzierungen fair?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gib jeder Platzierung ihren eigenen dynamischen Code, der auf dasselbe Ziel zeigt, lass sie über denselben Zeitraum durch dieselben Wochentage und Wochenenden laufen und entscheide die Handlung, bevor du schaust – was du tun wirst, wenn einer den anderen übertrifft. Notiere alles andere, was in dieser Woche passiert ist, etwa einen Post, der rausging, neben dem Diagramm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum zitiert dieser Beitrag so wenige externe Statistiken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weil eine externe Zahl nur mit ihrer Messgröße, ihrer Bevölkerung und ihrem Datum dazu nutzbar ist. Dieser Beitrag zitiert zwei Zahlen, die mit allen dreien von ihren Originalverlagen kommen – die ISO-QR-Fehlerkorrekturstufen und Pews US-Smartphone-Umfrage –, und stützt sich für den Rest auf dein eigenes Dashboard. Eine Zahl, die aus zweiter Hand getragen wird, ihrer Methode beraubt, wird hier aus Entscheidungen herausgelassen."
       }
     }
   ]
@@ -101,49 +138,104 @@
     <div class="kicker" style="text-align:center">Feldnotizen</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Was dir dynamische QR-<span class='hl hl-honey'>Statistiken</span> sagen</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Ein dynamischer Code meldet sich bei jedem Scan. Hier steht, was FreeQrly zählt, wie du es liest — und was es nie sammelt.</p>
-    <p class="meta" style="text-align:center">16. Oktober 2026 · 4 Min. Lesezeit</p>
+    <p class="meta" style="text-align:center">16. Oktober 2026 · Zuletzt aktualisiert: 3. November 2026 · 15 Min. Lesezeit</p>
     <div class="prose" style="margin-top:40px">
-
-<p>Ein statischer Code ist still: Er meldet sich nie, also weiß niemand — du eingeschlossen —, wie oft er gescannt wurde. Ein dynamischer Code meldet jeden Scan an dein Dashboard. Hier steht, was FreeQrly zählt, wie du es liest — und was es bewusst nie sammelt.</p>
-
-<h2>Die Zahlen auf jeder Karte</h2>
+<p>Ein statischer Code ist stumm: Er meldet sich nie nach Hause, niemand – dich eingeschlossen – weiß also, wie oft er gescannt wurde. Ein dynamischer Code meldet jeden Scan an dein Dashboard. Hier steht, was FreeQrly zählt, wie man es liest, was es bewusst nie erhebt und wie du deine eigenen Zahlen nutzt, um Entscheidungen zu treffen – plus die einzigen externen Zahlen, die dieser Beitrag zitiert, jeweils mit ihrer Originalquelle, sodass du sie selbst prüfen kannst.</p>
+<p>Die kurze Antwort zuerst: Scan-Statistiken beantworten drei Fragen und nur drei. Welche Platzierung hat Aufmerksamkeit bekommen? Wann hat sie sie bekommen? Und auf welcher Art von Gerät und von grob wo? Alles andere – ob aus einem Scan ein Kunde wurde, ob das Plakat gut war – ist eine Interpretation, die du obendrauf legst, und die meisten Fehldeutungen kommen daher, eine Interpretation zu behandeln, als wäre sie eine Messung.</p>
+<h2>Was FreeQrly zählt</h2>
+<p>Öffne einen dynamischen Code in deinem Dashboard und du siehst für jeden Code denselben Satz Zahlen. Die Definitionen zählen, denn zwei der häufigsten Fehldeutungen kommen daher, „gesamt“ mit „eindeutig“ und „heute“ mit „gesamt“ zu verwechseln.</p>
+<div class="table-scroll"><table>
+<tr><th>Zahl</th><th>Was sie bedeutet</th><th>Wie man sie liest</th></tr>
+<tr><td><strong>Gesamt-Scans</strong></td><td>Jeder Scan des Codes, über alle Zeit</td><td>Der Lebenszeit-Fußabdruck dieses Codes. Vergleiche Summen nur zwischen Codes, die gleich lang draußen sind.</td></tr>
+<tr><td><strong>Heute</strong></td><td>Scans bis jetzt heute</td><td>Ein lebendiger Puls, kein Urteil. Ein ruhiger Morgen sagt nichts über den Abend aus.</td></tr>
+<tr><td><strong>Eindeutige Scans</strong></td><td>Unterschiedliche Scanner, einmal pro Tag gezählt. Zwei Scans derselben Person am selben Tag zählen als ein eindeutiger Scan.</td><td>Das Nächste an „wie viele Leute“. Wenn „gesamt“ weit über „eindeutig“ liegt, scannt eine kleine Gruppe wiederholt – oder ein Code wird herumgereicht.</td></tr>
+<tr><td><strong>Letzte 7 Tage</strong></td><td>Ein tägliches Balkendiagramm, das heute und die vorherigen sechs Tage abdeckt – immer sieben Balken, mit Balken der Höhe null für ruhige Tage</td><td>Form zählt mehr als Höhe. Lücken, Abend-Häufungen und Muster nur unter der Woche sind auf einen Blick sichtbar.</td></tr>
+<tr><td><strong>Nach Land</strong></td><td>Woher Scans kamen, aus dem ungefähren Standort des Scanners</td><td>Nützlich, um einen Code zu entdecken, der gereist ist – ein neues Land heißt meist, jemand hat ihn online geteilt.</td></tr>
+<tr><td><strong>Nach Stadt</strong></td><td>Derselbe ungefähre Standort, auf Stadtebene</td><td>Nützlich, um zwei Viertel oder zwei Veranstaltungsorte zu vergleichen. Ungefähr heißt ungefähr: Behandle eine Stadt als Region, nicht als Adresse.</td></tr>
+<tr><td><strong>Nach Gerät</strong></td><td>Handy, Tablet oder Desktop</td><td>Ein Plakat, das mittags Desktop-Scans bekommt, wird wahrscheinlich aus einem Screenshot gescannt, nicht von der Wand.</td></tr>
+<tr><td><strong>Nach Betriebssystem</strong></td><td>iOS, Android und der Rest</td><td>Ein Plausibilitätscheck für dein Publikum und dein Testen: Wenn fast alle Scans auf einem Betriebssystem sind, teste das Ziel zuerst auf diesem Betriebssystem.</td></tr>
+</table></div>
+<p>Jede Aufschlüsselung kommt mit Zählungen und Prozentwerten. Prozentwerte sind Anteile an den Scans dieses Codes, nicht Anteile an etwas Größerem – ein Code mit meist iOS-Scans heißt nicht, dass die meisten deiner Kunden iPhones nutzen. Er heißt, dass die meisten Leute, die diesen Code gescannt haben, dies auf einem iPhone getan haben.</p>
+<h2>Zwei externe Zahlen, mit ihren Quellen dazu</h2>
+<p>Dieser Beitrag zitiert bewusst sehr wenige externe Zahlen, und der Grund lohnt es sich, schlicht zu nennen: Eine QR-Statistik, die aus einer Zusammenfassung entlehnt wurde, kommt meist ohne die drei Fakten an, die eine Zahl nutzbar machen – was gemessen wurde, bei wem und wann. Die zwei Zahlen unten kommen mit allen dreien, von ihren Originalverlagen.</p>
+<h3>Der QR-Standard selbst: Wie viel Schaden ein Code überleben kann</h3>
+<p>Scan-Statistiken sind nur die halbe Druckentscheidung; die andere Hälfte ist, ob der Code Handhabung überlebt. Der QR-Standard ISO/IEC 18004:2024 definiert vier Fehlerkorrekturstufen, die jeweils angeben, wie viel der Codewörter des Symbols wiederhergestellt werden kann, wenn es beschädigt ist:</p>
+<div class="table-scroll"><table>
+<tr><th>Stufe</th><th>Wiederherstellbare Codewörter</th><th>Typische Nutzung</th></tr>
+<tr><td>L</td><td>7 %</td><td>Saubere digitale Anzeige</td></tr>
+<tr><td>M</td><td>15 %</td><td>Alltäglicher Innendruck</td></tr>
+<tr><td>Q</td><td>25 %</td><td>Druck, der angefasst wird oder draußen lebt</td></tr>
+<tr><td>H</td><td>30 %</td><td>Codes mit einem zentralen Logo oder bei rauer Handhabung</td></tr>
+</table></div>
+<p>Quelle: ISO/IEC 18004:2024, die Spezifikation der QR-Code-Barcodesymbologie, über die ISO-Standardseite (<a href="http://www.iso.org/standard/83389.html">iso.org/standard/83389.html</a>). Lies die Prozentwerte sorgfältig: Sie beschreiben Codewörter, nicht gedruckte Fläche. Ein Code auf Stufe H überlebt nicht jedes mögliche 30-%-Loch im Druck, und eine höhere Stufe kauft Belastbarkeit, indem sie mehr vom Code für Redundanz ausgibt. Für Statistiken der praktische Punkt: Ein Code, der auf einer angefassten Fläche auf niedriger Stufe gedruckt wurde, wird sein wahres Publikum unterberichten – Leute versuchten zu scannen, der Code versagte, und kein Scan wurde aufgezeichnet.</p>
+<h3>Wer ein Kamera-Handy trägt: Pews US-Umfrage</h3>
+<p>Wenn du eine Geräteaufschlüsselung liest, hilft es, die Obergrenze zu kennen: Wie viele Leute im Publikum konnten überhaupt scannen. Pews mobiles Fact Sheet 2026 berichtet, dass 91 % der Erwachsenen in den USA sagten, sie besäßen ein Smartphone, und 98 % sagten, sie besäßen irgendein Handy, gegenüber 35 % Smartphone-Besitz in der ersten solchen Umfrage des Centers im Jahr 2011. Quelle: Pew Research Center, „Americans' Use of Mobile Devices in 2026“ (<a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">pewresearch.org/internet/fact-sheet/mobile/</a>), basierend auf einer Umfrage unter 5.511 Erwachsenen in den USA, durchgeführt vom 30. Januar bis 18. Juni 2026, mit einer Gesamtfehlerspanne von plus/minus 1,8 Prozentpunkten.</p>
+<p>Drei Warnungen reisen mit dieser Zahl mit, und sie gelten für jede externe Zahl, der du begegnest. Erstens, Bevölkerung: Das sind Erwachsene in den USA, nicht die Welt und nicht die Gästeliste deines Events. Zweitens, Messgröße: selbstberichteter Besitz, nicht Scan-Verhalten. Drittens, Datum: Eine Umfrage von 2026 beschreibt 2026. Eine Zahl, die außerhalb ihrer Bevölkerung, ihrer Messgröße oder ihres Datums genutzt wird, hört auf, Beleg zu sein, und wird Deko.</p>
+<h2>So liest du deine eigenen Zahlen: fünf Fragen</h2>
+<p>Deine Dashboard-Zahlen brauchen keinen externen Benchmark, um nützlich zu sein. Jage jede Lesart durch diese fünf Fragen, bevor du danach handelst:</p>
+<ol>
+<li><strong>Verglichen womit?</strong> Die Summe eines Codes heißt allein wenig. Vergleiche Codes, die im selben Zeitraum, in ähnlichen Platzierungen, für dasselbe Angebot liefen. Ein Flyer-Code und ein Plakat-Code aus derselben Woche lassen sich vergleichen; ein Flyer-Code vom letzten Frühling und ein Plakat-Code von dieser Woche nicht, denn Saison, Angebot und Publikum haben sich dazwischen alle geändert.</li>
+<li><strong>Über welchen Zeitraum?</strong> Das 7-Tage-Diagramm existiert, um Einzeltages-Lesarten zu stoppen. Ein Code, der an einem Montag tot aussieht, kann ein Abend-Code, ein Wochenend-Code oder ein Pendlerstrecken-Code sein. Lies die Form der Woche, bevor du die Höhe eines Tages beurteilst.</li>
+<li><strong>Gesamt oder eindeutig?</strong> Wenn „gesamt“ weit vor „eindeutig“ läuft, kommen dieselben Leute zurück – was gut ist für eine Speisekarte oder einen Fahrplan und ein Warnzeichen für ein einmaliges Angebot. Wenn „eindeutig“ nah an „gesamt“ läuft, ist jeder Scan eine andere Person, und der Code erreicht breit statt tief.</li>
+<li><strong>Was ist sonst an diesem Tag passiert?</strong> Ausschläge brauchen Kontext. Ein Scan-Schub direkt nach einem Post ist der Post, nicht das Plakat. Ein Schub an einem Tag, an dem du das Ziel geändert hast, ist das neue Ziel, nicht die alte Platzierung. Notiere externe Ereignisse – ein Post, eine Erwähnung, eine Preisänderung – neben dem Diagramm, oder das Diagramm wird dich mit perfekter Zuversicht irreführen.</li>
+<li><strong>Wozu hat der Scan geführt?</strong> Ein Scan ist ein Blick, keine Conversion. Kopple Scan-Statistiken mit dem, was das Ziel selbst misst – Formular-Einreichungen, Bestellungen, Anmeldungen –, und beurteile den Code nach dem Ergebnis des Ziels, nicht allein nach der Scan-Zahl.</li>
+</ol>
+<h2>Eine echte Woche lesen: Muster, nicht nur Summen</h2>
+<p>Dieselben Aufschlüsselungen, als Verhalten gelesen statt als Zahlen:</p>
 <ul>
-<li><strong>Scans gesamt.</strong> Jeder Scan des Codes, aller Zeiten.</li>
-<li><strong>Heute.</strong> Scans bisher heute.</li>
-<li><strong>Unique Scans.</strong> Unterschiedliche Scanner, einmal pro Tag gezählt. Zwei Scans derselben Person am selben Tag zählen als ein unique Scan.</li>
-<li><strong>Letzte 7 Tage.</strong> Ein Tages-Balkendiagramm für heute und die sechs Tage davor — immer sieben Balken, mit Null-Balken an ruhigen Tagen, damit du Lücken auf einen Blick siehst.</li>
-</ul>
-
-<h2>Die Aufschlüsselungen</h2>
-<p>Öffne die Stats eines Codes und du bekommst vier Aufschlüsselungen, jede mit Zahlen und Prozenten:</p>
-<ul>
-<li><strong>Nach Land und Stadt.</strong> Woher die Scans kamen — nach dem ungefähren Standort des Scanners.</li>
-<li><strong>Nach Gerät.</strong> Handy, Tablet oder Desktop.</li>
-<li><strong>Nach Betriebssystem.</strong> iOS, Android und der Rest.</li>
-</ul>
-<p>Nutz sie wie eine Kampagne: Ein Flyer in zwei Vierteln zeigt, welches zieht; ein Poster, das mittags Desktop-Scans bekommt, wird wahrscheinlich von einem Screenshot gescannt, nicht von der Wand.</p>
-
-<h2>Was FreeQrly nie sammelt</h2>
-<p>Stats sind Aggregate — es gibt keinen Datensatz pro Besucher zum Ansehen. Ein „unique Scan" ist ein Einweg-Hash aus IP-Adresse, Browser und Datum des Scanners: genug, um unterschiedliche Scanner pro Tag zu zählen, unmöglich, daraus eine Person zu rekonstruieren. Keine Namen, keine E-Mails, keine exakten Standorte, kein codeübergreifendes Tracking von Einzelpersonen. Und statische Codes tracken gar nichts — sie berühren nie einen Server, also gibt es nichts zu zählen.</p>
-
-<h2>Die Zahlen ehrlich lesen</h2>
-<ul>
-<li><strong>Scans sind keine Kunden.</strong> Ein Scan ist ein Blick. Vergleich Codes miteinander, nicht mit einem Fantasie-Benchmark.</li>
-<li><strong>Null ist auch ein Datum.</strong> Ein Code ohne Scans seit einer Woche sagt dir, dass die Platzierung falsch ist, nicht der Code.</li>
-<li><strong>Spitzen brauchen Kontext.</strong> Ein Scan-Schub direkt nach einem Post ist der Post, nicht das Poster. Das 7-Tage-Diagramm macht das sichtbar.</li>
-</ul>
-
-<h2>Eine echte Woche lesen</h2>
-<p>Dieselben Aufschlüsselungen, als Verhalten statt als Zahlen gelesen:</p>
-<ul>
-<li><strong>Nur abends gescannt.</strong> Ein Code, der erst nach Feierabend aufwacht, hängt wahrscheinlich an einer Pendlerstrecke oder einem Abend-Lokal — Laufkundschaft, kein Büroverkehr.</li>
-<li><strong>Plötzlich eine neue Stadt.</strong> Scans, die sich auf eine Stadt ausbreiten, in der du nie gedruckt hast, bedeuten meist, dass jemand den Code in einem Chat oder Post geteilt hat — der Code ist ohne dich gereist.</li>
+<li><strong>Nur-Abend-Scans.</strong> Ein Code, der nach Feierabend aufwacht, steht wahrscheinlich auf einer Pendlerstrecke oder an einem Abend-Veranstaltungsort – Abendbesucher, nicht Bürobesucher.</li>
+<li><strong>Eine plötzlich neue Stadt.</strong> Scans, die sich in eine Stadt ausbreiten, in der du nie gedruckt hast, heißen meist, jemand hat den Code in einem Chat oder Post geteilt – der Code ist ohne dich gereist. Prüfe, wohin der Code zeigt: Ein geteilter Code schickt Fremde zu deinem Ziel, das Ziel sollte also für einen Fremden Sinn ergeben.</li>
 <li><strong>Nur wochentags gescannt.</strong> Ein Code, der am Wochenende verstummt, hängt wahrscheinlich an einem Büroposter oder einem Wochentags-Lokal, nicht an einem Wochenend-Lokal.</li>
+<li><strong>Desktop-lastige Scans.</strong> Ein Plakat, das Desktop-Scans bekommt, wird wahrscheinlich aus einem Screenshot oder einem weitergeleiteten Bild gescannt, nicht von der Wand. Die Wandversion kann in Ordnung sein; die Screenshot-Version macht die Arbeit, und das Ziel sollte auch auf einem Desktop-Bildschirm geprüft werden, nicht nur auf einem Handy.</li>
+<li><strong>Null ist ein Datum.</strong> Ein Code ohne Scans über eine Woche sagt dir, dass die Platzierung falsch ist, nicht der Code. Codes versagen selten leise – ein gedruckter Code scannt entweder oder nicht, und ein schneller Test mit dem eigenen Handy klärt das in Sekunden. Wenn er scannt und niemand ihn scannt, ist das Problem Position, Größe, Kontrast oder das Fehlen eines Scan-Grunds, in dieser Reihenfolge.</li>
 </ul>
-
-<p>Bereit zum Ausprobieren? <a href="/de/blog/how-to-create-a-dynamic-qr-code/">Erstelle deinen ersten dynamischen Code</a> — kostenlose Anmeldung, 20 Codes (derzeit unbegrenzt) — und schau nach deinem ersten Drucklauf wieder rein. Schon gedruckt und musst etwas fixen? <a href="/de/blog/how-to-edit-a-qr-code-after-printing/">QR-Code nach dem Drucken bearbeiten</a>.</p>
-
+<h2>Ein durchgerechnetes Beispiel, mit gezeigter Rechnung</h2>
+<p>Anschauliches Beispiel – die Zahlen unten sind hypothetisch, nur um die Rechnung zu zeigen, keine Messungen aus einer echten Kampagne. Angenommen, zwei Codes zeigen für dieselben zwei Wochen auf dieselbe Seite. Code A, auf einem Tresenschild, verzeichnet 120 Gesamt-Scans und 90 eindeutige Scans. Code B, auf einem Schaufensterplakat, verzeichnet 60 Gesamt-Scans und 55 eindeutige Scans. Drei Lesarten folgen, jede mit einer anderen Handlung:</p>
+<ul>
+<li><strong>Reichweite:</strong> Code A erreichte mehr unterschiedliche Leute (90 gegen 55), das Tresenschild ist also die breitere Platzierung.</li>
+<li><strong>Wiederholte Nutzung:</strong> Code As Summe läuft 30 Scans vor seiner eindeutigen Zahl, während Code Bs nur 5 vorausläuft, Tresenbesucher scannen also wiederholt, während Plakatbesucher meist einmal scannen. Das passt zu einem Tresenschild, das Stammkunden sehen, und einem Plakat, das Passanten sehen – und es legt nahe, dass das Ziel des Tresen-Codes einen zweiten Besuch belohnen sollte, während das Ziel des Plakat-Codes seinen Fall in einem Besuch machen sollte.</li>
+<li><strong>Nächster Test:</strong> Noch nichts tauschen. Bewege Code Bs Plakat für eine Woche zum Tresen und Code As Schild zum Fenster und vergleiche dann erneut. Wenn das Muster der Platzierung folgt, war die Platzierung die Ursache. Wenn das Muster dem Code folgt, waren Ziel oder Design die Ursache. Ein Tausch schlägt einen Monat Debatte darüber, welches Schild besser ist.</li>
+</ul>
+<p>Die Disziplin in diesem Beispiel ist der Punkt, nicht die Zahlen: derselbe Zeitraum, dasselbe Ziel, eine Änderung nach der anderen und eine Entscheidungsregel, die geschrieben wurde, bevor der Test läuft.</p>
+<h2>Einen Vergleich aufbauen, dem du trauen kannst</h2>
+<ol>
+<li><strong>Gib jeder Platzierung ihren eigenen dynamischen Code.</strong> Ein Code pro Platzierung – Tresen, Fenster, Flyer, Beleg –, alle zeigen auf dasselbe Ziel. Geteilte Codes können Platzierungen nicht auseinanderhalten, und ein Vergleich, der auf einem geteilten Code aufbaut, ist Raten mit Diagramm.</li>
+<li><strong>Halte das Ziel identisch.</strong> Wenn zwei Codes auf verschiedene Seiten zeigen, testest du Seiten, nicht Platzierungen. Teste eine Variable nach der anderen.</li>
+<li><strong>Lass sie über denselben Zeitraum laufen.</strong> Starte und ende gemeinsam, durch dieselben Wochentage und Wochenenden. Ein Code, der über ein Feiertagswochenende lief, ist nicht vergleichbar mit einem, der über eine gewöhnliche Woche lief.</li>
+<li><strong>Notiere, was sonst passiert ist.</strong> Führe ein einzeiliges Protokoll neben dem Diagramm: Post veröffentlicht, Preis geändert, Veranstaltungsort geschlossen. Ausschläge ohne Notizen werden zu Rätseln.</li>
+<li><strong>Entscheide die Handlung, bevor du schaust.</strong> Schreibe auf, was du tun wirst, wenn A B übertrifft – B bewegen, B neu drucken, B ausmustern –, bevor du die Statistiken öffnest.</li>
+<li><strong>Handle nach dem Ergebnis und miss dann erneut.</strong> Bewege den schwachen Code, ändere das Ziel des starken oder mustere den stillen aus – und beobachte das nächste 7-Tage-Diagramm auf die Änderung. Eine Statistik, die nie eine Entscheidung ändert, war Unterhaltung, keine Messung.</li>
+</ol>
+<h2>Was FreeQrly nie sammelt</h2>
+<p>Stats sind Aggregate – es gibt keinen Datensatz pro Besucher, den man sich ansehen könnte. Ein „eindeutiger Scan“ ist ein Einweg-Hash aus der IP-Adresse des Scanners, dem Browser und dem Datum: genug, um unterschiedliche Scanner pro Tag zu zählen, unmöglich, in eine Person zurückzuverwandeln. Keine Namen, keine E-Mails, keine exakten Standorte, kein Cross-Code-Tracking von Einzelpersonen. Und statische Codes tracken gar nichts – sie berühren nie einen Server, es gibt also nichts zu zählen.</p>
+<p>Diese Grenze formt, was du von den Statistiken verlangen solltest. Du kannst fragen, welche Platzierung gewonnen hat, wann sie gewonnen hat und auf welchen Geräten. Du kannst nicht fragen, wer gescannt hat: Ein Scan trägt keine Identität, und jede Identität, die daran hängt, kam von woanders. Wenn deine Entscheidung wirklich wissen muss, wer reagiert hat, lege ein Formular hinter den Code und lass Leute sich dort freiwillig identifizieren.</p>
+<h2>Was Scan-Statistiken dir nicht sagen können</h2>
+<ul>
+<li><strong>Scans sind keine Kunden.</strong> Ein Scan ist ein Blick. Jemand kann aus Neugier scannen, aus Versehen oder um es einem Freund zu zeigen, und nichts davon ist ein Verkauf. Beurteile das Ergebnis des Ziels, nicht die Scan-Zahl.</li>
+<li><strong>Scans sind keine Zufriedenheit.</strong> Ein stark gescannter Code auf einem Beschwerdeformular ist keine Erfolgsgeschichte. Lies den Inhalt des Ziels neben den Zählungen.</li>
+<li><strong>Durchschnitte verbergen die Form.</strong> Zwei Codes mit derselben Wochensumme können entgegengesetzte Muster haben – einer stetig, einer sprunghaft –, und der stetige ist meist die gesündere Platzierung. Lies immer das 7-Tage-Diagramm, nicht nur die Summe.</li>
+<li><strong>Stille ist mehrdeutig.</strong> Null Scans können eine schlechte Platzierung, einen beschädigten Druck, ein geändertes Ziel oder einen Code bedeuten, der gedruckt wurde, wo niemand hinschaut. Teste den Druck mit deinem eigenen Handy, bevor du irgendetwas über das Publikum schließt.</li>
+<li><strong>Externe Benchmarks irreführen mehr, als sie helfen.</strong> Eine Zahl, die ohne ihre Bevölkerung, Messgröße und Datum zitiert wird, lässt sich nicht mit deinen Codes vergleichen, denn du weißt nicht, was sie gezählt hat. Von Anbietern veröffentlichte Zahlen verdienen eine zusätzliche Prüfung: Lies sie als den eigenen Bericht des Anbieters über seine eigenen Nutzer und suche nach der Methodik-Seite, die angibt, wer befragt wurde und wie. Eine Zahl, deren Originalseite ihre Methode angibt, kann genutzt werden, mit ihrem Umfang dazu; eine Zahl, die aus zweiter Hand getragen wird, ihrer Methode beraubt, sollte ganz aus deiner Entscheidung herausgelassen werden. Darum stützt sich dieser Beitrag auf dein eigenes Dashboard und auf zwei Quellen auf Standard-Niveau statt auf eine Zusammenfassung entlehnter Prozentwerte.</li>
+</ul>
+<h2>Eine wöchentliche Routine, die zehn Minuten dauert</h2>
+<ul>
+<li>Öffne jeden Live-Code und lies zuerst die Form des 7-Tage-Diagramms, dann die Summen.</li>
+<li>Vergleiche Platzierungen, die nebeneinander liefen, derselbe Zeitraum, dasselbe Ziel.</li>
+<li>Bewege, leite um oder mustere die schwächste Platzierung aus – eine Änderung, nicht fünf.</li>
+<li>Prüfe das Ziel auf dem Gerät, das die meisten Scanner in dieser Woche genutzt haben.</li>
+<li>Notiere jedes externe Ereignis neben dem Diagramm, damit der Ausschlag der nächsten Woche schon eine Erklärung bereit hat.</li>
+</ul>
+<p>Mach das einen Monat lang wöchentlich und die Statistiken werden zu einer Gewohnheit, die Schilder bewegt und tote Platzierungen ausmustert.</p>
+<p>Bereit, es zu versuchen? <a href="/de/blog/how-to-create-a-dynamic-qr-code/">Erstelle deinen ersten dynamischen Code</a> – kostenlose Anmeldung, 20 Codes auf dem kostenlosen Konto mit unbegrenzten Scans während der zeitlich begrenzten Aktion – und schau nach deiner ersten Druckauflage wieder vorbei. Schon gedruckt und brauchst eine Lösung? <a href="/de/blog/how-to-edit-a-qr-code-after-printing/">So bearbeitest du einen QR-Code nach dem Druck</a> zeigt, wie man das Ziel ändert, ohne neu zu drucken.</p>
     </div>
+
+    <section class="sources">
+      <h2>Quellen</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024 — QR code bar code symbology specification</a> – Belegt die Fehlerkorrektur-Tabelle: L stellt 7 %, M 15 %, Q 25 % und H 30 % der Codewörter des Symbols wieder her. Ausgabe 2024 des Standards.</li>
+      <li><a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">Pew Research Center — Americans' Use of Mobile Devices in 2026</a> – Belegt: 91 % der Erwachsenen in den USA sagten, sie besäßen ein Smartphone, und 98 % sagten, sie besäßen irgendein Handy, gegenüber 35 % Smartphone-Besitz in der ersten solchen Umfrage des Centers im Jahr 2011. Basierend auf einer Umfrage unter 5.511 Erwachsenen in den USA, durchgeführt vom 30. Januar bis 18. Juni 2026, Fehlerspanne plus/minus 1,8 Prozentpunkte.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly präsentiert einen QR-Code"></div>
       <div>
@@ -155,17 +247,21 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Weiterlesen</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/de/blog/make-qr-code-in-canva-excel-word/"><b>How to Make a QR Code in Canva, Excel, or Word (Free)</b></a>
-        <a class="rel-card" href="/de/blog/why-is-my-qr-code-blurry/"><b>Why Is My QR Code Blurry? 5 Fixes That Work</b></a>
-        <a class="rel-card" href="/de/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
+        <a class="rel-card" href="/de/blog/make-qr-code-in-canva-excel-word/"><b>So erstellst du einen QR-Code in Canva, Excel oder Word (kostenlos)</b></a>
+        <a class="rel-card" href="/de/blog/why-is-my-qr-code-blurry/"><b>Warum ist mein QR-Code unscharf? 5 Lösungen, die funktionieren</b></a>
+        <a class="rel-card" href="/de/blog/get-google-reviews-with-qr-code/"><b>So bekommst du mehr Google-Bewertungen mit einem QR-Code</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Gut zu wissen</h2>
     <details><summary><span>Was zählt als unique Scan?</span></summary><p>Ein Scanner, einmal pro Tag. FreeQrly zählt unterschiedliche Scanner über einen Einweg-Hash aus IP-Adresse, Browser und Datum — dieselbe Person, die zweimal am Tag scannt, zählt einmal.</p></details>
-    <details><summary><span>Tracken statische QR-Codes Scans?</span></summary><p>Nein. Statische Codes berühren nie einen Server — das Ziel lebt im Muster —, also gibt es nichts zu zählen. Nur dynamische Codes melden Scans.</p></details>
+    <details><summary><span>Tracken statische QR-Codes Scans?</span></summary><p>Nein. Statische Codes berühren nie einen Server – das Ziel lebt im Muster –, es gibt also nichts zu zählen. Nur dynamische Codes melden Scans.</p></details>
     <details><summary><span>Sind Besucherdaten privat?</span></summary><p>Ja. Nur Aggregate: Zahlen nach Tag, Land, Stadt, Gerät und Betriebssystem. Keine Namen, E-Mails, exakte Standorte oder Datensätze pro Besucher. Unique Scans nutzen einen nicht umkehrbaren Hash.</p></details>
-    <details><summary><span>Kann ich sehen, wer meinen QR-Code gescannt hat?</span></summary><p>Nein — und das ist Absicht. FreeQrly zählt Scans; es identifiziert keine Scanner.</p></details>
+    <details><summary><span>Kann ich sehen, wer meinen QR-Code gescannt hat?</span></summary><p>Nein – und das ist Absicht. FreeQrly zählt Scans; es identifiziert keine Scanner. Ein Scan trägt keine Identität, wenn eine Entscheidung also wissen muss, wer reagiert hat, lege ein Formular hinter den Code und lass Leute sich dort freiwillig identifizieren.</p></details>
+    <details><summary><span>Warum zeigt ein Code weit mehr Gesamt-Scans als eindeutige Scans?</span></summary><p>Weil dieselben Leute wiederholt scannen. Eine Summe, die weit vor der eindeutigen Zahl liegt, passt zu einem Code, den Stammkunden sehen, etwa einem Tresenschild oder einer Speisekarte; eine Summe nah an der eindeutigen Zahl passt zu einem Code, den meist Passanten sehen. Vergleiche die zwei Zahlen zusammen – allein verbirgt „gesamt“ wiederholte Nutzung.</p></details>
+    <details><summary><span>Mein Code zeigt null Scans – ist er kaputt?</span></summary><p>Nicht unbedingt. Teste zuerst den Druck mit deinem eigenen Handy: Wenn er scannt, ist das Problem Platzierung, Größe, Kontrast oder das Fehlen eines Scan-Grunds, in dieser Reihenfolge. Null Scans über eine Woche sind Daten über die Platzierung, kein Beweis, dass der Code versagt hat. Wenn er nicht scannt, prüfe Schaden, Kontrast und Größe, bevor du irgendetwas über das Publikum schließt.</p></details>
+    <details><summary><span>Wie vergleiche ich zwei Platzierungen fair?</span></summary><p>Gib jeder Platzierung ihren eigenen dynamischen Code, der auf dasselbe Ziel zeigt, lass sie über denselben Zeitraum durch dieselben Wochentage und Wochenenden laufen und entscheide die Handlung, bevor du schaust – was du tun wirst, wenn einer den anderen übertrifft. Notiere alles andere, was in dieser Woche passiert ist, etwa einen Post, der rausging, neben dem Diagramm.</p></details>
+    <details><summary><span>Warum zitiert dieser Beitrag so wenige externe Statistiken?</span></summary><p>Weil eine externe Zahl nur mit ihrer Messgröße, ihrer Bevölkerung und ihrem Datum dazu nutzbar ist. Dieser Beitrag zitiert zwei Zahlen, die mit allen dreien von ihren Originalverlagen kommen – die ISO-QR-Fehlerkorrekturstufen und Pews US-Smartphone-Umfrage –, und stützt sich für den Rest auf dein eigenes Dashboard. Eine Zahl, die aus zweiter Hand getragen wird, ihrer Methode beraubt, wird hier aus Entscheidungen herausgelassen.</p></details>
     </section>
   </article>
   <footer>

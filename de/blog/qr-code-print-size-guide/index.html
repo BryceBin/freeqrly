@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"QR-Code-Druckgrößen-Leitfaden: Von Visitenkarten bis Plakaten | FreeQrly","description":"Wie groß sollte ein gedruckter QR-Code sein? Mindestgrößen für Visitenkarten, Flyer und Plakate — plus die 1:10-Abstandsregel, Auflösung und Ruhezonen-Regeln, die Codes scanbar halten.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"QR-Code-Druckgrößen-Leitfaden: Von Visitenkarten bis Plakaten | FreeQrly","description":"Wie groß sollte ein gedruckter QR-Code sein? Mindestgrößen für Visitenkarten, Flyer und Plakate — plus die 1:10-Abstandsregel, Auflösung und Ruhezonen-Regeln, die Codes scanbar halten.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "Was ist die Mindestgröße für einen gedruckten QR-Code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Als Faustregel: 2 × 2 cm. Kleinere Codes versagen auf vielen Handys, besonders bei datenlastigen Codes wie vCards."
+        "text": "Als Faustregel 2 × 2 cm (0,8 × 0,8 Zoll). Kleinere Codes versagen auf vielen Handys, besonders bei datenreichen Codes wie vCards."
       }
     },
     {
@@ -80,7 +80,47 @@
       "name": "PNG oder SVG für den Druck?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SVG ist am besten — es skaliert unendlich ohne Qualitätsverlust. Wenn dein Drucker Raster braucht, exportiere PNG mit 2048 px."
+        "text": "SVG ist am besten – es skaliert unendlich ohne Qualitätsverlust. Wenn dein Drucker Raster braucht, exportiere PNG mit 2048 px. Nie JPG nutzen: Seine Komprimierung verwischt die Modulkanten, von denen ein Scanner abhängt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viel Rand braucht ein QR-Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine Ruhezone von mindestens 4 Modulen Breite auf jeder Seite, in derselben hellen Farbe wie der Code-Hintergrund, wie in ISO/IEC 18004 festgelegt. Bei einem 2-cm-Code mit 29 Modulen quer sind das etwa 2,8 mm ringsum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie rechne ich die Größe für eine Scandistanz aus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teile die Distanz durch zehn und runde auf, nie unter das 2-cm-Minimum. Ein Code, der aus 2 Metern gescannt wird, braucht mindestens 20 cm; aus 10 Metern mindestens 1 Meter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Braucht eine längere URL einen größeren Druck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Mehr Daten bedeuten mehr Module, und mehr Module bei derselben Druckgröße bedeuten kleinere Module, die schwerer zu lesen sind. Nutze eine kurze, saubere URL oder einen dynamischen Code, dessen kurzen Redirect du nach dem Druck bearbeiten kannst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Größe sollte ein QR-Code auf einem Bildschirm haben?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Als Faustregel nicht unter etwa 200 × 200 Pixel. Bei Folien und projizierten Anzeigen wende das 1:10-Verhältnis auf die projizierte Breite und die Distanz des entferntesten Zuschauers an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum versagt mein gedruckter Code, wenn die Bildschirmversion scannt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Häufige Ursachen sind eine beschnittene Ruhezone, Blendung auf Glanzlaminat, Tintenverlauf auf strukturiertem Material, ein gestrecktes Raster oder ein PNG, das mit Glättung hochskaliert wurde. Proof ein Exemplar in endgültiger Größe, auf endgültigem Material, und scanne es mit mehr als einem Handy vor der vollen Auflage."
       }
     }
   ]
@@ -98,42 +138,128 @@
     <div class="kicker" style="text-align:center">Feldnotizen</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Wie <span class="hl hl-mint">groß</span> sollte ein gedruckter QR-Code sein?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Die kurze Antwort: mindestens 2×2 cm, bei 300 dpi, mit einem klaren Rand. Die längere Antwort — mit der Abstands-Faustregel, die Drucker wirklich nutzen — steht unten.</p>
-    <p class="meta" style="text-align:center">14. Oktober 2026 · 4 Min. Lesezeit</p>
+    <p class="meta" style="text-align:center">14. Oktober 2026 · Zuletzt aktualisiert: 3. November 2026 · 14 Min. Lesezeit</p>
     <div class="prose" style="margin-top:40px">
+<p>Die kurze Antwort: mindestens 2 × 2 cm, mit 300 dpi, mit einem klaren Rand. Die längere Antwort – die, die ein Plakat von der anderen Raumseite aus scanbar hält und eine Visitenkarte aus Handschlag-Distanz – sind zwei Faustregeln plus eine Tabelle. Regel eins: Nie einen Code kleiner als 2 × 2 cm (0,8 × 0,8 Zoll) drucken. Regel zwei: Die Codebreite sollte mindestens ein Zehntel der Scandistanz betragen. Ein Code, der aus 50 cm gescannt wird, braucht einen 5-cm-Code; ein Plakat, das aus 5 Metern gescannt wird, braucht einen 50-cm-Code. Alles unten arbeitet diese zwei Regeln für jede Fläche aus, auf die du wahrscheinlich druckst, plus die Format-, Rand- und Proof-Details, die entscheiden, ob die Größe tatsächlich funktioniert.</p>
 
 <h2>Die zwei Regeln, die zählen</h2>
-<p><b>Faustregel 1 — Mindestgröße:</b> 2 × 2 cm. Darunter können Handykameras die Module nicht zuverlässig auflösen, besonders bei Codes mit vielen Daten wie vCards.</p>
-<p><b>Faustregel 2 — das 1:10-Abstandsverhältnis:</b> Die Code-Breite sollte mindestens ein Zehntel der Scan-Distanz sein. Scannen aus 50 cm (eine Tischkarte)? 5-cm-Code. Aus 5 Metern (ein Poster)? 50-cm-Code. Drucker und Beschilderungsleute nutzen dieses Verhältnis als Faustregel.</p>
-<h2>Spickzettel nach Einsatzfall</h2>
-<table>
-<tr><th>Anwendungsfall</th><th>Mindestgröße</th><th>Hinweise</th></tr>
-<tr><td>Visitenkarten</td><td>2x2 cm</td><td>Vom Kartenrand freihalten. Siehe den <a href="/de/business-card-qr-code/">Visitenkarten-Generator</a>.</td></tr>
-<tr><td>Flyer und Speisekarten</td><td>3x3 cm</td><td>Diese werden aus Armlänge gescannt.</td></tr>
-<tr><td>Tischaufsteller</td><td>4–5 cm</td><td>Gäste scannen von ihren Plätzen aus.</td></tr>
-<tr><td>Plakate</td><td>Verhältnis 1:10</td><td>Ein 50-cm-Code lässt sich aus 5 Metern scannen.</td></tr>
-<tr><td>Verpackungen</td><td>2x2 cm</td><td>Gekrümmte Flächen vermeiden, die das Muster verzerren.</td></tr>
-<tr><td>Codes mit Logo</td><td>3x3 cm</td><td>Das Logo unter etwa 30 % der Codefläche halten.</td></tr>
-</table>
-<h2>Auflösung: groß exportieren</h2>
-<p>Druck braucht 300 dpi. Ein 2-cm-Code bei 300 dpi sind nur ~240 px — aber immer größer exportieren und den Designer runterskalieren lassen: <b>PNG mit 1024 oder 2048 px</b> oder <b>SVG</b>, das unendlich skalierbar ist und die beste Wahl für professionellen Druck. FreeQrly exportiert beides, kostenlos.</p>
-<h2>Die Ruhezone nicht vergessen</h2>
-<p>Lass einen leeren Rand um den Code, <a href="http://www.iso.org/standard/83389.html">mindestens 4 Module breit</a> auf jeder Seite, wie in ISO/IEC 18004 festgelegt. Ihn mit Text oder Grafiken zuzupacken, ist einer der Hauptgründe, warum Codes versagen — mehr in <a href="/de/blog/why-is-my-qr-code-not-working/">Warum sich dein Code nicht scannen lässt</a>.</p>
-<h2>Logo in der Mitte? Größer gehen</h2>
-<p>Ein <a href="/de/qr-code-with-logo/">Logo in der Mitte</a> frisst sich ins Muster, also gib ihm Raum: mindestens 3×3 cm im Druck, und halt das Logo als Faustregel unter ~30 % der Code-Fläche.</p>
 
+<p><strong>Faustregel 1 – Mindestgröße:</strong> 2 × 2 cm (0,8 × 0,8 Zoll). Darunter können Handykameras die Module nicht zuverlässig auflösen, besonders bei Codes mit vielen Daten wie vCards. Das ist ein praktisches Minimum für nahes Scannen aus der Hand, keine Garantie: Ein dichter Code mit 2 cm ist weit zerbrechlicher als ein Kurz-URL-Code bei derselben Größe, und ältere Handys brauchen mehr Raum als neue.</p>
+
+<p><strong>Faustregel 2 – das 1:10-Distanzverhältnis:</strong> Die Codebreite sollte mindestens ein Zehntel der Scandistanz betragen. Scannen aus 50 cm (eine Tischkarte)? 5-cm-Code. Aus 5 Metern (ein Plakat)? 50-cm-Code. Drucker und Beschilderungsleute nutzen dieses Verhältnis als Faustregel – es ist eine Planungsrichtlinie, kein Teil des QR-Standards selbst –, und die sichere Gewohnheit ist, auf- statt abzurunden, denn Distanz, Licht und Blendung zehren alle am Sicherheitsspielraum.</p>
+
+<p>Diese zwei Regeln wirken zusammen. Das 1:10-Verhältnis kann weniger als das 2-cm-Minimum verlangen – ein Code, der aus 15 cm gescannt wird, bräuchte nach dem Verhältnis nur 1,5 cm –, und in diesem Fall gewinnt das Minimum: trotzdem 2 cm drucken.</p>
+
+<h2>Spickzettel nach Einsatzfall</h2>
+
+<div class="table-scroll"><table>
+<tr><th>Anwendungsfall</th><th>Typische Scandistanz</th><th>Mindestgröße</th><th>Hinweise</th></tr>
+<tr><td>Visitenkarten</td><td>20–25 cm, in der Hand</td><td>2 × 2 cm</td><td>Halte ihn frei vom Kartenrand. Siehe den <a href="/de/business-card-qr-code/">Visitenkarten-Generator</a>.</td></tr>
+<tr><td>Flyer und Speisekarten</td><td>30–40 cm, Armlänge</td><td>3 × 3 cm</td><td>Leute scannen diese aus Armlänge; geh auf 4 cm für dichte Codes.</td></tr>
+<tr><td>Tischaufsteller</td><td>30–50 cm, vom Sitzplatz aus</td><td>4–5 cm</td><td>Gäste scannen von ihren Plätzen aus, oft bei schwachem Licht – größer wählen.</td></tr>
+<tr><td>Belege und Tickets</td><td>20–30 cm, in der Hand</td><td>2–3 cm</td><td>Thermodruck verwischt feine Details; nutze eine kurze URL und teste auf dem tatsächlichen Drucker.</td></tr>
+<tr><td>Verpackungen und Etiketten</td><td>20–30 cm, in der Hand</td><td>2 × 2 cm</td><td>Gewölbte Flächen vermeiden, die das Muster verzerren; ein flaches Feld nutzen.</td></tr>
+<tr><td>Codes mit einem Logo</td><td>Wie die schlichte Version oder näher</td><td>3 × 3 cm</td><td>Halte das Logo unter etwa 30 % der Codefläche. Vollständige Anleitung: <a href="/de/blog/add-logo-to-qr-code/">Einem QR-Code ein Logo hinzufügen</a>.</td></tr>
+<tr><td>Plakate (A3/A2, an einer Wand)</td><td>1–1,5 m</td><td>10–15 cm</td><td>Größe nach dem 1:10-Verhältnis; prüfe die Betrachtungsdistanz im tatsächlichen Raum.</td></tr>
+<tr><td>Schaufenster und Anschlagtafeln</td><td>2–3 m</td><td>20–30 cm</td><td>Auf Glasblendung achten; von draußen testen.</td></tr>
+<tr><td>Outdoor-Beschilderung und Banner</td><td>5 m und mehr</td><td>50 cm und mehr</td><td>Frag dich, ob Leute wirklich aus dieser Entfernung scannen werden – ein kleineres Schild näher am Gehweg funktioniert oft besser.</td></tr>
+<tr><td>Folien und Bildschirme</td><td>Armlänge bis mehrere Meter</td><td>Mindestens 200 × 200 px; mit der Distanz skalieren</td><td>Bei einer projizierten Folie das 1:10-Verhältnis auf die projizierte Breite anwenden, nicht auf die Dateigröße.</td></tr>
+</table></div>
+
+<p>Zwei Warnungen gelten für die ganze Tabelle. Erstens: Die Größen gelten für den Code selbst; die Ruhezone kommt obendrauf, der gesamte Fußabdruck ist also größer. Zweitens: Wähle größer, wann immer der Code viele Daten trägt, ein Logo trägt oder bei schlechtem Licht gescannt wird.</p>
+
+<h2>Die Distanzregel, durchgerechnet</h2>
+
+<p>Um eine Größe auszurechnen, teile die Distanz, aus der Leute scannen werden, durch zehn und runde dann auf – und nie unter das 2-cm-Minimum. Ein paar durchgerechnete Beispiele machen die Gewohnheit automatisch:</p>
+
+<div class="table-scroll"><table>
+<tr><th>Scandistanz</th><th>Distanz ÷ 10</th><th>Mindestens drucken</th></tr>
+<tr><td>30 cm (ein Flyer in der Hand)</td><td>3 cm</td><td>3 cm</td></tr>
+<tr><td>50 cm (eine Tischkarte)</td><td>5 cm</td><td>5 cm</td></tr>
+<tr><td>1 m (ein Wandplakat)</td><td>10 cm</td><td>10 cm</td></tr>
+<tr><td>2 m (ein Plakat an einer Bushaltestelle)</td><td>20 cm</td><td>20 cm</td></tr>
+<tr><td>5 m (ein Schild über einen Parkplatz hinweg)</td><td>50 cm</td><td>50 cm</td></tr>
+<tr><td>10 m (eine Plakatwand)</td><td>100 cm</td><td>1 m</td></tr>
+</table></div>
+
+<p>Die zu nutzende Distanz ist die Distanz, in der Leute tatsächlich stehen werden, nicht die Distanz, die du dir wünschst. Ein Plakat in einem Flur wird aus der Flurbreite gescannt; ein Schild über einen Parkplatz hinweg wird von dort gescannt, wo Leute gehen, nicht vom fernen Zaun aus.</p>
+
+<h2>Warum Datendichte die Antwort verändert</h2>
+
+<p>Nicht alle QR-Codes haben dieselbe Modulzahl. Je mehr Daten du hineinsteckst, desto mehr Module braucht der Code: Der kleinste Code (Version 1) ist 21 × 21 Module, und jede Version mehr fügt vier Module pro Seite hinzu, bis maximal 177 × 177. Bei derselben Größe gedruckt, hat ein dichterer Code kleinere Module, und kleinere Module sind für eine Kamera schwerer zu trennen – besonders bei schlechtem Licht.</p>
+
+<p>Die Fehlerkorrektur fügt denselben Kompromiss hinzu. Höhere Stufen sind robuster, was für Codes mit einem Logo oder auf Flächen nützlich ist, die zerkratzt werden könnten, aber sie fügen auch Module hinzu. Als grobes Beispiel passt eine 40-Zeichen-Webadresse in einen 29 × 29-Code auf Stufe M, braucht aber 37 × 37 auf Stufe H; auf einem 2-cm-Code schrumpft das jedes Modul von etwa 0,69 mm auf etwa 0,54 mm. Die praktische Lehre: Halte den Inhalt kurz. Nutze eine kurze, saubere URL statt eines langen Tracking-Links, nimm nur die vCard-Felder auf, die du wirklich brauchst, und wenn ein kleines gedrucktes Stück viel halten muss, mach den Code größer. Ein dynamischer Code hilft anders: Sein Ziel ist nach dem Druck änderbar, du kannst also einmal einen kurzen Redirect drucken und später ändern, wohin er zeigt, statt eine lange URL zu codieren, die ein dichtes Raster erzwingt – und er trägt Scan-Statistiken, sodass du sehen kannst, ob die Größe, die du gewählt hast, tatsächlich gescannt wird.</p>
+
+<h2>Auflösung: groß exportieren</h2>
+
+<p>Druck braucht 300 dpi. Ein 2-cm-Code bei 300 dpi ist nur etwa 240 px – aber exportiere immer größer und lass den Designer herunterskalieren: <strong>PNG mit 1024 oder 2048 px</strong> oder <strong>SVG</strong>, das unendlich skalierbar ist und die beste Wahl für professionellen Druck. FreeQrly exportiert beides, kostenlos. Die Pixel-Mathe ist einfach: Teile die Pixelbreite eines PNG durch 300, um seine maximale Druckbreite in Zoll zu erhalten, und multipliziere mit 2,54 für Zentimeter. Ein 600-px-Bild ergibt 2 Zoll, etwa 5 cm, bei 300 dpi – gut für eine Tischkarte, viel zu klein für ein Plakat. Ein 2048-px-Bild ergibt etwa 17 cm bei 300 dpi, was Flyer, Speisekarten und kleine Plakate abdeckt, aber kein Schaufenster; dafür nutze SVG.</p>
+
+<p>Bei sehr großen Formaten, die aus der Distanz betrachtet werden, akzeptieren Drucker üblicherweise niedrigere effektive Auflösungen – etwa 150 dpi ist ein brauchbarer Richtwert für große Plakate –, weil das Auge aus Metern Entfernung feine Details nicht auflösen kann. Zwei Formatregeln biegen sich nicht mit der Größe. Vermeide JPG für QR-Codes: Seine Komprimierung verwischt die scharfen Modulkanten, von denen ein Scanner abhängt. Wenn du ein PNG vergrößern musst, nutze Nearest-Neighbour-Skalierung (manchmal „harte Kanten“ oder „ohne Glättung“ genannt) um eine ganze Zahl wie 2×, 3× oder 4×, was jedes Modul als scharfen Block hält statt als weiche Unschärfe. Noch besser: Importiere das SVG und exportiere in der benötigten Auflösung neu, statt ein kleines PNG zu strecken.</p>
+
+<h2>Die Ruhezone nicht vergessen</h2>
+
+<p>Lass einen leeren Rand um den Code, <a href="http://www.iso.org/standard/83389.html">mindestens 4 Module breit</a> auf jeder Seite, wie in ISO/IEC 18004 festgelegt. Ihn mit Text oder Grafiken zu bedrängen, ist einer der Hauptgründe, warum Codes versagen – mehr dazu in <a href="/de/blog/why-is-my-qr-code-not-working/">Warum dein Code nicht scannt</a>. Ein Modul ist ein kleines Quadrat des Rasters, der physische Rand hängt also vom Code ab: Zähle die Quadrate quer über deinen Code, rechne aus, wie breit ein Modul ist, und lass vier dieser Breiten auf jeder Seite frei. Bei einem 2-cm-Code mit 29 Modulen quer ist ein Modul etwa 0,7 mm, du brauchst also etwa 2,8 mm Freiraum ringsum – und dieser Rand muss dieselbe helle Farbe haben wie der Code-Hintergrund, kein Rahmen, keine Beschnittmarke und kein Falz.</p>
+
+<p>Die Ruhezone ist auch der Ort, an dem Layout-Software dich leise sabotiert. Ein Design-Tool, das ein Bild auf sein sichtbares Muster zuschneidet, ein Drucker-Beschnitt, der den Rand wegtrimmt, oder ein Rahmen, der eng um den Code gezogen wird, können den Rand jeweils fressen, nachdem du ihn richtig gesetzt hast. Prüfe den Rand auf der endgültigen Druckvorlage, nicht nur im Generator, und denk daran, dass der Rand Teil des Fußabdrucks ist – ein 2-cm-Code mit seiner Ruhezone braucht mehr als 2 cm Freiraum auf der Karte.</p>
+
+<h2>Auf Bildschirmen: Pixel statt Zentimeter</h2>
+
+<p>Druckgrößen lassen sich nicht direkt auf Bildschirme übertragen, denn die physische Größe eines Bildschirms variiert. Die Arbeits-Faustregel für Bildschirmanzeige ist, nicht unter etwa 200 × 200 Pixel zu gehen, wobei mehr besser ist – Leute halten ihre Handys beim Scannen meist auf Armlänge, und ein kleiner Code auf dem Bildschirm konkurriert mit Blendung und Raumlicht. Bei Folien und projizierten Anzeigen übernimmt die Distanzregel: Schätze, wie weit der entfernteste Zuschauer sitzt, teile durch zehn und mache den projizierten Code mindestens so breit. Ein Code, der auf deinem Laptop großzügig aussieht, kann an einer Hallenwand winzig sein.</p>
+
+<h2>Materialien und Flächen: Wo gute Größen schiefgehen</h2>
+
+<p>Größe ist nur ein Teil eines zuverlässigen gedruckten Codes, und die Fläche kann eine perfekte Größe zunichtemachen. Glänzende Laminate verursachen Blendung; eine matte Oberfläche ist für Schilder und Speisekarten meist sicherer, und ein Tisch-Code unter einem Restaurant-Spot sollte unter diesem Spot getestet werden, nicht unter Büroleuchten. Gewölbte Flächen verzerren das Raster – ein Code, der sich um eine kleine Flasche wickelt, liest sich schlechter als derselbe Code flach, nutze also ein flaches Feld oder drucke größer. Strukturierte Karten und Thermobelegpapier verwischen feine Details, weshalb Belege kurze URLs und einen Test auf dem tatsächlichen Drucker brauchen. Auf dunklem Material drucke den Code auf ein weißes Feld. Draußen größer drucken und eine höhere Fehlerkorrekturstufe nutzen.</p>
+
+<h2>Häufige Druckfehler</h2>
+
+<ul>
+<li><strong>Zu klein gedruckt.</strong> Der Code sieht in der Design-Datei gut aus und versagt in der Hand, weil jedes Modul einen Bruchteil eines Millimeters breit ist. Größer wählen oder den Inhalt kürzen.</li>
+<li><strong>Gestreckt oder gestaucht.</strong> Das Ziehen an einer Ecke ohne gesperrte Proportionen verzerrt die Suchmuster – die drei großen Eckquadrate, mit denen Scanner den Code finden.</li>
+<li><strong>Aus einem kleinen, unscharfen PNG hochskaliert.</strong> Normale Glättung macht aus scharfen Kanten graue Unschärfe. Nutze SVG oder Nearest-Neighbour-Skalierung.</li>
+<li><strong>Beschnittene Ruhezone.</strong> Text, Ränder oder ein enger Beschnitt, der in den Rand läuft, hindert den Scanner daran, die Kanten des Codes zu finden.</li>
+<li><strong>Niedriger Kontrast.</strong> Markenfarben, die auf dem Bildschirm elegant aussehen, können im Druck versagen, wo Tinte und Papier die Töne verschieben. Dunkler Code auf hellem Hintergrund, immer – und den gedruckten Proof prüfen.</li>
+<li><strong>Logo zu groß für die Druckgröße.</strong> Ein Logo-Code braucht im Druck ein Minimum von 3 × 3 cm, nicht 2 × 2 cm, und das Logo sollte unter etwa 30 % der Codefläche bleiben. Der <a href="/de/blog/add-logo-to-qr-code/">Logo-Leitfaden</a> behandelt den Kompromiss.</li>
+<li><strong>Nie geprooft.</strong> Der teuerste Fehler, denn er verwandelt jeden Punkt oben von einem behebbaren Detail in einen Neudruck.</li>
+</ul>
+
+<h2>Preflight-Checkliste, bevor du die Datei schickst</h2>
+
+<ol>
+<li><strong>Format:</strong> SVG für professionellen Druck und alles Große; PNG mit 1024 oder 2048 px, wenn der Drucker Raster braucht, nie JPG.</li>
+<li><strong>Größe:</strong> das Größere aus dem 2-cm-Minimum und Distanz ÷ 10, aufgerundet, geprüft anhand der echten Scandistanz.</li>
+<li><strong>Dichte:</strong> kurze URL, nur die benötigten Felder und ein größerer Druck, wenn das Raster dicht aussieht.</li>
+<li><strong>Ruhezone:</strong> mindestens vier Module klarer, heller Rand auf allen vier Seiten, auf der endgültigen Druckvorlage bestätigt.</li>
+<li><strong>Kontrast:</strong> dunkle Module auf hellem Hintergrund, auf dem gedruckten Proof verifiziert, nicht nur auf dem Bildschirm.</li>
+<li><strong>Oberfläche und Material:</strong> matt, wo Blendung ein Risiko ist, flache Felder auf gewölbten Objekten, ein weißes Feld auf dunklem Material.</li>
+<li><strong>Proof:</strong> ein Exemplar in endgültiger Größe, auf endgültigem Material, gescannt mit mehr als einem Handy bei dem Licht, in dem es genutzt wird, plus eine Prüfung, ob sich das Ziel über mobile Daten öffnet.</li>
+</ol>
+
+<h2>Der ehrliche Vergleich: Druck vs. Bildschirm, statisch vs. dynamisch</h2>
+
+<p>Druck und Bildschirm belohnen entgegengesetzte Gewohnheiten. Auf dem Bildschirm lässt sich ein Code in Sekunden neu generieren und sofort testen, ein kleiner oder experimenteller Code kostet also nichts zu reparieren. Im Druck ist jede Reparatur ein Neudruck, weshalb Druck die konservativen Entscheidungen verlangt: SVG statt PNG, die größere Größe, die volle Ruhezone, der Proof-Scan. Eine Druckdatei wie eine Bildschirmdatei zu behandeln – klein exportieren, eng zuschneiden, den Proof auslassen – macht aus guten Designs tote Quadrate auf einer fertigen Auflage.</p>
+
+<p>Die Statisch-vs.-Dynamisch-Wahl zählt im Druck aus einem anderen Grund: was nach der Auflage passiert. Ein statischer Code codiert sein Ziel direkt, braucht keine Anmeldung, trägt kein Wasserzeichen und läuft nie ab – ideal für ein festes Ziel wie eine Homepage oder ein Produkthandbuch. Ein dynamischer Code codiert einen Redirect, sein Ziel lässt sich also nach dem Druck bearbeiten und er trägt Scan-Statistiken; das ist die richtige Wahl, wenn sich das Ziel ändern könnte oder wenn du wissen musst, ob die Größe und Platzierung, die du gewählt hast, funktionieren. Was ein dynamischer Code nicht kann, ist, einen schlecht bemessenen Druck zu retten: Das Bearbeiten des Ziels repariert keine Module, die zu klein zum Lesen sind. Bemale den Druck zuerst richtig.</p>
+
+<p>Ein weiterer Vergleich lohnt es sich, klar auszusprechen, denn er entscheidet Budgets: Ein größerer Code ist fast gratis, und ein Neudruck ist es nicht. Von 2 cm auf 3 cm auf einer Visitenkarte zu gehen, kostet im Druck nichts; tausend Karten neu zu drucken, kostet die ganze Auflage. Wenn die Größenentscheidung knapp ist, ist die größere Größe fast immer die günstigere Wahl – und ein Code mit unbegrenzten Scans dahinter bleibt nützlich, egal wie beliebt er wird.</p>
+
+<p>Mach deinen im <a href="/de/qr-code-with-logo/">kostenlosen Generator</a> – einer der 17 Typen, PNG bis zu 2048 px oder SVG, statische Codes ohne Anmeldung und ohne Ablauf oder ein kostenloser dynamischer Code, den du nach dem Druck bearbeiten kannst. Wenn der Code dein Logo trägt, lies zuerst den <a href="/de/blog/add-logo-to-qr-code/">Logo-Leitfaden</a>: Ein Logo-Code braucht das größere Minimum, das diese Tabelle schon voraussetzt.</p>
     </div>
 
     <section class="sources">
       <h2>Quellen</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> – Die QR-Code-Symbologiespezifikation. Definiert die vier Fehlerkorrekturstufen (L 7 %, M 15 %, Q 25 %, H 30 %) und die 4-Module-Ruhezone.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> – Die Spezifikation der QR-Code-Symbologie, veröffentlicht 2024-08 (Ausgabe 4). Belegt die vier Fehlerkorrekturstufen (L 7 %, M 15 %, Q 25 %, H 30 %) und die Ruhezone von 4 Modulen.</li>
+      <li><a href="https://www.qrcodebarn.com/blog/qr-code-size-guide.html">QRCodeBarn — QR Code Size Guide: How to Resize a QR Code Properly</a> – Veröffentlicht am 13. Oktober 2026. Belegt das praktische Minimum von 2 cm, die Distanz-÷-10-Faustregel mit durchgerechneten Beispielen, die Ruhezone von 4 Modulen (2,8 mm bei einem 2-cm-Code mit 29 Modulen), 300-DPI-Raster-Richtlinien, die Prüfung 600 px = etwa 5 cm bei 300 DPI und das Beispiel 29 × 29 zu 37 × 37 Stufe M/H.</li>
+      <li><a href="https://www.adobe.com/uk/creativecloud/photography/discover/image-resolution.html">Adobe — What Does Resolution Mean? Image Resolution Guide</a> – Kein Veröffentlichungsdatum auf der Seite angegeben; abgerufen am 2026-11-03. Belegt 300 DPI als Minimum für beste Druckergebnisse und 150 DPI als brauchbar für große Drucke, die aus der Distanz betrachtet werden.</li>
+      <li><a href="https://pretty-qr.com/blog/qr-design-best-practices">Pretty QR — QR Code Design Rules: 10 Rules for Beautiful Codes That Still Scan</a> – Kein Veröffentlichungsdatum auf der Seite angegeben; abgerufen am 2026-11-03. Belegt das Druckminimum von 2 cm, Scandistanz ÷ 10, die Ruhezone von 4 Modulen und das Minimum von 200 × 200 px für Bildschirme.</li>
+      <li><a href="https://www.notraqr.com/qr-codes-technical.html">NoTraQR — QR Code Technical Guide: Error Correction, File Formats and Barcode Comparison</a> – Kein Veröffentlichungsdatum auf der Seite angegeben; abgerufen am 2026-11-03. Belegt die Fehlerkorrektur-Tabelle, die 2-cm-/3-cm-Faustregeln, D/10-Bemessung und das Testen auf mindestens zwei Geräten (iOS und Android).</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly präsentiert einen QR-Code"></div>
       <div>
         <h3>Probier's selbst aus — kostenlos</h3>
-        <p>Alles in diesem Artikel funktioniert jetzt im FreeQrly-Studio. Statische Codes, dreizehn Inhaltstypen, PNG- und SVG-Export.</p>
+        <p>Alles in diesem Artikel funktioniert im FreeQrly-Studio genau jetzt. Statische Codes, alle 17 Inhaltstypen, PNG- und SVG-Export.</p>
         <a class="btn" href="/de/#studio">Studio öffnen</a>
       </div>
     </div>
@@ -141,15 +267,20 @@
       <div class="fl" style="margin-top:34px">Weiterlesen</div>
       <div class="rel-grid">
         <a class="rel-card" href="/de/blog/free-qr-codes-that-dont-expire/"><b>Kostenlose QR-Codes, die nie ablaufen</b></a>
-        <a class="rel-card" href="/de/blog/scan-qr-code-from-image/"><b>How to Scan a QR Code from a Picture, Photo, or Screenshot</b></a>
-        <a class="rel-card" href="/de/blog/wedding-rsvp-qr-code/"><b>Wedding RSVP QR Codes: No More Chasing Replies</b></a>
+        <a class="rel-card" href="/de/blog/scan-qr-code-from-image/"><b>So scannst du einen QR-Code aus einem Bild, Foto oder Screenshot</b></a>
+        <a class="rel-card" href="/de/blog/wedding-rsvp-qr-code/"><b>QR-Codes für Hochzeits-RSVP: Kein Hinterherlaufen mehr nach Antworten</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Gut zu wissen</h2>
-    <details><summary><span>Was ist die Mindestgröße für einen gedruckten QR-Code?</span></summary><p>Als Faustregel: 2 × 2 cm. Kleinere Codes versagen auf vielen Handys, besonders bei datenlastigen Codes wie vCards.</p></details>
+    <details><summary><span>Was ist die Mindestgröße für einen gedruckten QR-Code?</span></summary><p>Als Faustregel 2 × 2 cm (0,8 × 0,8 Zoll). Kleinere Codes versagen auf vielen Handys, besonders bei datenreichen Codes wie vCards.</p></details>
     <details><summary><span>Wie groß sollte ein QR-Code auf einem Poster sein?</span></summary><p>Nutze die 1:10-Faustregel: Die Code-Breite sollte mindestens ein Zehntel der erwarteten Scan-Distanz sein. Ein Poster, das aus 5 Metern gescannt wird, braucht einen 50-cm-Code.</p></details>
-    <details><summary><span>PNG oder SVG für den Druck?</span></summary><p>SVG ist am besten — es skaliert unendlich ohne Qualitätsverlust. Wenn dein Drucker Raster braucht, exportiere PNG mit 2048 px.</p></details>
+    <details><summary><span>PNG oder SVG für den Druck?</span></summary><p>SVG ist am besten – es skaliert unendlich ohne Qualitätsverlust. Wenn dein Drucker Raster braucht, exportiere PNG mit 2048 px. Nie JPG nutzen: Seine Komprimierung verwischt die Modulkanten, von denen ein Scanner abhängt.</p></details>
+    <details><summary><span>Wie viel Rand braucht ein QR-Code?</span></summary><p>Eine Ruhezone von mindestens 4 Modulen Breite auf jeder Seite, in derselben hellen Farbe wie der Code-Hintergrund, wie in ISO/IEC 18004 festgelegt. Bei einem 2-cm-Code mit 29 Modulen quer sind das etwa 2,8 mm ringsum.</p></details>
+    <details><summary><span>Wie rechne ich die Größe für eine Scandistanz aus?</span></summary><p>Teile die Distanz durch zehn und runde auf, nie unter das 2-cm-Minimum. Ein Code, der aus 2 Metern gescannt wird, braucht mindestens 20 cm; aus 10 Metern mindestens 1 Meter.</p></details>
+    <details><summary><span>Braucht eine längere URL einen größeren Druck?</span></summary><p>Ja. Mehr Daten bedeuten mehr Module, und mehr Module bei derselben Druckgröße bedeuten kleinere Module, die schwerer zu lesen sind. Nutze eine kurze, saubere URL oder einen dynamischen Code, dessen kurzen Redirect du nach dem Druck bearbeiten kannst.</p></details>
+    <details><summary><span>Welche Größe sollte ein QR-Code auf einem Bildschirm haben?</span></summary><p>Als Faustregel nicht unter etwa 200 × 200 Pixel. Bei Folien und projizierten Anzeigen wende das 1:10-Verhältnis auf die projizierte Breite und die Distanz des entferntesten Zuschauers an.</p></details>
+    <details><summary><span>Warum versagt mein gedruckter Code, wenn die Bildschirmversion scannt?</span></summary><p>Häufige Ursachen sind eine beschnittene Ruhezone, Blendung auf Glanzlaminat, Tintenverlauf auf strukturiertem Material, ein gestrecktes Raster oder ein PNG, das mit Glättung hochskaliert wurde. Proof ein Exemplar in endgültiger Größe, auf endgültigem Material, und scanne es mit mehr als einem Handy vor der vollen Auflage.</p></details>
     </section>
   </article>
   <footer>

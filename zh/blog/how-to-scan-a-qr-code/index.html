@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"怎么扫二维码（iPhone 与安卓）| FreeQrly","description":"在 iPhone 和安卓上怎么扫二维码——不用 App。用内置相机、控制中心或 Google Lens，扫不出来时怎么修。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"怎么扫二维码（iPhone 与安卓）| FreeQrly","description":"在 iPhone 和安卓上怎么扫二维码——不用 App。用内置相机、控制中心或 Google Lens，扫不出来时怎么修。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-13","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,15 +64,23 @@
       "name": "扫二维码需要装 App 吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不用。iPhone 和几乎所有安卓手机都用内置相机扫二维码。第三方扫码 App 没必要，而且常常满是广告。<a href=\"https://support.apple.com/en-ca/102680\">Apple 的指南</a>讲了 iPhone 上的相机 App 和扫码器。"
+        "text": "不用。iPhone 和几乎所有安卓手机都用自带相机扫二维码。第三方扫码 App 对标准码来说没必要，只有手机完全没有内置读取功能，或者工作确实需要记录、批量读取时才合理。"
       }
     },
     {
       "@type": "Question",
-      "name": "怎么从截图里扫二维码？",
+      "name": "扫完二维码之后会发生什么？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "iPhone 上，在“照片”里打开截图并长按二维码。安卓上，在 Google Photos 里打开并点 Lens 按钮。"
+        "text": "看码里装的是什么：链接打开网页，Wi-Fi 码提示加入网络，联系人码提示保存一个人，文本码显示文字，活动码提示加入日历。手机的预览会在任何东西打开之前告诉你它是哪一种。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "自己手机屏幕上的二维码怎么扫？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "把码截屏或者把图片保存下来，再从图片里读：iPhone 上在相册里打开，长按码；安卓上在 Google 相册里打开，点 Lens。相机没法对着自己的屏幕拍。"
       }
     },
     {
@@ -80,7 +88,39 @@
       "name": "为什么我的相机扫不出二维码？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "通常是码太小、对比度太低、损坏，或者周围没有静区。擦擦镜头，靠近一点，完整修复清单见我们的故障排查指南。"
+        "text": "按顺序走排查链：整个码入镜、普通拍照界面、扫码开关已打开、对焦稳定、光线好且无反光、镜头干净、角标完整且对比度够、尺寸配得上距离。最后换部手机试试：另一部手机能读出来，问题在你的手机；哪部都读不出来，问题在码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "二维码和条形码有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "二维码是带三个大角标的方形图案，那三个角就是读取器的定位标志。没有这些角标的图案不是二维码，任何二维码读取器都读不了。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的二维码能扫出来，但链接打不开，是码坏了吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。码完成了它的任务，问题在目标——页面搬了家、网站挂了，或者表单已经不存在。找发送者要个新码；如果你是发码人，用一个目标在你掌控之中的码，或者用印后还能改的动态码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "在公共场所扫二维码安全吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "点之前先读预览：域名要跟眼前的牌子对得上，码上没有贴纸覆盖之类的篡改痕迹，而且这个码是你预料它出现在这里的。三项里任何一项没通过，就停下。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印出来的二维码给别人扫之前怎么测？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "测印出来的样张，不只测屏幕上的版本，条件允许就用两部手机测——一部 iPhone、一部安卓——在实际使用的光线和距离下测。在所有这些条件下都读得出来的码，尺寸、对比度、静区就都对了。"
       }
     }
   ]
@@ -90,33 +130,33 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"怎么扫二维码（iPhone 与安卓）| FreeQrly","description":"在 iPhone 和安卓上怎么扫二维码——不用 App。用内置相机、控制中心或 Google Lens，扫不出来时怎么修。","step":[
     {
       "@type": "HowToStep",
-      "name": "把相机对准二维码",
-      "text": "打开内置相机 App，对准二维码，整个方块都要在画面里。"
+      "name": "整个码入镜",
+      "text": "打开自带相机 App，拿着手机让整个方块连同周围的空白边都落在画面里。不要按快门。"
     },
     {
       "@type": "HowToStep",
-      "name": "点通知",
-      "text": "会出现横幅或链接预览——点它打开目标。"
+      "name": "拿稳，等相机对焦",
+      "text": "给相机一秒钟稳定下来；手机一晃，图案就糊了。"
     },
     {
       "@type": "HowToStep",
-      "name": "iPhone 上用内置快捷方式",
-      "text": "打开控制中心，点二维码扫描器图标，或长按相机图标。要扫照片里的码，在“照片”里打开并长按它。"
+      "name": "读预览",
+      "text": "屏幕上会出现链接、网络名称或操作提示。点之前完整读一遍——看域名，不只看开头几个字。"
     },
     {
       "@type": "HowToStep",
-      "name": "安卓上用 Lens 或快捷设置",
-      "text": "用相机或 Google App 里的 Google Lens，或快捷设置里的“扫描二维码”磁贴（三星）。已保存的图片，在 Google Photos 里打开并点 Lens 按钮。"
+      "name": "点开，并回应确认提示",
+      "text": "点开就到了目标页面或触发操作。弹出的任何确认提示，也要像第二道预览一样读一遍。"
     },
     {
       "@type": "HowToStep",
-      "name": "没反应时，修码，不是修手机",
-      "text": "靠近一点，擦擦镜头，检查二维码本身：太小、对比度太低、损坏，或者印在曲面上。看完整故障排查清单。"
+      "name": "什么都没出现，就走排查链",
+      "text": "按顺序检查：整个码入镜、普通拍照界面、扫码开关已打开、对焦稳定、光线好且无反光、镜头干净、角标完整且对比度够、尺寸配得上距离——然后换部手机试试。"
     },
     {
       "@type": "HowToStep",
-      "name": "打开前先看预览",
-      "text": "点之前瞥一眼链接，尤其是在公共场所找到的码——覆盖在真码上的贴纸是已知骗局。"
+      "name": "码已经在自己屏幕上了，就改读图片",
+      "text": "把码截屏，或者把图片保存下来，再从图片里读：iPhone 上在相册里打开，长按码；安卓上在 Google 相册里打开，点 Lens。"
     }
   ]}
 </script>
@@ -132,57 +172,113 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">怎么<span class="hl hl-mint">扫</span>二维码</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">不用 App。每台现代 iPhone 和安卓手机都用自带的相机扫二维码。下面讲怎么做——以及什么反应都没有时怎么办。</p>
-    <p class="meta" style="text-align:center">2026-10-14 · 阅读约 4 分钟</p>
+    <p class="meta" style="text-align:center">2026年10月14日 · 最后更新：2026年11月3日 · 阅读约15分钟</p>
     <div class="prose" style="margin-top:40px">
+<p><strong>一句话答案：把手机相机对准码，等预览出现，读一读，再点。</strong>不用装 App，不用注册账号，不用拍照。所有现代 iPhone 和安卓手机用自带相机就能读二维码，掌握节奏后整件事只要几秒钟：整个码入镜、拿稳、读预览、点开。本指南讲每种码会做什么、手机中途会问你什么、最重要的一条安全习惯，以及什么都没发生时的一串排查步骤。</p>
 
+<p>先认清你眼前的是什么。二维码就是那个带三个大角标的方形图案；那三个角是读取器的定位标志，没有它们的图案根本不是二维码——可能是普通条形码、某个厂商的专属标记或者装饰图案，任何二维码读取器都读不了。真的二维码能装好几种内容，知道自己扫的是哪一种，接下来该期待什么就不一样了。链接打开页面，Wi-Fi 码提示加入网络，联系人码提示保存一个人，文本码显示文字，活动码提示加入日历，支付或票务码打开 App 或结账页面。手机的预览会在任何事情发生之前告诉你它是哪一种。</p>
+
+<h2>扫出来的结果，按码的类型分</h2>
+<div class="table-scroll"><table>
+<tr><th>码里装的是</th><th>看完预览后会发生</th><th>确认之前先核对</th></tr>
+<tr><td>网页链接</td><td>浏览器页面</td><td>域名跟眼前的牌子或发送者对得上</td></tr>
+<tr><td>Wi-Fi 信息</td><td>提示加入网络</td><td>网络名称跟牌子上的一致</td></tr>
+<tr><td>联系人信息</td><td>提示保存联系人</td><td>姓名和单位看起来没问题</td></tr>
+<tr><td>纯文本</td><td>直接显示文字，附带复制选项</td><td>不用确认——直接读就行</td></tr>
+<tr><td>活动</td><td>提示加入日历</td><td>日期、时间和地点跟邀请函一致</td></tr>
+<tr><td>支付或票务</td><td>App、结账页面或核验界面</td><td>商户或活动名称，以及金额</td></tr>
+</table></div>
+
+<h2>从码到目标页面的步骤</h2>
 <ol>
-<li><b>把相机对准二维码</b> 打开内置相机 App，把二维码对准，整个方块都要在画面里。</li>
-<li><b>点通知</b> 会出现横幅或链接预览——点它打开目标。</li>
-<li><b>iPhone 上用内置快捷方式</b> 控制中心的二维码扫描器，或长按相机图标。照片里的码，在“照片”里长按它。</li>
-<li><b>安卓上用 Lens 或快捷设置</b> 相机或 Google App 里的 Google Lens，或快捷设置里的“扫描二维码”磁贴。已保存的图片，用 Google Photos + Lens。</li>
-<li><b>没反应时，修码，不是修手机</b> 靠近一点，擦擦镜头，检查二维码本身：太小、对比度太低、损坏，或者印在曲面上。</li>
-<li><b>打开前先看预览</b> 点之前瞥一眼链接，尤其是在公共场所找到的码。</li>
+<li><strong>整个码入镜。</strong>打开自带相机 App，拿着手机让整个方块连同周围的空白边都落在画面里。不用按快门。如果码被切掉一部分，往后退，直到四个角都看得见。</li>
+<li><strong>拿稳，等相机对焦。</strong>给相机一秒钟稳定下来；手机一晃，图案就糊了。</li>
+<li><strong>读预览。</strong>屏幕上会出现链接、网络名称或操作提示。点之前完整读一遍——看域名，不只看开头几个字。这一步就是安全习惯，下面会细讲。</li>
+<li><strong>点开，并回应确认提示。</strong>点开就到了目标页面；弹出的任何确认提示，也要像第二道预览一样读一遍。</li>
+<li><strong>什么都没出现，就走排查链。</strong>别一直举着手机干等。下面的有序检查大约一分钟就能分清是手机问题、光线问题还是码的问题。</li>
+<li><strong>码已经在自己屏幕上了，就改读图片。</strong>把码截屏，或者把图片保存下来，再从图片里读（iPhone 用相册，安卓用 Google 相册加 Lens）。完整版见<a href="/zh/blog/scan-qr-code-from-image/">从图片、照片或截屏扫二维码的指南</a>。</li>
 </ol>
-<h2>在 iPhone 上</h2>
-<p>打开相机 App，对准二维码——稳住一秒。会出现黄色通知；点它。就这样。任何现代 iPhone 都行——<a href="https://support.apple.com/en-ca/102680">Apple 的指南</a>讲了相机 App 和扫码器。</p>
-<p>两个值得知道的快捷方式：打开<b>控制中心</b>，点二维码扫描器图标（如果没有，去“设置 → 控制中心”添加）；或在锁屏上长按相机图标。如果码在照片或截图里，在“照片”App 里打开它并长按二维码——iOS 直接在图片里识别它。</p>
-<h2>在安卓上</h2>
-<p>大多数安卓手机也用内置相机扫：对准，等提示，点。Pixel 和很多其他机型用相机或 Google App 里的 <b>Google Lens</b>。三星手机在快捷设置面板里有专门的扫描器——下滑找“扫描二维码”。跟 iPhone 一样，已保存的图片可以在 Google Photos 里打开并点 Lens 按钮。</p>
-<h2>什么反应都没有时</h2>
-<p>十有八九是码的问题，不是手机：太小、对比度太低、损坏，或者印在曲面上。完整清单在<a href="/zh/blog/why-is-my-qr-code-not-working/">为什么二维码扫不出来</a>。脏镜头是经典的被忽略的原因——擦擦再试。</p>
-<h2>3 秒安全习惯</h2>
-<p>手机在打开链接前会显示预览。瞥一眼。如果电线杆上的码说的是停车缴费，但链接看起来像一串随机字符，别点——<a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">覆盖在真码上的贴纸是 FTC 警告过的已知骗局</a>。你用 <a href="/zh/">FreeQrly</a> 自己生成的码是静态的，里面就是你输入的东西，没有隐藏内容。</p>
 
+<h2>点之前：权限和确认提示</h2>
+<p>扫码对你的要求很少，这正是它讨喜的地方——但它确实会问的几件事值得留心。浏览器扫码器第一次用时可能问你要相机权限；用的时候允许，用完收回。它不需要你的照片、通讯录或位置，凡是问这些的，都是停下的理由。</p>
+<p>预览之后，确认提示跟着码的类型走。Wi-Fi 码会问你要不要加入网络——加入之前先跟牌子上的名称核对一下，因为用一个听起来可信的名字冒充的流氓网络是真实存在的套路，加错网络比加不上正确的网络更糟。联系人码会问你要不要保存一个人，App 码会问你要不要打开 App——两者都要跟你的预期核对一下。下载要让你停一停：文件比页面是更大的承诺。而从公开码打开的登录表单，在输入任何密码之前都值得再看一眼。</p>
+
+<h2>场景：节奏一样，利害不同</h2>
+<p><strong>菜单、海报和时刻表</strong>是利害最小的扫码，节奏也最简单：入镜、看预览、点开。这里的失败通常是物理原因：反光就倾斜，太小就凑近，太暗就补光。<strong>票务和签到</strong>利害更高，因为有时效，往往还只能用一次。排到队头之前就把码准备好，码会刷新的话要及时扫。</p>
+
+<h2>安全习惯，完整版</h2>
+<p>二维码天生就把目标藏起来了。光看图案，你读不出链接，这也正是码能成为一种有效载体的原因——换成明文链接，你根本不会点。防线不是躲开码，而是每次都读预览，并且把预览当成一次决策，不是走过场。美国联邦贸易委员会在 2023 年 12 月 6 日的一则消费者提醒里警告过这种套路：骗子用自己的贴纸盖住真的码——比如停车计费表上的码——或者在意料之外的消息里发码，扫出来的码可能指向一个以假乱真的钓鱼网站，在上面输入的任何东西都可能被偷，也可能指向恶意软件。FTC 在那则提醒里的建议，跟本指南推荐的习惯是一样的：打开之前先检查链接，留意拼写错误或者熟悉名字里被换掉的字母；别扫意料之外的消息里的码，尤其是催你马上行动的。</p>
+<p>把这条建议变成三项检查：域名要逐字对上眼前的商家或牌子；码上没有贴纸覆盖之类的篡改痕迹；场合要对得上——这个码，你预料它出现在这里、为了这个用途。三项里任何一项没通过，就停下。预览只显示一个短链接时，最终目标跟码本身藏得一样严实；如果发送者你不认识，那是停下的理由，不是点开看看的理由。</p>
+
+<h2>什么都没发生时：按顺序走排查链</h2>
+<p>按顺序走这条链。每一步只要几秒钟，顺序很重要：从最省事的修复走到最能下结论的测试，找到故障就停，不用乱试一气。iPhone、Pixel、三星各自具体的开关和快捷入口见<a href="/zh/blog/how-to-scan-qr-code-on-phone/">手机扫码指南</a>；这条链是藏在那些步骤底下的逻辑。</p>
+<ol>
+<li><strong>入镜。</strong>整个码连同静区都在画面里吗？往后退，直到四个角都看得见。被画面边缘裁掉的码，是毫无反应最常见的原因。</li>
+<li><strong>模式。</strong>用普通拍照界面，别用人像或视频模式，或者用手机自带的扫码快捷入口。</li>
+<li><strong>设置。</strong>一次系统更新关掉的开关，看起来跟坏掉的码一模一样；先查相机设置。</li>
+<li><strong>对焦和稳定。</strong>拿稳，慢慢凑近或拉远，直到图案变清晰。</li>
+<li><strong>光线。</strong>暗的地方补光，亮的地方去反光，玻璃后面的码稍微倾斜一点。</li>
+<li><strong>镜头。</strong>镜头干净吗？用软布擦一擦。镜头一脏，所有码都一样糊，脏镜头也因此常常被误当成印坏了。</li>
+<li><strong>码的完整性。</strong>角标完好吗，对比度是深色在浅色上吗，码有没有破损、褪色或弯曲变形？</li>
+<li><strong>尺寸和距离。</strong>码够大吗，配得上这个距离吗？按<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>，码的宽度至少要是扫码距离的十分之一，印刷尺寸至少 2 × 2 cm；离得太远就凑近一点。</li>
+<li><strong>换部手机试试。</strong>另一部手机能读出来，问题在你的手机；哪部都读不出来，问题在码。</li>
+</ol>
+
+<h2>再深一点：模糊、破损和静区</h2>
+<p>码这边的三种故障值得多讲几句，因为它们是最容易被误判的。<strong>模糊</strong>是第一种。码可能在制作时就糊了——低分辨率导出文件被拉大到海报尺寸——也可能在拍摄时糊了——手机晃动、手抖、光线差时拍的码。拍摄模糊靠拿稳、补光、重拍解决；制作模糊只能靠更好的原始文件。完整讨论见<a href="/zh/blog/why-is-my-qr-code-blurry/">二维码为什么发糊</a>。</p>
+<p><strong>破损</strong>是第二种。按 ISO/IEC 18004，四档纠错级别——L、M、Q、H——能让读取器把破损图案补回来：L 约为码字的 7%，M 约 15%，Q 约 25%，H 约 30%。所以擦伤的码常常照样能读，中间带 Logo 的码能读也是因为纠错把缺失的中间部分补上了。极限在角标：一个角标坏得厉害，读取器就完全没法给图案定位，别的部位纠错再好也没用。这就是角撕了会失败、中间擦伤却能成功的原因。</p>
+<p><strong>静区</strong>是第三种，也是最常被设计掉的。码周围的空白边，按标准每边至少要 4 个模块宽，是读取器找到码边缘的依据。把文字、边框或图形挤到码边上的设计不是时髦，是在拆掉读取器找图案需要的边距。挤压、白色上的浅色、Logo 盖住角标，是最常把一个能用的码变成装饰品的设计选择；见<a href="/zh/blog/why-is-my-qr-code-not-working/">二维码为什么扫不出来</a>。</p>
+
+<h2>老实对比：内置扫码、浏览器扫码器和扫码 App</h2>
+<p>三种扫码器争同一份工作，老实的排名很短。内置相机是最好的默认选项：已经装好了，跟着手机一起更新，读标准码时显示的预览跟任何其他读取器一样，不用账号，也不会在你和菜单之间插广告。浏览器扫码器是最好的备用：不用安装，手机电脑都能用，而且——当它在你的浏览器里本地解码而不是上传图片时——它是保存图片里的码或者电脑屏幕上的码的合适工具。扫码 App 是日常扫码最弱的默认选项：多一次安装、多一道权限确认，还常常带广告或账号，换来的却是手机本来就有的能力。</p>
+<p>例外是真实存在的，但范围很窄。手机老到没有内置读取功能，就得靠 App 或浏览器扫码器。天天靠扫码干活的人——盘点、票务、资产标签——可能想要记录、批量读取或导出，专门工具在那里能说得通。而手机相册工具不提供读取器时，保存图片里的码可能需要浏览器解码器，这比为一个码装个 App 是更好的答案。对其他人来说，反对 App 的理由很具体：很多扫码 App 带广告，有的要的权限远远超出相机——通讯录、位置，或者一个把你的扫码记录跟身份绑在一起的账号。一个知道你指过的所有菜单、票和海报的扫码器，对你的行踪知道得太多了，而当 App 本身免费时，这份了解就是正在被卖的产品。内置相机读完码就走，不会给你记扫码日记。</p>
+
+<h2>扫出来了，目标页面却打不开</h2>
+<p>有时上面一切都对，结果还是让人失望：死链、页面搬了家、表单已经下线、票已经被用过。这不是扫码失败，是目标失败，修复办法在发码的人手里。静态码直接装着目标，目标没了，码就无话可说。目标搬了家，只有发码人能把码指到新地方——而这正是动态码的用处：印出来之后还能改，带扫码统计，用免费账号就行。如果你是扫码的人，链接死了就别反复重扫，找发送者要个新码。</p>
+
+<h2>印给别人扫的码，先自己按别人的方式测一遍</h2>
+<p>如果你印码是给别人扫的——菜单、海报、票、名片——就按观众会扫的方式测，别按你做码的方式测。测印出来的样张，不只测屏幕上的版本，因为印刷会改变尺寸、对比度和清晰度。条件允许就用两部手机测，一部 iPhone、一部安卓，因为一部能读、另一部读不出来的码，尺寸、对比度或静区里一定藏着真问题。在实际使用的光线和距离下测。每个码花三十秒测试，能省一次重印、省一队一头雾水的顾客、省一张只是装饰品而不是入口的海报。</p>
+
+<h2>自己做第一个码，亲自扫一次</h2>
+<p>学这些最快的方法，就是自己做个码、自己扫一次。FreeQrly 的生成器支持 17 种类型——链接、Wi-Fi、联系人名片、活动等等——在那里做的静态码免费，不用注册、没有水印、不过期，所以做个测试码不花一分钱，还能一直用。打印出来，放到你实际会用的地方，再在更差的光线、更远的距离、另一部手机上试试。如果码背后的目标以后可能变——按季节更新的菜单、落地页还没做出来就先要印的海报——动态码才是合适的工具：印出来之后还能改，还能看扫码统计，需要免费账号。动态码免费额度是 20 个，活动期间目前不限量，扫码次数不限。要批量做码，<a href="/zh/batch-qr-code/">批量生成</a>可以一个链接出一个码。先从一个静态测试码开始，在自己手机上亲眼看到它能扫，再往下做。</p>
     </div>
 
     <section class="sources">
       <h2>参考来源</h2>
       <ul>
-      <li><a href="https://support.apple.com/en-ca/102680">Apple 支持：用 iPhone 或 iPad 扫描二维码</a> - 怎么用相机 App 或扫码器扫描。</li>
-      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC：骗子把有害链接藏在二维码里</a> - FTC 谈覆盖真码的二维码、仿冒网站，以及打开前检查链接。</li>
+      <li><a href="https://support.apple.com/en-ca/102680">Apple Support: Scan a QR code with your iPhone or iPad</a> - 原帖保留（原链接原样保留）。同一份指南，在 2026 年 9 月 14 日发布的当前 en-us 页面上核实过，讲的是打开相机或扫码器，让码出现在画面里，点链接。</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC: Scammers hide harmful links in QR codes to steal your information</a> - 原帖保留。消费者提醒，日期为 2023 年 12 月 6 日（FTC 列表；页面于 2026 年 11 月 3 日打开核实）。佐证内容：骗子用自己的贴纸盖住真的码，包括停车计费表上的码，并在意料之外的消息里发码；扫出来的码可能指向钓鱼网站或恶意软件；打开之前先检查链接，别扫意料之外的消息里催你马上行动的码。</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - 新增。QR Code 码制规范。佐证正文里的数字：四档纠错级别（L 约为码字的 7%，M 约 15%，Q 约 25%，H 约 30%）和每边至少 4 个模块的静区。页面访问于 2026 年 11 月 3 日；ISO 列表本身没有公开带这些数字的摘要，这些数字在核查时对照标准解读资料做了佐证。</li>
+      <li><a href="https://support.google.com/pixelphone/answer/16561572?hl=en">Google Support: Scan QR codes with your Pixel phone</a> - 新增。页面访问于 2026 年 11 月 3 日；页面上未显示发布日期。佐证排查链里反映的通用故障排查步骤（拿稳、光线好但别反光、镜头擦干净、凑近但保证整个方块都在画面里）。</li>
+      <li><a href="https://www.samsung.com/uk/support/mobile-devices/how-to-scan-qr-code-on-your-galaxy-phone-or-tablet/">Samsung Support: How to scan QR codes on your Samsung phone</a> - 新增。2026 年 10 月 6 日更新（页面上所示，2026 年 11 月 3 日打开核实）。佐证通用指南指向的手机专属步骤（相机 App、快捷设置里的“扫描二维码”磁贴、相机设置里的“扫描二维码”开关）。</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
       <div>
         <h3>自己试试——免费</h3>
-        <p>这篇文章里的每样东西，现在都能在 FreeQrly 首页里用。静态码、十三种内容类型、PNG 和 SVG 导出。</p>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
         <a class="btn" href="/zh/#studio">打开生成器</a>
       </div>
     </div>
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/qr-code-print-size-guide/"><b>QR Code 打印尺寸指南: Business Cards to Posters</b></a>
+        <a class="rel-card" href="/zh/blog/qr-code-print-size-guide/"><b>二维码打印尺寸指南：从名片到海报</b></a>
         <a class="rel-card" href="/zh/blog/free-qr-codes-that-dont-expire/"><b>永不过期的免费二维码</b></a>
-        <a class="rel-card" href="/zh/blog/scan-qr-code-from-image/"><b>How to Scan a QR Code from a Picture, Photo, or Screenshot</b></a>
+        <a class="rel-card" href="/zh/blog/scan-qr-code-from-image/"><b>怎么从图片、照片或截屏扫二维码</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
-    <details><summary><span>扫二维码需要装 App 吗？</span></summary><p>不用。iPhone 和几乎所有安卓手机都用内置相机扫二维码。第三方扫码 App 没必要，而且常常满是广告。<a href="https://support.apple.com/en-ca/102680">Apple 的指南</a>讲了 iPhone 上的相机 App 和扫码器。</p></details>
-    <details><summary><span>怎么从截图里扫二维码？</span></summary><p>iPhone 上，在“照片”里打开截图并长按二维码。安卓上，在 Google Photos 里打开并点 Lens 按钮。</p></details>
-    <details><summary><span>为什么我的相机扫不出二维码？</span></summary><p>通常是码太小、对比度太低、损坏，或者周围没有静区。擦擦镜头，靠近一点，完整修复清单见我们的故障排查指南。</p></details>
+    <details><summary><span>扫二维码需要装 App 吗？</span></summary><p>不用。iPhone 和几乎所有安卓手机都用自带相机扫二维码。第三方扫码 App 对标准码来说没必要，只有手机完全没有内置读取功能，或者工作确实需要记录、批量读取时才合理。</p></details>
+    <details><summary><span>扫完二维码之后会发生什么？</span></summary><p>看码里装的是什么：链接打开网页，Wi-Fi 码提示加入网络，联系人码提示保存一个人，文本码显示文字，活动码提示加入日历。手机的预览会在任何东西打开之前告诉你它是哪一种。</p></details>
+    <details><summary><span>自己手机屏幕上的二维码怎么扫？</span></summary><p>把码截屏或者把图片保存下来，再从图片里读：iPhone 上在相册里打开，长按码；安卓上在 Google 相册里打开，点 Lens。相机没法对着自己的屏幕拍。</p></details>
+    <details><summary><span>为什么我的相机扫不出二维码？</span></summary><p>按顺序走排查链：整个码入镜、普通拍照界面、扫码开关已打开、对焦稳定、光线好且无反光、镜头干净、角标完整且对比度够、尺寸配得上距离。最后换部手机试试：另一部手机能读出来，问题在你的手机；哪部都读不出来，问题在码。</p></details>
+    <details><summary><span>二维码和条形码有什么区别？</span></summary><p>二维码是带三个大角标的方形图案，那三个角就是读取器的定位标志。没有这些角标的图案不是二维码，任何二维码读取器都读不了。</p></details>
+    <details><summary><span>我的二维码能扫出来，但链接打不开，是码坏了吗？</span></summary><p>不是。码完成了它的任务，问题在目标——页面搬了家、网站挂了，或者表单已经不存在。找发送者要个新码；如果你是发码人，用一个目标在你掌控之中的码，或者用印后还能改的动态码。</p></details>
+    <details><summary><span>在公共场所扫二维码安全吗？</span></summary><p>点之前先读预览：域名要跟眼前的牌子对得上，码上没有贴纸覆盖之类的篡改痕迹，而且这个码是你预料它出现在这里的。三项里任何一项没通过，就停下。</p></details>
+    <details><summary><span>印出来的二维码给别人扫之前怎么测？</span></summary><p>测印出来的样张，不只测屏幕上的版本，条件允许就用两部手机测——一部 iPhone、一部安卓——在实际使用的光线和距离下测。在所有这些条件下都读得出来的码，尺寸、对比度、静区就都对了。</p></details>
     </section>
   </article>
   <footer>

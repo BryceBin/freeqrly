@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>二维码故障排查指南：找到并修复任何扫码失败 | FreeQrly</title>
+<meta name="description" content="二维码扫不出来？一个中心汇总全部十一种原因——尺寸、发糊、对比度、静区、Logo、破损、死链、光线和相机——每种都有修法。">
+<link rel="canonical" href="https://freeqrly.com/zh/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-troubleshooting-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-troubleshooting-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="二维码故障排查指南：找到并修复任何扫码失败 | FreeQrly">
+<meta property="og:description" content="二维码扫不出来？一个中心汇总全部十一种原因——尺寸、发糊、对比度、静区、Logo、破损、死链、光线和相机——每种都有修法。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/zh/blog/qr-code-troubleshooting-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"二维码故障排查指南：找到并修复任何扫码失败 | FreeQrly","description":"二维码扫不出来？一个中心汇总全部十一种原因——尺寸、发糊、对比度、静区、Logo、破损、死链、光线和相机——每种都有修法。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "为什么我的二维码在一部手机上能扫、另一部上不能？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "那码和链接都没问题——问题在扫不出来的那部手机。擦镜头、允许相机访问、拿稳并让整个码入镜，在光线更好的地方再试。如果那部手机单独还是失败，用自带相机路径，别用第三方扫码 App。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的二维码时灵时不灵——没问题吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有问题。时灵时不灵的码就是勉强过关的码：在你的桌上能过、到了顾客手里会失败。把它当成坏码，修复根本原因——通常是尺寸、对比度、反光或被挤占的静区——而不是指望好光线。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷二维码应该印多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "经验法则，至少 2 × 2 cm，并且至少是预期扫码距离的十分之一：50 cm 外扫的桌卡需要约 5 cm 宽的码，5 米外扫的海报需要约 50 cm 宽的码。装着长链接的数据密的码比短链接需要更多空间。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Logo 能盖住二维码的多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "保持小。用最高的纠错级别，比素码印大一点，永远别盖住三个大的角方块，扫码器需要它们来定向图案。经验法则，打印尺寸指南建议控制在码面积的约 30% 以内——印刷之前永远先在两部手机上扫码测试成品。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的码能扫，但页面没了——是码坏了吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。图案解得完美无缺；目标失败了。搬家或被删的页面、打错的地址，或者账号或跳转被关掉的动态码，看起来都是这样。如果你掌控页面或动态跳转，恢复或改指向它——不用重印。静态码不能改指向；只有它背后的页面能恢复。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "测我的码需要扫码 App 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要。iPhone 上用相机 App 或控制中心里的扫码器；安卓上用自带相机或 Lens。对已经在手机自己屏幕上的码——照片或截屏里的——改解图片文件，别把相机对着它自己的显示屏。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/error.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
+    <div class="kicker" style="text-align:center">实战笔记</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">二维码<span class='hl hl-mint'>故障排查</span>，从头到尾</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">扫不出来、时灵时不灵，或者扫到了没用的地方？在表里找到你的失败，按修法走，再测一次——大多数码不用重印就能修好。</p>
+    <p class="meta" style="text-align:center">2026年11月3日 · 阅读约15分钟</p>
+    <div class="prose" style="margin-top:40px">
+<p>扫不出来的二维码很少是个谜。大多数失败归结为十一种原因之一，并且可以分成三个问题：图案读不出来吗，手机吃力吗，还是码扫得好好的、目标让人失望了？先回答这些，你就不会重印一个没问题的码——也不会在链接死了的时候去修图案。</p>
+
+<h2>先查这三项</h2>
+<ol>
+<li><strong>换另一部手机试试。</strong>如果另一部手机能读出码，图案没问题。跳到下面的手机检查项。</li>
+<li><strong>看码本身，别看屏幕。</strong>它小吗、淡吗、被附近文字挤占吗、被 Logo 盖住了吗、刮花了吗、褪色了吗？其中任何一项都能让图案读不出来。再试一份原始文件的新副本：如果新副本能扫，失败的是原来的印刷品，不是数据。</li>
+<li><strong>读扫码返回的东西。</strong>如果手机认出了码，但页面一直加载不出来或者落到了意料之外的地方，图案完成了它的任务。问题在目标页面：被删的页面、打错的链接，或者被关掉的动态码。</li>
+</ol>
+<p>一个区分贯穿始终：<em>从来</em>不扫的码有图案或相机问题，而<em>有时</em>扫的码——强光下能扫、暗光下不能，凑近能扫、一臂距离不能——是个勉强过关的码。勉强过关的码在你的桌上能过、到了顾客手里会失败：把时灵时不灵的码当成坏码处理。</p>
+
+<h2>原因表：所有常见失败一览</h2>
+<div class="table-scroll"><table>
+<tr><th>原因</th><th>症状</th><th>快速测试</th><th>修法</th><th>深入阅读</th></tr>
+<tr><td><strong>太小</strong></td><td>只有凑很近才扫得出来</td><td>凑近能扫吗？尺寸就是毛病</td><td>印大一点</td><td><a href="/zh/blog/qr-code-print-size-guide/">尺寸指南</a></td></tr>
+<tr><td><strong>发糊 / 分辨率低</strong></td><td>边缘发软、方块糊成一片</td><td>文件里就软吗？导出有问题</td><td>重新导出为 PNG 或 SVG</td><td><a href="/zh/blog/why-is-my-qr-code-blurry/">发糊修复</a></td></tr>
+<tr><td><strong>对比度低</strong></td><td>强光下能扫、暗光下失败</td><td>变成黑白还能读吗？</td><td>浅色底上的深色码</td><td><a href="/zh/blog/why-is-my-qr-code-not-working/">诊断</a></td></tr>
+<tr><td><strong>静区被挤占</strong></td><td>裁切后能扫、设计里失败</td><td>盖住附近文字：现在能扫吗？</td><td>恢复清晰边距，4 个模块宽</td><td><a href="/zh/blog/why-is-my-qr-code-not-working/">诊断</a></td></tr>
+<tr><td><strong>Logo 太大</strong></td><td>加 Logo 之前能扫、之后失败</td><td>去掉 Logo 重新生成</td><td>Logo 缩小、纠错级别提高</td><td><a href="/zh/blog/add-logo-to-qr-code/">带 Logo 的码</a></td></tr>
+<tr><td><strong>破损或脏污</strong></td><td>新的时候能用，拿过之后失败</td><td>跟新印的对比一下</td><td>清洁、保护，或者重印</td><td><a href="/zh/blog/why-is-my-qr-code-not-working/">诊断</a></td></tr>
+<tr><td><strong>死链</strong></td><td>能扫，但页面不见或不对</td><td>在电脑上打开链接</td><td>恢复或改指向目标页面</td><td><a href="/zh/blog/do-qr-codes-expire/">码会过期吗？</a></td></tr>
+<tr><td><strong>光线和反光</strong></td><td>一个角度能扫、另一个角度失败</td><td>背对光线倾斜</td><td>挪动光线、用哑光面</td><td><a href="/zh/blog/why-is-my-qr-code-not-working/">诊断</a></td></tr>
+<tr><td><strong>相机权限 / 对焦</strong></td><td>只在一部手机上失败</td><td>换手机测试，再擦镜头</td><td>允许访问、擦干净镜头、拿稳</td><td><a href="/zh/blog/how-to-scan-a-qr-code/">怎么扫码</a></td></tr>
+<tr><td><strong>动态码被关掉</strong></td><td>扫出来是个错误页</td><td>在它的 Dashboard 里查码</td><td>重新激活或替换它</td><td><a href="/zh/blog/do-qr-codes-expire/">码会过期吗？</a></td></tr>
+<tr><td><strong>码在自己的屏幕上</strong></td><td>相机没法对着自己的显示屏</td><td>这是预料之中的，不是故障</td><td>改解图片文件</td><td><a href="/zh/blog/scan-qr-code-from-image/">从图片扫码</a></td></tr>
+</table></div>
+
+<h2>图案本身：码变得读不出来的六种方式</h2>
+
+<h3>1. 对扫码距离来说太小</h3>
+<p>小码失败是因为相机在画面里模块很小时分辨不出单个模块——就是那些小方块。经验法则，印刷码保持至少 2 × 2 cm，并且随距离放大：码的宽度至少要是预期扫码距离的十分之一。50 cm 外扫的桌卡需要约 5 cm 宽的码；5 米外扫的海报需要约 50 cm 宽的码。装着长链接的数据密的码比短链接需要更多空间。完整的尺寸表见<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>。</p>
+
+<h3>2. 发糊或分辨率低</h3>
+<p>发糊意味着像素太少、摊的面积太大，模块边缘糊成一片。常见元凶是低分辨率导出、让锐利边缘变软的 JPEG 保存、截屏的截屏，或者不成比例拉伸文件导致方块变成长方形。在源文件上修：重新导出为高分辨率 PNG，或者导出为 SVG——它放大不发糊——调整尺寸时只等比例缩放。已经发糊的印刷品没法锐化回来——用干净文件重印。五种原因和修法见<a href="/zh/blog/why-is-my-qr-code-blurry/">二维码为什么发糊</a>。</p>
+
+<h3>3. 对比度低</h3>
+<p>扫码器要找浅色底上的深色模块。白色上的浅灰、淡彩品牌色、压在照片上的码，或者深色底上的深色模块，都会拿掉相机需要的差别。这是最常见的设计导致的失败，也是最能避免的：黑白搭配永远管用，任何颜色搭配都应该在黑白下依然能读。注意反色码和压在花哨图片上的码，背景会在那里跟图案竞争。如果码在强光下能扫、在暗房间里不能，对比度就是第一嫌疑。</p>
+
+<h3>4. 静区被挤占或裁掉</h3>
+<p>码周围的空白边不是装饰。扫码器靠它找到图案的边缘，标准规定静区至少 4 个模块宽——就是码自己的小方块的 4 个——四边都要，按 ISO/IEC 18004 定义。文字或图案挤进这个边距会干扰识别，手机永远读不到数据。这种失败容易被错过，因为码本身看着完美。用盖住码周围一切的办法测试：如果扫得干净，就恢复边距并保持它空着。</p>
+
+<h3>5. Logo 盖住了太多图案</h3>
+<p>中间 Logo 能成立，只是因为纠错把被盖住的数据补回来了。ISO/IEC 18004 定义了四档纠错级别——L、M、Q、H——大约能恢复的码字分别是 7%、15%、25% 和 30%。这些百分比说的是码字的恢复，不是你能盖住的可见面积的有保证份额。经验法则，Logo 保持小——打印尺寸指南建议控制在码面积的约 30% 以内——用最高的纠错级别，比素码印大一点，永远别盖住三个大的角方块，扫码器需要它们来定向图案。先在两部手机上扫码测试。见<a href="/zh/blog/add-logo-to-qr-code/">怎么给二维码加 Logo</a>和<a href="/zh/qr-code-with-logo/">带 Logo 的二维码生成器</a>。</p>
+
+<h3>6. 破损、脏污和褪色</h3>
+<p>折痕、划痕、洒渍、褪色和磨旧的贴纸都会吃掉图案，纠错只能补回来这么多。角方块的损伤尤其致命：没有它们，扫码器根本定位不了码。对真实世界的码——菜单、标签、户外招牌——预防胜过修复：表面覆膜、选更高的纠错级别、多印一份备用，先检查最旧的副本。如果图案本身已经磨没了，用原始文件重印，别修修补补破损的副本。</p>
+
+<h2>目标页面：码扫出来了，但没发生好事</h2>
+<p>一次返回错误页、缺失页或意料之外的落地页的扫码，是对一个坏掉的目标的成功扫码。在电脑上打开链接，逐字读它：搬家或被删的页面、打错的地址、挂掉的网站，或者主人改了目标的短链接，都是常见原因。</p>
+<p>一个结构上的版本决定了修复是不是可能。静态码把目标直接装在图案里，所以只要链接在，它就工作——链接死了，只有它背后的页面能恢复，或者码重印。动态码装的是一个短跳转，所以主人不用重印就能改目标——但码于是依赖那个账号和服务保持活跃。账号过期或者服务关掉跳转，印好的码就不再通向任何有用的地方，哪怕图案完美无缺。这就是大多数“我码过期了”故事背后的机制，见<a href="/zh/blog/do-qr-codes-expire/">二维码会过期吗？</a>。重印之前先查目标能不能恢复或改指向。</p>
+
+<h2>手机和那一刻：权限、对焦、光线和屏幕</h2>
+<ul>
+<li><strong>相机权限。</strong>从来没给过相机访问权的扫码器什么都看不见。允许相机访问，再试一次。FreeQrly 的扫码器在你自己的设备上的浏览器里解码——见<a href="/zh/scan/">扫码器页面</a>——但浏览器仍然需要打开相机的许可。</li>
+<li><strong>镜头脏了。</strong>用软布擦镜头。糊掉的镜头模糊的正是二维码由之构成的精细细节。</li>
+<li><strong>对焦和距离。</strong>手机拿稳，整个码和它的静区都保持入镜，慢慢移动直到对焦锁定。很近不一定更好：大多数相机在几厘米外对不上焦。</li>
+<li><strong>光线和反光。</strong>光面覆膜、屏幕或聚光灯会把光反射回相机、洗掉模块。倾斜码或手机，离开直射光，或者换哑光面。倾斜时跟着动的反光是反光，不是损伤。</li>
+<li><strong>弯曲或倾斜的表面。</strong>包在瓶子上的码或者陡角度拍的码是变形的，扫码器对变形的容忍是有限的。能展平就展平，拍摄尽量正面。</li>
+<li><strong>自己手机屏幕上的码。</strong>你没法把手机相机对着它自己的显示屏。对同一部手机上照片、截屏或消息里的码，改解图片文件：iPhone 上在相册里长按码；安卓上在相册里用 Lens；电脑上上传到解码器，比如 FreeQrly 的<a href="/zh/scan/">扫码器</a>。完整步骤见<a href="/zh/blog/scan-qr-code-from-image/">怎么从图片扫二维码</a>，各手机相机步骤见<a href="/zh/blog/how-to-scan-qr-code-on-phone/">怎么在手机上扫二维码</a>。</li>
+</ul>
+<p>苹果自己的指南确认了基准：iPhone 上，打开相机 App 或控制中心里的扫码器，让码出现在画面里，点出现的链接。如果这条路对别的手机能读的码毫无作用，怀疑权限、对焦和光线——不是缺一个扫码 App。iPhone 和安卓的通用步骤见<a href="/zh/blog/how-to-scan-a-qr-code/">怎么扫二维码</a>。</p>
+
+<h2>按场景：印刷、屏幕和户外</h2>
+<h3>印刷码：传单、名片、菜单、包装</h3>
+<p>印刷失败通常按顺序是尺寸、分辨率、对比度或磨损。按最终尺寸测试，别在屏幕上测：印一份，退到真实观看距离，用两部手机扫。在成品排版里检查静区，不只在预览里检查，因为排版工具会裁掉边距。经手的码覆膜，原始导出文件留着。</p>
+<h3>屏幕上的码：幻灯片、电视、视频通话、网站</h3>
+<p>屏幕码败在反光、刷新闪烁和相对于观看者距离的尺寸上。幻灯片上的码做大一点，在屏幕上停留几秒而不是一闪而过，别把它放在移动背景上。手机对手机显示时，调亮屏幕、背对头顶灯光倾斜。</p>
+<h3>户外码：海报、招牌、车辆、商店橱窗</h3>
+<p>户外码同时面对所有失败：距离、阳光、反光、天气和褪色。按十分之一法则慷慨地放大，哑光纸上印高对比度，做好防风雨，在真实路人距离和角度下测试。商店橱窗码需要特别检查：在白天从玻璃外面扫，因为从里面看不见的反光能把码洗掉。</p>
+
+<h2>老实对比：免费码、付费码和“过期”码</h2>
+<p>任何老实生成器的静态码都有同一个属性：目标就刻在图案里，所以没什么会过期、没什么要续费、没有账号过期后连累码。FreeQrly 的静态码免费，不用注册、没有水印、永不过期。给静态码付费买不到关于它寿命的任何东西：为一个从来不需要服务器的码付订阅，不是让它活着。</p>
+<p>动态码是另一种产品，老实的交易是这样的：你得到印后编辑和扫码统计，接受对一个账号和一项服务的依赖。FreeQrly 的动态码免费起步——登录，你就得到 20 个免费动态码，限时活动期间目前不限量——带编辑、统计和扫码不限。即使零价格，依赖也是真实的：删掉账号，码也跟着没了，所以一个必须比主人活得久的目标的唯一副本，永远不应该是动态码。对任何必须零维护长久存在的东西——WiFi 密码、名片、牌匾——静态在结构上更安全。</p>
+<p>同样的逻辑适用于别处的付费动态码：一个停工时，图案几乎从来不是问题——订阅、账号或跳转才是。重印之前，先查厂商的 Dashboard、账号状态和跳转指向的目标。对一批没法便宜重印的印刷品，先问一句：如果我停付，印好的码还工作吗？答案告诉你，你买的是一个码，还是在租一个码。</p>
+
+<h2>重做、重印，还是修目标？</h2>
+<ul>
+<li><strong>修目标</strong>，当码能扫、但页面不对或不见了，而且你掌控页面或跳转时。不用重印。</li>
+<li><strong>用原始文件重印</strong>，当新副本能扫、装好的副本不能扫时：印刷、表面或位置失败了。</li>
+<li><strong>重做码</strong>，当新副本也失败、数据错了，或者设计——尺寸、对比度、Logo、边距——有问题时。生成一个干净的码，在两部手机上测试，然后再印。</li>
+<li><strong>换码的类型</strong>，针对反复出现的结构性失败：会变的目标属于动态码；绝不能依赖账号的属于静态码。</li>
+</ul>
+<p>如果一个码在两部手机上，用新鲜、够大、黑白分明、边距清晰的印刷品还是失败，怀疑数据本身——过长的链接，或者打错的地址。缩短链接，重新生成。</p>
+
+<h2>做一个干净的替代品</h2>
+<p>当结论是“重做”时，从干净的导出文件开始，别修修补补旧文件。在<a href="/zh/">免费生成器</a>里生成替代品——全部 17 种内容类型都有静态码，不用注册，登录后免费动态码带编辑和统计。如果码需要 Logo，用<a href="/zh/qr-code-with-logo/">Logo 生成器</a>，Logo 保持小、纠错级别用高；如果一次需要很多码，<a href="/zh/batch-qr-code/">批量生成</a>一个链接出一个码。印刷之前，用<a href="/zh/scan/">扫码器</a>和第二部手机测试。上面链接的深入阅读——<a href="/zh/blog/why-is-my-qr-code-not-working/">一步一步诊断</a>、<a href="/zh/blog/why-is-my-qr-code-blurry/">发糊修复</a>和<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>——各自把一个原因讲得更深。</p>
+    </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - 第 4 版，2024 年 8 月出版；标准身份、版本和出版日期已在 ISO 页面上于 2026 年 11 月 3 日核实，其摘要确认该标准规定了纠错规则。佐证纠错级别 L 7%、M 15%、Q 25%、H 30%（大约的码字恢复）和四边都至少 4 个模块的静区，均按该标准定义。</li>
+      <li><a href="https://support.apple.com/en-us/102680">Apple Support: Scan a QR code with your iPhone or iPad</a> - 2026 年 9 月 14 日发布，如页面所示并于 2026 年 11 月 3 日核实。佐证文中引用的内置扫码步骤：打开相机 App 或控制中心里的扫码器，让码出现在画面里，点出现的链接。本页没有取任何数字主张。</li>
+      <li><a href="https://freeqrly.com/zh/blog/qr-code-print-size-guide/">FreeQrly: QR Code 打印尺寸指南</a> - 站内来源，不是外部标准。佐证中心页明确标注为经验法则的数字：最低印刷尺寸 2 × 2 cm、1:10 距离法则（码宽至少是扫码距离的十分之一），以及 Logo 低于码面积约 30%。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
+      <div>
+        <h3>自己试试——免费</h3>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
+        <a class="btn" href="/zh/#studio">打开生成器</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">继续读</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/zh/blog/static-vs-dynamic-qr-codes/"><b>静态 vs 动态二维码：永久免费还是订阅？</b></a>
+        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-not-working/"><b>二维码不好用？7 个有用的修复</b></a>
+        <a class="rel-card" href="/zh/blog/qr-codes-for-restaurants/"><b>餐厅二维码 — 免费指南</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>小提示</h2>
+    <details><summary><span>为什么我的二维码在一部手机上能扫、另一部上不能？</span></summary><p>那码和链接都没问题——问题在扫不出来的那部手机。擦镜头、允许相机访问、拿稳并让整个码入镜，在光线更好的地方再试。如果那部手机单独还是失败，用自带相机路径，别用第三方扫码 App。</p></details>
+    <details><summary><span>我的二维码时灵时不灵——没问题吗？</span></summary><p>有问题。时灵时不灵的码就是勉强过关的码：在你的桌上能过、到了顾客手里会失败。把它当成坏码，修复根本原因——通常是尺寸、对比度、反光或被挤占的静区——而不是指望好光线。</p></details>
+    <details><summary><span>印刷二维码应该印多大？</span></summary><p>经验法则，至少 2 × 2 cm，并且至少是预期扫码距离的十分之一：50 cm 外扫的桌卡需要约 5 cm 宽的码，5 米外扫的海报需要约 50 cm 宽的码。装着长链接的数据密的码比短链接需要更多空间。</p></details>
+    <details><summary><span>Logo 能盖住二维码的多少？</span></summary><p>保持小。用最高的纠错级别，比素码印大一点，永远别盖住三个大的角方块，扫码器需要它们来定向图案。经验法则，打印尺寸指南建议控制在码面积的约 30% 以内——印刷之前永远先在两部手机上扫码测试成品。</p></details>
+    <details><summary><span>我的码能扫，但页面没了——是码坏了吗？</span></summary><p>不是。图案解得完美无缺；目标失败了。搬家或被删的页面、打错的地址，或者账号或跳转被关掉的动态码，看起来都是这样。如果你掌控页面或动态跳转，恢复或改指向它——不用重印。静态码不能改指向；只有它背后的页面能恢复。</p></details>
+    <details><summary><span>测我的码需要扫码 App 吗？</span></summary><p>不需要。iPhone 上用相机 App 或控制中心里的扫码器；安卓上用自带相机或 Lens。对已经在手机自己屏幕上的码——照片或截屏里的——改解图片文件，别把相机对着它自己的显示屏。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>动态码不限量 — 限时活动</h3>
+        <p>免费登录，想建多少建多少。每个码印后可改，永不过期。</p>
+      </div>
+      <a class="fctaBtn" href="/zh/login/">免费开始</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/zh/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
+        <div class="fmade">静态码，在你的浏览器里生成。</div>
+      </div>
+      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
+      <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>
+      <div class="fcol"><h4>公司</h4><a href="/zh/about/">关于</a><a href="mailto:hello@freeqrly.com">联系我们</a></div>
+      <div class="fcol"><h4>法律</h4><a href="/zh/privacy/">隐私政策</a><a href="/zh/terms/">服务条款</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

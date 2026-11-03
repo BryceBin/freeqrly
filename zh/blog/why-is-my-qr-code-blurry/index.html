@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"二维码为什么模糊？5 个管用的修复方法 | FreeQrly","description":"模糊的二维码扫不出来？5 个常见原因——低分辨率导出、尺寸不对、JPEG 压缩、拉伸变形、打印问题——以及各自的修复方法。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"二维码为什么模糊？5 个管用的修复方法 | FreeQrly","description":"模糊的二维码扫不出来？5 个常见原因——低分辨率导出、尺寸不对、JPEG 压缩、拉伸变形、打印问题——以及各自的修复方法。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "二维码看着模糊，为什么还能扫出来？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "手机很宽容——纠错能挽回相当多的模糊。但在你明亮的办公室能扫出来的码，可能在昏暗的光线下或一臂之外就失败了。清晰才安全；勉强能扫不算安全。"
+        "text": "手机是宽容的——纠错能把读错或读不出来的码字补回来。但在明亮办公室里能扫的码，到了光线暗的地方或一臂距离外可能就失败了。清晰才安全；勉强能扫不算安全。"
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "海报需要什么分辨率？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PNG 至少 2048 像素，或者用 SVG。从 2 米外看的海报，比从 30 厘米外看的名片需要多得多的像素——距离规则看打印尺寸指南。"
+        "text": "SVG 是最好的选择，因为它可以无限放大。如果打印机需要位图文件，就用 2048 px 的 PNG；20 cm 的海报按 300 像素每英寸算大约需要 2,360 px，所以 512 px 的导出文件印到那个尺寸会发软。"
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "打印用 PNG 还是 SVG？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "只要打印机或设计师接受就用 SVG——它可以无限放大，零模糊。PNG（1024–2048 像素）是办公室打印和不支持 SVG 的 App 的备选。"
+        "text": "打印机或设计师接受 SVG 就用 SVG——它可以无限放大、零模糊。名片和传单用 1024 px 的 PNG，海报用 2048 px 的 PNG，是办公室打印和不接受 SVG 的 App 的备用方案。"
       }
     },
     {
@@ -83,7 +88,23 @@
       "name": "模糊的码印出来了，不重印能修吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不能。模糊已经印进去了。从更高分辨率的导出文件（或 SVG）重新印。编辑动态码也没用——纸上的图案就是那样了。"
+        "text": "不行。模糊已经印在纸上了，改不掉。换更高分辨率的导出文件（或 SVG）重新印。改动态码也帮不上忙——纸上的图案就是那个样子，尽管动态码能让你在重新印刷后改它背后的目标。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一个导出文件为什么在屏幕上看着没问题，印出来却发软？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "屏幕上码显示得小，像素看着紧。纸张按真实尺寸呈现码，同样的像素数摊到厘米上，模糊就露出来了。送印之前先把导出文件跟印刷尺寸对一下。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "放大或锐化滤镜能修好发糊的码吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不行。放大只是在已有像素之间插值，边缘还是软的，只是更大了。锐化滤镜会带上让相机困惑的光晕，把 JPEG 转成 PNG 也撤销不了 JPEG 的损伤。唯一可靠的修复，是从原始数据重新导出更高分辨率的文件，或者导出 SVG。"
       }
     }
   ]
@@ -93,23 +114,38 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"二维码为什么模糊？5 个管用的修复方法 | FreeQrly","description":"模糊的二维码扫不出来？5 个常见原因——低分辨率导出、尺寸不对、JPEG 压缩、拉伸变形、打印问题——以及各自的修复方法。","step":[
     {
       "@type": "HowToStep",
+      "name": "找到原始文件",
+      "text": "手头只有 JPEG、截屏或聊天转发图的话，停下，重新生成——任何编辑都恢复不了压缩已经扔掉的细节。"
+    },
+    {
+      "@type": "HowToStep",
       "name": "按正确的尺寸导出",
-      "text": "卡片和传单用 1024 像素的 PNG，海报用 2048 像素。打印机接受 SVG 就用 SVG。"
+      "text": "名片和传单用 1024 px 的 PNG，海报用 2048 px，打印机或设计师接受 SVG 就用 SVG。超过 20 cm 左右时，SVG 是唯一能在文件不变得巨大的前提下保持边缘精确的格式。"
     },
     {
       "@type": "HowToStep",
       "name": "用 PNG 或 SVG，别用 JPEG",
-      "text": "JPEG 会糊掉二维码的锐利边缘。屏幕和办公室打印用 PNG，专业印刷用 SVG。"
+      "text": "屏幕和办公室打印用 PNG，专业印刷用 SVG。如果某个工具坚持要用 JPEG，只在屏幕预览时用它的最高质量设置，绝不把它当成印刷母版。"
     },
     {
       "@type": "HowToStep",
       "name": "调整尺寸时保持比例",
-      "text": "按住 Shift 或点锁定图标，让方块保持方形。永远不要徒手拖一个角。"
+      "text": "按住 Shift 或锁定图标，让方格保持方形。按最终尺寸放置图片，别先放小、事后再拉大。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "码保持深色在浅色上，留出清晰边距",
+      "text": "发糊和低对比度会互相加重。按 ISO/IEC 18004 的规定，每边留出至少 4 个模块宽的空白边，文字、Logo、装饰边框都别进这个范围。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "纸张和打印机要配得上这活",
+      "text": "小码用光滑或涂布纸加激光打印机；有反光风险的地方用哑光面；粗糙或带纹理的表面用更大的尺寸和更高的纠错级别。"
     },
     {
       "@type": "HowToStep",
       "name": "扫一下真实的打印件",
-      "text": "按最终尺寸印一份，退到真实的观看距离，用手机扫一下。一次就扫出来，这批就稳了。"
+      "text": "按最终尺寸印一张样张，退到真实观看距离，在真实光线下扫一次。一次就扫出来，批量就安全了。如果扫起来犹豫，现在就修导出文件或尺寸。"
     }
   ]}
 </script>
@@ -125,31 +161,76 @@
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">我的二维码为什么<span class='hl hl-blush'>模糊</span>了？</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">模糊的二维码几乎总是分辨率问题：像素太少，撑的面积太大。修复方法就是导出更大尺寸——或者导出 SVG。</p>
-    <p class="meta" style="text-align:center">2026 年 10 月 17 日 · 阅读约 4 分钟</p>
+    <p class="meta" style="text-align:center">2026年10月17日 · 最后更新：2026年11月3日 · 阅读约15分钟</p>
     <div class="prose" style="margin-top:40px">
-
-<p>二维码在屏幕上看着清晰，印到纸上就糊了。原因几乎总是同一个：图片的像素不够撑起打印的尺寸。二维码是由小方格组成的网格——像素不够时，边缘就糊了，手机找不到网格，扫不出来。</p>
-
-<h2>5 个常见原因</h2>
+<p>发糊的二维码几乎总是个分辨率问题：像素太少，摊的面积太大。解决办法是导出更大的——或者直接导出 SVG。如果码在屏幕上看着清晰、印到纸上却糊成一团，说明图片的像素撑不起它印出来的尺寸。二维码是由叫作模块的小方格组成的网格；像素不够时，模块的边缘就会糊成一片，手机找不到网格，扫码就失败。先从导出文件下手，别急着换设计：用更高分辨率重新生成，或者导出矢量文件，先按真实尺寸印一张样张，在真实观看距离上扫一下，确认没问题再批量印。</p>
+<p>这个答案覆盖了大多数情况，但发糊不止一个原因，每种原因的修法不一样：导出文件太小、JPEG 压缩、拉伸变形、打印机或纸张问题，或者翻拍的翻拍。下面几节把这些原因分开讲，给你一张给印刷用的数字表，按顺序走一遍修复步骤，还讲那些看着清晰却还是扫不出来的码——那些属于<a href="/zh/blog/why-is-my-qr-code-not-working/">二维码为什么扫不出来</a>。</p>
+<h2>发糊到底对码做了什么</h2>
+<p>手机相机读二维码的方式跟人看图片不一样。它先找四个角上三个大的方形定位图案，靠它们算出网格，再逐个模块判断每个小方格是深还是浅。发糊攻击的正是这个判断：相邻模块糊到一起时，相机看到的是灰色，而它需要的是黑色或白色，于是开始猜。猜一点还能扛得住，因为二维码自带纠错——多余的数据能让读取器把读错或读不出来的码字补回来。这种保护是按码字算的，不是按可见面积算的：ISO/IEC 18004 里的四档级别大约能恢复 L 级 7% 的码字、M 级 15%、Q 级 25%、H 级 30%。定位图案上的一块污渍，或者遍布整个图案的模糊，能在任何漂亮的百分比还没来得及说“应该扛得住”之前就把读取器打败。把纠错当成安全网，永远别把它当成印个软乎码的许可证。</p>
+<p>密度会让发糊更严重。短链接生成的网格宽松、模块大；长链接、完整的联系人名片或者带长密码的 Wi-Fi 码生成的网格更密、模块更小，而模块越小，糊得越早。这就是为什么同一个导出文件，短链接印出来看着没问题，数据量大的码在同样印刷尺寸下却失败了。如果码又密又印得小，能缩短目标链接就缩短，印大一点，或者两者都做。动态码是另一种帮忙方式：印出来的图案编码的是一个以后可以改指向的短链接，所以哪怕最终目标很长，网格依然宽松。目标永远不会变的，静态码更简单：免费、不用账号、没有水印、不过期。</p>
+<h2>数字：印刷尺寸、像素和格式</h2>
+<p>打印机说的分辨率是每英寸的点数或像素数。近距离观看的印刷品，300 像素每英寸（按最终印刷尺寸算）是广泛使用的专业清晰度基准。下表把这个基准换算成像素数：印刷宽度（英寸）乘以 300。一个 2 cm 的码大约 0.8 英寸宽，按 300 像素每英寸算大约需要 240 像素——而这只是最低线，不是舒服的余量。导出时永远要比最低线大，让设计师往小了缩，因为往小缩能保住清晰度，往大放只会把模糊放大。</p>
+<div class="table-scroll"><table>
+<tr><th>印刷宽度</th><th>300 每英寸下的像素数（最低）</th><th>发给印刷的文件</th></tr>
+<tr><td>2 cm（名片）</td><td>约 240 px</td><td>1024 px 的 PNG，或者 SVG</td></tr>
+<tr><td>3 cm（传单、菜单）</td><td>约 350 px</td><td>1024 px 的 PNG，或者 SVG</td></tr>
+<tr><td>5 cm（桌卡、标签）</td><td>约 590 px</td><td>1024 px 的 PNG，或者 SVG</td></tr>
+<tr><td>10 cm（海报细节）</td><td>约 1,180 px</td><td>2048 px 的 PNG，或者 SVG</td></tr>
+<tr><td>20 cm（海报）</td><td>约 2,360 px</td><td>SVG；2048 px 的 PNG 只作备用</td></tr>
+<tr><td>50 cm（大海报、招牌）</td><td>约 5,900 px</td><td>SVG</td></tr>
+</table></div>
+<p>这张表背后有两条经验法则。第一，印刷尺寸（厘米）乘以大约 100，就是一个快速像素目标——5 cm 的码最低大约要 500 像素，10 cm 的码大约要 1,000 像素。第二，<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>里的 1:10 距离经验法则：码的宽度至少要是扫码距离的十分之一，所以 50 cm 外扫的码至少要 5 cm 宽，5 米外扫的海报需要 50 cm 的码。几米外看的海报码，有效分辨率低一点也能容忍，但像素仍然要撑得起它的尺寸——而只有矢量文件能无上限地满足这一点。</p>
+<div class="table-scroll"><table>
+<tr><th>格式</th><th>表现</th><th>用在哪</th></tr>
+<tr><td>SVG</td><td>矢量：没有像素，无限放大，边缘始终精确</td><td>专业印刷、大海报、设计师排版</td></tr>
+<tr><td>PNG</td><td>无损位图：每个像素都原样保留，没有压缩造成的糊边</td><td>办公室打印、幻灯片、不接受 SVG 的 App</td></tr>
+<tr><td>JPEG</td><td>有损：丢弃细节，抹掉锐利边缘</td><td>只用于照片——永远别用于二维码</td></tr>
+<tr><td>截屏或聊天图片</td><td>发送 App 重新压缩过，常常还缩小了</td><td>印刷一律不用——回到原始导出文件</td></tr>
+</table></div>
+<h2>5 个常见原因，逐个细讲</h2>
+<h3>1. 低分辨率导出</h3>
+<p>这是最常见的原因，也是最好修的。512 px 的 PNG 印 2 cm 宽看着没问题；放大到 20 cm 的海报上，每个模块都成了糊块，因为同样的 512 像素现在要覆盖十倍的面积。屏幕把问题藏起来了——显示器上码显示得小，像素看着紧——纸张却按真实尺寸呈现。修法在源头：名片和传单重新导出 1024 px，海报 2048 px，打印机接受 SVG 就用 SVG。在编辑器里把小文件放大并不会增加细节，只会把现有的模糊放得更大。原始导出文件没了，就用同一个目标重新生成，别去拉伸手头那个文件。</p>
+<h3>2. JPEG 压缩</h3>
+<p>JPEG 是为照片设计的，它靠丢弃人眼在照片里最不容易注意到的细节来工作。这笔交易对二维码很不划算，因为二维码全是锐利边缘和平坦区域——正是 JPEG 会抹掉的东西。低质量 JPEG 保存的码，哪怕印得很小也可能失败，而且每次重新保存为 JPEG，损伤都会加重。PNG 是无损压缩，每个像素都原样保留；SVG 根本没有像素可丢。规则很简单：只用 PNG 或 SVG。如果设计师、聊天 App 或社交平台还你一个 JPEG 版本，把它当成预览，别当成印刷稿，印刷之前换回原始 PNG 或 SVG。</p>
+<h3>3. 拉伸变形</h3>
+<p>只拖一个角会把网格拖变形：方格变成长方形，模块间距变得不均匀，扫码器就放弃了。这种情况最常出现在幻灯片、文字处理软件和排版工具里，图片被拖着去填一个空位。调整尺寸时永远要等比例——按住 Shift，或者用锁定图标，让宽和高一起变，方格保持方形。拉变形再拉回去不一定自动变回方形，因为排版工具里的四舍五入可能留下轻微偏差。拿不准就删掉已放置的图片，用目标尺寸重新放置一个新导出文件。</p>
+<h3>4. 印刷不佳：打印机、墨水和纸张</h3>
+<p>低分辨率打印机、粗糙或吸墨纸张上的墨水洇散、光面反光，都会让边缘变软。喷墨打印机在无涂布吸墨纸上打印，墨水会渗进纤维，模块之间细细的白缝被填上，码看起来又粗又脏。激光打印机在光滑或涂布纸上打印，边缘保持得好得多，所以哑光纸加激光打印机胜过餐巾纸上的喷墨打印。光面覆膜是另一回事：纸张本身可以保持清晰，却会把反光打回给相机——在灯光下倾斜印刷品，就能分清是反光还是发糊。布料、刺绣、雕刻或非常粗糙的表面，不管怎样边缘都会变软，先用更大的码、更高的纠错级别，再做实物测试来补偿。</p>
+<h3>5. 翻拍的翻拍</h3>
+<p>从消息里截屏一个码，再截屏那张截屏，每次都会丢分辨率。聊天 App 还会重新压缩、缩小图片，所以经聊天转发的码到手时可能比原始导出文件小得多、软得多。拍一张印好的码拿去复用，又会叠加上透视变形、光线不均和镜头偏软。永远回到原始导出文件，或者用同一个目标重新生成。如果目标是动态码，给同一个短链接生成一个新码就行——不需要旧文件。</p>
+<h2>修复步骤，按顺序来</h2>
 <ol>
-<li><b>低分辨率导出。</b>512 像素的 PNG 印到 2 厘米宽没问题。放大到 20 厘米的海报，每个模块都变成一团。印得越大，需要的像素越多。</li>
-<li><b>JPEG 压缩。</b>JPEG 会把锐利的边缘糊掉——而二维码正是由锐利边缘构成的。存成低质量 JPEG 的码，哪怕印得很小也可能失败。只用 PNG 或 SVG。</li>
-<li><b>拉伸变形。</b>拖图片的一个角会扭曲网格：方块变成长方形，扫码器就放弃了。调整尺寸时一定要等比缩放。</li>
-<li><b>打印问题。</b>低 DPI 打印机、粗糙或吸水纸上的洇墨、亮面反光都会让边缘变软。哑光纸加激光打印，比喷墨打在餐巾纸上强。</li>
-<li><b>翻拍的翻拍。</b>从消息里截一个码，再截一次截出来的图，每次都会丢分辨率。一定要回到原始导出文件。</li>
+<li><strong>找到原始文件。</strong>手头只有 JPEG、截屏或聊天转发图的话，停下，重新生成——任何编辑都恢复不了压缩已经扔掉的细节。</li>
+<li><strong>按正确的尺寸导出。</strong>名片和传单用 1024 px 的 PNG，海报用 2048 px，打印机或设计师接受 SVG 就用 SVG。超过 20 cm 左右时，SVG 是唯一能在文件不变得巨大的前提下保持边缘精确的格式。</li>
+<li><strong>只用 PNG 或 SVG，绝不用 JPEG。</strong>屏幕和办公室打印用 PNG，专业印刷用 SVG。如果某个工具坚持要用 JPEG，只在屏幕预览时用它的最高质量设置，绝不把它当成印刷母版。</li>
+<li><strong>调整尺寸时保持比例。</strong>按住 Shift 或锁定图标，让方格保持方形。按最终尺寸放置图片，别先放小、事后再拉大。</li>
+<li><strong>码保持深色在浅色上，留出清晰边距。</strong>发糊和低对比度会互相加重：一个灰色印在浅色底上的码如果还发软，比单有一种毛病失败得更早。按 ISO/IEC 18004 的规定，每边留出至少 4 个模块宽的空白边，文字、Logo、装饰边框都别进这个范围。</li>
+<li><strong>纸张和打印机要配得上这活。</strong>小码用光滑或涂布纸加激光打印机；有反光风险的地方用哑光面；粗糙或带纹理的表面用更大的尺寸和更高的纠错级别。</li>
+<li><strong>实测打印件。</strong>按最终尺寸印一张样张，退到真实观看距离，在真实光线下扫一次。一次就扫出来，批量就安全了。如果扫起来犹豫，现在就修导出文件或尺寸——一批软乎的码事后是救不回来的。</li>
 </ol>
-
-<h2>怎么修</h2>
-<ul>
-<li><strong>导出更大。</strong>卡片和传单用 1024 像素的 PNG，海报用 2048 像素。经验法则：打印尺寸（厘米）× 约 100，就是你想要的像素数。</li>
-<li><strong>打印用 SVG。</strong>SVG 是矢量图——可以无限放大，零模糊。只要打印机或设计师接受，就用它。</li>
-<li><strong>保持比例。</strong>调整尺寸时按住 Shift（或点锁定图标），让方块保持方形。</li>
-<li><strong>按最终尺寸测试。</strong>按真实尺寸印一份，退到真实的观看距离，用手机扫一下。一次就扫出来，这批就稳了。</li>
-</ul>
-
-<p>重印得很清晰还是扫不出来？问题在别处——尺寸、对比度或破损。<a href="/zh/blog/why-is-my-qr-code-not-working/">完整排障指南</a>里有这些。尺寸与距离的规则，看<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>。</p>
-
+<h2>场景：发糊在哪儿咬得最狠</h2>
+<h3>传单、菜单和桌卡</h3>
+<p>这些是在一臂距离内扫的，常常在光线暗的房间里，所以清晰度和尺寸两者都要：经验法则，传单或菜单上至少 3 cm，桌卡上 4–5 cm。菜单还要加覆膜风险：头顶灯光下的光面会反光，而哑光覆膜既保持码可读又耐擦。菜单会变的，链接到一个你掌控的页面，别用截屏，这样印刷品永远不会过时——而动态码能让你在印后改目标，还能看扫码统计，知道哪些桌子真的扫了。</p>
+<h3>海报和招牌</h3>
+<p>海报的失败方式不一样：问题通常在导出文件，不在打印机。屏幕上看着没问题的 512 px 文件，印到 20 cm 或 50 cm 就明显发软，任何打印机都变不出缺失的像素。用 SVG，套用 1:10 距离经验法则，批量印刷之前先按全尺寸打样码的版面。户外还要考虑褪色：开始清晰的码在阳光下几周内会慢慢褪向失败，所以更高的纠错级别和避光位置比第一印稍微清晰一点更重要。</p>
+<h3>包装和标签</h3>
+<p>小标签集小尺寸、密数据、弯曲或带纹理表面于一身。经验法则，码保持在 2 cm 或更大，别把它包在弯得很紧的曲面上——边缘模块会被拉伸——要在实际容器上测试——平放能扫的码，贴到瓶子上可能失败。材质粗糙或印刷粗糙时，印大一点、做简单一点：短链接能让网格保持宽松，包括动态码背后的短链接。</p>
+<h2>老实对比：什么能修发糊，什么不能</h2>
+<p>不是每个锐化技巧都管用，有的流行建议只会浪费一次印刷。放大一个小文件——在编辑器里、用放大工具，或者把同一张小图导出得更大——都不会增加细节；它只是在已有像素之间插值，边缘还是软的，只是更大了。锐化滤镜能让边缘在人眼里看起来更脆，却会带上让相机困惑的光晕，所以滤镜处理过的码可能扫得更差。把 JPEG 转成 PNG 也撤销不了 JPEG 的损伤：格式变了，糊掉的像素还是糊的。唯一可靠的修复，是从原始数据重新导出更高分辨率的文件，或者导出 SVG。</p>
+<p>格式选择自有权衡。SVG 是印刷的最佳选择，但有的办公室工具、老 App 和社交平台不接受它——这种情况下高分辨率 PNG 是合适的备用，不是退回 JPEG 的理由。PDF 可以是印刷的好载体，因为它能装矢量码，但前提是 PDF 里的码确实是矢量的；一个里面贴着小 JPEG 的 PDF，不过是个包装得更好看的 JPEG，所以相信文件扩展名之前先看看里面装的是什么。</p>
+<p>最后，清晰是必要条件，但不是充分条件。一个完全清晰的码仍然可能失败：离得太远而太小、对比度弱、静区被挤占、Logo 盖住中间太多，或者目标本身已经死了。这些是诊断问题，按顺序见<a href="/zh/blog/why-is-my-qr-code-not-working/">完整故障排查指南</a>。如果重印的码清晰了还是扫不出来，先按那份指南走一遍再重印——第二次重印只有在它改变了真正出问题的地方时才有帮助。</p>
+<p>下一个码从一开始就做清晰：在<a href="/zh/#studio">免费生成器</a>里生成，17 种类型任选，导出最高 2048 px 的 PNG 或无限放大的 SVG——静态码免费，不用注册、没有水印、不过期。按使用场景选尺寸见<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>，带 Logo 的码见<a href="/zh/blog/add-logo-to-qr-code/">怎么给二维码加 Logo</a>。</p>
     </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - QR Code 码制规范。ISO 页面显示第 4 版，2024 年 8 月出版（页面取于 2026 年 11 月 3 日）。佐证四档纠错级别（L 7%、M 15%、Q 25%、H 30% 的码字）和 4 模块静区，均按标准定义。</li>
+      <li><a href="https://www.4over4.com/guide/understanding-image-resolution-dpi-in-print-vs-web-part2">4OVER4: Export Settings for Print vs Web, Sizes and DPI</a> - 佐证 300 DPI 是近距离观看印刷品（名片、明信片、宣传册、传单）的专业印刷标准，大幅面远距离观看的印刷品有效分辨率可以低一些。页面上没有明确的发布日期；访问于 2026 年 11 月 3 日。</li>
+      <li><a href="https://dev.to/bitran/image-formats-explained-jpg-vs-png-vs-webp-vs-avif-2hm7">Image Formats Explained: JPG vs PNG vs WebP vs AVIF</a> - 佐证 JPEG 是有损压缩，会抹掉锐利边缘、每次重新保存都会进一步变差，而 PNG 是无损压缩，每个像素都原样保留。页面上没有明确的发布日期；访问于 2026 年 11 月 3 日。</li>
+      <li><a href="https://qrlynx.com/blog/iso-iec-18004-qr-code-standard-explained">ISO/IEC 18004:2024 Explained (QRLynx)</a> - 2026 年 7 月对照 ISO 和 DENSO WAVE 复核过。佐证纠错百分比的码字读法（总码字的 7% / 15% / 25% / 30%，不是有保证的可见面积容忍度）以及 DENSO WAVE 规定的四模块静区。</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
       <div>
@@ -161,17 +242,19 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
+        <a class="rel-card" href="/zh/blog/get-google-reviews-with-qr-code/"><b>怎么用二维码获得更多 Google 评价</b></a>
         <a class="rel-card" href="/zh/blog/bulk-qr-codes/"><b>批量生成二维码：一次生成几十个，免费</b></a>
-        <a class="rel-card" href="/zh/blog/do-qr-codes-expire/"><b>Do QR Codes Expire? No — But Paid Ones Can Die</b></a>
+        <a class="rel-card" href="/zh/blog/qr-code-troubleshooting-guide/"><b>二维码故障排查指南：找到并修复任何扫码失败</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>小提示</h2>
-    <details><summary><span>二维码看着模糊，为什么还能扫出来？</span></summary><p>手机很宽容——纠错能挽回相当多的模糊。但在你明亮的办公室能扫出来的码，可能在昏暗的光线下或一臂之外就失败了。清晰才安全；勉强能扫不算安全。</p></details>
-    <details><summary><span>海报需要什么分辨率？</span></summary><p>PNG 至少 2048 像素，或者用 SVG。从 2 米外看的海报，比从 30 厘米外看的名片需要多得多的像素——距离规则看打印尺寸指南。</p></details>
-    <details><summary><span>打印用 PNG 还是 SVG？</span></summary><p>只要打印机或设计师接受就用 SVG——它可以无限放大，零模糊。PNG（1024–2048 像素）是办公室打印和不支持 SVG 的 App 的备选。</p></details>
-    <details><summary><span>模糊的码印出来了，不重印能修吗？</span></summary><p>不能。模糊已经印进去了。从更高分辨率的导出文件（或 SVG）重新印。编辑动态码也没用——纸上的图案就是那样了。</p></details>
+    <details><summary><span>二维码看着模糊，为什么还能扫出来？</span></summary><p>手机是宽容的——纠错能把读错或读不出来的码字补回来。但在明亮办公室里能扫的码，到了光线暗的地方或一臂距离外可能就失败了。清晰才安全；勉强能扫不算安全。</p></details>
+    <details><summary><span>海报需要什么分辨率？</span></summary><p>SVG 是最好的选择，因为它可以无限放大。如果打印机需要位图文件，就用 2048 px 的 PNG；20 cm 的海报按 300 像素每英寸算大约需要 2,360 px，所以 512 px 的导出文件印到那个尺寸会发软。</p></details>
+    <details><summary><span>打印用 PNG 还是 SVG？</span></summary><p>打印机或设计师接受 SVG 就用 SVG——它可以无限放大、零模糊。名片和传单用 1024 px 的 PNG，海报用 2048 px 的 PNG，是办公室打印和不接受 SVG 的 App 的备用方案。</p></details>
+    <details><summary><span>模糊的码印出来了，不重印能修吗？</span></summary><p>不行。模糊已经印在纸上了，改不掉。换更高分辨率的导出文件（或 SVG）重新印。改动态码也帮不上忙——纸上的图案就是那个样子，尽管动态码能让你在重新印刷后改它背后的目标。</p></details>
+    <details><summary><span>同一个导出文件为什么在屏幕上看着没问题，印出来却发软？</span></summary><p>屏幕上码显示得小，像素看着紧。纸张按真实尺寸呈现码，同样的像素数摊到厘米上，模糊就露出来了。送印之前先把导出文件跟印刷尺寸对一下。</p></details>
+    <details><summary><span>放大或锐化滤镜能修好发糊的码吗？</span></summary><p>不行。放大只是在已有像素之间插值，边缘还是软的，只是更大了。锐化滤镜会带上让相机困惑的光晕，把 JPEG 转成 PNG 也撤销不了 JPEG 的损伤。唯一可靠的修复，是从原始数据重新导出更高分辨率的文件，或者导出 SVG。</p></details>
     </section>
   </article>
   <footer>

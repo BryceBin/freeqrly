@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Cómo escanear un código QR desde una foto, imagen o captura | FreeQrly","description":"Tu código QR está en una foto, no delante de tu cámara. Aquí verás cómo decodificarlo en iPhone, Android y PC — gratis, sin app.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Cómo escanear un código QR desde una foto, imagen o captura | FreeQrly","description":"Tu código QR está en una foto, no delante de tu cámara. Aquí verás cómo decodificarlo en iPhone, Android y PC — gratis, sin app.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,15 +64,31 @@
       "name": "¿Cómo escaneo un código QR desde una captura en iPhone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Abre la captura en Fotos y mantén presionado el código: iOS lo lee directo de la imagen."
+        "text": "Abre la captura en la app Fotos y mantén pulsado el propio código QR. El teléfono detecta el código en la imagen y ofrece el enlace o la acción; lee la vista previa antes de tocarlo."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cómo escaneo un código QR desde una imagen en PC?",
+      "name": "¿Cómo escaneo un código QR desde una imagen en Android?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sube la imagen a un decodificador QR en línea gratis. Prefiere uno que decodifique localmente en el navegador para que tu imagen nunca se suba."
+        "text": "Abre la imagen en Google Fotos y toca el botón Lens. Lens lee el código dentro de la imagen y muestra el enlace o la acción decodificados. En un Samsung Galaxy también puedes abrir la imagen en Galería y tocar el botón Bixby Vision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo escaneo un código QR desde una imagen en un ordenador?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guarda la imagen, o captura el código en la página, y súbela a un decodificador de navegador. Prefiere un decodificador que lea la imagen en tu navegador, para que la imagen nunca se envíe a un servidor; el escáner de FreeQrly funciona así."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Alguien me envió un código QR en un chat? ¿Cómo lo escaneo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guarda primero la imagen, luego abre el archivo guardado en Fotos o Google Fotos y usa el lector de imágenes integrado. Leer dentro de una burbuja de chat significa leer una copia más pequeña, posiblemente comprimida, y la app de chat puede no ofrecer ningún lector."
       }
     },
     {
@@ -75,7 +96,23 @@
       "name": "¿Por qué el decodificador no puede leer mi foto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Por lo general borrosidad, un ángulo pronunciado o el código demasiado pequeño en el encuadre. Recorta ajustado alrededor del código e inténtalo de nuevo con buena luz."
+        "text": "Normalmente el código está cortado por un borde, es demasiado pequeño en el encuadre, está borroso o se sacó en ángulo. Recorta ajustado alrededor del código manteniendo su zona de silencio, aclara si está oscuro, prueba el archivo original en vez de un reenvío comprimido y prueba otro lector. Si ningún lector puede leer el archivo original, pídele al remitente un código nuevo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si una imagen contiene varios códigos QR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recorta a un solo código y léelo, luego repite con el siguiente. Un lector al que se le muestran varios códigos a la vez normalmente elegirá uno, y puede que no sea el que querías."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es seguro subir una captura a un decodificador en línea?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recorta primero todo excepto el código: las capturas a menudo contienen chats, entradas o datos de pago junto al código. Prefiere un decodificador que lea localmente en tu navegador, para que la imagen nunca se suba a un servidor."
       }
     }
   ]
@@ -85,18 +122,28 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"Cómo escanear un código QR desde una foto, imagen o captura | FreeQrly","description":"Tu código QR está en una foto, no delante de tu cámara. Aquí verás cómo decodificarlo en iPhone, Android y PC — gratis, sin app.","step":[
     {
       "@type": "HowToStep",
-      "name": "Guarda o abre la foto",
-      "text": "Haz una captura, guárdala o simplemente abre la foto que contiene el código QR."
+      "name": "Deja la imagen en una forma que un lector pueda abrir",
+      "text": "Guarda un adjunto, haz una captura de un código mostrado en pantalla o descarga la foto de la página."
     },
     {
       "@type": "HowToStep",
-      "name": "Súbela a un decodificador",
-      "text": "Usa un decodificador en línea gratis que lea la imagen, de preferencia uno que funcione localmente, para que la foto nunca se suba."
+      "name": "Abre la imagen a pantalla completa",
+      "text": "Los lectores trabajan con lo que pueden ver, así que abre la imagen a pantalla completa en vez de leer una miniatura en un hilo de mensajes."
     },
     {
       "@type": "HowToStep",
-      "name": "Lee el resultado",
-      "text": "El enlace o texto decodificado aparece al instante. Revisa la URL antes de abrir, como siempre."
+      "name": "Usa primero el lector de imágenes integrado de tu teléfono",
+      "text": "En iPhone, abre la imagen en Fotos y mantén pulsado el código. En Android, ábrela en Google Fotos y toca el botón Lens. En Samsung, Galería con Bixby Vision también sirve."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Lee la vista previa antes de abrir nada",
+      "text": "Comprueba que el enlace o la acción decodificados coincidan con lo que el remitente dijo que el código llevaba, sobre todo en una imagen reenviada."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Si el primer lector no encuentra nada, limpia la imagen y vuelve a intentarlo",
+      "text": "Recorta ajustado alrededor del código manteniendo su zona de silencio, aclara si está oscuro, prueba el archivo original en vez de un reenvío comprimido y prueba otro lector antes de concluir que el código es ilegible."
     }
   ]}
 </script>
@@ -112,47 +159,105 @@
     <div class="kicker" style="text-align:center">Notas de campo</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Escanea un código QR <span class="hl hl-honey">desde una foto</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">El código está en una foto, no frente a tu cámara. Así se decodifica en iPhone, Android y escritorio, sin app.</p>
-    <p class="meta" style="text-align:center">14 de octubre de 2026 · 4 min de lectura</p>
+    <p class="meta" style="text-align:center">14 de octubre de 2026 · Última actualización: 3 de noviembre de 2026 · 15 min de lectura</p>
     <div class="prose" style="margin-top:40px">
+<p><strong>La respuesta corta: no necesitas un segundo teléfono ni apuntar una cámara a tu propia pantalla.</strong> Un código QR que llega como foto, captura de pantalla, adjunto de mensaje o imagen en una página web se puede leer desde la propia imagen. En un iPhone, abre la imagen en Fotos y mantén pulsado el código. En Android, ábrela en Google Fotos y toca el botón Lens. En un ordenador, sube la imagen a un decodificador que la lea en tu navegador, como <a href="/es/scan/">el escáner de FreeQrly</a>. El resto de esta guía trata de elegir el camino adecuado según dónde viva tu imagen, de limpiar una imagen rebelde antes de rendirte y de mantener privadas las imágenes privadas mientras lo haces.</p>
 
-<h2>En iPhone</h2>
-<p>Abre la foto en la app Fotos y <b>mantén presionado el código QR</b>: iOS lo detecta directo en la imagen y ofrece abrir el enlace. Sin herramientas extra.</p>
-<h2>En Android</h2>
-<p>Abre la imagen en Google Fotos y toca el botón <b>Lens</b>. La mayoría de las apps de galería en teléfonos Samsung y Pixel hacen lo mismo desde el menú de compartir.</p>
-<h2>En PC / Mac</h2>
-<p>Los teléfonos no te ayudan aquí: aquí es donde un decodificador en línea se gana su lugar. Toma una captura (o guarda la imagen) y súbela al <a href="/es/scan/">escáner de FreeQrly</a>. Se decodifica en tu navegador, así que la imagen nunca se sube a ningún lado: bueno cuando la captura contiene algo privado.</p>
-<h2>Consejos para imágenes tercas</h2>
+<p>La distinción central es simple. Una cámara en vivo lee un patrón que tiene delante. Un lector de imágenes lee un patrón ya guardado como píxeles. Los dos trabajos se parecen, pero usan herramientas distintas, y recurrir a la cámara en vivo cuando el código ya es un archivo es la razón más común de que la gente concluya que un código «no se puede escanear» cuando sí se puede. Si tienes el código en la mano como archivo, empieza con un lector de imágenes, no con una cámara.</p>
+
+<h2>Dónde vive la imagen decide el método</h2>
+<div class="table-scroll"><table>
+<tr><th>Dónde está el código</th><th>Primer método a probar</th><th>Qué necesitas</th></tr>
+<tr><td>Una foto o captura en tu iPhone</td><td>Fotos, mantén pulsado el código</td><td>Nada que instalar</td></tr>
+<tr><td>Una foto o captura en tu teléfono Android</td><td>Google Fotos, botón Lens</td><td>Google Fotos y Lens, ya en la mayoría de los teléfonos Android</td></tr>
+<tr><td>Una foto en un Samsung Galaxy</td><td>Galería con Bixby Vision, o el icono de galería del escáner de los Ajustes rápidos</td><td>Nada que instalar</td></tr>
+<tr><td>Una imagen en un ordenador, o un código en una página web</td><td>Un decodificador de navegador con subida de imagen</td><td>El archivo de imagen guardado, o una captura de la página</td></tr>
+<tr><td>Una imagen que alguien te envió en un chat o correo</td><td>Guárdala primero y luego usa el método de tu teléfono</td><td>El archivo guardado, para no leer dentro de una burbuja de chat</td></tr>
+<tr><td>Un código dentro de un vídeo</td><td>Pausa en un fotograma nítido, captúralo y luego lee la captura</td><td>Un fotograma fijo donde el código esté enfocado y totalmente visible</td></tr>
+</table></div>
+
+<h2>Los pasos básicos, uses el dispositivo que uses</h2>
+<ol>
+<li><strong>Deja la imagen en una forma que un lector pueda abrir.</strong> Guarda un adjunto, haz una captura de un código mostrado en pantalla o descarga la foto de la página. Un lector necesita un archivo o una imagen abierta, no una miniatura en una lista de chats.</li>
+<li><strong>Abre la imagen a pantalla completa.</strong> Los lectores trabajan con lo que pueden ver. Un código reducido a miniatura en un hilo de mensajes es un objetivo mucho más pequeño que el mismo código abierto a pantalla completa, y abrirlo a pantalla completa no cuesta nada.</li>
+<li><strong>Usa primero el lector de imágenes integrado de tu teléfono.</strong> En iPhone, Fotos; en Android, Google Fotos con Lens; en Samsung, Galería. Estos lectores corren en el dispositivo y no necesitan subida, lo que importa para la sección de privacidad de abajo.</li>
+<li><strong>Lee la vista previa antes de abrir nada.</strong> Vale la misma regla que para el escaneo en vivo, con un motivo extra: una imagen que te reenviaron pasó por manos de otra persona, y la vista previa es tu comprobación de que el código lleva adonde el remitente dijo que llevaba.</li>
+<li><strong>Si el primer lector no encuentra nada, limpia la imagen y vuelve a intentarlo</strong> — recorta, aclara y reintenta — antes de concluir que el código es ilegible. Los pasos de limpieza de abajo rescatan más imágenes que cualquier cambio de lector.</li>
+</ol>
+
+<h2>En iPhone: Fotos, mantén pulsado</h2>
+<p>Abre la foto o captura en la app Fotos y mantén pulsado el propio código QR. El teléfono detecta el código en la imagen y ofrece el enlace o la acción, que tocas después de leer la vista previa. Ese es todo el método, y cubre los casos más comunes: una captura que te envió un amigo, una foto de un cartel que hiciste ayer, una tarjeta de embarque guardada en tu carrete, un código dentro de un correo que capturaste en vez de guardar. Si mantener pulsado no hace nada, revisa dos cosas antes que nada: que estés pulsando sobre el propio código y no sobre un espacio vacío cerca de él, y que el código sea totalmente visible en la imagen en vez de estar cortado por un borde. Un código recortado por el borde de la captura es el equivalente en imagen de un código recortado por el encuadre de la cámara, y ningún lector puede reconstruir la esquina que falta.</p>
+<p>Cuando el código no es una foto guardada en absoluto — está mostrándose en un mensaje, un correo o una página web en el mismo teléfono —, haz primero una captura de pantalla, luego abre la captura en Fotos y mantén pulsado el código. Este baile de dos pasos se siente torpe la primera vez y se vuelve automático rápido, y es la respuesta a la pregunta que más confunde a la gente: no puedes apuntar tu propia cámara a tu propia pantalla, así que capturas la pantalla y lees la captura. Los códigos en vivo delante de ti están en <a href="/es/blog/how-to-scan-qr-code-on-phone/">la guía de escaneo con el teléfono</a> y <a href="/es/blog/how-to-scan-a-qr-code/">la guía general de escaneo</a>.</p>
+
+<h2>En Android: Google Fotos y Lens</h2>
+<p>Abre la imagen en Google Fotos y toca el botón Lens. Lens analiza la imagen, encuentra el código y muestra el enlace o la acción decodificados, que tocas después de leer la vista previa. Lens lee píxeles, no fuentes, así que sirve igual para una foto guardada, una captura o una imagen descargada. Si no ves un botón Lens, búscalo en las opciones de la imagen o en el menú de compartir. También puedes llegar a Lens desde la app de Google tocando su icono Lens y eligiendo la imagen.</p>
+<p>En un Samsung Galaxy hay un camino integrado adicional. Abre la imagen en la app Galería de Samsung y toca el botón Bixby Vision; el teléfono lee la imagen y ofrece abrir el enlace o copiarlo. La guía de soporte de Samsung, actualizada en octubre de 2026, describe el mismo camino a través del escáner de los Ajustes rápidos: abre los Ajustes rápidos, toca Escanear código QR, toca el icono de imagen de la galería abajo, elige la foto y confirma. Cualquiera de las dos puertas lleva al mismo resultado, así que usa la que encuentres primero. Si tu teléfono no es un Samsung ni un teléfono con Google Fotos, la alternativa es la misma que en un ordenador: guarda la imagen y súbela a un decodificador de navegador, que se explica a continuación.</p>
+
+<h2>En un ordenador: sube a un decodificador de navegador</h2>
+<p>Un ordenador no tiene un lector de imágenes integrado para códigos QR como lo tiene un teléfono, así que aquí es donde un decodificador de navegador se gana su sitio. Guarda la imagen — o haz una captura del código en la página web, en el documento o en la presentación — y súbela a un decodificador. <a href="/es/scan/">El escáner de FreeQrly</a> decodifica la imagen en tu navegador, así que la imagen nunca sale de la página; ese detalle importa más justo cuando la captura contiene algo privado, lo que pasa a menudo, y la sección de privacidad de abajo explica por qué. El decodificador devuelve el contenido decodificado en bruto, con un botón de enlace para enlaces y un botón de copiar para todo lo demás. Lee el enlace decodificado antes de abrirlo, igual que leerías la vista previa de un teléfono.</p>
+
+<h2>Imágenes que te envían otras personas</h2>
+<p>Un código que te envían en un chat, un correo o una publicación social merece un hábito extra: guárdalo antes de escanearlo. Leer dentro de una burbuja de chat significa leer una versión pequeña, posiblemente comprimida, de la imagen, dentro de una app que quizá no ofrezca ningún lector. Guardar la imagen te da el archivo completo, la abre en Fotos o Google Fotos, donde vive el lector, y te permite recortarla y aclararla si el primer intento falla. También te da un momento para pensar: un código que llega de un remitente que no conoces, con una historia urgente adjunta, es la versión en imagen del mensaje inesperado del que advierten las guías de seguridad. Guárdalo, lee la vista previa y solo entonces decide.</p>
+
+<h2>Limpiar una imagen rebelde</h2>
+<p>La mayoría de las imágenes ilegibles no son códigos ilegibles; son códigos legibles enterrados en una mala foto. Sigue estos arreglos en orden y vuelve a probar después de cada uno, porque el primer arreglo que funcione te ahorra el resto.</p>
 <ul>
-<li>Recorta ajustado alrededor del código antes de subirlo: los decodificadores trabajan más rápido y con más fiabilidad con un recorte limpio.</li>
-<li>Si la foto está borrosa o tomada en ángulo, ningún decodificador la salvará; vuelve a tomarla de frente.</li>
+<li><strong>Recorta ajustado alrededor del código.</strong> Quita la ventana del chat, el texto alrededor, la mesa y el fondo. Mantén la zona de silencio — el margen en blanco alrededor del código — dentro del recorte.</li>
+<li><strong>Endereza y aplana.</strong> Un código fotografiado en ángulo, sobre una superficie curva o en perspectiva sale estirado en la imagen. Si tu app de fotos ofrece una herramienta para enderezar, úsala con suavidad; si no, vuelve a hacer la foto de frente.</li>
+<li><strong>Aclara, no enfoques a ciegas.</strong> Subir el brillo o el contraste puede rescatar un código sacado con poca luz. Un enfoque fuerte puede inventar bordes que no existen, así que aclara primero y enfoca solo un poco.</li>
+<li><strong>Prueba el archivo original.</strong> Si estuviste trabajando con una copia comprimida de un chat, vuelve a la foto original, a la descarga original o a una captura nueva. Editar no puede restaurar el detalle que la compresión eliminó.</li>
+<li><strong>Prueba otro lector.</strong> Si Fotos no encuentra nada, prueba Lens; si Lens no encuentra nada, prueba un decodificador de navegador; si un decodificador de navegador no encuentra nada, prueba el otro teléfono de la casa. Un código al borde de la legibilidad a veces pasa un lector y otro no. Un código que ningún lector puede leer desde el archivo original debería reemplazarlo el remitente.</li>
 </ul>
-<p>Más en <a href="/es/blog/why-is-my-qr-code-not-working/">por qué tu código QR no escanea</a>.</p>
-<h2>Nota de privacidad</h2>
-<p>Las capturas a menudo contienen más que el código QR: chats, boletos, fotos personales. Piénsalo dos veces antes de subirlas a un sitio decodificador cualquiera. Un <a href="/es/scan/">decodificador local</a> nunca ve nada más que tu propia pestaña del navegador.</p>
-<p>¿Vas a crear códigos en vez de leerlos? El <a href="/es/batch-qr-code/">modo Batch</a> genera un código por enlace, descargados en un ZIP.</p>
 
+<h2>Casos especiales: fotogramas de vídeo, varios códigos y códigos diminutos</h2>
+<p><strong>Un código dentro de un vídeo</strong> es un problema de captura disfrazado: pausa en un fotograma donde el código esté nítido, totalmente visible y sin movimiento, captura ese fotograma y lee la captura. <strong>Varios códigos en una imagen</strong> — un cartel, una página de entradas — deben leerse uno a la vez: recorta a un solo código, léelo y repite, ya que un lector al que se le muestran varios códigos normalmente elegirá uno, y puede que no sea el que querías. <strong>Un código diminuto en una imagen grande</strong> puede ser simplemente demasiado pocos píxeles para resolverlo; recorta hacia él, y si los módulos siguen difuminándose al ampliar, la imagen no contiene suficiente detalle: pide una foto más cercana, una descarga de mayor resolución o un código nuevo.</p>
+
+<h2>Privacidad: qué contiene tu captura además del código</h2>
+<p>Las capturas y fotos casi siempre contienen más que el código QR. Una captura de un chat contiene la conversación alrededor del código. Una foto de una entrada contiene el nombre, la referencia de reserva y el código de barras junto al código. Una captura de una página de pago contiene importes y datos de la cuenta. Antes de subir una imagen así a un decodificador, mira qué más hay en el encuadre y recórtalo. Recortar no es solo un arreglo de legibilidad; es un arreglo de privacidad, y cuesta los mismos pocos segundos de cualquier forma.</p>
+<p>La pregunta más profunda es adónde va la imagen. Muchos decodificadores en línea suben tu imagen a su servidor para leerla, lo que significa que el servidor de un desconocido recibe tu captura — chat, entrada y todo — solo para leer un código. Un decodificador que lee la imagen en tu navegador, como <a href="/es/scan/">el escáner de FreeQrly</a>, nunca envía la imagen a ningún lado; la lectura ocurre en tu dispositivo, en la página, y la imagen se queda contigo. Prefiere un decodificador local para cualquier imagen que no le enviarías por correo a un desconocido, y recorta antes de subirla incluso entonces.</p>
+
+<h2>La comparación honesta: lectores integrados, decodificadores de navegador y apps de escáner</h2>
+<p>Para un código en una imagen, compiten tres tipos de herramientas, y el ranking honesto depende de la imagen, no del marketing de la herramienta. Los lectores integrados — Fotos en iPhone, Lens en Android, Galería en Samsung — son la mejor primera opción para una imagen guardada en tu propio teléfono: ya están instalados, corren en el dispositivo y no necesitan subida. Los decodificadores de navegador son la mejor opción en un ordenador, y el mejor respaldo en un teléfono cuando el lector integrado falla, siempre que el decodificador lea localmente en el navegador en vez de subir tu imagen. Las apps de escáner son la opción por defecto más débil para este trabajo: añaden una instalación, una pantalla de permisos y a menudo anuncios o una cuenta, a cambio de una capacidad que tu teléfono ya tiene.</p>
+<p>Una nota honesta más: ningún lector rescata un código cuyo detalle se perdió. Un reenvío muy comprimido, un fotograma de vídeo borroso, un código cortado en el borde de una captura: estos son problemas de datos faltantes, no problemas del lector, y cambiar de lector cinco veces no restaurará lo que nunca se capturó. El arreglo para los datos faltantes es un original mejor, y pedirle uno al remitente es más rápido y más honesto que probar todos los decodificadores de internet. Los lectores son buenos encontrando códigos en imágenes; no son buenos inventando códigos que no están ahí.</p>
+
+<h2>Cuando la imagen se lee pero el destino falla</h2>
+<p>A veces la imagen se lee perfectamente y el resultado aun así decepciona: un enlace muerto, una página mudada, un formulario que ya no existe, una entrada que ya se usó. Eso no es un fallo de escaneo; es un fallo de destino, y el arreglo pertenece a quien emitió el código. Un código estático guarda su destino directamente, así que si el destino se fue, el código no tiene nada que decir; y si el destino se mudó, solo el emisor puede apuntar el código a otro sitio, que es justo para lo que sirve un código dinámico: sigue siendo editable después de imprimir, con estadísticas de escaneo, con una cuenta gratuita. Para códigos que no se leen en absoluto, mira <a href="/es/blog/why-is-my-qr-code-not-working/">por qué no escanea tu código QR</a> y <a href="/es/blog/why-is-my-qr-code-blurry/">por qué sale borroso tu código QR</a>. Si el enlace está muerto, pídele al remitente un código nuevo en vez de volver a escanear.</p>
+
+<h2>Haz un código que valga la pena enviar como imagen</h2>
+<p>La otra cara de esta guía merece un párrafo, porque los códigos que a la gente le cuesta leer desde imágenes a menudo son códigos que se hicieron mal desde el principio. Si eres tú quien envía un código como imagen, envía el archivo original, no una captura de una captura; mantén el código grande en el encuadre, con su zona de silencio intacta y módulos oscuros sobre fondo claro; y pruébalo leyéndolo de vuelta desde la imagen tú mismo antes de enviarlo. El generador de FreeQrly cubre 17 tipos, y un código estático hecho allí es gratis sin registro, sin marca de agua y sin caducidad, así que un código de prueba no cuesta nada. Si el código se reenviará o reutilizará, considera un código dinámico: sigue siendo editable si el destino cambia, informa de estadísticas de escaneo y es gratis hasta 20 códigos, actualmente con disponibilidad ilimitada durante el periodo promocional, y con escaneos ilimitados. Para muchos códigos a la vez, la <a href="/es/batch-qr-code/">generación por lotes</a> crea un código por enlace. Envía un original limpio, y la persona del otro lado no necesitará para nada la sección de limpieza de esta guía.</p>
     </div>
+
+    <section class="sources">
+      <h2>Fuentes</h2>
+      <ul>
+      <li><a href="https://www.samsung.com/uk/support/mobile-devices/how-to-scan-qr-code-on-your-galaxy-phone-or-tablet/">Soporte de Samsung: Cómo escanear códigos QR en tu teléfono Samsung</a> - AÑADIDO (el artículo original no tenía ningún campo de fuentes). Actualizado el 6 de octubre de 2026 (mostrado en la página, verificado al abrirla el 2026-11-03). Respalda: Galería con Bixby Vision para una foto guardada, y el icono de imagen de la galería del mosaico Escanear código QR de los Ajustes rápidos para elegir una foto y extraer su enlace.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presentando un código QR"></div>
       <div>
         <h3>Pruébalo tú mismo — gratis</h3>
-        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, trece tipos de contenido, exportación a PNG y SVG.</p>
+        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, los 17 tipos de contenido, exportación en PNG y SVG.</p>
         <a class="btn" href="/es/#studio">Abrir el generador</a>
       </div>
     </div>
     <div class="related">
       <div class="fl" style="margin-top:34px">Seguir leyendo</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/es/blog/wedding-rsvp-qr-code/"><b>Wedding RSVP QR Codes: No More Chasing Replies</b></a>
-        <a class="rel-card" href="/es/blog/how-to-edit-a-qr-code-after-printing/"><b>How to Edit a QR Code After Printing (Without Reprinting)</b></a>
-        <a class="rel-card" href="/es/blog/qr-code-vs-barcode/"><b>QR Code vs Barcode: Which One Do You Actually Need?</b></a>
+        <a class="rel-card" href="/es/blog/wedding-rsvp-qr-code/"><b>Códigos QR de confirmación para bodas: no más perseguir respuestas</b></a>
+        <a class="rel-card" href="/es/blog/how-to-edit-a-qr-code-after-printing/"><b>Cómo editar un código QR después de imprimir (sin reimprimir)</b></a>
+        <a class="rel-card" href="/es/blog/qr-code-vs-barcode/"><b>Código QR frente a código de barras: ¿cuál necesitas de verdad?</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bueno saberlo</h2>
-    <details><summary><span>¿Cómo escaneo un código QR desde una captura en iPhone?</span></summary><p>Abre la captura en Fotos y mantén presionado el código: iOS lo lee directo de la imagen.</p></details>
-    <details><summary><span>¿Cómo escaneo un código QR desde una imagen en PC?</span></summary><p>Sube la imagen a un decodificador QR en línea gratis. Prefiere uno que decodifique localmente en el navegador para que tu imagen nunca se suba.</p></details>
-    <details><summary><span>¿Por qué el decodificador no puede leer mi foto?</span></summary><p>Por lo general borrosidad, un ángulo pronunciado o el código demasiado pequeño en el encuadre. Recorta ajustado alrededor del código e inténtalo de nuevo con buena luz.</p></details>
+    <details><summary><span>¿Cómo escaneo un código QR desde una captura en iPhone?</span></summary><p>Abre la captura en la app Fotos y mantén pulsado el propio código QR. El teléfono detecta el código en la imagen y ofrece el enlace o la acción; lee la vista previa antes de tocarlo.</p></details>
+    <details><summary><span>¿Cómo escaneo un código QR desde una imagen en Android?</span></summary><p>Abre la imagen en Google Fotos y toca el botón Lens. Lens lee el código dentro de la imagen y muestra el enlace o la acción decodificados. En un Samsung Galaxy también puedes abrir la imagen en Galería y tocar el botón Bixby Vision.</p></details>
+    <details><summary><span>¿Cómo escaneo un código QR desde una imagen en un ordenador?</span></summary><p>Guarda la imagen, o captura el código en la página, y súbela a un decodificador de navegador. Prefiere un decodificador que lea la imagen en tu navegador, para que la imagen nunca se envíe a un servidor; el escáner de FreeQrly funciona así.</p></details>
+    <details><summary><span>¿Alguien me envió un código QR en un chat? ¿Cómo lo escaneo?</span></summary><p>Guarda primero la imagen, luego abre el archivo guardado en Fotos o Google Fotos y usa el lector de imágenes integrado. Leer dentro de una burbuja de chat significa leer una copia más pequeña, posiblemente comprimida, y la app de chat puede no ofrecer ningún lector.</p></details>
+    <details><summary><span>¿Por qué el decodificador no puede leer mi foto?</span></summary><p>Normalmente el código está cortado por un borde, es demasiado pequeño en el encuadre, está borroso o se sacó en ángulo. Recorta ajustado alrededor del código manteniendo su zona de silencio, aclara si está oscuro, prueba el archivo original en vez de un reenvío comprimido y prueba otro lector. Si ningún lector puede leer el archivo original, pídele al remitente un código nuevo.</p></details>
+    <details><summary><span>¿Qué pasa si una imagen contiene varios códigos QR?</span></summary><p>Recorta a un solo código y léelo, luego repite con el siguiente. Un lector al que se le muestran varios códigos a la vez normalmente elegirá uno, y puede que no sea el que querías.</p></details>
+    <details><summary><span>¿Es seguro subir una captura a un decodificador en línea?</span></summary><p>Recorta primero todo excepto el código: las capturas a menudo contienen chats, entradas o datos de pago junto al código. Prefiere un decodificador que lea localmente en tu navegador, para que la imagen nunca se suba a un servidor.</p></details>
     </section>
   </article>
   <footer>
