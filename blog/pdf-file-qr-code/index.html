@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF File QR Code: Host It, Link It, and Replace It Without Reprinting | FreeQrly</title>
+<meta name="description" content="A QR code that opens a PDF works only if the file stays reachable, loads fast on a phone, and can be replaced when the document changes. Here is how to host, size, and update it.">
+<link rel="canonical" href="https://freeqrly.com/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/pdf-file-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="PDF File QR Code: Host It, Link It, and Replace It Without Reprinting | FreeQrly">
+<meta property="og:description" content="A QR code that opens a PDF works only if the file stays reachable, loads fast on a phone, and can be replaced when the document changes. Here is how to host, size, and update it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/pdf-file-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"PDF File QR Code: Host It, Link It, and Replace It Without Reprinting | FreeQrly","description":"A QR code that opens a PDF works only if the file stays reachable, loads fast on a phone, and can be replaced when the document changes. Here is how to host, size, and update it.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a QR code hold a whole PDF file inside it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not practically. Codes are designed for short payloads such as links, and a long payload makes the pattern dense and hard to scan at print size. Use a link code that opens a hosted PDF instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use a static or dynamic code for a PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a dynamic code for any document that may change. A dynamic destination can be updated without reprinting, while a static code locks in the exact address printed on it, so moving the file breaks every printed copy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should I host the PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At a stable, public address you control, such as your own website, with a clean file name and no login requirement. Avoid temporary share links or personal folders whose permissions may change, because either can break the printed code without warning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How large should the PDF be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As small as you can make it without harming legibility. Compress images first, remove unneeded pages, favour real text over scanned images, and test the result on a phone on a mobile connection. If prices or small print become hard to read, the compression went too far."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I replace the PDF without reprinting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prepare and check the new file on a phone, replace it at the same public address or update the dynamic destination, then scan a printed copy to confirm the new version and its date. Tell staff the document has changed, and test on a phone that has not cached the old file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the PDF open slowly from a scan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The usual causes are a large file, image-heavy pages, a slow host, or a weak mobile signal. Compress the file, reduce image sizes, split a long document, and test on mobile data rather than only on office Wi-Fi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should the scan open the PDF directly or a landing page first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the PDF directly when it is short and the label says it is a PDF. Use a short landing page first when the file is large, when readers need the date and context before downloading, or when you want one page to offer several related documents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when the PDF becomes outdated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Point the dynamic code to the new version, or to a page that says the document has been replaced, and retire printed material that still points to the old version. Leaving an outdated price list or programme live teaches readers not to trust your codes."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"PDF File QR Code: Host It, Link It, and Replace It Without Reprinting | FreeQrly","description":"A QR code that opens a PDF works only if the file stays reachable, loads fast on a phone, and can be replaced when the document changes. Here is how to host, size, and update it.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Define the document's job",
+      "text": "Write one sentence for what the scan must deliver, and test the final result against it."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Host it at a stable address",
+      "text": "Put the PDF on an address you control, with a clean file name and no login wall."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Make a short dynamic code",
+      "text": "Use a short link behind a dynamic code, so the destination can be updated without reprinting."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Slim the file for phones",
+      "text": "Remove unneeded pages, compress images, favour real text, and check prices and small print on a phone."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Label the code clearly",
+      "text": "Say what the scan opens, such as the full menu or price list, so readers are not surprised by a PDF."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Proof from print, on mobile data",
+      "text": "Scan the printed proof on two phones, confirm the right version opens, and check the date inside the document."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Replace and re-check on schedule",
+      "text": "When the document changes, update the destination, scan a printed copy, and re-scan changing documents regularly."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly the FreeQrly elephant mascot"></div>
+    <div class="kicker" style="text-align:center">Field notes</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">A PDF QR code is only as good as <span class='hl hl-mint'>the file behind it</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">A QR code on a poster, menu board, handout, or product insert can open a full PDF in one scan: a menu, a catalogue, a price list, a manual, or a brochure. The scan itself is the easy part. The hard part is everything behind it: where the file lives, how large it is, whether it opens cleanly on a phone, and what happens when the document needs a new price, a corrected page, or a seasonal update. Get those four decisions right and the code stays useful for a whole print run. Get them wrong and you have printed a shortcut to a slow, broken, or outdated file.</p>
+    <p class="meta" style="text-align:center">November 4, 2026 · 14 min read</p>
+    <div class="prose" style="margin-top:40px">
+<p>Start by asking what the PDF is for, because that answer decides almost everything else. A restaurant menu needs to open fast, read well on a small screen, and change when dishes or prices change. A product manual needs to stay accurate for the life of the product, and a reader may return to it months after buying. A price list needs a single, trustworthy version, so that no one orders from last season's prices. A conference handout may only need to live for a weekend, but it still needs to open without a login wall or a confusing download step. Write that purpose down in one sentence before you generate the code, and test the final result against it: does this scan give the reader the right document, quickly, on a phone, today and after the next update?</p>
+<p>The first practical choice is between encoding the PDF itself and linking to a hosted PDF. A QR code cannot comfortably hold a whole PDF file. Codes are designed for short payloads such as links and contact records, and a long payload makes the pattern dense, slow to scan, and fragile at print size. The standard approach is therefore a link code: the code holds a short web address, and that address opens the PDF. That is also what makes the code maintainable, because the address can stay the same while the file behind it changes, provided you use a dynamic code. A static code locks in the exact address it was printed with, so moving the file to a new address breaks every printed copy. A dynamic code points to a destination you can update, which is the difference between fixing a price list in an afternoon and reprinting a whole batch of posters. For the wider comparison, see <a href="/blog/static-vs-dynamic-qr-codes/">static versus dynamic QR codes</a>, and for the edit workflow, see <a href="/blog/how-to-edit-a-qr-code-after-printing/">how to edit a QR code after printing</a>.</p>
+<h2>Where to host the PDF</h2>
+<p>Host the PDF at a stable, public address that you control, and keep the address short. Your own website, a dedicated landing page, or a file host you manage are all workable, provided the link is unlikely to move, expire, or gain a login requirement later. Avoid addresses that depend on a temporary share link, a personal drive folder with changing permissions, or a shortener you do not control, because any of those can break the printed code without warning. Use a clean file name and a stable folder, for example a documents or menus folder on your own domain, and avoid spaces, special characters, and version numbers in the public address if you plan to replace the file in place. A version number in the address forces a new address for every update, which defeats the point of a stable code.</p>
+<p>Check how the PDF opens, not just whether the link works. On most phones, a PDF link opens in the browser or in a viewer, and the reader should see the first page without an extra download step, a sign-in prompt, or a warning about an unsafe file. Test the link on both major phone platforms, on a mobile connection rather than only on office Wi-Fi, and from the printed code rather than only from a typed address. If the host forces a download instead of a preview, a reader on a slow connection may abandon the scan before the file finishes. If the host adds tracking, advertising, or an interstitial page, the scan feels less trustworthy and the reader may not reach the document at all. The host is part of the user experience, not just a storage choice.</p>
+<p>Keep one canonical version of the document. When a menu, catalogue, or price list exists in several places, readers and staff quickly lose track of which copy is current. Name the file clearly in your own records, keep the public address unchanged when you replace the file, and note the effective date inside the PDF itself, on the first page or in the footer, so a reader who prints it or forwards it can tell whether it is current. If an old version must stay available, give it a different address and link to it from the new document, rather than letting two competing versions share the same code. For menus in particular, a short, focused PDF that opens to the current menu will serve readers better than a large, general brochure that buries the menu several pages in.</p>
+<h2>File size: make it fast before you make it pretty</h2>
+<p>File size is the most common reason a PDF code disappoints. A PDF built from high-resolution photographs, uncompressed scans, or a full print layout can easily run to many megabytes, and that matters on a phone. Large files take longer to download, use more mobile data, and may stall on a weak signal in a restaurant, a hall, or a shop. Compression exists precisely for this trade-off: it reduces the file while trying to preserve visual quality, and the right setting depends on the document. Text-heavy documents usually compress well without visible loss, while image-heavy documents force a choice between a smaller file and sharper photographs. Adobe's mobile guidance describes this directly, offering high, medium, and low compression, with low compression preserving quality best and high compression giving the smallest file at some cost to quality.</p>
+<p>Before you compress, reduce the file at the source. Remove pages the reader does not need, crop photographs to the size they will actually be shown at, and avoid embedding the same large image more than once. A menu does not need print-resolution photographs on every page when it will be read on a phone screen, and a price list does not need scanned images of pages that could be real text. Real text has a second benefit beyond size: it can be searched, selected, and read by accessibility tools, while a scanned image of text cannot, unless the scan has been processed to recognise the text. After compression, open the result on a phone and check the pages that matter most, especially small print, prices, and tables. If a price, an allergen note, or a footnote becomes hard to read, the compression went too far, and a slightly larger file is the better choice.</p>
+<p>Set a practical size discipline for your own team, even if you do not publish a number to readers. As a working rule, aim for a file that opens promptly on a mobile connection and feels instant on Wi-Fi, and test it on a real phone rather than judging by the file size alone. Some email and upload services impose their own limits, which is a useful reminder that large files create friction everywhere: one mobile compression guide notes that Gmail caps attachments at 25 megabytes, while many job portals limit uploads to 5 megabytes and some forms demand files under 2 megabytes. Those are other services' limits, not a rule for your PDF, but they illustrate the point that a file that is awkward to send is also awkward to open from a scan. If your PDF is still large after compression, split it: a short menu and a separate detailed catalogue, linked from each other, will both open faster than one combined file.</p>
+<div class="table-scroll"><table><tr><th>Document type</th><th>Size discipline</th><th>What to check after compression</th></tr><tr><td>Menu or price list</td><td>Keep it lean; favour real text over scanned images</td><td>Prices, small print, and tables stay legible on a phone</td></tr><tr><td>Catalogue or brochure</td><td>Compress images first; consider splitting long catalogues</td><td>Photographs still show the product clearly</td></tr><tr><td>Manual or guide</td><td>Keep the full document, but remove duplicate images</td><td>Diagrams, warnings, and page numbers stay readable</td></tr></table></div>
+<h2>Replace the file without reprinting the code</h2>
+<p>Replacing a PDF behind a dynamic code is a small workflow, but it needs a checklist so it does not create a silent error. First, prepare the new file and check it on a phone, including the pages that changed and the pages that did not. Second, replace the file at the same public address, or update the dynamic destination to the new address, and keep the old address working until you are sure the new one is correct. Third, scan a printed copy of the code, not just a screen preview, and confirm that it opens the new version. Fourth, check the effective date inside the document and any printed references to the old version, such as a footer that says the prices apply until a certain date. Finally, tell the people who hand out or display the code, such as front-of-house staff, that the document has changed, so no one keeps directing readers to a cached or printed copy of the old file.</p>
+<p>Be careful with caching. A reader's phone or browser may hold an old copy of the PDF for a while after you replace it, and a staff member's phone may do the same. That is normal, but it means your test should include a fresh scan after clearing the cache, or a scan on a phone that has not opened the old file before. If you replace a file frequently, such as a weekly menu, consider adding the effective date to the first page in large type, so a reader who sees a cached copy can spot that it is old. If a change is urgent, such as a price correction or a safety note, do not rely on the code alone: update any printed copies, signs, or staff scripts that repeat the same information, and confirm the correction with the people most likely to act on it.</p>
+<p>There are limits to what a dynamic code can fix. It can change the destination, but it cannot fix a PDF that was never designed for a phone, a file that is too large to open on a weak signal, or a document that buries the key information on page twelve. It also cannot fix a broken host, an expired share link, or a permissions change that locks readers out. Those are hosting and document problems, and they need to be solved at the source. A good routine is to re-scan your printed PDF codes on a schedule that matches how often the document changes: weekly for a changing menu, monthly for a price list, and before every event for a conference handout. A code that worked at print time is not guaranteed to work forever, and a short, regular check is far cheaper than discovering a broken code from a customer.</p>
+<h2>Design the PDF for the phone that will open it</h2>
+<p>A PDF made for print does not automatically read well on a phone. Wide tables, tiny footnotes, and dense multi-column layouts force the reader to pinch, zoom, and scroll sideways, which is a poor experience after a quick scan. If the PDF will mainly be read on phones, set generous type sizes, keep tables narrow, and put the most important information early. A menu should lead with the dishes and prices, not with a history page. A price list should lead with the current prices and the date they apply from. A manual should lead with the safety notes and the quick-start steps, with detailed reference material later. A short, phone-friendly PDF will be scanned, read, and acted on more often than a long, print-perfect PDF that no one finishes.</p>
+<p>Keep the code itself scannable, because a PDF code is often printed alongside other information. Use a short link behind the code so the pattern stays sparse and the modules stay large, keep the quiet zone clear, and print the code at a size suited to the scanning distance, following <a href="/blog/qr-code-print-size-guide/">the print size guide</a>. If the code sits on a menu board, a poster, or a handout, add a label that says what the scan opens, such as “Scan for the full menu (PDF)” or “Scan for the price list.” Readers are more likely to scan when they know the result, and they are less likely to be annoyed when a PDF opens if they expected it. If the PDF is long, consider linking first to a short landing page that names the document, its date, and its size, with a clear button to open the PDF, rather than opening a large file without warning.</p>
+<p>Finally, plan for the end of the document's life. A menu changes with the seasons, a price list expires, and an event handout becomes irrelevant after the event. Decide in advance what the code should do when the document is no longer current: point it to the new version, point it to a page that says the document has been replaced, or retire the printed material. Leaving a code that opens an outdated price list or a past event programme is worse than having no code at all, because it teaches readers that your codes cannot be trusted. A PDF code earns its place by staying current, opening quickly, and giving the reader exactly the document they expected, in a form they can actually read on the phone in their hand.</p>
+<div class="table-scroll"><table><tr><th>Stage</th><th>Check</th><th>If it fails</th></tr><tr><td>Before printing</td><td>Scan the printed proof on two phones, on mobile data</td><td>Shorten the link, compress the file, or enlarge the code</td></tr><tr><td>When replacing the file</td><td>Scan a printed copy and confirm the new version and date</td><td>Fix the address, clear the cache test, and tell staff</td></tr><tr><td>On a regular schedule</td><td>Re-scan codes for changing documents</td><td>Update the destination or retire the printed material</td></tr></table></div>
+    </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="https://www.adobe.com/acrobat/hub/how-to-compress-pdfs-android.html">How to Compress a PDF on Any Android Device, Adobe Acrobat</a> - Supports the high, medium, and low compression options and the trade-off between smallest file and preserved quality.</li>
+      <li><a href="https://www.pdffiller.com/en/functionality/reduce-pdf-size-on-mobile-conveniently.htm">Reduce PDF Size on Mobile Conveniently, pdfFiller, last updated April 7, 2026</a> - Supports the point that reducing size conserves storage, speeds upload and download, and eases sharing where file size limits apply.</li>
+      <li><a href="https://pdfgadget.com/tutorials/compress-pdf-android/">How to Compress PDF on Android, PDFGadget</a> - Supports the illustration that Gmail caps attachments at 25 megabytes while many portals and forms impose smaller limits.</li>
+      <li><a href="https://www.circulateqr.com/guides/qr-code-size-guide">QR Code Size Guide for Print: Minimum Size and Distance, updated October 21, 2026</a> - Supports keeping the destination link short so the pattern stays sparse, and the four-module quiet zone.</li>
+      <li><a href="https://pngqr.com/guides/qr-code-error-correction-levels.html">QR Code Error Correction Levels Explained (L, M, Q, H)</a> - Supports the general point that denser patterns are harder to read, via the error correction levels L, M, Q, and H.</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
+      <div>
+        <h3>Try it yourself — free</h3>
+        <p>Everything in this article works in the FreeQrly studio right now. Static codes, all 17 content types, PNG and SVG export.</p>
+        <a class="btn" href="/#studio">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Keep reading</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/video-qr-code/"><b>Video QR Code: Link a Video Without Making People Type a URL</b></a>
+        <a class="rel-card" href="/blog/pre-print-qr-code-checklist/"><b>Pre-Print QR Code Checklist: Test on Real Paper Before You Print Thousands</b></a>
+        <a class="rel-card" href="/blog/printable-qr-code-cheat-sheet/"><b>Printable QR Code Cheat Sheet: Size, Quiet Zone & Contrast on One Page</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Good to know</h2>
+    <details><summary><span>Can a QR code hold a whole PDF file inside it?</span></summary><p>Not practically. Codes are designed for short payloads such as links, and a long payload makes the pattern dense and hard to scan at print size. Use a link code that opens a hosted PDF instead.</p></details>
+    <details><summary><span>Should I use a static or dynamic code for a PDF?</span></summary><p>Use a dynamic code for any document that may change. A dynamic destination can be updated without reprinting, while a static code locks in the exact address printed on it, so moving the file breaks every printed copy.</p></details>
+    <details><summary><span>Where should I host the PDF?</span></summary><p>At a stable, public address you control, such as your own website, with a clean file name and no login requirement. Avoid temporary share links or personal folders whose permissions may change, because either can break the printed code without warning.</p></details>
+    <details><summary><span>How large should the PDF be?</span></summary><p>As small as you can make it without harming legibility. Compress images first, remove unneeded pages, favour real text over scanned images, and test the result on a phone on a mobile connection. If prices or small print become hard to read, the compression went too far.</p></details>
+    <details><summary><span>How do I replace the PDF without reprinting?</span></summary><p>Prepare and check the new file on a phone, replace it at the same public address or update the dynamic destination, then scan a printed copy to confirm the new version and its date. Tell staff the document has changed, and test on a phone that has not cached the old file.</p></details>
+    <details><summary><span>Why does the PDF open slowly from a scan?</span></summary><p>The usual causes are a large file, image-heavy pages, a slow host, or a weak mobile signal. Compress the file, reduce image sizes, split a long document, and test on mobile data rather than only on office Wi-Fi.</p></details>
+    <details><summary><span>Should the scan open the PDF directly or a landing page first?</span></summary><p>Open the PDF directly when it is short and the label says it is a PDF. Use a short landing page first when the file is large, when readers need the date and context before downloading, or when you want one page to offer several related documents.</p></details>
+    <details><summary><span>What happens when the PDF becomes outdated?</span></summary><p>Point the dynamic code to the new version, or to a page that says the document has been replaced, and retire printed material that still points to the old version. Leaving an outdated price list or programme live teaches readers not to trust your codes.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Unlimited dynamic codes — limited-time offer.</h3>
+        <p>Sign in free and create as many as you need. Every code stays editable after printing and never expires.</p>
+      </div>
+      <a class="fctaBtn" href="/login/">Start free</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
+        <div class="fmade">Made quietly — static codes in your browser.</div>
+      </div>
+      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a><a href="/pricing/">Pricing</a></div>
+      <div class="fcol"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/developers/">Developers · API &amp; MCP</a><a href="/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Company</h4><a href="/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>
