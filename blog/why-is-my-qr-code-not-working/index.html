@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -183,7 +183,7 @@
     <div class="prose" style="margin-top:40px">
 <p>A QR code that will not scan is almost never a mystery. Run through these checks — in order — and you will find the culprit in about two minutes. Before you change anything, split the problem three ways: the phone, the printed or displayed code, and the destination. Scan with a second phone. If it reads the code, the first phone, its camera, or its lighting is the problem. If no phone reads it, the code itself — size, contrast, margin, damage, or logo — is the problem. If phones read it but the link goes nowhere, the code is doing its job and the destination is the problem. That three-way split saves most people a pointless reprint, because each branch has a different fix.</p>
 <h2>The diagnostic table: check in this order</h2>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Order</th><th>Check</th><th>Quick test</th><th>Fix</th></tr>
 <tr><td>1</td><td>Phone and camera</td><td>Wipe the lens; try a second phone</td><td>Clean lens, better light, steadier hold</td></tr>
 <tr><td>2</td><td>Distance and angle</td><td>Move closer; fill half the viewfinder; shoot straight on</td><td>Print larger, or move the code closer</td></tr>
@@ -195,16 +195,16 @@
 <tr><td>8</td><td>Glare, curve, angle</td><td>Tilt the print; flatten the surface</td><td>Matte finish, flatter placement, larger code</td></tr>
 <tr><td>9</td><td>Sharpness</td><td>Are module edges crisp or smeared?</td><td>Re-export larger or as SVG; see <a href="/blog/why-is-my-qr-code-blurry/">why your code looks blurry</a></td></tr>
 <tr><td>10</td><td>Destination</td><td>Link preview shown? Link opens?</td><td>Fix the page, or redirect a dynamic code</td></tr>
-</table>
+</table></div>
 <h2>The two standards that explain most failures</h2>
 <p>Two ideas from ISO/IEC 18004, the QR code symbology specification, explain a surprising share of scan failures. The first is the quiet zone: a blank margin at least 4 modules wide on every side, where a module is one small square of the grid. Scanners use that border to find where the symbol begins and ends, so text, graphics, or a crop invading it can make a perfect code invisible to a camera. The second is error correction: extra data that lets a reader rebuild codewords that come back wrong or unreadable, at four levels — L approximately 7%, M approximately 15%, Q approximately 25%, H approximately 30%. Those percentages describe codewords, not visible area: a torn finder pattern can kill a code well inside its level, while scattered minor damage elsewhere may survive. Higher levels are not free either: more recovery data means a denser grid, so raising the level on an already-small code can make it harder to read. Raise it for a reason — a logo, rough handling, outdoor use — then re-check size and test-scan.</p>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Level</th><th>Approximate codeword recovery</th><th>Best for</th></tr>
 <tr><td>L</td><td>7%</td><td>Clean, screen-only codes, no logo, no wear</td></tr>
 <tr><td>M</td><td>15%</td><td>The usual default for ordinary print</td></tr>
 <tr><td>Q</td><td>25%</td><td>Print that will be handled, scuffed, or weathered</td></tr>
 <tr><td>H</td><td>30%</td><td>Codes with a central logo, or harsh conditions</td></tr>
-</table>
+</table></div>
 <h2>Step 1: rule out the phone</h2>
 <p>Wipe the lens. A smudged lens is behind an embarrassing number of supposedly broken codes, because a thin film of grease softens the whole image just enough to blur module edges. Then test on a second phone: if phone B reads it, the code was never the problem. The whole square must be in frame, with a little room around it — a code cropped by the viewfinder edge will not read. Hold still once the code fills about half the viewfinder, and move to better light in dim conditions. A code that shows a preview but goes nowhere when tapped has a destination problem (Step 9), not a scanning problem.</p>
 <h2>Step 2: size and distance</h2>

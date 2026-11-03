@@ -2124,6 +2124,9 @@ def build(p, all_posts=None):
         '    <details><summary><span>%s</span></summary><p>%s</p></details>' % (q, a)
         for q, a in p["faq"])
     cta = p.get('cta') or {'title': 'Try it yourself — free', 'text': 'Everything in this article works in the FreeQrly studio right now. Static codes, thirteen content types, PNG and SVG export.', 'href': '/#studio', 'btn': 'Open the studio'}
+    # Tables: wrap in a horizontal-scroll container so wide tables stay
+    # readable on narrow screens instead of squeezing.
+    _body_html = re.sub(r'<table[\s\S]*?</table>', r'<div class="table-scroll">\g<0></div>', p["body"])
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2162,7 +2165,7 @@ def build(p, all_posts=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 {REL_CSS}{SOURCES_CSS if p.get("sources") else ""}
@@ -2189,7 +2192,7 @@ def build(p, all_posts=None):
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">{p["lede"]}</p>
     <p class="meta" style="text-align:center">{meta_line}</p>
     <div class="prose" style="margin-top:40px">
-{p["body"]}
+{_body_html}
     </div>
 {sources_html}    <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>

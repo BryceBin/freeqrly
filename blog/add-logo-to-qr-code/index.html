@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -172,13 +172,13 @@
 
 <p>A QR code is not just a picture of your link. It is a grid of dark and light squares, called modules, plus redundant data woven through the grid so a reader can rebuild missing pieces. That redundancy is set by the error-correction level, defined in the QR code standard, ISO/IEC 18004:</p>
 
-<table>
+<div class="table-scroll"><table>
 <tr><th>Level</th><th>Recovers about</th><th>Use it for</th></tr>
 <tr><td>L (Low)</td><td>7%</td><td>Clean, screen-only codes with no logo</td></tr>
 <tr><td>M (Medium)</td><td>15%</td><td>Plain printed codes; a good default</td></tr>
 <tr><td>Q (Quartile)</td><td>25%</td><td>Print exposed to wear, dirt, or scuffing</td></tr>
 <tr><td>H (High)</td><td>30%</td><td>Any code with a logo, or a rough surface</td></tr>
-</table>
+</table></div>
 
 <p>When you add a logo, the covered middle counts as damage, and the reader reconstructs it from the redundant data spread across the rest of the code. That is why the error-correction level matters more than the logo file itself: on level L or M, a logo eats most of your safety margin before the code ever reaches a printer, while on level H the same logo sits inside a much larger budget. FreeQrly raises error correction automatically when a logo is added, so you do not set the level by hand — but you still have to respect what it buys you. A higher level also adds modules, making the same content denser: a short address that fits in a 29 × 29 grid at level M needs 37 × 37 at level H, so each module gets smaller at the same print size. Keep the destination short, and print logo codes a little larger than plain ones.</p>
 
@@ -186,13 +186,13 @@
 
 <p>Logo-size advice is easy to misread, because guides quote it two different ways. A logo spanning 30% of the code's <em>width</em> covers only about 9% of its <em>area</em>, while a logo covering 30% of the <em>area</em> spans about 55% of the width. When this guide says "under about 30% of the code area," it means area — the share of the whole square the logo hides — and that is the ceiling the FreeQrly generator uses. Treat anything near that ceiling as a code with no reserve left.</p>
 
-<table>
+<div class="table-scroll"><table>
 <tr><th>Logo share of code area</th><th>What it means in practice</th></tr>
 <tr><td>Up to about 20%</td><td>Comfortable. Room left for print variation, glare, and wear.</td></tr>
 <tr><td>About 20–25%</td><td>The range most design guides recommend as a practical maximum for branded codes.</td></tr>
 <tr><td>Approaching 30%</td><td>The ceiling. It can scan in clean conditions, but a scuff or dim light can finish it.</td></tr>
 <tr><td>Over 30%</td><td>Past what error correction can rebuild. Shrink the logo or shorten the content.</td></tr>
-</table>
+</table></div>
 
 <p>Two other placement rules are absolute, not matters of taste. First, the logo goes dead center. The center holds no positioning data, making it the safest place to cover, and centering keeps the mark away from the three large finder patterns in the corners — the squares a camera looks for first to find, orient, and straighten the code. Covering even one finder pattern can stop a scan entirely, no matter the error-correction level. Second, the logo must never touch the quiet zone, the blank margin around the code, which the standard sets at a minimum of four modules wide on every side. A logo edge bleeding into that margin can keep the camera from finding the code's edges at all.</p>
 

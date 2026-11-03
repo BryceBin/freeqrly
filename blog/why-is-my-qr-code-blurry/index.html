@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -170,7 +170,7 @@
 <p>Density makes blur worse. A short link produces a roomy grid with large modules; a long link, a full contact card, or a Wi-Fi code with a long password produces a denser grid with smaller modules, and smaller modules blur sooner. That is why the same export can look fine for a short URL and fail for a data-heavy code at the same print size. If a code is both dense and printed small, shorten the destination where you can, print larger, or both. A dynamic code helps differently: the printed pattern encodes a short link you can redirect later, so the grid stays roomy even if the final destination is long. For a destination that will never change, a static code is simpler: free, no account, no watermark, and it does not expire.</p>
 <h2>The numbers: print size, pixels, and format</h2>
 <p>Printers talk about resolution in dots or pixels per inch. For close-viewed print, 300 pixels per inch at the final print size is the widely used professional baseline for sharp output. The table below turns that baseline into pixel counts: print width in inches multiplied by 300. A 2 cm code is about 0.8 inches wide, so it needs roughly 240 pixels at 300 pixels per inch — and that is the bare minimum, not a comfortable margin. Always export larger than the minimum and let the designer scale down, because scaling down preserves sharpness while scaling up only enlarges the blur.</p>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Print width</th><th>Pixels at 300 per inch (minimum)</th><th>Export to send</th></tr>
 <tr><td>2 cm (business card)</td><td>~240 px</td><td>PNG at 1024 px, or SVG</td></tr>
 <tr><td>3 cm (flyer, menu)</td><td>~350 px</td><td>PNG at 1024 px, or SVG</td></tr>
@@ -178,15 +178,15 @@
 <tr><td>10 cm (poster detail)</td><td>~1,180 px</td><td>PNG at 2048 px, or SVG</td></tr>
 <tr><td>20 cm (poster)</td><td>~2,360 px</td><td>SVG; PNG at 2048 px only as a fallback</td></tr>
 <tr><td>50 cm (large poster, signage)</td><td>~5,900 px</td><td>SVG</td></tr>
-</table>
+</table></div>
 <p>Two rules of thumb sit behind that table. First, the print size in centimetres, multiplied by roughly 100, gives a quick pixel target — a 5 cm code wants around 500 pixels at minimum, a 10 cm code around 1,000. Second, the 1:10 distance rule of thumb from the <a href="/blog/qr-code-print-size-guide/">print size guide</a>: the code width should be at least one-tenth of the scanning distance, so a code scanned from 50 cm should be at least 5 cm wide, and a poster scanned from 5 metres needs a 50 cm code. A poster code viewed from metres away can tolerate a lower effective resolution than a card held in the hand, but it still needs enough pixels for its size — and only a vector file gives you that without a ceiling.</p>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Format</th><th>How it behaves</th><th>Use it for</th></tr>
 <tr><td>SVG</td><td>Vector: no pixels, scales without limit, edges stay exact</td><td>Professional print, large posters, designer layouts</td></tr>
 <tr><td>PNG</td><td>Lossless raster: every pixel preserved, no compression smear</td><td>Office printing, slides, apps that do not accept SVG</td></tr>
 <tr><td>JPEG</td><td>Lossy: discards detail and smears sharp edges</td><td>Photographs only — never for a QR code</td></tr>
 <tr><td>Screenshot or chat image</td><td>Re-compressed and often downscaled by the sending app</td><td>Nothing in print — go back to the original export</td></tr>
-</table>
+</table></div>
 <h2>The 5 usual causes, in detail</h2>
 <h3>1. Low-resolution export</h3>
 <p>This is the most common cause, and the most forgiving to fix. A 512 px PNG looks fine at 2 cm wide; blown up to a 20 cm poster, each module becomes a smudge, because the same 512 pixels now cover ten times the area. The screen hides the problem — a display shows the code small, so the pixels look tight — while paper shows it at true size. The fix is at the source: re-export at 1024 px for cards and flyers, 2048 px for posters, or SVG whenever the printer accepts it. Enlarging the small file in an editor does not add detail; it only makes the existing blur bigger. If the original export is gone, regenerate from the same destination rather than stretching the file you have.</p>

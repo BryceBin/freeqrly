@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261102">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
 <link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
@@ -144,7 +144,7 @@
 <p>The short answer first: scan statistics answer three questions, and only three. Which placement got attention? When did it get it? And on what kind of device and from roughly where? Everything else — whether a scan became a customer, whether the poster was good — is an interpretation you add on top, and most misreadings come from treating an interpretation as if it were a measurement.</p>
 <h2>What FreeQrly counts</h2>
 <p>Open a dynamic code in your Dashboard and you see the same set of numbers for every code. The definitions matter, because two of the most common misreadings come from confusing “total” with “unique” and “today” with “all time.”</p>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Number</th><th>What it means</th><th>How to read it</th></tr>
 <tr><td><strong>Total scans</strong></td><td>Every scan of the code, all time</td><td>The lifetime footprint of that code. Compare totals only between codes that have been out for the same length of time.</td></tr>
 <tr><td><strong>Today</strong></td><td>Scans so far today</td><td>A live pulse, not a verdict. A quiet morning says nothing about the evening.</td></tr>
@@ -154,19 +154,19 @@
 <tr><td><strong>By city</strong></td><td>The same approximate location, at city level</td><td>Useful for comparing two neighbourhoods or two venues. Approximate means approximate: treat a city as a region, not an address.</td></tr>
 <tr><td><strong>By device</strong></td><td>Phone, tablet, or desktop</td><td>A poster that gets desktop scans at noon is probably being scanned from a screenshot, not from the wall.</td></tr>
 <tr><td><strong>By OS</strong></td><td>iOS, Android, and the rest</td><td>A sanity check on your audience and your testing: if nearly all scans are on one OS, test the destination on that OS first.</td></tr>
-</table>
+</table></div>
 <p>Each breakdown comes with counts and percentages. Percentages are shares of that code's scans, not shares of anything larger — a code with mostly iOS scans does not mean most of your customers use iPhones. It means most of the people who scanned that code did so on an iPhone.</p>
 <h2>Two outside numbers, with their sources attached</h2>
 <p>This post deliberately cites very few outside numbers, and the reason is worth stating plainly: a QR statistic borrowed from a roundup usually arrives without the three facts that make a number usable — what was measured, over whom, and when. The two numbers below arrive with all three, from their original publishers.</p>
 <h3>The QR standard itself: how much damage a code can survive</h3>
 <p>Scan statistics are only half of a print decision; the other half is whether the code survives handling. The QR standard, ISO/IEC 18004:2024, defines four error-correction levels, each stating how much of the symbol's codewords can be recovered if damaged:</p>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Level</th><th>Recoverable codewords</th><th>Typical use</th></tr>
 <tr><td>L</td><td>7%</td><td>Clean digital display</td></tr>
 <tr><td>M</td><td>15%</td><td>Everyday indoor print</td></tr>
 <tr><td>Q</td><td>25%</td><td>Print that gets handled or lives outdoors</td></tr>
 <tr><td>H</td><td>30%</td><td>Codes carrying a centre logo, or rough handling</td></tr>
-</table>
+</table></div>
 <p>Source: ISO/IEC 18004:2024, the QR code bar code symbology specification, via the ISO standard page (<a href="http://www.iso.org/standard/83389.html">iso.org/standard/83389.html</a>). Read the percentages carefully: they describe codewords, not printed surface area. A code at level H does not survive every possible 30% hole in the print, and a higher level buys resilience by spending more of the code on redundancy. For statistics, the practical point: a code printed at a low level on a handled surface will under-report its true audience — people tried to scan, the code failed, and no scan was recorded.</p>
 <h3>Who carries a camera phone: Pew's United States survey</h3>
 <p>When you read a device breakdown, it helps to know the ceiling: how many people in the audience could scan at all. Pew Research Center's 2026 mobile fact sheet reports that 91% of United States adults said they owned a smartphone, and 98% said they owned a cellphone of some kind, up from 35% smartphone ownership in the Center's first such survey in 2011. Source: Pew Research Center, “Americans' Use of Mobile Devices in 2026” (<a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">pewresearch.org/internet/fact-sheet/mobile/</a>), based on a survey of 5,511 United States adults conducted January 30 to June 18, 2026, with an overall margin of error of plus or minus 1.8 percentage points.</p>
