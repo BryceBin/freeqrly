@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Scan a QR Code on Your Phone: iPhone & Android, No App Needed | FreeQrly","description":"No app needed: point your camera at the code. iPhone Camera and Control Center, Android camera and Google Lens — plus fixes for when it won't scan.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"How to Scan a QR Code on Your Phone: iPhone & Android, No App Needed | FreeQrly","description":"No app needed: point your camera at the code. iPhone Camera and Control Center, Android camera and Google Lens — plus fixes for when it won't scan.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-19","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,15 +64,23 @@
       "name": "How do I scan a QR code on my iPhone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open the Camera app and point it at the code — a notification banner appears at the top. Tap it. Alternatively, add the Code Scanner to Control Center (Settings → Control Center) for a dedicated scanner."
+        "text": "Open the Camera app, hold the phone so the whole code is in frame, and tap the link that appears. Alternatively, open Control Center and tap the Scan Code button for a dedicated scanner view; if the button is missing, add it from the Control Center gallery."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I scan a QR code on Android?",
+      "name": "How do I scan a QR code on a Pixel phone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open your camera app and point it at the code; a link popup appears. If that doesn't work, enable 'Scan QR codes' in camera settings, or use Google Lens."
+        "text": "Open the Camera app and point it at the code, making sure the whole square shows on screen. If nothing appears, check that Camera scan suggestions is turned on in the Camera app's Settings, then More settings. The Quick Settings Scan QR code tile is the fastest fallback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I scan a QR code on a Samsung Galaxy phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the Camera app and point it at the code, then tap the pop-up. If nothing appears, open Camera settings and make sure the Scan QR codes toggle is on. You can also swipe down for Quick Settings and tap Scan QR code, or read a saved picture in the Gallery app with Bixby Vision."
       }
     },
     {
@@ -80,7 +88,7 @@
       "name": "Do I need to download a QR scanner app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. iPhones and most Android phones read QR codes with the built-in camera. Scanner apps are unnecessary for standard codes."
+        "text": "No, not for standard codes on a modern phone. The built-in camera reads them with the same preview as any app. A separate scanner is a reasonable answer only for a phone with no built-in reader, or for work that genuinely needs a scan history or bulk reading."
       }
     },
     {
@@ -88,7 +96,23 @@
       "name": "Why won't my phone scan the QR code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Usually distance, glare, or a damaged print. Hold the phone so the code fills half the viewfinder, avoid reflections, and check the three corner squares aren't torn."
+        "text": "Work the phone-side checklist in order: whole code in frame, normal photo view rather than portrait or video, scanning switched on, clean lens, good light without glare, intact corner squares and contrast, and finally a second-phone test. If another phone reads it, the problem is your phone; if none does, it is the code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I scan a QR code that is on my own phone's screen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not with the camera, since a camera cannot point at its own screen. Screenshot the code or save the image, then read it from the image — see the guide to scanning a QR code from a picture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to scan a QR code in a public place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read the preview before you tap, and check that the domain matches the sign in front of you, that the code shows no sign of tampering such as a sticker pasted over another code, and that you expected this code in this place. Failing any one of those checks is enough to stop."
       }
     }
   ]
@@ -106,39 +130,73 @@
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">How to scan a QR code <span class='hl hl-mint'>on your phone</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">No app to install — your phone already knows how. Here's where the scanner lives on iPhone and Android, and what to do when it won't read.</p>
-    <p class="meta" style="text-align:center">October 19, 2026 · 4 min read</p>
+    <p class="meta" style="text-align:center">October 19, 2026 · Last updated: November 3, 2026 · 4 min read</p>
     <div class="prose" style="margin-top:40px">
+<p><strong>The short answer: open your phone's Camera app, point it at the code, and tap the link that appears.</strong> You do not need to download a scanner app, create an account, or press the shutter button. On a modern iPhone or Android phone, QR reading is built into the camera and into a few system shortcuts around it. The skill is knowing which shortcut fits each situation: the Camera app for a menu on the table, a dedicated scanner view for a ticket queue in dim light, and a saved-image method when the code is already on your own screen.</p>
 
-<p>Almost every "how do I scan this" question has the same answer: <strong>open your camera and point it at the code</strong>. Modern phones read QR codes natively — the scanner is built into the camera app, not a separate download. The exact spot differs slightly between iPhone and Android.</p>
+<p>One habit covers all of them: read the preview before you tap. Your phone shows the link, the Wi-Fi network name, or the action the code wants to take before anything opens. That preview is your one chance to spot a code that does not belong where it sits. If the preview does not match the sign in front of you, stop before you tap.</p>
 
-<h2>On iPhone</h2>
-<p><strong>Method 1 — the Camera app.</strong> Open Camera, point it at the code, and hold still for a second. A yellow notification banner appears at the top — tap it to open the link. That's it; there is nothing to enable first.</p>
-<p><strong>Method 2 — Control Center.</strong> Swipe down from the top-right corner, tap the QR code icon (a small code symbol). If you don't see it, go to Settings → Control Center and add "Code Scanner." This opens a dedicated scanner view, handy in low light.</p>
+<h2>Which scanner to use, at a glance</h2>
+<table>
+<tr><th>Situation</th><th>Reach for this first</th><th>Why it fits</th></tr>
+<tr><td>A code on paper, a poster, a menu, or a screen in front of you</td><td>The Camera app</td><td>Ready at once, works in the normal photo view</td></tr>
+<tr><td>A queue, a gate, or a dark room with repeated scans</td><td>The dedicated scanner shortcut</td><td>Opens straight to scanning, flashlight at hand</td></tr>
+<tr><td>Nothing happens in the Camera app</td><td>The Quick Settings scanner tile</td><td>Bypasses camera modes and goes straight to reading</td></tr>
+<tr><td>A code already on your own screen or in a photo</td><td>The saved-image method for your phone</td><td>A camera cannot point at its own screen</td></tr>
+<tr><td>A code that is small, damaged, or partly in shadow</td><td>Google Lens, or a second phone</td><td>A different reader sometimes succeeds where the first failed</td></tr>
+</table>
 
-<h2>On Android</h2>
-<p><strong>Method 1 — the Camera app.</strong> On most Android phones (Samsung, Pixel, and others), open the camera and point it at the code. A link popup appears — tap it. If nothing happens, check the camera settings for a "Scan QR codes" toggle and switch it on.</p>
-<p><strong>Method 2 — Google Lens.</strong> Open the Google app or Google Lens, point at the code, and tap the shutter button. Lens reads the code and shows the link. Some phones also have a QR tile in Quick Settings (swipe down twice from the top).</p>
+<h2>On iPhone: Camera, Scan Code, and the lock screen</h2>
+<p><strong>Method 1 — the Camera app.</strong> Open Camera, hold the phone so the whole code appears in the frame, and wait a moment. You do not need to take a picture. A link or action appears; tap it to open the destination. Apple describes exactly this flow — open Camera or Code Scanner, hold the device so the code appears, then tap the link — in its support guide for scanning a QR code with an iPhone or iPad. Keep the whole square in view, including the three large corner squares. If part of the code is cut off by the edge of the frame, the reader has to guess, and guessing is where failures start. Hold the phone steady and roughly parallel to the surface.</p>
+<p><strong>Method 2 — the Scan Code control in Control Center.</strong> Open Control Center and tap the Scan Code button to open a dedicated scanner view. If you do not see it, touch and hold the background of Control Center, tap the Add a Control button, and choose Scan Code from the gallery. Set it up once and forget it until you need it: in a ticket line or a dim restaurant, one swipe and one tap puts you in a scanner with nothing else in the way, and the scanner view includes a flashlight. The Camera app is better when you might also want a photo; the Scan Code control is better when scanning is the whole job. Both use the same built-in reading, so the difference is speed, not capability. You can also open Camera from the lock screen, which matters at a gate or checkout where a scan is a one-handed, time-pressured job — though the preview rule still applies, even in a hurry.</p>
 
-<h2>When it won't scan</h2>
-<p>Nine times out of ten it's one of these:</p>
-<ul>
-<li><strong>Too far or too close.</strong> Fill about half the viewfinder with the code, then hold still.</li>
-<li><strong>Glare or shadow.</strong> Tilt the phone slightly so reflections move off the code.</li>
-<li><strong>Dirty or damaged print.</strong> A smudged code may still scan — QR codes tolerate <a href="http://www.iso.org/standard/83389.html">up to 30% damage</a> at the highest error-correction level — but a torn finder pattern (the three big squares) is fatal.</li>
-<li><strong>It's not a QR code.</strong> Some "codes" on packaging are barcodes or proprietary marks. A QR code always has three square positioning marks in the corners.</li>
-</ul>
+<h2>On Pixel: Camera suggestions and Quick Settings</h2>
+<p><strong>Method 1 — the Camera app.</strong> Open the Camera app and point it at the code, making sure the entire code shows on screen. You do not need to take a picture; the camera recognises the code and shows a bubble or link, which you tap to open. Google's Pixel guide adds one setting worth checking if nothing appears: in the Camera app, open Settings, then More settings, and make sure Camera scan suggestions is turned on. That single toggle is the most common reason a Pixel camera stays silent in front of a perfectly good code, and it is worth checking before you conclude the code is at fault.</p>
+<p><strong>Method 2 — the Quick Settings scanner.</strong> Swipe down from the top of the screen to open Quick Settings and tap Scan QR code. If you do not see the tile, swipe left for more buttons or tap the pencil icon to add it. A dedicated scanner opens; point it at the code. This is the fastest fallback when the Camera app is being stubborn. Google's troubleshooting advice is short: hold steady, use good light without glare, wipe a smudged lens, and move closer while keeping the whole square in frame. One more mode detail: on cameras built on Google's camera software, a code is read in the normal photo view, not in portrait or video mode, so switch back to the normal view first if you opened the camera to film something.</p>
 
-<h2>Do you need a scanner app?</h2>
-<p>No — and that's the honest answer even though scanner apps exist. The built-in camera handles standard QR codes, and third-party scanner apps mostly add ads and tracking. The one exception: if your phone is old enough to lack a built-in reader, any reputable scanner app will do the job — or use <a href="/scan/">the free scanner in your browser</a>, which needs no install at all.</p>
+<h2>On Samsung Galaxy: Camera, Quick Settings, and Gallery</h2>
+<p>Samsung's support guide, updated in October 2026, lists several doors into the same scanner; in practice, start with the Camera app, keep Quick Settings as the fast backup, and use Gallery for a saved picture.</p>
+<p><strong>Method 1 — the Camera app.</strong> Open Camera, point it at the code, and wait for the pop-up message; tap the pop-up to go to the code's information. You do not need to take a picture. If nothing appears, open Camera settings with the gear icon and make sure the Scan QR codes toggle is on. As with Pixel, this toggle is the first thing to check when a Samsung camera ignores a code, and Samsung's guide names it explicitly as the fix for a camera that will not scan.</p>
+<p><strong>Method 2 — the Quick Settings panel.</strong> Swipe down from the top of the screen to open Quick Settings and tap Scan QR code; the Camera app launches into scanning. This scanner view gives quick access to the flashlight, which is genuinely useful in a dark venue: a code under a dim bar light is often a lighting problem, not a code problem. If the tile is missing, add it to the panel so it is there the next time you are standing in a queue. <strong>Method 3 — Gallery.</strong> If you have already photographed a code, open it in the Samsung Gallery app, select the image, and tap the Bixby Vision button; the phone reads the image and offers to open the link or copy it. The Quick Settings scanner offers a similar path: open it, tap the gallery image icon, choose the photo, and confirm. See <a href="/blog/scan-qr-code-from-image/">the guide to scanning a QR code from a picture</a> for these paths in full.</p>
 
-<p>Want to test right now? Point your camera at any code on <a href="/scan/">our free scanner page</a> — or upload a photo of a code and decode it in your browser, nothing uploaded.</p>
+<h2>Other Android phones: the same pattern, different labels</h2>
+<p>Android has no single scanner, because each phone maker arranges the same pieces differently. The pattern, however, is consistent: a Camera app that reads codes in its normal photo view, a Scan QR code tile in Quick Settings, and Google Lens as the universal backup. If your phone is not a Pixel or a Samsung, work through the pattern in that order. First, open the Camera app and point it at a code in the normal photo view. If nothing appears, look in the camera's settings for a scanning toggle — the name varies by maker, so look for wording about QR codes, scanning, or suggestions — and switch it on. If there is no such toggle, or it is already on and nothing happens, swipe down for Quick Settings and look for the Scan QR code tile. If that is missing too, open Google Lens from the Google app or from inside the camera and point it at the code. Lens also reads saved images in Google Photos.</p>
+<p><strong>A note on older phones.</strong> A phone old enough to lack any built-in reader is the one case where a separate scanner app is a reasonable answer. Pick one from the official app store with a clear, narrow permission request — camera access, and nothing else it does not need — and be wary of any scanner that asks for contacts, location, or an account before it will read a single code. Alternatively, skip the install entirely and use <a href="/scan/">the free scanner in your browser</a>, which reads a code from your camera or from an uploaded image with no install at all, and leaves nothing behind on the phone when you are done.</p>
 
+<h2>Scenarios: matching the method to the moment</h2>
+<p><strong>At a restaurant table,</strong> use the Camera app; the code is close and you want the menu in one tap, tilting the phone if a glossy laminated card glares under a downlight. <strong>At a gate or ticket check,</strong> use the dedicated scanner shortcut and have it open before you reach the front of the queue, since ticket codes are often time-sensitive. <strong>On a poster or shop window,</strong> step back until the whole code fits comfortably in the frame, and remember the sizing rule from the <a href="/blog/qr-code-print-size-guide/">print size guide</a>: as a rule of thumb, a code should be at least one-tenth as wide as the distance you scan it from. A code you cannot fit in the frame from where you stand is a code printed too small for its spot, and no phone setting fixes that. <strong>On a TV, laptop, or another phone's screen,</strong> point your camera at the other screen the same way you would point it at paper, but watch for glare on the glass and for the screen's own shimmer; tilt slightly for glare, hold steady for shimmer, and scan a login or pairing code promptly, since a refreshed code replaces the old one.</p>
+
+<h2>When nothing happens: the phone-side checklist</h2>
+<ol>
+<li><strong>Whole code in frame?</strong> Pull back until all four corners and the quiet margin around the code are visible.</li>
+<li><strong>Right camera mode?</strong> Use the normal photo view, not portrait or video; use the dedicated scanner shortcut if your camera offers one.</li>
+<li><strong>Scanning switched on?</strong> Check the toggle: Camera scan suggestions on Pixel, Scan QR codes in Samsung's camera settings, the Scan Code control on iPhone.</li>
+<li><strong>Lens clean?</strong> Wipe it with a soft cloth; a smudged lens blurs every code equally.</li>
+<li><strong>Light helping or hurting?</strong> Add light in a dark room, remove glare in a bright one, keep your shadow off the code.</li>
+<li><strong>Code itself readable?</strong> Check the three corner squares, the contrast, and any damage, fading, or curve that distorts the grid.</li>
+<li><strong>Second phone test:</strong> if another phone reads the code and yours does not, the problem is your phone's settings, lens, or light — not the code.</li>
+</ol>
+<p>If the code reads but the destination fails — a dead link, a moved page, a form that no longer exists — that is a different failure with a different owner. The code did its job; the page behind it did not. The full chain of code-side failures is covered in <a href="/blog/why-is-my-qr-code-not-working/">why your QR code won't scan</a>, and blurry print in particular in <a href="/blog/why-is-my-qr-code-blurry/">why your QR code is blurry</a>. If none of the seven steps above helps, the next step is a different reader or a different phone, not more fiddling with your own.</p>
+
+<h2>The honest comparison: built-in scanning versus scanner apps</h2>
+<p>Scanner apps exist, and for a phone with no built-in reader they are a genuine solution. For everyone else, they are a worse version of something the phone already does. The built-in camera reads standard codes, shows the same preview, and opens the same destinations, without an account, without a subscription screen, and without a feed of ads between you and a menu. A scanner app adds a middleman to a transaction that does not need one, and that middleman is usually paid for with attention, data, or both. The case for an app is narrow but real: an older phone with no built-in reader needs one, or a browser scanner, and a person who scans codes all day for work may want a history or bulk reading. The case against an app, for everyday scanning, is just as concrete: many scanner apps show ads, and some ask for permissions far beyond the camera — contacts, location, or an account that ties your scanning history to an identity. The built-in camera, by contrast, reads the code and moves on; it does not keep a diary of your scans.</p>
+
+<h2>Safety: the preview is the whole defence</h2>
+<p>A QR code hides its destination by design. You cannot read a URL from looking at the pattern, which is exactly why a code is such an effective vehicle for a link you would never tap if you could see it. The defence is not to avoid codes — it is to read the preview, every time, and to treat the preview as a decision, not a formality. The United States Federal Trade Commission warned about this pattern in a consumer alert dated December 6, 2023: scammers cover genuine codes with their own stickers — on parking meters, for example — or send codes in unexpected messages, and a scanned code can lead to a spoofed site that looks real, where anything entered can be stolen, or to malware. The FTC's advice in that alert is the same habit this guide recommends: inspect the URL before opening it, look for misspellings or a switched letter in a familiar name, and do not scan a code in an unexpected message, especially one urging immediate action. Read the preview, check for tampering such as a sticker pasted over another code, and check the context: did you expect this code, in this place, for this purpose? Failing any one of those checks is enough to stop.</p>
+
+<h2>Make a code and test it on your own phone</h2>
+<p>The fastest way to learn all of this is to make a code and scan it yourself. FreeQrly's generator covers 17 types — links, Wi-Fi, contact cards, events, and more — and a static code made there is free with no sign-up, no watermark, and no expiry, so a test code costs nothing and keeps working. Print it, place it where you would use it, and scan it with the Camera app, then with the dedicated scanner shortcut, then from a saved photo. If it reads in all three, your size, contrast, and quiet zone are right. If the destination behind your code may change, a dynamic code is the right tool instead: it stays editable after printing and reports scan statistics, with a free account. Dynamic codes are free for 20 codes, currently with unlimited availability during the promotional period, and with unlimited scans. For a batch of codes, <a href="/batch-qr-code/">batch generation</a> makes one code per link and downloads them together. Start with one static test code, scan it on your own phone, and build from a result you have actually seen work.</p>
     </div>
 
     <section class="sources">
       <h2>Sources</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%).</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - RETAINED from the original post. The QR Code symbology specification; the original description states it defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%). The body uses only those four percentages, plus the 4-module quiet zone from the same standard. Page accessed 2026-11-03; the ISO listing itself carries no public summary with the figures, which were corroborated against standard explainers during verification.</li>
+      <li><a href="https://support.apple.com/en-us/102680">Apple Support: Scan a QR code with your iPhone or iPad</a> - ADDED. Published September 14, 2026 (shown on the page, verified by opening it 2026-11-03). Supports: open Camera or Code Scanner, hold the device so the code appears, tap the link; adding the Scan Code control by touching and holding the Control Center background and tapping Add a Control.</li>
+      <li><a href="https://support.google.com/pixelphone/answer/16561572?hl=en">Google Support: Scan QR codes with your Pixel phone</a> - ADDED. Page accessed 2026-11-03; no publication date shown on the page. Supports: Camera scan suggestions toggle (Settings, then More settings), the Quick Settings Scan QR code tile, and the troubleshooting list (hold steady, good light without glare, clean lens, move closer while keeping the whole square in frame).</li>
+      <li><a href="https://www.samsung.com/uk/support/mobile-devices/how-to-scan-qr-code-on-your-galaxy-phone-or-tablet/">Samsung Support: How to scan QR codes on your Samsung phone</a> - ADDED. Updated October 6, 2026 (shown on the page, verified by opening it 2026-11-03). Supports: Camera app scanning, the Quick Settings Scan QR code tile, the Camera settings Scan QR codes toggle, Gallery with Bixby Vision, and the Quick Settings scanner's gallery image icon for saved pictures.</li>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">FTC: Scammers hide harmful links in QR codes to steal your information</a> - ADDED. Consumer alert dated December 6, 2023 (FTC listing; page verified by opening it 2026-11-03). Supports: scammers covering genuine codes with their own stickers, including on parking meters, and sending codes in unexpected messages; a scanned code can lead to a spoofed site or malware; inspect the URL before opening it and do not scan a code in an unexpected message urging immediate action.</li>
+      <li><a href="https://support.google.com/camerafromgoogle/answer/12033278?hl=en">Google Support: Scan QR codes on Camera from Google</a> - ADDED. Page accessed 2026-11-03 via search result; no publication date shown. Supports only the single mode note used in the body: a QR code cannot be scanned in portrait and video mode on Camera from Google.</li>
       </ul>
     </section>
     <div class="cta-card">
@@ -154,15 +212,18 @@
       <div class="rel-grid">
         <a class="rel-card" href="/blog/share-wifi-with-qr-code/"><b>How to Share WiFi with a QR Code</b></a>
         <a class="rel-card" href="/blog/add-logo-to-qr-code/"><b>How to Add a Logo to a QR Code (and Keep It Scannable)</b></a>
-        <a class="rel-card" href="/blog/static-vs-dynamic-qr-codes/"><b>Static vs Dynamic QR Codes: Free Forever or a Subscription?</b></a>
+        <a class="rel-card" href="/blog/do-qr-codes-expire/"><b>Do QR Codes Expire? No — But Paid Ones Can Die</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
-    <details><summary><span>How do I scan a QR code on my iPhone?</span></summary><p>Open the Camera app and point it at the code — a notification banner appears at the top. Tap it. Alternatively, add the Code Scanner to Control Center (Settings → Control Center) for a dedicated scanner.</p></details>
-    <details><summary><span>How do I scan a QR code on Android?</span></summary><p>Open your camera app and point it at the code; a link popup appears. If that doesn't work, enable 'Scan QR codes' in camera settings, or use Google Lens.</p></details>
-    <details><summary><span>Do I need to download a QR scanner app?</span></summary><p>No. iPhones and most Android phones read QR codes with the built-in camera. Scanner apps are unnecessary for standard codes.</p></details>
-    <details><summary><span>Why won't my phone scan the QR code?</span></summary><p>Usually distance, glare, or a damaged print. Hold the phone so the code fills half the viewfinder, avoid reflections, and check the three corner squares aren't torn.</p></details>
+    <details><summary><span>How do I scan a QR code on my iPhone?</span></summary><p>Open the Camera app, hold the phone so the whole code is in frame, and tap the link that appears. Alternatively, open Control Center and tap the Scan Code button for a dedicated scanner view; if the button is missing, add it from the Control Center gallery.</p></details>
+    <details><summary><span>How do I scan a QR code on a Pixel phone?</span></summary><p>Open the Camera app and point it at the code, making sure the whole square shows on screen. If nothing appears, check that Camera scan suggestions is turned on in the Camera app's Settings, then More settings. The Quick Settings Scan QR code tile is the fastest fallback.</p></details>
+    <details><summary><span>How do I scan a QR code on a Samsung Galaxy phone?</span></summary><p>Open the Camera app and point it at the code, then tap the pop-up. If nothing appears, open Camera settings and make sure the Scan QR codes toggle is on. You can also swipe down for Quick Settings and tap Scan QR code, or read a saved picture in the Gallery app with Bixby Vision.</p></details>
+    <details><summary><span>Do I need to download a QR scanner app?</span></summary><p>No, not for standard codes on a modern phone. The built-in camera reads them with the same preview as any app. A separate scanner is a reasonable answer only for a phone with no built-in reader, or for work that genuinely needs a scan history or bulk reading.</p></details>
+    <details><summary><span>Why won't my phone scan the QR code?</span></summary><p>Work the phone-side checklist in order: whole code in frame, normal photo view rather than portrait or video, scanning switched on, clean lens, good light without glare, intact corner squares and contrast, and finally a second-phone test. If another phone reads it, the problem is your phone; if none does, it is the code.</p></details>
+    <details><summary><span>Can I scan a QR code that is on my own phone's screen?</span></summary><p>Not with the camera, since a camera cannot point at its own screen. Screenshot the code or save the image, then read it from the image — see the guide to scanning a QR code from a picture.</p></details>
+    <details><summary><span>Is it safe to scan a QR code in a public place?</span></summary><p>Read the preview before you tap, and check that the domain matches the sign in front of you, that the code shows no sign of tampering such as a sticker pasted over another code, and that you expected this code in this place. Failing any one of those checks is enough to stop.</p></details>
     </section>
   </article>
   <footer>

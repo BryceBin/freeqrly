@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Scan a QR Code from a Picture, Photo, or Screenshot | FreeQrly","description":"Your QR code is in a photo, not in front of your camera. Here is how to decode it on iPhone, Android, and PC — free, no app needed.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"How to Scan a QR Code from a Picture, Photo, or Screenshot | FreeQrly","description":"Your QR code is in a photo, not in front of your camera. Here is how to decode it on iPhone, Android, and PC — free, no app needed.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,15 +64,31 @@
       "name": "How do I scan a QR code from a screenshot on iPhone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open the screenshot in Photos and long-press the code — iOS reads it directly from the image."
+        "text": "Open the screenshot in the Photos app and press and hold the QR code itself. The phone detects the code in the image and offers the link or action; read the preview before you tap it."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I scan a QR code from an image on PC?",
+      "name": "How do I scan a QR code from an image on Android?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Upload the image to a free online QR decoder. Prefer one that decodes locally in the browser so your image is never uploaded."
+        "text": "Open the image in Google Photos and tap the Lens button. Lens reads the code inside the image and shows the decoded link or action. On a Samsung Galaxy you can also open the image in Gallery and tap the Bixby Vision button."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I scan a QR code from an image on a computer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Save the image, or screenshot the code on the page, and upload it to a browser decoder. Prefer a decoder that reads the image in your browser, so the image is never sent to a server — FreeQrly's scanner works that way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Someone sent me a QR code in a chat. How do I scan it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Save the image first, then open the saved file in Photos or Google Photos and use the built-in image reader. Reading inside a chat bubble means reading a smaller, possibly compressed copy, and the chat app may offer no reader at all."
       }
     },
     {
@@ -75,7 +96,23 @@
       "name": "Why can't the decoder read my picture?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Usually blur, a steep angle, or the code is too small in the frame. Crop tightly around the code and try again in good light."
+        "text": "Usually the code is cut off at an edge, too small in the frame, blurred, or shot at an angle. Crop tight around the code while keeping its quiet zone, brighten if it is dim, try the original file instead of a compressed forward, and try a different reader. If no reader can read the original file, ask the sender for a fresh code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if one image contains several QR codes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Crop to a single code and read it, then repeat for the next. A reader shown several codes at once will typically pick one, and it may not be the one you wanted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to upload a screenshot to an online decoder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Crop out everything except the code first — screenshots often contain chats, tickets, or payment details beside the code. Prefer a decoder that reads locally in your browser, so the image is never uploaded to a server."
       }
     }
   ]
@@ -85,18 +122,28 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"How to Scan a QR Code from a Picture, Photo, or Screenshot | FreeQrly","description":"Your QR code is in a photo, not in front of your camera. Here is how to decode it on iPhone, Android, and PC — free, no app needed.","step":[
     {
       "@type": "HowToStep",
-      "name": "Save or open the picture",
-      "text": "Screenshot it, save it, or just open the photo that contains the QR code."
+      "name": "Get the image into a form a reader can open",
+      "text": "Save an attachment, take a screenshot of a code shown on screen, or download the picture from the page."
     },
     {
       "@type": "HowToStep",
-      "name": "Upload it to a decoder",
-      "text": "Use a free online decoder that reads the image — preferably one that works locally, so the picture is never uploaded."
+      "name": "Open the image full-screen",
+      "text": "Readers work on what they can see, so open the image full-screen rather than reading a thumbnail in a message thread."
     },
     {
       "@type": "HowToStep",
-      "name": "Read the result",
-      "text": "The decoded link or text appears instantly. Check the URL before opening, as always."
+      "name": "Use your phone's built-in image reader first",
+      "text": "On iPhone, open the image in Photos and press and hold the code. On Android, open it in Google Photos and tap the Lens button. On Samsung, Gallery with Bixby Vision works too."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Read the preview before you open anything",
+      "text": "Check that the decoded link or action matches what the sender said the code leads to, especially for a forwarded image."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "If the first reader finds nothing, clean the image and try again",
+      "text": "Crop tight around the code while keeping its quiet zone, brighten if it is dim, try the original file instead of a compressed forward, and try a different reader before concluding the code is unreadable."
     }
   ]}
 </script>
@@ -112,31 +159,85 @@
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Scan a QR code <span class="hl hl-honey">from a picture</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">The code is in a photo, not in front of your camera. Here's how to decode it on iPhone, Android, and desktop — no app required.</p>
-    <p class="meta" style="text-align:center">October 14, 2026 · 4 min read</p>
+    <p class="meta" style="text-align:center">October 14, 2026 · Last updated: November 3, 2026 · 4 min read</p>
     <div class="prose" style="margin-top:40px">
+<p><strong>The short answer: you do not need a second phone, and you do not need to point a camera at your own screen.</strong> A QR code that arrives as a photo, a screenshot, a message attachment, or a picture on a web page can be read from the image itself. On an iPhone, open the image in Photos and press and hold the code. On Android, open it in Google Photos and tap the Lens button. On a computer, upload the image to a decoder that reads it in your browser, such as <a href="/scan/">FreeQrly's scanner</a>. The rest of this guide is about choosing the right one of those paths for where your image actually lives, cleaning up a stubborn image before you give up on it, and keeping private images private while you do it.</p>
 
-<h2>On iPhone</h2>
-<p>Open the photo in the Photos app and <b>long-press the QR code</b> — iOS detects it right in the image and offers to open the link. No extra tools needed.</p>
-<h2>On Android</h2>
-<p>Open the image in Google Photos and tap the <b>Lens</b> button. Most gallery apps on Samsung and Pixel phones do the same from the share menu.</p>
-<h2>On PC / Mac</h2>
-<p>Phones can't help you here — this is where an online decoder earns its keep. Take a screenshot (or save the image), then upload it to <a href="/scan/">FreeQrly's scanner</a>. It's decoded in your browser, so the image is never uploaded anywhere — nice when the screenshot contains something private.</p>
-<h2>Tips for stubborn images</h2>
+<p>The core distinction is simple. A live camera reads a pattern in front of it. An image reader reads a pattern already stored as pixels. The two jobs look similar, but they use different tools, and reaching for the live camera when the code is already a file is the most common reason people conclude a code "cannot be scanned" when it can. If the code is in your hand as a file, start with an image reader, not with a camera.</p>
+
+<h2>Where the image lives decides the method</h2>
+<table>
+<tr><th>Where the code is</th><th>First method to try</th><th>What you need</th></tr>
+<tr><td>A photo or screenshot on your iPhone</td><td>Photos, press and hold the code</td><td>Nothing to install</td></tr>
+<tr><td>A photo or screenshot on your Android phone</td><td>Google Photos, Lens button</td><td>Google Photos and Lens, already on most Android phones</td></tr>
+<tr><td>A photo on a Samsung Galaxy</td><td>Gallery with Bixby Vision, or the Quick Settings scanner's gallery icon</td><td>Nothing to install</td></tr>
+<tr><td>An image on a computer, or a code on a web page</td><td>A browser decoder with image upload</td><td>The saved image file, or a screenshot of the page</td></tr>
+<tr><td>An image someone sent you in a chat or email</td><td>Save it first, then use the method for your phone</td><td>The saved file, so you are not reading inside a chat bubble</td></tr>
+<tr><td>A code inside a video</td><td>Pause on a sharp frame, screenshot it, then read the screenshot</td><td>A still frame where the code is in focus and fully visible</td></tr>
+</table>
+
+<h2>The basic steps, whichever device you use</h2>
+<ol>
+<li><strong>Get the image into a form a reader can open.</strong> Save an attachment, take a screenshot of a code shown on screen, or download the picture from the page. A reader needs a file or an open image, not a thumbnail in a chat list.</li>
+<li><strong>Open the image full-screen.</strong> Readers work on what they can see. A code shrunk to a thumbnail in a message thread is a much smaller target than the same code opened full-screen, and opening it full-screen costs nothing.</li>
+<li><strong>Use your phone's built-in image reader first.</strong> On iPhone, Photos; on Android, Google Photos with Lens; on Samsung, Gallery. These readers run on the device and need no upload, which matters for the privacy section below.</li>
+<li><strong>Read the preview before you open anything.</strong> The same rule as live scanning applies, with one extra reason: an image forwarded to you has passed through someone else's hands, and the preview is your check that the code leads where the sender said it does.</li>
+<li><strong>If the first reader finds nothing, clean the image and try again</strong> — crop, brighten, and retry — before you conclude the code is unreadable. The cleaning steps below rescue more images than any change of reader.</li>
+</ol>
+
+<h2>On iPhone: Photos, press and hold</h2>
+<p>Open the photo or screenshot in the Photos app and press and hold the QR code itself. The phone detects the code in the image and offers the link or action, which you tap after reading the preview. That is the whole method, and it covers the most common cases: a screenshot a friend sent you, a photo of a poster you took yesterday, a boarding pass saved to your camera roll, a code inside an email that you screenshotted rather than saved. If pressing and holding does nothing, check two things before anything else: that you are pressing on the code itself rather than on empty space near it, and that the code is fully visible in the image rather than cut off at an edge. A code cropped by the screenshot's edge is the image equivalent of a code cropped by the camera's frame, and no reader can reconstruct the missing corner.</p>
+<p>When the code is not a saved photo at all — it is showing in a message, an email, or a web page on the same phone — take a screenshot first, then open the screenshot in Photos and press and hold the code. This two-step dance feels clumsy the first time and becomes automatic quickly, and it is the answer to the question that confuses the most people: you cannot point your own camera at your own screen, so you capture the screen and read the capture instead. Live codes in front of you are covered in <a href="/blog/how-to-scan-qr-code-on-phone/">the phone scanning guide</a> and <a href="/blog/how-to-scan-a-qr-code/">the general scanning guide</a>.</p>
+
+<h2>On Android: Google Photos and Lens</h2>
+<p>Open the image in Google Photos and tap the Lens button. Lens analyses the image, finds the code, and shows the decoded link or action, which you tap after reading the preview. Lens reads pixels, not sources, so it works for a saved photo, a screenshot, or a downloaded image alike. If you do not see a Lens button, look for it in the image's options or share menu. You can also reach Lens from the Google app by tapping its Lens icon and choosing the image.</p>
+<p>On a Samsung Galaxy, there is an additional built-in path. Open the image in the Samsung Gallery app and tap the Bixby Vision button; the phone reads the image and offers to open the link or copy it. Samsung's support guide, updated in October 2026, describes the same path through the Quick Settings scanner: open Quick Settings, tap Scan QR code, tap the gallery image icon at the bottom, choose the photo, and confirm. Either door leads to the same result, so use whichever you find first. If your phone is neither a Samsung nor a phone with Google Photos, the fallback is the same as on a computer: save the image and upload it to a browser decoder, which is covered next.</p>
+
+<h2>On a computer: upload to a browser decoder</h2>
+<p>A computer has no built-in image reader for QR codes in the way a phone does, so this is where a browser decoder earns its keep. Save the image — or take a screenshot of the code on the web page, in the document, or in the presentation — and upload it to a decoder. <a href="/scan/">FreeQrly's scanner</a> decodes the image in your browser, so the image never leaves the page; that detail matters most exactly when the screenshot contains something private, which is often, and the privacy section below explains why. The decoder returns the raw decoded content, with a link button for links and a copy button for everything else. Read the decoded link before you open it, just as you would read a phone's preview.</p>
+
+<h2>Images other people send you</h2>
+<p>A code sent to you in a chat, an email, or a social post deserves one extra habit: save it before you scan it. Reading inside a chat bubble means reading a small, possibly compressed version of the image, inside an app that may not offer a reader at all. Saving the image gives you the full file, opens it in Photos or Google Photos where the reader lives, and lets you crop and brighten it if the first attempt fails. It also gives you a moment to think: a code arriving from a sender you do not know, with an urgent story attached, is the image version of the unexpected message the safety guides warn about. Save it, read the preview, and only then decide.</p>
+
+<h2>Cleaning up a stubborn image</h2>
+<p>Most unreadable images are not unreadable codes; they are readable codes buried in a bad picture. Work through these fixes in order, and retest after each one, because the first fix that works saves you the rest.</p>
 <ul>
-<li>Crop tight around the code before uploading — decoders work faster and more reliably on a clean crop.</li>
-<li>If the photo is blurry or shot at an angle, no decoder can save it; retake it straight-on.</li>
+<li><strong>Crop tight around the code.</strong> Cut away the chat window, the surrounding text, the table, and the background. Keep the quiet zone — the blank margin around the code — inside the crop.</li>
+<li><strong>Straighten and flatten.</strong> A code photographed at an angle, on a curved surface, or in perspective is stretched in the image. If your photo app offers a straightening tool, use it lightly; otherwise retake the photo straight-on.</li>
+<li><strong>Brighten, do not sharpen blindly.</strong> Raising brightness or contrast can rescue a code shot in dim light. Heavy sharpening can invent edges that are not there, so brighten first and sharpen only a little.</li>
+<li><strong>Try the original file.</strong> If you have been working from a compressed chat copy, go back to the original photo, the original download, or a fresh screenshot. Editing cannot restore detail that compression removed.</li>
+<li><strong>Try a different reader.</strong> If Photos finds nothing, try Lens; if Lens finds nothing, try a browser decoder; if a browser decoder finds nothing, try the other phone in the house. A code on the edge of readability sometimes passes one reader and not another. A code that no reader can read from the original file should be replaced by the sender.</li>
 </ul>
-<p>More in <a href="/blog/why-is-my-qr-code-not-working/">why your QR code won't scan</a>.</p>
-<h2>Privacy note</h2>
-<p>Screenshots often contain more than the QR code — chats, tickets, personal photos. Think twice before uploading them to a random decoder site. A <a href="/scan/">local decoder</a> never sees anything but your own browser tab.</p>
-<p>Making codes instead of reading them? <a href="/batch-qr-code/">Batch mode</a> makes one code per link — downloaded as a ZIP.</p>
 
+<h2>Special cases: video stills, multiple codes, and tiny codes</h2>
+<p><strong>A code inside a video</strong> is a screenshot problem in disguise: pause on a frame where the code is sharp, fully visible, and not in motion, screenshot that frame, and read the screenshot. <strong>Multiple codes in one image</strong> — a poster, a page of tickets — should be read one at a time: crop to a single code, read it, and repeat, since a reader shown several codes will typically pick one, and it may not be the one you wanted. <strong>A tiny code in a large image</strong> may simply be too few pixels to resolve; crop to it, and if the modules still blur together when you zoom in, the image does not contain enough detail — ask for a closer photo, a higher-resolution download, or a fresh code.</p>
+
+<h2>Privacy: what your screenshot contains besides the code</h2>
+<p>Screenshots and photos almost always contain more than the QR code. A screenshot of a chat contains the conversation around the code. A photo of a ticket contains the name, the booking reference, and the barcode next to the code. A screenshot of a payment page contains amounts and account details. Before you upload any such image to a decoder, look at what else is in the frame, and crop it out. Cropping is not just a readability fix; it is a privacy fix, and it costs the same few seconds either way.</p>
+<p>The deeper question is where the image goes. Many online decoders upload your image to their server to read it, which means a stranger's server receives your screenshot — chat, ticket, and all — just to read one code. A decoder that reads the image in your browser, like <a href="/scan/">FreeQrly's scanner</a>, never sends the image anywhere; the reading happens on your device, in the page, and the image stays with you. Prefer a local decoder for any image you would not email to a stranger, and crop before you upload even then.</p>
+
+<h2>The honest comparison: built-in readers, browser decoders, and scanner apps</h2>
+<p>For a code in an image, three kinds of tool compete, and the honest ranking depends on the image, not on the tool's marketing. Built-in readers — Photos on iPhone, Lens on Android, Gallery on Samsung — are the best first choice for a saved image on your own phone: they are already installed, they run on the device, and they need no upload. Browser decoders are the best choice on a computer, and the best backup on a phone when the built-in reader fails, provided the decoder reads locally in the browser rather than uploading your image. Scanner apps are the weakest default for this job: they add an install, a permission screen, and often ads or an account, in exchange for a capability your phone already has.</p>
+<p>One more honest note: no reader rescues a code whose detail is gone. A heavily compressed forward, a blurred video frame, a code cut off at the edge of a screenshot — these are missing-data problems, not reader problems, and switching readers five times will not restore what was never captured. The fix for missing data is a better original, and asking the sender for one is faster and more honest than trying every decoder on the internet. Readers are good at finding codes in images; they are not good at inventing codes that are not there.</p>
+
+<h2>When the image reads but the destination fails</h2>
+<p>Sometimes the image reads perfectly and the result still disappoints: a dead link, a moved page, a form that no longer exists, a ticket that has already been used. That is not a scanning failure; it is a destination failure, and the fix belongs to whoever issued the code. A static code holds its destination directly, so if the destination is gone, the code has nothing to say — and if the destination moved, only the issuer can point the code somewhere new, which is exactly what a dynamic code is for: it stays editable after printing, with scan statistics, under a free account. For codes that will not read at all, see <a href="/blog/why-is-my-qr-code-not-working/">why your QR code won't scan</a> and <a href="/blog/why-is-my-qr-code-blurry/">why your QR code is blurry</a>. If the link is dead, ask the sender for a fresh code rather than rescanning.</p>
+
+<h2>Make a code worth sending as an image</h2>
+<p>The other side of this guide is worth a paragraph, because the codes people struggle to read from images are often codes that were made badly in the first place. If you are the one sending a code as an image, send the original file, not a screenshot of a screenshot; keep the code large in the frame, with its quiet zone intact and dark modules on a light background; and test it by reading it back from the image yourself before you send it. FreeQrly's generator covers 17 types, and a static code made there is free with no sign-up, no watermark, and no expiry, so a test code costs nothing. If the code will be forwarded or reused, consider a dynamic code instead: it stays editable if the destination changes, reports scan statistics, and is free for 20 codes, currently with unlimited availability during the promotional period, and with unlimited scans. For many codes at once, <a href="/batch-qr-code/">batch generation</a> makes one code per link. Send a clean original, and the person on the other end will not need this guide's cleaning section at all.</p>
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="https://www.samsung.com/uk/support/mobile-devices/how-to-scan-qr-code-on-your-galaxy-phone-or-tablet/">Samsung Support: How to scan QR codes on your Samsung phone</a> - ADDED (the original post had no sources field at all). Updated October 6, 2026 (shown on the page, verified by opening it 2026-11-03). Supports: Gallery with Bixby Vision for a saved picture, and the Quick Settings Scan QR code tile's gallery image icon for choosing a photo and extracting its link.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
         <h3>Try it yourself — free</h3>
-        <p>Everything in this article works in the FreeQrly studio right now. Static codes, thirteen content types, PNG and SVG export.</p>
+        <p>Everything in this article works in the FreeQrly studio right now. Static codes, all 17 content types, PNG and SVG export.</p>
         <a class="btn" href="/#studio">Open the studio</a>
       </div>
     </div>
@@ -150,9 +251,13 @@
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
-    <details><summary><span>How do I scan a QR code from a screenshot on iPhone?</span></summary><p>Open the screenshot in Photos and long-press the code — iOS reads it directly from the image.</p></details>
-    <details><summary><span>How do I scan a QR code from an image on PC?</span></summary><p>Upload the image to a free online QR decoder. Prefer one that decodes locally in the browser so your image is never uploaded.</p></details>
-    <details><summary><span>Why can't the decoder read my picture?</span></summary><p>Usually blur, a steep angle, or the code is too small in the frame. Crop tightly around the code and try again in good light.</p></details>
+    <details><summary><span>How do I scan a QR code from a screenshot on iPhone?</span></summary><p>Open the screenshot in the Photos app and press and hold the QR code itself. The phone detects the code in the image and offers the link or action; read the preview before you tap it.</p></details>
+    <details><summary><span>How do I scan a QR code from an image on Android?</span></summary><p>Open the image in Google Photos and tap the Lens button. Lens reads the code inside the image and shows the decoded link or action. On a Samsung Galaxy you can also open the image in Gallery and tap the Bixby Vision button.</p></details>
+    <details><summary><span>How do I scan a QR code from an image on a computer?</span></summary><p>Save the image, or screenshot the code on the page, and upload it to a browser decoder. Prefer a decoder that reads the image in your browser, so the image is never sent to a server — FreeQrly's scanner works that way.</p></details>
+    <details><summary><span>Someone sent me a QR code in a chat. How do I scan it?</span></summary><p>Save the image first, then open the saved file in Photos or Google Photos and use the built-in image reader. Reading inside a chat bubble means reading a smaller, possibly compressed copy, and the chat app may offer no reader at all.</p></details>
+    <details><summary><span>Why can't the decoder read my picture?</span></summary><p>Usually the code is cut off at an edge, too small in the frame, blurred, or shot at an angle. Crop tight around the code while keeping its quiet zone, brighten if it is dim, try the original file instead of a compressed forward, and try a different reader. If no reader can read the original file, ask the sender for a fresh code.</p></details>
+    <details><summary><span>What if one image contains several QR codes?</span></summary><p>Crop to a single code and read it, then repeat for the next. A reader shown several codes at once will typically pick one, and it may not be the one you wanted.</p></details>
+    <details><summary><span>Is it safe to upload a screenshot to an online decoder?</span></summary><p>Crop out everything except the code first — screenshots often contain chats, tickets, or payment details beside the code. Prefer a decoder that reads locally in your browser, so the image is never uploaded to a server.</p></details>
     </section>
   </article>
   <footer>

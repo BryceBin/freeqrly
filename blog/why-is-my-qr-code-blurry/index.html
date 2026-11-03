@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Why Is My QR Code Blurry? 5 Fixes That Work | FreeQrly","description":"Blurry QR code won't scan? 5 usual causes — low-res export, wrong size, JPEG compression, stretching, bad print — and how to fix each one.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Why Is My QR Code Blurry? 5 Fixes That Work | FreeQrly","description":"Blurry QR code won't scan? 5 usual causes — low-res export, wrong size, JPEG compression, stretching, bad print — and how to fix each one.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-17","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "Why does my QR code look blurry but still scan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Phones are forgiving — error correction recovers a surprising amount of blur. But a code that scans in your bright office may fail in dim light or at arm's length. Sharp is safe; barely-scanning is not."
+        "text": "Phones are forgiving — error correction rebuilds codewords that come back wrong or unreadable. But a code that scans in a bright office may fail in dim light or at arm's length. Sharp is safe; barely scanning is not."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "What resolution do I need for a poster?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "2048 px PNG minimum, or SVG. A poster viewed from 2 meters needs far more pixels than a business card viewed from 30 cm — see the print size guide for the distance rule."
+        "text": "SVG is the best choice, because it scales without limit. If the printer needs a raster file, use PNG at 2048 px; a poster at 20 cm needs roughly 2,360 px at 300 pixels per inch, so a 512 px export will look soft at that size."
       }
     },
     {
@@ -75,7 +80,7 @@
       "name": "PNG or SVG for print?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SVG whenever the printer or designer accepts it — it scales infinitely with zero blur. PNG at 1024–2048 px is the fallback for office printing and apps that don't take SVG."
+        "text": "SVG whenever the printer or designer accepts it — it scales infinitely with zero blur. PNG at 1024 px for cards and flyers, or 2048 px for posters, is the fallback for office printing and apps that do not take SVG."
       }
     },
     {
@@ -83,7 +88,23 @@
       "name": "Can I fix a blurry printed code without reprinting?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The blur is baked into the printed image. Reprint from a higher-resolution export (or SVG). Editing a dynamic code won't help — the pattern on paper is what it is."
+        "text": "No. The blur is baked into the printed image. Reprint from a higher-resolution export (or SVG). Editing a dynamic code will not help — the pattern on paper is what it is, even though a dynamic code lets you change the destination behind a fresh print."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the same export look fine on screen but soft in print?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A screen shows the code small, so its pixels look tight. Paper shows the code at its true size, so the same pixel count spread over centimetres reveals the blur. Check the export against the print size before sending it to print."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will upscaling or a sharpening filter fix a blurry code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Upscaling interpolates between the pixels you already have, so edges stay soft, only bigger. A sharpening filter can add halos that confuse a camera, and converting a JPEG to PNG does not undo JPEG damage. The only reliable repair is a fresh export from the original data at higher resolution, or as SVG."
       }
     }
   ]
@@ -93,23 +114,38 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"Why Is My QR Code Blurry? 5 Fixes That Work | FreeQrly","description":"Blurry QR code won't scan? 5 usual causes — low-res export, wrong size, JPEG compression, stretching, bad print — and how to fix each one.","step":[
     {
       "@type": "HowToStep",
+      "name": "Find the original file",
+      "text": "If you only have a JPEG, a screenshot, or a forwarded chat image, stop and regenerate — no edit restores detail compression already threw away."
+    },
+    {
+      "@type": "HowToStep",
       "name": "Export at the right size",
-      "text": "PNG at 1024 px for cards and flyers, 2048 px for posters. SVG whenever the printer accepts it."
+      "text": "PNG at 1024 px for cards and flyers, 2048 px for posters, SVG whenever the printer or designer accepts it. Above about 20 cm, SVG is the only format that keeps edges exact without an enormous file."
     },
     {
       "@type": "HowToStep",
       "name": "Use PNG or SVG, never JPEG",
-      "text": "JPEG smears the sharp edges a QR code is made of. PNG for screens and office printing, SVG for professional print."
+      "text": "PNG for screens and office printing, SVG for professional print. If a tool insists on JPEG, use its highest quality setting for a screen preview only, never as the print master."
     },
     {
       "@type": "HowToStep",
       "name": "Keep proportions when resizing",
-      "text": "Hold Shift or the lock icon so the squares stay square. Never drag one corner freehand."
+      "text": "Hold Shift or the lock icon so the squares stay square. Place the image at the final size, rather than placing it small and stretching it later."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Keep the code dark on light, with a clear margin",
+      "text": "Blur and low contrast compound each other. Keep a blank margin at least 4 modules wide on every side, as specified in ISO/IEC 18004, and keep text, logos, and decorative borders out of it."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Match paper and printer to the job",
+      "text": "Smooth or coated stock and a laser printer for small codes; matte finish where glare is a risk; larger size and higher error correction for rough or textured surfaces."
     },
     {
       "@type": "HowToStep",
       "name": "Test-scan the real print",
-      "text": "Print one copy at final size, step back to the real viewing distance, scan with your phone. First-try scan means the batch is safe."
+      "text": "Print one copy at final size, step back to the real viewing distance, and scan it in the real lighting. A first-try scan means the batch is safe. If it hesitates, fix the export or the size now."
     }
   ]}
 </script>
@@ -125,31 +161,76 @@
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Why is my QR code <span class='hl hl-blush'>blurry</span>?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">A blurry QR code is almost always a resolution problem: too few pixels stretched across too much space. The fix is to export bigger — or as SVG.</p>
-    <p class="meta" style="text-align:center">October 17, 2026 · 4 min read</p>
+    <p class="meta" style="text-align:center">October 17, 2026 · Last updated: November 3, 2026 · 4 min read</p>
     <div class="prose" style="margin-top:40px">
-
-<p>A QR code looks sharp on screen and turns to mush on paper. The cause is nearly always the same: the image did not have enough pixels for the size it was printed at. A QR code is a grid of tiny squares — when there are not enough pixels, the edges smear, phones cannot find the grid, and scans fail.</p>
-
-<h2>The 5 usual causes</h2>
+<p>A blurry QR code is almost always a resolution problem: too few pixels stretched across too much space. The fix is to export bigger — or as SVG. If the code looked sharp on screen and turned to mush on paper, the image did not have enough pixels for the size it was printed at. A QR code is a grid of tiny squares called modules; when there are not enough pixels, their edges smear into each other, phones cannot find the grid, and scans fail. Start with the export, not a new design: regenerate at higher resolution or as a vector file, reprint one copy at the real size, and scan it at the real viewing distance before printing the batch.</p>
+<p>That answer covers most cases, but blur has more than one cause, each with a different fix: a small export, JPEG compression, stretching, printer or paper, or a copy of a copy. The sections below separate those causes, give you a numbers table for the printer, walk through the fix in order, and cover codes that look sharp yet still will not scan — those belong to <a href="/blog/why-is-my-qr-code-not-working/">why your QR code will not scan</a>.</p>
+<h2>What blur actually does to a code</h2>
+<p>A phone camera does not read a QR code the way a person reads a picture. It looks for the three large square finder patterns in the corners, works out the grid from them, and then decides, module by module, whether each small square is dark or light. Blur attacks exactly that decision: when neighbouring modules bleed into each other, the camera sees grey where it needs black or white, and it starts guessing. A little guessing is survivable, because QR codes carry built-in error correction — extra data that lets a reader rebuild codewords that come back wrong or unreadable. That protection is measured in codewords, not visible area: the four levels in ISO/IEC 18004 restore approximately 7% of codewords at level L, 15% at M, 25% at Q, and 30% at H. A smudge over a finder pattern, or blur spread across the whole symbol, can defeat a reader long before any neat percentage suggests it should survive. Treat error correction as a safety net, never as permission to print a soft code.</p>
+<p>Density makes blur worse. A short link produces a roomy grid with large modules; a long link, a full contact card, or a Wi-Fi code with a long password produces a denser grid with smaller modules, and smaller modules blur sooner. That is why the same export can look fine for a short URL and fail for a data-heavy code at the same print size. If a code is both dense and printed small, shorten the destination where you can, print larger, or both. A dynamic code helps differently: the printed pattern encodes a short link you can redirect later, so the grid stays roomy even if the final destination is long. For a destination that will never change, a static code is simpler: free, no account, no watermark, and it does not expire.</p>
+<h2>The numbers: print size, pixels, and format</h2>
+<p>Printers talk about resolution in dots or pixels per inch. For close-viewed print, 300 pixels per inch at the final print size is the widely used professional baseline for sharp output. The table below turns that baseline into pixel counts: print width in inches multiplied by 300. A 2 cm code is about 0.8 inches wide, so it needs roughly 240 pixels at 300 pixels per inch — and that is the bare minimum, not a comfortable margin. Always export larger than the minimum and let the designer scale down, because scaling down preserves sharpness while scaling up only enlarges the blur.</p>
+<table>
+<tr><th>Print width</th><th>Pixels at 300 per inch (minimum)</th><th>Export to send</th></tr>
+<tr><td>2 cm (business card)</td><td>~240 px</td><td>PNG at 1024 px, or SVG</td></tr>
+<tr><td>3 cm (flyer, menu)</td><td>~350 px</td><td>PNG at 1024 px, or SVG</td></tr>
+<tr><td>5 cm (table tent, label)</td><td>~590 px</td><td>PNG at 1024 px, or SVG</td></tr>
+<tr><td>10 cm (poster detail)</td><td>~1,180 px</td><td>PNG at 2048 px, or SVG</td></tr>
+<tr><td>20 cm (poster)</td><td>~2,360 px</td><td>SVG; PNG at 2048 px only as a fallback</td></tr>
+<tr><td>50 cm (large poster, signage)</td><td>~5,900 px</td><td>SVG</td></tr>
+</table>
+<p>Two rules of thumb sit behind that table. First, the print size in centimetres, multiplied by roughly 100, gives a quick pixel target — a 5 cm code wants around 500 pixels at minimum, a 10 cm code around 1,000. Second, the 1:10 distance rule of thumb from the <a href="/blog/qr-code-print-size-guide/">print size guide</a>: the code width should be at least one-tenth of the scanning distance, so a code scanned from 50 cm should be at least 5 cm wide, and a poster scanned from 5 metres needs a 50 cm code. A poster code viewed from metres away can tolerate a lower effective resolution than a card held in the hand, but it still needs enough pixels for its size — and only a vector file gives you that without a ceiling.</p>
+<table>
+<tr><th>Format</th><th>How it behaves</th><th>Use it for</th></tr>
+<tr><td>SVG</td><td>Vector: no pixels, scales without limit, edges stay exact</td><td>Professional print, large posters, designer layouts</td></tr>
+<tr><td>PNG</td><td>Lossless raster: every pixel preserved, no compression smear</td><td>Office printing, slides, apps that do not accept SVG</td></tr>
+<tr><td>JPEG</td><td>Lossy: discards detail and smears sharp edges</td><td>Photographs only — never for a QR code</td></tr>
+<tr><td>Screenshot or chat image</td><td>Re-compressed and often downscaled by the sending app</td><td>Nothing in print — go back to the original export</td></tr>
+</table>
+<h2>The 5 usual causes, in detail</h2>
+<h3>1. Low-resolution export</h3>
+<p>This is the most common cause, and the most forgiving to fix. A 512 px PNG looks fine at 2 cm wide; blown up to a 20 cm poster, each module becomes a smudge, because the same 512 pixels now cover ten times the area. The screen hides the problem — a display shows the code small, so the pixels look tight — while paper shows it at true size. The fix is at the source: re-export at 1024 px for cards and flyers, 2048 px for posters, or SVG whenever the printer accepts it. Enlarging the small file in an editor does not add detail; it only makes the existing blur bigger. If the original export is gone, regenerate from the same destination rather than stretching the file you have.</p>
+<h3>2. JPEG compression</h3>
+<p>JPEG is built for photographs, and it works by discarding detail the eye is least likely to notice in a photo. That trade is poor for a QR code, which is nothing but sharp edges and flat areas — exactly the features JPEG smears. A code saved as a low-quality JPEG can fail even at small sizes, and the damage worsens every time the file is re-saved as JPEG. PNG uses lossless compression, preserving every pixel exactly, and SVG has no pixels to lose. The rule is simple: PNG or SVG only. If a designer, chat app, or social platform hands you back a JPEG version, treat it as a preview, not print artwork, and replace it with the original PNG or SVG before printing.</p>
+<h3>3. Stretching</h3>
+<p>Dragging one corner distorts the grid: squares become rectangles, module spacing changes unevenly, and scanners give up. This happens most often in slide decks, word processors, and page-layout tools, where an image is dragged to fill a gap. Always resize proportionally — hold Shift, or use the lock icon, so width and height change together and the squares stay square. A code stretched and then stretched back is not automatically square again, because rounding in the layout tool can leave it slightly off. When in doubt, delete the placed image and place a fresh export at the intended size.</p>
+<h3>4. Bad print: printer, ink, and paper</h3>
+<p>Low-resolution printers, ink bleed on rough or absorbent paper, and glossy glare all soften edges. An inkjet on uncoated, absorbent stock lets ink spread into the fibres, so thin white gaps between modules fill in and the code looks bold and muddy. A laser printer on smooth or coated stock holds edges far better, which is why matte paper and a laser printer beat an inkjet on a napkin. Glossy lamination is different: the paper can stay sharp yet throw reflections back at the camera — tilt the print under the light to tell glare apart from blur. For fabric, embroidery, engraving, or very rough surfaces, expect edges to soften regardless, and compensate with a larger code, higher error correction, and a physical test first.</p>
+<h3>5. Copy of a copy</h3>
+<p>Screenshotting a code from a message, then screenshotting that screenshot, loses resolution each time. Messaging apps also recompress and downscale images, so a code forwarded through chat can arrive far smaller and softer than the original export. Photographing a printed code to reuse it adds perspective distortion, uneven light, and lens softness on top of the original print. Always go back to the original export, or regenerate from the same destination. If the destination is a dynamic code, generate a fresh code for the same short link — no old file needed.</p>
+<h2>How to fix it, step by step</h2>
 <ol>
-<li><b>Low-resolution export.</b> A 512 px PNG looks fine at 2 cm wide. Blown up to a 20 cm poster, each module becomes a smudge. The bigger the print, the more pixels you need.</li>
-<li><b>JPEG compression.</b> JPEG smears sharp edges — exactly what a QR code is made of. A code saved as a low-quality JPEG can fail even at small sizes. PNG or SVG only.</li>
-<li><b>Stretching.</b> Dragging a corner of the image distorts the grid: squares become rectangles, and scanners give up. Always resize proportionally.</li>
-<li><b>Bad print.</b> Low-DPI printers, ink bleed on rough or absorbent paper, and glossy glare all soften edges. Matte paper and a laser printer beat an inkjet on a napkin.</li>
-<li><b>Copy of a copy.</b> Screenshotting a code from a message, then screenshotting that screenshot, loses resolution each time. Always go back to the original export.</li>
+<li><strong>Find the original file.</strong> If you only have a JPEG, a screenshot, or a forwarded chat image, stop and regenerate — no edit restores detail compression already threw away.</li>
+<li><strong>Export at the right size.</strong> PNG at 1024 px for cards and flyers, 2048 px for posters, SVG whenever the printer or designer accepts it. Above about 20 cm, SVG is the only format that keeps edges exact without an enormous file.</li>
+<li><strong>Use PNG or SVG, never JPEG.</strong> PNG for screens and office printing, SVG for professional print. If a tool insists on JPEG, use its highest quality setting for a screen preview only, never as the print master.</li>
+<li><strong>Keep proportions when resizing.</strong> Hold Shift or the lock icon so the squares stay square. Place the image at the final size, rather than placing it small and stretching it later.</li>
+<li><strong>Keep the code dark on light, with a clear margin.</strong> Blur and low contrast compound each other: a grey code on a pale background that is also soft fails sooner than either fault alone. Keep a blank margin at least 4 modules wide on every side, as specified in ISO/IEC 18004, and keep text, logos, and decorative borders out of it.</li>
+<li><strong>Match paper and printer to the job.</strong> Smooth or coated stock and a laser printer for small codes; matte finish where glare is a risk; larger size and higher error correction for rough or textured surfaces.</li>
+<li><strong>Test-scan the real print.</strong> Print one copy at final size, step back to the real viewing distance, and scan it in the real lighting. A first-try scan means the batch is safe. If it hesitates, fix the export or the size now — a run of soft codes cannot be rescued afterwards.</li>
 </ol>
-
-<h2>How to fix it</h2>
-<ul>
-<li><strong>Export bigger.</strong> PNG at 1024 px for cards and flyers, 2048 px for posters. Rule of thumb: the print size in cm, times ~100, is the pixels you want.</li>
-<li><strong>Use SVG for print.</strong> SVG is vector — infinitely scalable with zero blur. Use it whenever the printer or designer accepts it.</li>
-<li><strong>Keep proportions.</strong> Hold Shift (or the lock icon) when resizing so the squares stay square.</li>
-<li><strong>Test at final size.</strong> Print one copy at the real size, step back to the real viewing distance, and scan it with your phone. If it reads first try, the batch is safe.</li>
-</ul>
-
-<p>Still not scanning after a sharp reprint? The problem is something else — size, contrast, or damage. <a href="/blog/why-is-my-qr-code-not-working/">The full troubleshooting guide</a> covers those. For the size-vs-distance rule, see the <a href="/blog/qr-code-print-size-guide/">print size guide</a>.</p>
-
+<h2>Scenarios: where blur bites hardest</h2>
+<h3>Flyers, menus, and table tents</h3>
+<p>These are scanned at arm's length, often in dim rooms, so they need both sharpness and size: at least 3 cm on a flyer or menu, 4–5 cm on a table tent as a rule of thumb. Menus add lamination risk: gloss under overhead lights can glare, while matte laminate keeps the code readable and wipes clean. For a menu that changes, link to a page you control rather than a screenshot, so the print never goes stale — and a dynamic code lets you change that destination after printing, with scan stats to show which tables actually scan.</p>
+<h3>Posters and signage</h3>
+<p>Posters fail differently: the export is usually the problem, not the printer. A 512 px file that looked fine on screen becomes visibly soft at 20 cm or 50 cm, and no printer can invent the missing pixels. Use SVG, apply the 1:10 distance rule of thumb, and proof the code panel at full size before the run. Outdoors, allow for fading too: a code that starts sharp but fades in sun drifts towards failure over weeks, so a higher error-correction level and a sheltered position matter more than a marginally sharper first print.</p>
+<h3>Packaging and labels</h3>
+<p>Small labels combine small size, dense data, and curved or textured surfaces. Keep the code at 2 cm or larger as a rule of thumb, avoid wrapping it around a tight curve where edge modules stretch, and test on the actual container — a code that scans flat can fail on a bottle. If the material is rough or printing coarse, print larger and simpler: a short link keeps the grid roomy, including a short link behind a dynamic code.</p>
+<h2>Honest comparison: what fixes blur, and what does not</h2>
+<p>Not every sharpening trick works, and some popular advice wastes a print run. Upscaling a small file — in an editor, with an enlarger tool, or by exporting the same small image larger — does not add detail; it interpolates between the pixels you already have, so edges stay soft, only bigger. A sharpening filter can make edges look crisper to the eye while adding halos that confuse a camera, so a filtered code can scan worse. Converting a JPEG to PNG does not undo JPEG damage either: the format changes, but the smeared pixels stay smeared. The only reliable repair is a fresh export from the original data at higher resolution, or as SVG.</p>
+<p>Format choice has its own trade-offs. SVG is the best choice for print, but some office tools, older apps, and social platforms do not accept it — in those cases a high-resolution PNG is the right fallback, not a reason to fall back to JPEG. PDF can be a good carrier for print because it can hold the vector code, but only if the code inside the PDF is actually vector; a PDF with a small JPEG pasted inside it is just a JPEG with a fancier wrapper, so check what is inside before trusting the file extension.</p>
+<p>Finally, sharpness is necessary but not sufficient. A perfectly sharp code can still fail if it is too small for its distance, if contrast is weak, if the quiet zone is crowded, if a logo covers too much of the centre, or if the destination itself is dead. Those are diagnosis questions, covered in order in <a href="/blog/why-is-my-qr-code-not-working/">the full troubleshooting guide</a>. If your reprint is sharp and still will not scan, work through that guide before reprinting again — a second reprint only helps if it changes the thing that is actually wrong.</p>
+<p>Make the next code sharp from the start: generate it in the <a href="/#studio">free generator</a>, choose from 17 types, and export PNG up to 2048 px or infinitely scalable SVG — free for static codes, with no sign-up, no watermark, and no expiry. For sizing by use case, see the <a href="/blog/qr-code-print-size-guide/">print size guide</a>, and for a logo code, see <a href="/blog/add-logo-to-qr-code/">how to add a logo to a QR code</a>.</p>
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - The QR Code symbology specification. ISO page shows Edition 4, published 2024-08 (page fetched 2026-11-03). Supports the four error-correction levels (L 7%, M 15%, Q 25%, H 30% of codewords) and the 4-module quiet zone, as defined in the standard.</li>
+      <li><a href="https://www.4over4.com/guide/understanding-image-resolution-dpi-in-print-vs-web-part2">4OVER4: Export Settings for Print vs Web, Sizes and DPI</a> - Supports 300 DPI as the professional print standard for close-viewed items (business cards, postcards, brochures, flyers) and lower effective resolution for large-format items viewed from a distance. No explicit publication date on the page; accessed 2026-11-03.</li>
+      <li><a href="https://dev.to/bitran/image-formats-explained-jpg-vs-png-vs-webp-vs-avif-2hm7">Image Formats Explained: JPG vs PNG vs WebP vs AVIF</a> - Supports JPEG as lossy compression that smears crisp edges and degrades further on re-saving, versus PNG as lossless compression that preserves every pixel exactly. No explicit publication date on the page; accessed 2026-11-03.</li>
+      <li><a href="https://qrlynx.com/blog/iso-iec-18004-qr-code-standard-explained">ISO/IEC 18004:2024 Explained (QRLynx)</a> - Reviewed July 2026 against ISO and DENSO WAVE. Supports the codeword reading of the error-correction percentages (7% / 15% / 25% / 30% of total codewords, not a guaranteed visible-area tolerance) and the four-module quiet zone specified by DENSO WAVE.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
@@ -163,15 +244,17 @@
       <div class="rel-grid">
         <a class="rel-card" href="/blog/get-google-reviews-with-qr-code/"><b>How to Get More Google Reviews with a QR Code</b></a>
         <a class="rel-card" href="/blog/bulk-qr-codes/"><b>Bulk QR Codes: Generate Dozens at Once, Free</b></a>
-        <a class="rel-card" href="/blog/do-qr-codes-expire/"><b>Do QR Codes Expire? No — But Paid Ones Can Die</b></a>
+        <a class="rel-card" href="/blog/qr-code-troubleshooting-guide/"><b>QR Code Troubleshooting Guide: Find and Fix Any Scan Failure</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
-    <details><summary><span>Why does my QR code look blurry but still scan?</span></summary><p>Phones are forgiving — error correction recovers a surprising amount of blur. But a code that scans in your bright office may fail in dim light or at arm's length. Sharp is safe; barely-scanning is not.</p></details>
-    <details><summary><span>What resolution do I need for a poster?</span></summary><p>2048 px PNG minimum, or SVG. A poster viewed from 2 meters needs far more pixels than a business card viewed from 30 cm — see the print size guide for the distance rule.</p></details>
-    <details><summary><span>PNG or SVG for print?</span></summary><p>SVG whenever the printer or designer accepts it — it scales infinitely with zero blur. PNG at 1024–2048 px is the fallback for office printing and apps that don't take SVG.</p></details>
-    <details><summary><span>Can I fix a blurry printed code without reprinting?</span></summary><p>No. The blur is baked into the printed image. Reprint from a higher-resolution export (or SVG). Editing a dynamic code won't help — the pattern on paper is what it is.</p></details>
+    <details><summary><span>Why does my QR code look blurry but still scan?</span></summary><p>Phones are forgiving — error correction rebuilds codewords that come back wrong or unreadable. But a code that scans in a bright office may fail in dim light or at arm's length. Sharp is safe; barely scanning is not.</p></details>
+    <details><summary><span>What resolution do I need for a poster?</span></summary><p>SVG is the best choice, because it scales without limit. If the printer needs a raster file, use PNG at 2048 px; a poster at 20 cm needs roughly 2,360 px at 300 pixels per inch, so a 512 px export will look soft at that size.</p></details>
+    <details><summary><span>PNG or SVG for print?</span></summary><p>SVG whenever the printer or designer accepts it — it scales infinitely with zero blur. PNG at 1024 px for cards and flyers, or 2048 px for posters, is the fallback for office printing and apps that do not take SVG.</p></details>
+    <details><summary><span>Can I fix a blurry printed code without reprinting?</span></summary><p>No. The blur is baked into the printed image. Reprint from a higher-resolution export (or SVG). Editing a dynamic code will not help — the pattern on paper is what it is, even though a dynamic code lets you change the destination behind a fresh print.</p></details>
+    <details><summary><span>Why does the same export look fine on screen but soft in print?</span></summary><p>A screen shows the code small, so its pixels look tight. Paper shows the code at its true size, so the same pixel count spread over centimetres reveals the blur. Check the export against the print size before sending it to print.</p></details>
+    <details><summary><span>Will upscaling or a sharpening filter fix a blurry code?</span></summary><p>No. Upscaling interpolates between the pixels you already have, so edges stay soft, only bigger. A sharpening filter can add halos that confuse a camera, and converting a JPEG to PNG does not undo JPEG damage. The only reliable repair is a fresh export from the original data at higher resolution, or as SVG.</p></details>
     </section>
   </article>
   <footer>

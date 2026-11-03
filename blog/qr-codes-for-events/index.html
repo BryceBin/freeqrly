@@ -45,9 +45,14 @@
 .rel-card:hover{border-color:var(--gold)}
 .rel-card b{font-size:14px;font-weight:600;line-height:1.4}
 @media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"QR Codes for Events: Check-In, Tickets & More | FreeQrly","description":"How to use QR codes for events: check-in, registration, tickets, photo sharing, and add-to-calendar codes. Free generator.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"QR Codes for Events: Check-In, Tickets & More | FreeQrly","description":"How to use QR codes for events: check-in, registration, tickets, photo sharing, and add-to-calendar codes. Free generator.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -59,7 +64,7 @@
       "name": "How do I make a QR code for event check-in?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Link the code to your check-in form or registration page, print it for the entrance, and guests scan on arrival instead of queueing at a desk."
+        "text": "Link the code to your check-in form or registration page, print it for the entrance, and guests scan on arrival instead of queueing at a desk. Keep a printed guest list beside the scanner as a fallback for phones that die or screens that will not read."
       }
     },
     {
@@ -67,7 +72,7 @@
       "name": "Can a QR code add an event to my calendar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — calendar (VEVENT) QR codes open an 'add to calendar' prompt on iPhones and Androids. FreeQrly generates them free with its event type."
+        "text": "Yes — calendar (VEVENT) QR codes open an 'add to calendar' prompt on iPhones and Androids. FreeQrly generates them free with its event type: title, start and end time, and location in one scan."
       }
     },
     {
@@ -75,7 +80,39 @@
       "name": "What QR codes do I need for an event?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "At minimum: check-in/registration, a shared photo album, and venue WiFi. Add-to-calendar codes on invitations are the high-ROI extra."
+        "text": "At minimum: check-in/registration, a shared photo album, and venue WiFi. Add-to-calendar codes on invitations are the high-value extra. For conferences, add agenda and speaker codes; for ticketed events, add one code per ticket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should event ticket codes be static or dynamic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One code per ticket, and dynamic when a ticket can be transferred or cancelled or when the validation page might change — a dynamic code can be repointed without reprinting the ticket. A simple, non-transferable ticket with a final validation page can use a static code. Never print one shared code on every ticket: it cannot tell one ticket from another."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a guest's ticket code will not scan at the door?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the name against the printed guest list instead of turning the guest away. Phones die, screens crack, and screenshots arrive too dim to read. Decide before doors open what the door team does when a code has already been used — a returning guest or a screenshot doing the rounds needs a rule, not a debate in front of a queue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I reuse event signage for the next event?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if the codes on it are dynamic. A dynamic code on a reusable sign can be repointed at the next event's feedback form or agenda, so the sign never needs reprinting. Static codes are better for keepsakes — invitations and printed programs that should keep working for years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big should event QR codes be printed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Size each code for its actual scanning distance, using the 1:10 distance rule of thumb from the print size guide: a code scanned from a metre away needs to be roughly ten times larger than one scanned from ten centimetres. Keep contrast high, leave a clear quiet margin, and test the actual print on both iPhone and Android in lighting like the venue's before printing a full run."
       }
     }
   ]
@@ -93,36 +130,100 @@
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">QR codes for <span class="hl hl-blush">events</span>, done right</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Check-in lines, ticket chaos, 'where are the photos?' — a few well-placed QR codes solve the recurring event headaches. Here's the playbook.</p>
-    <p class="meta" style="text-align:center">October 14, 2026 · 4 min read</p>
+    <p class="meta" style="text-align:center">October 14, 2026 · Last updated: November 3, 2026 · 4 min read</p>
     <div class="prose" style="margin-top:40px">
-
-<h2>1. Check-in &amp; registration</h2>
-<p>Put a code on the confirmation email linking to a check-in form (or a simple "I'm here" page). Guests scan at the door instead of spelling their names for a volunteer with a clipboard. For ticketed events, link each ticket to its validation page.</p>
-<h2>2. Add-to-calendar codes</h2>
-<p>The most underused event code: one that drops the event straight into the guest's calendar. FreeQrly's <a href="/?type=event">event QR type</a> builds it in seconds — title, start/end time, location — and scanning it offers "add to calendar" on both iPhone and Android. Print it on the invitation — one less step between the invite and the calendar may mean fewer no-shows. Planning a Christmas party? The same invitation trick works for the holidays — see the <a href="/christmas-qr-code/">Christmas QR code generator</a> for card, gift-tag, and party ideas.</p>
-<h2>3. The shared photo album</h2>
-<p>Every event has the same problem: the photos scatter across fifty phones. A code linking to a shared album (Google Photos, iCloud shared album) on table cards fixes it — guests upload their shots in one tap.</p>
-<h2>4. WiFi for the venue</h2>
-<p>Attendees will ask for WiFi. A <a href="/wifi-qr-code/">WiFi QR code</a> on signage connects them in one scan — no password spelling over loud music.</p>
-<h2>5. Feedback &amp; follow-up</h2>
-<p>A code linking to a 2-question feedback form on the exit signage or closing slide. Guests answer while the event is still fresh, instead of ignoring a follow-up email days later.</p>
+<p>Check-in lines, ticket chaos, “where are the photos?” — a few well-placed QR codes solve the recurring event headaches. The trick is not the code itself; it is matching each code to one moment in the guest's journey, and choosing static or dynamic for each moment deliberately. A code on the invitation does a different job from a code on the exit sign, and printing the wrong kind in the wrong place is how events end up with a wall of codes nobody scans.</p>
+<p>Start from the guest, not from the technology. A guest meets your event in roughly five moments: they hear about it, they commit, they arrive, they take part, and they leave. Each moment has one question — when is it, am I in, where do I go, what is happening, what did I think — and each question has a code that answers it in one scan.</p>
+<h2>The event code map</h2>
+<table>
+<tr><th>Guest moment</th><th>The code</th><th>Where it goes</th><th>Static or dynamic</th></tr>
+<tr><td>Before: hearing about it</td><td>Add-to-calendar code (event type)</td><td>Invitation, save-the-date, email</td><td>Static — the date, time, and venue rarely change, and a keepsake invitation should keep working</td></tr>
+<tr><td>Before: committing</td><td>RSVP or registration form</td><td>Invitation details card, event page</td><td>Static if the form link is final; dynamic if the form might move</td></tr>
+<tr><td>Before: tickets</td><td>Ticket validation page, one code per ticket</td><td>Ticket email, printed ticket</td><td>Dynamic when a ticket can be transferred or cancelled; static only for a simple, non-transferable ticket</td></tr>
+<tr><td>Arrival: check-in</td><td>Check-in form or “I'm here” page</td><td>Confirmation email, entrance sign</td><td>Dynamic if the check-in page or the day's schedule might change</td></tr>
+<tr><td>During: agenda and speakers</td><td>Agenda page, speaker bios</td><td>Program, session signs, slide footers</td><td>Dynamic — agendas change, speakers drop out, rooms move</td></tr>
+<tr><td>During: connectivity</td><td>Venue WiFi</td><td>Entrance and table signage</td><td>Static — the network rarely changes on the day</td></tr>
+<tr><td>During: photos</td><td>Shared photo album</td><td>Table cards, photo wall, closing slide</td><td>Dynamic if you might switch albums; static if the album is set</td></tr>
+<tr><td>After: feedback</td><td>Short feedback form</td><td>Exit signage, closing slide, thank-you email</td><td>Dynamic if you reuse the sign for the next event</td></tr>
+</table>
+<p>The pattern in that table is the whole strategy: anything that might change after printing goes dynamic, and anything fixed goes static. A static code never expires — right for a keepsake invitation, wrong for an agenda that will be edited the morning of the event.</p>
+<h2>Before the event: invitations, calendar, and RSVP</h2>
+<p>The invitation is where most event codes fail, because organizers print a code that leads to a homepage and expect guests to find the RSVP form themselves. Link the code to the form, not to the site. Build your RSVP form first — a simple form tool works fine — then generate the code, print it on the invitation suite, and guests scan, tap, and respond. No stamps, no lost reply cards, no deciphering handwriting. After the responses roll in, the form tallies them automatically, meal choices included; export to a sheet, share it with the caterer, and the admin is done.</p>
+<p>Pair the RSVP code with an add-to-calendar code, the most underused event code there is. One scan drops the event — title, start and end time, location — straight into the guest's calendar on both iPhone and Android. Print it on the invitation, and one less step sits between the invite and the calendar, which may mean fewer no-shows. A wedding invitation suite is the classic case: the RSVP code goes on the details card, the calendar code beside it, and the photo album code waits for the table cards. The same invitation trick works for holiday parties — see the <a href="/christmas-qr-code/">Christmas QR code generator</a>.</p>
+<p>Word the invitation code the way you would word an instruction to a stranger. Print exactly what to do next to the code: “Scan to RSVP by June 1st.” Older guests may need the nudge, and the truly scan-averse still need a phone number on the invitation. Every code should sit beside a short printed alternative — a link or a phone number — so a guest with a dead battery, no signal, or no camera phone is not locked out.</p>
+<h2>Tickets: one code per ticket, and what that really means</h2>
+<p>For ticketed events, link each ticket to its own validation page rather than printing one shared code on every ticket. A shared code cannot tell one ticket from another, so it cannot catch a ticket scanned twice — and a screenshot of a shared code is a free ticket for anyone who receives it.</p>
+<p>Batch generation turns a list of ticket links into a set of codes in one download. Name the files by ticket or guest and test-scan a sample before sending. At the door, the check-in team needs one thing above all: a fallback. Phones die, screens crack, and screenshots arrive too dim to read. Keep a printed guest list at the entrance, and train the door team to check a name when a code will not read.</p>
+<h2>At the door: check-in without the clipboard queue</h2>
+<p>Put a code on the confirmation email linking to a check-in form, or to a simple “I'm here” page. Guests scan at the door instead of spelling their names for a volunteer with a clipboard. For a small event, that form can be as simple as a name field and a submit button.</p>
+<p>Three details make door check-in work. First, print the entrance code large and at chest height, where a guest holding a phone naturally points it — not on a table where people queue behind it, and not on a swinging door. Second, give the door team a second way in: a printed link and the guest list on paper. Third, decide before doors open what happens when a code has already been used. A ticket scanned twice is either a returning guest or a screenshot doing the rounds; the door team needs a rule, not a debate in front of a queue.</p>
+<h2>During the event: agenda, speakers, WiFi, and the photo wall</h2>
+<h3>Agenda and speaker bios</h3>
+<p>A code on the program — or in the footer of each session slide — linking to the live agenda page saves you from reprinting the program every time a session moves rooms. This is the strongest case for dynamic codes at an event: the printed pattern stays the same while the destination changes from your Dashboard. Speaker bios work the same way.</p>
+<h3>Venue WiFi</h3>
+<p>Attendees will ask for WiFi. A <a href="/wifi-qr-code/">WiFi QR code</a> on signage connects them in one scan — no password spelling over loud music, no queue at the help desk. Put it where people first look for it: the entrance, the registration desk, and the tables, not only on a slide that disappears after thirty seconds. One honest trade-off: anyone who photographs the printed code can join the network, so treat a venue WiFi code like a guest key.</p>
+<h3>The shared photo album</h3>
+<p>Every event has the same problem: the photos scatter across fifty phones, and the organizer spends the next week begging for them. A code linking to a shared album on table cards fixes it — guests upload their shots in one tap, all night, into one place. Print it on the table cards, on a photo wall sign, and on the closing slide, where guests see it when they take a photo. Check the album's sharing settings before the event: anyone with the link can usually add to a shared album. If the album is meant for guests only, keep the code inside the room rather than on a public event page.</p>
+<h2>After the event: feedback while it is still fresh</h2>
+<p>A code linking to a short feedback form on the exit signage or the closing slide catches guests while the event is still fresh, instead of competing with a follow-up email days later that most guests will ignore. Keep the form to two questions: one rating and one open box for what to change. A ten-question survey at the exit gets abandoned; a two-question form gets answered on the walk to the car. The thank-you email the next day can carry the same code again, plus the photo album link, for guests who left too quickly.</p>
+<p>After the event is also when the static-versus-dynamic choice pays off a second time. A dynamic code on a reusable sign can be repointed at the next event's feedback form, so the sign never needs reprinting. A static code on a keepsake keeps working for years as a memento. Decide which kind of afterlife each sign should have before you print it.</p>
+<h2>Static or dynamic: the before-and-after difference</h2>
+<p>The honest comparison is not “dynamic is better.” The two kinds fail differently, and an event is exactly where both failure modes show up:</p>
+<table>
+<tr><th></th><th>Static</th><th>Dynamic</th></tr>
+<tr><td><strong>What it holds</strong></td><td>The destination itself, inside the pattern</td><td>A short link that redirects to the destination</td></tr>
+<tr><td><strong>If the destination changes after printing</strong></td><td>The code breaks; reprint</td><td>Edit the destination in the Dashboard; every printed copy follows</td></tr>
+<tr><td><strong>If you want to know what got scanned</strong></td><td>Nothing is recorded; static codes never report home</td><td>Scan statistics show totals, timing, and breakdowns — see <a href="/blog/dynamic-qr-code-statistics/">what dynamic QR code statistics tell you</a></td></tr>
+<tr><td><strong>Needs an account</strong></td><td>No — free, no sign-up, no watermark, never expires</td><td>Yes — free sign-in, 20 codes on the free account, unlimited scans during the limited-time promotion</td></tr>
+<tr><td><strong>Best event uses</strong></td><td>Invitations, calendar codes, WiFi, keepsakes</td><td>Agenda, check-in, feedback, reusable signage, anything that might move</td></tr>
+<tr><td><strong>Failure mode</strong></td><td>Silent: a changed link means a dead code nobody reports</td><td>Dependent: the redirect service must stay up for the code to work</td></tr>
+</table>
+<p>A practical rule: use dynamic codes for everything the event team controls on the day — agenda, check-in, feedback — and static codes for everything the guest keeps — invitations, calendar entries, photo albums that should outlive the event. If anyone might need to change where a code points after it is printed, make it dynamic.</p>
+<h2>Printing and testing: the unglamorous part that decides everything</h2>
+<p>Event codes get scanned in chaotic lighting by hurried people. Print for that reality, not for a design mockup:</p>
+<ul>
+<li><strong>Go bigger than you think.</strong> The <a href="/blog/qr-code-print-size-guide/">1:10 distance rule of thumb</a> is a good starting point: a code scanned from a metre away needs to be roughly ten times larger than one scanned from ten centimetres. Size each one for its actual distance.</li>
+<li><strong>Keep contrast high and the margin clear.</strong> Dark ink on a light background, with a clear quiet margin around the code. A code printed over a busy photo, or in brand colours with low contrast, is the most common reason an otherwise fine code fails at an event.</li>
+<li><strong>Print for damage.</strong> Tickets get folded, table cards get spilled on, outdoor signs get rained on. The QR standard, ISO/IEC 18004:2024, defines four error-correction levels — L, M, Q, and H — recovering 7%, 15%, 25%, and 30% of the symbol's codewords respectively, so a code with a higher level keeps scanning after more of it is damaged. Use a higher level for anything guests will handle, and keep logos small and centred so they do not eat into that margin.</li>
+<li><strong>Test on both iPhone and Android before printing a hundred of anything.</strong> The built-in camera on modern phones reads codes with no app needed — Apple's support page describes opening Camera or the Control Center scanner, holding the phone so the code appears in frame, and tapping the link that appears — but camera behaviour varies between models, and a code that scans on one phone in bright light may fail on another in a dim hall. Test the actual print, at the actual size, in lighting like the venue's.</li>
+<li><strong>One code per sign, with a label.</strong> Two codes side by side make guests hesitate and cameras pick the wrong one. Label every code with what it does — “Scan for WiFi,” “Scan for photos” — because a bare code at an event is a code guests walk past.</li>
+</ul>
+<p>One more number worth knowing before you plan around phones: in Pew Research Center's 2026 survey of United States adults, 91% said they owned a smartphone, up from 35% in the Center's first such survey in 2011. That is a United States figure, from a survey of 5,511 adults conducted from January 30 to June 18, 2026 — not a global rate, and not a promise about your particular guest list. Its practical meaning is modest: for most audiences, planning around phone cameras is planning around the device nearly everyone already carries, while still keeping a printed alternative for the rest.</p>
+<h2>What can go wrong — and the fix for each</h2>
+<ul>
+<li><strong>A code leads to a page that moved.</strong> Fix: dynamic codes for anything the team might move, and a final link check the morning of the event, from a phone, on the venue's network.</li>
+<li><strong>Guests cannot connect because the WiFi code is on one slide.</strong> Fix: WiFi codes on permanent signage at the entrance and the tables, not only on a slide.</li>
+<li><strong>The photo album fills with uploads from strangers.</strong> Fix: keep the album code inside the room, check the sharing settings before doors open, and change the album link after the event if the link escaped.</li>
+<li><strong>A ticket screenshot does the rounds.</strong> Fix: one code per ticket, a rule for second scans at the door, and the paper guest list as backup.</li>
+<li><strong>Older guests or guests without smartphones are stranded.</strong> Fix: a phone number on the invitation, a paper list at the door, and a printed agenda beside the code. The code is an additional route, never the only one.</li>
+</ul>
 <h2>Event code checklist</h2>
 <ul>
 <li>Check-in: a code on the confirmation email, scanned at the door.</li>
 <li>Add-to-calendar: on the invitation, so guests keep the date.</li>
+<li>RSVP: on the details card, linking to the form.</li>
+<li>Tickets: one code per ticket, batch-generated, test-scanned before sending.</li>
+<li>Agenda and speakers: on the program and slide footers, dynamic.</li>
 <li>Photo album: on table cards, so shots land in one shared album.</li>
 <li>Venue WiFi: on signage, so nobody spells the password over loud music.</li>
-<li>Feedback: on exit signage or the closing slide, while the event is still fresh.</li>
+<li>Feedback: on exit signage and the closing slide, while the event is still fresh.</li>
 </ul>
-<h2>Printing tips</h2>
-<p>Event codes get scanned in chaotic lighting by hurried people: go bigger than you think (the <a href="/blog/qr-code-print-size-guide/">1:10 distance rule of thumb</a>), keep contrast high, and test on both iPhone and Android before printing a hundred table cards. Static codes never expire, so last year's signage template still works.</p>
-
+<p>Put together: one code per guest question, dynamic where things change, static where things should last, each code labelled, tested, and backed by a printed alternative. Make the codes in the <a href="/dynamic-qr-code/">dynamic QR code studio</a> for anything the event team might need to change, or as free static codes for the invitations and keepsakes — and if you are still deciding which kind you need, <a href="/blog/static-vs-dynamic-qr-codes/">static vs dynamic, explained honestly</a> lays out the trade-off without the sales pitch. Planning a wedding specifically? The <a href="/blog/wedding-rsvp-qr-code/">wedding RSVP guide</a> covers the invitation suite in detail.</p>
     </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="https://support.apple.com/en-us/102680">Apple Support — Scan a QR code with your iPhone or iPad</a> - Supports the test-scan method: open Camera or the Control Center Scan Code control, hold the phone so the code appears in frame, and tap the link that appears. Published September 14, 2026.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024 — QR code bar code symbology specification</a> - Supports the error-correction levels used in the printing section: L recovers 7%, M 15%, Q 25%, and H 30% of the symbol's codewords. 2024 edition of the standard.</li>
+      <li><a href="https://www.pewresearch.org/internet/fact-sheet/mobile/">Pew Research Center — Americans' Use of Mobile Devices in 2026</a> - Supports: 91% of United States adults said they owned a smartphone and 98% said they owned a cellphone of some kind, up from 35% smartphone ownership in the Center's first such survey in 2011. Based on a survey of 5,511 United States adults conducted January 30 to June 18, 2026, margin of error plus or minus 1.8 percentage points.</li>
+      </ul>
+    </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
         <h3>Try it yourself — free</h3>
-        <p>Everything in this article works in the FreeQrly studio right now. Static codes, thirteen content types, PNG and SVG export.</p>
+        <p>Everything in this article works in the FreeQrly studio right now. Static codes, all 17 content types, PNG and SVG export.</p>
         <a class="btn" href="/#studio">Open the studio</a>
       </div>
     </div>
@@ -136,9 +237,13 @@
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
-    <details><summary><span>How do I make a QR code for event check-in?</span></summary><p>Link the code to your check-in form or registration page, print it for the entrance, and guests scan on arrival instead of queueing at a desk.</p></details>
-    <details><summary><span>Can a QR code add an event to my calendar?</span></summary><p>Yes — calendar (VEVENT) QR codes open an 'add to calendar' prompt on iPhones and Androids. FreeQrly generates them free with its event type.</p></details>
-    <details><summary><span>What QR codes do I need for an event?</span></summary><p>At minimum: check-in/registration, a shared photo album, and venue WiFi. Add-to-calendar codes on invitations are the high-ROI extra.</p></details>
+    <details><summary><span>How do I make a QR code for event check-in?</span></summary><p>Link the code to your check-in form or registration page, print it for the entrance, and guests scan on arrival instead of queueing at a desk. Keep a printed guest list beside the scanner as a fallback for phones that die or screens that will not read.</p></details>
+    <details><summary><span>Can a QR code add an event to my calendar?</span></summary><p>Yes — calendar (VEVENT) QR codes open an 'add to calendar' prompt on iPhones and Androids. FreeQrly generates them free with its event type: title, start and end time, and location in one scan.</p></details>
+    <details><summary><span>What QR codes do I need for an event?</span></summary><p>At minimum: check-in/registration, a shared photo album, and venue WiFi. Add-to-calendar codes on invitations are the high-value extra. For conferences, add agenda and speaker codes; for ticketed events, add one code per ticket.</p></details>
+    <details><summary><span>Should event ticket codes be static or dynamic?</span></summary><p>One code per ticket, and dynamic when a ticket can be transferred or cancelled or when the validation page might change — a dynamic code can be repointed without reprinting the ticket. A simple, non-transferable ticket with a final validation page can use a static code. Never print one shared code on every ticket: it cannot tell one ticket from another.</p></details>
+    <details><summary><span>What if a guest's ticket code will not scan at the door?</span></summary><p>Check the name against the printed guest list instead of turning the guest away. Phones die, screens crack, and screenshots arrive too dim to read. Decide before doors open what the door team does when a code has already been used — a returning guest or a screenshot doing the rounds needs a rule, not a debate in front of a queue.</p></details>
+    <details><summary><span>Can I reuse event signage for the next event?</span></summary><p>Yes, if the codes on it are dynamic. A dynamic code on a reusable sign can be repointed at the next event's feedback form or agenda, so the sign never needs reprinting. Static codes are better for keepsakes — invitations and printed programs that should keep working for years.</p></details>
+    <details><summary><span>How big should event QR codes be printed?</span></summary><p>Size each code for its actual scanning distance, using the 1:10 distance rule of thumb from the print size guide: a code scanned from a metre away needs to be roughly ten times larger than one scanned from ten centimetres. Keep contrast high, leave a clear quiet margin, and test the actual print on both iPhone and Android in lighting like the venue's before printing a full run.</p></details>
     </section>
   </article>
   <footer>

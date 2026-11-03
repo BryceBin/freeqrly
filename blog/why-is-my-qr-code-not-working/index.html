@@ -52,7 +52,7 @@
 .sources a{color:inherit;text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"QR Code Not Working? 7 Fixes That Help | FreeQrly","description":"QR code not scanning? Seven real fixes: size, contrast, damage, quiet zone, and the expired-link trap — plus how to test before you print.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+{"@context":"https://schema.org","@type":"Article","headline":"QR Code Not Working? 7 Fixes That Help | FreeQrly","description":"QR code not scanning? Seven real fixes: size, contrast, damage, quiet zone, and the expired-link trap — plus how to test before you print.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-10-14","dateModified":"2026-11-03","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
 </script>
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "name": "Why does my QR code scan on one phone but not another?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Then the code itself is fine — it's the camera, lighting, or angle on the failing phone. Wipe the lens and try in better light."
+        "text": "Then the code itself is usually fine — it is the camera, lighting, or angle on the failing phone. Wipe the lens, move to better light, hold the code so it fills about half the viewfinder, and try again."
       }
     },
     {
@@ -72,15 +72,47 @@
       "name": "Can a damaged QR code still work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Often yes, thanks to error correction — <a href=\"http://www.iso.org/standard/83389.html\">up to 30% damage can be tolerated at the High setting</a>, as defined in ISO/IEC 18004. But heavy damage, fading, or missing finder patterns will kill it."
+        "text": "Often yes, thanks to error correction — at the High level, approximately 30% of codewords can be restored, as defined in ISO/IEC 18004. But damage to the three corner finder patterns or to the quiet zone is much harder to recover from, and heavy fading will kill a code even when its shape looks intact."
       }
     },
     {
       "@type": "Question",
-      "name": "My QR code scans but the link doesn't work — is the code broken?",
+      "name": "My QR code scans but the link does not work — is the code broken?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, the code is doing its job. The destination is the problem: the page moved, the site is down, or a trial-based generator deactivated it."
+        "text": "No, the code is doing its job. The destination is the problem: the page moved, the site is down, or a trial-based generator deactivated it. If the code is dynamic, sign in and redirect it; if it is static, restore the page or reprint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big should a printed QR code be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a rule of thumb, at least 2 x 2 cm, and at least one-tenth of the scanning distance: 5 cm for a table card scanned from 50 cm, 50 cm for a poster scanned from 5 metres. Denser codes holding long links or contact cards need to be larger at the same distance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my logo code fail when the plain version scans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The logo covers part of the grid and consumes error-correction budget. Keep the logo under about 30% of the code area as a rule of thumb, print logo codes at 3 x 3 cm or larger, use error correction Q or H, and test the logo version itself — a plain code that scans proves nothing about its logo sibling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much blank space does a QR code need around it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A quiet zone at least 4 modules wide on all four sides, as specified in ISO/IEC 18004. Keep text, rules, decorative borders, and nearby images out of it, and check all four sides — a margin generous on three sides and zero on the fourth still fails."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I fix a printed QR code without reprinting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if the problem is the destination and the code is dynamic: sign in, change the destination, and the printed pattern works again. If the pattern itself is at fault — too small, low contrast, crowded margin, heavy logo, or soft print — the fix is a reprint with that parameter changed."
       }
     }
   ]
@@ -90,23 +122,48 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"QR Code Not Working? 7 Fixes That Help | FreeQrly","description":"QR code not scanning? Seven real fixes: size, contrast, damage, quiet zone, and the expired-link trap — plus how to test before you print.","step":[
     {
       "@type": "HowToStep",
-      "name": "Check the size",
-      "text": "As a rule of thumb, printed codes need to be at least 2x2 cm. On screen, make it at least 2 cm wide on your display."
+      "name": "Rule out the phone",
+      "text": "Wipe the lens and test on a second phone. If phone B reads it, the code was never the problem. Keep the whole square in frame and hold still once it fills about half the viewfinder."
     },
     {
       "@type": "HowToStep",
-      "name": "Check the contrast",
-      "text": "Dark code on a light background. Fancy low-contrast color pairs are the #1 design killer."
+      "name": "Check size and distance",
+      "text": "As a rule of thumb, printed codes need at least 2 x 2 cm, and at least one-tenth of the scanning distance. Below that rule for its distance, reprint larger or move the code closer to where people stand."
     },
     {
       "@type": "HowToStep",
-      "name": "Test on a second phone",
-      "text": "If one phone reads it and another doesn't, the code is fine — it's the camera or lighting."
+      "name": "Check contrast",
+      "text": "Dark modules on a light background. If you squint to tell modules from background in the real scanning light, return to black on white and do not rely on inverted codes for public use."
     },
     {
       "@type": "HowToStep",
-      "name": "Re-export at higher resolution",
-      "text": "Blurry edges from a low-res export fail at print size. Export PNG at 1024 px or higher, or use SVG."
+      "name": "Check the quiet zone",
+      "text": "Keep a clear border at least 4 modules wide on all four sides, as specified in ISO/IEC 18004. Check all four sides — a margin generous on three sides and zero on the fourth still fails."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check damage, fading, and wear",
+      "text": "Check the three corner finder patterns first, then contrast, then the surface. A torn finder pattern is often fatal; scattered scuffs are what error correction is built to rebuild."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check logo obstruction",
+      "text": "Keep the logo under about 30% of the code area as a rule of thumb, print logo codes at 3 x 3 cm or larger, and use error correction Q or H. Test the logo version itself."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check glare, curve, and angle",
+      "text": "Tilt the print to separate glare from blur, flatten the surface if you can, and shoot straight on. Prefer a flat panel over a tight curve and matte over gloss where lights are strong."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check sharpness",
+      "text": "Look at the module edges: crisp or smeared? Re-export at 1024 px for cards and flyers or 2048 px for posters, use SVG whenever the printer accepts it, and never use JPEG for a code."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check the destination",
+      "text": "If a link preview appears, the code decoded and the destination is the problem. Dynamic codes can be redirected without reprinting; static codes need the page restored or a reprint."
     }
   ]}
 </script>
@@ -122,39 +179,81 @@
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Why won’t this thing <span class="hl hl-blush">scan</span>?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">A QR code that won't scan is almost never a mystery. Run through these seven checks — in order — and you'll find the culprit in about two minutes.</p>
-    <p class="meta" style="text-align:center">October 14, 2026 · 4 min read</p>
+    <p class="meta" style="text-align:center">October 14, 2026 · Last updated: November 3, 2026 · 4 min read</p>
     <div class="prose" style="margin-top:40px">
-
-<h2>1. It's too small</h2>
-<p>The classic. A code squeezed into the corner of a business card at 1 cm wide won't scan reliably. Minimum for print, as a rule of thumb: <b>2x2 cm</b> (about 0.8 inches), and bigger is always safer. There's a full breakdown in the <a href="/blog/qr-code-print-size-guide/">print size guide</a>.</p>
-<h2>2. Low contrast killed it</h2>
-<p>QR readers look for dark modules on a light background. Light gray on white, brand pastels, or a code over a busy photo will fail — especially in dim light. When in doubt: black on white always works.</p>
-<h2>3. It's damaged or faded</h2>
-<p>Creased flyers, sun-faded posters, scratched stickers. Error correction can survive some damage (that's why <a href="/qr-code-with-logo/">adding a logo</a> works), but there's a limit. If a quarter of the code is gone, reprint.</p>
-<h2>4. No quiet zone</h2>
-<p>The blank margin around the code isn't decoration — scanners need it to find the edges. Keep a clear border <a href="http://www.iso.org/standard/83389.html">at least 4 modules wide</a> on all four sides, as specified in ISO/IEC 18004. Don't let text or design elements crowd it.</p>
-<h2>5. Glare, curve, or angle</h2>
-<p>Glossy lamination under bright light, a code wrapped around a bottle, or shot at a steep angle. Flatten it, kill the glare, shoot straight on.</p>
-<h2>6. The content is dead</h2>
-<p>The code scans fine — but the link is broken, the page moved, or the "free" generator's trial expired and took your code with it. This is the expired-link trap: <a href="/blog/do-qr-codes-expire/">do QR codes expire?</a> explains which ones do and how to avoid them.</p>
-<h2>7. Your camera</h2>
-<p>Wipe the lens. Seriously — a smudged lens is behind an embarrassing number of "broken" codes. Then test on a second phone: if phone B reads it, the code was never the problem.</p>
-<h2>Test before you print</h2>
-<p>Scan the code on two different phones (one iPhone, one Android if you can) before sending anything to print. Thirty seconds now saves a reprint later. Generate a test code in the <a href="/">free generator</a> and try it.</p>
-
+<p>A QR code that will not scan is almost never a mystery. Run through these checks — in order — and you will find the culprit in about two minutes. Before you change anything, split the problem three ways: the phone, the printed or displayed code, and the destination. Scan with a second phone. If it reads the code, the first phone, its camera, or its lighting is the problem. If no phone reads it, the code itself — size, contrast, margin, damage, or logo — is the problem. If phones read it but the link goes nowhere, the code is doing its job and the destination is the problem. That three-way split saves most people a pointless reprint, because each branch has a different fix.</p>
+<h2>The diagnostic table: check in this order</h2>
+<table>
+<tr><th>Order</th><th>Check</th><th>Quick test</th><th>Fix</th></tr>
+<tr><td>1</td><td>Phone and camera</td><td>Wipe the lens; try a second phone</td><td>Clean lens, better light, steadier hold</td></tr>
+<tr><td>2</td><td>Distance and angle</td><td>Move closer; fill half the viewfinder; shoot straight on</td><td>Print larger, or move the code closer</td></tr>
+<tr><td>3</td><td>Size</td><td>Measure the code; compare with the distance rule</td><td>Reprint larger; see the <a href="/blog/qr-code-print-size-guide/">print size guide</a></td></tr>
+<tr><td>4</td><td>Contrast</td><td>Check it in dim light: dark on light?</td><td>Black on white; drop busy backgrounds</td></tr>
+<tr><td>5</td><td>Quiet zone</td><td>Clear blank margin on all four sides?</td><td>Restore a margin at least 4 modules wide</td></tr>
+<tr><td>6</td><td>Damage and fading</td><td>Check the three corner squares and surface</td><td>Reprint; raise error correction for harsh use</td></tr>
+<tr><td>7</td><td>Logo obstruction</td><td>How much of the grid does the logo hide?</td><td>Shrink the logo, raise error correction, print larger</td></tr>
+<tr><td>8</td><td>Glare, curve, angle</td><td>Tilt the print; flatten the surface</td><td>Matte finish, flatter placement, larger code</td></tr>
+<tr><td>9</td><td>Sharpness</td><td>Are module edges crisp or smeared?</td><td>Re-export larger or as SVG; see <a href="/blog/why-is-my-qr-code-blurry/">why your code looks blurry</a></td></tr>
+<tr><td>10</td><td>Destination</td><td>Link preview shown? Link opens?</td><td>Fix the page, or redirect a dynamic code</td></tr>
+</table>
+<h2>The two standards that explain most failures</h2>
+<p>Two ideas from ISO/IEC 18004, the QR code symbology specification, explain a surprising share of scan failures. The first is the quiet zone: a blank margin at least 4 modules wide on every side, where a module is one small square of the grid. Scanners use that border to find where the symbol begins and ends, so text, graphics, or a crop invading it can make a perfect code invisible to a camera. The second is error correction: extra data that lets a reader rebuild codewords that come back wrong or unreadable, at four levels — L approximately 7%, M approximately 15%, Q approximately 25%, H approximately 30%. Those percentages describe codewords, not visible area: a torn finder pattern can kill a code well inside its level, while scattered minor damage elsewhere may survive. Higher levels are not free either: more recovery data means a denser grid, so raising the level on an already-small code can make it harder to read. Raise it for a reason — a logo, rough handling, outdoor use — then re-check size and test-scan.</p>
+<table>
+<tr><th>Level</th><th>Approximate codeword recovery</th><th>Best for</th></tr>
+<tr><td>L</td><td>7%</td><td>Clean, screen-only codes, no logo, no wear</td></tr>
+<tr><td>M</td><td>15%</td><td>The usual default for ordinary print</td></tr>
+<tr><td>Q</td><td>25%</td><td>Print that will be handled, scuffed, or weathered</td></tr>
+<tr><td>H</td><td>30%</td><td>Codes with a central logo, or harsh conditions</td></tr>
+</table>
+<h2>Step 1: rule out the phone</h2>
+<p>Wipe the lens. A smudged lens is behind an embarrassing number of supposedly broken codes, because a thin film of grease softens the whole image just enough to blur module edges. Then test on a second phone: if phone B reads it, the code was never the problem. The whole square must be in frame, with a little room around it — a code cropped by the viewfinder edge will not read. Hold still once the code fills about half the viewfinder, and move to better light in dim conditions. A code that shows a preview but goes nowhere when tapped has a destination problem (Step 9), not a scanning problem.</p>
+<h2>Step 2: size and distance</h2>
+<p>The classic failure is a code squeezed into a business card corner at 1 cm wide. As a rule of thumb, printed codes need at least 2 x 2 cm (about 0.8 inches), and bigger is always safer. Size and distance follow the 1:10 distance rule of thumb: code width at least one-tenth of scanning distance — 5 cm for a table card scanned from 50 cm, 50 cm for a poster scanned from 5 metres. Below that rule for its distance, no cleaning, re-angling, or re-exporting will reliably fix it — reprint larger, or move the code closer to where people stand. The full breakdown by use case is in the <a href="/blog/qr-code-print-size-guide/">print size guide</a>. Density tightens the rule: a short link gives a roomy grid, while a long link, full contact card, or long Wi-Fi password gives a denser grid with smaller modules, needing a larger print. A dynamic code shortens the printed pattern without shortening the final destination, because it encodes a short link you control and can redirect later, with scan stats showing performance.</p>
+<h2>Step 3: contrast</h2>
+<p>QR readers look for dark modules on a light background. Light grey on white, brand pastels, a dark code on dark, or a code over a busy photo will fail — especially in dim light. Judge it in the light where the code will actually be scanned: if you squint to tell modules from background, a phone camera will struggle too. The fix is black on white, which always works, with the quiet zone in the same light background colour. Inverted codes — light modules on dark — are a special case: some readers handle them and many do not, so do not rely on inversion for public codes. If brand colours matter, keep them in the surrounding design and a small central logo, not in the modules, and test the coloured version in dim light first.</p>
+<h2>Step 4: the quiet zone</h2>
+<p>The blank margin around the code is not decoration — scanners need it to find the edges. Keep a clear border at least 4 modules wide on all four sides, as specified in ISO/IEC 18004, and keep text, rules, decorative borders, and nearby images out of it. This failure is common in designed layouts, where a headline, a rule, or a photo edge creeps into the margin, and at a page edge, where a code too close to the trim loses its margin. Check all four sides: a margin generous on three sides and zero on the fourth still fails. The fix is layout, not re-export — give the code room, or place it on a plain light panel that guarantees the margin inside a busy layout.</p>
+<h2>Step 5: damage, fading, and wear</h2>
+<p>Creased flyers, sun-faded posters, scratched stickers, rain-spotted labels: error correction can survive some damage, but location matters more than size. Damage to the three large corner finder patterns is the most serious, because without them the reader cannot find or orient the grid — a torn finder pattern is often fatal even when the rest looks intact. Scattered scuffs across the data area are far more forgiving, because that is what error correction is built to rebuild. Fading is slower damage: as dark modules lighten towards the background, contrast falls until the reader can no longer separate modules, even though the pattern is still there. Judge a worn code corners first, then contrast, then surface. The fix for a damaged print is a reprint; for a code that will live a hard life — outdoors, on packaging, on a vehicle — be preventive: higher error correction, a larger print, lamination or a sheltered position.</p>
+<h2>Step 6: logo obstruction</h2>
+<p>A logo in the centre eats into the pattern, consuming part of the error-correction budget by design — which is why it can work, and why it can fail. Judge it by how much of the grid the logo covers and whether it touches a finder pattern: a small logo cleanly centred, clear of the three corners, is safe; a large logo, one spreading towards the corners, or one with busy detail mimicking modules is risky. As a rule of thumb, keep the logo under about 30% of the code area, print logo codes at 3 x 3 cm or larger, and use error correction Q or H. Test the logo version specifically: a plain code that scans tells you nothing about its logo sibling. If a logo code fails, shrink the logo first, then enlarge the print, then raise the level, testing after each change. See <a href="/blog/add-logo-to-qr-code/">how to add a logo to a QR code</a> and <a href="/qr-code-with-logo/">the logo code generator</a>.</p>
+<h2>Step 7: glare, curve, and angle</h2>
+<p>Glossy lamination under bright light, a code wrapped around a bottle, or a photo taken at a steep angle all distort what the camera sees. Glare washes modules out in patches; a curve stretches edge modules while compressing middle ones; a steep angle turns squares into trapezoids the reader must un-warp. Tilt the print slowly: if the unreadable patch moves with the reflection, it is glare. Flatten the surface if you can, and shoot straight on. Prefer a flat panel over a tight curve, matte over gloss where lights are strong, and a position people can face squarely. A bottle code that scans when turned to face the camera is a placement problem — move it to the flattest, most front-facing spot, and print it larger.</p>
+<h2>Step 8: sharpness — when blur is the culprit</h2>
+<p>If the code is the right size, high contrast, well margined, undamaged, and logo-free, yet still hesitates, look at the module edges: crisp or smeared? Low-resolution exports, JPEG compression, stretching, poor print, and copies of copies all soften edges, and soft edges fail first in dim light and at distance. The full diagnosis is in <a href="/blog/why-is-my-qr-code-blurry/">why your QR code looks blurry</a>. Short version: re-export at 1024 px for cards and flyers or 2048 px for posters, use SVG whenever the printer accepts it, never use JPEG for a code, keep proportions when resizing, and test-scan one real print at the real distance first. Softness and weak contrast compound, so fix both rather than hunting for a single culprit.</p>
+<h2>Step 9: the destination is dead</h2>
+<p>Sometimes the code scans fine — but the link is broken, the page moved, the site is down, or a trial-based generator deactivated the code. This is the expired-link trap: nothing useful happens after the tap, so it feels like a scanning failure. Watch the link preview: if a preview appears, the code decoded and the destination is the problem. Check whether the page opens when typed directly into a browser, and whether the link was shortened by a service that has since changed its terms. Static codes never expire on their own — the destination lives inside the pattern, so a static code fails only if the destination itself goes away. Dynamic codes point at a short link you control, so a moved page is fixable without reprinting: sign in, change the destination, and the printed code works again, with scan stats to confirm it. That editability is also the trap to avoid when choosing a generator: a code tied to an ended trial can stop working even though the pattern is perfect — see <a href="/blog/do-qr-codes-expire/">do QR codes expire?</a> before a large run. For codes already printed: static plus moved page means restore the page or reprint; dynamic means redirect it and test on two phones.</p>
+<h2>Scenarios: the same checklist, different culprits</h2>
+<h3>A flyer that scans in the office but not at the event</h3>
+<p>Office light is kind; event light is not. The usual culprits are contrast that only just passes in bright light, a code slightly too small for the distance people stand at, and gloss under venue lights. Fix in order: test in the venue's light, enlarge the code, switch to matte, and return to black on white before reprinting.</p>
+<h3>A business card that scans for you but not for clients</h3>
+<p>Your phone knows the code; a stranger's phone meets it cold, in worse light, at a different angle. Check size first — below 2 cm as a rule of thumb fails on many phones — then the quiet zone, which card designs love to crowd, then the stock, which may absorb ink and soften edges.</p>
+<h3>A code on screen — slides, video, or social images</h3>
+<p>Screen codes fail on compression, size, and time. A code recompressed by a platform, shown small in a slide corner, or flashed briefly in a video gives the camera little to work with. Keep it large, flat to the camera, and on screen long enough to scan; for a code inside a photo, <a href="/blog/scan-qr-code-from-image/">scanning from an image</a> is the fallback.</p>
+<h2>Honest comparison: reprint, redirect, or redesign?</h2>
+<p>Not every failure deserves a reprint. If the destination moved and the code is dynamic, redirecting beats reprinting on cost, waste, and speed — the pattern stays valid and the fix takes minutes. If the code is static and the destination moved, redirecting is not an option: restore the destination or reprint, and choose dynamic next time if the destination may change again. If the pattern itself is at fault — too small, low contrast, crowded margin, heavy logo, soft print — no redirect will help, because the reader cannot decode the pattern; reprint with that parameter changed, one parameter at a time, so you learn which fix worked. Two trade-offs deserve a plain statement. First, higher error correction is not a cure-all: it buys tolerance for damage and logos, but it densifies the grid, so raising the level on an already-small code can make it worse. Second, a coloured or logo code that scans in your office is not proven: it is proven only when it scans first try, in the real light, at the real distance, on two different phones, on the real material.</p>
+<h2>Test before you print — every time</h2>
+<ol>
+<li><strong>Scan on two phones</strong> — one iPhone, one Android if you can — before printing.</li>
+<li><strong>Test at the real distance and in the real light</strong>, on the real material.</li>
+<li><strong>Check the preview, then the destination</strong>: a preview means the code decoded; an opening page means the destination works.</li>
+<li><strong>Change one thing at a time</strong> when a test fails, so you know which fix actually fixed it.</li>
+</ol>
+<p>Generate a test code in the <a href="/#studio">free generator</a> — 17 types, static codes free with no sign-up, no watermark, and no expiry, dynamic codes free after sign-in with editing and scan stats, and unlimited scans — and run it through the checklist above. If the failure is sharpness rather than size, contrast, or damage, see <a href="/blog/why-is-my-qr-code-blurry/">why your QR code looks blurry</a>; for sizing by use case, see the <a href="/blog/qr-code-print-size-guide/">print size guide</a>; and if the code scans but the destination must change after printing, see <a href="/blog/how-to-edit-a-qr-code-after-printing/">how to edit a QR code after printing</a>.</p>
     </div>
 
     <section class="sources">
       <h2>Sources</h2>
       <ul>
-      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - The QR Code symbology specification. Defines the four error-correction levels (L 7%, M 15%, Q 25%, H 30%) and the 4-module quiet zone.</li>
+      <li><a href="http://www.iso.org/standard/83389.html">ISO/IEC 18004:2024</a> - Retained from the original post. The QR Code symbology specification. ISO page shows Edition 4, published 2024-08 (page fetched 2026-11-03). Supports the four error-correction levels (L 7%, M 15%, Q 25%, H 30% of codewords) and the 4-module quiet zone, as defined in the standard.</li>
+      <li><a href="https://qrlynx.com/blog/iso-iec-18004-qr-code-standard-explained">ISO/IEC 18004:2024 Explained (QRLynx)</a> - Reviewed July 2026 against ISO and DENSO WAVE. Supports the codeword reading of the error-correction percentages (7% / 15% / 25% / 30% of total codewords, not a guaranteed visible-area tolerance) and the four-module quiet zone specified by DENSO WAVE.</li>
       </ul>
     </section>
     <div class="cta-card">
       <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
       <div>
         <h3>Try it yourself — free</h3>
-        <p>Everything in this article works in the FreeQrly studio right now. Static codes, thirteen content types, PNG and SVG export.</p>
+        <p>Everything in this article works in the FreeQrly studio right now. Static codes, all 17 content types, PNG and SVG export.</p>
         <a class="btn" href="/#studio">Open the studio</a>
       </div>
     </div>
@@ -168,9 +267,13 @@
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Good to know</h2>
-    <details><summary><span>Why does my QR code scan on one phone but not another?</span></summary><p>Then the code itself is fine — it's the camera, lighting, or angle on the failing phone. Wipe the lens and try in better light.</p></details>
-    <details><summary><span>Can a damaged QR code still work?</span></summary><p>Often yes, thanks to error correction — <a href="http://www.iso.org/standard/83389.html">up to 30% damage can be tolerated at the High setting</a>, as defined in ISO/IEC 18004. But heavy damage, fading, or missing finder patterns will kill it.</p></details>
-    <details><summary><span>My QR code scans but the link doesn't work — is the code broken?</span></summary><p>No, the code is doing its job. The destination is the problem: the page moved, the site is down, or a trial-based generator deactivated it.</p></details>
+    <details><summary><span>Why does my QR code scan on one phone but not another?</span></summary><p>Then the code itself is usually fine — it is the camera, lighting, or angle on the failing phone. Wipe the lens, move to better light, hold the code so it fills about half the viewfinder, and try again.</p></details>
+    <details><summary><span>Can a damaged QR code still work?</span></summary><p>Often yes, thanks to error correction — at the High level, approximately 30% of codewords can be restored, as defined in ISO/IEC 18004. But damage to the three corner finder patterns or to the quiet zone is much harder to recover from, and heavy fading will kill a code even when its shape looks intact.</p></details>
+    <details><summary><span>My QR code scans but the link does not work — is the code broken?</span></summary><p>No, the code is doing its job. The destination is the problem: the page moved, the site is down, or a trial-based generator deactivated it. If the code is dynamic, sign in and redirect it; if it is static, restore the page or reprint.</p></details>
+    <details><summary><span>How big should a printed QR code be?</span></summary><p>As a rule of thumb, at least 2 x 2 cm, and at least one-tenth of the scanning distance: 5 cm for a table card scanned from 50 cm, 50 cm for a poster scanned from 5 metres. Denser codes holding long links or contact cards need to be larger at the same distance.</p></details>
+    <details><summary><span>Why does my logo code fail when the plain version scans?</span></summary><p>The logo covers part of the grid and consumes error-correction budget. Keep the logo under about 30% of the code area as a rule of thumb, print logo codes at 3 x 3 cm or larger, use error correction Q or H, and test the logo version itself — a plain code that scans proves nothing about its logo sibling.</p></details>
+    <details><summary><span>How much blank space does a QR code need around it?</span></summary><p>A quiet zone at least 4 modules wide on all four sides, as specified in ISO/IEC 18004. Keep text, rules, decorative borders, and nearby images out of it, and check all four sides — a margin generous on three sides and zero on the fourth still fails.</p></details>
+    <details><summary><span>Can I fix a printed QR code without reprinting?</span></summary><p>Only if the problem is the destination and the code is dynamic: sign in, change the destination, and the printed pattern works again. If the pattern itself is at fault — too small, low contrast, crowded margin, heavy logo, or soft print — the fix is a reprint with that parameter changed.</p></details>
     </section>
   </article>
   <footer>
