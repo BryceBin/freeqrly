@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活动门票二维码入场：一票一码，没有门口混乱 | FreeQrly</title>
+<meta name="description" content="一票一码入场是怎么运作的——发放唯一门票码、跑门口扫码、处理重复和重入，以及在弱 WiFi 下撑下去。">
+<link rel="canonical" href="https://freeqrly.com/zh/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-event-ticket-entry/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="活动门票二维码入场：一票一码，没有门口混乱 | FreeQrly">
+<meta property="og:description" content="一票一码入场是怎么运作的——发放唯一门票码、跑门口扫码、处理重复和重入，以及在弱 WiFi 下撑下去。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/zh/blog/qr-code-event-ticket-entry/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"活动门票二维码入场：一票一码，没有门口混乱 | FreeQrly","description":"一票一码入场是怎么运作的——发放唯一门票码、跑门口扫码、处理重复和重入，以及在弱 WiFi 下撑下去。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "每张票应该用同一个二维码还是唯一的二维码？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "唯一的。每张票应该有自己的二维码和门票标识，绑定到一张门票记录上。共用码任何人都能复制，无法标记为已使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "门票被扫两次时扫码器显示什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "好的扫码器会返回“重复”，和有效、无效、过期区分开。员工应该把客人请到一旁，检查扫码历史和订单详情，让主管做出最终决定。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "没有 WiFi 时二维码门票入场能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "取决于工具。有些扫码 App 在本地持有客人名单、之后同步，但离线模式通常必须在联网时启动，而且两台离线设备在同步之前都可能接受同一个码。留一份纸质备用，并在排练里测试离线模式。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "客人应该被允许用同一张票重入吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "售票前决定并写在票上。单次入场活动应该拒绝第二次扫码，而音乐节和展会可以把重入作为一个有意的设置，记录出场和重入而不是把它们标记为重复。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如果客人的手机没电了或者码扫不出来怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "把他们送到服务台，而不是送回队伍末尾。员工应该按姓氏、邮箱或订单参考搜索，用票上印的人工可读门票标识，并且在需要时重新发送或补发门票。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么客人不要分享门票截图？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因为先扫先赢。任何复制了码、先扫它的人都会进场，原持有人可能被锁在外面。客人应该把码保密，只在有官方转让或补发途径时通过那个途径分享。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "客人使用二维码门票需要安装 App 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要。客人只需要出示邮件或打印件里的码。只有门口团队需要扫码 App，这样入场很快，也避免了在门口排 App 安装队。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费二维码生成器本身能跑门票入场吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能，至少不安全。生成器可以创建方块，但它不能把门票标记为已使用，也不能跨门口标记重复。验证必须存在于每个门口都检查或对账的票务或签到记录里。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"活动门票二维码入场：一票一码，没有门口混乱 | FreeQrly","description":"一票一码入场是怎么运作的——发放唯一门票码、跑门口扫码、处理重复和重入，以及在弱 WiFi 下撑下去。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "一票发一码",
+      "text": "在你的票务平台里为每张票创建一个唯一的二维码和门票标识，绑定到一个参与者记录上，永远不要跨票重复使用码。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "附清晰说明发放",
+      "text": "通过邮件或信息发送码，告诉客人带上它、调亮屏幕亮度，并且永远不要公开张贴码，因为先扫先赢。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "提前设定入场规则",
+      "text": "决定单次入场还是重入，定义有效、无效、重复和过期的回应，并且写下重复脚本和主管上报规则。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "在现场用真实设备排练",
+      "text": "在每个门口扫一张有效票、无效票和重复票，测试每种票型，测试手机没电和屏幕发暗的情况，并且在高峰到达时给通道计时。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "分开扫码通道和服务通道",
+      "text": "用专用充电设备让扫码通道保持流动，并且为现场购票、改名、手机没电和争议配备服务台。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "为网络故障做计划",
+      "text": "确认离线模式，在联网时启动它，需要时给离线通道分配门票号段，重新连接前上传扫码，并且留一份最新的打印名单作为备用。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "入场后对账",
+      "text": "把扫码数和售出数比较，复查重复和手动放行，书面确认补发的门票，并且记下给下一场活动的通道和指示牌改进。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
+    <div class="kicker" style="text-align:center">实战笔记</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">活动入场，<span class='hl hl-mint'>一票就是一次扫码</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">门票二维码不是海报码。它是一把一次性钥匙，绑定到一张门票记录上，而门口扫码是一次查询，而不只是一个链接。把唯一性、重复处理和离线备用办法做对，入场就会成为活动中最平静的一环。</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约14分钟</p>
+    <div class="prose" style="margin-top:40px">
+<p>每个主办方都认识门口那一刻。队伍排起来了，手机拿不稳，屏幕发暗，一名志愿者在名单上找名字，身后下一个人还在雨里等。二维码门票入场就是为了用一个动作代替这种手忙脚乱：出示码、扫一下、得到一个明确答案。但码只有在满足以下条件时才有帮助：它对一张门票是唯一的，扫码器对照实时记录核查它，并且团队确切知道答案不是干净的绿勾时该怎么办。一个任何人都能复制的共用活动码，做不了这份工作，不管它印得多漂亮。</p>
+<p>本指南讲的是系统，而不只是一个方块。它解释一票一码入场是怎么运作的、怎么发码、活动当天怎么跑门口、怎么处理重复、重入和手机没电的客人，以及场馆 WiFi 失效时怎么让入场继续动。它假设你在使用票务或签到工具做验证，因为免费二维码生成器本身不能把一张票标记为已使用。FreeQrly 可以创建码和围绕它们的活动页，但已用还是未用的决定必须存在于每个门口都能看到、或者至少能对账的门票记录里。</p>
+<h2>一票、一码、一记录</h2>
+<p>核心规则很简单：每张票都有自己的二维码和自己的门票标识，没有两张票共用同一个码。当参与者注册或购票时，票务平台分配那个唯一的码，并把它绑定到他们的门票记录上。码本身几乎从来不包含个人信息。它通常包含一个唯一的参考字符串，常常是加密或签名的，指向平台数据库里的单张门票记录。扫码器读取参考，平台查询它，答案以一小组结果之一回来：有效、无效、重复或过期。</p>
+<p>这个区别很重要，因为它区分了主办方常常混淆的两种二维码。活动二维码和所有人分享同样的内容：时间表、场馆地图、注册页。活动门票二维码对每个参与者是唯一的，它的工作是验证、防止重复和追踪出席。用共用码告诉人们活动的事。用唯一码让人进场。如果你在每张票上印同一个码，你建的是海报，不是门票，任何拍下它的人都能拿着它走进来。</p>
+<h2>扫码器应该返回什么，为什么四个答案胜过两个</h2>
+<p>好的门口扫码器不只说行或不行。它区分有效——第一次扫真实门票；无效——码和存档里的任何门票都不匹配，很可能是假的、PS 的，或者是另一场活动的；重复——门票已经被扫过；过期——门票是真的，但超出了有效的日期或时间窗口。员工需要这些区别，因为每种区别都要求不同的应对。有效扫码意味着欢迎他们进来。无效扫码意味着仔细检查门票，并把客人送到服务台，而不是在门口争论。重复扫码意味着停下来、核实身份并上报。过期扫码意味着解释时间窗口，并提供正确的场次或可行的改期途径。</p>
+<p>按你所选工具里每个结果的确切措辞和颜色培训员工，并且 specifically 排练重复情况。在那一刻，只练过顺利流程的志愿者会犹豫、放人进去，或者争论。而练过重复脚本的志愿者——停下来、礼貌地把客人请到一旁、叫主管、核查姓名和订单参考——会同时保护活动和客人，包括那位是转发截图受害者、而不是转发者的客人。主管，而不是门口志愿者，应该对有争议的重复做出最终决定，而这条规则应该在开门前就写下来。</p>
+<h2>发放在真实世界里经得起考验的门票</h2>
+<p>发码要足够早，让客人能找到它们，但门票设计要简单到能在压力下扫出来。二维码在门票上要大，浅色底，周围有清晰的静区，并且在附近用人工可读文字印出门票标识。这段文字是码扫不出来时的备用办法：员工可以输入或搜索标识、姓氏、邮箱地址或订单参考。一张只有码完美扫出来时才管用的票，是为演示设计的票，不是为门口设计的票。</p>
+<p>同时支持手机屏幕和打印件。任何观众里都有相当一部分人会打印，尤其是年长的观众，而任何能读手机屏幕的扫码器读纸张更可靠。不要要求客人下载 App 才能出示门票。客人只需要邮件或打印件里的码；只有门口团队需要扫码 App。如果你的流程迫使每个客人在门口完成 App 安装、账号创建或登录，你就在排队前面又加了一个排队。</p>
+<h2>跑门口：通道、设备与服务台</h2>
+<p>门口设计就是排队设计。把主扫码通道和服务台分开，这样现场购票、改名、没有手机的客人，以及有争议的门票，就不会堵住那些已经准备好可用码的客人。在签到台之前放指示牌，告诉客人准备好二维码并调亮屏幕亮度。就这一块牌子，在确认邮件里重复一次，就能防止相当多的延误，因为屏幕暗时扫码很慢，尤其是在户外和明亮阳光下。</p>
+<p>尽量使用专用扫码设备。员工手机会接电话、收通知、没电，而在高峰中途没电的手机会带走一条通道。如果必须用员工手机，就把它设成静音中断的模式，充满电，并且每条通道都备好充电宝。保持摄像头镜头干净，请客人把码稳稳地放在扫码框中央，并且在入场期间让扫码 App 成为那台设备上唯一的任务。一次包含电池没电、屏幕开裂和手机没电客人的排练，教会团队的东西比一次一切都顺利的排练多。</p>
+<div class="table-scroll"><table>
+<tr><th>门口角色</th><th>当天的工作</th><th>他们需要的东西</th></tr>
+<tr><td>扫码通道员工</td><td>扫码、读结果、放行或转介</td><td>充满电的设备、扫码 App、清晰的有效、无效、重复和过期措辞</td></tr>
+<tr><td>服务台员工</td><td>现场购票、改名、手机没电、有争议的重复</td><td>按姓名、邮箱和订单参考搜索客人名单，外加主管联系方式</td></tr>
+<tr><td>主管</td><td>对重复、重入和例外做最终决定</td><td>跨所有门口的实时出席视图，以及 override 的权限</td></tr>
+</table></div>
+<h2>重复、重入与截图问题</h2>
+<p>重复处理是门票入场证明价值的地方，也是最容易出错的地方。单次入场活动的规则是，码在第一次扫码时被标记为已使用，之后再扫就被拒绝。只要所有门口共用同一份实时记录，这个单一控制就能在门口挡住重印和转发的票。如果两个门口独立扫码、不同步，同一张码可以在任何人注意到之前，在每个门口各进一次。因此，多门口扫码必须同步到一个实时看板，否则活动必须接受这个风险并规划一个对账步骤。</p>
+<p>在售票之前就决定重入政策，并且写在票上。有些活动按设计就是单次入场：音乐会、戏剧演出、限时展览。有些活动需要重入：多日音乐节、参与者中午离场吃饭的展会、有场外分会场的会议。许多平台按活动把重入做成一个开关，这样音乐会可以关掉它、音乐节可以打开它。无论你选什么，扫码器的行为都必须和承诺一致。如果允许重入，扫码器应该记录一次出场和一次重入，而不是把第二次扫码标记为重复。如果不允许重入，员工需要一个针对真实情况的清晰例外流程，比如医疗原因离场，由主管处理，而不是挥手放客人进去。</p>
+<p>截图值得一个 specifically 的政策，因为它们既是合法的备用办法，也是欺诈途径。把自己的票截图保存、以便没有信号时也能用，是明智的客人。把那张截图转发给别人，就是在制造重复。系统单从图片上无法区分这两种情况，这就是为什么先扫先赢、第二次扫码会被标记。要直白地传达这一点：第一个扫码的人进场，分享码有丢票的风险。对高价值等级，在门口加一道姓名核查，这样光有码还不够。对普通入场，接受先扫先赢就是控制办法，并且给服务台配备人员来处理它偶尔引发的争议。</p>
+<p>当重复被标记时，遵循一段简短、平静的脚本。把客人请到一旁，让通道继续动。索要订单确认、预订上的姓名，以及如果你的活动要求的话，身份证明。检查扫码历史：码第一次是什么时候扫的、在哪个门口、以什么名字？如果第一次扫码是几分钟前在另一个门口，客人可能已经进场、离场、又回来了，而没有出场记录。如果第一次扫码是几小时前，或者在客人没去过的门口，就把它当作可能的转发码并上报。永远不要在门口指控客人欺诈。陈述系统显示的内容，解释下一步，让主管决定。目标是保护活动，而不羞辱一位可能是受害者的客人。</p>
+<h2>网络失效时：离线扫码与纸质备用</h2>
+<p>场馆 WiFi 恰恰在成千上万部手机到达时变差，而任何要求每次扫码都实时联网的签到系统，都会在最糟糕的时刻卡住。在选定工具之前，先检查它的扫码 App 是不是在断网时也能持有完整的客人名单并签到客人。有些工具只在 App 里提供离线模式，而它们的网页看板需要联网，而且离线模式通常必须在还联网时启动。在排练里测试这个流程，别在活动当天测试。</p>
+<p>离线模式有一个你必须规划的权衡：两个离线的通道不可能同时知道一张票已经被用过了。一份指南恰恰描述了这种情况：两台设备离线扫同一个码都会接受它，错误只有在离线模式结束、扫码对账时才显现。缓解办法包括给通道分配门票号段，这样同一个码不太可能出现在两个离线通道；接受重复会在同步时被标记并由主管处理；以及在设备重新联网之前上传每台设备的扫码，因为有些工具里，在重新连接之前没有上传的扫码可能会丢失。老实的总结是，离线模式让入场继续动，但它会在同步之前削弱重复保护。对高欺诈风险的活动，这个权衡可能意味着要准备备用移动路由器、服务台的有线连接，或者更小的离线范围，而不是全面离线运作。</p>
+<p>即使你预期是数字流程，也要留一份纸质备用。一份按字母顺序排列的打印名单、一份打印的 VIP 或特殊通道名单，以及用于手动发放的空白胸牌或手环，能让服务台在设备故障、电池没电或网络中断时放客人进来。保持名单最新：开门前一小时导出、已经过时的客人名单，是一个已知的失败模式。如果票务系统和门口 App 来自同一个平台，这个导出问题在很大程度上就消失了，因为门口名单会随着销售更新而更新。如果不是，指定一个人在开门前固定时间刷新备用名单，并且把那个时间写在名单本身上，这样员工就知道它有多新。</p>
+<p>还要为手机没电、码加载不出来，或者找不到门票邮件的客人做计划。服务台应该能按姓氏、邮箱或订单参考搜索，而不只靠扫码，并且应该能重新发送门票或发放替换票。这条搜索路径也是无障碍路径和争议路径，所以要用有经验的人来配备，而不是随便找谁顶上。一个一分钟内能解决问题的服务台，能让扫码通道免于五分钟的堵塞。</p>
+<h2>门关之后：出席、对账与学习</h2>
+<p>入场结束时，对账。把扫码数和售出数比较，列出标记的重复、尝试的无效扫码，以及服务台的手动放行。这次对账既是欺诈检查，也是规划工具：它显示哪些门口最忙、高峰什么时候到、服务台最需要在哪里。趁记忆还新鲜，和团队分享一份简短总结，并且记下任何让员工或客人困惑的扫码器措辞、通道布局或指示牌。下一场活动会继承这些笔记，否则就会继承同样的排队。</p>
+<p>关于周边部分，见<a href="/zh/blog/qr-codes-for-events/">活动二维码</a>（注册与时间表码）、<a href="/zh/blog/how-to-scan-a-qr-code/">如何扫二维码</a>（客人一侧），以及码完全扫不出来时的<a href="/zh/blog/qr-code-troubleshooting-guide/">二维码故障排查</a>。FreeQrly 支持全部 17 种二维码类型，活动页、时间表链接和反馈码都可以和门票入场放在同一个活动流程里，但门票验证本身必须存在于票务记录里，在那里一个码对应一张票，第二次扫码是一个决定，而不是一个意外。</p>
+    </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="https://ticket-generator.com/blog/qr-code-check-in">QR Code Check-In for Events: Faster Entry, Real-Time Data</a>——2026 年 11 月 4 日访问；支撑每张票一个唯一的二维码，以及有效、无效、重复和过期的扫码结果。</li>
+      <li><a href="https://www.qrcodechimp.com/qr-codes-for-event-management/">QR Codes for Events: Placement, What to Link, and Tracking</a>——2026 年 11 月 4 日访问；支撑共用活动二维码与唯一活动门票二维码的区别，以及门票码能防止重复扫码。</li>
+      <li><a href="https://blog.tickera.com/event-ticket-qr-code-guide/">QR-Code Tickets Explained: How They Work</a>——2026 年 11 月 4 日访问；支撑门票码通常包含一个指向单张门票记录的唯一参考字符串，并且在第一次扫码时被标记为已使用。</li>
+      <li><a href="https://hkdfestival.com/fan-guide/">Fan Guide and Ticket Safety - HKD Festival</a>——2026 年 11 月 4 日访问；支撑一票一扫的警告，以及先扫的复制码会把原持有人锁在外面。</li>
+      <li><a href="https://help.showpass.com/hc/en-us/articles/44546817472151-Organizer-guide-Check-in-new-Dashboard">Organizer guide: Check-in (new Dashboard) - Showpass</a>——2026 年 11 月 4 日访问；支撑只在 App 里离线扫码、在联网时启动离线模式，以及两台设备离线扫同一个码都会接受它、直到对账。</li>
+      <li><a href="https://kredosys.com/blog/event-check-in-access-control.html">Event Check-In and Access Control: A Practical Guide</a>——2026 年 11 月 4 日访问；支撑为场馆 WiFi 失效做规划、支持离线的扫码、屏幕发暗，以及按姓氏手动查询。</li>
+      <li><a href="https://tickts.co.uk/blog/how-to-manage-event-queues-entry-flow">How to Manage Event Queues and Entry Flow</a>——2026 年 3 月 17 日发布；支撑每个二维码扫码通道每小时约 300 至 400 人、带行李检查时降至约 200 人的规划参考数字。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
+      <div>
+        <h3>自己试试——免费</h3>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
+        <a class="btn" href="/zh/#studio">打开生成器</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">继续读</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/zh/blog/printable-table-card-template/"><b>可打印桌卡模板：WiFi、评价与菜单卡</b></a>
+        <a class="rel-card" href="/zh/blog/printable-review-card-template/"><b>可打印评价卡模板：名片尺寸，一页 8 张</b></a>
+        <a class="rel-card" href="/zh/blog/static-vs-dynamic-qr-codes/"><b>静态码与动态码：永久免费还是订阅制？</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>小提示</h2>
+    <details><summary><span>每张票应该用同一个二维码还是唯一的二维码？</span></summary><p>唯一的。每张票应该有自己的二维码和门票标识，绑定到一张门票记录上。共用码任何人都能复制，无法标记为已使用。</p></details>
+    <details><summary><span>门票被扫两次时扫码器显示什么？</span></summary><p>好的扫码器会返回“重复”，和有效、无效、过期区分开。员工应该把客人请到一旁，检查扫码历史和订单详情，让主管做出最终决定。</p></details>
+    <details><summary><span>没有 WiFi 时二维码门票入场能用吗？</span></summary><p>取决于工具。有些扫码 App 在本地持有客人名单、之后同步，但离线模式通常必须在联网时启动，而且两台离线设备在同步之前都可能接受同一个码。留一份纸质备用，并在排练里测试离线模式。</p></details>
+    <details><summary><span>客人应该被允许用同一张票重入吗？</span></summary><p>售票前决定并写在票上。单次入场活动应该拒绝第二次扫码，而音乐节和展会可以把重入作为一个有意的设置，记录出场和重入而不是把它们标记为重复。</p></details>
+    <details><summary><span>如果客人的手机没电了或者码扫不出来怎么办？</span></summary><p>把他们送到服务台，而不是送回队伍末尾。员工应该按姓氏、邮箱或订单参考搜索，用票上印的人工可读门票标识，并且在需要时重新发送或补发门票。</p></details>
+    <details><summary><span>为什么客人不要分享门票截图？</span></summary><p>因为先扫先赢。任何复制了码、先扫它的人都会进场，原持有人可能被锁在外面。客人应该把码保密，只在有官方转让或补发途径时通过那个途径分享。</p></details>
+    <details><summary><span>客人使用二维码门票需要安装 App 吗？</span></summary><p>不需要。客人只需要出示邮件或打印件里的码。只有门口团队需要扫码 App，这样入场很快，也避免了在门口排 App 安装队。</p></details>
+    <details><summary><span>免费二维码生成器本身能跑门票入场吗？</span></summary><p>不能，至少不安全。生成器可以创建方块，但它不能把门票标记为已使用，也不能跨门口标记重复。验证必须存在于每个门口都检查或对账的票务或签到记录里。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>动态码不限量 — 限时活动</h3>
+        <p>免费登录，想建多少建多少。每个码印后可改，永不过期。</p>
+      </div>
+      <a class="fctaBtn" href="/zh/login/">免费开始</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/zh/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
+        <div class="fmade">静态码，在你的浏览器里生成。</div>
+      </div>
+      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
+      <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>
+      <div class="fcol"><h4>公司</h4><a href="/zh/about/">关于</a><a href="mailto:hello@freeqrly.com">联系我们</a></div>
+      <div class="fcol"><h4>法律</h4><a href="/zh/privacy/">隐私政策</a><a href="/zh/terms/">服务条款</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

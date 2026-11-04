@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR code d'entrée par billet d'événement : un code par billet, sans chaos à la porte | FreeQrly</title>
+<meta name="description" content="Comment fonctionne l'entrée un code par billet — émission de codes de billet uniques, scan à la porte, gestion des doublons et des réentrées, et survie à un Wi-Fi faible.">
+<link rel="canonical" href="https://freeqrly.com/fr/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-event-ticket-entry/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QR code d'entrée par billet d'événement : un code par billet, sans chaos à la porte | FreeQrly">
+<meta property="og:description" content="Comment fonctionne l'entrée un code par billet — émission de codes de billet uniques, scan à la porte, gestion des doublons et des réentrées, et survie à un Wi-Fi faible.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/fr/blog/qr-code-event-ticket-entry/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QR code d'entrée par billet d'événement : un code par billet, sans chaos à la porte | FreeQrly","description":"Comment fonctionne l'entrée un code par billet — émission de codes de billet uniques, scan à la porte, gestion des doublons et des réentrées, et survie à un Wi-Fi faible.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Chaque billet doit-il avoir le même QR code ou un code unique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un code unique. Chaque billet doit porter son propre QR code et identifiant de billet, liés à un enregistrement de billet. Un code partagé peut être copié par n'importe qui et ne peut pas être marqué comme utilisé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que montre le lecteur quand un billet est scanné deux fois ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un bon lecteur renvoie Doublon, distinct de Valide, Invalide et Expiré. Le personnel doit mettre l'invité de côté, vérifier l'historique des scans et les détails de la commande, et laisser un superviseur prendre la décision finale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'entrée par billet QR peut-elle fonctionner sans Wi-Fi ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cela dépend de l'outil. Certaines applications de scan conservent la liste d'invités localement et se synchronisent plus tard, mais le mode hors ligne doit généralement être démarré alors qu'on est connecté, et deux appareils hors ligne peuvent tous deux accepter le même code jusqu'à leur synchronisation. Gardez une sauvegarde papier et testez le mode hors ligne en répétition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les invités doivent-ils être autorisés à réentrer avec le même billet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Décidez avant de vendre et indiquez-le sur le billet. Les événements à entrée unique doivent refuser un second scan, tandis que les festivals et salons professionnels peuvent activer la réentrée comme réglage délibéré, enregistrant les sorties et réentrées plutôt que de les signaler comme doublons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire si le téléphone d'un invité meurt ou si le code ne scanne pas ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Envoyez-le au bureau d'aide, pas au bout de la file. Le personnel doit chercher par nom de famille, e-mail ou référence de commande, en utilisant l'identifiant de billet lisible imprimé sur le billet, et renvoyer ou réémettre le billet si nécessaire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi les invités ne doivent-ils pas partager des captures d'écran de leurs billets ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parce que le premier scan gagne. Quiconque copie le code et le scanne en premier entrera, et le détenteur d'origine peut être bloqué. Les invités doivent garder le code privé et ne le partager que via la voie officielle de transfert ou de réémission si elle existe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les invités ont-ils besoin d'installer une application pour utiliser un billet QR ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Les invités n'ont besoin que de montrer le code de leur e-mail ou d'une impression. Seule l'équipe de porte a besoin de l'application de scan, ce qui maintient l'entrée rapide et évite une file d'installation d'application à la porte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Un générateur QR gratuit seul peut-il gérer l'entrée par billet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, pas en sécurité. Un générateur peut créer le carré, mais il ne peut pas marquer un billet comme utilisé ni signaler un doublon entre les portes. La validation doit vivre dans un enregistrement de billetterie ou d'enregistrement que chaque porte vérifie ou rapproche."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"QR code d'entrée par billet d'événement : un code par billet, sans chaos à la porte | FreeQrly","description":"Comment fonctionne l'entrée un code par billet — émission de codes de billet uniques, scan à la porte, gestion des doublons et des réentrées, et survie à un Wi-Fi faible.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Émettez un code par billet",
+      "text": "Créez un QR code unique et un identifiant de billet pour chaque billet dans votre plateforme de billetterie, liés à un enregistrement de participant, et ne réutilisez jamais un code entre les billets."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Livrez avec des instructions claires",
+      "text": "Envoyez le code par e-mail ou message, dites aux invités de l'apporter, d'augmenter la luminosité de l'écran, et de ne jamais publier le code publiquement, puisque le premier scan gagne."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Fixez les règles d'entrée à l'avance",
+      "text": "Décidez entrée unique contre réentrée, définissez les réponses Valide, Invalide, Doublon et Expiré, et rédigez le script du doublon et la règle d'escalade vers le superviseur."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Répétez sur site avec de vrais appareils",
+      "text": "Scannez un billet valide, invalide et en doublon à chaque porte, testez chaque type de billet, testez un téléphone mort et un écran sombre, et chronométrez vos voies au pic d'arrivée."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Gérez des voies de scan et d'aide séparées",
+      "text": "Gardez les voies de scan en mouvement avec des appareils dédiés chargés, et dotez un bureau d'aide en personnel pour les entrées sans réservation, les changements de nom, les téléphones morts et les litiges."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Prévoyez la panne de réseau",
+      "text": "Confirmez le mode hors ligne, démarrez-le alors qu'on est connecté, attribuez des plages de billets aux voies hors ligne si nécessaire, téléversez les scans avant la reconnexion, et gardez une liste imprimée actuelle en sauvegarde."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Rapprochez après l'entrée",
+      "text": "Comparez les nombres scannés aux nombres vendus, examinez les doublons et les admissions manuelles, confirmez les billets réémis par écrit, et notez les correctifs de voie et de signalétique pour le prochain événement."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notes de terrain</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Entrée d'événement où <span class='hl hl-mint'>un billet signifie un scan</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un QR code de billet n'est pas un code d'affiche. C'est une clé à usage unique liée à un seul enregistrement de billet, et le scan à la porte est une recherche, pas seulement un lien. Maîtrisez l'unicité, la gestion des doublons et la sauvegarde hors ligne, et l'entrée devient la partie la plus calme de l'événement.</p>
+    <p class="meta" style="text-align:center">4 novembre 2026 · 14 min de lecture</p>
+    <div class="prose" style="margin-top:40px">
+<p>Chaque organisateur connaît le moment de la porte. Une file se forme, les téléphones sont manipulés maladroitement, les écrans sont sombres, et un bénévole essaie de trouver un nom sur une liste pendant que la personne suivante attend sous la pluie. L'entrée par QR code de billet existe pour remplacer cette bousculade par une seule action : montrer un code, le scanner, et obtenir une réponse claire. Mais le code n'aide que s'il est unique pour un billet, si le lecteur le vérifie par rapport à un enregistrement en direct, et si l'équipe sait exactement quoi faire quand la réponse n'est pas un feu vert net. Un code d'événement partagé que n'importe qui peut copier ne fera pas ce travail, aussi joliment soit-il imprimé.</p>
+<p>Ce guide couvre le système, pas seulement le carré. Il explique comment fonctionne l'entrée un code par billet, comment émettre les codes, comment gérer la porte le jour J, comment traiter les doublons, les réentrées et l'invité dont le téléphone est à plat, et comment maintenir l'entrée en mouvement quand le Wi-Fi du lieu tombe en panne. Il suppose que vous utilisez un outil de billetterie ou d'enregistrement pour la validation, car un générateur QR gratuit seul ne peut pas marquer un billet comme utilisé. FreeQrly peut créer les codes et les pages d'événement autour d'eux, mais la décision utilisé ou non doit vivre dans un enregistrement de billet que chaque porte peut voir, ou au moins rapprocher.</p>
+<h2>Un billet, un code, un enregistrement</h2>
+<p>La règle de base est simple : chaque billet porte son propre QR code et son propre identifiant de billet, et deux billets ne partagent jamais le même code. Quand un participant s'inscrit ou achète un billet, la plateforme de billetterie attribue ce code unique et le lie à son enregistrement de billet. Le code lui-même ne contient presque jamais de données personnelles. Il contient généralement une chaîne de référence unique, souvent chiffrée ou signée, qui pointe vers un seul enregistrement de billet dans la base de données de la plateforme. Le lecteur lit la référence, la plateforme la recherche, et la réponse revient sous la forme d'un petit ensemble de résultats : Valide, Invalide, Doublon ou Expiré.</p>
+<p>Cette distinction compte, car elle sépare deux sortes de QR codes que les organisateurs confondent souvent. Un QR code d'événement partage le même contenu avec tout le monde : le programme, le plan du lieu, la page d'inscription. Un QR code de billet d'événement est unique pour chaque participant, et sa tâche est la validation, la prévention des doublons et le suivi de présence. Utilisez le code partagé pour parler de l'événement aux gens. Utilisez le code unique pour les laisser entrer. Si vous imprimez le même code sur chaque billet, vous avez construit une affiche, pas un billet, et quiconque le photographie peut entrer avec.</p>
+<h2>Ce que le lecteur doit renvoyer, et pourquoi quatre réponses valent mieux que deux</h2>
+<p>Un bon lecteur de porte ne dit pas seulement oui ou non. Il distingue Valide, signifiant un premier scan d'un vrai billet ; Invalide, signifiant que le code ne correspond à aucun billet enregistré et est probablement faux, retouché, ou pour un autre événement ; Doublon, signifiant que le billet a déjà été scanné ; et Expiré, signifiant que le billet est réel mais hors de sa fenêtre de validité en date ou en heure. Le personnel a besoin de ces distinctions, car chacune appelle une réponse différente. Un scan Valide signifie accueillez-les. Un scan Invalide signifie vérifiez le billet attentivement et envoyez l'invité au bureau d'aide, pas dans une dispute à la porte. Un scan Doublon signifie arrêtez-vous, vérifiez l'identité, et escaladez. Un scan Expiré signifie expliquez la fenêtre et proposez la bonne session ou un parcours de nouvelle réservation s'il en existe un.</p>
+<p>Formez le personnel à la formulation et à la couleur exactes de chaque résultat dans l'outil choisi, et répétez spécifiquement le cas du doublon. Sur le moment, un bénévole qui n'a répété que le parcours heureux hésitera, laissera passer quelqu'un, ou se disputera. Un bénévole qui a répété le script du doublon — pause, gardez l'invité poliment de côté, appelez un superviseur, vérifiez le nom et la référence de commande — protégera à la fois l'événement et l'invité, y compris l'invité victime d'une capture d'écran transmise plutôt que la personne qui l'a transmise. Le superviseur, pas le bénévole de porte, doit prendre la décision finale sur les doublons contestés, et cette règle doit être écrite avant l'ouverture des portes.</p>
+<h2>Émettre des billets qui survivent au monde réel</h2>
+<p>Émettez les codes assez tôt pour que les invités puissent les trouver, mais gardez le design du billet assez simple pour scanner sous pression. Le QR code doit être grand sur le billet, sur un fond clair, avec une zone de silence nette autour, et avec l'identifiant de billet imprimé en texte lisible à proximité. Ce texte est le repli quand un code ne scanne pas : le personnel peut taper ou rechercher l'identifiant, le nom de famille, l'adresse e-mail ou la référence de commande. Un billet qui ne fonctionne que quand son code scanne parfaitement est un billet conçu pour une démo, pas pour une porte.</p>
+<p>Prenez en charge à la fois les écrans de téléphone et les impressions. Une part significative de tout public imprimera, et les publics plus âgés en particulier, et tout lecteur qui lit un écran de téléphone lit le papier plus fiablement. N'exigez pas des invités qu'ils téléchargent une application pour montrer un billet. Les invités ne doivent avoir besoin que du code de leur e-mail ou de leur impression ; seule l'équipe de porte a besoin de l'application de scan. Si votre parcours oblige chaque invité à installer une application, créer un compte ou se connecter à la porte, vous avez ajouté une file avant la file.</p>
+<h2>Gérer la porte : voies, appareils et bureau d'aide</h2>
+<p>Le design de la porte est un design de file. Séparez les voies de scan principales du bureau d'aide, pour que les entrées sans réservation, les changements de nom, les invités sans téléphone et les billets contestés ne bloquent pas les invités qui ont un code fonctionnel prêt. Placez des panneaux avant le bureau d'enregistrement disant aux invités de préparer leur QR code et d'augmenter la luminosité de l'écran. Ce seul panneau, répété dans l'e-mail de confirmation, évite une quantité surprenante de retard, car les écrans sombres scannent lentement, surtout en extérieur et en plein soleil.</p>
+<p>Utilisez des appareils de scan dédiés quand vous le pouvez. Les téléphones du personnel reçoivent des appels, des notifications et tombent en panne de batterie, et un téléphone qui meurt en pleine affluence emporte une voie avec lui. Si vous devez utiliser les téléphones du personnel, mettez-les dans un mode qui coupe les interruptions, chargez-les complètement, et gardez des batteries externes à chaque voie. Gardez l'objectif de l'appareil photo propre, demandez aux invités de tenir le code immobile au centre du cadre du lecteur, et gardez l'application de scan comme seule tâche sur cet appareil pendant l'entrée. Une répétition qui inclut une batterie à plat, un écran fissuré et un invité avec un téléphone mort en apprendra plus à l'équipe qu'une répétition où tout fonctionne.</p>
+<div class="table-scroll"><table>
+<tr><th>Rôle à la porte</th><th>Tâche le jour J</th><th>Ce dont ils ont besoin</th></tr>
+<tr><td>Personnel de voie de scan</td><td>Scanner, lire le résultat, admettre ou rediriger</td><td>Appareil chargé, application de scan, formulations claires Valide, Invalide, Doublon et Expiré</td></tr>
+<tr><td>Personnel du bureau d'aide</td><td>Entrées sans réservation, changements de nom, téléphones morts, doublons contestés</td><td>Recherche dans la liste d'invités par nom, e-mail et référence de commande, plus contact superviseur</td></tr>
+<tr><td>Superviseur</td><td>Décisions finales sur doublons, réentrées et exceptions</td><td>Vue de présence en direct sur toutes les portes, et autorité pour passer outre</td></tr>
+</table></div>
+<h2>Doublons, réentrées et le problème des captures d'écran</h2>
+<p>La gestion des doublons est là où l'entrée par billet gagne sa valeur, et là où elle échoue le plus souvent. La règle pour un événement à entrée unique est que le code est marqué utilisé au premier scan et refusé ensuite. Ce seul contrôle stoppe les réimpressions et les billets transmis à la porte, à condition que toutes les portes partagent le même enregistrement en direct. Si deux portes scannent indépendamment sans synchronisation, le même code peut entrer deux fois, une fois à chaque porte, avant que quiconque s'en aperçoive. Le scan multi-portes doit donc se synchroniser sur un seul tableau de bord en direct, ou l'événement doit accepter ce risque et prévoir une étape de rapprochement.</p>
+<p>Décidez de la politique de réentrée avant de vendre les billets, et indiquez-la sur le billet. Certains événements sont à entrée unique par conception : un concert, une pièce de théâtre, une exposition à horaire fixe. D'autres ont besoin de réentrée : un festival de plusieurs jours, un salon professionnel où les participants sortent déjeuner, une conférence avec des sessions hors site. Beaucoup de plateformes font de la réentrée un réglage par événement, pour qu'un concert puisse la désactiver et un festival l'activer. Quoi que vous choisissiez, le comportement du lecteur doit correspondre à la promesse. Si la réentrée est autorisée, le lecteur doit enregistrer une sortie et une réentrée, pas signaler le second scan comme un doublon. Si la réentrée n'est pas autorisée, le personnel a besoin d'un processus d'exception clair pour les cas authentiques, comme une sortie médicale, géré par un superviseur plutôt qu'en laissant passer l'invité.</p>
+<p>Les captures d'écran méritent une politique spécifique, car elles sont à la fois une sauvegarde légitime et un vecteur de fraude. Un invité qui capture son propre billet pour l'avoir sans signal fait preuve de bon sens. Un invité qui transmet cette capture à quelqu'un d'autre crée un doublon. Le système ne peut pas distinguer ces deux cas à partir de l'image seule, c'est pourquoi le premier scan gagne et le second scan est signalé. Communiquez-le clairement : la première personne à scanner le code entre, et partager le code risque de faire perdre le billet. Pour les catégories à haute valeur, ajoutez une vérification de nom à la porte, pour qu'un code seul ne suffise pas. Pour l'admission générale, acceptez que premier-scan-gagne soit le contrôle, et dotez le bureau d'aide en personnel pour traiter les litiges qu'il créera occasionnellement.</p>
+<p>Quand un doublon est signalé, suivez un script court et calme. Gardez l'invité de côté pour que la voie continue à avancer. Demandez la confirmation de commande, le nom sur la réservation, et une pièce d'identité si votre événement l'exige. Vérifiez l'historique des scans : quand le code a-t-il été scanné la première fois, à quelle porte, et sous quel nom ? Si le premier scan remonte à quelques minutes à une autre porte, l'invité est peut-être entré, sorti et revenu sans enregistrement de sortie. Si le premier scan remonte à des heures, ou à une porte que l'invité n'a pas visitée, traitez-le comme un possible code transmis et escaladez. N'accusez jamais un invité de fraude à la porte. Indiquez ce que le système montre, expliquez la prochaine étape, et laissez le superviseur décider. L'objectif est de protéger l'événement sans humilier un invité qui peut être la victime.</p>
+<h2>Quand le réseau tombe en panne : scan hors ligne et sauvegarde papier</h2>
+<p>Le Wi-Fi du lieu se dégrade exactement quand des milliers de téléphones arrivent, et tout système d'enregistrement qui exige une connexion en direct pour chaque scan calera au pire moment. Avant de vous engager sur un outil, vérifiez si son application de scan conserve la liste complète des invités localement et peut enregistrer un invité avec le réseau coupé. Certains outils n'offrent le mode hors ligne que dans l'application, tandis que leur tableau de bord web a besoin d'une connexion, et le mode hors ligne doit généralement être démarré alors qu'on est encore connecté. Testez ce parcours en répétition, pas le jour J.</p>
+<p>Le mode hors ligne a un arbitrage à prévoir : deux voies hors ligne ne peuvent pas savoir toutes deux qu'un billet a déjà été utilisé. Un guide décrit exactement ce cas, où deux appareils scannant le même code hors ligne l'acceptent tous deux, et une erreur n'apparaît que quand le mode hors ligne se termine et que les scans sont rapprochés. Les atténuations incluent l'attribution de plages de billets aux voies, pour que le même code ait peu de chances d'apparaître à deux voies hors ligne, l'acceptation que les doublons seront signalés à la synchronisation et traités par un superviseur, et le téléversement des scans de chaque appareil avant qu'il ne revienne en ligne, puisque les scans non téléversés avant la reconnexion peuvent être perdus dans certains outils. Le résumé honnête est que le mode hors ligne maintient l'entrée en mouvement, mais il affaiblit la protection contre les doublons jusqu'à la synchronisation. Pour un événement à haut risque de fraude, cet arbitrage peut plaider pour un routeur mobile de secours, une connexion filaire au bureau d'aide, ou une empreinte hors ligne plus petite, plutôt qu'un fonctionnement entièrement hors ligne.</p>
+<p>Gardez une sauvegarde papier même si vous attendez un flux numérique. Une liste alphabétique imprimée, une liste imprimée VIP ou d'accès spécial, et des badges ou bracelets vierges pour émission manuelle donnent au bureau d'aide un moyen d'admettre des invités quand les appareils tombent en panne, que les batteries meurent, ou que le réseau coupe. Gardez la liste actuelle : une liste d'invités exportée une heure avant les portes et déjà obsolète est un mode de défaillance connu. Si le système de billetterie et l'application de porte viennent de la même plateforme, ce problème d'export disparaît largement, car la liste de porte se met à jour à mesure que les ventes se mettent à jour. Sinon, désignez une personne pour actualiser la liste de secours à une heure fixe avant les portes, et notez cette heure sur la liste elle-même, pour que le personnel sache à quel point elle est fraîche.</p>
+<p>Prévoyez aussi l'invité dont le téléphone est mort, dont le code ne charge pas, ou dont l'e-mail de billet est introuvable. Le bureau d'aide doit pouvoir chercher par nom de famille, e-mail ou référence de commande, pas seulement par scan, et doit pouvoir renvoyer un billet ou en émettre un de remplacement. Ce parcours de recherche est aussi le parcours d'accessibilité et le parcours de litige, dotez-le donc de personnes expérimentées, pas de qui est disponible. Un bureau d'aide qui peut résoudre un problème en une minute évitera à une voie de scan un blocage de cinq minutes.</p>
+<h2>Après les portes : présence, rapprochement et apprentissage</h2>
+<p>Quand l'entrée se ferme, rapprochez. Comparez le nombre scanné au nombre vendu, listez les doublons signalés, les scans invalides tentés, et les admissions manuelles du bureau d'aide. Ce rapprochement est à la fois un contrôle anti-fraude et un outil de planification : il montre quelles portes étaient les plus chargées, quand le pic est arrivé, et où le bureau d'aide était le plus nécessaire. Partagez un court résumé avec l'équipe tant que la mémoire est fraîche, et notez toute formulation de lecteur, disposition de voie ou signalétique qui a embrouillé le personnel ou les invités. Le prochain événement héritera de ces notes, ou il héritera de la même file.</p>
+<p>Pour les pièces environnantes, voir <a href="/fr/blog/qr-codes-for-events/">QR codes pour événements</a> pour les codes d'inscription et de programme, <a href="/fr/blog/how-to-scan-a-qr-code/">comment scanner un QR code</a> pour le côté invité, et <a href="/fr/blog/qr-code-troubleshooting-guide/">dépannage des QR codes</a> quand un code ne scanne pas du tout. FreeQrly prend en charge les 17 types de QR codes, et les pages d'événement, les liens de programme et les codes de retour peuvent tous coexister avec l'entrée par billet dans un seul parcours d'événement, mais la validation du billet elle-même doit vivre dans un enregistrement de billetterie où un code correspond à un billet, et où un second scan est une décision, pas une surprise.</p>
+    </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="https://ticket-generator.com/blog/qr-code-check-in">Enregistrement par QR code pour événements : entrée plus rapide, données en temps réel</a> - Consulté le 2026-11-04 ; à l'appui d'un QR code unique par billet et des résultats de scan Valide, Invalide, Doublon et Expiré.</li>
+      <li><a href="https://www.qrcodechimp.com/qr-codes-for-event-management/">QR codes pour la gestion d'événements : placement, vers quoi renvoyer, et suivi</a> - Consulté le 2026-11-04 ; à l'appui de la distinction entre un QR code d'événement partagé et un QR code de billet d'événement unique, et du fait que le code de billet permet la prévention des scans en double.</li>
+      <li><a href="https://blog.tickera.com/event-ticket-qr-code-guide/">Billets QR code expliqués : comment ils fonctionnent</a> - Consulté le 2026-11-04 ; à l'appui du fait qu'un code de billet contient généralement une chaîne de référence unique pointant vers un enregistrement de billet, et est marqué utilisé au premier scan.</li>
+      <li><a href="https://hkdfestival.com/fan-guide/">Guide des fans et sécurité des billets - Festival HKD</a> - Consulté le 2026-11-04 ; à l'appui de l'avertissement un billet, un scan et du fait qu'un code copié scanné en premier peut bloquer le détenteur d'origine.</li>
+      <li><a href="https://help.showpass.com/hc/en-us/articles/44546817472151-Organizer-guide-Check-in-new-Dashboard">Guide organisateur : enregistrement (nouveau tableau de bord) - Showpass</a> - Consulté le 2026-11-04 ; à l'appui du scan hors ligne uniquement dans l'application, du démarrage du mode hors ligne alors qu'on est connecté, et du fait que deux appareils scannant le même code hors ligne l'acceptent tous deux jusqu'au rapprochement.</li>
+      <li><a href="https://kredosys.com/blog/event-check-in-access-control.html">Enregistrement d'événement et contrôle d'accès : un guide pratique</a> - Consulté le 2026-11-04 ; à l'appui de la planification de la panne du Wi-Fi du lieu, du scan capable de fonctionner hors ligne, des écrans sombres, et de la recherche manuelle par nom de famille.</li>
+      <li><a href="https://tickts.co.uk/blog/how-to-manage-event-queues-entry-flow">Comment gérer les files d'attente et le flux d'entrée des événements</a> - Publié le 17 mars 2026 ; à l'appui d'environ 300 à 400 personnes par heure par voie de scan QR comme chiffre de planification, tombant à environ 200 avec les fouilles de sacs.</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly présentant un QR code"></div>
+      <div>
+        <h3>Essayez vous-même — c’est gratuit</h3>
+        <p>Tout ce que cet article décrit fonctionne dans le studio FreeQrly dès maintenant. Codes statiques, les 17 types de contenu, export PNG et SVG.</p>
+        <a class="btn" href="/fr/#studio">Ouvrir le studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Continuer la lecture</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/fr/blog/printable-table-card-template/"><b>Modèle de carte de table imprimable : cartes WiFi, avis et menu</b></a>
+        <a class="rel-card" href="/fr/blog/printable-review-card-template/"><b>Modèle de carte d'avis imprimable : taille carte de visite, 8 par page</b></a>
+        <a class="rel-card" href="/fr/blog/static-vs-dynamic-qr-codes/"><b>QR codes statiques vs dynamiques : gratuits à vie ou abonnement ?</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bon à savoir</h2>
+    <details><summary><span>Chaque billet doit-il avoir le même QR code ou un code unique ?</span></summary><p>Un code unique. Chaque billet doit porter son propre QR code et identifiant de billet, liés à un enregistrement de billet. Un code partagé peut être copié par n'importe qui et ne peut pas être marqué comme utilisé.</p></details>
+    <details><summary><span>Que montre le lecteur quand un billet est scanné deux fois ?</span></summary><p>Un bon lecteur renvoie Doublon, distinct de Valide, Invalide et Expiré. Le personnel doit mettre l'invité de côté, vérifier l'historique des scans et les détails de la commande, et laisser un superviseur prendre la décision finale.</p></details>
+    <details><summary><span>L'entrée par billet QR peut-elle fonctionner sans Wi-Fi ?</span></summary><p>Cela dépend de l'outil. Certaines applications de scan conservent la liste d'invités localement et se synchronisent plus tard, mais le mode hors ligne doit généralement être démarré alors qu'on est connecté, et deux appareils hors ligne peuvent tous deux accepter le même code jusqu'à leur synchronisation. Gardez une sauvegarde papier et testez le mode hors ligne en répétition.</p></details>
+    <details><summary><span>Les invités doivent-ils être autorisés à réentrer avec le même billet ?</span></summary><p>Décidez avant de vendre et indiquez-le sur le billet. Les événements à entrée unique doivent refuser un second scan, tandis que les festivals et salons professionnels peuvent activer la réentrée comme réglage délibéré, enregistrant les sorties et réentrées plutôt que de les signaler comme doublons.</p></details>
+    <details><summary><span>Que faire si le téléphone d'un invité meurt ou si le code ne scanne pas ?</span></summary><p>Envoyez-le au bureau d'aide, pas au bout de la file. Le personnel doit chercher par nom de famille, e-mail ou référence de commande, en utilisant l'identifiant de billet lisible imprimé sur le billet, et renvoyer ou réémettre le billet si nécessaire.</p></details>
+    <details><summary><span>Pourquoi les invités ne doivent-ils pas partager des captures d'écran de leurs billets ?</span></summary><p>Parce que le premier scan gagne. Quiconque copie le code et le scanne en premier entrera, et le détenteur d'origine peut être bloqué. Les invités doivent garder le code privé et ne le partager que via la voie officielle de transfert ou de réémission si elle existe.</p></details>
+    <details><summary><span>Les invités ont-ils besoin d'installer une application pour utiliser un billet QR ?</span></summary><p>Non. Les invités n'ont besoin que de montrer le code de leur e-mail ou d'une impression. Seule l'équipe de porte a besoin de l'application de scan, ce qui maintient l'entrée rapide et évite une file d'installation d'application à la porte.</p></details>
+    <details><summary><span>Un générateur QR gratuit seul peut-il gérer l'entrée par billet ?</span></summary><p>Non, pas en sécurité. Un générateur peut créer le carré, mais il ne peut pas marquer un billet comme utilisé ni signaler un doublon entre les portes. La validation doit vivre dans un enregistrement de billetterie ou d'enregistrement que chaque porte vérifie ou rapproche.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Codes dynamiques illimités — offre à durée limitée.</h3>
+        <p>Connectez-vous gratuitement et créez-en autant que nécessaire. Chaque code reste modifiable après impression et n'expire jamais.</p>
+      </div>
+      <a class="fctaBtn" href="/fr/login/">Commencer gratuitement</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/fr/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n'expirent jamais.</p>
+        <div class="fmade">Codes statiques, faits dans votre navigateur.</div>
+      </div>
+      <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a><a href="/fr/pricing/">Tarifs</a></div>
+      <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d'impression</a><a href="/fr/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Entreprise</h4><a href="/fr/about/">À propos</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d'utilisation</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

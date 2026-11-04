@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF 文件二维码：托管它、链接它、不重印也能替换它 | FreeQrly</title>
+<meta name="description" content="打开 PDF 的二维码，只有在文件一直可访问、在手机上加载快、并且文件变化时可以替换的情况下才管用。以下是怎么托管、定尺寸和更新它。">
+<link rel="canonical" href="https://freeqrly.com/zh/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/pdf-file-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/pdf-file-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="PDF 文件二维码：托管它、链接它、不重印也能替换它 | FreeQrly">
+<meta property="og:description" content="打开 PDF 的二维码，只有在文件一直可访问、在手机上加载快、并且文件变化时可以替换的情况下才管用。以下是怎么托管、定尺寸和更新它。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/zh/blog/pdf-file-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"PDF 文件二维码：托管它、链接它、不重印也能替换它 | FreeQrly","description":"打开 PDF 的二维码，只有在文件一直可访问、在手机上加载快、并且文件变化时可以替换的情况下才管用。以下是怎么托管、定尺寸和更新它。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "二维码里能装下整个 PDF 文件吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "实际操作中不行。二维码是为链接这类短负载设计的，长负载会让图案变密、在印刷尺寸下难扫。改用打开托管 PDF 的链接码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PDF 应该用静态码还是动态码？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "任何可能变的文件都用动态码。动态目标不用重印就能更新，而静态码锁死的就是印上去的那个确切地址，所以文件一挪位置，所有印好的副本就全断了。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PDF 应该托管在哪里？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "放在你自己控制的稳定公开地址上，比如自己的网站，文件名干净、没有登录要求。避开临时分享链接或权限可能变的个人文件夹，因为这两种情况都可能在毫无预警的情况下弄断印好的码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PDF 应该多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在不损害可读性的前提下尽量小。先压缩图片，删掉不需要的页面，优先用真正的文字而不是扫描图片，并在移动网络下的手机上测试结果。如果价格或小字变得难读，说明压缩过头了。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不重印怎么换掉 PDF？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在手机上准备并检查新文件，在同一个公开地址替换它或更新动态目标，然后扫一份印好的副本确认新版本和日期。告诉员工文件已经变了，并且用一部没有缓存旧文件的手机测试。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么扫码打开 PDF 这么慢？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见原因有文件大、图片多的页面、托管方慢，或者移动信号弱。压缩文件、减小图片尺寸、拆分长文件，并且用移动网络测试而别只用办公室 WiFi。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "扫码应该直接打开 PDF，还是先到落地页？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "文件短、标注也说明了是 PDF 时，就直接打开 PDF。文件大、读者下载前需要知道日期和背景，或者你想用一页提供几份相关文件时，就先到一个简短的落地页。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PDF 过期了会怎么样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "把动态码指向新版本，或者指向一个说明文件已被替换的页面，并撤下仍指向旧版的印刷品。留着过期的价目表或活动手册不撤，会教会读者不要相信你的码。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"PDF 文件二维码：托管它、链接它、不重印也能替换它 | FreeQrly","description":"打开 PDF 的二维码，只有在文件一直可访问、在手机上加载快、并且文件变化时可以替换的情况下才管用。以下是怎么托管、定尺寸和更新它。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "定下这份文件的任务",
+      "text": "用一句话写下这次扫码必须交付什么，成品也要拿它来检验。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "托管在稳定的地址上",
+      "text": "把 PDF 放在你控制的地址上，文件名干净，没有登录墙。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "做一个短动态码",
+      "text": "在动态码背后用短链接，这样不用重印就能更新目标。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "给手机瘦身文件",
+      "text": "删掉不需要的页面，压缩图片，优先用真正的文字，并在手机上检查价格和小字。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "把码标注清楚",
+      "text": "说清楚扫码会打开什么，比如完整菜单或价目表，这样读者不会被突然弹出的 PDF 打个措手不及。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "从印刷品打样，用移动网络测试",
+      "text": "用两部手机扫印刷样张，确认打开的是正确版本，并检查文件里的日期。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "按计划替换并复查",
+      "text": "文件变了，就更新目标、扫一份印好的副本，并定期重扫会变的文件。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
+    <div class="kicker" style="text-align:center">实战笔记</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">PDF 二维码的好坏取决于<span class='hl hl-mint'>它背后的文件</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">海报、菜单板、传单或产品插页上的二维码，一扫就能打开一份完整的 PDF：菜单、目录、价目表、手册或宣传册。扫码本身是最容易的部分。难的是背后的全部事情：文件住在哪里、有多大、在手机上能不能干净地打开，以及文件需要新价格、修正页或季节更新时怎么办。这四个决定做对了，码在整个印刷批次里都管用。做错了，你印出来的就是一条通向缓慢、损坏或过期文件的捷径。</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约14分钟</p>
+    <div class="prose" style="margin-top:40px">
+<p>先问这份 PDF 是干什么用的，因为这个答案几乎决定了其他所有事情。餐厅菜单需要打开快、在小屏幕上读得顺，并且菜品或价格变了就能跟着变。产品手册需要在产品的整个生命周期里保持准确，读者可能在购买几个月后还会回来翻它。价目表需要一个唯一可信的版本，这样才不会有人按上个季度的价格下单。会议传单可能只需要活一个周末，但它仍然需要打开时没有登录墙、没有让人困惑的下载步骤。生成码之前先把这个用途用一句话写下来，成品也要拿它来检验：这次扫码是不是今天、以及下次更新之后，都能快速地在手机上给读者正确的那份文件？</p>
+<p>第一个实际选择是：把 PDF 本身编进码里，还是链接到托管的 PDF。二维码没法舒舒服服地装下整个 PDF 文件。码是为链接、联系记录这类短负载设计的，长负载会让图案变密、扫起来慢、在印刷尺寸下还很脆弱。所以标准做法是链接码：码里装一个短网址，这个网址打开 PDF。这也是码能维护的原因，因为只要用动态码，地址可以保持不变、背后的文件却可以换。静态码锁死的就是印上去的那个确切地址，所以文件一挪到新地址，所有印好的副本就全断了。动态码指向一个可以更新的目标，这就是一下午改好价目表和重印整批海报之间的区别。更广的对比见<a href="/zh/blog/static-vs-dynamic-qr-codes/">静态码与动态码对比</a>，修改流程见<a href="/zh/blog/how-to-edit-a-qr-code-after-printing/">打印后如何修改二维码</a>。</p>
+<h2>PDF 托管在哪里</h2>
+<p>把 PDF 托管在你自己控制的稳定公开地址上，地址保持简短。自己的网站、专门的落地页，或者你自己管理的文件托管都可以，前提是链接不太可能挪动、过期，或者以后突然要求登录。避开依赖临时分享链接、权限会变的个人网盘文件夹，或者你控制不了的短链接服务的地址，因为其中任何一种都可能在毫无预警的情况下弄断印好的码。文件名要干净，放在自己域名下一个稳定的文件夹里，比如 documents 或 menus 文件夹，并且如果打算原地替换文件，公开地址里要避免空格、特殊字符和版本号。地址里带版本号，每次更新就被迫换一个新地址，这就违背了稳定码的初衷。</p>
+<p>检查 PDF 是怎么打开的，而不只检查链接通不通。在大多数手机上，PDF 链接会在浏览器或查看器里打开，读者应该不用多余的下载步骤、登录提示或不安全文件警告就能看到第一页。在两大手机平台上都测一下，用移动网络测而别只用办公室 WiFi，并且从印好的码扫着测而别只从手输的地址测。如果托管方强制下载而不是预览，慢网络下的读者可能在文件下完之前就放弃了。如果托管方加了追踪、广告或插页，扫码体验会显得不那么可信，读者可能根本到不了文件。托管方是用户体验的一部分，而不只是一个存储选择。</p>
+<p>只保留一份权威版本。当菜单、目录或价目表存在于好几个地方时，读者和员工很快就搞不清哪份才是最新版。在自己的记录里把文件名起清楚，替换文件时公开地址保持不变，并在 PDF 内部第一页或页脚注明生效日期，这样打印或转发它的读者能判断它是不是最新版。如果旧版必须保留，就给它一个不同的地址，并从新文件里链接过去，而不是让两个相互竞争的版本共用同一个码。尤其是菜单，一份短小聚焦、打开就是当前菜单的 PDF，比一份把菜单埋在好几页之后的大而泛的宣传册对读者更有用。</p>
+<h2>文件体积：先让它快，再让它好看</h2>
+<p>文件体积是 PDF 码最常让人失望的原因。用高分辨率照片、未压缩扫描件或完整印刷版式做的 PDF，很容易达到好几 MB，这在手机上很要紧。大文件下载更久、耗更多流量，在餐厅、大厅或商店的弱信号下还可能卡住。压缩正是为这种权衡而存在的：它在尽量保留视觉质量的同时减小文件，合适的设置取决于文件本身。以文字为主的文件通常压缩得很好、看不出损失，而以图片为主的文件则逼你在更小的文件和更清晰的照片之间选一个。Adobe 的移动端指南直接讲了这一点，提供高、中、低三档压缩，低压缩最能保留画质，高压缩文件最小、但画质要付出一些代价。</p>
+<p>压缩之前，先从源头上把文件减下来。删掉读者不需要的页面，把照片裁到实际展示的尺寸，别把同一张大图重复嵌入多次。菜单如果是在手机屏幕上读，每页就不需要印刷分辨率的照片；价目表如果可以用真正的文字，也不需要扫描出来的页面图片。真正的文字除了体积小还有第二个好处：可以搜索、选中，还能被无障碍工具读取；而文字的扫描图片就不行，除非扫描件经过了文字识别处理。压缩完后，在手机上打开成品，检查最重要的几页，尤其是小字、价格和表格。如果某个价格、过敏原提示或脚注变得难读，说明压缩过头了，稍微大一点的文件反而是更好的选择。</p>
+<p>给自己的团队定一条实际可行的体积纪律，哪怕不向读者公布具体数字。作为一条工作规则，目标是文件在移动网络下能迅速打开、在 WiFi 下感觉是秒开，并且要在真手机上测试，而不是只看文件大小来判断。有些邮件和上传服务有自己的限制，这正好提醒我们大文件到处都会制造摩擦：一份移动端压缩指南提到，Gmail 附件上限是 25 MB，而许多求职门户限制上传 5 MB，有些表单要求文件小于 2 MB。这些是其他服务的限制，不是你的 PDF 的规则，但它们说明了一点：一个发起来别扭的文件，从扫码打开时也同样别扭。如果压缩后 PDF 还是很大，就拆分：一份短菜单加一份单独的详细目录，互相链接，两者都比合在一起的文件打开得快。</p>
+<div class="table-scroll"><table><tr><th>文件类型</th><th>尺寸纪律</th><th>压缩后检查什么</th></tr><tr><td>菜单或价目表</td><td>保持精简；优先用真正的文字而不是扫描图片</td><td>价格、小字和表格在手机上仍然清晰可读</td></tr><tr><td>目录或宣传册</td><td>先压缩图片；长目录可以考虑拆分</td><td>照片仍然能清楚地展示产品</td></tr><tr><td>手册或指南</td><td>保留完整文件，但删掉重复图片</td><td>图表、警告和页码仍然清晰可读</td></tr></table></div>
+<h2>不重印码也能替换文件</h2>
+<p>在动态码背后替换 PDF 是个小流程，但需要一份检查清单，不然容易悄悄出错。第一步，准备好新文件并在手机上检查，包括改了的页面和没改的页面。第二步，在同一个公开地址替换文件，或者把动态目标更新到新地址，并且在确认新地址无误之前保持旧地址可用。第三步，扫一份印好的码副本，而不只看屏幕预览，确认它打开的是新版本。第四步，检查文件里的生效日期，以及任何提到旧版的印刷内容，比如页脚写着价格适用到某一天。最后，告诉负责发放或展示码的人，比如前台员工，文件已经变了，这样就没人会继续把读者引向旧文件的缓存副本或印刷副本。</p>
+<p>缓存要当心。读者手机或浏览器里可能在你替换文件后还留着旧版 PDF 一段时间，员工手机也一样。这很正常，但这意味着你的测试应该包括清缓存后重新扫一次，或者用一部从没打开过旧文件的手机扫一次。如果你换文件很频繁，比如每周菜单，可以考虑把生效日期用大字写在第一页，这样看到缓存副本的读者能一眼认出它是旧的。如果改动很紧急，比如价格更正或安全提示，别只依赖码：同时更新重复了同样信息的印刷品、招牌或员工话术，并和最可能据此行动的人确认更正。</p>
+<p>动态码能修的东西是有限的。它能改目标，但修不好一个从来没为手机设计过的 PDF、一个在弱信号下打不开的大文件，或者把关键信息埋在第 12 页的文件。它也修不好损坏的托管、过期的分享链接，或者把读者锁在外面的权限变更。这些都是托管和文件本身的问题，得从源头解决。一个好习惯是按文件变化的频率定期重扫印好的 PDF 码：经常变的菜单每周一次，价目表每月一次，会议传单每次活动前一次。印的时候能用的码不保证永远能用，而一次简短的定期检查，比从顾客那里发现码坏了要便宜得多。</p>
+<h2>按会打开它的那部手机来设计 PDF</h2>
+<p>为印刷做的 PDF 在手机上不一定好读。宽表格、小脚注和密集的多栏版式会逼着读者捏合、放大、横向滑动，扫完码却是这种体验很糟糕。如果 PDF 主要是在手机上读，字号就放宽，表格就收窄，最重要的信息放最前面。菜单应该先上菜品和价格，而不是历史介绍页。价目表应该先上现行价格和生效日期。手册应该先上安全提示和快速上手步骤，详细的参考资料放后面。一份短小、手机友好的 PDF，被扫、被读、被照着做的次数，会比一份长而印刷完美、却没人读完的 PDF 多得多。</p>
+<p>码本身要保持可扫，因为 PDF 码经常和其他信息印在一起。码背后用短链接，这样图案稀疏、模块大；静区保持干净；按扫码距离印到合适的尺寸，遵循<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>。如果码印在菜单板、海报或传单上，加一句标注说明扫码会打开什么，比如“扫码查看完整菜单（PDF）”或“扫码查看价目表”。读者知道结果时更愿意扫；如果他们预期会打开 PDF，打开时也不太会觉得被打扰。如果 PDF 很长，可以考虑先链接到一个简短的落地页，写明文件名称、日期和大小，并放一个清晰的打开 PDF 按钮，而不是毫无预警地打开一个大文件。</p>
+<p>最后，提前规划文件的生命周期终点。菜单随季节变，价目表会过期，活动传单在活动结束后就没用了。提前决定文件不再是最新版时码应该做什么：指向新版本，指向一个说明文件已被替换的页面，或者撤下印刷品。留着一个打开过期价目表或往期活动手册的码，比没有码更糟，因为它会教会读者你的码不可信。一个 PDF 码要配得上它的位置，就得保持最新、打开迅速，并且给读者恰恰是他们期待的那份文件，而且是在手里这部手机上真正能读的形式。</p>
+<div class="table-scroll"><table><tr><th>阶段</th><th>检查</th><th>如果失败</th></tr><tr><td>印刷前</td><td>在移动网络下，用两部手机扫印刷样张</td><td>缩短链接、压缩文件，或者放大码</td></tr><tr><td>替换文件时</td><td>扫一份印好的副本，确认新版本和日期</td><td>修好地址、做清缓存测试，并通知员工</td></tr><tr><td>按固定周期</td><td>重扫会变的文件的码</td><td>更新目标或撤下印刷品</td></tr></table></div>
+    </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="https://www.adobe.com/acrobat/hub/how-to-compress-pdfs-android.html">How to Compress a PDF on Any Android Device，Adobe Acrobat</a>——支撑高、中、低三档压缩选项，以及最小文件与保留画质之间的权衡。</li>
+      <li><a href="https://www.pdffiller.com/en/functionality/reduce-pdf-size-on-mobile-conveniently.htm">Reduce PDF Size on Mobile Conveniently，pdfFiller，2026 年 4 月 7 日最后更新</a>——支撑减小体积能节省存储、加快上传下载、在有体积限制时更易分享的说法。</li>
+      <li><a href="https://pdfgadget.com/tutorials/compress-pdf-android/">How to Compress PDF on Android，PDFGadget</a>——支撑 Gmail 附件上限 25 MB、而许多门户和表单限制更小的说法。</li>
+      <li><a href="https://www.circulateqr.com/guides/qr-code-size-guide">QR Code Size Guide for Print: Minimum Size and Distance，2026 年 10 月 21 日更新</a>——支撑目标链接要短、图案才稀疏，以及 4 模块静区。</li>
+      <li><a href="https://pngqr.com/guides/qr-code-error-correction-levels.html">QR Code Error Correction Levels Explained (L, M, Q, H)</a>——通过 L、M、Q、H 四档纠错级别，支撑图案越密越难读的一般结论。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
+      <div>
+        <h3>自己试试——免费</h3>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
+        <a class="btn" href="/zh/#studio">打开生成器</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">继续读</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/zh/blog/video-qr-code/"><b>视频二维码：链接视频，不用让人手输网址</b></a>
+        <a class="rel-card" href="/zh/blog/pre-print-qr-code-checklist/"><b>印前二维码检查清单：在印几千份之前先在真纸上测试</b></a>
+        <a class="rel-card" href="/zh/blog/printable-qr-code-cheat-sheet/"><b>可打印二维码速查表：一页讲清尺寸、静区与对比度</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>小提示</h2>
+    <details><summary><span>二维码里能装下整个 PDF 文件吗？</span></summary><p>实际操作中不行。二维码是为链接这类短负载设计的，长负载会让图案变密、在印刷尺寸下难扫。改用打开托管 PDF 的链接码。</p></details>
+    <details><summary><span>PDF 应该用静态码还是动态码？</span></summary><p>任何可能变的文件都用动态码。动态目标不用重印就能更新，而静态码锁死的就是印上去的那个确切地址，所以文件一挪位置，所有印好的副本就全断了。</p></details>
+    <details><summary><span>PDF 应该托管在哪里？</span></summary><p>放在你自己控制的稳定公开地址上，比如自己的网站，文件名干净、没有登录要求。避开临时分享链接或权限可能变的个人文件夹，因为这两种情况都可能在毫无预警的情况下弄断印好的码。</p></details>
+    <details><summary><span>PDF 应该多大？</span></summary><p>在不损害可读性的前提下尽量小。先压缩图片，删掉不需要的页面，优先用真正的文字而不是扫描图片，并在移动网络下的手机上测试结果。如果价格或小字变得难读，说明压缩过头了。</p></details>
+    <details><summary><span>不重印怎么换掉 PDF？</span></summary><p>在手机上准备并检查新文件，在同一个公开地址替换它或更新动态目标，然后扫一份印好的副本确认新版本和日期。告诉员工文件已经变了，并且用一部没有缓存旧文件的手机测试。</p></details>
+    <details><summary><span>为什么扫码打开 PDF 这么慢？</span></summary><p>常见原因有文件大、图片多的页面、托管方慢，或者移动信号弱。压缩文件、减小图片尺寸、拆分长文件，并且用移动网络测试而别只用办公室 WiFi。</p></details>
+    <details><summary><span>扫码应该直接打开 PDF，还是先到落地页？</span></summary><p>文件短、标注也说明了是 PDF 时，就直接打开 PDF。文件大、读者下载前需要知道日期和背景，或者你想用一页提供几份相关文件时，就先到一个简短的落地页。</p></details>
+    <details><summary><span>PDF 过期了会怎么样？</span></summary><p>把动态码指向新版本，或者指向一个说明文件已被替换的页面，并撤下仍指向旧版的印刷品。留着过期的价目表或活动手册不撤，会教会读者不要相信你的码。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>动态码不限量 — 限时活动</h3>
+        <p>免费登录，想建多少建多少。每个码印后可改，永不过期。</p>
+      </div>
+      <a class="fctaBtn" href="/zh/login/">免费开始</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/zh/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
+        <div class="fmade">静态码，在你的浏览器里生成。</div>
+      </div>
+      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
+      <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>
+      <div class="fcol"><h4>公司</h4><a href="/zh/about/">关于</a><a href="mailto:hello@freeqrly.com">联系我们</a></div>
+      <div class="fcol"><h4>法律</h4><a href="/zh/privacy/">隐私政策</a><a href="/zh/terms/">服务条款</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

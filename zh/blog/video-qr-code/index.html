@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>视频二维码：链接视频，不用让人手输网址 | FreeQrly</title>
+<meta name="description" content="一份实用指南，讲视频二维码——什么时候直接链接到 YouTube 或 Vimeo，什么时候改用落地页，以及印刷前怎么测试码。">
+<link rel="canonical" href="https://freeqrly.com/zh/blog/video-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/video-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/video-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/video-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/video-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/video-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/video-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/video-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/video-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/video-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/video-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/video-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="视频二维码：链接视频，不用让人手输网址 | FreeQrly">
+<meta property="og:description" content="一份实用指南，讲视频二维码——什么时候直接链接到 YouTube 或 Vimeo，什么时候改用落地页，以及印刷前怎么测试码。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/zh/blog/video-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"视频二维码：链接视频，不用让人手输网址 | FreeQrly","description":"一份实用指南，讲视频二维码——什么时候直接链接到 YouTube 或 Vimeo，什么时候改用落地页，以及印刷前怎么测试码。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "二维码能直接存视频文件吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能。标准二维码在最大尺寸下最多容纳约 3 KB 的二进制数据，远小于任何视频文件。把视频托管在 YouTube、Vimeo、Drive 或自己的网站上，编码可播放的链接。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "应该直接链接到 YouTube，还是用落地页？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "当视频就是全部信息、速度重要时直接链接。当需要背景、多个视频、行动号召，或者以后不用重印就能换视频时，用落地页。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "公开二维码应该用哪个 YouTube 隐私设置？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "公开或不公开列出。不公开列出的视频任何有链接的人都可以看和分享，不需要 Google 账号，但它们不会出现在搜索和你的频道页里。私密视频只对受邀的人播放，所以对普通扫码者会失败。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印好二维码之后还能换视频吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只有码是动态的，或者码指向你控制的落地页时才行。静态码把目标永久地编进去了，所以换视频就意味着重印。任何可能更新的东西都用动态码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印出来的视频二维码应该多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "至少是扫码距离的十分之一，这是下限。从 30 cm 外扫的码至少要 3 cm 宽，从 1 米外看的海报至少要 10 cm。光线差或材质亮面时要再放大。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么我的视频二维码能扫却播不了？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见原因有私密视频、要求登录的分享设置、被删或有地区限制的视频，或者手机浏览器播不了的文件格式。印刷前先在退出账号的隐私浏览器窗口里测试链接。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能在视频二维码中间放 Logo 或播放图标吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，前提是用 H 级高纠错，并且把码印得稍大一点。在不止一部手机上测试美化后的码，因为 Logo 本来就会盖住数据模块，密集或低对比度的码美化后可能失败。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "观众需要专门的 App 才能扫视频二维码吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要。手机摄像头读出码后，会在 YouTube 或 Vimeo 应用里打开链接，或者在浏览器里打开，具体取决于托管方。处理播放的是视频托管方，而不是二维码 App。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"视频二维码：链接视频，不用让人手输网址 | FreeQrly","description":"一份实用指南，讲视频二维码——什么时候直接链接到 YouTube 或 Vimeo，什么时候改用落地页，以及印刷前怎么测试码。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "先托管视频",
+      "text": "把视频上传到 YouTube、Vimeo、Drive 或自己的网站，生成任何东西之前先确认它有可播放的链接。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "设置隐私",
+      "text": "在 YouTube 上选公开或不公开列出，在 Vimeo 上选等效的任何有链接的人可看的设置，并在退出账号的隐私浏览器窗口里测试链接。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "选直接链接还是落地页",
+      "text": "单个视频、一个目的时直接链接；需要背景、多个视频或以后换视频时，用动态码指向落地页。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "生成短动态码",
+      "text": "粘贴短分享链接，优先用动态码以便以后能改目标，并让图案尽可能简单。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "按印刷要求定尺寸和样式",
+      "text": "套用 10:1 距离规则，保持 4 模块静区和至少 4:1 的对比度，加 Logo 时用 H 级纠错，导出 SVG 或高分辨率 PNG。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "测试完整旅程",
+      "text": "用两部手机（包括一部旧手机）扫一份真正的印刷样张，在真实距离和光线下测试，并一直看到结尾和下一步。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印刷并留记录",
+      "text": "样张通过后再批准整批印刷，并记下哪些印刷品指向哪个视频或落地页，以便以后更新。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
+    <div class="kicker" style="text-align:center">实战笔记</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">视频二维码，扫码后<span class='hl hl-mint'>真的能播</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">视频二维码不是把视频塞进一个方块里。它是一个短小、可扫的链接，指向一个已经放在可观看之处的视频。先把托管和隐私设置搞对，码本身就成了最容易的部分。</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约15分钟</p>
+    <div class="prose" style="margin-top:40px">
+<p>海报、产品盒、传单或展会横幅上能放的文字有限。视频二维码解决的是一个很具体的问题：它让站在印刷品前的人不用输入长地址、不用搜索标题、不用猜哪个结果是你的，就能看视频。一扫就应该直达播放。如果做不到，错几乎从来不在方块本身，而在它背后的链接、视频的隐私设置，或者让一个本来好好的码难以被手机摄像头读取的印刷选择。</p>
+<p>所以本指南要从生成器之前讲起。先决定视频住在哪里、谁可以看。然后决定扫码是直接落在视频上，还是落在介绍它的页面上。只有到这一步，才生成、美化、测试码。按这个顺序做，视频二维码可靠、便宜、易于更新。顺序反过来，你可能因为一个私密视频拒绝播放而重印传单，或者因为直接链接把观众送进一堆不相关的推荐里，而一个简单的落地页本来可以让他们留在你的信息上。</p>
+<h2>为什么二维码里装不下视频本身</h2>
+<p>先把这个限制说直白一点很有帮助，因为它决定了之后的所有决策。二维码装的是文字，不是媒体。在最大尺寸、最低纠错级别下（版本 40），标准二维码最多容纳 2,953 字节的二进制数据，或 4,296 个字母数字字符，也就是大约 3 KB。即使一段经过重度压缩的短视频片段，也要大上几千倍。没有任何生成器能老老实实地把视频文件放进码里，任何声称能做到的工具，实际上都是把视频上传到某个地方、替你链接过去。</p>
+<p>实际后果很简单：做码之前，视频必须先有一个带可播放链接的家。YouTube、Vimeo、Google Drive、Dropbox，或者你自己网站上的一个页面，都可以做这个家，前提是链接打开视频时不要求观众拥有他们没有的访问权限。如果视频只存在于你的相机胶卷、私人硬盘或剪辑工程里，它还没有地址，二维码也就没什么有用的东西可指。先上传，再复制分享链接，最后生成码。</p>
+<h2>直接链接还是落地页：最关键的决定</h2>
+<p>有两条老实的路，没有一条适合所有情况。直接链接把扫码者直接送到 YouTube、Vimeo 或其他托管方上的视频。落地页链接把扫码者送到你控制的页面，视频旁边有标题、简短介绍、相关链接和明确的下一步。直接链接更快。落地页则给你背景、品牌，以及对视频结束后发生什么的控制。</p>
+<p>当视频就是全部信息、观众已经知道为什么要看它时，选直接链接。产品盒上的操作演示、海报上的预告片、场馆入口的欢迎视频，或者展位上的演示，都符合这个模式。观众一扫，视频就播，不需要再解释什么。扫码到播放之间的点击越少越好，直接链接把整整一页从这条路径上拿掉了。</p>
+<p>当视频需要介绍、当一次扫码应该提供不止一个视频，或者当你不希望托管平台决定观众接下来看什么时，选落地页。比如在 YouTube 上，直接链接会在你的视频结束后把观众引向推荐和相关视频。这对发现新内容很好，但对销售页、培训模块或筹款活动很糟糕，因为下一步应该是一个表单、一个预约按钮，或者系列里的第二个视频。落地页把观众留在你的框架里，有你的标题、你的行动号召和你的链接，而不是把结尾交给算法。</p>
+<p>当视频本身可能变时，落地页也是更安全的选择。产品演示会重拍，演讲录像会被更干净的剪辑替换，季节视频会被新的换掉。用动态码指向你自己的落地页，你可以换掉嵌入的视频而不用重印任何东西。用静态码直接指向单个视频地址，视频被删或被替换就意味着码死了，印在纸上就是传单死了。如果视频可能更新，或者印刷品会存在好几个月，光是这种灵活性就足以值得多做一页。</p>
+<div class="table-scroll"><table>
+<tr><th>路径</th><th>最适合</th><th>注意</th></tr>
+<tr><td>直接链接到 YouTube 或 Vimeo</td><td>一个视频、一个明确目的，到播放的路径最快</td><td>隐私设置必须允许任何有链接的人观看；YouTube 上视频结束后可能出现推荐</td></tr>
+<tr><td>你控制的落地页</td><td>系列、背景、行动号召、可能替换的视频</td><td>需要多点一次才能播放；页面要快，播放按钮要显眼</td></tr>
+<tr><td>直接文件链接，如 Drive 或 Dropbox</td><td>内部或简单分享，不需要托管页面的情况</td><td>分享必须设为任何有链接的人可看，而且文件格式必须能在手机浏览器里播放</td></tr>
+</table></div>
+<h2>直接链接怎么做才对：YouTube 和 Vimeo</h2>
+<p>在 YouTube 上，从视频本身出发，用播放器下方的“分享”按钮，再复制它给你的链接。这个分享链接就是设计来直接打开视频的，而且比复制带有多余参数的地址栏更短、更干净。生成任何东西之前，先检查可见性设置，因为它决定了谁真正能看。YouTube 提供公开、不公开列出和私密三种。公开视频任何人都可以在 YouTube 上看、可以分享给任何人。不公开列出的视频任何有链接的人都可以看、可以分享，不需要 Google 账号，但它们不会出现在你的频道页或搜索结果里，除非有人把它们加进公开播放列表。私密视频只有你和你选择的人能看，所以私密视频不适合公开的二维码：大多数扫码者看到的会是错误提示而不是播放按钮。</p>
+<p>对大多数印刷的视频码来说，当你想分享又不想被搜索发现时，“不公开列出”是最合适的选择。研讨会讲义、产品插页或私人活动节目单都可以用不公开列出的链接，这样只有扫码的人，或者从扫码的人那里拿到链接的人才能看。只是要记住，不公开列出并不是锁死的：任何有链接的人都可以再分享。如果内容是保密的、付费的，或者出现了没有同意公开的人，别依赖不公开列出。用私密加指定邀请，或者把视频放在有自己访问控制的页面后面，并且接受一个简单的公开二维码不是适合这份工作的工具。</p>
+<p>在 Vimeo 上，同样的原则换了不同的标签。从播放器复制视频分享链接，然后检查隐私设置，确保任何有链接的人都能看。Vimeo 还适合那些 YouTube 推荐会成为缺点的情况：客户演示、作品集片段或品牌影片，你不希望观众看完后被卷进不相关的视频里。如果你在 Vimeo 上用了密码，记住密码是扫码者必须完成的第二步，所以只有当你真的需要这道门时，才把密码印在码附近，并且在印刷前把包括密码在内的完整流程都测试一遍。</p>
+<p>两个小细节能避免常见失败。第一，在编码之前，先在退出账号的无痕或隐私浏览器窗口里测试链接。如果在那里能播，对陌生人也能播。如果它要求你登录，隐私设置就是错的。第二，如果码应该在某个特定时刻打开视频，先在复制链接之前设置好开始时间，而不是指望观众自己拖到正确的位置。从正确时刻开始的短片段显得有意为之；从头开始的长视频则像在布置作业。</p>
+<h2>落地页什么时候值得多一次点击</h2>
+<p>用落地页解决直接链接解决不了的问题。按顺序提供播放列表或系列，而不是单个片段。给不能开声音的观众在视频旁边加上字幕、文字稿或可下载的讲义。在视频正下方放预约链接、产品链接或反馈表单，这样注意力在片段结束时不会一下子散掉。对于活动，落地页还可以放日程、场馆地图和联系方式，这些都是单个视频装不下的。每种情况下，二维码仍然只做一件事——把人带到正确的地方——但页面会完成其余的工作。</p>
+<h2>设计与印刷：让码容易扫</h2>
+<p>视频码经常印在人们走动、单手拿手机，或者站得比设计师想象中更远的地方。所以尺寸是第一个设计决定，不是事后补救。一个广为使用的经验法则是 10:1 比例：码的宽度至少要是扫码距离的十分之一。从 30 cm 外扫的码至少要 3 cm 宽；从 1 米外看的海报需要至少 10 cm 宽的码。这些是下限，不是目标，码越密、光线越差、表面越亮，都越应该往大里印。</p>
+<p>在码周围留出静区——四边至少 4 个模块宽的空白边。扫码器靠这圈空边来判断图案从哪里开始、到哪里结束，所以紧贴边缘的文字、Logo 或装饰边框会干扰识别。用浅底深码，并力求码与背景之间的对比度至少达到 4:1。黑码白底永远管用。深海军蓝配米色也可以。浅码深底、浅色纸上的浅色，以及码背后的繁忙照片，都是码看着没问题、扫起来却慢或扫不出来时的常见嫌疑。</p>
+<p>如果在中间加 Logo 或播放按钮图标，要用更高的纠错级别，因为 Logo 故意盖住了图案的一部分。二维码有四档：L 能恢复约 7%，M 约 15%，Q 约 25%，H 约 30% 受损或被遮挡的数据。带中间 Logo 的码通常选 H 级，干净的码用 M 级是合理的默认。纠错级别越高码越密，所以带 Logo 的码通常要比承载同样链接的普通码印得稍大一点。想深入了解尺寸和对比度，在确定印刷批次之前先看<a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a>和<a href="/zh/blog/qr-code-troubleshooting-guide/">故障排查指南</a>。</p>
+<p>印刷时尽量导出矢量文件，如 SVG 或 PDF，或者按最终尺寸 300 像素每英寸导出的高分辨率 PNG。一张小 PNG 拉大到横幅上会把模块边缘弄软，可能把一个清晰的码变成模糊的码。在屏幕上，同样的规则缩小适用：让码在幻灯片或屏幕上够大，放在浅色面板上而不是照片上，别让它动、别让它淡入淡出，也别放在演讲者会挡住的位置。演示幻灯片上的视频码应该展示得够久、够大，让最后一排也能扫到，而不是在结尾闪两秒就没了。</p>
+<h2>测试整段旅程，而不只是方块</h2>
+<p>测试视频二维码，意味着测试陌生人会走的那段旅程，而不只是你自己的手机能不能读出图案。先在屏幕上测：用两部不同的手机扫码，最好是一部 iPhone 和一部安卓手机，最好其中一部是旧设备。旧相机对焦更慢、处理密集的码更吃力，所以只在旗舰手机上能用的码还没到可以印刷的程度。在退出账号的隐私浏览器窗口里打开链接，确认视频能播放，没有登录提示、权限请求或“视频不可用”的信息。</p>
+<p>然后在真实尺寸、真实材质、真实距离和真实光线下测试一份真正的印刷样张。亮面纸在场馆灯光下会反光，弯曲的包装会扭曲图案，在桌上扫着完美的码，到了阳光明媚的窗户或昏暗的走廊墙上可能就失败了。走到观众会站的距离，按他们会拿手机的方式拿着手机，并计时从扫码到播放要多久。如果超过几秒，或者只有一个角度能用，就把码放大、提高对比度、缩短链接，或者移到更平、光线更好的位置。在样张上修这些只要几分钟；印刷批次之后再修，代价就是整批。</p>
+<h2>常见错误，以及如何避免</h2>
+<p>最常见的错误是编码了一个私密视频，印出来之后才发现问题。第二是编码了一个又长、参数又多的链接，让码变密变脆，而短链接或动态跳转本来可以让它保持简单。第三是按观看距离印得太小。这三点都可以用同一个习惯预防：退出账号测试链接、按真实距离测试样张，并且把 10:1 尺寸规则当作下限。</p>
+<p>相关操作指南见<a href="/zh/blog/how-to-scan-a-qr-code/">如何扫二维码</a>、<a href="/zh/blog/how-to-create-a-dynamic-qr-code/">如何创建动态二维码</a>，如果视频是更大活动体验的一部分，还见<a href="/zh/blog/qr-codes-for-events/">活动二维码</a>。FreeQrly 支持全部 17 种二维码类型，但视频本身仍然需要一个托管方、一个可播放链接和匹配的隐私设置。</p>
+    </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="https://bitly.com/blog/how-much-data-can-a-qr-code-store/">How Much Data Can a QR Code Store?</a>——2026 年 11 月 4 日访问；支撑版本 40、L 级下 2,953 字节、4,296 字符和 7,089 数字的容量上限。</li>
+      <li><a href="https://support.google.com/youtube/answer/157177?hl=en-GB&co=GENIE.Platform%3DAndroid">Change video privacy settings - YouTube Help</a>——2026 年 11 月 4 日访问；支撑公开、不公开列出和私密的定义，包括不公开列出的视频任何有链接的人都可以看和分享。</li>
+      <li><a href="https://replug.io/blog/how-to-make-a-qr-code-for-a-video">QR Code for a Video: How to Make One (YouTube, Drive, MP4)</a>——2026 年 11 月 4 日访问；支撑二维码装的是链接、不是视频文件，以及私密视频扫码者看不了的说法。</li>
+      <li><a href="https://pageloot.com/video-qr-code-generator/">Video QR Code Generator</a>——2026 年 11 月 4 日访问；支撑托管、复制、创建的流程，以及不常见格式的直接文件可能无法在手机浏览器里播放。</li>
+      <li><a href="https://www.circulateqr.com/guides/qr-code-size-guide">QR Code Size Guide for Print: Minimum Size and Distance</a>——2026 年 10 月 21 日更新；支撑 10:1 距离规则、2 × 2 cm 实际下限和 4 模块静区。</li>
+      <li><a href="https://www.cwtch.es/guide-qr-codes.html">QR Codes: Size, Error Correction and Making One That Scans</a>——2026 年 11 月 2 日最后更新；支撑纠错级别 L 7%、M 15%、Q 25%、H 30%，以及用不止一部手机测试。</li>
+      <li><a href="https://www.uniqode.com/blog/qr-code-best-practices/qr-code-printing-guideline">How to Print a QR Code: File Format, Materials and Checklist (2026)</a>——2026 年 11 月 4 日访问；支撑至少 4:1 的对比度、矢量 SVG 或 EPS 导出，以及印刷用 M 级或更高的纠错。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
+      <div>
+        <h3>自己试试——免费</h3>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
+        <a class="btn" href="/zh/#studio">打开生成器</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">继续读</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/zh/blog/pre-print-qr-code-checklist/"><b>印前二维码检查清单：在印几千份之前先在真纸上测试</b></a>
+        <a class="rel-card" href="/zh/blog/printable-qr-code-cheat-sheet/"><b>可打印二维码速查表：一页讲清尺寸、静区与对比度</b></a>
+        <a class="rel-card" href="/zh/blog/do-qr-codes-expire/"><b>二维码会过期吗？不会——但付费码会失效</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>小提示</h2>
+    <details><summary><span>二维码能直接存视频文件吗？</span></summary><p>不能。标准二维码在最大尺寸下最多容纳约 3 KB 的二进制数据，远小于任何视频文件。把视频托管在 YouTube、Vimeo、Drive 或自己的网站上，编码可播放的链接。</p></details>
+    <details><summary><span>应该直接链接到 YouTube，还是用落地页？</span></summary><p>当视频就是全部信息、速度重要时直接链接。当需要背景、多个视频、行动号召，或者以后不用重印就能换视频时，用落地页。</p></details>
+    <details><summary><span>公开二维码应该用哪个 YouTube 隐私设置？</span></summary><p>公开或不公开列出。不公开列出的视频任何有链接的人都可以看和分享，不需要 Google 账号，但它们不会出现在搜索和你的频道页里。私密视频只对受邀的人播放，所以对普通扫码者会失败。</p></details>
+    <details><summary><span>印好二维码之后还能换视频吗？</span></summary><p>只有码是动态的，或者码指向你控制的落地页时才行。静态码把目标永久地编进去了，所以换视频就意味着重印。任何可能更新的东西都用动态码。</p></details>
+    <details><summary><span>印出来的视频二维码应该多大？</span></summary><p>至少是扫码距离的十分之一，这是下限。从 30 cm 外扫的码至少要 3 cm 宽，从 1 米外看的海报至少要 10 cm。光线差或材质亮面时要再放大。</p></details>
+    <details><summary><span>为什么我的视频二维码能扫却播不了？</span></summary><p>常见原因有私密视频、要求登录的分享设置、被删或有地区限制的视频，或者手机浏览器播不了的文件格式。印刷前先在退出账号的隐私浏览器窗口里测试链接。</p></details>
+    <details><summary><span>能在视频二维码中间放 Logo 或播放图标吗？</span></summary><p>可以，前提是用 H 级高纠错，并且把码印得稍大一点。在不止一部手机上测试美化后的码，因为 Logo 本来就会盖住数据模块，密集或低对比度的码美化后可能失败。</p></details>
+    <details><summary><span>观众需要专门的 App 才能扫视频二维码吗？</span></summary><p>不需要。手机摄像头读出码后，会在 YouTube 或 Vimeo 应用里打开链接，或者在浏览器里打开，具体取决于托管方。处理播放的是视频托管方，而不是二维码 App。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>动态码不限量 — 限时活动</h3>
+        <p>免费登录，想建多少建多少。每个码印后可改，永不过期。</p>
+      </div>
+      <a class="fctaBtn" href="/zh/login/">免费开始</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/zh/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
+        <div class="fmade">静态码，在你的浏览器里生成。</div>
+      </div>
+      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
+      <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>
+      <div class="fcol"><h4>公司</h4><a href="/zh/about/">关于</a><a href="mailto:hello@freeqrly.com">联系我们</a></div>
+      <div class="fcol"><h4>法律</h4><a href="/zh/privacy/">隐私政策</a><a href="/zh/terms/">服务条款</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

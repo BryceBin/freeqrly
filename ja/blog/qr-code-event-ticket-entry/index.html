@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イベントチケット入場のQRコード：チケット1枚にコード1つ、入口の混乱なしに | FreeQrly</title>
+<meta name="description" content="チケット1枚にコード1つの入場の仕組み。固有のチケットコードの発行、入口でのスキャン運営、重複と再入場の扱い、Wi-Fiが弱い場合の対応についてです。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-event-ticket-entry/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-event-ticket-entry/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="イベントチケット入場のQRコード：チケット1枚にコード1つ、入口の混乱なしに | FreeQrly">
+<meta property="og:description" content="チケット1枚にコード1つの入場の仕組み。固有のチケットコードの発行、入口でのスキャン運営、重複と再入場の扱い、Wi-Fiが弱い場合の対応についてです。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/qr-code-event-ticket-entry/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"イベントチケット入場のQRコード：チケット1枚にコード1つ、入口の混乱なしに | FreeQrly","description":"チケット1枚にコード1つの入場の仕組み。固有のチケットコードの発行、入口でのスキャン運営、重複と再入場の扱い、Wi-Fiが弱い場合の対応についてです。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "すべてのチケットに同じQRコードを使うべきですか、それとも固有のものを使うべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "固有のものです。各チケットは、1枚のチケット記録に結びついた独自のQRコードとチケット識別子を持つべきです。共有コードは誰でもコピーでき、使用済みとしてマークできません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "チケットを2回スキャンしたとき、スキャナーは何を表示しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "よいスキャナーは、有効、無効、期限切れとは区別して重複を返します。スタッフは来場者を脇に寄せ、スキャン履歴と注文詳細を確認し、責任者に最終判断を任せるべきです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wi-FiなしでQRチケット入場は機能しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ツールによります。一部のスキャンアプリは来場者リストをローカルに保持し、あとで同期しますが、オフライン機能は通常接続した状態で開始しなければならず、同期するまでオフラインの2台の端末が同じコードを両方とも受け入れることがあります。紙のバックアップを残し、リハーサルでオフライン機能をテストします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "来場者に同じチケットでの再入場を認めるべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "販売前に決め、チケットに明記します。単一入場イベントは2回目のスキャンを拒否すべきで、フェスティバルや見本市は、重複としてフラグするのではなく退出と再入場を記録する、意図的な設定として再入場を有効にできます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "来場者のスマホが切れたり、コードがスキャンできなかったりしたらどうしますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "列の最後尾に戻すのではなく、ヘルプデスクに案内します。スタッフは、チケットに印刷された人が読めるチケット識別子を使い、姓、メールアドレス、注文番号で検索し、必要に応じてチケットを再送または再発行すべきです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "来場者がチケットのスクリーンショットを共有すべきでないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最初にスキャンした人が勝つからです。コードをコピーして先にスキャンした人が入場し、元の持ち主が締め出されることがあります。来場者はコードを非公開に保ち、存在すれば公式の譲渡または再発行の経路でのみ共有すべきです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRチケットを使うために、来場者はアプリをインストールする必要がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。来場者はメールや印刷物からコードを見せるだけで十分です。スキャンアプリが必要なのは入口チームだけで、入場が速くなり、ゲートでのアプリインストールの列を避けられます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料のQRコード生成ツールだけでチケット入場を運営できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、安全にはできません。生成ツールは四角を作ることはできますが、チケットを使用済みにしたり、ゲートをまたいで重複をフラグしたりすることはできません。検証は、すべてのゲートが確認または照合するチケット発行またはチェックインの記録の中で行われなければなりません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"イベントチケット入場のQRコード：チケット1枚にコード1つ、入口の混乱なしに | FreeQrly","description":"チケット1枚にコード1つの入場の仕組み。固有のチケットコードの発行、入口でのスキャン運営、重複と再入場の扱い、Wi-Fiが弱い場合の対応についてです。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "チケット1枚につきコード1つを発行する",
+      "text": "チケット発行プラットフォームで、各チケットに、1人の来場者記録に結びついた固有のQRコードとチケット識別子を作成し、チケットをまたいでコードを再利用しないでください。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "明確な指示とともに届ける",
+      "text": "メールやメッセージでコードを送り、持参すること、画面の明るさを上げること、最初にスキャンした人が勝つためコードを公開しないことを来場者に伝えます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "入場ルールを事前に決める",
+      "text": "単一入場か再入場かを決め、有効・無効・重複・期限切れの対応を定め、重複の台本と責任者へのエスカレーションのルールを文書化します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "実際の端末で現地リハーサルをする",
+      "text": "各ゲートで有効、無効、重複のチケットをスキャンし、各チケット種別をテストし、スマホのバッテリー切れと暗い画面をテストし、ピーク時のレーンの処理時間を測ります。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "スキャンとヘルプのレーンを分ける",
+      "text": "充電済みの専用端末でスキャンレーンを動かし続け、当日券、名義変更、スマホのバッテリー切れ、紛争に対応するヘルプデスクに人員を配置します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "ネットワーク障害に備える",
+      "text": "オフライン機能を確認し、接続した状態で開始し、必要に応じてオフラインレーンにチケットの範囲を割り当て、再接続前にスキャンをアップロードし、最新の印刷リストをバックアップとして残します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "入場後に照合する",
+      "text": "スキャン数を販売数と比較し、重複と手動入場を確認し、再発行したチケットを文書で確認し、次のイベントのためのレーンと看板の修正点を記録します。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">イベント入場は、<span class='hl hl-mint'>チケット1枚につきスキャン1回</span>で</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">チケットのQRコードはポスターのコードではありません。1枚のチケット記録に結びついた1回限りの鍵であり、入口でのスキャンは単なるリンクではなく照会です。固有性、重複の扱い、オフラインのバックアップを正しくすれば、入場はイベントで最も落ち着いた部分になります。</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 約14分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+<p>どの主催者も入口の瞬間を知っています。列ができ、スマホを手探りし、画面は暗く、ボランティアは次の人が雨の中で待つなか、リストから名前を探そうとしています。QRコードによるチケット入場は、その慌ただしさを1つの動作に置き換えるためにあります。コードを見せ、スキャンし、明確な答えを得ることです。ただし、コードはチケットごとに固有で、スキャナーがライブの記録に照らして確認し、答えがきれいな緑のチェックでない場合にチームがどうすべきか正確に知っている場合にのみ役立ちます。誰でもコピーできる共有のイベントコードでは、その仕事はできません。どんなにきれいに印刷しても、です。</p>
+<p>このガイドは、四角だけでなくシステムを解説します。チケット1枚にコード1つの入場がどう機能するか、コードの発行方法、当日の入口の運営方法、重複・再入場・スマホのバッテリーが切れた来場者への対応方法、会場のWi-Fiが切れたときにどう入場を止めないかを扱います。検証にはチケット発行またはチェックインツールを使うことを前提とします。無料のQRコード生成ツールだけでは、チケットを使用済みにできないからです。FreeQrlyはコードとその周辺のイベントページを作ることができますが、使用済みかどうかの判断は、すべてのゲートが見ることができるチケット記録、または少なくとも照合できる記録の中になければなりません。</p>
+<h2>チケット1枚、コード1つ、記録1つ</h2>
+<p>中心的なルールはシンプルです。すべてのチケットは独自のQRコードと独自のチケット識別子を持ち、2枚のチケットが同じコードを共有することはありません。来場者が登録またはチケットを購入すると、チケット発行プラットフォームがその固有のコードを割り当て、チケット記録に結びつけます。コード自体には個人情報が含まれることはほとんどありません。通常、プラットフォームのデータベース内の単一のチケット記録を指す固有の参照文字列が入っています。多くの場合暗号化または署名されています。スキャナーは参照を読み取り、プラットフォームがそれを照会し、答えは、有効、無効、重複、期限切れのうちのいずれかとして返ってきます。</p>
+<p>この区別が重要なのは、主催者がしばしば混同する2種類のQRコードを分けるからです。イベントQRコードは、スケジュール、会場マップ、登録ページなど、すべての人と同じ内容を共有します。イベントチケットQRコードは来場者ごとに固有で、その仕事は検証、重複防止、来場記録です。共有コードはイベントについて伝えるために使います。固有コードは入場させるために使います。すべてのチケットに同じコードを印刷すれば、作ったのはチケットではなくポスターであり、写真を撮った誰でもそれで入場できます。</p>
+<h2>スキャナーが返すべきものと、4つの答えが2つより優れている理由</h2>
+<p>よい入口スキャナーは、はいかいいえだけを言いません。有効、つまり本物のチケットの初回スキャン。無効、つまりファイル上のどのチケットにも一致せず、偽物、加工されたもの、別のイベントのものである可能性が高いもの。重複、つまりチケットがすでにスキャン済みであるもの。期限切れ、つまりチケットは本物だが有効な日時枠の外にあるもの。これらを区別します。スタッフはこれらの区別を必要とします。それぞれが異なる対応を求めるからです。有効なスキャンは、迎え入れることを意味します。無効なスキャンは、チケットを慎重に確認し、ゲートで議論するのではなくヘルプデスクに案内することを意味します。重複したスキャンは、立ち止まり、身元を確認し、エスカレーションすることを意味します。期限切れのスキャンは、枠を説明し、存在すれば正しいセッションや再予約の経路を提案することを意味します。</p>
+<p>使うツールにおける各結果の正確な文言と色についてスタッフを訓練し、特に重複のケースをリハーサルします。その場で、うまくいく道筋しか練習していないボランティアは、ためらい、通してしまったり、議論したりします。重複の台本を練習したボランティア、つまり一旦止め、来場者を丁寧に脇に寄せ、責任者を呼び、名前と注文番号を確認するボランティアは、イベントと来場者の両方を守ります。転送されたスクリーンショットを送った人ではなく、その被害者である来場者も含めてです。争いのある重複についての最終判断は、ゲートのボランティアではなく責任者が下すべきであり、そのルールは開場前に文書化すべきです。</p>
+<h2>現実の世界に耐えるチケットの発行</h2>
+<p>来場者が見つけられる十分早い時期にコードを発行しますが、プレッシャーのもとでもスキャンできる十分シンプルなチケットデザインに保ちます。QRコードはチケット上で大きく、明るい背景に、周りに明確なクワイエットゾーンを置き、近くに人が読めるテキストでチケット識別子を印刷します。そのテキストは、コードがスキャンできないときのフォールバックです。スタッフは識別子、姓、メールアドレス、注文番号を入力または検索できます。コードが完璧にスキャンできるときにしか機能しないチケットは、デモ用に設計されたチケットであって、入口用ではありません。</p>
+<p>スマホ画面と印刷物の両方に対応します。どの観客でも意味のある割合が印刷します。特に年配の観客はそうです。スマホ画面を読むスキャナーは、紙をより確実に読みます。チケットを見せるためにアプリのダウンロードを来場者に要求しないでください。来場者に必要なのは、メールや印刷物からのコードだけです。スキャンアプリが必要なのは入口チームだけです。来場者全員にゲートでのアプリインストール、アカウント作成、ログインを強いる流れは、列の前に列を作ることです。</p>
+<h2>入口の運営：レーン、端末、ヘルプデスク</h2>
+<p>入口の設計は列の設計です。メインのスキャンレーンとヘルプデスクを分離し、当日券、名義変更、スマホを持たない来場者、争いのあるチケットが、機能するコードを用意した来場者を妨げないようにします。チェックインカウンターの前に、QRコードを用意し、画面の明るさを上げるよう伝える看板を置きます。その1枚の看板を、確認メールでも繰り返します。驚くほどの遅延を防ぎます。暗い画面はスキャンが遅く、特に屋外や強い日差しのもとではそうです。</p>
+<p>できるところでは専用のスキャン端末を使います。スタッフのスマホは電話や通知を受け、バッテリーが切れます。ラッシュの最中にスマホが切れれば、レーンひとつが止まります。スタッフのスマホを使わざるを得ない場合は、中断を静めるモードにし、満充電し、すべてのレーンにモバイルバッテリーを置きます。カメラレンズを清潔に保ち、来場者にはコードをスキャナーの枠の中央で静止して持つよう求め、入場中はその端末でスキャナーアプリだけを動かします。バッテリー切れ、ひび割れた画面、スマホが切れた来場者を含むリハーサルは、すべてがうまくいくリハーサルよりもチームに多くを教えます。</p>
+<div class="table-scroll"><table>
+<tr><th>入口での役割</th><th>当日の仕事</th><th>必要なもの</th></tr>
+<tr><td>スキャンレーンのスタッフ</td><td>スキャンし、結果を読み、入場させるか案内する</td><td>充電済みの端末、スキャナーアプリ、有効・無効・重複・期限切れの明確な文言</td></tr>
+<tr><td>ヘルプデスクのスタッフ</td><td>当日券、名義変更、スマホのバッテリー切れ、争いのある重複</td><td>名前、メールアドレス、注文番号による来場者リスト検索と、責任者への連絡手段</td></tr>
+<tr><td>責任者</td><td>重複、再入場、例外についての最終判断</td><td>すべてのゲートにわたるライブの来場状況と、上書きする権限</td></tr>
+</table></div>
+<h2>重複、再入場、スクリーンショットの問題</h2>
+<p>重複の扱いは、チケット入場が真価を発揮する場所であり、最も失敗しやすい場所でもあります。単一入場イベントのルールは、コードは初回スキャンで使用済みとしてマークされ、その後は拒否されることです。この1つの管理により、再印刷や転送されたチケットを入口で止められます。ただし、すべてのゲートが同じライブ記録を共有している場合に限ります。2つのゲートが同期せずに独立してスキャンすれば、誰かが気づく前に、同じコードが各ゲートで1回ずつ、2回入場できてしまいます。したがって、複数ゲートのスキャンは1つのライブダッシュボードに同期しなければならず、そうでない場合は、イベントはそのリスクを受け入れ、照合ステップを計画しなければなりません。</p>
+<p>再入場ポリシーは、チケットを販売する前に決め、チケットに明記します。コンサート、演劇、時間指定の展示会のように、設計上単一入場のイベントもあります。複数日フェスティバル、昼食で外出する来場者がいる見本市、オフサイトセッションのあるカンファレンスのように、再入場が必要なイベントもあります。多くのプラットフォームでは、イベントごとに再入場をオン・オフできるため、コンサートでは無効に、フェスティバルでは有効にできます。何を選んでも、スキャナーの動作は約束と一致しなければなりません。再入場が認められる場合、スキャナーは2回目のスキャンを重複としてフラグするのではなく、退出と再入場を記録すべきです。再入場が認められない場合、スタッフは、医療上の退出のような本物のケースについて、来場者を通すのではなく責任者が扱う明確な例外手順が必要です。</p>
+<p>スクリーンショットには、合法的なバックアップであると同時に不正の経路でもあるため、特定のポリシーが必要です。電波がなくても使えるよう自分のチケットをスクリーンショットする来場者は賢明です。そのスクリーンショットをほかの人に転送する来場者は、重複を作っています。システムは画像だけからこの2つのケースを区別できません。だからこそ、最初にスキャンした人が勝ち、2回目のスキャンはフラグされます。これをはっきり伝えましょう。コードを最初にスキャンした人が入場し、コードを共有すればチケットを失うリスクがあります。高額な階層では、ゲートで氏名確認を加え、コードだけでは不十分にします。一般入場では、最初にスキャンした人が勝つことが管理手段であると受け入れ、時折生じる紛争に対応するためヘルプデスクに人員を配置します。</p>
+<p>重複がフラグされたら、短く落ち着いた台本に従います。レーンが動き続けるよう、来場者を脇に寄せます。注文確認、予約上の名前、イベントで求められる場合は身分証明を求めます。スキャン履歴を確認します。コードが最初にスキャンされたのはいつ、どのゲートで、どの名前のもとでかです。最初のスキャンが数分前、別のゲートでのものであれば、来場者は入場し、退出記録なしに退出し、戻ってきたのかもしれません。最初のスキャンが数時間前、または来場者が訪れていないゲートでのものであれば、転送されたコードの可能性としてエスカレーションします。ゲートで来場者を不正だと非難してはいけません。システムが示すことを述べ、次のステップを説明し、責任者に判断させます。目標は、被害者かもしれない来場者を辱めることなく、イベントを守ることです。</p>
+<h2>ネットワークが切れたとき：オフラインスキャンと紙のバックアップ</h2>
+<p>会場のWi-Fiは、数千台のスマホが到着するまさにそのときに劣化します。すべてのスキャンにライブ接続を要求するチェックインシステムは、最悪の瞬間に止まります。ツールに決める前に、そのスキャンアプリが来場者リスト全体をローカルに保持し、ネットワークがオフの状態で来場者をチェックインできるかどうかを確認します。一部のツールは、アプリでのみオフライン機能を提供し、ウェブダッシュボードは接続を必要とします。オフライン機能は通常、接続した状態で開始しなければなりません。その流れは当日にではなく、リハーサルでテストします。</p>
+<p>オフライン機能には、計画しなければならないトレードオフがあります。オフラインの2つのレーンは、チケットがすでに使用されたことを両方とも知ることはできません。あるガイドはまさにこのケースを説明しています。オフラインで同じコードをスキャンした2台の端末が両方とも受け入れ、エラーはオフライン機能が終了し、スキャンが照合されたときに初めて現れます。緩和策には、チケットの範囲をレーンに割り当て、同じコードが2つのオフラインレーンに現れにくくすること、重複は同期時にフラグされ、責任者が対応することを受け入れること、再接続する前に各端末からスキャンをアップロードすることが含まれます。再接続前にアップロードされなかったスキャンは、一部のツールでは失われることがあります。正直なまとめは、オフライン機能は入場を動かし続けるが、同期するまで重複防止が弱まるということです。不正リスクの高いイベントでは、そのトレードオフが、完全なオフライン運用ではなく、バックアップのモバイルルーター、ヘルプデスクでの有線接続、より小さいオフライン範囲を主張するかもしれません。</p>
+<p>デジタルな流れを想定していても、紙のバックアップを残します。印刷したアルファベット順リスト、印刷したVIPまたは特別アクセスリスト、手動発行用の空白のバッジやリストバンドがあれば、端末が故障し、バッテリーが切れ、ネットワークが落ちたときに、ヘルプデスクは来場者を入場させる方法を持てます。リストを最新の状態に保ちます。開場の1時間前に書き出した、すでに古い来場者リストは、知られた失敗パターンです。チケット発行システムと入口アプリが同じプラットフォームから来ていれば、販売の更新に合わせて入口リストも更新されるため、その書き出しの問題はほぼ消えます。そうでなければ、開場前の定刻にバックアップリストを更新する担当者を1人決め、その時刻をリスト自体に記入し、スタッフがどれだけ新しいかわかるようにします。</p>
+<p>スマホが切れた来場者、コードが読み込めない来場者、チケットのメールが見つからない来場者についても計画します。ヘルプデスクは、スキャンだけでなく、姓、メールアドレス、注文番号で検索でき、チケットを再送したり、代替品を発行したりできるべきです。その検索経路は、アクセシビリティの経路でもあり、紛争の経路でもあるため、余っている人ではなく、経験のある人を配置します。問題を1分で解決できるヘルプデスクは、スキャンレーンの5分間の詰まりを救います。</p>
+<h2>開場後：来場記録、照合、学び</h2>
+<p>入場が終わったら、照合します。スキャン数を販売数と比較し、フラグされた重複、試みられた無効スキャン、ヘルプデスクからの手動入場を一覧にします。その照合は、不正チェックであると同時に計画ツールでもあります。どのゲートが最も忙しかったか、ピークがいつ来たか、ヘルプデスクが最も必要だった場所を示します。記憶が新しいうちに、短い要約をチームと共有し、スタッフや来場者を混乱させたスキャナーの文言、レーンのレイアウト、看板を記録します。次のイベントはそれらのメモを引き継ぐか、同じ列を引き継ぐかのどちらかです。</p>
+<p>周辺の要素については、登録とスケジュールのコードとして<a href="/ja/blog/qr-codes-for-events/">イベント向けQRコード</a>を、来場者側として<a href="/ja/blog/how-to-scan-a-qr-code/">QRコードのスキャン方法</a>を、コードがまったくスキャンできない場合に<a href="/ja/blog/qr-code-troubleshooting-guide/">QRコードのトラブルシューティング</a>をご覧ください。FreeQrlyは17種類のQRコードすべてに対応し、イベントページ、スケジュールリンク、フィードバックコードはすべて、チケット入場とともに1つのイベントワークフローに置くことができます。ただし、チケットの検証そのものは、1つのコードが1枚のチケットに対応し、2回目のスキャンが驚きではなく判断となるチケット記録の中で行われなければなりません。</p>
+    </div>
+
+    <section class="sources">
+      <h2>出典</h2>
+      <ul>
+      <li><a href="https://ticket-generator.com/blog/qr-code-check-in">イベントのQRコードチェックイン：より速い入場、リアルタイムデータ</a> - 2026年11月4日アクセス。チケット1枚につき固有のQRコード1つと、有効・無効・重複・期限切れのスキャン結果を裏付けます。</li>
+      <li><a href="https://www.qrcodechimp.com/qr-codes-for-event-management/">イベント管理のためのQRコード：配置、リンク先、トラッキング</a> - 2026年11月4日アクセス。共有のイベントQRコードと固有のイベントチケットQRコードの区別と、チケットコードが重複スキャン防止を可能にすることを裏付けます。</li>
+      <li><a href="https://blog.tickera.com/event-ticket-qr-code-guide/">QRコードチケット解説：仕組み</a> - 2026年11月4日アクセス。チケットコードが通常、1枚のチケット記録を指す固有の参照文字列を持ち、初回スキャンで使用済みとしてマークされることを裏付けます。</li>
+      <li><a href="https://hkdfestival.com/fan-guide/">ファンガイドとチケットの安全 - HKDフェスティバル</a> - 2026年11月4日アクセス。チケット1枚、スキャン1回の警告と、コピーされたコードを先にスキャンされると元の持ち主が締め出されることを裏付けます。</li>
+      <li><a href="https://help.showpass.com/hc/en-us/articles/44546817472151-Organizer-guide-Check-in-new-Dashboard">主催者ガイド：チェックイン（新ダッシュボード）- Showpass</a> - 2026年11月4日アクセス。アプリでのみオフラインスキャンが可能であること、接続した状態でオフライン機能を開始すること、オフラインで同じコードをスキャンした2台の端末が両方とも照合まで受け入れることを裏付けます。</li>
+      <li><a href="https://kredosys.com/blog/event-check-in-access-control.html">イベントチェックインと入場管理：実用ガイド</a> - 2026年11月4日アクセス。会場のWi-Fi障害への計画、オフライン対応スキャン、暗い画面、姓による手動検索を裏付けます。</li>
+      <li><a href="https://tickts.co.uk/blog/how-to-manage-event-queues-entry-flow">イベントの列と入場フローの管理方法</a> - 2026年3月17日公開。QRスキャンレーン1本あたり1時間あたり約300〜400人、荷物検査ありでは約200人に落ちるという計画上の数値を裏付けます。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>自分で試す — 無料</h3>
+        <p>この記事の内容はすべて、現在のFreeQrlyスタジオでそのまま使えます。静的コード、17種類すべて、PNGとSVGの書き出しに対応しています。</p>
+        <a class="btn" href="/ja/#studio">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/printable-table-card-template/"><b>印刷用テーブルカードテンプレート：WiFi・レビュー・メニューカード</b></a>
+        <a class="rel-card" href="/ja/blog/printable-review-card-template/"><b>印刷用レビューカードテンプレート：名刺サイズ、1ページに8枚</b></a>
+        <a class="rel-card" href="/ja/blog/static-vs-dynamic-qr-codes/"><b>静的コードと動的コード：永遠に無料か、サブスクリプションか</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>すべてのチケットに同じQRコードを使うべきですか、それとも固有のものを使うべきですか？</span></summary><p>固有のものです。各チケットは、1枚のチケット記録に結びついた独自のQRコードとチケット識別子を持つべきです。共有コードは誰でもコピーでき、使用済みとしてマークできません。</p></details>
+    <details><summary><span>チケットを2回スキャンしたとき、スキャナーは何を表示しますか？</span></summary><p>よいスキャナーは、有効、無効、期限切れとは区別して重複を返します。スタッフは来場者を脇に寄せ、スキャン履歴と注文詳細を確認し、責任者に最終判断を任せるべきです。</p></details>
+    <details><summary><span>Wi-FiなしでQRチケット入場は機能しますか？</span></summary><p>ツールによります。一部のスキャンアプリは来場者リストをローカルに保持し、あとで同期しますが、オフライン機能は通常接続した状態で開始しなければならず、同期するまでオフラインの2台の端末が同じコードを両方とも受け入れることがあります。紙のバックアップを残し、リハーサルでオフライン機能をテストします。</p></details>
+    <details><summary><span>来場者に同じチケットでの再入場を認めるべきですか？</span></summary><p>販売前に決め、チケットに明記します。単一入場イベントは2回目のスキャンを拒否すべきで、フェスティバルや見本市は、重複としてフラグするのではなく退出と再入場を記録する、意図的な設定として再入場を有効にできます。</p></details>
+    <details><summary><span>来場者のスマホが切れたり、コードがスキャンできなかったりしたらどうしますか？</span></summary><p>列の最後尾に戻すのではなく、ヘルプデスクに案内します。スタッフは、チケットに印刷された人が読めるチケット識別子を使い、姓、メールアドレス、注文番号で検索し、必要に応じてチケットを再送または再発行すべきです。</p></details>
+    <details><summary><span>来場者がチケットのスクリーンショットを共有すべきでないのはなぜですか？</span></summary><p>最初にスキャンした人が勝つからです。コードをコピーして先にスキャンした人が入場し、元の持ち主が締め出されることがあります。来場者はコードを非公開に保ち、存在すれば公式の譲渡または再発行の経路でのみ共有すべきです。</p></details>
+    <details><summary><span>QRチケットを使うために、来場者はアプリをインストールする必要がありますか？</span></summary><p>いいえ。来場者はメールや印刷物からコードを見せるだけで十分です。スキャンアプリが必要なのは入口チームだけで、入場が速くなり、ゲートでのアプリインストールの列を避けられます。</p></details>
+    <details><summary><span>無料のQRコード生成ツールだけでチケット入場を運営できますか？</span></summary><p>いいえ、安全にはできません。生成ツールは四角を作ることはできますが、チケットを使用済みにしたり、ゲートをまたいで重複をフラグしたりすることはできません。検証は、すべてのゲートが確認または照合するチケット発行またはチェックインの記録の中で行われなければなりません。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>動的コード無制限 — 期間限定オファー。</h3>
+        <p>無料でサインインして、必要なだけ作成できます。すべてのコードは印刷後も編集でき、有効期限はありません。</p>
+      </div>
+      <a class="fctaBtn" href="/ja/login/">無料で始める</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
+        <div class="fmade">静的コードはブラウザで作成。</div>
+      </div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
+      <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
+      <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
+      <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR code vidéo : renvoyer vers une vidéo sans faire taper une URL | FreeQrly</title>
+<meta name="description" content="Un guide pratique des QR codes vidéo — quand renvoyer directement vers YouTube ou Vimeo, quand utiliser une page de destination à la place, et comment tester le code avant de l'imprimer.">
+<link rel="canonical" href="https://freeqrly.com/fr/blog/video-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/video-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/video-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/video-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/video-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/video-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/video-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/video-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/video-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/video-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/video-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/video-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QR code vidéo : renvoyer vers une vidéo sans faire taper une URL | FreeQrly">
+<meta property="og:description" content="Un guide pratique des QR codes vidéo — quand renvoyer directement vers YouTube ou Vimeo, quand utiliser une page de destination à la place, et comment tester le code avant de l'imprimer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/fr/blog/video-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QR code vidéo : renvoyer vers une vidéo sans faire taper une URL | FreeQrly","description":"Un guide pratique des QR codes vidéo — quand renvoyer directement vers YouTube ou Vimeo, quand utiliser une page de destination à la place, et comment tester le code avant de l'imprimer.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Un QR code peut-il stocker un fichier vidéo directement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Un QR code standard contient au maximum environ 3 kilo-octets de données binaires à sa plus grande taille, bien moins que n'importe quel fichier vidéo. Hébergez la vidéo sur YouTube, Vimeo, Drive ou votre propre site, et encodez plutôt le lien lisible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dois-je renvoyer directement vers YouTube ou utiliser une page de destination ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Renvoyez directement quand la vidéo est tout le message et que la rapidité compte. Utilisez une page de destination quand vous avez besoin de contexte, de plusieurs vidéos, d'un appel à l'action, ou de la possibilité d'échanger la vidéo plus tard sans réimprimer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel paramètre de confidentialité YouTube dois-je utiliser pour un QR code public ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Public ou Non répertorié. Les vidéos non répertoriées peuvent être vues et partagées par quiconque a le lien, sans compte Google, mais elles restent hors de la recherche et de votre page de chaîne. Les vidéos privées ne se lancent que pour les personnes que vous invitez, elles échouent donc pour les lecteurs généraux."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je changer la vidéo après avoir imprimé le QR code ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seulement si le code est dynamique, ou s'il pointe vers une page de destination que vous contrôlez. Un code statique encode sa destination de façon permanente, donc remplacer la vidéo signifie réimprimer. Utilisez un code dynamique pour tout ce qui peut être mis à jour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle taille doit faire un QR code vidéo imprimé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Au moins un dixième de la distance de scan, comme minimum. Un code scanné à 30 centimètres doit mesurer au moins 3 centimètres de large, et une affiche lue à 1 mètre exige au moins 10 centimètres. Voyez plus grand en faible lumière ou sur matériau brillant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi mon QR code vidéo scanne-t-il mais ne se lance-t-il pas ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les causes habituelles sont une vidéo privée, un paramètre de partage exigeant une connexion, une vidéo supprimée ou restreinte par région, ou un format de fichier qui ne se lance pas dans un navigateur de téléphone. Testez le lien dans une fenêtre de navigateur privée déconnectée avant d'imprimer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je mettre un logo ou une icône de lecture au centre d'un QR code vidéo ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, si vous utilisez une correction d'erreur élevée, niveau H, et imprimez le code légèrement plus grand. Testez le code stylisé sur plus d'un téléphone, car un logo recouvre des modules de données par conception et un code dense ou peu contrasté peut échouer après stylisation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le spectateur a-t-il besoin d'une application spéciale pour scanner un QR code vidéo ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Un appareil photo de téléphone lit le code et ouvre le lien dans l'application YouTube ou Vimeo, ou dans le navigateur, selon l'hébergeur. L'hébergeur de la vidéo, pas une application QR, gère la lecture."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"QR code vidéo : renvoyer vers une vidéo sans faire taper une URL | FreeQrly","description":"Un guide pratique des QR codes vidéo — quand renvoyer directement vers YouTube ou Vimeo, quand utiliser une page de destination à la place, et comment tester le code avant de l'imprimer.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Hébergez d'abord la vidéo",
+      "text": "Téléversez la vidéo sur YouTube, Vimeo, Drive ou votre propre site, et confirmez qu'elle a un lien lisible avant de générer quoi que ce soit."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Réglez le paramètre de confidentialité",
+      "text": "Choisissez Public ou Non répertorié sur YouTube, ou le paramètre équivalent quiconque-a-le-lien sur Vimeo, et testez le lien dans une fenêtre de navigateur privée déconnectée."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Choisissez direct ou page de destination",
+      "text": "Renvoyez directement pour une seule vidéo avec un but, ou pointez un code dynamique vers une page de destination quand vous avez besoin de contexte, de plusieurs vidéos ou d'échanges futurs."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Générez un code court et dynamique",
+      "text": "Collez le lien de partage court, préférez un code dynamique pour que la destination puisse changer, et gardez le motif aussi simple que le lien le permet."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Dimensionnez et stylisez-le pour l'impression",
+      "text": "Appliquez la règle 10:1 entre distance et taille, gardez une zone de silence de quatre modules et un contraste d'au moins 4:1, utilisez la correction d'erreur de niveau H si vous ajoutez un logo, et exportez en SVG ou PNG haute résolution."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Testez tout le parcours",
+      "text": "Scannez une vraie épreuve imprimée avec deux téléphones, dont un plus ancien, à la distance et dans la lumière réelles, et regardez jusqu'à la fin et la prochaine étape."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Imprimez et gardez une trace",
+      "text": "N'approuvez le tirage complet qu'après la réussite de l'épreuve, et notez quels articles imprimés pointent vers quelle vidéo ou page de destination pour que les mises à jour futures soient faciles."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notes de terrain</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">QR codes vidéo qui <span class='hl hl-mint'>se lancent vraiment</span> quand on les scanne</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un QR code vidéo n'est pas une vidéo comprimée dans un carré. C'est un lien court et lisible vers une vidéo qui vit déjà quelque part où on peut la regarder. Réglez d'abord l'hébergement et les paramètres de confidentialité, et le code lui-même devient la partie facile.</p>
+    <p class="meta" style="text-align:center">4 novembre 2026 · 15 min de lecture</p>
+    <div class="prose" style="margin-top:40px">
+<p>Une affiche, une boîte de produit, un document distribué ou une bannière de salon ne peut contenir qu'un nombre limité de textes. Un QR code vidéo résout un problème très précis : il permet à quelqu'un debout devant cette surface imprimée de regarder une vidéo sans taper une longue adresse, chercher un titre, ou deviner quel résultat est le vôtre. Un scan doit le mener directement à la lecture. Quand ce n'est pas le cas, la faute n'est presque jamais le carré lui-même. C'est généralement le lien derrière, le paramètre de confidentialité de la vidéo, ou un choix d'impression qui a rendu un code par ailleurs parfait difficile à lire pour un appareil photo de téléphone.</p>
+<p>C'est pourquoi ce guide commence avant le générateur. D'abord, décidez où vit la vidéo et qui a le droit de la regarder. Ensuite, décidez si le scan doit atterrir directement sur la vidéo ou sur une page qui la présente. Seulement ensuite générez, stylisez et testez le code. Fait dans cet ordre, un QR code vidéo est fiable, bon marché et facile à mettre à jour. Fait à l'envers, vous pouvez finir par réimprimer un prospectus parce qu'une vidéo privée a refusé de se lancer, ou parce qu'un lien direct a envoyé les spectateurs dans un flux de recommandations sans rapport alors qu'une simple page de destination les aurait gardés sur votre message.</p>
+<h2>Pourquoi un QR code ne peut pas contenir la vidéo elle-même</h2>
+<p>Il est utile d'être direct sur la limite, car elle façonne chaque décision ultérieure. Un QR code contient du texte, pas des médias. À sa plus grande taille, version 40 avec le niveau de correction d'erreur le plus bas, un QR code standard contient jusqu'à 2 953 octets de données binaires, ou 4 296 caractères alphanumériques. C'est environ 3 kilo-octets. Même un court clip vidéo fortement compressé est des milliers de fois plus grand. Aucun générateur ne peut honnêtement mettre un fichier vidéo dans un code, et tout outil qui prétend le contraire téléverse en réalité la vidéo quelque part et renvoie vers elle en votre nom.</p>
+<p>La conséquence pratique est simple : la vidéo doit avoir un foyer avec un lien lisible avant de créer le code. YouTube, Vimeo, Google Drive, Dropbox, ou une page de votre propre site web peuvent tous servir de foyer, à condition que le lien ouvre la vidéo sans demander au spectateur un accès qu'il n'a pas. Si la vidéo n'existe que dans votre pellicule, sur un disque dur privé, ou dans un projet de montage, elle n'a pas encore d'adresse, et il n'y a rien d'utile vers quoi un QR code puisse pointer. Téléversez d'abord, copiez le lien de partage ensuite, et générez le code en troisième.</p>
+<h2>Lien direct ou page de destination : la décision qui compte le plus</h2>
+<p>Il y a deux voies honnêtes, et aucune n'est bonne pour tous les usages. Un lien direct envoie le lecteur directement vers la vidéo sur YouTube, Vimeo ou un autre hébergeur. Un lien de page de destination envoie le lecteur vers une page que vous contrôlez, où la vidéo se trouve avec un titre, une courte description, des liens connexes et une prochaine étape claire. La voie directe est plus rapide. La voie de page de destination vous donne du contexte, de la marque et le contrôle de ce qui se passe après la fin de la vidéo.</p>
+<p>Choisissez le lien direct quand la vidéo est tout le message et que le spectateur sait déjà pourquoi il la regarde. Un clip de mode d'emploi sur une boîte de produit, une bande-annonce sur une affiche, une vidéo de bienvenue à l'entrée d'un lieu, ou une démo sur un stand de salon correspondent tous à ce schéma. Le spectateur scanne, la vidéo se lance, et rien d'autre n'a besoin d'être expliqué. Moins il y a de touches entre le scan et la lecture, mieux c'est, et un lien direct supprime toute une page de ce parcours.</p>
+<p>Choisissez une page de destination quand la vidéo a besoin d'une introduction, quand un scan doit offrir plus d'une vidéo, ou quand vous ne voulez pas que la plateforme d'hébergement décide de ce que les spectateurs voient ensuite. Sur YouTube, par exemple, un lien direct peut mener les spectateurs vers des recommandations et des vidéos connexes une fois la vôtre terminée. C'est bien pour la découverte, mais mauvais pour une page de vente, un module de formation ou une collecte de fonds où la prochaine étape doit être un formulaire, un bouton de réservation ou une seconde vidéo d'une série. Une page de destination garde le spectateur dans votre cadre, avec votre titre, votre appel à l'action et vos liens, plutôt que de confier la fin à un algorithme.</p>
+<p>Une page de destination est aussi le choix le plus sûr quand la vidéo elle-même peut changer. Une démo produit est retournée, un enregistrement d'intervenant est remplacé par un montage plus propre, ou une vidéo saisonnière est échangée contre une nouvelle. Avec un code dynamique pointant vers votre propre page de destination, vous pouvez échanger la vidéo intégrée sans rien réimprimer. Avec un code statique pointant directement vers une seule adresse vidéo, une vidéo supprimée ou remplacée signifie un code mort et, en impression, un prospectus mort. Si la vidéo est susceptible d'être mise à jour, ou si le matériel imprimé vivra des mois, cette flexibilité seule peut justifier la page supplémentaire.</p>
+<div class="table-scroll"><table>
+<tr><th>Parcours</th><th>Idéal pour</th><th>Attention à</th></tr>
+<tr><td>Lien direct vers YouTube ou Vimeo</td><td>Une vidéo, un but clair, le chemin le plus rapide vers la lecture</td><td>Le paramètre de confidentialité doit permettre à quiconque a le lien de regarder ; des recommandations peuvent suivre sur YouTube</td></tr>
+<tr><td>Page de destination que vous contrôlez</td><td>Série, contexte, appels à l'action, vidéos que vous pouvez remplacer</td><td>Nécessite une touche supplémentaire pour lancer ; gardez la page rapide et le bouton de lecture évident</td></tr>
+<tr><td>Lien de fichier direct, comme Drive ou Dropbox</td><td>Partage interne ou simple où une page d'hébergeur est inutile</td><td>Le partage doit être réglé sur quiconque a le lien, et le format de fichier doit se lancer dans un navigateur de téléphone</td></tr>
+</table></div>
+<h2>Liens directs bien faits : YouTube et Vimeo</h2>
+<p>Sur YouTube, partez de la vidéo elle-même et utilisez le bouton Partager sous le lecteur, puis copiez le lien qu'il vous donne. Ce lien de partage est conçu pour ouvrir la vidéo directement, et il est plus court et plus propre que de copier la barre d'adresse avec des paramètres supplémentaires joints. Avant de générer quoi que ce soit, vérifiez le paramètre de visibilité, car il décide de qui peut réellement regarder. YouTube propose Public, Non répertorié et Privé. Les vidéos publiques peuvent être vues par quiconque sur YouTube et partagées avec quiconque. Les vidéos non répertoriées peuvent être vues et partagées par quiconque a le lien, sans besoin d'un compte Google, mais elles n'apparaissent pas sur votre page de chaîne ni dans les résultats de recherche sauf si quelqu'un les ajoute à une playlist publique. Les vidéos privées ne peuvent être vues que par vous et les personnes que vous choisissez, donc une vidéo privée est le mauvais choix pour un QR code public : la plupart des lecteurs tomberont sur une erreur au lieu d'un bouton de lecture.</p>
+<p>Pour la plupart des codes vidéo imprimés, Non répertorié est le juste milieu quand vous voulez le partage sans la découverte par recherche. Un document d'atelier, un encart produit ou un programme d'événement privé peut utiliser un lien non répertorié pour que seules les personnes qui scannent le code, ou reçoivent le lien de quelqu'un qui l'a fait, puissent regarder. Rappelez-vous simplement que Non répertorié n'est pas verrouillé : quiconque a le lien peut le repartager. Si le contenu est confidentiel, payant, ou montre des personnes qui n'ont pas accepté d'être publiques, ne comptez pas sur Non répertorié. Utilisez Privé avec des invitations nominatives, ou placez la vidéo derrière une page avec son propre contrôle d'accès, et acceptez qu'un simple QR code public ne soit pas le bon outil pour ce travail.</p>
+<p>Sur Vimeo, le même principe s'applique avec des étiquettes différentes. Copiez le lien de partage de la vidéo depuis le lecteur, puis vérifiez le paramètre de confidentialité pour que quiconque a le lien puisse regarder. Vimeo convient aussi aux cas où les recommandations de YouTube sont un inconvénient : une présentation client, une pièce de portfolio, ou un film de marque où vous ne voulez pas que le spectateur soit entraîné vers des vidéos sans rapport ensuite. Si vous utilisez un mot de passe sur Vimeo, rappelez-vous que le mot de passe est une seconde étape que le lecteur doit accomplir, imprimez-le donc près du code uniquement si vous avez vraiment besoin de cette barrière, et testez tout le parcours, mot de passe inclus, avant d'imprimer.</p>
+<p>Deux petits détails évitent des échecs fréquents. D'abord, testez le lien dans une fenêtre de navigateur privée ou incognito, déconnecté de vos comptes, avant de l'encoder. S'il s'y lance, il se lancera pour un inconnu. S'il vous demande de vous connecter, le paramètre de confidentialité est erroné. Ensuite, si le code doit s'ouvrir à un moment précis, réglez l'heure de début avant de copier le lien, plutôt que d'espérer que les spectateurs feront défiler jusqu'au bon endroit. Un court clip qui commence au bon moment semble intentionnel ; une longue vidéo qui commence au début semble être un devoir.</p>
+<h2>Quand une page de destination mérite sa touche supplémentaire</h2>
+<p>Utilisez la page de destination pour résoudre des problèmes qu'un lien direct ne peut pas résoudre. Proposez une playlist ou une série dans l'ordre, plutôt qu'un seul clip. Ajoutez des sous-titres, une transcription ou un document téléchargeable à côté de la vidéo pour les spectateurs qui ne peuvent pas lancer le son. Incluez un lien de réservation, un lien produit ou un formulaire de retour directement sous la vidéo, pour que le moment d'attention ne s'évapore pas une fois le clip terminé. Pour les événements, une page de destination peut aussi contenir le programme, le plan du lieu et les coordonnées qu'une seule vidéo ne peut pas porter. Dans chaque cas, le QR code fait toujours un seul travail — amener la personne au bon endroit — mais la page fait le reste du travail.</p>
+<h2>Design et impression : rendre le code facile à scanner</h2>
+<p>Les codes vidéo sont souvent imprimés là où les gens bougent, tiennent un téléphone d'une main, ou se tiennent plus loin que le designer ne l'imaginait. La taille est donc la première décision de design, pas une réflexion après coup. Une règle empirique largement utilisée est le ratio 10:1 : le code doit mesurer au moins un dixième de la distance à laquelle il sera scanné. Un code scanné à 30 centimètres doit mesurer au moins 3 centimètres de large ; une affiche lue à 1 mètre exige un code d'au moins 10 centimètres de large. Ce sont des minimums, pas des objectifs, et les codes plus denses, la faible lumière et les surfaces brillantes plaident tous pour voir plus grand.</p>
+<p>Laissez une zone de silence — une marge blanche d'au moins quatre modules de large sur les quatre côtés — autour du code. Les lecteurs utilisent cette bordure vide pour trouver où le motif commence et se termine, donc du texte, des logos ou des bordures décoratives pressés contre le bord peuvent perturber la détection. Imprimez des modules sombres sur fond clair, et visez un ratio de contraste d'au moins 4:1 entre le code et son fond. Noir sur blanc fonctionne toujours. Bleu marine foncé sur crème peut fonctionner. Des modules clairs sur fond sombre, des couleurs pâles sur papier pâle, et des photographies chargées derrière le code sont les suspects habituels quand un code a l'air correct mais scanne lentement ou pas du tout.</p>
+<p>Si vous ajoutez un logo ou une icône de lecture au centre, utilisez un niveau de correction d'erreur supérieur, car le logo recouvre délibérément une partie du motif. Les QR codes offrent quatre niveaux : L récupère environ 7 pour cent, M environ 15 pour cent, Q environ 25 pour cent, et H environ 30 pour cent des données abîmées ou masquées. Le niveau H est le choix habituel pour un code avec logo central, tandis que M est une valeur par défaut raisonnable pour un code propre. Une correction supérieure rend le code plus dense, donc un code avec logo doit généralement être imprimé légèrement plus grand qu'un code ordinaire portant le même lien. Pour un examen plus approfondi de la taille et du contraste, voir le <a href="/fr/blog/qr-code-print-size-guide/">guide des tailles d'impression</a> et le <a href="/fr/blog/qr-code-troubleshooting-guide/">guide de dépannage</a> avant de vous engager dans un tirage.</p>
+<p>Pour l'impression, exportez un fichier vectoriel comme SVG ou PDF quand vous le pouvez, ou un PNG haute résolution à 300 pixels par pouce à taille finale. Un petit PNG étiré sur une grande bannière adoucit les bords des modules et peut transformer un code net en code flou. Pour les écrans, les mêmes règles s'appliquent en miniature : gardez le code assez grand sur la diapositive ou l'affichage, gardez-le sur un panneau clair plutôt que sur une photographie, et ne l'animez pas, ne le faites pas disparaître, ni ne le placez là où un présentateur se tiendra devant. Un code vidéo sur une diapositive de présentation doit être montré assez longtemps, et assez grand, pour que le dernier rang puisse le scanner, pas être flashé deux secondes à la fin.</p>
+<h2>Testez tout le parcours, pas seulement le carré</h2>
+<p>Tester un QR code vidéo signifie tester le parcours qu'un inconnu empruntera, pas seulement si votre propre téléphone lit le motif. Commencez à l'écran : scannez le code avec deux téléphones différents, idéalement un iPhone et un téléphone Android, et idéalement avec un appareil plus ancien dans le lot. Les appareils photo plus anciens font la mise au point plus lentement et peinent avec les codes denses, donc un code qui ne fonctionne que sur un téléphone haut de gamme n'est pas prêt pour l'impression. Ouvrez le lien dans une fenêtre de navigateur privée, déconnecté, et confirmez que la vidéo se lance sans invite de connexion, sans demande d'autorisation, ni message « vidéo indisponible ».</p>
+<p>Testez ensuite une vraie épreuve imprimée à la taille réelle, sur le matériau réel, à la distance réelle, et dans la lumière réelle. Le papier brillant produit des reflets sous les lumières d'un lieu, l'emballage courbé déforme le motif, et un code qui scannait parfaitement sur votre bureau peut échouer sur une vitrine ensoleillée ou un mur de couloir sombre. Parcourez la distance à laquelle un spectateur se tiendra, tenez le téléphone comme il le tiendra, et chronométrez combien de temps il faut du scan à la lecture. Si cela prend plus de quelques secondes, ou ne fonctionne que sous un angle, agrandissez le code, augmentez le contraste, raccourcissez le lien, ou déplacez-le vers un endroit plus plat et mieux éclairé. Corriger l'un de ces points sur une épreuve coûte quelques minutes ; les corriger après un tirage coûte tout le tirage.</p>
+<h2>Erreurs fréquentes, et comment les éviter</h2>
+<p>L'erreur la plus fréquente est d'encoder une vidéo privée et de découvrir le problème après l'impression. La seconde est d'encoder un lien long et chargé de paramètres qui rend le code dense et fragile, alors qu'un lien court ou une redirection dynamique l'aurait gardé simple. La troisième est d'imprimer trop petit pour la distance de vision. Les trois sont évitables avec la même habitude : testez le lien déconnecté, testez l'épreuve à distance réelle, et traitez la règle de taille 10:1 comme un plancher.</p>
+<p>Pour des guides pratiques connexes, voir <a href="/fr/blog/how-to-scan-a-qr-code/">comment scanner un QR code</a> <a href="/fr/blog/how-to-create-a-dynamic-qr-code/">comment créer un QR code dynamique</a> et <a href="/fr/blog/qr-codes-for-events/">QR codes pour événements</a> si la vidéo fait partie d'une expérience d'événement plus large. FreeQrly prend en charge les 17 types de QR codes, mais la vidéo elle-même a toujours besoin d'un hébergeur, d'un lien lisible et d'un paramètre de confidentialité correspondant.</p>
+    </div>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+      <li><a href="https://bitly.com/blog/how-much-data-can-a-qr-code-store/">Combien de données un QR code peut-il stocker ?</a> - Consulté le 2026-11-04 ; à l'appui des limites de capacité de 2 953 octets, 4 296 caractères et 7 089 chiffres à la version 40, niveau L.</li>
+      <li><a href="https://support.google.com/youtube/answer/157177?hl=en-GB&co=GENIE.Platform%3DAndroid">Modifier les paramètres de confidentialité des vidéos - Aide YouTube</a> - Consulté le 2026-11-04 ; à l'appui des définitions Public, Non répertorié et Privé, y compris le fait que les vidéos non répertoriées peuvent être vues et partagées par quiconque a le lien.</li>
+      <li><a href="https://replug.io/blog/how-to-make-a-qr-code-for-a-video">QR code pour une vidéo : comment en créer un (YouTube, Drive, MP4)</a> - Consulté le 2026-11-04 ; à l'appui du fait qu'un QR code contient un lien, pas un fichier vidéo, et que les vidéos privées ne se lanceront pas pour les lecteurs.</li>
+      <li><a href="https://pageloot.com/video-qr-code-generator/">Générateur de QR code vidéo</a> - Consulté le 2026-11-04 ; à l'appui du parcours héberger, copier, créer et du fait qu'un fichier direct dans un format inhabituel peut ne pas se lancer dans un navigateur de téléphone.</li>
+      <li><a href="https://www.circulateqr.com/guides/qr-code-size-guide">Guide des tailles de QR code pour l'impression : taille minimale et distance</a> - Mis à jour le 21 octobre 2026 ; à l'appui de la règle 10:1 entre distance et taille, du minimum pratique de 2 x 2 cm, et de la zone de silence de quatre modules.</li>
+      <li><a href="https://www.cwtch.es/guide-qr-codes.html">QR codes : taille, correction d'erreur et création d'un code qui scanne</a> - Dernière mise à jour le 2 novembre 2026 ; à l'appui des niveaux de correction d'erreur L 7 pour cent, M 15 pour cent, Q 25 pour cent, H 30 pour cent, et du test avec plus d'un téléphone.</li>
+      <li><a href="https://www.uniqode.com/blog/qr-code-best-practices/qr-code-printing-guideline">Comment imprimer un QR code : format de fichier, matériaux et checklist (2026)</a> - Consulté le 2026-11-04 ; à l'appui du ratio de contraste d'au moins 4:1, de l'export vectoriel SVG ou EPS, et de la correction d'erreur M ou supérieure pour l'impression.</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly présentant un QR code"></div>
+      <div>
+        <h3>Essayez vous-même — c’est gratuit</h3>
+        <p>Tout ce que cet article décrit fonctionne dans le studio FreeQrly dès maintenant. Codes statiques, les 17 types de contenu, export PNG et SVG.</p>
+        <a class="btn" href="/fr/#studio">Ouvrir le studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Continuer la lecture</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/fr/blog/pre-print-qr-code-checklist/"><b>Checklist pré-impression des QR codes : testez sur du vrai papier avant d'imprimer des milliers</b></a>
+        <a class="rel-card" href="/fr/blog/printable-qr-code-cheat-sheet/"><b>Aide-mémoire QR code imprimable : taille, zone de silence et contraste sur une page</b></a>
+        <a class="rel-card" href="/fr/blog/do-qr-codes-expire/"><b>Les QR codes expirent-ils ? Non, mais ceux payants peuvent mourir</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bon à savoir</h2>
+    <details><summary><span>Un QR code peut-il stocker un fichier vidéo directement ?</span></summary><p>Non. Un QR code standard contient au maximum environ 3 kilo-octets de données binaires à sa plus grande taille, bien moins que n'importe quel fichier vidéo. Hébergez la vidéo sur YouTube, Vimeo, Drive ou votre propre site, et encodez plutôt le lien lisible.</p></details>
+    <details><summary><span>Dois-je renvoyer directement vers YouTube ou utiliser une page de destination ?</span></summary><p>Renvoyez directement quand la vidéo est tout le message et que la rapidité compte. Utilisez une page de destination quand vous avez besoin de contexte, de plusieurs vidéos, d'un appel à l'action, ou de la possibilité d'échanger la vidéo plus tard sans réimprimer.</p></details>
+    <details><summary><span>Quel paramètre de confidentialité YouTube dois-je utiliser pour un QR code public ?</span></summary><p>Public ou Non répertorié. Les vidéos non répertoriées peuvent être vues et partagées par quiconque a le lien, sans compte Google, mais elles restent hors de la recherche et de votre page de chaîne. Les vidéos privées ne se lancent que pour les personnes que vous invitez, elles échouent donc pour les lecteurs généraux.</p></details>
+    <details><summary><span>Puis-je changer la vidéo après avoir imprimé le QR code ?</span></summary><p>Seulement si le code est dynamique, ou s'il pointe vers une page de destination que vous contrôlez. Un code statique encode sa destination de façon permanente, donc remplacer la vidéo signifie réimprimer. Utilisez un code dynamique pour tout ce qui peut être mis à jour.</p></details>
+    <details><summary><span>Quelle taille doit faire un QR code vidéo imprimé ?</span></summary><p>Au moins un dixième de la distance de scan, comme minimum. Un code scanné à 30 centimètres doit mesurer au moins 3 centimètres de large, et une affiche lue à 1 mètre exige au moins 10 centimètres. Voyez plus grand en faible lumière ou sur matériau brillant.</p></details>
+    <details><summary><span>Pourquoi mon QR code vidéo scanne-t-il mais ne se lance-t-il pas ?</span></summary><p>Les causes habituelles sont une vidéo privée, un paramètre de partage exigeant une connexion, une vidéo supprimée ou restreinte par région, ou un format de fichier qui ne se lance pas dans un navigateur de téléphone. Testez le lien dans une fenêtre de navigateur privée déconnectée avant d'imprimer.</p></details>
+    <details><summary><span>Puis-je mettre un logo ou une icône de lecture au centre d'un QR code vidéo ?</span></summary><p>Oui, si vous utilisez une correction d'erreur élevée, niveau H, et imprimez le code légèrement plus grand. Testez le code stylisé sur plus d'un téléphone, car un logo recouvre des modules de données par conception et un code dense ou peu contrasté peut échouer après stylisation.</p></details>
+    <details><summary><span>Le spectateur a-t-il besoin d'une application spéciale pour scanner un QR code vidéo ?</span></summary><p>Non. Un appareil photo de téléphone lit le code et ouvre le lien dans l'application YouTube ou Vimeo, ou dans le navigateur, selon l'hébergeur. L'hébergeur de la vidéo, pas une application QR, gère la lecture.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Codes dynamiques illimités — offre à durée limitée.</h3>
+        <p>Connectez-vous gratuitement et créez-en autant que nécessaire. Chaque code reste modifiable après impression et n'expire jamais.</p>
+      </div>
+      <a class="fctaBtn" href="/fr/login/">Commencer gratuitement</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/fr/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n'expirent jamais.</p>
+        <div class="fmade">Codes statiques, faits dans votre navigateur.</div>
+      </div>
+      <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a><a href="/fr/pricing/">Tarifs</a></div>
+      <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d'impression</a><a href="/fr/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Entreprise</h4><a href="/fr/about/">À propos</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d'utilisation</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

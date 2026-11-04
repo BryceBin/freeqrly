@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>二维码诈骗安全检查清单：扫码前识别假码 | FreeQrly</title>
+<meta name="description" content="一份实用的检查清单，帮你在扫码前后识别假的或被篡改的二维码，以及如果你已经扫了坏码该怎么办。">
+<link rel="canonical" href="https://freeqrly.com/zh/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-scam-safety-checklist/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="二维码诈骗安全检查清单：扫码前识别假码 | FreeQrly">
+<meta property="og:description" content="一份实用的检查清单，帮你在扫码前后识别假的或被篡改的二维码，以及如果你已经扫了坏码该怎么办。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/zh/blog/qr-code-scam-safety-checklist/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"二维码诈骗安全检查清单：扫码前识别假码 | FreeQrly","description":"一份实用的检查清单，帮你在扫码前后识别假的或被篡改的二维码，以及如果你已经扫了坏码该怎么办。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是 quishing？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quishing 就是二维码钓鱼：一种二维码藏着有害链接、通向假登录或支付页，或者通向旨在偷信息的下载的诈骗。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "二维码本身能感染我的手机吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "码本身只是一个编码的链接或指令，但它背后的页面或下载可能尝试偷信息或安装恶意软件，这就是为什么你应该在点进去之前先读预览。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "停车计时器上的二维码扫起来安全吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以是安全的，但要先检查码是作为计时器或招牌的一部分印上去的，而不是贴在上面的。如果它看起来是分层的、翘边的，或者位置不对，就改用官方 App 或计时器支付。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我应该扫意外短信或邮件里的二维码吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不应该，尤其当它催你立刻行动时。改用你已经信任的电话号码或网站联系公司，而不是跟着码走。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "扫码后我应该在预览里检查什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "逐字读域名，留意拼写错误或调换的字母，并且警惕隐藏真实目标的短链接。如果域名和你期待的公司对不上，就关掉预览。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我在扫码到达的页面上输入了密码，该怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "关掉页面，然后通过真实 App 或网站更改那个密码，开启多重验证，并且把同一个密码在别处用过的地方也改掉，先从邮箱账号开始。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "二维码诈骗向哪里举报？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在美国，到 FTC 的 ReportFraud.ftc.gov 举报，包括你在哪里看到码、信息说了什么、它通向哪里。在别处，用你国家的欺诈举报服务，并通过官方渠道通知被冒充的公司。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"二维码诈骗安全检查清单：扫码前识别假码 | FreeQrly","description":"一份实用的检查清单，帮你在扫码前后识别假的或被篡改的二维码，以及如果你已经扫了坏码该怎么办。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "检查码",
+      "text": "留意贴纸、凸起的边缘、翘起的角，或者和招牌其余部分不匹配的印刷。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "检查背景",
+      "text": "问问码是不是属于那个地方，码周围的信息有没有说明它是干什么用的。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "用自带摄像头扫码",
+      "text": "用可信的扫码器，等待目标预览，而不是盲目打开任何东西。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "读预览地址",
+      "text": "逐字检查域名有没有拼写错误、调换的字母，或者隐藏目标的短链接。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "拒绝意外的登录和支付",
+      "text": "永远不要在只因扫了意外码而到达的页面上输入密码、卡号或验证码。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "不确定时换个办法核实",
+      "text": "关掉页面，通过它的 App 或者自己输入的地址去这项服务。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
+    <div class="kicker" style="text-align:center">实战笔记</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">在扫码前<span class='hl hl-mint'>识别假二维码</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">二维码是一个肉眼读不出来的链接，而这正是骗子喜欢它的原因。这份清单给你两次停顿，能挡住大多数二维码诈骗：扫码前快速检查一次，扫码后仔细读一次预览。</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约14分钟</p>
+    <div class="prose" style="margin-top:40px">
+<p>二维码是一个肉眼读不出来的链接。这让它方便，也让它对骗子有用。停车计时器、海报、包裹或信息里的码，看起来可能很普通，却指向一个假登录页、一个你从来没想去的支付页，或者一个你从来没要过的下载。大多数二维码诈骗，只要你在两个时刻慢下来就会失败：扫码前，和手机向你展示目标之后。</p>
+<h2>二维码诈骗通常是怎么运作的</h2>
+<p>大多数二维码诈骗，常被称为<strong>quishing</strong>——二维码钓鱼——都遵循同样的模式。骗子把有害链接藏进码里，然后给你一个匆忙扫码的理由。美国联邦贸易委员会（FTC）在 2023 年 12 月的消费者提醒里警告说，骗子会用自己的码盖住停车计时器上的真码，还会通过短信或邮件发送编造故事的码：无法投递的包裹、账号问题，或者据称需要改密码的可疑活动。每个故事都是为了制造紧迫感，让你在不动脑子的情况下扫码、打开链接。</p>
+<p>扫码之后，陷阱通常是码背后的页面，而不是码本身。FTC 描述了一个看起来真实、其实是假的冒充网站：如果你在那里登录，骗子就能偷走你输入的任何东西，而一个坏码还可能尝试安装恶意软件。ESET 在谈 quishing 时提出了一个相关的观点：因为目标是编码在视觉图案里、而不是以可读文字写出来的，所以它在扫码之前一直藏着，而且一些传统的邮件过滤器无法像检查可见链接那样检查它。这些都不意味着二维码本身不安全，而是意味着检查必须在扫码之后、在手机向你展示的预览里完成，在你点进去之前。</p>
+<h2>扫码前：五秒检查</h2>
+<p>你的手机摄像头无法告诉你印刷码有没有被动过手脚。你的眼睛可以帮忙。在把摄像头对准任何东西之前，先过一遍这些检查。</p>
+<h3>1. 看有没有贴在真码上面的贴纸</h3>
+<p><strong>摸一摸、看一看边缘。</strong>贴在印刷招牌上的贴纸常常有可见的边框、略微凸起的边缘、不同的光泽或纸张质地，或者翘起的角。如果码压在另一个码、Logo 或印刷文字上面，就把它当作可疑的。这是 FTC 描述的经典停车计时器手法：真正的支付码被盖住了，付款就到了骗子手里。如果任何地方看起来是分层的，别扫它。改用官方 App、计时器本身，或者你已经知道的场馆网站来支付。</p>
+<h3>2. 检查损坏、不匹配或粗糙的印刷</h3>
+<p><strong>把码和招牌其余部分比较一下。</strong>作为招牌一部分印出来的真码，通常和周围环境一致：同样的印刷质量、同样的对齐、同样的风格。如果招牌其余部分清晰、码却模糊，或者码歪斜、相对边框尺寸奇怪，或者看起来像贴在专业展示品上的家庭打印件，就要当心。损坏本身不能证明是诈骗——一张被风吹日晒的海报可能只是旧了——但损坏加上意外的支付或登录请求，就应该让你停下来。我们的<a href="/zh/blog/qr-code-troubleshooting-guide/">故障排查指南</a>解释了怎么区分印刷问题和篡改问题。</p>
+<h3>3. 问问这个码是不是属于这个地方</h3>
+<p><strong>出现在意外地方的码本身就是一个危险信号。</strong>贴在灯柱、取款机或随机传单上的码，没有商家名、没有背景、没有说明它通向哪里，还没有赢得你的信任。意外包裹里的码，或者不认识的发件人发来的信息里的码，也是如此。合法商家会告诉你码是干什么用的——查看菜单、支付停车费、加入 WiFi——以及它应该带你去哪里。如果两者都不清楚，就别碰它。</p>
+<h3>4. 读码周围的信息，而不只读码</h3>
+<p><strong>紧迫感是骗子最喜欢的工具。</strong>留意要求立刻行动的信息：账号将被关闭、包裹将被退回，或者付款已逾期。留意威胁、你没有参加过的抽奖奖品，以及和你实际订购的东西对不上的请求。真正的公司几乎总会给你另一个核查办法——它自己的 App、官方网站，或者你已经信任的电话号码——而不会坚持扫码是唯一选项。</p>
+<h3>5. 扫码之前先决定怎么扫</h3>
+<p><strong>用手机自带摄像头或你信任的扫码器，并且计划读预览。</strong>自带摄像头通常会在打开之前先显示目标地址，而这正是这份清单依赖的停顿。别在需要扫码的那一刻安装新的扫码 App，尤其不要安装码所在的招牌或信息本身推荐的 App。我们的<a href="/zh/blog/how-to-scan-a-qr-code/">如何扫二维码</a>指南讲了常见手机上的预览步骤。</p>
+<div class="table-scroll"><table>
+<tr><th>扫码前检查</th><th>要看什么</th><th>检查不通过时怎么办</th></tr>
+<tr><td>贴纸或覆盖物</td><td>凸起的边缘、翘起的角、压在印刷品上的码</td><td>别扫；改用官方 App 或计时器</td></tr>
+<tr><td>印刷质量</td><td>模糊、不匹配，或者专业招牌上的家庭打印件</td><td>别扫；换个办法找到这项服务</td></tr>
+<tr><td>位置与背景</td><td>没有商家名、用途或说明的码</td><td>别碰它，通过已知渠道核实</td></tr>
+<tr><td>周围的信息</td><td>紧迫感、威胁、奖品，或者无法核实的故事</td><td>停下来；用你已经信任的联系方式联系公司</td></tr>
+<tr><td>扫码方式</td><td>招牌或信息推销的不熟悉的扫码 App</td><td>用自带摄像头并读预览</td></tr>
+</table></div>
+<h2>扫码后：点进去之前先读预览</h2>
+<p>扫码不是危险的一步。不读就点进去才是。当你的摄像头认出码时，它会显示一个预览——通常是地址，有时是一段简短描述。<strong>那个预览就是你的检查窗口。每次都要用它。</strong></p>
+<h3>逐字检查地址的拼写</h3>
+<p><strong>留意拼写错误、调换的字母和多余的词。</strong>FTC 对意外码的核心建议是，在打开之前检查网址，如果它看起来像熟悉的地址，要确认它不是冒充的。一个调换的字母、一个不该有的连字符、一个多余的词比如 secure 或 verify，或者一个知名品牌名挂在一个不熟悉的域名上，都可能表明是假的。读域名——地址中标识网站的那部分——而不是页面标题或 Logo 里的品牌名，因为 Logo 很容易复制，域名要造得逼真就难得多。如果你期待的是某个公司，而域名不是那家公司，就关掉预览。</p>
+<h3>警惕隐藏的目标</h3>
+<p><strong>短链接隐藏了真实目标，所以要把它当作未经证实的。</strong>如果预览显示的是短链接服务，或者一长串随机字符，而不是一个可识别的域名，你在打开之前无法知道它真正通向哪里——而这正是风险所在。目标隐藏时，选已知的路：自己输入公司的地址，或者打开它的 App。</p>
+<h3>在意外页面上永远不要输入密码或支付信息</h3>
+<p><strong>这条规则能一下子挡住大多数二维码诈骗。</strong>如果你只是因为扫了码——尤其是一条你没预料到的信息里的码——就到了一个登录或支付页，不要在那里输入密码、卡号、银行信息或验证码，不管页面看起来多逼真。冒充页面就是做得和真的一模一样。相反，关掉页面，直接去这项服务：打开它的 App、自己输入它的地址，或者打一个你已经信任的电话。如果信息声称你的账号有问题，通过官方 App 检查会告诉你那个问题是不是真的，而不用把凭证交给任何人。</p>
+<h3>留意页面本身的紧迫感把戏</h3>
+<p><strong>倒计时、警告和弹窗是施压手段，不是证据。</strong>一个说你的账号几分钟内将被锁定、或者你必须在计时器走完之前行动的页面，是在催你跳过上面的检查。关掉标签。真正的账号问题，不会因为你花五分钟通过另一个渠道核实就消失。</p>
+<h3>没有理由时，别从扫码下载文件或加入网络</h3>
+<p><strong>二维码能指向的不只是一个网站。</strong>它能触发下载，或者提议你连接一个 WiFi 网络。别因为扫码要求你这么做就安装 App 或接受下载，对手机官方商店之外的 App 更要小心。别加入海报上的码提供的、不熟悉的 WiFi 网络，除非你已经和场馆确认那个网络是他们的。</p>
+<h2>如果你已经扫了坏码</h2>
+<p>扫了坏码不自动意味着你已经受害，即使在坏页面上输入了信息，只要及时行动也是可以挽回的。按顺序做这些步骤，别让难为情拖慢你——骗子就是靠人们保持沉默。</p>
+<p><strong>第一，停下来并断开。</strong>关掉标签或 App，不要再输入任何东西，也不要听从页面上的进一步指示，比如打它显示的号码或者安装它提供的任何东西。如果下载已经开始，别打开它。</p>
+<p><strong>第二，从你信任的设备和路径更改你输入过的任何密码。</strong>打开真实服务的 App 或自己输入它的地址，在那里改密码，并且如果还没有开启多重验证就开启它。如果同一个密码在别处也用过，也在那里改掉，先从邮箱账号开始，因为邮箱常常是重置其他一切的关键。</p>
+<p><strong>第三，如果你输入了支付信息，立刻联系你的银行或发卡机构。</strong>告诉他们发生了什么，让他们留意未经授权的交易，并询问冻结或换卡的事。接下来的几天里检查你的账单，看看有没有你不认识的交易。</p>
+<p><strong>第四，举报它。</strong>在美国，到 FTC 的 ReportFraud.ftc.gov 举报诈骗，尽可能详细地提供信息：你在哪里看到码、信息说了什么、它通向的地址。举报能帮助当局追踪模式，比如某一地区一连串被篡改的码。如果你身在别处，向你国家的消费者保护或欺诈举报服务举报，并且通过官方渠道向被冒充的公司举报。</p>
+<p><strong>最后，检查你的设备。</strong>确保手机操作系统是最新的，删除码引导你安装的任何 App 或文件。如果之后有任何异常行为，向手机制造商的官方支持求助，而不是向可疑页面上显示的任何号码求助。</p>
+<div class="table-scroll"><table>
+<tr><th>发生了什么</th><th>首先要做什么</th></tr>
+<tr><td>你扫了，但没有点进去、也没有输入任何东西</td><td>关掉预览；通常不需要进一步行动</td></tr>
+<tr><td>你输入了密码</td><td>通过真实 App 或网站更改它，并开启多重验证</td></tr>
+<tr><td>你输入了支付信息</td><td>立刻联系你的银行或发卡机构并留意你的账单</td></tr>
+<tr><td>你下载了东西</td><td>别打开它；删除它并更新手机操作系统</td></tr>
+<tr><td>你不确定发生了什么</td><td>向 FTC 举报并检查你的账号和设备</td></tr>
+</table></div>
+<h2>对商家：保护你自己的顾客不受假码侵害</h2>
+<p>如果你的商家印刷二维码，顾客的安全部分是你的设计问题。一个分不清你的真码和贴在它上面的贴纸的顾客，就是一个骗子可以把付款引走的顾客，而损害会落在你的声誉上，哪怕你什么都没做错。几个实际习惯能让篡改更难得逞、更容易被发现。</p>
+<p><strong>用带品牌、可识别的码。</strong>一个带有你的 Logo 和颜色、通向你自己域名的码，比一个指向通用短链接的普通码更难逼真地模仿，而且它给了细心的顾客在预览里可以识别的东西。把码作为印刷设计的一部分——放在玻璃下、柜台后面，或者直接印在包装或永久招牌上——而不是一张任何人都能撕下来或盖住的松散贴纸。</p>
+<p><strong>告诉顾客真码在哪里。</strong>在招牌本身和你的网站上直白地说明，顾客会在哪里找到你真正的码、它应该带他们去哪里。比如：我们的支付码印在计时器本身上，而不是一张单独的贴纸上，并且它通向我们自己的网站。就这一句话，就让其他地方的每张贴纸都成了显而易见的假货。如果你移动了码或重印了招牌，通过你常用的渠道告诉顾客，并且去掉旧码，而不是把它们留在原地任人利用。</p>
+<p><strong>优先用不用重印就能改的码。</strong>动态码可以在印刷后编辑，让你在链接变化或码被入侵时更新目标，而不用让过时的码留在流通中。FreeQrly 动态码登录后免费，20 个免费码，限时促销期间目前不限量，并且可以在印刷后编辑，带扫码统计和不限次数的扫码。如果印好的码被举报遭到篡改，你可以改掉幸存码指向的地方，并且只重印需要重印的部分。相比之下，被入侵的静态码必须实际更换。</p>
+<h2>更安全的码从可信的生成器开始</h2>
+<p>上面的大部分安全建议是关于别人的码。当你创建自己的码时，选一个让过程简单、透明的生成器。FreeQrly 静态码免费、不需要注册、没有水印、永不过期。你可以创建 17 种内容类型的码，导出为 PNG 或 SVG 用于印刷，加上 Logo，或者需要很多码时批量生成。在<a href="/zh/">FreeQrly 首页</a>试试，或者用<a href="/zh/scan/">二维码扫码器</a>安全地测试你收到的码——就像这份清单描述的那样，先读预览，再点任何东西。</p>
+<p>要保持的习惯很短：扫码前检查，扫码后读预览，永远不要让紧迫感跳过其中任何一步。一个经不起这两次停顿的码，还不配得到你的密码、你的支付，或者你的信任。</p>
+    </div>
+
+    <section class="sources">
+      <h2>参考来源</h2>
+      <ul>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">Scammers hide harmful links in QR codes to steal your information</a>——2023 年 12 月 6 日发布，如 FTC 消费者提醒列表所示；文章文字已由协调员在这个网址上点击核实。支撑：停车计时器贴纸覆盖、意外的短信/邮件码、紧迫感故事（无法投递的包裹、账号问题、可疑活动）、冒充网站偷走输入的信息、恶意软件风险、检查网址拼写错误，以及不扫意外的码。</li>
+      <li><a href="https://www.welivesecurity.com/en/business-security/qr-code-phishing-slip-past-corporate-security-measures/">How QR-code phishing can slip past corporate security measures</a>——2026 年 8 月 17 日发布，如获取的页面所示。ESET WeLiveSecurity 博客。支撑：quishing 即二维码钓鱼、目标藏在视觉图案里、一些传统过滤器无法检查它、扫码把互动转移到防护较少的手机上、紧迫感借口，以及通过另外找来的联系方式核实发件人。这篇文章里的统计数据本帖没有用。</li>
+      <li><a href="https://reportfraud.ftc.gov/">ReportFraud.ftc.gov (FTC fraud reporting site)</a>——2026 年 11 月 4 日访问；在 FTC 指导文字里被列为举报途径。仅支撑本帖里的举报步骤。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
+      <div>
+        <h3>自己试试——免费</h3>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
+        <a class="btn" href="/zh/#studio">打开生成器</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">继续读</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/zh/blog/static-vs-dynamic-qr-codes/"><b>静态码与动态码：永久免费还是订阅制？</b></a>
+        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-not-working/"><b>二维码不好用？7 个有用的修复</b></a>
+        <a class="rel-card" href="/zh/blog/qr-codes-for-restaurants/"><b>餐厅二维码 — 免费指南</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>小提示</h2>
+    <details><summary><span>什么是 quishing？</span></summary><p>Quishing 就是二维码钓鱼：一种二维码藏着有害链接、通向假登录或支付页，或者通向旨在偷信息的下载的诈骗。</p></details>
+    <details><summary><span>二维码本身能感染我的手机吗？</span></summary><p>码本身只是一个编码的链接或指令，但它背后的页面或下载可能尝试偷信息或安装恶意软件，这就是为什么你应该在点进去之前先读预览。</p></details>
+    <details><summary><span>停车计时器上的二维码扫起来安全吗？</span></summary><p>可以是安全的，但要先检查码是作为计时器或招牌的一部分印上去的，而不是贴在上面的。如果它看起来是分层的、翘边的，或者位置不对，就改用官方 App 或计时器支付。</p></details>
+    <details><summary><span>我应该扫意外短信或邮件里的二维码吗？</span></summary><p>不应该，尤其当它催你立刻行动时。改用你已经信任的电话号码或网站联系公司，而不是跟着码走。</p></details>
+    <details><summary><span>扫码后我应该在预览里检查什么？</span></summary><p>逐字读域名，留意拼写错误或调换的字母，并且警惕隐藏真实目标的短链接。如果域名和你期待的公司对不上，就关掉预览。</p></details>
+    <details><summary><span>我在扫码到达的页面上输入了密码，该怎么办？</span></summary><p>关掉页面，然后通过真实 App 或网站更改那个密码，开启多重验证，并且把同一个密码在别处用过的地方也改掉，先从邮箱账号开始。</p></details>
+    <details><summary><span>二维码诈骗向哪里举报？</span></summary><p>在美国，到 FTC 的 ReportFraud.ftc.gov 举报，包括你在哪里看到码、信息说了什么、它通向哪里。在别处，用你国家的欺诈举报服务，并通过官方渠道通知被冒充的公司。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>动态码不限量 — 限时活动</h3>
+        <p>免费登录，想建多少建多少。每个码印后可改，永不过期。</p>
+      </div>
+      <a class="fctaBtn" href="/zh/login/">免费开始</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/zh/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
+        <div class="fmade">静态码，在你的浏览器里生成。</div>
+      </div>
+      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
+      <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>
+      <div class="fcol"><h4>公司</h4><a href="/zh/about/">关于</a><a href="mailto:hello@freeqrly.com">联系我们</a></div>
+      <div class="fcol"><h4>法律</h4><a href="/zh/privacy/">隐私政策</a><a href="/zh/terms/">服务条款</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

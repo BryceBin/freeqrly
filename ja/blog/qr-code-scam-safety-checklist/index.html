@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRコード詐欺安全チェックリスト：スキャン前に偽のコードを見抜く | FreeQrly</title>
+<meta name="description" content="スキャンする前とスキャンしたあとに偽物や改ざんされたQRコードを見抜くための実用的なチェックリストと、すでに悪いコードをスキャンしてしまった場合の対処法です。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/qr-code-scam-safety-checklist/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/qr-code-scam-safety-checklist/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="QRコード詐欺安全チェックリスト：スキャン前に偽のコードを見抜く | FreeQrly">
+<meta property="og:description" content="スキャンする前とスキャンしたあとに偽物や改ざんされたQRコードを見抜くための実用的なチェックリストと、すでに悪いコードをスキャンしてしまった場合の対処法です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/qr-code-scam-safety-checklist/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"QRコード詐欺安全チェックリスト：スキャン前に偽のコードを見抜く | FreeQrly","description":"スキャンする前とスキャンしたあとに偽物や改ざんされたQRコードを見抜くための実用的なチェックリストと、すでに悪いコードをスキャンしてしまった場合の対処法です。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "クイッシングとは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "クイッシングはQRフィッシングです。QRコードが、偽のログインや決済ページ、または情報を盗むよう設計されたダウンロードに導く有害なリンクを隠す詐欺です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコード自体がスマホに感染させることがありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "コードはエンコードされたリンクや指示にすぎませんが、その裏側のページやダウンロードは、情報を盗んだり、マルウェアをインストールしたりしようとすることがあります。だからこそ、タップし進む前にプレビューを読むべきです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "パーキングメーターのQRコードは安全ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "安全な場合もありますが、まず、コードが上に貼られたものではなく、メーターや看板の一部として印刷されていることを確認します。重なって見えたり、剥がれていたり、場違いに見えたりする場合は、代わりに公式アプリやメーターで支払います。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "予期しないテキストやメールのQRコードはスキャンすべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、特に即座の行動を促す場合はです。コードに従うのではなく、すでに信頼している電話番号やウェブサイトで会社に連絡します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スキャン後のプレビューで何を確認すべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ドメインを1文字ずつ読み、綴りの間違いや入れ替わった文字に注意し、本当の行き先を隠す短縮リンクに疑いを持ちます。ドメインが期待した会社と一致しない場合は、プレビューを閉じます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スキャンで到達したページでパスワードを入力してしまいました。どうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ページを閉じ、次に本物のアプリやウェブサイトでそのパスワードを変更し、多要素認証をオンにし、同じパスワードをほかの場所でも使っていた場合は、まずメールアカウントから変更します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコード詐欺はどこに報告しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "米国では、ReportFraud.ftc.govでFTCに報告します。コードを見た場所、メッセージの内容、導かれた場所を含めます。ほかの地域では、国の詐欺報告サービスを使い、なりすまされた会社にその公式チャネルを通じて通知します。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"QRコード詐欺安全チェックリスト：スキャン前に偽のコードを見抜く | FreeQrly","description":"スキャンする前とスキャンしたあとに偽物や改ざんされたQRコードを見抜くための実用的なチェックリストと、すでに悪いコードをスキャンしてしまった場合の対処法です。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "コードを確認する",
+      "text": "ステッカー、盛り上がった縁、剥がれかけた角、看板の残りと一致しない印刷を探します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "文脈を確認する",
+      "text": "コードがその場所に属するかどうか、周りのメッセージが何のためかを説明しているかどうかを問います。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "内蔵カメラでスキャンする",
+      "text": "信頼できるスキャナーを使い、何も盲目的に開くのではなく、行き先のプレビューを待ちます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "プレビューのアドレスを読む",
+      "text": "ドメインを1文字ずつ確認し、綴りの間違い、入れ替わった文字、行き先を隠す短縮リンクがないかチェックします。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "予期しないログインと決済を拒否する",
+      "text": "予期しないコードのスキャンだけが理由で到達したページでは、パスワード、カード番号、確認コードを決して入力しません。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "不安な場合は別の方法で確認する",
+      "text": "ページを閉じ、アプリまたは自分で入力したアドレスでサービスに行きます。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">スキャンする前に、偽のQRコードを<span class='hl hl-mint'>見抜く</span></h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">QRコードは、目では読めないリンクです。まさにそれが詐欺師に好まれる理由です。このチェックリストは、ほとんどのQR詐欺を止める2つの立ち止まりを与えます。スキャン前の素早い確認と、スキャン後のプレビューを注意深く読むことです。</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 約14分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+<p>QRコードは、目では読めないリンクです。それが便利である理由であり、詐欺師にとって有用である理由でもあります。パーキングメーター、ポスター、荷物、メッセージの中のコードは、普通に見えながら、偽のログインページ、訪れるつもりのなかった決済ページ、求めたことのないダウンロードを指していることがあります。ほとんどのQR詐欺は、2つの瞬間にゆっくりすれば失敗します。スキャンする前と、スマホが行き先を表示したあとです。</p>
+<h2>QRコード詐欺が通常どう機能するか</h2>
+<p>ほとんどのQR詐欺は、しばしば<strong>クイッシング</strong>、つまりQRフィッシングと呼ばれ、同じパターンに従います。詐欺師は有害なリンクをコードの中に隠し、急いでスキャンさせる理由を与えます。米国連邦取引委員会（FTC）は、2023年12月の消費者向け警告で、詐欺師がパーキングメーター上の本物のコードを自分のコードで覆い、配達できなかった荷物、アカウントの問題、パスワード変更が必要だという疑わしい活動といった作り話とともに、テキストメッセージやメールでコードを送ると警告しました。各ストーリーは緊急性を生み出すよう設計されており、考えることなくコードをスキャンしてリンクを開かせるのです。</p>
+<p>スキャンしたあと、罠は通常、コード自体ではなく、その裏側のページです。FTCは、本物に見えるが本物ではないなりすましサイトを説明しています。そこでログインすれば、詐欺師は入力したものを何でも盗むことができ、悪いコードはマルウェアのインストールを試みることもあります。クイッシングについて書いたESETは、関連する点を挙げています。行き先は読みやすいテキストとして書かれるのではなく視覚的な模様にエンコードされるため、スキャンするまで隠れたままであり、一部の従来のメールフィルターは、可視リンクを検査するようにそれを検査できません。これは、QRコード自体が安全でないという意味ではありません。チェックは、スキャンのあと、タップする前に、スマホが表示するプレビューで行わなければならないという意味です。</p>
+<h2>スキャンする前に：5秒の確認</h2>
+<p>スマホのカメラは、印刷したコードが改ざんされたかどうかを教えてくれません。あなたの目が助けになります。カメラを何かに向ける前に、これらのチェックを行います。</p>
+<h3>1. 本物のコードの上に貼られたステッカーを探す</h3>
+<p><strong>縁を触って見ます。</strong>印刷した看板の上に貼られたステッカーは、しばしば目に見える境界、わずかに盛り上がった縁、異なる光沢や紙の質感、剥がれかけた角を持っています。コードが別のコード、ロゴ、印刷された文字の上に乗っている場合は、疑わしいものとして扱います。これは、FTCが説明する古典的なパーキングメーターの手口です。本物の決済コードが覆われ、支払いは詐欺師に行きます。何か重なって見える場合は、スキャンしてはいけません。代わりに、公式アプリ、メーター自体、またはすでに知っている会場のウェブサイトで支払います。</p>
+<h3>2. 損傷した、合わない、雑な印刷を確認する</h3>
+<p><strong>コードを看板の残りと比較します。</strong>看板の一部として印刷された本物のコードは、通常、周囲と一致します。同じ印刷品質、同じ配置、同じスタイルです。看板の残りが鮮明なのにコードがぼやけている場合、枠に対して斜めだったり、奇妙なサイズだったり、プロのディスプレイに貼られた家庭用プリントのように見える場合は注意します。損傷だけでは詐欺の証明にはなりません。天候で傷んだポスターは、単に古いだけかもしれません。しかし、損傷と、予期しない決済やログインの要求が組み合わされば、立ち止まるべきです。<a href="/ja/blog/qr-code-troubleshooting-guide/">トラブルシューティングガイド</a>では、印刷の問題と改ざんの問題を見分ける方法を説明しています。</p>
+<h3>3. コードがそもそもこの場所に属するかどうかを問う</h3>
+<p><strong>予期しない場所にあるコードは、それだけで危険信号です。</strong>電柱、現金自動預払機、無作為のチラシに貼られたコードで、事業者名も、文脈も、どこに導くかの説明もないものは、あなたの信頼を得ていません。予期しない荷物の中のコードや、見覚えのない送信者からのメッセージの中のコードも同じです。正規の事業者は、コードが何のためか、つまりメニューを見る、駐車料金を支払う、Wi-Fiに参加する、といったことと、どこに行くべきかを伝えます。どちらも明確でない場合は、そのままにします。</p>
+<h3>4. コードだけでなく、コードの周りのメッセージを読む</h3>
+<p><strong>緊急性は詐欺師のお気に入りの道具です。</strong>即座の行動を要求するメッセージに注意します。アカウントが閉鎖される、荷物が返送される、支払いが滞っているといったものです。脅し、応募していない賞品、実際に注文したものと一致しない要求にも注意します。本物の会社は、ほぼ常にもう1つの確認方法、つまり自社のアプリ、公式ウェブサイト、すでに信頼している電話番号を与え、スキャンが唯一の選択肢だと主張することはありません。</p>
+<h3>5. スキャンする前に、どうスキャンするかを決める</h3>
+<p><strong>スマホの内蔵カメラまたは信頼できるスキャナーを使い、プレビューを読む計画を立てます。</strong>内蔵カメラは通常、開く前に行き先のアドレスを表示します。まさにこのチェックリストが頼りにする立ち止まりです。スキャンが必要になったその瞬間に、新しいスキャナーアプリをインストールすることは避けます。特に、コードを載せた看板やメッセージ自体が宣伝するものは避けます。<a href="/ja/blog/how-to-scan-a-qr-code/">QRコードのスキャン方法</a>のガイドでは、一般的なスマホでのプレビューの手順を解説しています。</p>
+<div class="table-scroll"><table>
+<tr><th>スキャン前のチェック</th><th>何を探すか</th><th>チェックに失敗した場合</th></tr>
+<tr><td>ステッカーまたは上貼り</td><td>盛り上がった縁、剥がれかけた角、印刷物の上に乗ったコード</td><td>スキャンしないこと。公式アプリまたはメーターを代わりに使う</td></tr>
+<tr><td>印刷品質</td><td>ぼやけ、不一致、プロの看板上の家庭用プリント</td><td>スキャンしないこと。別の方法でサービスを探す</td></tr>
+<tr><td>場所と文脈</td><td>事業者名、目的、説明のないコード</td><td>そのままにし、知っているチャネルで確認する</td></tr>
+<tr><td>周りのメッセージ</td><td>緊急性、脅し、賞品、確認できないストーリー</td><td>立ち止まること。すでに信頼している連絡先で会社に連絡する</td></tr>
+<tr><td>スキャン方法</td><td>看板やメッセージが押しつける見慣れないスキャナーアプリ</td><td>内蔵カメラを使い、プレビューを読む</td></tr>
+</table></div>
+<h2>スキャンしたあと：タップする前にプレビューを読む</h2>
+<p>スキャンすることは危険なステップではありません。読まずにタップし進むことが危険です。カメラがコードを認識すると、プレビュー、通常はアドレス、ときには短い説明が表示されます。<strong>そのプレビューがあなたの確認窓です。毎回使いましょう。</strong></p>
+<h3>アドレスの綴りを1文字ずつ確認する</h3>
+<p><strong>綴りの間違い、入れ替わった文字、余分な言葉を探します。</strong>予期しないコードに対するFTCの中心的な助言は、開く前にURLを検査し、見慣れたアドレスのように見える場合は、なりすましでないことを確認することです。1文字の入れ替え、あるべきでない場所のハイフン、secureやverifyのような余分な言葉、見慣れないドメインに付けられたよく知られたブランド名は、いずれも偽物の信号になりえます。ページのタイトルやロゴの中のブランド名ではなく、サイトを特定するアドレスの部分であるドメインを読みます。ロゴはコピーしやすく、ドメインは説得力を持って偽造するのが難しいからです。特定の会社を期待していて、ドメインがその会社でない場合は、プレビューを閉じます。</p>
+<h3>隠れた行き先に疑いを持つ</h3>
+<p><strong>短縮リンクは本当の行き先を隠すため、未確認として扱います。</strong>プレビューに短縮リンクサービスや、認識できるドメインではなくランダムな文字列が表示される場合、開くまで本当にどこに導くかはわかりません。まさにそれがリスクです。行き先が隠れている場合は、代わりに知っている経路を選びます。会社のアドレスを自分で入力するか、そのアプリを開きます。</p>
+<h3>予期しないページでパスワードや決済情報を決して入力しない</h3>
+<p><strong>これが、ほとんどのQR詐欺をきっぱり止めるルールです。</strong>スキャンしたからという理由だけで、特に予期していなかったメッセージからのコードで、ログインや決済のページに到達した場合は、どんなに説得力があるように見えても、そこでパスワード、カード番号、銀行情報、確認コードを入力してはいけません。なりすましページは、本物とまったく同じに見えるよう作られています。代わりに、ページを閉じ、サービスに直接行きます。アプリを開くか、アドレスを自分で入力するか、すでに信頼している番号に電話します。メッセージがアカウントの問題を主張していた場合、公式アプリで確認すれば、その問題が本物かどうかがわかり、誰にも認証情報を渡すことなく済みます。</p>
+<h3>ページ自体の緊急性の仕掛けに注意する</h3>
+<p><strong>カウントダウンタイマー、警告、ポップアップは圧力の手口であり、証拠ではありません。</strong>数分以内にアカウントがロックされる、タイマーが切れる前に行動しなければならないと言うページは、上記のチェックを急いで通り過ぎさせようとしています。タブを閉じます。本物のアカウントの問題は、別のチャネルで確認するために5分かけても消えません。</p>
+<h3>理由なしに、スキャンしたコードからファイルをダウンロードしたり、ネットワークに参加したりしない</h3>
+<p><strong>QRコードはウェブサイト以上のものを指すことがあります。</strong>ダウンロードを引き起こしたり、Wi-Fiネットワークへの接続を提案したりすることがあります。スキャンしたコードが求めたからという理由だけで、アプリをインストールしたり、ダウンロードを受け入れたりしてはいけません。スマホの公式ストアの外で提供されるアプリには特に注意します。ポスター上のコードが提案する見慣れないWi-Fiネットワークには、そのネットワークが会場のものかどうかを会場に確認せずに参加してはいけません。</p>
+<h2>すでに悪いコードをスキャンしてしまった場合</h2>
+<p>悪いコードをスキャンしたからといって、自動的に被害を受けたわけではありません。悪いページで情報を入力してしまった場合でも、速やかに行動すれば回復できます。以下のステップを順に行い、恥ずかしさで遅らせないでください。詐欺師は、人が黙っていることに頼っています。</p>
+<p><strong>まず、止めて切断します。</strong>タブやアプリを閉じ、それ以上何も入力せず、表示された番号に電話したり、提供されたものをインストールしたりといった、ページからのさらなる指示に従いません。ダウンロードが始まった場合は、開きません。</p>
+<p><strong>次に、入力したパスワードを、信頼できる端末と経路から変更します。</strong>本物のサービスのアプリを開くか、アドレスを自分で入力し、そこでパスワードを変更し、まだオンになっていなければ多要素認証をオンにします。同じパスワードをほかの場所でも使っていた場合は、そこでも変更します。まずメールアカウントからです。メールは、ほかのすべてをリセットする鍵になることが多いからです。</p>
+<p><strong>第三に、決済情報を入力した場合は、速やかに銀行またはカード会社に連絡します。</strong>何が起きたかを伝え、不正な取引に注意するよう求め、カードの利用停止や交換について尋ねます。その後数日間、明細を確認し、見覚えのない取引がないかチェックします。</p>
+<p><strong>第四に、報告します。</strong>米国では、ReportFraud.ftc.govでFTCに詐欺を報告します。できるだけ詳しく、コードを見た場所、メッセージの内容、導かれたアドレスを伝えます。報告は、当局が、ある地域での改ざんコードの連続のようなパターンを追跡するのに役立ちます。ほかの地域では、国の消費者保護または詐欺報告サービスに報告し、なりすまされた会社に、その公式チャネルを通じて報告します。</p>
+<p><strong>最後に、端末を確認します。</strong>スマホのOSが最新であることを確認し、コードがインストールさせたアプリやファイルを削除します。その後何か奇妙な動作がある場合は、疑わしいページが示した番号ではなく、スマホメーカーの公式サポートに助けを求めます。</p>
+<div class="table-scroll"><table>
+<tr><th>何が起きたか</th><th>まず何をすべきか</th></tr>
+<tr><td>スキャンしたが、タップも入力もしなかった</td><td>プレビューを閉じること。通常、それ以上の対応は不要</td></tr>
+<tr><td>パスワードを入力した</td><td>本物のアプリやサイトで変更し、多要素認証をオンにする</td></tr>
+<tr><td>決済情報を入力した</td><td>速やかに銀行またはカード会社に連絡し、明細を注視する</td></tr>
+<tr><td>何かをダウンロードした</td><td>開かないこと。削除し、スマホのOSを更新する</td></tr>
+<tr><td>何が起きたかわからない</td><td>FTCに報告し、アカウントと端末を確認する</td></tr>
+</table></div>
+<h2>事業者向け：自分の顧客を偽のコードから守る</h2>
+<p>事業者がQRコードを印刷する場合、顧客の安全は部分的にはあなたの設計の問題です。本物のコードと、その上に貼られたステッカーの区別がつかない顧客は、詐欺師にリダイレクトされる顧客であり、あなたが何も悪いことをしていなくても、損害はあなたの評判に及びます。いくつかの実務的な習慣により、改ざんは引き起こしにくく、見つけやすくなります。</p>
+<p><strong>ブランド化された、認識できるコードを使います。</strong>ロゴと色を持ち、自分のドメインに導くコードは、汎用の短縮リンクを指す無地のコードよりも説得力を持って模倣するのが難しく、注意深い顧客にプレビューで認識するものを与えます。コードは、印刷デザインの一部として、ガラスの下、カウンターの裏、パッケージや恒久的な看板に直接印刷する形で置きます。誰でも剥がしたり覆ったりできる、ゆるいステッカーとして置くのではありません。</p>
+<p><strong>本物のコードがどこにあるかを顧客に伝えます。</strong>看板自体とウェブサイト上で、顧客が本物のコードを見つける場所と、どこに導くべきかを平易に述べます。たとえば、決済コードは別のステッカーではなく、メーター自体に印刷されており、自社のウェブサイトに導きます。その1文が、ほかの場所のすべてのステッカーを明らかな偽物に変えます。コードを移動したり、看板を刷り直したりした場合は、通常のチャネルで顧客に伝え、古いコードは悪用されないよう残さず取り除きます。</p>
+<p><strong>刷り直さずに変更できるコードを優先します。</strong>印刷後に編集できる動的コードは、リンクが変わったり、コードが侵害されたりした場合に、古いコードを流通させたままにすることなく行き先を更新できます。FreeQrlyの動的コードはサインイン後に無料で、20個まで無料、期間限定プロモーション中は現在無制限で、印刷後に編集でき、スキャン統計と無制限のスキャンが付きます。印刷したコードが改ざんされたと報告された場合、残っているコードの行き先を変更し、刷り直しが必要なものだけを刷り直すことができます。対照的に、侵害された静的コードは、物理的に交換しなければなりません。</p>
+<h2>より安全なコードは信頼できる生成ツールから始まる</h2>
+<p>上記の安全に関する助言のほとんどは、他人のコードについてです。自分のコードを作るときは、プロセスをシンプルで透明に保つ生成ツールを選びます。FreeQrlyの静的コードは無料で、登録不要、透かしなし、期限切れなしです。17種類のコンテンツタイプにわたってコードを作成し、印刷用にPNGやSVGとして書き出し、ロゴを加えたり、多く必要なときにバッチで生成したりできます。<a href="/ja/">FreeQrlyホームページ</a>で試すか、受け取ったコードを<a href="/ja/scan/">QRスキャナー</a>で安全にテストします。このチェックリストで説明されている通り、タップする前にまずプレビューを読むことです。</p>
+<p>保つべき習慣は短いものです。スキャン前に確認し、スキャン後にプレビューを読み、緊急性にどちらのステップも飛ばさせないことです。その2つの立ち止まりに耐えられないコードは、あなたのパスワード、決済、信頼を得ていません。</p>
+    </div>
+
+    <section class="sources">
+      <h2>出典</h2>
+      <ul>
+      <li><a href="https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information">詐欺師はQRコードに有害なリンクを隠し、あなたの情報を盗む</a> - FTCの消費者向け警告リストに表示されている通り、2023年12月6日公開。記事のテキストは、コーディネーターがこのURLでクリック確認しました。裏付ける内容：パーキングメーターのステッカー上貼り、予期しないテキスト／メールコード、緊急性のストーリー（配達できなかった荷物、アカウントの問題、疑わしい活動）、入力した情報を盗むなりすましサイト、マルウェアのリスク、綴りの間違いのためのURL検査、予期しないコードをスキャンしないこと。</li>
+      <li><a href="https://www.welivesecurity.com/en/business-security/qr-code-phishing-slip-past-corporate-security-measures/">QRコードフィッシングが企業のセキュリティ対策をすり抜ける仕組み</a> - 取得したページに表示されている通り、2026年8月17日公開。ESET WeLiveSecurityブログ。裏付ける内容：QRフィッシングとしてのクイッシング、視覚的な模様に隠れた行き先、一部の従来のフィルターが検査できないこと、スキャンによりやり取りが保護の少ないスマホに移ること、緊急性の口実、別途入手した連絡先での送信者の確認。この記事の統計は、この記事では使用していません。</li>
+      <li><a href="https://reportfraud.ftc.gov/">ReportFraud.ftc.gov（FTCの詐欺報告サイト）</a> - 2026年11月4日アクセス。FTCのガイダンステキストで報告経路として名前が挙げられています。報告のステップのみを裏付けます。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>自分で試す — 無料</h3>
+        <p>この記事の内容はすべて、現在のFreeQrlyスタジオでそのまま使えます。静的コード、17種類すべて、PNGとSVGの書き出しに対応しています。</p>
+        <a class="btn" href="/ja/#studio">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/static-vs-dynamic-qr-codes/"><b>静的コードと動的コード：永遠に無料か、サブスクリプションか</b></a>
+        <a class="rel-card" href="/ja/blog/why-is-my-qr-code-not-working/"><b>QRコードが動作しない？役立つ7つの修正</b></a>
+        <a class="rel-card" href="/ja/blog/qr-codes-for-restaurants/"><b>飲食店向けQRコード — 無料ガイド</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>クイッシングとは何ですか？</span></summary><p>クイッシングはQRフィッシングです。QRコードが、偽のログインや決済ページ、または情報を盗むよう設計されたダウンロードに導く有害なリンクを隠す詐欺です。</p></details>
+    <details><summary><span>QRコード自体がスマホに感染させることがありますか？</span></summary><p>コードはエンコードされたリンクや指示にすぎませんが、その裏側のページやダウンロードは、情報を盗んだり、マルウェアをインストールしたりしようとすることがあります。だからこそ、タップし進む前にプレビューを読むべきです。</p></details>
+    <details><summary><span>パーキングメーターのQRコードはスキャンしても安全ですか？</span></summary><p>安全な場合もありますが、まず、コードが上に貼られたものではなく、メーターや看板の一部として印刷されていることを確認します。重なって見えたり、剥がれていたり、場違いに見えたりする場合は、代わりに公式アプリやメーターで支払います。</p></details>
+    <details><summary><span>予期しないテキストやメールのQRコードはスキャンすべきですか？</span></summary><p>いいえ、特に即座の行動を促す場合はです。コードに従うのではなく、すでに信頼している電話番号やウェブサイトで会社に連絡します。</p></details>
+    <details><summary><span>スキャン後のプレビューで何を確認すべきですか？</span></summary><p>ドメインを1文字ずつ読み、綴りの間違いや入れ替わった文字に注意し、本当の行き先を隠す短縮リンクに疑いを持ちます。ドメインが期待した会社と一致しない場合は、プレビューを閉じます。</p></details>
+    <details><summary><span>スキャンで到達したページでパスワードを入力してしまいました。どうすればいいですか？</span></summary><p>ページを閉じ、次に本物のアプリやウェブサイトでそのパスワードを変更し、多要素認証をオンにし、同じパスワードをほかの場所でも使っていた場合は、まずメールアカウントから変更します。</p></details>
+    <details><summary><span>QRコード詐欺はどこに報告しますか？</span></summary><p>米国では、ReportFraud.ftc.govでFTCに報告します。コードを見た場所、メッセージの内容、導かれた場所を含めます。ほかの地域では、国の詐欺報告サービスを使い、なりすまされた会社にその公式チャネルを通じて通知します。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>動的コード無制限 — 期間限定オファー。</h3>
+        <p>無料でサインインして、必要なだけ作成できます。すべてのコードは印刷後も編集でき、有効期限はありません。</p>
+      </div>
+      <a class="fctaBtn" href="/ja/login/">無料で始める</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
+        <div class="fmade">静的コードはブラウザで作成。</div>
+      </div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
+      <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
+      <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
+      <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

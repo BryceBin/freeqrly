@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>動画QRコード：URLを入力させずに動画へリンクする | FreeQrly</title>
+<meta name="description" content="動画QRコードの実用的なガイド。YouTubeやVimeoに直接リンクする場合と、代わりにランディングページを使う場合、印刷する前にコードをテストする方法についてです。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/video-qr-code/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/video-qr-code/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/video-qr-code/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/video-qr-code/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/video-qr-code/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/video-qr-code/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/video-qr-code/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/video-qr-code/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/video-qr-code/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/video-qr-code/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/video-qr-code/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/video-qr-code/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="動画QRコード：URLを入力させずに動画へリンクする | FreeQrly">
+<meta property="og:description" content="動画QRコードの実用的なガイド。YouTubeやVimeoに直接リンクする場合と、代わりにランディングページを使う場合、印刷する前にコードをテストする方法についてです。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/video-qr-code/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style><style>
+.sources{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.sources h2{font-size:15px;margin:0 0 8px}
+.sources ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--soft)}
+.sources a{color:inherit;text-decoration:underline}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"動画QRコード：URLを入力させずに動画へリンクする | FreeQrly","description":"動画QRコードの実用的なガイド。YouTubeやVimeoに直接リンクする場合と、代わりにランディングページを使う場合、印刷する前にコードをテストする方法についてです。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-04","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "QRコードに動画ファイルを直接格納できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。標準的なQRコードは、最大サイズでも約3キロバイトのバイナリデータしか保持できず、どの動画ファイルよりもはるかに小さいのです。YouTube、Vimeo、ドライブ、自分のサイトに動画をホストし、再生可能なリンクをエンコードしてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "YouTubeに直接リンクすべきですか、それともランディングページを使うべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "動画がメッセージの全体で、速度が重要な場合は直接リンクします。文脈、複数の動画、行動喚起、刷り直さずに動画を差し替える能力が必要な場合はランディングページを使います。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "公開QRコードにはどのYouTubeプライバシー設定を使うべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "公開または限定公開です。限定公開動画は、Googleアカウントなしに、リンクを持つ誰でも視聴・共有できますが、検索やチャンネルページには出ません。非公開動画は招待した人だけが再生できるため、一般のスキャンした人には失敗します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコードを印刷したあとに動画を変更できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "動的コードの場合、または自分が管理するランディングページを指す場合に限ります。静的コードは行き先を永久にエンコードするため、動画を差し替えると刷り直しになります。更新の可能性があるものには動的コードを使ってください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷した動画QRコードはどのくらいの大きさにすべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "下限として、スキャン距離の10分の1以上です。30 cmの距離からスキャンされるコードは少なくとも3 cm幅であるべきで、1 mの距離から読まれるポスターには少なくとも10 cmが必要です。暗い光や光沢のある素材ではさらに大きくします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動画QRコードはスキャンできるのに再生できないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "通常の原因は、非公開の動画、サインインを要求する共有設定、削除または地域制限された動画、スマホのブラウザで再生できないファイル形式です。印刷する前に、アカウントからサインアウトしたプライベートウィンドウでリンクをテストしてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動画QRコードの中央にロゴや再生アイコンを入れられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。高い誤り訂正、レベルHを使い、コードを少し大きく印刷する場合に限ります。複数のスマホでデザイン済みコードをテストしてください。ロゴは設計上データモジュールを覆い、密度の高いコードや低コントラストのコードはデザイン後に失敗することがあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動画QRコードのスキャンに専用アプリは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。スマホのカメラがコードを読み取り、ホストに応じてYouTubeやVimeoのアプリ、またはブラウザでリンクを開きます。再生を担うのはQRアプリではなく動画ホストです。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"動画QRコード：URLを入力させずに動画へリンクする | FreeQrly","description":"動画QRコードの実用的なガイド。YouTubeやVimeoに直接リンクする場合と、代わりにランディングページを使う場合、印刷する前にコードをテストする方法についてです。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "まず動画をホストする",
+      "text": "動画をYouTube、Vimeo、ドライブ、自分のサイトにアップロードし、何かを生成する前に再生可能なリンクがあることを確認します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "プライバシー設定を行う",
+      "text": "YouTubeでは公開または限定公開を、Vimeoでは同等のリンクを持つ誰でも可能という設定を選び、アカウントからサインアウトしたプライベートウィンドウでリンクをテストします。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "直接かランディングページかを選ぶ",
+      "text": "目的ひとつの単一動画には直接リンクします。文脈、複数の動画、将来の差し替えが必要な場合は、動的コードでランディングページを指します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "短い動的コードを生成する",
+      "text": "短い共有リンクを貼り、行き先を変更できるよう動的コードを優先し、リンクが許す限り模様をシンプルに保ちます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印刷用にサイズとデザインを整える",
+      "text": "10対1の距離ルールを適用し、4モジュールのクワイエットゾーンと少なくとも4:1のコントラストを保ち、ロゴを加える場合はレベルHの誤り訂正を使い、SVGまたは高解像度PNGで書き出します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "旅全体をテストする",
+      "text": "古い端末を含む2台のスマホで実際の印刷物の試し刷りをスキャンし、実際の距離と光のもとで、最後と次のステップまで視聴します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印刷して記録を残す",
+      "text": "試し刷りが通ってから初めて全量を承認し、どの印刷物がどの動画やランディングページを指すかを記録して、将来の更新を簡単にします。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">動画QRコードは、スキャンしたら<span class='hl hl-mint'>本当に再生される</span>ものでなければなりません</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">動画QRコードは、動画を四角の中に押し込んだものではありません。すでに視聴可能な場所にある動画への、短くスキャンしやすいリンクです。まずホスティングとプライバシー設定を正しくすれば、コードそのものは簡単な部分になります。</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 約15分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+<p>ポスター、商品パッケージ、配布資料、展示会のバナーには、載せられる文字に限りがあります。動画QRコードは、とても具体的な問題を解決します。印刷物の前に立っている人が、長いアドレスを入力したり、タイトルを検索したり、どれが自分のものか推測したりせずに動画を視聴できるようにします。1回のスキャンでそのまま再生に進むべきです。そうならない場合、原因はほとんどの場合四角そのものではありません。その裏側のリンク、動画のプライバシー設定、またはよいコードをスマホのカメラで読み取りにくくした印刷の選択です。</p>
+<p>だからこのガイドは、生成ツールより前から始まります。まず、動画がどこにあり、誰が視聴できるかを決めます。次に、スキャン先を動画そのものにするか、紹介するページにするかを決めます。そのあとで初めて、コードを生成し、デザインし、テストします。この順序で進めれば、動画QRコードは信頼でき、安く、更新も簡単です。逆の順序では、非公開の動画が再生を拒んだため、あるいは直接リンクが視聴者を無関係なおすすめ動画のフィードに送ったため、チラシを刷り直すことになりかねません。シンプルなランディングページがあれば、視聴者を自分のメッセージにとどめておけたのに、です。</p>
+<h2>QRコードに動画そのものを収められない理由</h2>
+<p>後のすべての判断を形作るため、この限界ははっきり述べておく価値があります。QRコードが持つのはテキストであって、メディアではありません。最大サイズのバージョン40で、最も低い誤り訂正レベルでも、標準的なQRコードは最大で2,953バイトのバイナリデータ、または4,296文字の英数字しか保持できません。およそ3キロバイトです。短く強く圧縮した動画クリップでも、その何千倍も大きいのです。どの生成ツールも、動画ファイルをコードの中に正直に入れることはできません。そう主張するツールは、実際には動画をどこかにアップロードし、あなたに代わってリンクしているだけです。</p>
+<p>実務的な結論はシンプルです。コードを作る前に、動画は再生可能なリンクを持つ置き場所が必要です。YouTube、Vimeo、Googleドライブ、Dropbox、自分のウェブサイトのページは、いずれもその置き場所になりえます。ただし、リンクが、視聴者が持っていないアクセスを求めずに動画を開くことが条件です。動画がカメラロール、非公開のハードディスク、編集中のプロジェクトの中にしかない場合、まだアドレスがなく、QRコードが指すべき有用なものは何もありません。まずアップロードし、次に共有リンクをコピーし、最後にコードを生成します。</p>
+<h2>直接リンクかランディングページか：最も重要な判断</h2>
+<p>正直なルートは2つあり、どちらもあらゆる用途に正しいわけではありません。直接リンクは、スキャンした人をYouTube、Vimeo、その他のホストの動画に直接送ります。ランディングページへのリンクは、スキャンした人を自分が管理するページに送ります。そこには動画とともに、タイトル、短い説明、関連リンク、明確な次のステップがあります。直接ルートの方が速いです。ランディングページのルートは、文脈、ブランディング、動画終了後のコントロールを与えてくれます。</p>
+<p>動画がメッセージの全体であり、視聴者がすでに視聴理由を知っている場合に直接リンクを選びましょう。商品パッケージの使い方クリップ、ポスターの予告編、会場入口のウェルカム動画、展示会ブースのデモは、すべてこのパターンに当てはまります。視聴者はスキャンして、動画が再生され、それ以外に説明は必要ありません。スキャンから再生までのタップが少ないほどよく、直接リンクはその経路からページひとつを取り除きます。</p>
+<p>動画に紹介が必要な場合、1回のスキャンで複数の動画を提供したい場合、またはホストプラットフォームに視聴者の次を決めさせたくない場合にランディングページを選びましょう。たとえばYouTubeでは、直接リンクは自分の動画が終わったあと、視聴者を関連動画やおすすめ動画へ誘導することがあります。発見のためにはそれでよいのですが、販売ページ、研修モジュール、募金では、次はフォーム、予約ボタン、シリーズの2本目の動画であるべきで、よくありません。ランディングページは、結末をアルゴリズムに渡すのではなく、自分の見出し、自分の行動喚起、自分のリンクとともに、視聴者を自分の枠の中にとどめます。</p>
+<p>動画自体が変わる可能性がある場合にも、ランディングページの方が安全な選択です。商品デモは撮り直され、講演の録画はよりきれいな編集版に置き換えられ、季節の動画は新しいものに差し替えられます。自分のランディングページを指す動的コードがあれば、埋め込んだ動画を何も刷り直さずに差し替えられます。単一の動画アドレスを直接指す静的コードでは、削除または置き換えられた動画は死んだコードを意味し、印刷物では死んだチラシを意味します。動画が更新されそうな場合、または印刷物が数か月使われる場合は、その柔軟性だけでも余分なページに見合います。</p>
+<div class="table-scroll"><table>
+<tr><th>ルート</th><th>最適な用途</th><th>注意点</th></tr>
+<tr><td>YouTubeやVimeoへの直接リンク</td><td>動画ひとつ、目的ひとつ、再生までの最速の経路</td><td>プライバシー設定はリンクを持つ誰でも視聴できるものにすること。YouTubeではその後おすすめが表示される場合がある</td></tr>
+<tr><td>自分が管理するランディングページ</td><td>シリーズ、文脈、行動喚起、差し替える可能性のある動画</td><td>再生までにタップがひとつ増える。ページを速くし、再生ボタンをわかりやすく保つこと</td></tr>
+<tr><td>ドライブやDropboxのような直接ファイルリンク</td><td>ホストのページが不要な社内共有やシンプルな共有</td><td>共有はリンクを持つ誰でも可能に設定すること。ファイル形式はスマホのブラウザで再生できるものであること</td></tr>
+</table></div>
+<h2>直接リンクを正しく使う：YouTubeとVimeo</h2>
+<p>YouTubeでは、動画そのものから始め、プレーヤー下の共有ボタンを使って、表示されたリンクをコピーします。その共有リンクは動画を直接開くよう設計されており、余分なパラメーターが付いたアドレスバーをコピーするよりも短くすっきりしています。何かを生成する前に、可視性設定を確認してください。誰が実際に視聴できるかを決めるからです。YouTubeには公開、限定公開、非公開があります。公開動画はYouTube上の誰でも視聴でき、誰とでも共有できます。限定公開動画は、Googleアカウントがなくても、リンクを持つ誰でも視聴・共有できますが、誰かが公開プレイリストに追加しない限り、チャンネルページや検索結果には表示されません。非公開動画は、あなたとあなたが選んだ人だけが見ることができます。したがって、非公開動画は公開QRコードには誤った選択です。ほとんどのスキャンした人は、再生ボタンの代わりにエラーにぶつかります。</p>
+<p>ほとんどの印刷用動画コードでは、検索で見つからずに共有したい場合、限定公開がちょうどよい選択です。ワークショップの配布資料、商品の同梱物、非公開イベントのプログラムは、限定公開リンクを使えます。コードをスキャンした人、またはスキャンした人からリンクを受け取った人だけが視聴できます。ただし、限定公開は厳重にロックされているわけではないことを忘れないでください。リンクを持つ誰でも再共有できます。内容が機密、課金対象、公開に同意していない人が映っている場合は、限定公開に頼らないでください。名前を指定した招待付きの非公開を使うか、動画を独自のアクセス管理を持つページの裏側に置き、シンプルな公開QRコードはその仕事に適したツールではないと受け入れましょう。</p>
+<p>Vimeoでは、ラベルは違いますが同じ原則が当てはまります。プレーヤーから動画の共有リンクをコピーし、リンクを持つ誰でも視聴できるようプライバシー設定を確認します。Vimeoは、YouTubeのおすすめが欠点になる場合にも適しています。顧客向けプレゼンテーション、ポートフォリオ作品、ブランドフィルムで、視聴者をその後無関係な動画に流したくない場合です。Vimeoでパスワードを使う場合は、パスワードがスキャンする人の2つ目のステップになることを忘れないでください。本当にその関門が必要な場合に限り、コードの近くに印刷し、印刷前にパスワードを含めた流れ全体をテストします。</p>
+<p>2つの小さな詳細が、よくある失敗を防ぎます。まず、リンクをエンコードする前に、自分のアカウントからサインアウトした状態で、プライベートまたはシークレットウィンドウでリンクをテストします。そこで再生できれば、見知らぬ人にも再生できます。サインインを求められたら、プライバシー設定が間違っています。次に、コードが特定の時点から開くべき場合は、リンクをコピーする前に開始時間を設定します。視聴者を正しい場所までスクロールさせようと期待するのではなくです。適切な時点から始まる短いクリップは意図的に感じられ、最初から始まる長い動画は宿題のように感じられます。</p>
+<h2>ランディングページが余分なタップに見合う場合</h2>
+<p>直接リンクでは解決できない問題を解決するためにランディングページを使いましょう。単一のクリップではなく、順序通りのプレイリストやシリーズを提供します。音を出して再生できない視聴者のために、字幕、文字起こし、ダウンロード可能な配布資料を動画の横に加えます。予約リンク、商品リンク、フィードバックフォームを動画のすぐ下に入れ、クリップが終わったあとに注意が消えないようにします。イベントでは、ランディングページにスケジュール、会場マップ、連絡先も載せることができます。単一の動画では運べないものです。いずれの場合も、QRコードは依然としてひとつの仕事をしています。人を正しい場所に連れていくことです。残りの仕事はページがします。</p>
+<h2>デザインと印刷：コードをスキャンしやすくする</h2>
+<p>動画コードは、人が移動中、片手でスマホを持っている、またはデザイナーの想像より遠くに立っている場所に印刷されることが多いのです。したがってサイズは、後付けではなく最初のデザイン判断です。広く使われている目安は10対1の比率です。コードは、スキャンされる距離の10分の1以上の幅がなければなりません。30 cmの距離からスキャンされるコードは少なくとも3 cm幅であるべきです。1 mの距離から読まれるポスターには、少なくとも10 cm幅のコードが必要です。これらは下限であり、目標ではありません。密度の高いコード、暗い光、光沢のある表面は、いずれも大きくする理由になります。</p>
+<p>コードの周りにクワイエットゾーン、つまり四方すべてに少なくとも4モジュール分の空白の余白を空けます。スキャナーはこの空の縁を使って、模様がどこで始まりどこで終わるかを見つけます。縁に押し付けられた文字、ロゴ、装飾的な罫線は検出を混乱させることがあります。明るい背景に暗いモジュールを印刷し、コードと背景のコントラスト比を少なくとも4:1にすることを目指します。白地に黒は常に機能します。クリーム地に濃紺も機能します。暗い背景に明るいモジュール、淡い紙に淡い色、コードの後ろの忙しい写真は、コードが見た目はよくても、スキャンが遅いかまったくできないときの常連の容疑者です。</p>
+<p>中央にロゴや再生ボタンのアイコンを加える場合は、ロゴが意図的に模様の一部を覆うため、より高い誤り訂正レベルを使います。QRコードには4つのレベルがあります。Lは約7%、Mは約15%、Qは約25%、Hは約30%の損傷または隠れたデータを回復します。中央にロゴのあるコードではレベルHが通常の選択で、きれいなコードではMが妥当なデフォルトです。訂正レベルが高いほどコードは密になるため、ロゴ入りのコードは通常、同じリンクを持つ無地のコードより少し大きく印刷する必要があります。サイズとコントラストについてより深く知るには、印刷を確定する前に<a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a>と<a href="/ja/blog/qr-code-troubleshooting-guide/">トラブルシューティングガイド</a>をご覧ください。</p>
+<p>印刷では、できればSVGやPDFのようなベクターファイルとして書き出すか、最終サイズで300 ppiの高解像度PNGとして書き出します。小さいPNGを大きなバナーに引き伸ばすと、モジュールの縁が柔らかくなり、鮮明なコードがぼやけたコードになることがあります。画面でも、同じルールがミニチュアで当てはまります。スライドやディスプレイ上でコードを十分大きく保ち、写真の上ではなく明るいパネルに置き、アニメーションさせたり、フェードさせたり、発表者が前に立つ場所に置いたりしないでください。プレゼンテーションのスライド上の動画コードは、最後に2秒間ちらつかせるのではなく、後列の人がスキャンできる十分な大きさと十分な時間で表示すべきです。</p>
+<h2>四角だけでなく、旅全体をテストする</h2>
+<p>動画QRコードのテストとは、自分のスマホが模様を読むかどうかだけでなく、見知らぬ人がたどる旅をテストすることです。まず画面上で、2台の異なるスマホ、できればiPhoneとAndroidスマホで、できれば古い端末も混ぜてコードをスキャンします。古いカメラはピントが遅く、密度の高いコードに苦労します。フラッグシップのスマホでしか機能しないコードは、印刷の準備ができていません。アカウントからサインアウトしたプライベートウィンドウでリンクを開き、サインインの要求、許可の要求、「動画が利用できません」というメッセージなしに動画が再生されることを確認します。</p>
+<p>次に、実際のサイズで、実際の素材に、実際の距離で、実際の光のもとで、実際の印刷物の試し刷りをテストします。光沢紙は会場の照明下で反射し、曲面のパッケージは模様を歪ませ、自分の机では完璧にスキャンできたコードが、日当たりのよい窓や暗い廊下の壁では失敗することがあります。視聴者が立つ距離を歩き、視聴者が持つようにスマホを持ち、スキャンから再生までにかかる時間を測ります。数秒以上かかる場合、またはひとつの角度でしか機能しない場合は、コードを大きくするか、コントラストを上げるか、リンクを短くするか、より平らで明るい場所に移します。試し刷りの段階でこれらを修正するコストは数分です。印刷後に修正するコストは全量分です。</p>
+<h2>よくある間違いとその回避方法</h2>
+<p>最も多い間違いは、非公開の動画をエンコードし、印刷後に問題に気づくことです。2つ目は、短いリンクや動的リダイレクトでシンプルにできたのに、パラメーターの多い長いリンクをエンコードしてコードを密で脆くすることです。3つ目は、視聴距離に対して小さく印刷することです。3つとも同じ習慣で防げます。サインアウトした状態でリンクをテストし、実際の距離で試し刷りをテストし、10対1のサイズルールを下限として扱います。</p>
+<p>関連するハウツーガイドについては、<a href="/ja/blog/how-to-scan-a-qr-code/">QRコードのスキャン方法</a>、<a href="/ja/blog/how-to-create-a-dynamic-qr-code/">動的QRコードの作り方</a>、そして動画がより大きなイベント体験の一部である場合は<a href="/ja/blog/qr-codes-for-events/">イベント向けQRコード</a>をご覧ください。FreeQrlyは17種類のQRコードすべてに対応していますが、動画そのものには依然として、ホスト、再生可能なリンク、合致するプライバシー設定が必要です。</p>
+    </div>
+
+    <section class="sources">
+      <h2>出典</h2>
+      <ul>
+      <li><a href="https://bitly.com/blog/how-much-data-can-a-qr-code-store/">QRコードはどれだけのデータを格納できるか</a> - 2026年11月4日アクセス。バージョン40、レベルLでの2,953バイト、4,296文字、7,089桁の容量制限を裏付けます。</li>
+      <li><a href="https://support.google.com/youtube/answer/157177?hl=en-GB&co=GENIE.Platform%3DAndroid">動画のプライバシー設定を変更する - YouTubeヘルプ</a> - 2026年11月4日アクセス。公開、限定公開、非公開の定義を裏付けます。限定公開動画はリンクを持つ誰でも視聴・共有できることを含みます。</li>
+      <li><a href="https://replug.io/blog/how-to-make-a-qr-code-for-a-video">動画用QRコードの作り方（YouTube・ドライブ・MP4）</a> - 2026年11月4日アクセス。QRコードが動画ファイルではなくリンクを持つことと、非公開動画はスキャンした人には再生されないことを裏付けます。</li>
+      <li><a href="https://pageloot.com/video-qr-code-generator/">動画QRコードジェネレーター</a> - 2026年11月4日アクセス。ホスト、コピー、作成の流れと、珍しい形式の直接ファイルはスマホのブラウザで再生できない場合があることを裏付けます。</li>
+      <li><a href="https://www.circulateqr.com/guides/qr-code-size-guide">印刷用QRコードサイズガイド：最小サイズと距離</a> - 2026年10月21日更新。10対1の距離ルール、実用的な下限2 × 2 cm、4モジュールのクワイエットゾーンを裏付けます。</li>
+      <li><a href="https://www.cwtch.es/guide-qr-codes.html">QRコード：サイズ・誤り訂正・スキャンできるコードの作り方</a> - 2026年11月2日最終更新。誤り訂正レベルL 7%、M 15%、Q 25%、H 30%と、複数のスマホでのテストを裏付けます。</li>
+      <li><a href="https://www.uniqode.com/blog/qr-code-best-practices/qr-code-printing-guideline">QRコードの印刷方法：ファイル形式・素材・チェックリスト（2026年）</a> - 2026年11月4日アクセス。少なくとも4:1のコントラスト比、SVGまたはEPSのベクター書き出し、印刷にはM以上の誤り訂正を裏付けます。</li>
+      </ul>
+    </section>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>自分で試す — 無料</h3>
+        <p>この記事の内容はすべて、現在のFreeQrlyスタジオでそのまま使えます。静的コード、17種類すべて、PNGとSVGの書き出しに対応しています。</p>
+        <a class="btn" href="/ja/#studio">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/pre-print-qr-code-checklist/"><b>印刷前QRコードチェックリスト：何千枚も印刷する前に実際の紙でテストする</b></a>
+        <a class="rel-card" href="/ja/blog/printable-qr-code-cheat-sheet/"><b>印刷用QRコード早見表：サイズ・クワイエットゾーン・コントラストを1ページに</b></a>
+        <a class="rel-card" href="/ja/blog/do-qr-codes-expire/"><b>QRコードは期限切れになる？いいえ。ただし有料のものは使えなくなる</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>QRコードに動画ファイルを直接格納できますか？</span></summary><p>いいえ。標準的なQRコードは、最大サイズでも約3キロバイトのバイナリデータしか保持できず、どの動画ファイルよりもはるかに小さいのです。YouTube、Vimeo、ドライブ、自分のサイトに動画をホストし、再生可能なリンクをエンコードしてください。</p></details>
+    <details><summary><span>YouTubeに直接リンクすべきですか、それともランディングページを使うべきですか？</span></summary><p>動画がメッセージの全体で、速度が重要な場合は直接リンクします。文脈、複数の動画、行動喚起、刷り直さずに動画を差し替える能力が必要な場合はランディングページを使います。</p></details>
+    <details><summary><span>公開QRコードにはどのYouTubeプライバシー設定を使うべきですか？</span></summary><p>公開または限定公開です。限定公開動画は、Googleアカウントなしに、リンクを持つ誰でも視聴・共有できますが、検索やチャンネルページには出ません。非公開動画は招待した人だけが再生できるため、一般のスキャンした人には失敗します。</p></details>
+    <details><summary><span>QRコードを印刷したあとに動画を変更できますか？</span></summary><p>動的コードの場合、または自分が管理するランディングページを指す場合に限ります。静的コードは行き先を永久にエンコードするため、動画を差し替えると刷り直しになります。更新の可能性があるものには動的コードを使ってください。</p></details>
+    <details><summary><span>印刷した動画QRコードはどのくらいの大きさにすべきですか？</span></summary><p>下限として、スキャン距離の10分の1以上です。30 cmの距離からスキャンされるコードは少なくとも3 cm幅であるべきで、1 mの距離から読まれるポスターには少なくとも10 cmが必要です。暗い光や光沢のある素材ではさらに大きくします。</p></details>
+    <details><summary><span>動画QRコードはスキャンできるのに再生できないのはなぜですか？</span></summary><p>通常の原因は、非公開の動画、サインインを要求する共有設定、削除または地域制限された動画、スマホのブラウザで再生できないファイル形式です。印刷する前に、アカウントからサインアウトしたプライベートウィンドウでリンクをテストしてください。</p></details>
+    <details><summary><span>動画QRコードの中央にロゴや再生アイコンを入れられますか？</span></summary><p>はい。高い誤り訂正、レベルHを使い、コードを少し大きく印刷する場合に限ります。複数のスマホでデザイン済みコードをテストしてください。ロゴは設計上データモジュールを覆い、密度の高いコードや低コントラストのコードはデザイン後に失敗することがあります。</p></details>
+    <details><summary><span>動画QRコードのスキャンに専用アプリは必要ですか？</span></summary><p>いいえ。スマホのカメラがコードを読み取り、ホストに応じてYouTubeやVimeoのアプリ、またはブラウザでリンクを開きます。再生を担うのはQRアプリではなく動画ホストです。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>動的コード無制限 — 期間限定オファー。</h3>
+        <p>無料でサインインして、必要なだけ作成できます。すべてのコードは印刷後も編集でき、有効期限はありません。</p>
+      </div>
+      <a class="fctaBtn" href="/ja/login/">無料で始める</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
+        <div class="fmade">静的コードはブラウザで作成。</div>
+      </div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
+      <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
+      <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
+      <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>
