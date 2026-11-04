@@ -1445,7 +1445,7 @@ function restoreDraft(){
         signinHint.hidden = !show;
         if(show){
           const l = $("dynSigninLink");
-          if(l){ l.href = "/login/?next=" + encodeURIComponent(loginNextUrl()); l.onclick = () => { saveDraft(); }; }
+          if(l){ l.href = (lang === "en" ? "/login/" : "/" + lang + "/login/") + "?next=" + encodeURIComponent(loginNextUrl()); l.onclick = () => { saveDraft(); }; }
         }
       }
     } else {
@@ -1574,7 +1574,7 @@ function headerNav(){
     { href: '#studio', text: tr('navStudio') },
     { href: '#why', text: tr('navWhy') },
     { href: '#faq', text: tr('navFaq') },
-    { href: '/scan/', text: tr('navScan') }
+    { href: (lang === 'en' ? '/scan/' : '/' + lang + '/scan/'), text: tr('navScan') }
   ];
 }
 function initAuthHeader(){

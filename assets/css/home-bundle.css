@@ -256,6 +256,15 @@ footer .tiny{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:
 .prose a{color:var(--deep);text-decoration-color:var(--honey);text-underline-offset:3px}
 .prose strong{font-weight:700}
 .prose blockquote{border-left:4px solid var(--honey);background:var(--honeybg);border-radius:0 14px 14px 0;padding:16px 22px;margin:0 0 1.4em;font-family:Georgia,serif;font-style:italic;font-size:18px}
+.prose .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 1.4em}
+.prose .table-scroll table{margin-bottom:0}
+.prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.6}
+.prose th,.prose td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+.prose th{background:var(--honeybg);font-weight:700}
+@media (max-width:640px){
+  .prose table{font-size:14px}
+  .prose th,.prose td{padding:7px 9px}
+}
 .cta-card{margin:44px 0;background:var(--mintbg);border:1px solid var(--mint);border-radius:22px;padding:30px 32px;display:flex;gap:20px;align-items:center}
 .cta-card .mascot{width:160px}
 .cta-card h3{font-family:Georgia,serif;font-weight:400;font-size:21px;margin-bottom:8px}

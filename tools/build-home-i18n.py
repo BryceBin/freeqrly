@@ -87,6 +87,44 @@ for lang in LANGS:
     # Fix asset paths: relative -> absolute (page lives in /{lang}/)
     h = re.sub(r'((?:href|src)=")assets/', r'\1/assets/', h)
 
+    # Rewrite internal links to same-language targets. The template's hrefs
+    # are copied verbatim from EN, so localized homepages previously linked
+    # to EN pages (/blog/, /pricing/, /login/, ...). Mirror the localizable
+    # set from localize_pages.py; /dashboard/ (not localized), /assets/,
+    # same-page anchors and absolute hreflang URLs stay untouched.
+    _LOCALIZABLE = set(["google-form-qr-code", "wifi-qr-code", "vcard-qr-code",
+        "batch-qr-code", "business-card-qr-code", "google-review-qr-code",
+        "qr-code-with-logo", "wedding-qr-code", "instagram-qr-code",
+        "real-estate-qr-code", "pdf-qr-code", "multi-link-qr-code",
+        "menu-qr-code", "payment-qr-code", "youtube-qr-code",
+        "whatsapp-qr-code", "tiktok-qr-code", "spotify-qr-code",
+        "facebook-qr-code", "google-maps-qr-code", "bitcoin-qr-code",
+        "coupon-qr-code", "app-store-qr-code", "mp3-qr-code",
+        "black-friday-qr-code", "christmas-qr-code",
+        "dynamic-qr-code", "ticket-qr-code",
+        "freeqrly-vs-qr-tiger", "freeqrly-vs-qr-code-monkey",
+        "freeqrly-vs-qr-code-generator", "qr-tiger-alternative",
+        "qr-code-monkey-alternative",
+        "about", "privacy", "terms", "pricing", "developers",
+        "scan", "barcode-generator", "login", "reset", "blog"])
+    def _loc_href(m):
+        pre, url = m.group(1), m.group(2)
+        mm = re.match(r'^(/[^?#]*)([?#].*)?$', url)
+        if not mm:
+            return m.group(0)
+        path, suffix = mm.group(1), mm.group(2) or ''
+        if path == '/':
+            return pre + f'/{lang}/' + suffix
+        seg = path.strip('/').split('/')[0]
+        if seg in _LOCALIZABLE:
+            return pre + f'/{lang}{path}' + suffix
+        return m.group(0)
+    h = re.sub(r'(href=")(/[^"]*)', _loc_href, h)
+
+    # og:url: self-reference (canonical already does; og:url was EN root)
+    h = re.sub(r'<meta property="og:url" content="[^"]*"',
+               f'<meta property="og:url" content="https://freeqrly.com/{lang}/">', h)
+
     # Translate the FAQPage JSON-LD (name/text) — the data-i18n pass above
     # only touches visible elements, so without this the localized pages
     # keep the English FAQPage block. Map by position: mainEntity[i]

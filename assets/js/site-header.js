@@ -34,11 +34,17 @@
       return '<a href="' + esc(n.href) + '">' + esc(n.text) + '</a>';
     }).join('');
 
+    // Same-language targets for the header's own links: on EN pages these
+    // stay '/', '/login/'; on localized pages they gain the lang prefix.
+    // /dashboard/ is not localized and stays as-is.
+    var homeHref = (cfg.lang && cfg.lang !== 'en') ? '/' + cfg.lang + '/' : '/';
+    var loginHref = (cfg.lang && cfg.lang !== 'en') ? '/' + cfg.lang + '/login/' : '/login/';
+
     var acctH;
     if(cfg.user && cfg.user.email){
       acctH = '<span class="shAcctMount"></span>';
     }else{
-      acctH = '<a class="shSignin" href="/login/">' + esc(t('signin')) + '</a>';
+      acctH = '<a class="shSignin" href="' + loginHref + '">' + esc(t('signin')) + '</a>';
     }
 
     var curLangName = (cfg.langNames && cfg.langNames[cfg.lang]) || cfg.lang || 'en';
@@ -53,7 +59,7 @@
 
     mount.innerHTML =
       '<header class="sh">' +
-        '<a class="shBrand" href="/">Free<em>Qrly</em></a>' +
+        '<a class="shBrand" href="' + homeHref + '">Free<em>Qrly</em></a>' +
         '<nav class="shNav">' + navH + '</nav>' +
         '<div class="shRight">' + acctH + langH +
           '<button class="shTheme" type="button" aria-label="theme">\u25D0</button>' +
@@ -106,7 +112,7 @@
 
     // "Start free" / pricing CTAs follow the auth state: signed-in users go
     // straight to the dashboard; only signed-out visitors detour via login.
-    var ctaTarget = (cfg.user && cfg.user.email) ? '/dashboard/' : '/login/';
+    var ctaTarget = (cfg.user && cfg.user.email) ? '/dashboard/' : loginHref;
     document.querySelectorAll('a.fctaBtn, a.pbtn').forEach(function(a){
       a.setAttribute('href', ctaTarget);
     });
