@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -130,19 +130,67 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly the FreeQrly elephant mascot"></div>
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">How <span class="hl hl-mint">big</span> should a printed QR code be?</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">The short answer: at least 2x2 cm, at 300 dpi, with a clear margin. The longer answer — with the distance rule of thumb printers actually use — is below.</p>
-    <p class="meta" style="text-align:center">October 14, 2026 · Last updated: November 3, 2026 · 14 min read</p>
+    <p class="meta" style="text-align:center">October 14, 2026 · Last updated: November 3, 2026 · 15 min read</p>
     <div class="prose" style="margin-top:40px">
 <p>The short answer: at least 2 × 2 cm, at 300 dpi, with a clear margin. The longer answer — the one that keeps a poster scannable from across a room and a business card scannable from a handshake — is two rules of thumb plus a table. Rule one: never print a code smaller than 2 × 2 cm (0.8 × 0.8 in). Rule two: the code's width should be at least one-tenth of the scanning distance. A code scanned from 50 cm needs a 5 cm code; a poster scanned from 5 meters needs a 50 cm code. Everything below works those two rules out for every surface you are likely to print on, plus the format, margin, and proofing details that decide whether the size actually works.</p>
 
-<h2>The two rules that matter</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">BAR CHART</p>
+    <div class="qr-fig-title">Minimum QR code size by scanning distance</div>
+    <p class="qr-fig-sub">10:1 rule of thumb — code width should be at least one tenth of the distance.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 800 470" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="214" y1="14" x2="214" y2="386"/><line x1="318" y1="14" x2="318" y2="386"/>
+        <line x1="422" y1="14" x2="422" y2="386"/><line x1="526" y1="14" x2="526" y2="386"/>
+        <line x1="630" y1="14" x2="630" y2="386"/>
+      </g>
+      <line x1="110" y1="14" x2="110" y2="394" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 210)" x="28" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">Scanning distance (m)</text>
+      <g font-size="15" fill="#1E2A32">
+        <text x="95" y="50" text-anchor="end" fill="#555">0.3 m</text>
+        <rect x="110" y="30" width="31" height="28" rx="6" fill="#2F4A62"/><text x="149" y="50" fill="#2F4A62" font-weight="bold">3 cm</text>
+        <text x="95" y="114" text-anchor="end" fill="#555">0.5 m</text>
+        <rect x="110" y="94" width="52" height="28" rx="6" fill="#2F4A62"/><text x="170" y="114" fill="#2F4A62" font-weight="bold">5 cm</text>
+        <text x="95" y="178" text-anchor="end" fill="#555">1 m</text>
+        <rect x="110" y="158" width="104" height="28" rx="6" fill="#2F4A62"/><text x="222" y="178" fill="#2F4A62" font-weight="bold">10 cm</text>
+        <text x="95" y="242" text-anchor="end" fill="#555">2 m</text>
+        <rect x="110" y="222" width="208" height="28" rx="6" fill="#2F4A62"/><text x="326" y="242" fill="#2F4A62" font-weight="bold">20 cm</text>
+        <text x="95" y="306" text-anchor="end" fill="#555">3 m</text>
+        <rect x="110" y="286" width="312" height="28" rx="6" fill="#2F4A62"/><text x="430" y="306" fill="#2F4A62" font-weight="bold">30 cm</text>
+        <text x="95" y="370" text-anchor="end" fill="#555">5 m</text>
+        <rect x="110" y="350" width="520" height="28" rx="6" fill="#2F4A62"/><text x="638" y="370" fill="#2F4A62" font-weight="bold">50 cm</text>
+      </g>
+      <line x1="110" y1="394" x2="660" y2="394" stroke="#D8D2C2" stroke-width="1"/>
+      <g font-size="12" fill="#777" text-anchor="middle">
+        <text x="214" y="416">10 cm</text><text x="318" y="416">20 cm</text>
+        <text x="422" y="416">30 cm</text><text x="526" y="416">40 cm</text><text x="630" y="416">50 cm</text>
+      </g>
+      <text x="385" y="442" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">Minimum code width (cm)</text>
+    </svg></div>
+    <p class="qr-fig-foot">Rule of thumb, not an ISO requirement. In poor light or on glossy material, go larger.</p>
+</figure><h2>The two rules that matter</h2>
 
 <p><strong>Rule of thumb 1 — minimum size:</strong> 2 × 2 cm (0.8 × 0.8 in). Below that, phone cameras cannot resolve the modules reliably, especially codes holding a lot of data like vCards. This is a practical minimum for close, hand-held scanning, not a guarantee: a dense code at 2 cm is far more fragile than a short-URL code at the same size, and older phones need more room than new ones.</p>
 

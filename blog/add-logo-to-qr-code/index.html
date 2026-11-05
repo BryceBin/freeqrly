@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../../assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -154,15 +154,15 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="Qly the FreeQrly elephant mascot"></div>
     <div class="kicker" style="text-align:center">Field notes</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Your logo, <span class='hl hl-blush'>in the middle</span> — still scannable</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">A logo makes a code yours. It also covers up part of the pattern. Here's how to have both: logo dead center, code still scanning on the first try.</p>
-    <p class="meta" style="text-align:center">October 28, 2026 · Last updated: November 3, 2026 · 14 min read</p>
+    <p class="meta" style="text-align:center">October 28, 2026 · Last updated: November 3, 2026 · 15 min read</p>
     <div class="prose" style="margin-top:40px">
 <p>A logo in the middle of a QR code works when three things are true: the logo stays small, the code's error correction is set high, and nothing important is covered. In practice that means a square logo with a transparent background, centered, kept under about 30% of the code area as a ceiling — and smaller if you want a safety margin — printed dark on light, with a clear margin around the whole code. Do that, test the printed piece on two phones, and the code reads on the first try while still looking unmistakably like your brand.</p>
 
@@ -183,6 +183,177 @@
 <p>When you add a logo, the covered middle counts as damage, and the reader reconstructs it from the redundant data spread across the rest of the code. That is why the error-correction level matters more than the logo file itself: on level L or M, a logo eats most of your safety margin before the code ever reaches a printer, while on level H the same logo sits inside a much larger budget. FreeQrly raises error correction automatically when a logo is added, so you do not set the level by hand — but you still have to respect what it buys you. A higher level also adds modules, making the same content denser: a short address that fits in a 29 × 29 grid at level M needs 37 × 37 at level H, so each module gets smaller at the same print size. Keep the destination short, and print logo codes a little larger than plain ones.</p>
 
 <h2>Logo size: the ceiling, the safer zone, and the area-versus-width trap</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAM</p>
+    <div class="qr-fig-title">How big can the logo be?</div>
+    <p class="qr-fig-sub">Area, not width — and 30% is a ceiling, not a target.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- QR square with logo zones -->
+      <rect x="20" y="60" width="280" height="280" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <g transform="translate(55,95) scale(2.8)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <rect x="83.5" y="123.5" width="153" height="153" rx="4" fill="none" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <rect x="97.5" y="137.5" width="125" height="125" rx="4" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <!-- legend under QR -->
+      <line x1="20" y1="372" x2="60" y2="372" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="377" font-size="13" fill="#1E2A32">Up to 20% of area — comfortable, room for wear</text>
+      <line x1="20" y1="402" x2="60" y2="402" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="407" font-size="13" fill="#1E2A32">30% of area — the ceiling, no reserve left</text>
+      <!-- width trap panel -->
+      <rect x="560" y="60" width="320" height="280" rx="12" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="580" y="92" font-size="12" font-weight="bold" letter-spacing="1.5" fill="#2F4A62">THE WIDTH TRAP</text>
+      <text x="580" y="128" font-size="14" fill="#1E2A32">Logo spans 30% of width</text>
+      <rect x="580" y="140" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="140" width="60" height="20" rx="4" fill="#2F4A62"/>
+      <text x="580" y="183" font-size="14" font-weight="bold" fill="#1E2A32">= only 9% of area</text>
+      <text x="580" y="222" font-size="14" fill="#1E2A32">Logo covers 30% of area</text>
+      <rect x="580" y="234" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="234" width="110" height="20" rx="4" fill="#D9A441"/>
+      <text x="580" y="277" font-size="14" font-weight="bold" fill="#1E2A32">= 55% of width</text>
+      <text x="580" y="312" font-size="13" fill="#777">This guide always means area.</text>
+    </svg></div>
+    <p class="qr-fig-foot">Why 30%? Level H error correction rebuilds about 30% of codewords (ISO/IEC 18004) — so a logo at the ceiling leaves nothing for scuffs, dim light, or older phones.</p>
+</figure>
 
 <p>Logo-size advice is easy to misread, because guides quote it two different ways. A logo spanning 30% of the code's <em>width</em> covers only about 9% of its <em>area</em>, while a logo covering 30% of the <em>area</em> spans about 55% of the width. When this guide says "under about 30% of the code area," it means area — the share of the whole square the logo hides — and that is the ceiling the FreeQrly generator uses. Treat anything near that ceiling as a code with no reserve left.</p>
 
@@ -296,9 +467,9 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Keep reading</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/blog/do-qr-codes-expire/"><b>Do QR Codes Expire? No — But Paid Ones Can Die</b></a>
-        <a class="rel-card" href="/blog/how-to-scan-a-qr-code/"><b>How to Scan a QR Code (iPhone & Android)</b></a>
-        <a class="rel-card" href="/blog/qr-code-print-size-guide/"><b>QR Code Print Size Guide: Business Cards to Posters</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-laundromats/"><b>QR Codes for Laundromats: One Code per Machine, Plus Wi-Fi, Reviews, and Loyalty</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-gyms/"><b>QR Codes for Gyms and Fitness Studios: Check-Ins, Classes, and Reviews</b></a>
+        <a class="rel-card" href="/blog/qr-codes-for-breweries/"><b>QR Codes for Breweries: Tap Lists, Tours, Merch, Events and Reviews</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">

@@ -166,6 +166,60 @@ POSTS = [
 <blockquote>Here's the uncomfortable bit: most generators push dynamic because it's recurring revenue, not because you need it. If someone's "free" code requires an account, you're looking at a dynamic code with a trial timer.</blockquote>
 
 <h2>A quick decision guide</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">FLOWCHART</p>
+    <div class="qr-fig-title">Which code do I need?</div>
+    <p class="qr-fig-sub">Two questions decide it.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 520" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g font-size="17">
+        <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">Choosing a code?</text>
+        <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">Will the link change?</text>
+        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">unfinalized URLs, future edits</text>
+        <line x1="450" y1="165" x2="552" y2="165" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="133" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="160" text-anchor="middle" fill="#1E2A32" font-weight="bold">Dynamic</text>
+        <text x="690" y="183" text-anchor="middle" fill="#444" font-size="13">this is what it&rsquo;s for</text>
+        <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="244" fill="#999" font-size="13">NO</text>
+        <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">Do you need scan counts?</text>
+        <text x="300" y="328" text-anchor="middle" fill="#666" font-size="14">reports for a client, or yourself</text>
+        <line x1="450" y1="311" x2="552" y2="311" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="298" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="279" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="306" text-anchor="middle" fill="#1E2A32" font-weight="bold">Dynamic</text>
+        <text x="690" y="329" text-anchor="middle" fill="#444" font-size="13">stats included</text>
+        <line x1="300" y1="364" x2="300" y2="400" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="390" fill="#999" font-size="13">NO</text>
+        <rect x="130" y="404" width="340" height="64" rx="12" fill="#2F4A62"/>
+        <text x="300" y="431" text-anchor="middle" fill="#fff" font-weight="bold">Static</text>
+        <text x="300" y="454" text-anchor="middle" fill="#cfd8de" font-size="13">WiFi · business cards · menu pages</text>
+      </g>
+    </svg></div>
+    <p class="qr-fig-foot">Menu that changes seasonally? Still static — point it at your menu page and update the page, not the code.</p>
+</figure>
 <ul>
 <li>WiFi for guests? <strong>Static.</strong></li>
 <li>Contact details on a business card? <strong>Static.</strong></li>
@@ -391,7 +445,55 @@ POSTS += [{'body': """<p><strong>The short answer: point your phone's camera at 
 ]},
  {'body': """<p>The short answer: at least 2 × 2 cm, at 300 dpi, with a clear margin. The longer answer — the one that keeps a poster scannable from across a room and a business card scannable from a handshake — is two rules of thumb plus a table. Rule one: never print a code smaller than 2 × 2 cm (0.8 × 0.8 in). Rule two: the code's width should be at least one-tenth of the scanning distance. A code scanned from 50 cm needs a 5 cm code; a poster scanned from 5 meters needs a 50 cm code. Everything below works those two rules out for every surface you are likely to print on, plus the format, margin, and proofing details that decide whether the size actually works.</p>
 
-<h2>The two rules that matter</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">BAR CHART</p>
+    <div class="qr-fig-title">Minimum QR code size by scanning distance</div>
+    <p class="qr-fig-sub">10:1 rule of thumb — code width should be at least one tenth of the distance.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 800 470" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="214" y1="14" x2="214" y2="386"/><line x1="318" y1="14" x2="318" y2="386"/>
+        <line x1="422" y1="14" x2="422" y2="386"/><line x1="526" y1="14" x2="526" y2="386"/>
+        <line x1="630" y1="14" x2="630" y2="386"/>
+      </g>
+      <line x1="110" y1="14" x2="110" y2="394" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 210)" x="28" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">Scanning distance (m)</text>
+      <g font-size="15" fill="#1E2A32">
+        <text x="95" y="50" text-anchor="end" fill="#555">0.3 m</text>
+        <rect x="110" y="30" width="31" height="28" rx="6" fill="#2F4A62"/><text x="149" y="50" fill="#2F4A62" font-weight="bold">3 cm</text>
+        <text x="95" y="114" text-anchor="end" fill="#555">0.5 m</text>
+        <rect x="110" y="94" width="52" height="28" rx="6" fill="#2F4A62"/><text x="170" y="114" fill="#2F4A62" font-weight="bold">5 cm</text>
+        <text x="95" y="178" text-anchor="end" fill="#555">1 m</text>
+        <rect x="110" y="158" width="104" height="28" rx="6" fill="#2F4A62"/><text x="222" y="178" fill="#2F4A62" font-weight="bold">10 cm</text>
+        <text x="95" y="242" text-anchor="end" fill="#555">2 m</text>
+        <rect x="110" y="222" width="208" height="28" rx="6" fill="#2F4A62"/><text x="326" y="242" fill="#2F4A62" font-weight="bold">20 cm</text>
+        <text x="95" y="306" text-anchor="end" fill="#555">3 m</text>
+        <rect x="110" y="286" width="312" height="28" rx="6" fill="#2F4A62"/><text x="430" y="306" fill="#2F4A62" font-weight="bold">30 cm</text>
+        <text x="95" y="370" text-anchor="end" fill="#555">5 m</text>
+        <rect x="110" y="350" width="520" height="28" rx="6" fill="#2F4A62"/><text x="638" y="370" fill="#2F4A62" font-weight="bold">50 cm</text>
+      </g>
+      <line x1="110" y1="394" x2="660" y2="394" stroke="#D8D2C2" stroke-width="1"/>
+      <g font-size="12" fill="#777" text-anchor="middle">
+        <text x="214" y="416">10 cm</text><text x="318" y="416">20 cm</text>
+        <text x="422" y="416">30 cm</text><text x="526" y="416">40 cm</text><text x="630" y="416">50 cm</text>
+      </g>
+      <text x="385" y="442" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">Minimum code width (cm)</text>
+    </svg></div>
+    <p class="qr-fig-foot">Rule of thumb, not an ISO requirement. In poor light or on glossy material, go larger.</p>
+</figure><h2>The two rules that matter</h2>
 
 <p><strong>Rule of thumb 1 — minimum size:</strong> 2 × 2 cm (0.8 × 0.8 in). Below that, phone cameras cannot resolve the modules reliably, especially codes holding a lot of data like vCards. This is a practical minimum for close, hand-held scanning, not a guarantee: a dense code at 2 cm is far more fragile than a short-URL code at the same size, and older phones need more room than new ones.</p>
 
@@ -940,6 +1042,237 @@ POSTS += [
 <p>If you are still unsure, <a href="/blog/static-vs-dynamic-qr-codes/">static vs dynamic, explained honestly</a> gives more examples. In short: dynamic buys flexibility and measurement at the price of dependence on a redirect service and an account; static buys independence at the price of a destination frozen at print time.</p>
 
 <h2>How a dynamic code actually works</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">HOW IT WORKS</p>
+    <div class="qr-fig-title">Dynamic vs static: what changes after printing?</div>
+    <p class="qr-fig-sub">A dynamic code points to a redirect you control. A static code points straight to the destination.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 640" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+        <marker id="ahg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#D9A441"/>
+        </marker>
+        <marker id="ahgr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#999"/>
+        </marker>
+      </defs>
+      <!-- DYNAMIC lane label -->
+      <text x="20" y="40" font-size="13" font-weight="bold" letter-spacing="2.5" fill="#2F4A62">DYNAMIC</text>
+      <rect x="20" y="48" width="48" height="3" fill="#D9A441"/>
+      <!-- printed code -->
+      <rect x="20" y="60" width="170" height="170" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <g transform="translate(67,76)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="105" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E2A32">Printed code</text>
+      <text x="105" y="199" text-anchor="middle" font-size="12" fill="#888">you print this once</text>
+      <!-- scan arrow -->
+      <line x1="190" y1="145" x2="227" y2="145" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <text x="208" y="132" text-anchor="middle" font-size="13" fill="#666">scan</text>
+      <!-- redirect box -->
+      <rect x="235" y="60" width="210" height="170" rx="12" fill="#2F4A62"/>
+      <text x="340" y="122" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">FreeQrly redirect</text>
+      <text x="340" y="146" text-anchor="middle" font-size="13" fill="#cfd8de">the code points here</text>
+      <rect x="285" y="164" width="110" height="24" rx="12" fill="#D9A441"/>
+      <text x="340" y="180" text-anchor="middle" font-size="11" font-weight="bold" letter-spacing="1.5" fill="#1E2A32">EDITABLE</text>
+      <!-- destination A -->
+      <line x1="445" y1="90" x2="497" y2="90" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <rect x="505" y="60" width="210" height="60" rx="10" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="610" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Destination A</text>
+      <text x="610" y="110" text-anchor="middle" font-size="13" fill="#666">current target</text>
+      <!-- destination B -->
+      <line x1="445" y1="200" x2="497" y2="200" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ahg)"/>
+      <rect x="505" y="170" width="210" height="60" rx="10" fill="#FFFBF0" stroke="#D9A441" stroke-width="2"/>
+      <text x="610" y="200" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Destination B</text>
+      <text x="610" y="220" text-anchor="middle" font-size="13" fill="#666">after you switch</text>
+      <text x="610" y="152" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a6a1d">switch anytime</text>
+      <!-- stats connector -->
+      <line x1="340" y1="230" x2="340" y2="264" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ahg)"/>
+      <text x="352" y="254" font-size="13" fill="#8a6a1d">every scan is counted</text>
+      <!-- stats card -->
+      <rect x="235" y="270" width="480" height="160" rx="12" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="255" y="298" font-size="12" font-weight="bold" letter-spacing="1.5" fill="#2F4A62">SCAN STATISTICS</text>
+      <rect x="595" y="282" width="110" height="22" rx="11" fill="#D9A441"/>
+      <text x="650" y="297" text-anchor="middle" font-size="12" font-weight="bold" letter-spacing="1" fill="#1E2A32">SAMPLE DATA</text>
+      <text x="255" y="326" font-size="12" letter-spacing="1" fill="#777">TOTAL SCANS · 30 DAYS</text>
+      <text x="255" y="362" font-size="32" font-weight="bold" fill="#1E2A32">1,284</text>
+      <text x="255" y="386" font-size="12" fill="#777">Top country: US</text>
+      <text x="255" y="406" font-size="12" fill="#777">Top device: iPhone</text>
+      <g>
+        <rect x="420" y="373" width="14" height="12" rx="2" fill="#2F4A62"/>
+        <rect x="444" y="368" width="14" height="17" rx="2" fill="#2F4A62"/>
+        <rect x="468" y="376" width="14" height="9" rx="2" fill="#2F4A62"/>
+        <rect x="492" y="362" width="14" height="23" rx="2" fill="#2F4A62"/>
+        <rect x="516" y="355" width="14" height="30" rx="2" fill="#2F4A62"/>
+        <rect x="540" y="359" width="14" height="26" rx="2" fill="#2F4A62"/>
+        <rect x="564" y="351" width="14" height="34" rx="2" fill="#D9A441"/>
+        <g font-size="11" fill="#777" text-anchor="middle">
+          <text x="427" y="402">M</text><text x="451" y="402">T</text><text x="475" y="402">W</text>
+          <text x="499" y="402">T</text><text x="523" y="402">F</text><text x="547" y="402">S</text><text x="571" y="402">S</text>
+        </g>
+        <text x="640" y="402" font-size="12" fill="#777">scans / day</text>
+      </g>
+      <!-- separator -->
+      <line x1="20" y1="465" x2="880" y2="465" stroke="#E5DCC8" stroke-width="1"/>
+      <!-- STATIC lane label -->
+      <text x="20" y="500" font-size="13" font-weight="bold" letter-spacing="2.5" fill="#999">STATIC</text>
+      <rect x="20" y="508" width="48" height="3" fill="#D8D2C2"/>
+      <!-- static boxes -->
+      <rect x="20" y="520" width="150" height="70" rx="10" fill="#F2F2F2" stroke="#BBB" stroke-width="1.5"/>
+      <text x="95" y="561" text-anchor="middle" font-size="15" font-weight="bold" fill="#777">Printed code</text>
+      <line x1="170" y1="555" x2="207" y2="555" stroke="#999" stroke-width="2" marker-end="url(#ahgr)"/>
+      <rect x="215" y="520" width="210" height="70" rx="10" fill="#F2F2F2" stroke="#BBB" stroke-width="1.5"/>
+      <text x="320" y="551" text-anchor="middle" font-size="15" font-weight="bold" fill="#777">Fixed destination</text>
+      <text x="320" y="572" text-anchor="middle" font-size="12" fill="#999">baked into the code</text>
+      <line x1="425" y1="555" x2="462" y2="555" stroke="#999" stroke-width="2" marker-end="url(#ahgr)"/>
+      <rect x="470" y="520" width="240" height="70" rx="10" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="590" y="551" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E2A32">To change it,</text>
+      <text x="590" y="572" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E2A32">you must reprint</text>
+      <rect x="725" y="538" width="150" height="32" rx="16" fill="#F2F2F2" stroke="#DDD" stroke-width="1.5"/>
+      <text x="800" y="558" text-anchor="middle" font-size="12" fill="#777">No scan statistics</text>
+    </svg></div>
+</figure>
 <p>A dynamic code does not hold your link directly. It holds a short FreeQrly link, in the form <code>freeqrly.com/q/XXXXXXX</code>, and the pattern encodes that short link. When someone scans the code, their phone opens the short link, FreeQrly's server looks up the destination you currently have set, and the scanner is redirected there. The scanner ends up on your page; the short link is only the junction in the middle.</p>
 <p>That junction explains every feature and limit:</p>
 <ul>
@@ -1156,6 +1489,58 @@ POSTS += [
 </ul>
 <h2>A worked example, with the arithmetic shown</h2>
 <p>Illustrative example — the numbers below are hypothetical, used only to show the arithmetic, not measurements from any real campaign. Suppose two codes point at the same page for the same two weeks. Code A, on a counter sign, records 120 total scans and 90 unique scans. Code B, on a window poster, records 60 total scans and 55 unique scans. Three readings follow, each with a different action:</p>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">BAR CHART</p>
+    <div class="qr-fig-title">Two codes, one page, two weeks</div>
+    <p class="qr-fig-sub">Totals tell you how much. Unique counts tell you how many people. The gap between them is repeat use.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- legend -->
+      <rect x="620" y="14" width="16" height="16" rx="3" fill="#2F4A62"/>
+      <text x="644" y="27" font-size="13" fill="#1E2A32">Total scans</text>
+      <rect x="748" y="14" width="16" height="16" rx="3" fill="#D9A441"/>
+      <text x="772" y="27" font-size="13" fill="#1E2A32">Unique scans</text>
+      <!-- gridlines: 0/30/60/90/120 at y 400/325/250/175/100 -->
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="190" y1="100" x2="640" y2="100"/><line x1="190" y1="175" x2="640" y2="175"/>
+        <line x1="190" y1="250" x2="640" y2="250"/><line x1="190" y1="325" x2="640" y2="325"/>
+      </g>
+      <line x1="190" y1="60" x2="190" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 230)" x="28" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">Scans (2 weeks)</text>
+      <g font-size="12" fill="#777" text-anchor="end">
+        <text x="180" y="104">120</text><text x="180" y="179">90</text>
+        <text x="180" y="254">60</text><text x="180" y="329">30</text><text x="180" y="404">0</text>
+      </g>
+      <!-- group A: total 120 (h300, y100), unique 90 (h225, y175) -->
+      <rect x="230" y="100" width="44" height="300" rx="4" fill="#2F4A62"/>
+      <rect x="288" y="175" width="44" height="225" rx="4" fill="#D9A441"/>
+      <text x="252" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">120</text>
+      <text x="310" y="163" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">90</text>
+      <!-- group B: total 60 (h150, y250), unique 55 (h138, y262) -->
+      <rect x="480" y="250" width="44" height="150" rx="4" fill="#2F4A62"/>
+      <rect x="538" y="262" width="44" height="138" rx="4" fill="#D9A441"/>
+      <text x="502" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">60</text>
+      <text x="560" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">55</text>
+      <line x1="190" y1="400" x2="640" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text x="281" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">Code A — counter sign</text>
+      <text x="531" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">Code B — window poster</text>
+      <text x="281" y="452" text-anchor="middle" font-size="13" fill="#666">Repeat: +30 — regulars return</text>
+      <text x="531" y="452" text-anchor="middle" font-size="13" fill="#666">Repeat: +5 — mostly one-offs</text>
+    </svg></div>
+    <p class="qr-fig-foot">Illustrative example from this post — hypothetical numbers, used only to show the arithmetic.</p>
+</figure>
 <ul>
 <li><strong>Reach:</strong> Code A reached more distinct people (90 against 55), so the counter sign is the broader placement.</li>
 <li><strong>Repeat use:</strong> Code A's total runs 30 scans ahead of its unique count, while Code B's runs only 5 ahead, so counter visitors scan repeatedly while poster visitors mostly scan once. That fits a counter sign seen by regulars and a poster seen by passers-by — and it suggests the counter code's destination should reward a second visit, while the poster code's destination should make its case in one visit.</li>
@@ -1421,6 +1806,298 @@ POSTS += [
   body="""<p>A blurry QR code is almost always a resolution problem: too few pixels stretched across too much space. The fix is to export bigger — or as SVG. If the code looked sharp on screen and turned to mush on paper, the image did not have enough pixels for the size it was printed at. A QR code is a grid of tiny squares called modules; when there are not enough pixels, their edges smear into each other, phones cannot find the grid, and scans fail. Start with the export, not a new design: regenerate at higher resolution or as a vector file, reprint one copy at the real size, and scan it at the real viewing distance before printing the batch.</p>
 <p>That answer covers most cases, but blur has more than one cause, each with a different fix: a small export, JPEG compression, stretching, printer or paper, or a copy of a copy. The sections below separate those causes, give you a numbers table for the printer, walk through the fix in order, and cover codes that look sharp yet still will not scan — those belong to <a href="/blog/why-is-my-qr-code-not-working/">why your QR code will not scan</a>.</p>
 <h2>What blur actually does to a code</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAM</p>
+    <div class="qr-fig-title">What blur does to a code</div>
+    <p class="qr-fig-sub">The camera decides module by module: dark or light. Blur turns that decision into grey.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <!-- sharp panel -->
+      <rect x="20" y="60" width="400" height="320" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="220" y="92" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="2" fill="#2F4A62">SHARP</text>
+      <g transform="translate(108,110) scale(3)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="220" y="362" text-anchor="middle" font-size="14" fill="#666">Edges clean — every module reads dark or light</text>
+      <!-- blurred panel -->
+      <rect x="480" y="60" width="400" height="320" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="680" y="92" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="2" fill="#8a6a1d">BLURRED</text>
+      <g transform="translate(568,110) scale(3)" fill="#1E2A32" filter="url(#blur4)">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="680" y="362" text-anchor="middle" font-size="14" fill="#666">Modules bleed into grey — the reader starts guessing</text>
+      <!-- error correction strip -->
+      <rect x="20" y="410" width="860" height="56" rx="10" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="450" y="445" text-anchor="middle" font-size="15" fill="#1E2A32">Error correction is a safety net, not permission — L 7% · M 15% · Q 25% · H 30% of codewords (ISO/IEC 18004)</text>
+    </svg></div>
+</figure>
 <p>A phone camera does not read a QR code the way a person reads a picture. It looks for the three large square finder patterns in the corners, works out the grid from them, and then decides, module by module, whether each small square is dark or light. Blur attacks exactly that decision: when neighbouring modules bleed into each other, the camera sees grey where it needs black or white, and it starts guessing. A little guessing is survivable, because QR codes carry built-in error correction — extra data that lets a reader rebuild codewords that come back wrong or unreadable. That protection is measured in codewords, not visible area: the four levels in ISO/IEC 18004 restore approximately 7% of codewords at level L, 15% at M, 25% at Q, and 30% at H. A smudge over a finder pattern, or blur spread across the whole symbol, can defeat a reader long before any neat percentage suggests it should survive. Treat error correction as a safety net, never as permission to print a soft code.</p>
 <p>Density makes blur worse. A short link produces a roomy grid with large modules; a long link, a full contact card, or a Wi-Fi code with a long password produces a denser grid with smaller modules, and smaller modules blur sooner. That is why the same export can look fine for a short URL and fail for a data-heavy code at the same print size. If a code is both dense and printed small, shorten the destination where you can, print larger, or both. A dynamic code helps differently: the printed pattern encodes a short link you can redirect later, so the grid stays roomy even if the final destination is long. For a destination that will never change, a static code is simpler: free, no account, no watermark, and it does not expire.</p>
 <h2>The numbers: print size, pixels, and format</h2>
@@ -1842,6 +2519,177 @@ POSTS += [
 <p>When you add a logo, the covered middle counts as damage, and the reader reconstructs it from the redundant data spread across the rest of the code. That is why the error-correction level matters more than the logo file itself: on level L or M, a logo eats most of your safety margin before the code ever reaches a printer, while on level H the same logo sits inside a much larger budget. FreeQrly raises error correction automatically when a logo is added, so you do not set the level by hand — but you still have to respect what it buys you. A higher level also adds modules, making the same content denser: a short address that fits in a 29 × 29 grid at level M needs 37 × 37 at level H, so each module gets smaller at the same print size. Keep the destination short, and print logo codes a little larger than plain ones.</p>
 
 <h2>Logo size: the ceiling, the safer zone, and the area-versus-width trap</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAM</p>
+    <div class="qr-fig-title">How big can the logo be?</div>
+    <p class="qr-fig-sub">Area, not width — and 30% is a ceiling, not a target.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- QR square with logo zones -->
+      <rect x="20" y="60" width="280" height="280" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <g transform="translate(55,95) scale(2.8)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <rect x="83.5" y="123.5" width="153" height="153" rx="4" fill="none" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <rect x="97.5" y="137.5" width="125" height="125" rx="4" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <!-- legend under QR -->
+      <line x1="20" y1="372" x2="60" y2="372" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="377" font-size="13" fill="#1E2A32">Up to 20% of area — comfortable, room for wear</text>
+      <line x1="20" y1="402" x2="60" y2="402" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="407" font-size="13" fill="#1E2A32">30% of area — the ceiling, no reserve left</text>
+      <!-- width trap panel -->
+      <rect x="560" y="60" width="320" height="280" rx="12" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="580" y="92" font-size="12" font-weight="bold" letter-spacing="1.5" fill="#2F4A62">THE WIDTH TRAP</text>
+      <text x="580" y="128" font-size="14" fill="#1E2A32">Logo spans 30% of width</text>
+      <rect x="580" y="140" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="140" width="60" height="20" rx="4" fill="#2F4A62"/>
+      <text x="580" y="183" font-size="14" font-weight="bold" fill="#1E2A32">= only 9% of area</text>
+      <text x="580" y="222" font-size="14" fill="#1E2A32">Logo covers 30% of area</text>
+      <rect x="580" y="234" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="234" width="110" height="20" rx="4" fill="#D9A441"/>
+      <text x="580" y="277" font-size="14" font-weight="bold" fill="#1E2A32">= 55% of width</text>
+      <text x="580" y="312" font-size="13" fill="#777">This guide always means area.</text>
+    </svg></div>
+    <p class="qr-fig-foot">Why 30%? Level H error correction rebuilds about 30% of codewords (ISO/IEC 18004) — so a logo at the ceiling leaves nothing for scuffs, dim light, or older phones.</p>
+</figure>
 
 <p>Logo-size advice is easy to misread, because guides quote it two different ways. A logo spanning 30% of the code's <em>width</em> covers only about 9% of its <em>area</em>, while a logo covering 30% of the <em>area</em> spans about 55% of the width. When this guide says "under about 30% of the code area," it means area — the share of the whole square the logo hides — and that is the ceiling the FreeQrly generator uses. Treat anything near that ceiling as a code with no reserve left.</p>
 
@@ -1979,7 +2827,77 @@ POSTS += [
   cta=dict(title="Try it yourself — free", text="Everything in this article works in the FreeQrly studio right now. Static codes, all 17 content types, PNG and SVG export.", href="/#studio", btn="Open the studio"),
   body="""<p>A QR code that will not scan is rarely a mystery. Most failures come down to one of eleven causes, and they split into three questions: is the pattern unreadable, is the phone struggling, or did the code scan fine and the destination let you down? Answer those first, and you will not reprint a sound code — or fix a pattern when the link is dead.</p>
 
-<h2>Check these three first</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">FLOWCHART</p>
+    <div class="qr-fig-title">Why won&rsquo;t this code scan?</div>
+    <p class="qr-fig-sub">Work through the checks in order — each &ldquo;No&rdquo; points to one fix.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 900" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g font-size="17">
+        <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">Code won&rsquo;t scan?</text>
+        <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">Big enough?</text>
+        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">&ge; 1/10 of the distance</text>
+        <line x1="450" y1="165" x2="552" y2="165" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">NO</text>
+        <rect x="560" y="138" width="260" height="54" rx="12" fill="#D9A441"/>
+        <text x="690" y="171" text-anchor="middle" fill="#1E2A32" font-weight="bold">Reprint it larger</text>
+        <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="244" fill="#999" font-size="13">YES</text>
+        <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">Contrast &ge; 4:1?</text>
+        <text x="300" y="328" text-anchor="middle" fill="#666" font-size="14">dark code, light background</text>
+        <line x1="450" y1="311" x2="552" y2="311" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="298" text-anchor="middle" fill="#999" font-size="13">NO</text>
+        <rect x="560" y="284" width="260" height="54" rx="12" fill="#D9A441"/>
+        <text x="690" y="317" text-anchor="middle" fill="#1E2A32" font-weight="bold">Dark code, light background</text>
+        <line x1="300" y1="364" x2="300" y2="400" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="390" fill="#999" font-size="13">YES</text>
+        <polygon points="300,404 450,457 300,510 150,457" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="450" text-anchor="middle" fill="#1E2A32" font-weight="bold">Quiet zone kept?</text>
+        <text x="300" y="474" text-anchor="middle" fill="#666" font-size="14">&ge; 4 modules of margin</text>
+        <line x1="450" y1="457" x2="552" y2="457" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="444" text-anchor="middle" fill="#999" font-size="13">NO</text>
+        <rect x="560" y="430" width="260" height="54" rx="12" fill="#D9A441"/>
+        <text x="690" y="463" text-anchor="middle" fill="#1E2A32" font-weight="bold">Add a clear margin</text>
+        <line x1="300" y1="510" x2="300" y2="546" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="536" fill="#999" font-size="13">YES</text>
+        <polygon points="300,550 450,603 300,656 150,603" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="609" text-anchor="middle" fill="#1E2A32" font-weight="bold">Glare or curved surface?</text>
+        <line x1="450" y1="603" x2="552" y2="603" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="590" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="576" width="260" height="54" rx="12" fill="#D9A441"/>
+        <text x="690" y="609" text-anchor="middle" fill="#1E2A32" font-weight="bold">Matte finish, flat surface</text>
+        <line x1="300" y1="656" x2="300" y2="692" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="682" fill="#999" font-size="13">NO</text>
+        <rect x="150" y="696" width="300" height="56" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="731" text-anchor="middle" fill="#1E2A32" font-weight="bold">Try another phone</text>
+        <line x1="300" y1="752" x2="300" y2="788" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="792" width="340" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="827" text-anchor="middle" fill="#fff" font-weight="bold">Still fails? Regenerate the code</text>
+      </g>
+    </svg></div>
+</figure><h2>Check these three first</h2>
 <ol>
 <li><strong>Try a second phone.</strong> If another phone reads the code, the pattern is fine. Skip to the phone checks below.</li>
 <li><strong>Look at the code, not the screen.</strong> Is it small, pale, crowded by nearby text, covered by a logo, scratched, or faded? Any one of those can make a pattern unreadable. Also try a fresh copy of the original file: if the fresh copy scans, the original print failed, not the data.</li>
@@ -2643,7 +3561,92 @@ POSTS += [
 <h2>How a QR code scam usually works</h2>
 <p>Most QR scams, often called <strong>quishing</strong> — QR phishing — follow the same pattern. A scammer hides a harmful link inside a code, then gives you a reason to scan it in a hurry. The Federal Trade Commission (FTC) warned in its December 2023 consumer alert that scammers cover up real codes on parking meters with codes of their own, and send codes by text message or email with invented stories: a package that could not be delivered, a problem with an account, or suspicious activity that supposedly requires a password change. Each story is designed to create urgency, so that you scan the code and open the link without thinking about it.</p>
 <p>Once you scan, the trap is usually the page behind the code rather than the code itself. The FTC describes a spoofed site that looks real but is not: if you log in there, the scammers can steal whatever you enter, and a bad code can also try to install malware. ESET, writing about quishing, makes a related point: because the destination is encoded in a visual pattern rather than written out as readable text, it stays hidden until you scan, and some traditional email filters cannot inspect it the way they inspect a visible link. None of this means QR codes are unsafe in themselves. It means the check has to happen after the scan, in the preview your phone shows you, before you tap through.</p>
-<h2>Before you scan: the five-second inspection</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">FLOWCHART</p>
+    <div class="qr-fig-title">Should I scan this code?</div>
+    <p class="qr-fig-sub">Five checks before you scan, one after. Any failed check ends the same way: don&rsquo;t scan.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 1040" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g font-size="17">
+        <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">A code you didn&rsquo;t expect?</text>
+        <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">Sticker or overlay?</text>
+        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">raised edges, peeling corners</text>
+        <line x1="450" y1="165" x2="552" y2="165" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="133" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="160" text-anchor="middle" fill="#1E2A32" font-weight="bold">Do not scan</text>
+        <text x="690" y="183" text-anchor="middle" fill="#444" font-size="13">official app or meter instead</text>
+        <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="244" fill="#999" font-size="13">NO</text>
+        <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">Print quality off?</text>
+        <text x="300" y="328" text-anchor="middle" fill="#666" font-size="14">blur or mismatched print</text>
+        <line x1="450" y1="311" x2="552" y2="311" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="298" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="279" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="306" text-anchor="middle" fill="#1E2A32" font-weight="bold">Do not scan</text>
+        <text x="690" y="329" text-anchor="middle" fill="#444" font-size="13">find the service another way</text>
+        <line x1="300" y1="364" x2="300" y2="400" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="390" fill="#999" font-size="13">NO</text>
+        <polygon points="300,404 450,457 300,510 150,457" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="450" text-anchor="middle" fill="#1E2A32" font-weight="bold">No name or purpose?</text>
+        <text x="300" y="474" text-anchor="middle" fill="#666" font-size="14">no business, no explanation</text>
+        <line x1="450" y1="457" x2="552" y2="457" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="444" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="425" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="452" text-anchor="middle" fill="#1E2A32" font-weight="bold">Leave it alone</text>
+        <text x="690" y="475" text-anchor="middle" fill="#444" font-size="13">verify through a known channel</text>
+        <line x1="300" y1="510" x2="300" y2="546" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="536" fill="#999" font-size="13">NO</text>
+        <polygon points="300,550 450,603 300,656 150,603" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="596" text-anchor="middle" fill="#1E2A32" font-weight="bold">Urgency, threats, prizes?</text>
+        <text x="300" y="620" text-anchor="middle" fill="#666" font-size="14">a story you can&rsquo;t verify</text>
+        <line x1="450" y1="603" x2="552" y2="603" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="590" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="571" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="598" text-anchor="middle" fill="#1E2A32" font-weight="bold">Pause</text>
+        <text x="690" y="621" text-anchor="middle" fill="#444" font-size="13">contact via details you trust</text>
+        <line x1="300" y1="656" x2="300" y2="692" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="682" fill="#999" font-size="13">NO</text>
+        <rect x="150" y="696" width="300" height="56" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="731" text-anchor="middle" fill="#1E2A32" font-weight="bold">Scan with your built-in camera</text>
+        <line x1="300" y1="752" x2="300" y2="788" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,792 450,845 300,898 150,845" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="838" text-anchor="middle" fill="#1E2A32" font-weight="bold">Preview URL matches?</text>
+        <text x="300" y="862" text-anchor="middle" fill="#666" font-size="14">what you expected to see</text>
+        <line x1="450" y1="845" x2="552" y2="845" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="832" text-anchor="middle" fill="#999" font-size="13">NO</text>
+        <rect x="560" y="813" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="840" text-anchor="middle" fill="#1E2A32" font-weight="bold">Don&rsquo;t tap</text>
+        <text x="690" y="863" text-anchor="middle" fill="#444" font-size="13">close it, verify another way</text>
+        <line x1="300" y1="898" x2="300" y2="934" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="924" fill="#999" font-size="13">YES</text>
+        <rect x="170" y="938" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="973" text-anchor="middle" fill="#fff" font-weight="bold">Safe to proceed</text>
+      </g>
+    </svg></div>
+</figure><h2>Before you scan: the five-second inspection</h2>
 <p>Your phone camera cannot tell you whether a printed code has been tampered with. Your eyes can help. Run through these checks before you point your camera at anything.</p>
 <h3>1. Look for a sticker placed over the real code</h3>
 <p><strong>Feel and look at the edges.</strong> A sticker laid over a printed sign often has a visible border, a slightly raised edge, a different gloss or paper texture, or corners that are peeling. If the code sits on top of another code, a logo, or printed text, treat it as suspect. This is the classic parking-meter trick the FTC describes: the real payment code is covered, and the payment goes to the scammer instead. If anything looks layered, do not scan it. Pay through the official app, the meter itself, or the venue website you already know instead.</p>
@@ -2980,6 +3983,61 @@ POSTS += [
 <p>The core rule is simple: every ticket carries its own QR code and its own ticket identifier, and no two tickets share the same code. When an attendee registers or buys a ticket, the ticketing platform assigns that unique code and ties it to their ticket record. The code itself almost never contains personal details. It usually holds a unique reference string, often encrypted or signed, that points to a single ticket record in the platform database. The scanner reads the reference, the platform looks it up, and the answer comes back as one of a small set of results: Valid, Invalid, Duplicate, or Expired.</p>
 <p>That distinction matters, because it separates two kinds of QR code that organisers often confuse. An event QR code shares the same content with everyone: the schedule, the venue map, the registration page. An event ticket QR code is unique to each attendee, and its job is validation, duplicate prevention, and attendance tracking. Use the shared code to tell people about the event. Use the unique code to let them in. If you print the same code on every ticket, you have built a poster, not a ticket, and anyone who photographs it can walk in with it.</p>
 <h2>What the scanner should return, and why four answers beat two</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAM</p>
+    <div class="qr-fig-title">What the scanner should return</div>
+    <p class="qr-fig-sub">Not yes or no — four answers, each with its own response.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <!-- scanner box -->
+      <rect x="20" y="240" width="170" height="70" rx="12" fill="#2F4A62"/>
+      <text x="105" y="269" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Scanner reads</text>
+      <text x="105" y="291" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">the code</text>
+      <!-- fan-out lines -->
+      <line x1="190" y1="275" x2="262" y2="105" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="205" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="305" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="405" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <!-- row 1: Valid -->
+      <rect x="270" y="73" width="150" height="64" rx="32" fill="#2F4A62"/>
+      <text x="345" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Valid</text>
+      <text x="440" y="103" font-size="15" font-weight="bold" fill="#1E2A32">Welcome them in</text>
+      <text x="440" y="126" font-size="13" fill="#666">first scan of a real ticket</text>
+      <!-- row 2: Invalid -->
+      <rect x="270" y="173" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="212" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Invalid</text>
+      <text x="440" y="203" font-size="15" font-weight="bold" fill="#1E2A32">Check carefully, send to help desk</text>
+      <text x="440" y="226" font-size="13" fill="#666">matches no ticket — likely fake or wrong event</text>
+      <!-- row 3: Duplicate -->
+      <rect x="270" y="273" width="150" height="64" rx="32" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="345" y="312" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Duplicate</text>
+      <text x="440" y="303" font-size="15" font-weight="bold" fill="#1E2A32">Stop, verify identity, escalate</text>
+      <text x="440" y="326" font-size="13" fill="#666">ticket already scanned</text>
+      <!-- row 4: Expired -->
+      <rect x="270" y="373" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="412" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Expired</text>
+      <text x="440" y="403" font-size="15" font-weight="bold" fill="#1E2A32">Explain the window, offer rebooking</text>
+      <text x="440" y="426" font-size="13" fill="#666">real ticket, outside its valid window</text>
+    </svg></div>
+    <p class="qr-fig-foot">Train staff on the exact wording and colour of each result in your chosen tool — and rehearse the duplicate case.</p>
+</figure>
 <p>A good door scanner does not just say yes or no. It distinguishes Valid, meaning a first scan of a real ticket; Invalid, meaning the code matches no ticket on file and is likely fake, photoshopped, or for a different event; Duplicate, meaning the ticket has already been scanned; and Expired, meaning the ticket is real but outside its valid date or time window. Staff need those distinctions, because each one calls for a different response. A Valid scan means welcome them in. An Invalid scan means check the ticket carefully and send the guest to the help desk, not into an argument at the gate. A Duplicate scan means stop, verify identity, and escalate. An Expired scan means explain the window and offer the correct session or a rebooking route if one exists.</p>
 <p>Train staff on the exact wording and colour of each result in your chosen tool, and rehearse the duplicate case specifically. In the moment, a volunteer who has only practised the happy path will hesitate, wave someone through, or argue. A volunteer who has practised the duplicate script — pause, keep the guest politely to one side, call a supervisor, check name and order reference — will protect both the event and the guest, including the guest who is the victim of a forwarded screenshot rather than the person who forwarded it. The supervisor, not the gate volunteer, should make the final call on contested duplicates, and that rule should be written down before doors open.</p>
 <h2>Issuing tickets that survive the real world</h2>
@@ -3071,7 +4129,71 @@ POSTS += [
 <h2>Material: paper, plastic, metal, and fabric behave differently</h2>
 <p>Material changes the rules, and the proof material should match the final material. Paper and cardboard work best with matte or uncoated stock. Glossy finishes cause glare, so increase code size by 15 to 20 percent if glossy stock is required, according to one printing guide. Corrugated cardboard, with its uneven surface, needs a larger code and higher error correction, with level Q or H recommended. Vinyl and plastic need matte lamination and UV-resistant ink for outdoor use, with level H for outdoor exposure, and a plan to replace or re-laminate as sun and weather degrade the print. Metal and aluminium, where laser etching gives lower contrast, need a size increase of 30 to 40 percent and level H, tested on the actual surface finish.</p>
 <p>Fabric, wood, and textured surfaces add their own problems. Ink spreads on absorbent material, blurring module edges, while rough textures break the clean grid the scanner expects. On those materials, print larger, use higher error correction, and test a sample that has been handled, washed, or weathered if the item will face that treatment. A code on a tote bag that scans when new but fails after one wash has not passed, even if the first proof looked perfect. The same applies to labels that will be frozen, heated, or handled with wet hands: test the treated sample, not just the fresh print.</p>
-<h2>The proof checklist, in order</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">FLOWCHART</p>
+    <div class="qr-fig-title">Ready to print?</div>
+    <p class="qr-fig-sub">Work the proof in order. Fail a step, fix that one variable, and re-proof.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 840" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g>
+        <rect x="130" y="20" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="47" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">1 · File</text>
+        <text x="300" y="69" text-anchor="middle" font-size="13" fill="#666">SVG, PDF, or 300 dpi PNG</text>
+        <line x1="300" y1="84" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="112" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="139" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">2 · Size, quiet zone, error correction</text>
+        <text x="300" y="161" text-anchor="middle" font-size="13" fill="#666">10:1 rule · 2×2 cm min · 4-module margin</text>
+        <line x1="300" y1="176" x2="300" y2="200" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="204" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="231" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">3 · Two-phone test</text>
+        <text x="300" y="253" text-anchor="middle" font-size="13" fill="#666">one phone is not enough</text>
+        <line x1="300" y1="268" x2="300" y2="292" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="296" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="323" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">4 · Light, distance, angle</text>
+        <text x="300" y="345" text-anchor="middle" font-size="13" fill="#666">test where it will actually live</text>
+        <line x1="300" y1="360" x2="300" y2="384" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="388" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="415" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">5 · Material</text>
+        <text x="300" y="437" text-anchor="middle" font-size="13" fill="#666">paper, plastic, metal, fabric differ</text>
+        <line x1="300" y1="452" x2="300" y2="476" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="480" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="507" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">6 · Proof vs reference</text>
+        <text x="300" y="529" text-anchor="middle" font-size="13" fill="#666">first sheets vs the signed proof</text>
+        <line x1="300" y1="544" x2="300" y2="576" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,580 460,640 300,700 140,640" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="632" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Only works with</text>
+        <text x="300" y="654" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">special effort?</text>
+        <line x1="460" y1="640" x2="552" y2="640" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="503" y="627" text-anchor="middle" fill="#999" font-size="13">YES</text>
+        <rect x="560" y="608" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="635" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Stop and rethink</text>
+        <text x="690" y="657" text-anchor="middle" font-size="13" fill="#444">redesign the layout, don&rsquo;t tweak</text>
+        <line x1="300" y1="700" x2="300" y2="736" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="726" fill="#999" font-size="13">NO</text>
+        <rect x="170" y="740" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="775" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Print the run</text>
+      </g>
+    </svg></div>
+    <p class="qr-fig-foot">Fail any step? Fix that one variable and re-proof — even if only one variable changed. A code that only works when viewers step closer, tilt the card, and shield it from glare is not a working code.</p>
+</figure><h2>The proof checklist, in order</h2>
 <p>Work through the proof in the order below, and record a pass or fail for each item, with the phone models, distances, and light conditions used. A checklist with notes is useful when the printer asks what changed, when a colleague reprints the item, or when a code fails in the field and you need to know what was actually tested. Keep one approved proof, signed and dated, as the reference for the full run, and compare the first sheets off the press against it, because press conditions can drift from proof conditions.</p>
 <table>
 <tr><th>Step</th><th>What to check</th><th>Pass means</th></tr>
