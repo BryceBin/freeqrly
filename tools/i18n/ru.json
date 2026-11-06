@@ -1817,7 +1817,7 @@
     "reports for a client, or yourself": "отчёты клиенту или себе",
     "stats included": "со статистикой",
     "this is what it's for": "для этого он и создан",
-    "unfinalized URLs, future edits": "адрес не готов, правки впереди"
+    "unfinalized URLs, future edits": "адрес не готов"
   },
   "blog-wedding-rsvp-qr-code": {
     "Wedding RSVP QR Codes: A Complete Guide | FreeQrly": "QR-коды для свадебных RSVP: полное руководство | FreeQrly",
@@ -5082,14 +5082,14 @@
     "Should I scan this code?": "Сканировать этот код?",
     "Sticker or overlay?": "Наклейка поверх кода?",
     "Urgency, threats, prizes?": "Спешка, угрозы, призы?",
-    "a story you can't verify": "история, которую не проверить",
+    "a story you can't verify": "непроверяемая история",
     "blur or mismatched print": "размыто, печать не та",
     "close it, verify another way": "закройте и проверьте иначе",
     "contact via details you trust": "только проверенные контакты",
     "find the service another way": "найдите сервис иначе",
-    "no business, no explanation": "нет ни фирмы, ни пояснения",
+    "no business, no explanation": "ни фирмы, ни пояснения",
     "official app or meter instead": "приложение или терминал",
-    "raised edges, peeling corners": "края приподняты, углы отклеиваются",
+    "raised edges, peeling corners": "края отклеиваются",
     "verify through a known channel": "проверьте по известному каналу",
     "what you expected to see": "с тем, что вы ожидали"
   },
