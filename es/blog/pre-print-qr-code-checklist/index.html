@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,15 +169,15 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notas de campo</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Imprímelo una vez, <span class='hl hl-mint'>porque lo probaste primero</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">El momento más barato para encontrar un código QR roto es en una sola prueba, no en un almacén lleno de stock impreso. Esta lista hace pasar la prueba por dos teléfonos, luz real, distancia real y material real, antes de aprobar la tirada completa.</p>
-    <p class="meta" style="text-align:center">4 de noviembre de 2026 · 14 min de lectura</p>
+    <p class="meta" style="text-align:center">4 de noviembre de 2026 · 15 min de lectura</p>
     <div class="prose" style="margin-top:40px">
 <p>Un código QR que escanea en la pantalla de un diseñador puede fallar igualmente en papel. Las pantallas están retroiluminadas, son perfectamente planas y se ven a distancia de brazo. El papel no. Deslumbra, se curva, absorbe tinta, se desteñe con el sol, se raya al manipularlo, y se lee desde distancias en las que el diseñador nunca estuvo. Esa brecha es por lo que existe la prueba preimpresión, y por lo que debe ser una lista y no un vistazo. Un vistazo detecta un código obviamente roto. Una lista detecta un código que funciona en el estudio y falla en el lugar, en el estante o en la mano de un cliente.</p>
 <p>Esta guía está escrita para el momento antes de la aprobación: la prueba está impresa, la tirada completa no ha empezado, y aún hay tiempo para corregir el tamaño, el contraste, el material o el enlace sin desperdiciar stock. Asume que ya elegiste el destino y generaste el código. Si no, empieza por el destino y el enlace, porque ninguna cantidad de pruebas de impresión puede arreglar un vídeo privado, una página caducada o una dirección mal tecleada. Una vez el enlace es correcto, recorre las comprobaciones siguientes en orden, y no apruebes la tirada hasta que cada elemento imprescindible tenga un visto de una prueba real, no de una vista previa en pantalla.</p>
@@ -205,7 +205,71 @@
 <h2>Material: papel, plástico, metal y tela se comportan distinto</h2>
 <p>El material cambia las reglas, y el material de la prueba debe coincidir con el material final. Papel y cartón funcionan mejor con material mate o sin estucar. Los acabados brillantes causan reflejos, así que aumenta el tamaño del código un 15 a 20 por ciento si se requiere material brillante, según una guía de impresión. El cartón ondulado, con su superficie irregular, necesita un código mayor y mayor corrección de errores, con nivel Q o H recomendado. El vinilo y el plástico necesitan laminación mate y tinta resistente a UV para uso exterior, con nivel H para exposición exterior, y un plan para sustituir o relaminar a medida que el sol y el clima degradan la impresión. El metal y el aluminio, donde el grabado láser da menor contraste, necesitan un aumento de tamaño del 30 al 40 por ciento y nivel H, probado en el acabado de superficie real.</p>
 <p>La tela, la madera y las superficies texturizadas añaden sus propios problemas. La tinta se extiende en material absorbente, difuminando los bordes de los módulos, mientras que las texturas rugosas rompen la cuadrícula limpia que el escáner espera. En esos materiales, imprime más grande, usa mayor corrección de errores, y prueba una muestra que haya sido manipulada, lavada o expuesta al clima si el artículo enfrentará ese tratamiento. Un código en una bolsa de tela que escanea cuando es nueva pero falla tras un lavado no ha pasado, aunque la primera muestra pareciera perfecta. Lo mismo aplica a etiquetas que se congelarán, calentarán o manipularán con manos mojadas: prueba la muestra tratada, no solo la impresión fresca.</p>
-<h2>La lista de comprobación de la prueba, en orden</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAMA DE FLUJO</p>
+    <div class="qr-fig-title">¿Listo para imprimir?</div>
+    <p class="qr-fig-sub">Recorre la prueba en orden. Si un paso falla, corrige esa variable y repite la prueba.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 840" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g>
+        <rect x="130" y="20" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="47" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">1 · Archivo</text>
+        <text x="300" y="69" text-anchor="middle" font-size="13" fill="#666">SVG, PDF o PNG a 300 dpi</text>
+        <line x1="300" y1="84" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="112" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="139" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">2 · Tamaño, zona y corrección</text>
+        <text x="300" y="161" text-anchor="middle" font-size="13" fill="#666">Regla 10:1 · mín. 2×2 cm · margen de 4 módulos</text>
+        <line x1="300" y1="176" x2="300" y2="200" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="204" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="231" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">3 · Prueba de dos teléfonos</text>
+        <text x="300" y="253" text-anchor="middle" font-size="13" fill="#666">un teléfono no basta</text>
+        <line x1="300" y1="268" x2="300" y2="292" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="296" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="323" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">4 · Luz, distancia y ángulo</text>
+        <text x="300" y="345" text-anchor="middle" font-size="13" fill="#666">prueba donde vivirá de verdad</text>
+        <line x1="300" y1="360" x2="300" y2="384" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="388" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="415" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">5 · Material</text>
+        <text x="300" y="437" text-anchor="middle" font-size="13" fill="#666">papel, plástico, metal y tela difieren</text>
+        <line x1="300" y1="452" x2="300" y2="476" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="480" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="507" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">6 · Prueba frente a referencia</text>
+        <text x="300" y="529" text-anchor="middle" font-size="13" fill="#666">primeras hojas frente a la prueba firmada</text>
+        <line x1="300" y1="544" x2="300" y2="576" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,580 460,640 300,700 140,640" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="632" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Solo funciona con</text>
+        <text x="300" y="654" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">¿esfuerzo especial?</text>
+        <line x1="460" y1="640" x2="552" y2="640" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="503" y="627" text-anchor="middle" fill="#999" font-size="13">SÍ</text>
+        <rect x="560" y="608" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="635" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Detente y replantea</text>
+        <text x="690" y="657" text-anchor="middle" font-size="13" fill="#444">rediseña la maquetación, no la ajustes</text>
+        <line x1="300" y1="700" x2="300" y2="736" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="726" fill="#999" font-size="13">NO</text>
+        <rect x="170" y="740" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="775" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Imprime la tirada</text>
+      </g>
+    </svg></div>
+    <p class="qr-fig-foot">¿Falla algún paso? Corrige esa variable y repite la prueba, aunque solo haya cambiado una variable. Un código que solo funciona cuando el espectador se acerca, inclina la tarjeta y lo protege del brillo no es un código que funcione.</p>
+</figure><h2>La lista de comprobación de la prueba, en orden</h2>
 <p>Recorre la prueba en el orden siguiente, y registra un aprobado o suspenso para cada elemento, con los modelos de teléfono, distancias y condiciones de luz usados. Una lista con notas es útil cuando el impresor pregunta qué cambió, cuando un colega reimprime el artículo, o cuando un código falla en campo y necesitas saber qué se probó realmente. Guarda una prueba aprobada, firmada y fechada, como referencia para la tirada completa, y compara las primeras hojas de prensa con ella, porque las condiciones de prensa pueden desviarse de las condiciones de prueba.</p>
 <div class="table-scroll"><table>
 <tr><th>Paso</th><th>Qué revisar</th><th>Aprobado significa</th></tr>

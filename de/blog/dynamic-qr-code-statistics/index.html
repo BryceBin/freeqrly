@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -130,9 +130,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, das FreeQrly-Elefantenmaskottchen"></div>
     <div class="kicker" style="text-align:center">Feldnotizen</div>
@@ -191,6 +191,58 @@
 </ul>
 <h2>Ein durchgerechnetes Beispiel, mit gezeigter Rechnung</h2>
 <p>Anschauliches Beispiel – die Zahlen unten sind hypothetisch, nur um die Rechnung zu zeigen, keine Messungen aus einer echten Kampagne. Angenommen, zwei Codes zeigen für dieselben zwei Wochen auf dieselbe Seite. Code A, auf einem Tresenschild, verzeichnet 120 Gesamt-Scans und 90 eindeutige Scans. Code B, auf einem Schaufensterplakat, verzeichnet 60 Gesamt-Scans und 55 eindeutige Scans. Drei Lesarten folgen, jede mit einer anderen Handlung:</p>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">BALKENDIAGRAMM</p>
+    <div class="qr-fig-title">Zwei Codes, eine Seite, zwei Wochen</div>
+    <p class="qr-fig-sub">Summen zeigen, wie viel. Eindeutige Zahlen zeigen, wie viele Menschen. Die Differenz ist wiederholte Nutzung.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- legend -->
+      <rect x="620" y="14" width="16" height="16" rx="3" fill="#2F4A62"/>
+      <text x="644" y="27" font-size="13" fill="#1E2A32">Scans gesamt</text>
+      <rect x="748" y="14" width="16" height="16" rx="3" fill="#D9A441"/>
+      <text x="772" y="27" font-size="13" fill="#1E2A32">Unique Scans</text>
+      <!-- gridlines: 0/30/60/90/120 at y 400/325/250/175/100 -->
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="190" y1="100" x2="640" y2="100"/><line x1="190" y1="175" x2="640" y2="175"/>
+        <line x1="190" y1="250" x2="640" y2="250"/><line x1="190" y1="325" x2="640" y2="325"/>
+      </g>
+      <line x1="190" y1="60" x2="190" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 230)" x="28" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">Scans (2 Wochen)</text>
+      <g font-size="12" fill="#777" text-anchor="end">
+        <text x="180" y="104">120</text><text x="180" y="179">90</text>
+        <text x="180" y="254">60</text><text x="180" y="329">30</text><text x="180" y="404">0</text>
+      </g>
+      <!-- group A: total 120 (h300, y100), unique 90 (h225, y175) -->
+      <rect x="230" y="100" width="44" height="300" rx="4" fill="#2F4A62"/>
+      <rect x="288" y="175" width="44" height="225" rx="4" fill="#D9A441"/>
+      <text x="252" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">120</text>
+      <text x="310" y="163" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">90</text>
+      <!-- group B: total 60 (h150, y250), unique 55 (h138, y262) -->
+      <rect x="480" y="250" width="44" height="150" rx="4" fill="#2F4A62"/>
+      <rect x="538" y="262" width="44" height="138" rx="4" fill="#D9A441"/>
+      <text x="502" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">60</text>
+      <text x="560" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">55</text>
+      <line x1="190" y1="400" x2="640" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text x="281" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">Code A — Tresenschild</text>
+      <text x="531" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">Code B — Schaufensterplakat</text>
+      <text x="281" y="452" text-anchor="middle" font-size="13" fill="#666">Wiederholt: +30 — Stammkunden</text>
+      <text x="531" y="452" text-anchor="middle" font-size="13" fill="#666">Wiederholt: +5 — meist einmalig</text>
+    </svg></div>
+    <p class="qr-fig-foot">Anschauliches Beispiel aus diesem Beitrag — hypothetische Zahlen, nur um die Rechnung zu zeigen.</p>
+</figure>
 <ul>
 <li><strong>Reichweite:</strong> Code A erreichte mehr unterschiedliche Leute (90 gegen 55), das Tresenschild ist also die breitere Platzierung.</li>
 <li><strong>Wiederholte Nutzung:</strong> Code As Summe läuft 30 Scans vor seiner eindeutigen Zahl, während Code Bs nur 5 vorausläuft, Tresenbesucher scannen also wiederholt, während Plakatbesucher meist einmal scannen. Das passt zu einem Tresenschild, das Stammkunden sehen, und einem Plakat, das Passanten sehen – und es legt nahe, dass das Ziel des Tresen-Codes einen zweiten Besuch belohnen sollte, während das Ziel des Plakat-Codes seinen Fall in einem Besuch machen sollte.</li>

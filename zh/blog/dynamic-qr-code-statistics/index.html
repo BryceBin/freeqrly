@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -130,9 +130,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
     <div class="kicker" style="text-align:center">实战笔记</div>
@@ -191,6 +191,58 @@
 </ul>
 <h2>一个算给你看的例子，算术都摆出来</h2>
 <p>示意例子——下面的数字是假设的，只用来展示算术，不是任何真实营销活动的测量。假设两个码在同样的两周里指向同一个页面。A 码在柜台招牌上，记录了 120 次总扫码、90 次独立扫码。B 码在橱窗海报上，记录了 60 次总扫码、55 次独立扫码。得出三个解读，每个对应不同的行动：</p>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">条形图</p>
+    <div class="qr-fig-title">两个码、一个页面、两周</div>
+    <p class="qr-fig-sub">总数告诉你有多少次，独立数告诉你有多少人，两者的差就是重复使用。</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- legend -->
+      <rect x="620" y="14" width="16" height="16" rx="3" fill="#2F4A62"/>
+      <text x="644" y="27" font-size="13" fill="#1E2A32">总扫码</text>
+      <rect x="748" y="14" width="16" height="16" rx="3" fill="#D9A441"/>
+      <text x="772" y="27" font-size="13" fill="#1E2A32">独立扫码</text>
+      <!-- gridlines: 0/30/60/90/120 at y 400/325/250/175/100 -->
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="190" y1="100" x2="640" y2="100"/><line x1="190" y1="175" x2="640" y2="175"/>
+        <line x1="190" y1="250" x2="640" y2="250"/><line x1="190" y1="325" x2="640" y2="325"/>
+      </g>
+      <line x1="190" y1="60" x2="190" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 230)" x="28" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">扫码数（两周）</text>
+      <g font-size="12" fill="#777" text-anchor="end">
+        <text x="180" y="104">120</text><text x="180" y="179">90</text>
+        <text x="180" y="254">60</text><text x="180" y="329">30</text><text x="180" y="404">0</text>
+      </g>
+      <!-- group A: total 120 (h300, y100), unique 90 (h225, y175) -->
+      <rect x="230" y="100" width="44" height="300" rx="4" fill="#2F4A62"/>
+      <rect x="288" y="175" width="44" height="225" rx="4" fill="#D9A441"/>
+      <text x="252" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">120</text>
+      <text x="310" y="163" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">90</text>
+      <!-- group B: total 60 (h150, y250), unique 55 (h138, y262) -->
+      <rect x="480" y="250" width="44" height="150" rx="4" fill="#2F4A62"/>
+      <rect x="538" y="262" width="44" height="138" rx="4" fill="#D9A441"/>
+      <text x="502" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">60</text>
+      <text x="560" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">55</text>
+      <line x1="190" y1="400" x2="640" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text x="281" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">A 码——柜台招牌</text>
+      <text x="531" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">B 码——橱窗海报</text>
+      <text x="281" y="452" text-anchor="middle" font-size="13" fill="#666">重复：+30——常客回头</text>
+      <text x="531" y="452" text-anchor="middle" font-size="13" fill="#666">重复：+5——大多只扫一次</text>
+    </svg></div>
+    <p class="qr-fig-foot">本帖示意例子——数字是假设的，只用来展示算术。</p>
+</figure>
 <ul>
 <li><strong>触达：</strong>A 码触达了更多不同的人（90 对 55），所以柜台招牌是更广的位置。</li>
 <li><strong>重复使用：</strong>A 码的总数比独立数多 30 次，B 码只多 5 次，所以柜台访客反复扫，而海报访客大多只扫一次。这符合常客看到的柜台招牌和路人看到的海报——而且这提示柜台码的目标应该奖励第二次到访，海报码的目标应该一次就把话说清楚。</li>

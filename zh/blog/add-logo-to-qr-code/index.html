@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -154,15 +154,15 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">你的 Logo，<span class='hl hl-blush'>放在中间</span>——照样能扫</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">有了 Logo，二维码就是你的了。同时它也盖住了图案的一部分。下面讲怎么两全：Logo 稳居正中，第一次扫就成功。</p>
-    <p class="meta" style="text-align:center">2026年10月28日 · 最后更新：2026年11月3日 · 阅读约14分钟</p>
+    <p class="meta" style="text-align:center">October 28, 2026 · Last updated: November 3, 2026 · 15 min read</p>
     <div class="prose" style="margin-top:40px">
 <p>二维码中间的 Logo 在三个条件同时成立时才管用：Logo 保持小、码的纠错级别设得高、重要的东西都没被盖住。实际操作就是：方形透明底 Logo、居中、面积控制在约 30% 以内作为上限——想要安全余量就再小一点——深色印在浅色上，整个码周围留出清晰边距。做到这些，在两部手机上测一下印好的成品，码第一次扫就能读出来，同时一眼就能看出是你的品牌。</p>
 
@@ -183,6 +183,177 @@
 <p>加上 Logo 后，被盖住的中间就等于损伤，读取器靠分布在其余码上的冗余数据把它重建出来。这就是纠错级别比 Logo 文件本身更重要的原因：在 L 级或 M 级上，Logo 还没到打印机就吃掉了你大部分安全余量；而在 H 级上，同样的 Logo 处在一个大得多的预算里。FreeQrly 在你加 Logo 时会自动提高纠错级别，所以你不用手动设级别——但你仍然要尊重它买来的东西。更高的级别也会增加模块，让同样的内容更密：一个在 M 级下能装进 29 × 29 网格的短地址，在 H 级下需要 37 × 37，所以在同样印刷尺寸下每个模块都变小了。目标保持短，带 Logo 的码比素码印大一点。</p>
 
 <h2>Logo 尺寸：上限、安全区，以及面积和宽度的陷阱</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">示意图</p>
+    <div class="qr-fig-title">Logo 能放多大？</div>
+    <p class="qr-fig-sub">看面积，不是宽度——30% 是上限，不是目标。</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- QR square with logo zones -->
+      <rect x="20" y="60" width="280" height="280" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <g transform="translate(55,95) scale(2.8)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <rect x="83.5" y="123.5" width="153" height="153" rx="4" fill="none" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <rect x="97.5" y="137.5" width="125" height="125" rx="4" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <!-- legend under QR -->
+      <line x1="20" y1="372" x2="60" y2="372" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="377" font-size="13" fill="#1E2A32">面积 20% 以内——舒服，磨损还有余地</text>
+      <line x1="20" y1="402" x2="60" y2="402" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="407" font-size="13" fill="#1E2A32">面积 30%——已到上限，没有余量</text>
+      <!-- width trap panel -->
+      <rect x="560" y="60" width="320" height="280" rx="12" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="580" y="92" font-size="12" font-weight="bold" letter-spacing="1.5" fill="#2F4A62">宽度陷阱</text>
+      <text x="580" y="128" font-size="14" fill="#1E2A32">Logo 占宽度 30%</text>
+      <rect x="580" y="140" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="140" width="60" height="20" rx="4" fill="#2F4A62"/>
+      <text x="580" y="183" font-size="14" font-weight="bold" fill="#1E2A32">= 只占面积 9%</text>
+      <text x="580" y="222" font-size="14" fill="#1E2A32">Logo 占面积 30%</text>
+      <rect x="580" y="234" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="234" width="110" height="20" rx="4" fill="#D9A441"/>
+      <text x="580" y="277" font-size="14" font-weight="bold" fill="#1E2A32">= 占宽度 55%</text>
+      <text x="580" y="312" font-size="13" fill="#777">本指南说的都是面积。</text>
+    </svg></div>
+    <p class="qr-fig-foot">为什么是 30%？H 级纠错大约能恢复 30% 的码字（ISO/IEC 18004）——所以 Logo 顶到上限，擦伤、暗光、老手机就一点余地都不剩。</p>
+</figure>
 
 <p>Logo 尺寸的建议很容易读错，因为指南用两种方式引用它。一个占码<em>宽度</em> 30% 的 Logo 只占<em>面积</em>的约 9%，而一个占<em>面积</em> 30% 的 Logo 占宽度约 55%。本指南说“码面积的约 30% 以内”时，说的是面积——Logo 盖住整个方块的份额——这也是 FreeQrly 生成器采用的上限。任何接近这个上限的情况，都要当成一个已经没有余地的码来对待。</p>
 
@@ -296,9 +467,9 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/do-qr-codes-expire/"><b>二维码会过期吗？不会——但付费码会死</b></a>
-        <a class="rel-card" href="/zh/blog/how-to-scan-a-qr-code/"><b>怎么扫二维码（iPhone 与安卓）</b></a>
-        <a class="rel-card" href="/zh/blog/qr-code-print-size-guide/"><b>二维码打印尺寸指南：从名片到海报</b></a>
+        <a class="rel-card" href="/zh/blog/qr-codes-for-laundromats/"><b>QR Codes for Laundromats: One Code per Machine, Plus Wi-Fi, Reviews, and Loyalty</b></a>
+        <a class="rel-card" href="/zh/blog/qr-codes-for-gyms/"><b>QR Codes for Gyms and Fitness Studios: Check-Ins, Classes, and Reviews</b></a>
+        <a class="rel-card" href="/zh/blog/qr-codes-for-breweries/"><b>精酿啤酒厂二维码：酒单、参观、周边商品、活动与评价</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">

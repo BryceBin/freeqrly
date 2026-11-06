@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -130,9 +130,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, FreeQrly का हाथी शुभंकर"></div>
     <div class="kicker" style="text-align:center">फ़ील्ड नोट्स</div>
@@ -191,6 +191,58 @@
 </ul>
 <h2>काम किया उदाहरण, गणित दिखाते हुए</h2>
 <p>काल्पनिक उदाहरण — नीचे के नंबर सिर्फ़ गणित दिखाने के लिए काल्पनिक हैं, किसी असली कैंपेन के मापन नहीं। मान लें कि दो कोड उसी दो हफ़्ते के लिए उसी पेज पर पॉइंट करते हैं। कोड A, काउंटर साइन पर, 120 कुल स्कैन और 90 यूनिक स्कैन रिकॉर्ड करता है। कोड B, विंडो पोस्टर पर, 60 कुल स्कैन और 55 यूनिक स्कैन रिकॉर्ड करता है। तीन पढ़ना निकलते हैं, हर एक अलग कार्रवाई के साथ:</p>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">बार चार्ट</p>
+    <div class="qr-fig-title">दो कोड, एक पेज, दो हफ़्ते</div>
+    <p class="qr-fig-sub">कुल बताते हैं कितना। यूनिक बताते हैं कितने लोग। दोनों का अंतर दोहराया इस्तेमाल है।</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- legend -->
+      <rect x="620" y="14" width="16" height="16" rx="3" fill="#2F4A62"/>
+      <text x="644" y="27" font-size="13" fill="#1E2A32">कुल स्कैन</text>
+      <rect x="748" y="14" width="16" height="16" rx="3" fill="#D9A441"/>
+      <text x="772" y="27" font-size="13" fill="#1E2A32">यूनिक स्कैन</text>
+      <!-- gridlines: 0/30/60/90/120 at y 400/325/250/175/100 -->
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="190" y1="100" x2="640" y2="100"/><line x1="190" y1="175" x2="640" y2="175"/>
+        <line x1="190" y1="250" x2="640" y2="250"/><line x1="190" y1="325" x2="640" y2="325"/>
+      </g>
+      <line x1="190" y1="60" x2="190" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 230)" x="28" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">स्कैन (2 हफ़्ते)</text>
+      <g font-size="12" fill="#777" text-anchor="end">
+        <text x="180" y="104">120</text><text x="180" y="179">90</text>
+        <text x="180" y="254">60</text><text x="180" y="329">30</text><text x="180" y="404">0</text>
+      </g>
+      <!-- group A: total 120 (h300, y100), unique 90 (h225, y175) -->
+      <rect x="230" y="100" width="44" height="300" rx="4" fill="#2F4A62"/>
+      <rect x="288" y="175" width="44" height="225" rx="4" fill="#D9A441"/>
+      <text x="252" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">120</text>
+      <text x="310" y="163" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">90</text>
+      <!-- group B: total 60 (h150, y250), unique 55 (h138, y262) -->
+      <rect x="480" y="250" width="44" height="150" rx="4" fill="#2F4A62"/>
+      <rect x="538" y="262" width="44" height="138" rx="4" fill="#D9A441"/>
+      <text x="502" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">60</text>
+      <text x="560" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">55</text>
+      <line x1="190" y1="400" x2="640" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text x="281" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">कोड A — काउंटर साइन</text>
+      <text x="531" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">कोड B — विंडो पोस्टर</text>
+      <text x="281" y="452" text-anchor="middle" font-size="13" fill="#666">दोहराव: +30 — नियमित लोग लौटते हैं</text>
+      <text x="531" y="452" text-anchor="middle" font-size="13" fill="#666">दोहराव: +5 — ज़्यादातर एक बार वाले</text>
+    </svg></div>
+    <p class="qr-fig-foot">इस पोस्ट का काल्पनिक उदाहरण — सिर्फ़ गणित दिखाने के लिए काल्पनिक नंबर।</p>
+</figure>
 <ul>
 <li><strong>पहुँच:</strong> कोड A ज़्यादा अलग लोगों तक पहुँचा (55 के मुकाबले 90), इसलिए काउंटर साइन चौड़ा प्लेसमेंट है।</li>
 <li><strong>दोहराया इस्तेमाल:</strong> कोड A का कुल उसके यूनिक से 30 स्कैन आगे चलता है, जबकि कोड B का सिर्फ़ 5 आगे, इसलिए काउंटर विज़िटर बार-बार स्कैन करते हैं जबकि पोस्टर विज़िटर ज़्यादातर एक बार स्कैन करते हैं। यह काउंटर साइन को नियमित लोगों द्वारा देखे जाने और पोस्टर को राहगीरों द्वारा देखे जाने से मेल खाता है — और यह सुझाता है कि काउंटर कोड की मंज़िल दूसरी विज़िट को पुरस्कृत करे, जबकि पोस्टर कोड की मंज़िल एक ही विज़िट में अपनी बात कहे।</li>

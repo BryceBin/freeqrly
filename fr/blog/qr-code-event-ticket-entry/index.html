@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,9 +169,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notes de terrain</div>
@@ -185,6 +185,61 @@
 <p>La règle de base est simple : chaque billet porte son propre QR code et son propre identifiant de billet, et deux billets ne partagent jamais le même code. Quand un participant s'inscrit ou achète un billet, la plateforme de billetterie attribue ce code unique et le lie à son enregistrement de billet. Le code lui-même ne contient presque jamais de données personnelles. Il contient généralement une chaîne de référence unique, souvent chiffrée ou signée, qui pointe vers un seul enregistrement de billet dans la base de données de la plateforme. Le lecteur lit la référence, la plateforme la recherche, et la réponse revient sous la forme d'un petit ensemble de résultats : Valide, Invalide, Doublon ou Expiré.</p>
 <p>Cette distinction compte, car elle sépare deux sortes de QR codes que les organisateurs confondent souvent. Un QR code d'événement partage le même contenu avec tout le monde : le programme, le plan du lieu, la page d'inscription. Un QR code de billet d'événement est unique pour chaque participant, et sa tâche est la validation, la prévention des doublons et le suivi de présence. Utilisez le code partagé pour parler de l'événement aux gens. Utilisez le code unique pour les laisser entrer. Si vous imprimez le même code sur chaque billet, vous avez construit une affiche, pas un billet, et quiconque le photographie peut entrer avec.</p>
 <h2>Ce que le lecteur doit renvoyer, et pourquoi quatre réponses valent mieux que deux</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">SCHÉMA</p>
+    <div class="qr-fig-title">Ce que le lecteur doit renvoyer</div>
+    <p class="qr-fig-sub">Pas oui ou non — quatre réponses, chacune avec sa réaction.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <!-- scanner box -->
+      <rect x="20" y="240" width="170" height="70" rx="12" fill="#2F4A62"/>
+      <text x="105" y="269" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Le lecteur lit</text>
+      <text x="105" y="291" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">le code</text>
+      <!-- fan-out lines -->
+      <line x1="190" y1="275" x2="262" y2="105" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="205" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="305" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="405" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <!-- row 1: Valid -->
+      <rect x="270" y="73" width="150" height="64" rx="32" fill="#2F4A62"/>
+      <text x="345" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Valide</text>
+      <text x="440" y="103" font-size="15" font-weight="bold" fill="#1E2A32">Faites-les entrer</text>
+      <text x="440" y="126" font-size="13" fill="#666">premier scan d'un vrai billet</text>
+      <!-- row 2: Invalid -->
+      <rect x="270" y="173" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="212" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Invalide</text>
+      <text x="440" y="203" font-size="15" font-weight="bold" fill="#1E2A32">Vérifiez bien, envoyez à l'accueil</text>
+      <text x="440" y="226" font-size="13" fill="#666">ne correspond à aucun billet — probablement faux</text>
+      <!-- row 3: Duplicate -->
+      <rect x="270" y="273" width="150" height="64" rx="32" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="345" y="312" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Doublon</text>
+      <text x="440" y="303" font-size="15" font-weight="bold" fill="#1E2A32">Arrêtez, vérifiez l'identité, escaladez</text>
+      <text x="440" y="326" font-size="13" fill="#666">billet déjà scanné</text>
+      <!-- row 4: Expired -->
+      <rect x="270" y="373" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="412" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Expiré</text>
+      <text x="440" y="403" font-size="15" font-weight="bold" fill="#1E2A32">Expliquez la fenêtre, proposez un report</text>
+      <text x="440" y="426" font-size="13" fill="#666">vrai billet, hors période de validité</text>
+    </svg></div>
+    <p class="qr-fig-foot">Formez le personnel au libellé et à la couleur exacts de chaque résultat dans votre outil — et répétez le cas du doublon.</p>
+</figure>
 <p>Un bon lecteur de porte ne dit pas seulement oui ou non. Il distingue Valide, signifiant un premier scan d'un vrai billet ; Invalide, signifiant que le code ne correspond à aucun billet enregistré et est probablement faux, retouché, ou pour un autre événement ; Doublon, signifiant que le billet a déjà été scanné ; et Expiré, signifiant que le billet est réel mais hors de sa fenêtre de validité en date ou en heure. Le personnel a besoin de ces distinctions, car chacune appelle une réponse différente. Un scan Valide signifie accueillez-les. Un scan Invalide signifie vérifiez le billet attentivement et envoyez l'invité au bureau d'aide, pas dans une dispute à la porte. Un scan Doublon signifie arrêtez-vous, vérifiez l'identité, et escaladez. Un scan Expiré signifie expliquez la fenêtre et proposez la bonne session ou un parcours de nouvelle réservation s'il en existe un.</p>
 <p>Formez le personnel à la formulation et à la couleur exactes de chaque résultat dans l'outil choisi, et répétez spécifiquement le cas du doublon. Sur le moment, un bénévole qui n'a répété que le parcours heureux hésitera, laissera passer quelqu'un, ou se disputera. Un bénévole qui a répété le script du doublon — pause, gardez l'invité poliment de côté, appelez un superviseur, vérifiez le nom et la référence de commande — protégera à la fois l'événement et l'invité, y compris l'invité victime d'une capture d'écran transmise plutôt que la personne qui l'a transmise. Le superviseur, pas le bénévole de porte, doit prendre la décision finale sur les doublons contestés, et cette règle doit être écrite avant l'ouverture des portes.</p>
 <h2>Émettre des billets qui survivent au monde réel</h2>

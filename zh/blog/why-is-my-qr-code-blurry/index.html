@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -153,9 +153,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/error.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
     <div class="kicker" style="text-align:center">实战笔记</div>
@@ -166,6 +166,298 @@
 <p>发糊的二维码几乎总是个分辨率问题：像素太少，摊的面积太大。解决办法是导出更大的——或者直接导出 SVG。如果码在屏幕上看着清晰、印到纸上却糊成一团，说明图片的像素撑不起它印出来的尺寸。二维码是由叫作模块的小方格组成的网格；像素不够时，模块的边缘就会糊成一片，手机找不到网格，扫码就失败。先从导出文件下手，别急着换设计：用更高分辨率重新生成，或者导出矢量文件，先按真实尺寸印一张样张，在真实观看距离上扫一下，确认没问题再批量印。</p>
 <p>这个答案覆盖了大多数情况，但发糊不止一个原因，每种原因的修法不一样：导出文件太小、JPEG 压缩、拉伸变形、打印机或纸张问题，或者翻拍的翻拍。下面几节把这些原因分开讲，给你一张给印刷用的数字表，按顺序走一遍修复步骤，还讲那些看着清晰却还是扫不出来的码——那些属于<a href="/zh/blog/why-is-my-qr-code-not-working/">二维码为什么扫不出来</a>。</p>
 <h2>发糊到底对码做了什么</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">示意图</p>
+    <div class="qr-fig-title">发糊对码做了什么</div>
+    <p class="qr-fig-sub">相机逐个模块判断：深还是浅。发糊把这个判断变成灰色。</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <!-- sharp panel -->
+      <rect x="20" y="60" width="400" height="320" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="220" y="92" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="2" fill="#2F4A62">清晰</text>
+      <g transform="translate(108,110) scale(3)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="220" y="362" text-anchor="middle" font-size="14" fill="#666">边缘干净——每个模块非深即浅</text>
+      <!-- blurred panel -->
+      <rect x="480" y="60" width="400" height="320" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="680" y="92" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="2" fill="#8a6a1d">发糊</text>
+      <g transform="translate(568,110) scale(3)" fill="#1E2A32" filter="url(#blur4)">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="680" y="362" text-anchor="middle" font-size="14" fill="#666">模块糊成灰色——读取器开始猜</text>
+      <!-- error correction strip -->
+      <rect x="20" y="410" width="860" height="56" rx="10" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="450" y="445" text-anchor="middle" font-size="15" fill="#1E2A32">纠错是安全网，不是许可证——L 7% · M 15% · Q 25% · H 30% 码字（ISO/IEC 18004）</text>
+    </svg></div>
+</figure>
 <p>手机相机读二维码的方式跟人看图片不一样。它先找四个角上三个大的方形定位图案，靠它们算出网格，再逐个模块判断每个小方格是深还是浅。发糊攻击的正是这个判断：相邻模块糊到一起时，相机看到的是灰色，而它需要的是黑色或白色，于是开始猜。猜一点还能扛得住，因为二维码自带纠错——多余的数据能让读取器把读错或读不出来的码字补回来。这种保护是按码字算的，不是按可见面积算的：ISO/IEC 18004 里的四档级别大约能恢复 L 级 7% 的码字、M 级 15%、Q 级 25%、H 级 30%。定位图案上的一块污渍，或者遍布整个图案的模糊，能在任何漂亮的百分比还没来得及说“应该扛得住”之前就把读取器打败。把纠错当成安全网，永远别把它当成印个软乎码的许可证。</p>
 <p>密度会让发糊更严重。短链接生成的网格宽松、模块大；长链接、完整的联系人名片或者带长密码的 Wi-Fi 码生成的网格更密、模块更小，而模块越小，糊得越早。这就是为什么同一个导出文件，短链接印出来看着没问题，数据量大的码在同样印刷尺寸下却失败了。如果码又密又印得小，能缩短目标链接就缩短，印大一点，或者两者都做。动态码是另一种帮忙方式：印出来的图案编码的是一个以后可以改指向的短链接，所以哪怕最终目标很长，网格依然宽松。目标永远不会变的，静态码更简单：免费、不用账号、没有水印、不过期。</p>
 <h2>数字：印刷尺寸、像素和格式</h2>

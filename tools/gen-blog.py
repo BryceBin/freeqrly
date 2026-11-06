@@ -200,7 +200,7 @@ POSTS = [
         <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">YES</text>
         <rect x="560" y="133" width="260" height="64" rx="12" fill="#D9A441"/>
         <text x="690" y="160" text-anchor="middle" fill="#1E2A32" font-weight="bold">Dynamic</text>
-        <text x="690" y="183" text-anchor="middle" fill="#444" font-size="13">this is what it&rsquo;s for</text>
+        <text x="690" y="183" text-anchor="middle" fill="#444" font-size="13">this is what it's for</text>
         <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="318" y="244" fill="#999" font-size="13">NO</text>
         <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
@@ -2842,8 +2842,8 @@ POSTS += [
 <figure class="qr-fig">
 
     <p class="qr-fig-eyebrow">FLOWCHART</p>
-    <div class="qr-fig-title">Why won&rsquo;t this code scan?</div>
-    <p class="qr-fig-sub">Work through the checks in order — each &ldquo;No&rdquo; points to one fix.</p>
+    <div class="qr-fig-title">Why won't this code scan?</div>
+    <p class="qr-fig-sub">Work through the checks in order — each “No” points to one fix.</p>
     <div class="qr-fig-rule"></div>
     <div class="qr-fig-scroll"><svg viewBox="0 0 860 900" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
       <defs>
@@ -2853,11 +2853,11 @@ POSTS += [
       </defs>
       <g font-size="17">
         <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
-        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">Code won&rsquo;t scan?</text>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">Code won't scan?</text>
         <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
         <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">Big enough?</text>
-        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">&ge; 1/10 of the distance</text>
+        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">≥ 1/10 of the distance</text>
         <line x1="450" y1="165" x2="552" y2="165" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">NO</text>
         <rect x="560" y="138" width="260" height="54" rx="12" fill="#D9A441"/>
@@ -2865,7 +2865,7 @@ POSTS += [
         <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="318" y="244" fill="#999" font-size="13">YES</text>
         <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
-        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">Contrast &ge; 4:1?</text>
+        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">Contrast ≥ 4:1?</text>
         <text x="300" y="328" text-anchor="middle" fill="#666" font-size="14">dark code, light background</text>
         <line x1="450" y1="311" x2="552" y2="311" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="498" y="298" text-anchor="middle" fill="#999" font-size="13">NO</text>
@@ -2875,7 +2875,7 @@ POSTS += [
         <text x="318" y="390" fill="#999" font-size="13">YES</text>
         <polygon points="300,404 450,457 300,510 150,457" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
         <text x="300" y="450" text-anchor="middle" fill="#1E2A32" font-weight="bold">Quiet zone kept?</text>
-        <text x="300" y="474" text-anchor="middle" fill="#666" font-size="14">&ge; 4 modules of margin</text>
+        <text x="300" y="474" text-anchor="middle" fill="#666" font-size="14">≥ 4 modules of margin</text>
         <line x1="450" y1="457" x2="552" y2="457" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="498" y="444" text-anchor="middle" fill="#999" font-size="13">NO</text>
         <rect x="560" y="430" width="260" height="54" rx="12" fill="#D9A441"/>
@@ -3577,7 +3577,7 @@ POSTS += [
 
     <p class="qr-fig-eyebrow">FLOWCHART</p>
     <div class="qr-fig-title">Should I scan this code?</div>
-    <p class="qr-fig-sub">Five checks before you scan, one after. Any failed check ends the same way: don&rsquo;t scan.</p>
+    <p class="qr-fig-sub">Five checks before you scan, one after. Any failed check ends the same way: don't scan.</p>
     <div class="qr-fig-rule"></div>
     <div class="qr-fig-scroll"><svg viewBox="0 0 860 1040" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
       <defs>
@@ -3587,7 +3587,7 @@ POSTS += [
       </defs>
       <g font-size="17">
         <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
-        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">A code you didn&rsquo;t expect?</text>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">A code you didn't expect?</text>
         <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
         <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">Sticker or overlay?</text>
@@ -3621,7 +3621,7 @@ POSTS += [
         <text x="318" y="536" fill="#999" font-size="13">NO</text>
         <polygon points="300,550 450,603 300,656 150,603" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
         <text x="300" y="596" text-anchor="middle" fill="#1E2A32" font-weight="bold">Urgency, threats, prizes?</text>
-        <text x="300" y="620" text-anchor="middle" fill="#666" font-size="14">a story you can&rsquo;t verify</text>
+        <text x="300" y="620" text-anchor="middle" fill="#666" font-size="14">a story you can't verify</text>
         <line x1="450" y1="603" x2="552" y2="603" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="498" y="590" text-anchor="middle" fill="#999" font-size="13">YES</text>
         <rect x="560" y="571" width="260" height="64" rx="12" fill="#D9A441"/>
@@ -3638,7 +3638,7 @@ POSTS += [
         <line x1="450" y1="845" x2="552" y2="845" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="498" y="832" text-anchor="middle" fill="#999" font-size="13">NO</text>
         <rect x="560" y="813" width="260" height="64" rx="12" fill="#D9A441"/>
-        <text x="690" y="840" text-anchor="middle" fill="#1E2A32" font-weight="bold">Don&rsquo;t tap</text>
+        <text x="690" y="840" text-anchor="middle" fill="#1E2A32" font-weight="bold">Don't tap</text>
         <text x="690" y="863" text-anchor="middle" fill="#444" font-size="13">close it, verify another way</text>
         <line x1="300" y1="898" x2="300" y2="934" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="318" y="924" fill="#999" font-size="13">YES</text>
@@ -4185,7 +4185,7 @@ POSTS += [
         <text x="503" y="627" text-anchor="middle" fill="#999" font-size="13">YES</text>
         <rect x="560" y="608" width="260" height="64" rx="12" fill="#D9A441"/>
         <text x="690" y="635" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Stop and rethink</text>
-        <text x="690" y="657" text-anchor="middle" font-size="13" fill="#444">redesign the layout, don&rsquo;t tweak</text>
+        <text x="690" y="657" text-anchor="middle" font-size="13" fill="#444">redesign the layout, don't tweak</text>
         <line x1="300" y1="700" x2="300" y2="736" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
         <text x="318" y="726" fill="#999" font-size="13">NO</text>
         <rect x="170" y="740" width="260" height="56" rx="12" fill="#2F4A62"/>

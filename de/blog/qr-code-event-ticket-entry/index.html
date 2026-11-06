@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,9 +169,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, das FreeQrly-Elefantenmaskottchen"></div>
     <div class="kicker" style="text-align:center">Feldnotizen</div>
@@ -185,6 +185,61 @@
 <p>Die Kernregel ist einfach: Jedes Ticket trägt seinen eigenen QR-Code und seine eigene Ticketkennung, und keine zwei Tickets teilen denselben Code. Wenn sich eine Teilnehmende registriert oder ein Ticket kauft, weist die Ticketing-Plattform diesen eindeutigen Code zu und bindet ihn an ihren Ticketdatensatz. Der Code selbst enthält fast nie persönliche Details. Er trägt meist eine eindeutige Referenzzeichenkette, oft verschlüsselt oder signiert, die auf einen einzelnen Ticketdatensatz in der Plattformdatenbank zeigt. Der Scanner liest die Referenz, die Plattform schlägt sie nach, und die Antwort kommt als eines aus einer kleinen Ergebnismenge zurück: Gültig, Ungültig, Duplikat oder Abgelaufen.</p>
 <p>Diese Unterscheidung zählt, denn sie trennt zwei Arten von QR-Codes, die Veranstalter oft verwechseln. Ein Veranstaltungs-QR-Code teilt denselben Inhalt mit allen: den Zeitplan, den Veranstaltungsortplan, die Registrierungsseite. Ein Veranstaltungs-Ticket-QR-Code ist für jede Teilnehmende und jeden Teilnehmenden eindeutig, und seine Aufgabe ist Validierung, Duplikatverhinderung und Anwesenheitserfassung. Nutz den geteilten Code, um Leuten von der Veranstaltung zu erzählen. Nutz den eindeutigen Code, um sie hereinzulassen. Wenn du denselben Code auf jedes Ticket druckst, hast du ein Plakat gebaut, kein Ticket, und wer es fotografiert, kann damit hereinkommen.</p>
 <h2>Was der Scanner melden sollte – und warum vier Antworten besser sind als zwei</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAMM</p>
+    <div class="qr-fig-title">Was der Scanner melden sollte</div>
+    <p class="qr-fig-sub">Nicht Ja oder Nein — vier Antworten, jede mit eigener Reaktion.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <!-- scanner box -->
+      <rect x="20" y="240" width="170" height="70" rx="12" fill="#2F4A62"/>
+      <text x="105" y="269" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Scanner liest</text>
+      <text x="105" y="291" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">den Code</text>
+      <!-- fan-out lines -->
+      <line x1="190" y1="275" x2="262" y2="105" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="205" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="305" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="405" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <!-- row 1: Valid -->
+      <rect x="270" y="73" width="150" height="64" rx="32" fill="#2F4A62"/>
+      <text x="345" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Gültig</text>
+      <text x="440" y="103" font-size="15" font-weight="bold" fill="#1E2A32">Hereinbitten</text>
+      <text x="440" y="126" font-size="13" fill="#666">erster Scan eines echten Tickets</text>
+      <!-- row 2: Invalid -->
+      <rect x="270" y="173" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="212" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Ungültig</text>
+      <text x="440" y="203" font-size="15" font-weight="bold" fill="#1E2A32">Genau prüfen, zur Hilfe schicken</text>
+      <text x="440" y="226" font-size="13" fill="#666">kein Treffer: vermutlich Fälschung oder falsche Veranstaltung</text>
+      <!-- row 3: Duplicate -->
+      <rect x="270" y="273" width="150" height="64" rx="32" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="345" y="312" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Duplikat</text>
+      <text x="440" y="303" font-size="15" font-weight="bold" fill="#1E2A32">Stopp, Identität prüfen, eskalieren</text>
+      <text x="440" y="326" font-size="13" fill="#666">Ticket schon gescannt</text>
+      <!-- row 4: Expired -->
+      <rect x="270" y="373" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="412" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Abgelaufen</text>
+      <text x="440" y="403" font-size="15" font-weight="bold" fill="#1E2A32">Zeitfenster erklären, Umbuchung anbieten</text>
+      <text x="440" y="426" font-size="13" fill="#666">echtes Ticket, Zeitfenster abgelaufen</text>
+    </svg></div>
+    <p class="qr-fig-foot">Schule das Personal in Wortlaut und Farbe jedes Ergebnisses in deinem Tool — und übe den Duplikat-Fall.</p>
+</figure>
 <p>Ein guter Tür-Scanner sagt nicht nur Ja oder Nein. Er unterscheidet Gültig, also einen ersten Scan eines echten Tickets; Ungültig, also dass der Code zu keinem hinterlegten Ticket passt und wahrscheinlich gefälscht, nachbearbeitet oder für eine andere Veranstaltung ist; Duplikat, also dass das Ticket schon gescannt wurde; und Abgelaufen, also dass das Ticket echt ist, aber außerhalb seines gültigen Datums- oder Zeitfensters liegt. Das Personal braucht diese Unterscheidungen, denn jede ruft eine andere Reaktion auf. Ein gültiger Scan bedeutet: hereinbitten. Ein ungültiger Scan bedeutet: Ticket sorgfältig prüfen und den Gast zur Hilfe schicken, nicht in eine Diskussion am Tor. Ein Duplikat-Scan bedeutet: stoppen, Identität prüfen und eskalieren. Ein abgelaufener Scan bedeutet: das Fenster erklären und die richtige Session oder, falls vorhanden, einen Umbuchungsweg anbieten.</p>
 <p>Schule das Personal auf den genauen Wortlaut und die Farbe jedes Ergebnisses in deinem gewählten Tool und probe speziell den Duplikat-Fall. Im Moment wird eine ehrenamtliche Helferin, die nur den Happy Path geübt hat, zögern, jemanden durchwinken oder diskutieren. Eine Helferin, die das Duplikat-Skript geübt hat – pausieren, den Gast höflich zur Seite bitten, eine Vorgesetzte oder einen Vorgesetzten rufen, Name und Bestellreferenz prüfen –, schützt sowohl die Veranstaltung als auch den Gast, inklusive des Gastes, der Opfer eines weitergeleiteten Screenshots ist, statt der Person, die ihn weitergeleitet hat.</p>
 <h2>Tickets ausgeben, die die echte Welt überleben</h2>

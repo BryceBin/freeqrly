@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -154,15 +154,15 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/logo-customize.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notes de terrain</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Votre logo, <span class='hl hl-blush'>au centre</span> — toujours lisible</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un logo rend un code vraiment vôtre. Il recouvre aussi une partie du motif. Voici comment avoir les deux : logo parfaitement centré, code qui scanne toujours du premier coup.</p>
-    <p class="meta" style="text-align:center">28 octobre 2026 · Dernière mise à jour : 3 novembre 2026 · 14 min de lecture</p>
+    <p class="meta" style="text-align:center">October 28, 2026 · Last updated: November 3, 2026 · 15 min read</p>
     <div class="prose" style="margin-top:40px">
 <p>Un logo au milieu d'un QR code fonctionne quand trois choses sont vraies : le logo reste petit, la correction d'erreur du code est réglée haut, et rien d'important n'est recouvert. En pratique cela veut dire un logo carré avec un fond transparent, centré, gardé sous environ 30 % de la surface du code comme plafond — et plus petit si vous voulez une marge de sécurité — imprimé foncé sur clair, avec une marge nette autour de tout le code. Faites cela, testez la pièce imprimée sur deux téléphones, et le code se lit du premier coup tout en ressemblant sans aucun doute à votre marque.</p>
 
@@ -183,6 +183,177 @@
 <p>Quand vous ajoutez un logo, le milieu recouvert compte comme un dégât, et le lecteur le reconstruit depuis les données redondantes réparties dans le reste du code. C'est pourquoi le niveau de correction d'erreur compte plus que le fichier du logo lui-même : au niveau L ou M, un logo mange la plus grande partie de votre marge de sécurité avant même que le code atteigne une imprimante, tandis qu'au niveau H le même logo se trouve dans un budget bien plus large. FreeQrly augmente la correction d'erreur automatiquement quand un logo est ajouté, vous ne réglez donc pas le niveau à la main — mais vous devez quand même respecter ce qu'il vous achète. Un niveau plus élevé ajoute aussi des modules, rendant le même contenu plus dense : une adresse courte qui tient dans une grille 29 × 29 au niveau M exige 37 × 37 au niveau H, donc chaque module devient plus petit à la même taille d'impression. Gardez la destination courte, et imprimez les codes avec logo un peu plus grands que les codes simples.</p>
 
 <h2>Taille du logo : le plafond, la zone plus sûre, et le piège surface contre largeur</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">SCHÉMA</p>
+    <div class="qr-fig-title">Quelle taille pour le logo ?</div>
+    <p class="qr-fig-sub">La surface, pas la largeur — et 30 %, c'est un plafond, pas un objectif.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- QR square with logo zones -->
+      <rect x="20" y="60" width="280" height="280" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <g transform="translate(55,95) scale(2.8)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <rect x="83.5" y="123.5" width="153" height="153" rx="4" fill="none" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <rect x="97.5" y="137.5" width="125" height="125" rx="4" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <!-- legend under QR -->
+      <line x1="20" y1="372" x2="60" y2="372" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="377" font-size="13" fill="#1E2A32">Jusqu'à 20 % de la surface — confortable, marge pour l'usure</text>
+      <line x1="20" y1="402" x2="60" y2="402" stroke="#2F4A62" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="70" y="407" font-size="13" fill="#1E2A32">30 % de la surface — le plafond, sans réserve</text>
+      <!-- width trap panel -->
+      <rect x="560" y="60" width="320" height="280" rx="12" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="580" y="92" font-size="12" font-weight="bold" letter-spacing="1.5" fill="#2F4A62">LE PIÈGE DE LA LARGEUR</text>
+      <text x="580" y="128" font-size="14" fill="#1E2A32">Le logo couvre 30 % de la largeur</text>
+      <rect x="580" y="140" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="140" width="60" height="20" rx="4" fill="#2F4A62"/>
+      <text x="580" y="183" font-size="14" font-weight="bold" fill="#1E2A32">= seulement 9 % de la surface</text>
+      <text x="580" y="222" font-size="14" fill="#1E2A32">Le logo couvre 30 % de la surface</text>
+      <rect x="580" y="234" width="200" height="20" rx="4" fill="#E5DCC8"/>
+      <rect x="580" y="234" width="110" height="20" rx="4" fill="#D9A441"/>
+      <text x="580" y="277" font-size="14" font-weight="bold" fill="#1E2A32">= 55 % de la largeur</text>
+      <text x="580" y="312" font-size="13" fill="#777">Ici, c'est toujours la surface.</text>
+    </svg></div>
+    <p class="qr-fig-foot">Pourquoi 30 % ? La correction d'erreur de niveau H reconstruit environ 30 % des mots de code (ISO/IEC 18004) — un logo au plafond ne laisse donc rien pour les rayures, la faible lumière ou les vieux téléphones.</p>
+</figure>
 
 <p>Les conseils de taille de logo sont faciles à mal lire, parce que les guides les citent de deux façons différentes. Un logo couvrant 30 % de la <em>largeur</em> du code ne couvre qu'environ 9 % de sa <em>surface</em>, tandis qu'un logo couvrant 30 % de la <em>surface</em> s'étend sur environ 55 % de la largeur. Quand ce guide dit « sous environ 30 % de la surface du code », il veut dire la surface — la part du carré entier que le logo cache — et c'est le plafond qu'utilise le générateur FreeQrly. Traitez tout ce qui s'approche de ce plafond comme un code sans réserve restante.</p>
 
@@ -296,9 +467,9 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Continuer la lecture</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/fr/blog/do-qr-codes-expire/"><b>Les QR codes expirent-ils ? Non — mais les payants peuvent mourir</b></a>
-        <a class="rel-card" href="/fr/blog/how-to-scan-a-qr-code/"><b>Comment scanner un QR code (iPhone et Android)</b></a>
-        <a class="rel-card" href="/fr/blog/qr-code-print-size-guide/"><b>Guide des tailles d'impression des QR codes : des cartes de visite aux affiches</b></a>
+        <a class="rel-card" href="/fr/blog/qr-codes-for-laundromats/"><b>QR Codes for Laundromats: One Code per Machine, Plus Wi-Fi, Reviews, and Loyalty</b></a>
+        <a class="rel-card" href="/fr/blog/qr-codes-for-gyms/"><b>QR Codes for Gyms and Fitness Studios: Check-Ins, Classes, and Reviews</b></a>
+        <a class="rel-card" href="/fr/blog/qr-codes-for-breweries/"><b>QR codes pour brasseries : cartes des pressions, visites, merchandising, événements et avis</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">

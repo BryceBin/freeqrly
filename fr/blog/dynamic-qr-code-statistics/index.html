@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -130,9 +130,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notes de terrain</div>
@@ -191,6 +191,58 @@
 </ul>
 <h2>Un exemple travaillé, avec l'arithmétique montrée</h2>
 <p>Exemple illustratif — les chiffres ci-dessous sont hypothétiques, utilisés seulement pour montrer l'arithmétique, pas des mesures d'une vraie campagne. Supposez que deux codes pointent vers la même page pendant les mêmes deux semaines. Le code A, sur un panneau de comptoir, enregistre 120 scans totaux et 90 scans uniques. Le code B, sur une affiche de vitrine, enregistre 60 scans totaux et 55 scans uniques. Trois lectures suivent, chacune avec une action différente :</p>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">GRAPHIQUE EN BARRES</p>
+    <div class="qr-fig-title">Deux codes, une page, deux semaines</div>
+    <p class="qr-fig-sub">Les totaux disent combien. Les uniques disent combien de personnes. L'écart entre les deux, c'est l'usage répété.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <!-- legend -->
+      <rect x="620" y="14" width="16" height="16" rx="3" fill="#2F4A62"/>
+      <text x="644" y="27" font-size="13" fill="#1E2A32">Total des scans</text>
+      <rect x="748" y="14" width="16" height="16" rx="3" fill="#D9A441"/>
+      <text x="772" y="27" font-size="13" fill="#1E2A32">Scans uniques</text>
+      <!-- gridlines: 0/30/60/90/120 at y 400/325/250/175/100 -->
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="190" y1="100" x2="640" y2="100"/><line x1="190" y1="175" x2="640" y2="175"/>
+        <line x1="190" y1="250" x2="640" y2="250"/><line x1="190" y1="325" x2="640" y2="325"/>
+      </g>
+      <line x1="190" y1="60" x2="190" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 230)" x="28" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">Scans (2 semaines)</text>
+      <g font-size="12" fill="#777" text-anchor="end">
+        <text x="180" y="104">120</text><text x="180" y="179">90</text>
+        <text x="180" y="254">60</text><text x="180" y="329">30</text><text x="180" y="404">0</text>
+      </g>
+      <!-- group A: total 120 (h300, y100), unique 90 (h225, y175) -->
+      <rect x="230" y="100" width="44" height="300" rx="4" fill="#2F4A62"/>
+      <rect x="288" y="175" width="44" height="225" rx="4" fill="#D9A441"/>
+      <text x="252" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">120</text>
+      <text x="310" y="163" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">90</text>
+      <!-- group B: total 60 (h150, y250), unique 55 (h138, y262) -->
+      <rect x="480" y="250" width="44" height="150" rx="4" fill="#2F4A62"/>
+      <rect x="538" y="262" width="44" height="138" rx="4" fill="#D9A441"/>
+      <text x="502" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">60</text>
+      <text x="560" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#2F4A62">55</text>
+      <line x1="190" y1="400" x2="640" y2="400" stroke="#D8D2C2" stroke-width="1"/>
+      <text x="281" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">Code A — panneau de comptoir</text>
+      <text x="531" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E2A32">Code B — vitrine</text>
+      <text x="281" y="452" text-anchor="middle" font-size="13" fill="#666">Répété : +30 — les habitués</text>
+      <text x="531" y="452" text-anchor="middle" font-size="13" fill="#666">Répété : +5 — surtout des uniques</text>
+    </svg></div>
+    <p class="qr-fig-foot">Exemple illustratif tiré de cet article — chiffres hypothétiques, utilisés seulement pour montrer le calcul.</p>
+</figure>
 <ul>
 <li><strong>Portée :</strong> Le code A a atteint plus de personnes distinctes (90 contre 55), donc le panneau de comptoir est l'emplacement le plus large.</li>
 <li><strong>Usage répété :</strong> Le total du code A dépasse son compte unique de 30 scans, tandis que celui du code B ne le dépasse que de 5, donc les visiteurs du comptoir scannent à répétition tandis que les visiteurs de l'affiche scannent pour la plupart une seule fois. Cela correspond à un panneau de comptoir vu par des habitués et une affiche vue par des passants — et cela suggère que la destination du code de comptoir devrait récompenser une deuxième visite, tandis que la destination du code d'affiche devrait convaincre en une visite.</li>

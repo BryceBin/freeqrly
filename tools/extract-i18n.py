@@ -53,6 +53,13 @@ class P(HTMLParser):
         self.strings = []
         self.skip_depth = 0
         self.stack = []  # [tag, inner_html_parts, has_block_child, has_i18n]
+        # Inline SVG <text> units (blog figures): each <text> is one
+        # translatable string. Without this the whole SVG collapses into a
+        # single visible-text blob that can never match the HTML source.
+        self.svg_depth = 0
+        self.svg_text_parts = None
+        self.cur_svg_had_text = False
+        self.last_svg_had_text = False
 
     def handle_starttag(self, tag, attrs):
         if tag in SKIP_TAGS:
@@ -72,6 +79,10 @@ class P(HTMLParser):
             return
         if tag == "html":
             return
+        if tag == "svg":
+            self.svg_depth += 1
+        if tag == "text" and self.svg_depth > 0 and self.skip_depth == 0:
+            self.svg_text_parts = []
         if "data-i18n" in dict(attrs):
             for f in self.stack:
                 f[3] = True
@@ -97,6 +108,20 @@ class P(HTMLParser):
         if tag in SKIP_TAGS:
             self.skip_depth = max(0, self.skip_depth - 1)
             return
+        if tag == "svg" and self.svg_depth > 0:
+            self.svg_depth -= 1
+            self.last_svg_had_text = self.cur_svg_had_text
+            self.cur_svg_had_text = False
+        if tag == "text" and self.svg_depth > 0 and self.svg_text_parts is not None:
+            t = clean_ws("".join(self.svg_text_parts))
+            self.svg_text_parts = None
+            # Pure numbers / numbers with a unit (axis ticks, value labels)
+            # need no translation.
+            if t and not junk(visible_text(t)) and not re.fullmatch(
+                    r"[\d\s.,×%\-–—]+(m|cm|mm)?", t):
+                if t not in self.strings:
+                    self.strings.append(t)
+                self.cur_svg_had_text = True
         if (tag in self.BLOCKS or tag == "a") and self.stack and self.stack[-1][0] == tag:
             _, parts, has_child, has_i18n = self.stack.pop()
             raw = self.get_starttag_text()
@@ -105,7 +130,11 @@ class P(HTMLParser):
             if not has_child and not has_i18n:
                 t = clean_ws("".join(parts))
                 if "<svg" in t:
-                    t = visible_text(t)
+                    # SVG text already extracted per <text> above; the
+                    # collapsed blob can never match the HTML source.
+                    had = self.last_svg_had_text
+                    self.last_svg_had_text = False
+                    t = "" if had else visible_text(t)
                 if t and not junk(visible_text(t)) and visible_text(t):
                     self.strings.append(t)
         elif self.stack:
@@ -117,6 +146,8 @@ class P(HTMLParser):
             return
         for f in self.stack:
             f[1].append(data)
+        if self.svg_text_parts is not None:
+            self.svg_text_parts.append(data)
 
 def extract_html(path):
     s = open(path, encoding="utf-8").read()

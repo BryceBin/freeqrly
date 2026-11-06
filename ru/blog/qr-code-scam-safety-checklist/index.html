@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -156,21 +156,106 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly — слон, талисман FreeQrly"></div>
     <div class="kicker" style="text-align:center">Заметки</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Распознайте поддельный QR-код <span class='hl hl-mint'>до его сканирования</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">QR-код — это ссылка, которую нельзя прочитать глазами, и именно поэтому она нравится мошенникам. Этот чек-лист даёт две паузы, останавливающие большинство QR-мошенничеств: быструю проверку до сканирования и внимательное чтение предпросмотра после сканирования.</p>
-    <p class="meta" style="text-align:center">4 ноября 2026 · 14 мин чтения</p>
+    <p class="meta" style="text-align:center">4 ноября 2026 · 15 мин чтения</p>
     <div class="prose" style="margin-top:40px">
 <p>QR-код — это ссылка, которую нельзя прочитать глазами. Именно это делает её удобной, и именно это делает её полезной мошенникам. Код на паркомате, плакате, посылке или в сообщении может выглядеть обычным, указывая при этом на поддельную страницу входа, страницу оплаты, которую вы не собирались посещать, или загрузку, о которой вы не просили. Большинство QR-мошенничеств проваливаются, если замедлиться в два момента: до сканирования и после того, как телефон покажет вам адрес.</p>
 <h2>Как обычно работает мошенничество с QR-кодом</h2>
 <p>Большинство QR-мошенничеств, часто называемых <strong>квишингом</strong> — QR-фишингом, — следуют одной схеме. Мошенник прячет вредоносную ссылку внутри кода, а затем даёт повод отсканировать его в спешке. Федеральная торговая комиссия (FTC) предупредила в своём потребительском предупреждении декабря 2023 года, что мошенники закрывают настоящие коды на паркоматах своими кодами и отправляют коды SMS или электронной почтой с выдуманными историями: посылка, которую не удалось доставить, проблема со счётом или подозрительная активность, якобы требующая смены пароля. Каждая история призвана создать срочность, чтобы вы отсканировали код и открыли ссылку, не задумываясь.</p>
 <p>После сканирования ловушкой обычно оказывается страница за кодом, а не сам код. FTC описывает поддельный сайт, выглядящий настоящим, но таковым не являющийся: если вы войдёте там, мошенники смогут украсть всё, что вы введёте, а плохой код также может попытаться установить вредоносное ПО. ESET, пишущая о квишинге, делает связанное замечание: поскольку адрес закодирован в визуальном узоре, а не записан читаемым текстом, он остаётся скрытым до сканирования, и некоторые традиционные почтовые фильтры не могут проверить его так, как проверяют видимую ссылку. Ничто из этого не означает, что QR-коды сами по себе небезопасны. Это означает, что проверка должна происходить после сканирования, в предпросмотре, который показывает ваш телефон, до нажатия.</p>
-<h2>До сканирования: пятисекундная проверка</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">БЛОК-СХЕМА</p>
+    <div class="qr-fig-title">Сканировать этот код?</div>
+    <p class="qr-fig-sub">Пять проверок до сканирования и одна после. Любой провал — не сканируйте.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 1040" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g font-size="17">
+        <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">Неожиданный код?</text>
+        <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">Наклейка поверх кода?</text>
+        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">края приподняты, углы отклеиваются</text>
+        <line x1="450" y1="165" x2="552" y2="165" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">ДА</text>
+        <rect x="560" y="133" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="160" text-anchor="middle" fill="#1E2A32" font-weight="bold">Не сканируйте</text>
+        <text x="690" y="183" text-anchor="middle" fill="#444" font-size="13">приложение или терминал</text>
+        <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="244" fill="#999" font-size="13">НЕТ</text>
+        <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">Печать подозрительная?</text>
+        <text x="300" y="328" text-anchor="middle" fill="#666" font-size="14">размыто, печать не та</text>
+        <line x1="450" y1="311" x2="552" y2="311" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="298" text-anchor="middle" fill="#999" font-size="13">ДА</text>
+        <rect x="560" y="279" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="306" text-anchor="middle" fill="#1E2A32" font-weight="bold">Не сканируйте</text>
+        <text x="690" y="329" text-anchor="middle" fill="#444" font-size="13">найдите сервис иначе</text>
+        <line x1="300" y1="364" x2="300" y2="400" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="390" fill="#999" font-size="13">НЕТ</text>
+        <polygon points="300,404 450,457 300,510 150,457" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="450" text-anchor="middle" fill="#1E2A32" font-weight="bold">Без названия и цели?</text>
+        <text x="300" y="474" text-anchor="middle" fill="#666" font-size="14">нет ни фирмы, ни пояснения</text>
+        <line x1="450" y1="457" x2="552" y2="457" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="444" text-anchor="middle" fill="#999" font-size="13">ДА</text>
+        <rect x="560" y="425" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="452" text-anchor="middle" fill="#1E2A32" font-weight="bold">Не трогайте</text>
+        <text x="690" y="475" text-anchor="middle" fill="#444" font-size="13">проверьте по известному каналу</text>
+        <line x1="300" y1="510" x2="300" y2="546" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="536" fill="#999" font-size="13">НЕТ</text>
+        <polygon points="300,550 450,603 300,656 150,603" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="596" text-anchor="middle" fill="#1E2A32" font-weight="bold">Спешка, угрозы, призы?</text>
+        <text x="300" y="620" text-anchor="middle" fill="#666" font-size="14">история, которую не проверить</text>
+        <line x1="450" y1="603" x2="552" y2="603" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="590" text-anchor="middle" fill="#999" font-size="13">ДА</text>
+        <rect x="560" y="571" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="598" text-anchor="middle" fill="#1E2A32" font-weight="bold">Пауза</text>
+        <text x="690" y="621" text-anchor="middle" fill="#444" font-size="13">только проверенные контакты</text>
+        <line x1="300" y1="656" x2="300" y2="692" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="682" fill="#999" font-size="13">НЕТ</text>
+        <rect x="150" y="696" width="300" height="56" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="731" text-anchor="middle" fill="#1E2A32" font-weight="bold">Сканируйте встроенной камерой</text>
+        <line x1="300" y1="752" x2="300" y2="788" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,792 450,845 300,898 150,845" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="838" text-anchor="middle" fill="#1E2A32" font-weight="bold">Предпросмотр совпадает?</text>
+        <text x="300" y="862" text-anchor="middle" fill="#666" font-size="14">с тем, что вы ожидали</text>
+        <line x1="450" y1="845" x2="552" y2="845" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="832" text-anchor="middle" fill="#999" font-size="13">НЕТ</text>
+        <rect x="560" y="813" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="840" text-anchor="middle" fill="#1E2A32" font-weight="bold">Не нажимайте</text>
+        <text x="690" y="863" text-anchor="middle" fill="#444" font-size="13">закройте и проверьте иначе</text>
+        <line x1="300" y1="898" x2="300" y2="934" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="924" fill="#999" font-size="13">ДА</text>
+        <rect x="170" y="938" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="973" text-anchor="middle" fill="#fff" font-weight="bold">Можно продолжать</text>
+      </g>
+    </svg></div>
+</figure><h2>До сканирования: пятисекундная проверка</h2>
 <p>Камера вашего телефона не может сказать вам, был ли печатный код подменён. Ваши глаза могут помочь. Пройдите эти проверки, прежде чем наводить камеру на что-либо.</p>
 <h3>1. Ищите наклейку, наложенную поверх настоящего кода</h3>
 <p><strong>Пощупайте и осмотрите края.</strong> Наклейка, наложенная на печатную вывеску, часто имеет видимую границу, слегка приподнятый край, другой глянец или текстуру бумаги либо отклеивающиеся углы. Если код сидит поверх другого кода, логотипа или печатного текста, относитесь к нему как к подозрительному. Это классический трюк с паркоматом, описываемый FTC: настоящий код оплаты закрыт, и платёж уходит мошеннику. Если что-то выглядит многослойным, не сканируйте это. Вместо этого оплатите через официальное приложение, сам паркомат или сайт заведения, который вы уже знаете.</p>
@@ -246,9 +331,9 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Читать дальше</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/ru/blog/static-vs-dynamic-qr-codes/"><b>Статические и динамические QR-коды: бесплатно навсегда или подписка?</b></a>
-        <a class="rel-card" href="/ru/blog/why-is-my-qr-code-not-working/"><b>QR-код не работает? 7 исправлений, которые помогают</b></a>
-        <a class="rel-card" href="/ru/blog/qr-codes-for-restaurants/"><b>QR-коды для ресторанов — бесплатное руководство</b></a>
+        <a class="rel-card" href="/ru/blog/pdf-file-qr-code/"><b>PDF File QR Code: Host It, Link It, and Replace It Without Reprinting</b></a>
+        <a class="rel-card" href="/ru/blog/video-qr-code/"><b>Video QR Code: Link a Video Without Making People Type a URL</b></a>
+        <a class="rel-card" href="/ru/blog/pre-print-qr-code-checklist/"><b>Предпечатный чек-лист QR-кода: проверьте на реальной бумаге, прежде чем печатать тысячи</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">

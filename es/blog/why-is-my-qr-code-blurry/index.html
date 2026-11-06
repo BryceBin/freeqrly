@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -153,9 +153,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/error.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notas de campo</div>
@@ -166,6 +166,298 @@
 <p>Un código QR borroso casi siempre es un problema de resolución: demasiado pocos píxeles estirados en demasiado espacio. El arreglo es exportar más grande, o como SVG. Si el código se veía nítido en pantalla y se volvió una papilla en papel, la imagen no tenía suficientes píxeles para el tamaño al que se imprimió. Un código QR es una rejilla de cuadraditos llamados módulos; cuando no hay suficientes píxeles, sus bordes se difuminan entre sí, los teléfonos no encuentran la rejilla y los escaneos fallan. Empieza por la exportación, no por un diseño nuevo: regenera a mayor resolución o como archivo vectorial, reimprime una copia al tamaño real y escanéala a la distancia real de visión antes de imprimir el lote.</p>
 <p>Esa respuesta cubre la mayoría de los casos, pero la borrosidad tiene más de una causa, cada una con un arreglo distinto: una exportación pequeña, compresión JPEG, estiramiento, impresora o papel, o una copia de una copia. Las secciones de abajo separan esas causas, te dan una tabla de números para la impresora, recorren el arreglo en orden y cubren códigos que se ven nítidos y aun así no escanean; esos pertenecen a <a href="/es/blog/why-is-my-qr-code-not-working/">por qué no escanea tu código QR</a>.</p>
 <h2>Qué le hace en realidad la borrosidad a un código</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAMA</p>
+    <div class="qr-fig-title">Qué le hace la borrosidad a un código</div>
+    <p class="qr-fig-sub">La cámara decide módulo a módulo: oscuro o claro. La borrosidad convierte esa decisión en gris.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 500" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <!-- sharp panel -->
+      <rect x="20" y="60" width="400" height="320" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="220" y="92" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="2" fill="#2F4A62">NÍTIDO</text>
+      <g transform="translate(108,110) scale(3)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="220" y="362" text-anchor="middle" font-size="14" fill="#666">Bordes nítidos: cada módulo se lee oscuro o claro</text>
+      <!-- blurred panel -->
+      <rect x="480" y="60" width="400" height="320" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="680" y="92" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="2" fill="#8a6a1d">BORROSO</text>
+      <g transform="translate(568,110) scale(3)" fill="#1E2A32" filter="url(#blur4)">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="680" y="362" text-anchor="middle" font-size="14" fill="#666">Los módulos se funden en gris: el lector adivina</text>
+      <!-- error correction strip -->
+      <rect x="20" y="410" width="860" height="56" rx="10" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="450" y="445" text-anchor="middle" font-size="15" fill="#1E2A32">La corrección es una red, no permiso: L 7% · M 15% · Q 25% · H 30% de las palabras de código (ISO/IEC 18004)</text>
+    </svg></div>
+</figure>
 <p>La cámara de un teléfono no lee un código QR como una persona lee una foto. Busca los tres grandes patrones cuadrados de posicionamiento en las esquinas, deduce la rejilla a partir de ellos y luego decide, módulo por módulo, si cada cuadradito es oscuro o claro. La borrosidad ataca justo esa decisión: cuando los módulos vecinos se mezclan entre sí, la cámara ve gris donde necesita negro o blanco, y empieza a adivinar. Un poco de adivinanza se sobrevive, porque los códigos QR llevan corrección de errores integrada: datos extra que permiten a un lector reconstruir palabras de código que vuelven mal o ilegibles. Esa protección se mide en palabras de código, no en área visible: los cuatro niveles de la ISO/IEC 18004 restauran aproximadamente el 7% de las palabras de código en el nivel L, el 15% en M, el 25% en Q y el 30% en H. Una mancha sobre un patrón de posicionamiento, o borrosidad extendida por todo el símbolo, puede vencer a un lector mucho antes de lo que cualquier porcentaje pulcro sugiera que debería sobrevivir. Trata la corrección de errores como una red de seguridad, nunca como permiso para imprimir un código blando.</p>
 <p>La densidad empeora la borrosidad. Un enlace corto produce una rejilla holgada con módulos grandes; un enlace largo, una tarjeta de contacto completa o un código de Wi-Fi con una contraseña larga producen una rejilla más densa con módulos más pequeños, y los módulos más pequeños se difuminan antes. Por eso la misma exportación puede verse bien para una URL corta y fallar para un código con muchos datos al mismo tamaño de impresión. Si un código es denso y además se imprime pequeño, acorta el destino donde puedas, imprime más grande, o ambas cosas. Un código dinámico ayuda de otra manera: el patrón impreso codifica un enlace corto que puedes redirigir después, así que la rejilla se mantiene holgada aunque el destino final sea largo. Para un destino que nunca cambiará, un código estático es más simple: gratis, sin cuenta, sin marca de agua y no caduca.</p>
 <h2>Los números: tamaño de impresión, píxeles y formato</h2>

@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -130,19 +130,67 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
     <div class="kicker" style="text-align:center">フィールドノート</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">印刷したQRコードはどれくらい<span class="hl hl-mint">大きく</span>すべき？</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">短い答え：最低2×2cm、300dpi、明確な余白付き。長い答え — 印刷業者が実際に使う距離の目安付き — は以下にあります。</p>
-    <p class="meta" style="text-align:center">2026年10月14日 · 最終更新：2026年11月3日 · 約14分で読めます</p>
+    <p class="meta" style="text-align:center">October 14, 2026 · Last updated: November 3, 2026 · 15 min read</p>
     <div class="prose" style="margin-top:40px">
 <p>短い答え：最低2×2cm、300dpiで、明確な余白付きです。長い答え — 部屋の向こうからでもスキャンできるポスターと、握手の距離でスキャンできる名刺を保つ答え — は、2つの目安と1つの表です。ルール1：コードを2×2cm（0.8×0.8インチ）より小さく印刷しないこと。ルール2：コードの幅はスキャン距離の最低10分の1であること。50cmからスキャンするコードには5cmのコードが必要です。5メートルからスキャンするポスターには50cmのコードが必要です。以下では、その2つのルールを、印刷する可能性のあるすべての面について具体化し、サイズが実際に機能するかどうかを決めるフォーマット、余白、校正の詳細も加えます。</p>
 
-<h2>重要な2つのルール</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">棒グラフ</p>
+    <div class="qr-fig-title">スキャン距離別 最小コードサイズ</div>
+    <p class="qr-fig-sub">10:1の目安 — コード幅は距離の10分の1以上。</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 800 470" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <g stroke="#EDE8DA" stroke-width="1">
+        <line x1="214" y1="14" x2="214" y2="386"/><line x1="318" y1="14" x2="318" y2="386"/>
+        <line x1="422" y1="14" x2="422" y2="386"/><line x1="526" y1="14" x2="526" y2="386"/>
+        <line x1="630" y1="14" x2="630" y2="386"/>
+      </g>
+      <line x1="110" y1="14" x2="110" y2="394" stroke="#D8D2C2" stroke-width="1"/>
+      <text transform="rotate(-90 28 210)" x="28" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">スキャン距離 (m)</text>
+      <g font-size="15" fill="#1E2A32">
+        <text x="95" y="50" text-anchor="end" fill="#555">0.3 m</text>
+        <rect x="110" y="30" width="31" height="28" rx="6" fill="#2F4A62"/><text x="149" y="50" fill="#2F4A62" font-weight="bold">3cm</text>
+        <text x="95" y="114" text-anchor="end" fill="#555">0.5 m</text>
+        <rect x="110" y="94" width="52" height="28" rx="6" fill="#2F4A62"/><text x="170" y="114" fill="#2F4A62" font-weight="bold">5cm</text>
+        <text x="95" y="178" text-anchor="end" fill="#555">1m</text>
+        <rect x="110" y="158" width="104" height="28" rx="6" fill="#2F4A62"/><text x="222" y="178" fill="#2F4A62" font-weight="bold">10cm</text>
+        <text x="95" y="242" text-anchor="end" fill="#555">2 m</text>
+        <rect x="110" y="222" width="208" height="28" rx="6" fill="#2F4A62"/><text x="326" y="242" fill="#2F4A62" font-weight="bold">20cm</text>
+        <text x="95" y="306" text-anchor="end" fill="#555">3 m</text>
+        <rect x="110" y="286" width="312" height="28" rx="6" fill="#2F4A62"/><text x="430" y="306" fill="#2F4A62" font-weight="bold">30 cm</text>
+        <text x="95" y="370" text-anchor="end" fill="#555">5 m</text>
+        <rect x="110" y="350" width="520" height="28" rx="6" fill="#2F4A62"/><text x="638" y="370" fill="#2F4A62" font-weight="bold">50cm</text>
+      </g>
+      <line x1="110" y1="394" x2="660" y2="394" stroke="#D8D2C2" stroke-width="1"/>
+      <g font-size="12" fill="#777" text-anchor="middle">
+        <text x="214" y="416">10cm</text><text x="318" y="416">20cm</text>
+        <text x="422" y="416">30 cm</text><text x="526" y="416">40 cm</text><text x="630" y="416">50cm</text>
+      </g>
+      <text x="385" y="442" text-anchor="middle" font-size="13" font-weight="bold" fill="#2F4A62">最小コード幅 (cm)</text>
+    </svg></div>
+    <p class="qr-fig-foot">目安でありISO要件ではない。暗い場所や光沢のある素材では大きめに。</p>
+</figure><h2>重要な2つのルール</h2>
 
 <p><strong>目安1 — 最小サイズ：</strong>2×2cm（0.8×0.8インチ）。これを下回ると、スマホのカメラはモジュールを確実に解像できません。特にvCardのように多くのデータを持つコードでは。手に持って近くでスキャンする場合の実用的な最小であり、保証ではありません。2cmの密なコードは、同じサイズの短いURLのコードよりはるかに脆く、古いスマホは新しいスマホより余裕が必要です。</p>
 

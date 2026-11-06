@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,9 +169,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly — слон, талисман FreeQrly"></div>
     <div class="kicker" style="text-align:center">Заметки</div>
@@ -185,6 +185,61 @@
 <p>Основное правило просто: каждый билет несёт свой QR-код и свой идентификатор билета, и никакие два билета не имеют одинаковый код. Когда посетитель регистрируется или покупает билет, платформа продажи билетов назначает этот уникальный код и привязывает его к его записи билета. Сам код почти никогда не содержит личных данных. Обычно он хранит уникальную ссылочную строку, часто зашифрованную или подписанную, которая указывает на одну запись билета в базе данных платформы. Сканер считывает ссылку, платформа ищет её, и ответ возвращается в виде одного из небольшого набора результатов: «Действителен», «Недействителен», «Дубль» или «Просрочен».</p>
 <p>Это различие важно, потому что оно разделяет два вида QR-кодов, которые организаторы часто путают. Код мероприятия делится одним и тем же содержанием со всеми: расписание, карта площадки, страница регистрации. Билетный QR-код мероприятия уникален для каждого посетителя, и его задача — проверка, предотвращение дублей и учёт посещаемости. Используйте общий код, чтобы рассказать людям о мероприятии. Используйте уникальный код, чтобы впустить их. Если вы напечатаете один и тот же код на каждом билете, вы построили плакат, а не билет, и любой, кто его сфотографирует, сможет войти с ним.</p>
 <h2>Что должен возвращать сканер и почему четыре ответа лучше двух</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">СХЕМА</p>
+    <div class="qr-fig-title">Что должен возвращать сканер</div>
+    <p class="qr-fig-sub">Не «да» или «нет», а четыре ответа — у каждого своя реакция.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <!-- scanner box -->
+      <rect x="20" y="240" width="170" height="70" rx="12" fill="#2F4A62"/>
+      <text x="105" y="269" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Сканер читает</text>
+      <text x="105" y="291" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">код</text>
+      <!-- fan-out lines -->
+      <line x1="190" y1="275" x2="262" y2="105" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="205" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="305" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="405" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <!-- row 1: Valid -->
+      <rect x="270" y="73" width="150" height="64" rx="32" fill="#2F4A62"/>
+      <text x="345" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Действителен</text>
+      <text x="440" y="103" font-size="15" font-weight="bold" fill="#1E2A32">Впускайте</text>
+      <text x="440" y="126" font-size="13" fill="#666">первое сканирование настоящего билета</text>
+      <!-- row 2: Invalid -->
+      <rect x="270" y="173" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="212" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Недействителен</text>
+      <text x="440" y="203" font-size="15" font-weight="bold" fill="#1E2A32">Проверьте и отправьте на стойку помощи</text>
+      <text x="440" y="226" font-size="13" fill="#666">нет совпадений: вероятно, подделка или чужое мероприятие</text>
+      <!-- row 3: Duplicate -->
+      <rect x="270" y="273" width="150" height="64" rx="32" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="345" y="312" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Дубль</text>
+      <text x="440" y="303" font-size="15" font-weight="bold" fill="#1E2A32">Стоп, проверьте личность, передайте выше</text>
+      <text x="440" y="326" font-size="13" fill="#666">билет уже отсканирован</text>
+      <!-- row 4: Expired -->
+      <rect x="270" y="373" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="412" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Просрочен</text>
+      <text x="440" y="403" font-size="15" font-weight="bold" fill="#1E2A32">Объясните окно, предложите перебронирование</text>
+      <text x="440" y="426" font-size="13" fill="#666">настоящий билет, вне допустимого окна</text>
+    </svg></div>
+    <p class="qr-fig-foot">Обучите персонал точной формулировке и цвету каждого результата в выбранном вами инструменте и отдельно отрепетируйте случай дубля.</p>
+</figure>
 <p>Хороший сканер на входе не просто говорит «да» или «нет». Он различает «Действителен» — первое сканирование настоящего билета; «Недействителен» — код не соответствует ни одному билету в базе и, вероятно, поддельный, отредактированный или для другого мероприятия; «Дубль» — билет уже был отсканирован; и «Просрочен» — билет настоящий, но вне допустимого окна даты или времени. Персоналу нужны эти различия, потому что каждый из них требует разной реакции. Сканирование «Действителен» означает: добро пожаловать. Сканирование «Недействителен» означает: внимательно проверьте билет и отправьте гостя на стойку помощи, а не в спор у входа. Сканирование «Дубль» означает: остановитесь, проверьте личность и передайте выше. Сканирование «Просрочен» означает: объясните окно и предложите правильную сессию или путь перебронирования, если он есть.</p>
 <p>Обучите персонал точной формулировке и цвету каждого результата в выбранном вами инструменте и отдельно отрепетируйте случай дубля. В моменте волонтёр, отрепетировавший только счастливый путь, замешкается, пропустит человека или вступит в спор. Волонтёр, отрепетировавший сценарий дубля — пауза, вежливо отвести гостя в сторону, вызвать руководителя, проверить имя и ссылку на заказ, — защитит и мероприятие, и гостя, включая гостя, ставшего жертвой пересланного скриншота, а не того, кто его переслал. Руководитель, а не волонтёр у входа, должен принимать окончательное решение по спорным дублям, и это правило должно быть записано до открытия дверей.</p>
 <h2>Выпуск билетов, переживающих реальный мир</h2>

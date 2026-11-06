@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,15 +169,15 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notes de terrain</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Imprimez une seule fois, <span class='hl hl-mint'>parce que vous avez d'abord testé</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Le moment le moins cher pour trouver un QR code cassé est sur une seule épreuve, pas dans un entrepôt plein de stock imprimé. Cette checklist fait passer l'épreuve par deux téléphones, une lumière réelle, une distance réelle et un matériau réel, avant l'approbation du tirage complet.</p>
-    <p class="meta" style="text-align:center">4 novembre 2026 · 14 min de lecture</p>
+    <p class="meta" style="text-align:center">4 novembre 2026 · 15 min de lecture</p>
     <div class="prose" style="margin-top:40px">
 <p>Un QR code qui scanne sur l'écran d'un designer peut quand même échouer sur papier. Les écrans sont rétroéclairés, parfaitement plats, et regardés à bout de bras. Le papier ne l'est pas. Il produit des reflets, se courbe, absorbe l'encre, décolore au soleil, s'érafle à la manipulation, et est lu à des distances auxquelles le designer ne s'est jamais tenu. C'est pourquoi le test pré-impression existe, et pourquoi il doit être une checklist plutôt qu'un coup d'œil. Un coup d'œil attrape un code manifestement cassé. Une checklist attrape un code qui fonctionne en studio et échoue au lieu, sur l'étagère, ou dans la main d'un client.</p>
 <p>Ce guide est écrit pour le moment avant l'approbation : l'épreuve est imprimée, le tirage complet n'a pas commencé, et il reste du temps pour corriger la taille, le contraste, le matériau ou le lien sans gaspiller de stock. Il suppose que vous avez déjà choisi la destination et généré le code. Sinon, commencez par la destination et le lien, car aucun test d'impression ne peut corriger une vidéo privée, une page expirée ou une adresse mal tapée. Une fois le lien correct, parcourez les vérifications ci-dessous dans l'ordre, et n'approuvez pas le tirage tant que chaque élément incontournable n'a pas une coche venant d'une vraie épreuve, pas d'un aperçu à l'écran.</p>
@@ -205,7 +205,71 @@
 <h2>Matériau : papier, plastique, métal et tissu se comportent différemment</h2>
 <p>Le matériau change les règles, et le matériau de l'épreuve doit correspondre au matériau final. Le papier et le carton fonctionnent mieux avec un support mat ou non couché. Les finitions brillantes causent des reflets, augmentez donc la taille du code de 15 à 20 pour cent si un support brillant est requis, selon un guide d'impression. Le carton ondulé, avec sa surface inégale, exige un code plus grand et une correction d'erreur supérieure, avec le niveau Q ou H recommandé. Le vinyle et le plastique exigent une plastification mate et une encre résistante aux UV pour un usage extérieur, avec le niveau H pour l'exposition extérieure, et un plan pour remplacer ou re-plastifier à mesure que le soleil et la météo dégradent l'impression. Le métal et l'aluminium, où la gravure laser donne un contraste plus faible, exigent une augmentation de taille de 30 à 40 pour cent et le niveau H, testés sur la finition de surface réelle.</p>
 <p>Le tissu, le bois et les surfaces texturées ajoutent leurs propres problèmes. L'encre s'étale sur un matériau absorbant, brouillant les bords des modules, tandis que les textures rugueuses brisent la grille nette attendue par le lecteur. Sur ces matériaux, imprimez plus grand, utilisez une correction d'erreur supérieure, et testez un échantillon qui a été manipulé, lavé ou exposé aux intempéries si l'article subira ce traitement. Un code sur un sac en tissu qui scanne quand il est neuf mais échoue après un lavage n'a pas réussi, même si la première épreuve semblait parfaite. Il en va de même pour les étiquettes qui seront congelées, chauffées ou manipulées avec les mains mouillées : testez l'échantillon traité, pas seulement l'impression fraîche.</p>
-<h2>La checklist d'épreuve, dans l'ordre</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">ORGANIGRAMME</p>
+    <div class="qr-fig-title">Prêt à imprimer ?</div>
+    <p class="qr-fig-sub">Suivez l'épreuve dans l'ordre. Une étape échoue ? Corrigez cette seule variable et refaites l'épreuve.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 840" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g>
+        <rect x="130" y="20" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="47" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">1 · Fichier</text>
+        <text x="300" y="69" text-anchor="middle" font-size="13" fill="#666">SVG, PDF ou PNG 300 dpi</text>
+        <line x1="300" y1="84" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="112" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="139" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">2 · Taille, zone de silence, correction</text>
+        <text x="300" y="161" text-anchor="middle" font-size="13" fill="#666">règle 1:10 · min 2×2 cm · marge de 4 modules</text>
+        <line x1="300" y1="176" x2="300" y2="200" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="204" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="231" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">3 · Test à deux téléphones</text>
+        <text x="300" y="253" text-anchor="middle" font-size="13" fill="#666">un téléphone ne suffit pas</text>
+        <line x1="300" y1="268" x2="300" y2="292" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="296" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="323" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">4 · Lumière, distance, angle</text>
+        <text x="300" y="345" text-anchor="middle" font-size="13" fill="#666">testez là où il vivra vraiment</text>
+        <line x1="300" y1="360" x2="300" y2="384" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="388" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="415" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">5 · Matériau</text>
+        <text x="300" y="437" text-anchor="middle" font-size="13" fill="#666">papier, plastique, métal et tissu diffèrent</text>
+        <line x1="300" y1="452" x2="300" y2="476" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="480" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="507" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">6 · Épreuve et référence</text>
+        <text x="300" y="529" text-anchor="middle" font-size="13" fill="#666">premières feuilles et épreuve signée</text>
+        <line x1="300" y1="544" x2="300" y2="576" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,580 460,640 300,700 140,640" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="632" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Ne marche qu'avec</text>
+        <text x="300" y="654" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">un effort particulier ?</text>
+        <line x1="460" y1="640" x2="552" y2="640" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="503" y="627" text-anchor="middle" fill="#999" font-size="13">OUI</text>
+        <rect x="560" y="608" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="635" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Arrêtez et repensez</text>
+        <text x="690" y="657" text-anchor="middle" font-size="13" fill="#444">refaites la mise en page</text>
+        <line x1="300" y1="700" x2="300" y2="736" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="726" fill="#999" font-size="13">NON</text>
+        <rect x="170" y="740" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="775" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Lancez le tirage</text>
+      </g>
+    </svg></div>
+    <p class="qr-fig-foot">Une étape échoue ? Corrigez cette variable et refaites l'épreuve — même si une seule variable a changé. Un code qui ne marche que si on s'approche, qu'on incline la carte et qu'on le protège des reflets n'est pas un code qui marche.</p>
+</figure><h2>La checklist d'épreuve, dans l'ordre</h2>
 <p>Parcourez l'épreuve dans l'ordre ci-dessous, et enregistrez une réussite ou un échec pour chaque élément, avec les modèles de téléphones, les distances et les conditions de lumière utilisés. Une checklist avec des notes est utile quand l'imprimeur demande ce qui a changé, quand un collègue réimprime l'article, ou quand un code échoue sur le terrain et que vous devez savoir ce qui a réellement été testé. Gardez une épreuve approuvée, signée et datée, comme référence pour le tirage complet, et comparez les premières feuilles sorties de presse avec elle, car les conditions de presse peuvent dériver des conditions d'épreuve.</p>
 <div class="table-scroll"><table>
 <tr><th>Étape</th><th>Que vérifier</th><th>Réussite signifie</th></tr>

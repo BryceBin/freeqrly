@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,9 +169,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, FreeQrly का हाथी शुभंकर"></div>
     <div class="kicker" style="text-align:center">फ़ील्ड नोट्स</div>
@@ -185,6 +185,61 @@
 <p>मूल नियम सरल है: हर टिकट अपना QR कोड और अपना टिकट पहचानकर्ता रखता है, और कोई दो टिकट एक ही कोड साझा नहीं करते। जब उपस्थित व्यक्ति रजिस्टर करता है या टिकट खरीदता है, तो टिकटिंग प्लेटफ़ॉर्म वह यूनिक कोड देता है और उसे उसके टिकट रिकॉर्ड से जोड़ता है। कोड में लगभग कभी निजी जानकारी नहीं होती। उसमें आमतौर पर यूनिक रेफ़रेंस स्ट्रिंग होती है, अक्सर एन्क्रिप्टेड या साइन्ड, जो प्लेटफ़ॉर्म डेटाबेस में एक टिकट रिकॉर्ड की ओर इशारा करती है। स्कैनर रेफ़रेंस पढ़ता है, प्लेटफ़ॉर्म उसे खोजता है, और जवाब छोटे से परिणाम सेट में से एक के रूप में वापस आता है: Valid, Invalid, Duplicate, या Expired।</p>
 <p>यह अंतर मायने रखता है, क्योंकि यह दो तरह के QR कोड को अलग करता है जिन्हें आयोजक अक्सर भ्रमित करते हैं। इवेंट QR कोड सबके साथ एक ही कंटेंट साझा करता है: शेड्यूल, वेन्यू मैप, रजिस्ट्रेशन पेज। इवेंट टिकट QR कोड हर उपस्थित व्यक्ति के लिए यूनिक होता है, और उसका काम वैलिडेशन, डुप्लिकेट रोकथाम, और उपस्थिति ट्रैकिंग है। इवेंट के बारे में बताने के लिए साझा कोड इस्तेमाल करें। अंदर जाने देने के लिए यूनिक कोड इस्तेमाल करें। अगर आप हर टिकट पर एक ही कोड छापते हैं, तो आपने टिकट नहीं, पोस्टर बनाया है, और जो भी उसकी तस्वीर लेगा, उसी से अंदर आ सकता है।</p>
 <h2>स्कैनर को क्या लौटाना चाहिए, और चार जवाब दो से क्यों बेहतर हैं</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">डायग्राम</p>
+    <div class="qr-fig-title">स्कैनर को क्या लौटाना चाहिए</div>
+    <p class="qr-fig-sub">सिर्फ़ हाँ या ना नहीं — चार जवाब, हर एक की अपनी कार्रवाई।</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <!-- scanner box -->
+      <rect x="20" y="240" width="170" height="70" rx="12" fill="#2F4A62"/>
+      <text x="105" y="269" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">स्कैनर पढ़ता है</text>
+      <text x="105" y="291" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">कोड</text>
+      <!-- fan-out lines -->
+      <line x1="190" y1="275" x2="262" y2="105" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="205" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="305" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="405" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <!-- row 1: Valid -->
+      <rect x="270" y="73" width="150" height="64" rx="32" fill="#2F4A62"/>
+      <text x="345" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Valid</text>
+      <text x="440" y="103" font-size="15" font-weight="bold" fill="#1E2A32">उन्हें अंदर आने दें</text>
+      <text x="440" y="126" font-size="13" fill="#666">असली टिकट का पहला स्कैन</text>
+      <!-- row 2: Invalid -->
+      <rect x="270" y="173" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="212" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Invalid</text>
+      <text x="440" y="203" font-size="15" font-weight="bold" fill="#1E2A32">ध्यान से जाँचें, हेल्प डेस्क पर भेजें</text>
+      <text x="440" y="226" font-size="13" fill="#666">किसी टिकट से मेल नहीं खाता — संभवतः नकली या ग़लत इवेंट</text>
+      <!-- row 3: Duplicate -->
+      <rect x="270" y="273" width="150" height="64" rx="32" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="345" y="312" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Duplicate</text>
+      <text x="440" y="303" font-size="15" font-weight="bold" fill="#1E2A32">रुकें, पहचान जाँचें, ऊपर भेजें</text>
+      <text x="440" y="326" font-size="13" fill="#666">टिकट पहले ही स्कैन हो चुका है</text>
+      <!-- row 4: Expired -->
+      <rect x="270" y="373" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="412" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Expired</text>
+      <text x="440" y="403" font-size="15" font-weight="bold" fill="#1E2A32">समय-सीमा समझाएँ, रीबुकिंग दें</text>
+      <text x="440" y="426" font-size="13" fill="#666">असली टिकट, वैध समय-सीमा से बाहर</text>
+    </svg></div>
+    <p class="qr-fig-foot">अपने चुने टूल में हर नतीजे के सटीक शब्द और रंग पर स्टाफ़ को प्रशिक्षित करें — और डुप्लिकेट मामले का अभ्यास करें।</p>
+</figure>
 <p>अच्छा दरवाज़ा स्कैनर सिर्फ़ हाँ या ना नहीं कहता। वह Valid, यानी असली टिकट का पहला स्कैन; Invalid, यानी कोड किसी फ़ाइल टिकट से मेल नहीं खाता और संभवतः नकली, फ़ोटोशॉप किया, या दूसरे इवेंट का है; Duplicate, यानी टिकट पहले ही स्कैन हो चुका है; और Expired, यानी टिकट असली है लेकिन अपनी वैध तारीख या समय खिड़की से बाहर है, में अंतर करता है। स्टाफ़ को ये अंतर चाहिए, क्योंकि हर एक अलग प्रतिक्रिया माँगता है। Valid स्कैन मतलब उनका स्वागत करें। Invalid स्कैन मतलब टिकट को ध्यान से जाँचें और मेहमान को गेट पर बहस में नहीं, हेल्प डेस्क पर भेजें। Duplicate स्कैन मतलब रुकें, पहचान सत्यापित करें, और आगे बढ़ाएँ। Expired स्कैन मतलब खिड़की समझाएँ और सही सत्र या रीबुकिंग रास्ता दें, अगर कोई है।</p>
 <p>अपने चुने टूल में हर नतीजे के ठीक शब्द और रंग पर स्टाफ़ को प्रशिक्षित करें, और डुप्लिकेट मामले का खास तौर पर अभ्यास करें। उस पल में, सिर्फ़ खुशहाल रास्ते का अभ्यास करने वाला वॉलंटियर हिचकिचाएगा, किसी को अंदर जाने देगा, या बहस करेगा। डुप्लिकेट स्क्रिप्ट का अभ्यास करने वाला वॉलंटियर — रुकें, मेहमान को विनम्रता से एक तरफ़ रखें, सुपरवाइज़र को बुलाएँ, नाम और ऑर्डर रेफ़रेंस जाँचें — इवेंट और मेहमान दोनों की रक्षा करेगा, जिसमें वह मेहमान भी शामिल है जो फ़ॉरवर्ड किए स्क्रीनशॉट का शिकार है, न कि उसे फ़ॉरवर्ड करने वाला। विवादित डुप्लिकेट पर अंतिम फ़ैसला गेट वॉलंटियर नहीं, सुपरवाइज़र को करना चाहिए, और यह नियम दरवाज़े खुलने से पहले लिखित होना चाहिए।</p>
 <h2>असली दुनिया में टिकने वाले टिकट जारी करना</h2>

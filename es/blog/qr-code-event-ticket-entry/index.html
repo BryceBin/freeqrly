@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,9 +169,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notas de campo</div>
@@ -185,6 +185,61 @@
 <p>La regla central es sencilla: cada entrada lleva su propio código QR y su propio identificador de entrada, y no hay dos entradas que compartan el mismo código. Cuando un asistente se registra o compra una entrada, la plataforma de entradas asigna ese código único y lo liga a su registro de entrada. El propio código casi nunca contiene datos personales. Suele contener una cadena de referencia única, a menudo cifrada o firmada, que apunta a un solo registro de entrada en la base de datos de la plataforma. El escáner lee la referencia, la plataforma la busca, y la respuesta vuelve como uno de un pequeño conjunto de resultados: Válida, Inválida, Duplicada o Caducada.</p>
 <p>Esa distinción importa, porque separa dos tipos de código QR que los organizadores a menudo confunden. Un código QR de evento comparte el mismo contenido con todos: el horario, el mapa del lugar, la página de registro. Un código QR de entrada de evento es único para cada asistente, y su tarea es la validación, la prevención de duplicados y el seguimiento de asistencia. Usa el código compartido para informar a la gente sobre el evento. Usa el código único para dejarlos entrar. Si imprimes el mismo código en cada entrada, has construido un cartel, no una entrada, y cualquiera que lo fotografíe puede entrar con él.</p>
 <h2>Qué debe devolver el escáner, y por qué cuatro respuestas superan a dos</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">DIAGRAMA</p>
+    <div class="qr-fig-title">Qué debe devolver el escáner</div>
+    <p class="qr-fig-sub">No es un sí o un no: son cuatro respuestas, cada una con su propia reacción.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <!-- scanner box -->
+      <rect x="20" y="240" width="170" height="70" rx="12" fill="#2F4A62"/>
+      <text x="105" y="269" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">El escáner lee</text>
+      <text x="105" y="291" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">el código</text>
+      <!-- fan-out lines -->
+      <line x1="190" y1="275" x2="262" y2="105" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="205" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="305" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <line x1="190" y1="275" x2="262" y2="405" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <!-- row 1: Valid -->
+      <rect x="270" y="73" width="150" height="64" rx="32" fill="#2F4A62"/>
+      <text x="345" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Válida</text>
+      <text x="440" y="103" font-size="15" font-weight="bold" fill="#1E2A32">Déjalos pasar</text>
+      <text x="440" y="126" font-size="13" fill="#666">primer escaneo de una entrada real</text>
+      <!-- row 2: Invalid -->
+      <rect x="270" y="173" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="212" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Inválida</text>
+      <text x="440" y="203" font-size="15" font-weight="bold" fill="#1E2A32">Revisa con cuidado, envía al mostrador de ayuda</text>
+      <text x="440" y="226" font-size="13" fill="#666">sin coincidencia: probablemente falsa o de otro evento</text>
+      <!-- row 3: Duplicate -->
+      <rect x="270" y="273" width="150" height="64" rx="32" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="345" y="312" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Duplicada</text>
+      <text x="440" y="303" font-size="15" font-weight="bold" fill="#1E2A32">Detente, verifica la identidad y escala</text>
+      <text x="440" y="326" font-size="13" fill="#666">entrada ya escaneada</text>
+      <!-- row 4: Expired -->
+      <rect x="270" y="373" width="150" height="64" rx="32" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="345" y="412" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Caducada</text>
+      <text x="440" y="403" font-size="15" font-weight="bold" fill="#1E2A32">Explica el horario, ofrece cambiar la reserva</text>
+      <text x="440" y="426" font-size="13" fill="#666">entrada real, fuera de su horario válido</text>
+    </svg></div>
+    <p class="qr-fig-foot">Forma al personal en la redacción y color exactos de cada resultado en tu herramienta elegida, y ensaya específicamente el caso duplicado.</p>
+</figure>
 <p>Un buen escáner de puerta no solo dice sí o no. Distingue Válida, que significa un primer escaneo de una entrada real; Inválida, que significa que el código no coincide con ninguna entrada archivada y probablemente es falso, manipulado o de otro evento; Duplicada, que significa que la entrada ya se escaneó; y Caducada, que significa que la entrada es real pero está fuera de su ventana válida de fecha u hora. El personal necesita esas distinciones, porque cada una exige una respuesta distinta. Un escaneo Válido significa darles la bienvenida. Un escaneo Inválido significa revisar la entrada con cuidado y enviar al invitado al mostrador de ayuda, no a una discusión en la puerta. Un escaneo Duplicado significa detenerse, verificar la identidad y escalar. Un escaneo Caducado significa explicar la ventana y ofrecer la sesión correcta o una ruta de reserva nueva si existe.</p>
 <p>Forma al personal en la redacción y color exactos de cada resultado en tu herramienta elegida, y ensaya específicamente el caso duplicado. En el momento, un voluntario que solo ha practicado el camino feliz dudará, dejará pasar a alguien, o discutirá. Un voluntario que ha practicado el guion de duplicados — pausa, mantén al invitado amablemente a un lado, llama a un supervisor, comprueba nombre y referencia de pedido — protegerá tanto el evento como al invitado, incluido el invitado que es víctima de una captura de pantalla reenviada en lugar de la persona que la reenvió. El supervisor, no el voluntario de puerta, debe tomar la decisión final sobre duplicados disputados, y esa regla debe escribirse antes de que se abran las puertas.</p>
 <h2>Emitir entradas que sobrevivan al mundo real</h2>

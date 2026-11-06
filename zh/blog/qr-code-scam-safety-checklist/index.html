@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -156,21 +156,106 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">在扫码前<span class='hl hl-mint'>识别假二维码</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">二维码是一个肉眼读不出来的链接，而这正是骗子喜欢它的原因。这份清单给你两次停顿，能挡住大多数二维码诈骗：扫码前快速检查一次，扫码后仔细读一次预览。</p>
-    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约14分钟</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约15分钟</p>
     <div class="prose" style="margin-top:40px">
 <p>二维码是一个肉眼读不出来的链接。这让它方便，也让它对骗子有用。停车计时器、海报、包裹或信息里的码，看起来可能很普通，却指向一个假登录页、一个你从来没想去的支付页，或者一个你从来没要过的下载。大多数二维码诈骗，只要你在两个时刻慢下来就会失败：扫码前，和手机向你展示目标之后。</p>
 <h2>二维码诈骗通常是怎么运作的</h2>
 <p>大多数二维码诈骗，常被称为<strong>quishing</strong>——二维码钓鱼——都遵循同样的模式。骗子把有害链接藏进码里，然后给你一个匆忙扫码的理由。美国联邦贸易委员会（FTC）在 2023 年 12 月的消费者提醒里警告说，骗子会用自己的码盖住停车计时器上的真码，还会通过短信或邮件发送编造故事的码：无法投递的包裹、账号问题，或者据称需要改密码的可疑活动。每个故事都是为了制造紧迫感，让你在不动脑子的情况下扫码、打开链接。</p>
 <p>扫码之后，陷阱通常是码背后的页面，而不是码本身。FTC 描述了一个看起来真实、其实是假的冒充网站：如果你在那里登录，骗子就能偷走你输入的任何东西，而一个坏码还可能尝试安装恶意软件。ESET 在谈 quishing 时提出了一个相关的观点：因为目标是编码在视觉图案里、而不是以可读文字写出来的，所以它在扫码之前一直藏着，而且一些传统的邮件过滤器无法像检查可见链接那样检查它。这些都不意味着二维码本身不安全，而是意味着检查必须在扫码之后、在手机向你展示的预览里完成，在你点进去之前。</p>
-<h2>扫码前：五秒检查</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">流程图</p>
+    <div class="qr-fig-title">这个码能扫吗？</div>
+    <p class="qr-fig-sub">扫前五项检查，扫后一项。任何一项没通过，结论都一样：别扫。</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 1040" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g font-size="17">
+        <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">没料到的码？</text>
+        <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">贴纸或覆盖物？</text>
+        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">边缘翘起、角落剥落</text>
+        <line x1="450" y1="165" x2="552" y2="165" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">是</text>
+        <rect x="560" y="133" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="160" text-anchor="middle" fill="#1E2A32" font-weight="bold">别扫</text>
+        <text x="690" y="183" text-anchor="middle" fill="#444" font-size="13">改用官方 App 或计时器</text>
+        <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="244" fill="#999" font-size="13">否</text>
+        <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">印刷质量不对？</text>
+        <text x="300" y="328" text-anchor="middle" fill="#666" font-size="14">模糊或印刷不匹配</text>
+        <line x1="450" y1="311" x2="552" y2="311" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="298" text-anchor="middle" fill="#999" font-size="13">是</text>
+        <rect x="560" y="279" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="306" text-anchor="middle" fill="#1E2A32" font-weight="bold">别扫</text>
+        <text x="690" y="329" text-anchor="middle" fill="#444" font-size="13">换个办法找这项服务</text>
+        <line x1="300" y1="364" x2="300" y2="400" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="390" fill="#999" font-size="13">否</text>
+        <polygon points="300,404 450,457 300,510 150,457" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="450" text-anchor="middle" fill="#1E2A32" font-weight="bold">没有名字或用途？</text>
+        <text x="300" y="474" text-anchor="middle" fill="#666" font-size="14">没有商家名、没有说明</text>
+        <line x1="450" y1="457" x2="552" y2="457" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="444" text-anchor="middle" fill="#999" font-size="13">是</text>
+        <rect x="560" y="425" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="452" text-anchor="middle" fill="#1E2A32" font-weight="bold">别碰它</text>
+        <text x="690" y="475" text-anchor="middle" fill="#444" font-size="13">通过已知渠道核实</text>
+        <line x1="300" y1="510" x2="300" y2="546" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="536" fill="#999" font-size="13">否</text>
+        <polygon points="300,550 450,603 300,656 150,603" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="596" text-anchor="middle" fill="#1E2A32" font-weight="bold">紧迫感、威胁、奖品？</text>
+        <text x="300" y="620" text-anchor="middle" fill="#666" font-size="14">无法核实的故事</text>
+        <line x1="450" y1="603" x2="552" y2="603" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="590" text-anchor="middle" fill="#999" font-size="13">是</text>
+        <rect x="560" y="571" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="598" text-anchor="middle" fill="#1E2A32" font-weight="bold">停下来</text>
+        <text x="690" y="621" text-anchor="middle" fill="#444" font-size="13">用你信任的联系方式</text>
+        <line x1="300" y1="656" x2="300" y2="692" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="682" fill="#999" font-size="13">否</text>
+        <rect x="150" y="696" width="300" height="56" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="731" text-anchor="middle" fill="#1E2A32" font-weight="bold">用自带摄像头扫码</text>
+        <line x1="300" y1="752" x2="300" y2="788" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,792 450,845 300,898 150,845" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="838" text-anchor="middle" fill="#1E2A32" font-weight="bold">预览网址对得上？</text>
+        <text x="300" y="862" text-anchor="middle" fill="#666" font-size="14">是你期待看到的</text>
+        <line x1="450" y1="845" x2="552" y2="845" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="832" text-anchor="middle" fill="#999" font-size="13">否</text>
+        <rect x="560" y="813" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="840" text-anchor="middle" fill="#1E2A32" font-weight="bold">别点</text>
+        <text x="690" y="863" text-anchor="middle" fill="#444" font-size="13">关掉它，换个办法核实</text>
+        <line x1="300" y1="898" x2="300" y2="934" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="924" fill="#999" font-size="13">是</text>
+        <rect x="170" y="938" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="973" text-anchor="middle" fill="#fff" font-weight="bold">可以继续</text>
+      </g>
+    </svg></div>
+</figure><h2>扫码前：五秒检查</h2>
 <p>你的手机摄像头无法告诉你印刷码有没有被动过手脚。你的眼睛可以帮忙。在把摄像头对准任何东西之前，先过一遍这些检查。</p>
 <h3>1. 看有没有贴在真码上面的贴纸</h3>
 <p><strong>摸一摸、看一看边缘。</strong>贴在印刷招牌上的贴纸常常有可见的边框、略微凸起的边缘、不同的光泽或纸张质地，或者翘起的角。如果码压在另一个码、Logo 或印刷文字上面，就把它当作可疑的。这是 FTC 描述的经典停车计时器手法：真正的支付码被盖住了，付款就到了骗子手里。如果任何地方看起来是分层的，别扫它。改用官方 App、计时器本身，或者你已经知道的场馆网站来支付。</p>
@@ -246,9 +331,9 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">继续读</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/zh/blog/static-vs-dynamic-qr-codes/"><b>静态码与动态码：永久免费还是订阅制？</b></a>
-        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-not-working/"><b>二维码不好用？7 个有用的修复</b></a>
-        <a class="rel-card" href="/zh/blog/qr-codes-for-restaurants/"><b>餐厅二维码 — 免费指南</b></a>
+        <a class="rel-card" href="/zh/blog/pdf-file-qr-code/"><b>PDF File QR Code: Host It, Link It, and Replace It Without Reprinting</b></a>
+        <a class="rel-card" href="/zh/blog/video-qr-code/"><b>Video QR Code: Link a Video Without Making People Type a URL</b></a>
+        <a class="rel-card" href="/zh/blog/pre-print-qr-code-checklist/"><b>印前二维码检查清单：在印几千份之前先在真纸上测试</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">

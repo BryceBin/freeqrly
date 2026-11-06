@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -164,15 +164,15 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/faq.webp" alt="Qly, das FreeQrly-Elefantenmaskottchen"></div>
     <div class="kicker" style="text-align:center">Feldnotizen</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">So erstellst du einen <span class='hl hl-mint'>dynamischen</span> QR-Code</h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Ein dynamischer QR-Code lässt dich das Ziel nach dem Druck ändern — und sehen, wie viele Leute gescannt haben. So machst du einen, kostenlos, in etwa einer Minute.</p>
-    <p class="meta" style="text-align:center">16. Oktober 2026 · Zuletzt aktualisiert: 3. November 2026 · 14 Min. Lesezeit</p>
+    <p class="meta" style="text-align:center">October 16, 2026 · Last updated: November 3, 2026 · 15 min read</p>
     <div class="prose" style="margin-top:40px">
 <p>Ja – einen dynamischen QR-Code kannst du kostenlos erstellen, in etwa einer Minute, und sein Ziel auch nach dem Druck noch ändern. Wähl dynamisch, wenn das Ziel noch nicht endgültig feststeht, wenn du Scans zählen willst oder wenn ein gedruckter Code nächsten Monat auf eine neue Seite führen soll. Wähl statisch, wenn sich das Ziel nie ändern wird: Ein fester Link, ein WLAN-Passwort oder eine Visitenkarte brauchen kein Konto und keine Weiterleitung. Diese Anleitung erklärt den Ablauf bei FreeQrly, den Weiterleitungsmechanismus in einfachen Worten und vorab die kostenlosen Limits.</p>
 <p>Bei FreeQrly sind dynamische Codes kostenlos. Melde dich mit E-Mail und Passwort, Google oder GitHub an, und du erhältst 20 dynamische Codes auf dem kostenlosen Konto, aktuell während der zeitlich begrenzten Aktion unbegrenzt. Es gibt keine Testphase und keine Karte, die zum Start nötig wäre, und Scans sind unbegrenzt. Du kannst einen Code nach dem Druck bearbeiten, seine Scan-Statistiken sehen, Codes in Stapeln in statischer Form erstellen und die API nutzen.</p>
@@ -189,6 +189,237 @@
 <p>Wenn du noch unsicher bist, gibt <a href="/de/blog/static-vs-dynamic-qr-codes/">statisch vs. dynamisch, ehrlich erklärt</a> weitere Beispiele. Kurz gesagt: Dynamisch kauft dir Flexibilität und Messbarkeit zum Preis der Abhängigkeit von einem Weiterleitungsdienst und einem Konto; statisch kauft dir Unabhängigkeit zum Preis eines Ziels, das beim Druck eingefroren wird.</p>
 
 <h2>Wie ein dynamischer Code wirklich funktioniert</h2>
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">FUNKTIONSWEISE</p>
+    <div class="qr-fig-title">Dynamisch vs. statisch: Was ändert sich nach dem Druck?</div>
+    <p class="qr-fig-sub">Ein dynamischer Code zeigt auf eine Weiterleitung, die du kontrollierst. Ein statischer Code zeigt direkt aufs Ziel.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 900 640" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+        <marker id="ahg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#D9A441"/>
+        </marker>
+        <marker id="ahgr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#999"/>
+        </marker>
+      </defs>
+      <!-- DYNAMIC lane label -->
+      <text x="20" y="40" font-size="13" font-weight="bold" letter-spacing="2.5" fill="#2F4A62">DYNAMISCH</text>
+      <rect x="20" y="48" width="48" height="3" fill="#D9A441"/>
+      <!-- printed code -->
+      <rect x="20" y="60" width="170" height="170" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <g transform="translate(67,76)" fill="#1E2A32">
+<rect x="0" y="0" width="5" height="5"/>
+<rect x="5" y="0" width="5" height="5"/>
+<rect x="10" y="0" width="5" height="5"/>
+<rect x="15" y="0" width="5" height="5"/>
+<rect x="20" y="0" width="5" height="5"/>
+<rect x="25" y="0" width="5" height="5"/>
+<rect x="30" y="0" width="5" height="5"/>
+<rect x="40" y="0" width="5" height="5"/>
+<rect x="45" y="0" width="5" height="5"/>
+<rect x="50" y="0" width="5" height="5"/>
+<rect x="55" y="0" width="5" height="5"/>
+<rect x="60" y="0" width="5" height="5"/>
+<rect x="65" y="0" width="5" height="5"/>
+<rect x="70" y="0" width="5" height="5"/>
+<rect x="0" y="5" width="5" height="5"/>
+<rect x="30" y="5" width="5" height="5"/>
+<rect x="40" y="5" width="5" height="5"/>
+<rect x="70" y="5" width="5" height="5"/>
+<rect x="0" y="10" width="5" height="5"/>
+<rect x="10" y="10" width="5" height="5"/>
+<rect x="15" y="10" width="5" height="5"/>
+<rect x="20" y="10" width="5" height="5"/>
+<rect x="30" y="10" width="5" height="5"/>
+<rect x="40" y="10" width="5" height="5"/>
+<rect x="50" y="10" width="5" height="5"/>
+<rect x="55" y="10" width="5" height="5"/>
+<rect x="60" y="10" width="5" height="5"/>
+<rect x="70" y="10" width="5" height="5"/>
+<rect x="0" y="15" width="5" height="5"/>
+<rect x="10" y="15" width="5" height="5"/>
+<rect x="15" y="15" width="5" height="5"/>
+<rect x="20" y="15" width="5" height="5"/>
+<rect x="30" y="15" width="5" height="5"/>
+<rect x="40" y="15" width="5" height="5"/>
+<rect x="50" y="15" width="5" height="5"/>
+<rect x="55" y="15" width="5" height="5"/>
+<rect x="60" y="15" width="5" height="5"/>
+<rect x="70" y="15" width="5" height="5"/>
+<rect x="0" y="20" width="5" height="5"/>
+<rect x="10" y="20" width="5" height="5"/>
+<rect x="15" y="20" width="5" height="5"/>
+<rect x="20" y="20" width="5" height="5"/>
+<rect x="30" y="20" width="5" height="5"/>
+<rect x="40" y="20" width="5" height="5"/>
+<rect x="50" y="20" width="5" height="5"/>
+<rect x="55" y="20" width="5" height="5"/>
+<rect x="60" y="20" width="5" height="5"/>
+<rect x="70" y="20" width="5" height="5"/>
+<rect x="0" y="25" width="5" height="5"/>
+<rect x="30" y="25" width="5" height="5"/>
+<rect x="40" y="25" width="5" height="5"/>
+<rect x="70" y="25" width="5" height="5"/>
+<rect x="0" y="30" width="5" height="5"/>
+<rect x="5" y="30" width="5" height="5"/>
+<rect x="10" y="30" width="5" height="5"/>
+<rect x="15" y="30" width="5" height="5"/>
+<rect x="20" y="30" width="5" height="5"/>
+<rect x="25" y="30" width="5" height="5"/>
+<rect x="30" y="30" width="5" height="5"/>
+<rect x="40" y="30" width="5" height="5"/>
+<rect x="45" y="30" width="5" height="5"/>
+<rect x="50" y="30" width="5" height="5"/>
+<rect x="55" y="30" width="5" height="5"/>
+<rect x="60" y="30" width="5" height="5"/>
+<rect x="65" y="30" width="5" height="5"/>
+<rect x="70" y="30" width="5" height="5"/>
+<rect x="0" y="40" width="5" height="5"/>
+<rect x="5" y="40" width="5" height="5"/>
+<rect x="10" y="40" width="5" height="5"/>
+<rect x="15" y="40" width="5" height="5"/>
+<rect x="20" y="40" width="5" height="5"/>
+<rect x="25" y="40" width="5" height="5"/>
+<rect x="30" y="40" width="5" height="5"/>
+<rect x="40" y="40" width="5" height="5"/>
+<rect x="45" y="40" width="5" height="5"/>
+<rect x="55" y="40" width="5" height="5"/>
+<rect x="65" y="40" width="5" height="5"/>
+<rect x="70" y="40" width="5" height="5"/>
+<rect x="0" y="45" width="5" height="5"/>
+<rect x="30" y="45" width="5" height="5"/>
+<rect x="45" y="45" width="5" height="5"/>
+<rect x="50" y="45" width="5" height="5"/>
+<rect x="55" y="45" width="5" height="5"/>
+<rect x="60" y="45" width="5" height="5"/>
+<rect x="65" y="45" width="5" height="5"/>
+<rect x="0" y="50" width="5" height="5"/>
+<rect x="10" y="50" width="5" height="5"/>
+<rect x="15" y="50" width="5" height="5"/>
+<rect x="20" y="50" width="5" height="5"/>
+<rect x="30" y="50" width="5" height="5"/>
+<rect x="40" y="50" width="5" height="5"/>
+<rect x="45" y="50" width="5" height="5"/>
+<rect x="65" y="50" width="5" height="5"/>
+<rect x="0" y="55" width="5" height="5"/>
+<rect x="10" y="55" width="5" height="5"/>
+<rect x="15" y="55" width="5" height="5"/>
+<rect x="20" y="55" width="5" height="5"/>
+<rect x="30" y="55" width="5" height="5"/>
+<rect x="40" y="55" width="5" height="5"/>
+<rect x="50" y="55" width="5" height="5"/>
+<rect x="55" y="55" width="5" height="5"/>
+<rect x="60" y="55" width="5" height="5"/>
+<rect x="65" y="55" width="5" height="5"/>
+<rect x="0" y="60" width="5" height="5"/>
+<rect x="10" y="60" width="5" height="5"/>
+<rect x="15" y="60" width="5" height="5"/>
+<rect x="20" y="60" width="5" height="5"/>
+<rect x="30" y="60" width="5" height="5"/>
+<rect x="40" y="60" width="5" height="5"/>
+<rect x="55" y="60" width="5" height="5"/>
+<rect x="65" y="60" width="5" height="5"/>
+<rect x="70" y="60" width="5" height="5"/>
+<rect x="0" y="65" width="5" height="5"/>
+<rect x="30" y="65" width="5" height="5"/>
+<rect x="40" y="65" width="5" height="5"/>
+<rect x="50" y="65" width="5" height="5"/>
+<rect x="55" y="65" width="5" height="5"/>
+<rect x="65" y="65" width="5" height="5"/>
+<rect x="70" y="65" width="5" height="5"/>
+<rect x="0" y="70" width="5" height="5"/>
+<rect x="5" y="70" width="5" height="5"/>
+<rect x="10" y="70" width="5" height="5"/>
+<rect x="15" y="70" width="5" height="5"/>
+<rect x="20" y="70" width="5" height="5"/>
+<rect x="25" y="70" width="5" height="5"/>
+<rect x="30" y="70" width="5" height="5"/>
+<rect x="50" y="70" width="5" height="5"/>
+      </g>
+      <text x="105" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E2A32">Gedruckter Code</text>
+      <text x="105" y="199" text-anchor="middle" font-size="12" fill="#888">einmal gedruckt</text>
+      <!-- scan arrow -->
+      <line x1="190" y1="145" x2="227" y2="145" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <text x="208" y="132" text-anchor="middle" font-size="13" fill="#666">scannen</text>
+      <!-- redirect box -->
+      <rect x="235" y="60" width="210" height="170" rx="12" fill="#2F4A62"/>
+      <text x="340" y="122" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">FreeQrly-Redirect</text>
+      <text x="340" y="146" text-anchor="middle" font-size="13" fill="#cfd8de">der Code zeigt hierhin</text>
+      <rect x="285" y="164" width="110" height="24" rx="12" fill="#D9A441"/>
+      <text x="340" y="180" text-anchor="middle" font-size="11" font-weight="bold" letter-spacing="1.5" fill="#1E2A32">ÄNDERBAR</text>
+      <!-- destination A -->
+      <line x1="445" y1="90" x2="497" y2="90" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+      <rect x="505" y="60" width="210" height="60" rx="10" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+      <text x="610" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Ziel A</text>
+      <text x="610" y="110" text-anchor="middle" font-size="13" fill="#666">aktuelles Ziel</text>
+      <!-- destination B -->
+      <line x1="445" y1="200" x2="497" y2="200" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ahg)"/>
+      <rect x="505" y="170" width="210" height="60" rx="10" fill="#FFFBF0" stroke="#D9A441" stroke-width="2"/>
+      <text x="610" y="200" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">Ziel B</text>
+      <text x="610" y="220" text-anchor="middle" font-size="13" fill="#666">nach dem Wechsel</text>
+      <text x="610" y="152" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a6a1d">jederzeit wechseln</text>
+      <!-- stats connector -->
+      <line x1="340" y1="230" x2="340" y2="264" stroke="#D9A441" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ahg)"/>
+      <text x="352" y="254" font-size="13" fill="#8a6a1d">jeder Scan wird gezählt</text>
+      <!-- stats card -->
+      <rect x="235" y="270" width="480" height="160" rx="12" fill="#FBF6EC" stroke="#E5DCC8" stroke-width="1.5"/>
+      <text x="255" y="298" font-size="12" font-weight="bold" letter-spacing="1.5" fill="#2F4A62">SCAN-STATISTIKEN</text>
+      <rect x="595" y="282" width="110" height="22" rx="11" fill="#D9A441"/>
+      <text x="650" y="297" text-anchor="middle" font-size="12" font-weight="bold" letter-spacing="1" fill="#1E2A32">BEISPIELDATEN</text>
+      <text x="255" y="326" font-size="12" letter-spacing="1" fill="#777">SCANS GESAMT · 30 TAGE</text>
+      <text x="255" y="362" font-size="32" font-weight="bold" fill="#1E2A32">1,284</text>
+      <text x="255" y="386" font-size="12" fill="#777">Top-Land: USA</text>
+      <text x="255" y="406" font-size="12" fill="#777">Top-Gerät: iPhone</text>
+      <g>
+        <rect x="420" y="373" width="14" height="12" rx="2" fill="#2F4A62"/>
+        <rect x="444" y="368" width="14" height="17" rx="2" fill="#2F4A62"/>
+        <rect x="468" y="376" width="14" height="9" rx="2" fill="#2F4A62"/>
+        <rect x="492" y="362" width="14" height="23" rx="2" fill="#2F4A62"/>
+        <rect x="516" y="355" width="14" height="30" rx="2" fill="#2F4A62"/>
+        <rect x="540" y="359" width="14" height="26" rx="2" fill="#2F4A62"/>
+        <rect x="564" y="351" width="14" height="34" rx="2" fill="#D9A441"/>
+        <g font-size="11" fill="#777" text-anchor="middle">
+          <text x="427" y="402">M</text><text x="451" y="402">T</text><text x="475" y="402">W</text>
+          <text x="499" y="402">T</text><text x="523" y="402">F</text><text x="547" y="402">S</text><text x="571" y="402">S</text>
+        </g>
+        <text x="640" y="402" font-size="12" fill="#777">Scans / Tag</text>
+      </g>
+      <!-- separator -->
+      <line x1="20" y1="465" x2="880" y2="465" stroke="#E5DCC8" stroke-width="1"/>
+      <!-- STATIC lane label -->
+      <text x="20" y="500" font-size="13" font-weight="bold" letter-spacing="2.5" fill="#999">STATISCH</text>
+      <rect x="20" y="508" width="48" height="3" fill="#D8D2C2"/>
+      <!-- static boxes -->
+      <rect x="20" y="520" width="150" height="70" rx="10" fill="#F2F2F2" stroke="#BBB" stroke-width="1.5"/>
+      <text x="95" y="561" text-anchor="middle" font-size="15" font-weight="bold" fill="#777">Gedruckter Code</text>
+      <line x1="170" y1="555" x2="207" y2="555" stroke="#999" stroke-width="2" marker-end="url(#ahgr)"/>
+      <rect x="215" y="520" width="210" height="70" rx="10" fill="#F2F2F2" stroke="#BBB" stroke-width="1.5"/>
+      <text x="320" y="551" text-anchor="middle" font-size="15" font-weight="bold" fill="#777">Festes Ziel</text>
+      <text x="320" y="572" text-anchor="middle" font-size="12" fill="#999">im Code enthalten</text>
+      <line x1="425" y1="555" x2="462" y2="555" stroke="#999" stroke-width="2" marker-end="url(#ahgr)"/>
+      <rect x="470" y="520" width="240" height="70" rx="10" fill="#fff" stroke="#D9A441" stroke-width="2"/>
+      <text x="590" y="551" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E2A32">Zum Ändern</text>
+      <text x="590" y="572" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E2A32">musst du neu drucken</text>
+      <rect x="725" y="538" width="150" height="32" rx="16" fill="#F2F2F2" stroke="#DDD" stroke-width="1.5"/>
+      <text x="800" y="558" text-anchor="middle" font-size="12" fill="#777">Keine Scan-Statistiken</text>
+    </svg></div>
+</figure>
 <p>Ein dynamischer Code trägt deinen Link nicht direkt. Er trägt einen kurzen FreeQrly-Link in der Form <code>freeqrly.com/q/XXXXXXX</code>, und das Muster codiert genau diesen Kurzlink. Wenn jemand den Code scannt, öffnet das Handy den Kurzlink, der FreeQrly-Server schlägt das Ziel nach, das du aktuell eingestellt hast, und der Scanner wird dorthin weitergeleitet. Der Scanner landet auf deiner Seite; der Kurzlink ist nur die Weiche dazwischen.</p>
 <p>Diese Weiche erklärt jede Funktion und jedes Limit:</p>
 <ul>

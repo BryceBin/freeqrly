@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -169,15 +169,15 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
     <div class="kicker" style="text-align:center">实战笔记</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">印一次就好，<span class='hl hl-mint'>因为你先测试过</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">发现坏二维码最便宜的时刻，是在一张样张上，而不是在一仓库印好的库存里。这份清单在批准整批印刷之前，让样张经过两部手机、真实光线、真实距离和真实材料。</p>
-    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约14分钟</p>
+    <p class="meta" style="text-align:center">2026年11月4日 · 阅读约15分钟</p>
     <div class="prose" style="margin-top:40px">
 <p>在设计师屏幕上能扫的二维码，在纸上仍然可能失败。屏幕是背光的、完全平整的，并且在一臂距离观看。纸不是。它会反光、弯曲、吸墨、在阳光下褪色、在拿放中磨损，并且是在设计师从来没站过的距离上被读取。这种差距就是印前测试存在的原因，也是它应该是一份清单、而不是一眼扫过的原因。一眼能抓住明显坏掉的码。清单能抓住在工作室里管用、在场馆里、在货架上，或者在顾客手里失败的码。</p>
 <p>本指南是为批准前的那一刻写的：样张已经印出来，整批还没开始，还有时间在不浪费库存的情况下修尺寸、对比度、材料或链接。它假设你已经选好目标并生成了码。如果你还没有，先从目标和链接开始，因为再多的印刷测试也修不好一个私密视频、一个过期页面或一个打错的地址。链接对了之后，按顺序做下面的检查，并且在每个必须通过的项目都从真实样张、而不是屏幕预览上得到勾选之前，不要批准整批。</p>
@@ -205,7 +205,71 @@
 <h2>材料：纸张、塑料、金属和织物表现不同</h2>
 <p>材料会改变规则，而样张材料应该和最终材料一致。纸张和纸板最适合哑光或非涂布材料。亮面会造成眩光，所以如果必须用亮面材料，根据一份印刷指南，码尺寸要增加 15% 至 20%。表面不平的瓦楞纸板需要更大的码和更高的纠错级别，推荐 Q 或 H 级。乙烯基和塑料户外使用需要哑光覆膜和抗紫外线墨水，户外曝晒用 H 级，并且要计划随着阳光和天气让印刷品退化而更换或重新覆膜。金属和铝材，激光蚀刻对比度较低，需要尺寸增加 30% 至 40% 并用 H 级，并且要在实际表面处理上测试。</p>
 <p>织物、木材和有纹理的表面各有自己的问题。墨水会在吸水材料上扩散、模糊模块边缘，而粗糙纹理会打破扫码器期待的干净网格。在这些材料上，印得更大、用更高的纠错级别，并且如果物品会面临那种处理，就测试一个已经拿过、洗过或风吹过的样品。一个新的手提袋上的码能扫、洗一次后失败的码，即使第一张样张看着完美，也没有通过。同样适用于会被冷冻、加热或湿手拿取的标签：测试经过处理的样品，而不只测试新鲜印刷品。</p>
-<h2>样张检查清单，按顺序</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">流程图</p>
+    <div class="qr-fig-title">能印了吗？</div>
+    <p class="qr-fig-sub">按顺序走样张。哪步失败，就修那一个变量，重新打样。</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 840" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g>
+        <rect x="130" y="20" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="47" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">1 · 文件</text>
+        <text x="300" y="69" text-anchor="middle" font-size="13" fill="#666">SVG、PDF 或 300 dpi PNG</text>
+        <line x1="300" y1="84" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="112" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="139" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">2 · 尺寸、静区、纠错</text>
+        <text x="300" y="161" text-anchor="middle" font-size="13" fill="#666">10:1 规则 · 最小 2×2 cm · 4 模块边距</text>
+        <line x1="300" y1="176" x2="300" y2="200" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="204" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="231" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">3 · 两部手机测试</text>
+        <text x="300" y="253" text-anchor="middle" font-size="13" fill="#666">一部手机不够</text>
+        <line x1="300" y1="268" x2="300" y2="292" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="296" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="323" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">4 · 光线、距离、角度</text>
+        <text x="300" y="345" text-anchor="middle" font-size="13" fill="#666">在它真正待的地方测</text>
+        <line x1="300" y1="360" x2="300" y2="384" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="388" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="415" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">5 · 材料</text>
+        <text x="300" y="437" text-anchor="middle" font-size="13" fill="#666">纸、塑料、金属、织物各不同</text>
+        <line x1="300" y1="452" x2="300" y2="476" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <rect x="130" y="480" width="340" height="64" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="507" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">6 · 样张与参考</text>
+        <text x="300" y="529" text-anchor="middle" font-size="13" fill="#666">第一批纸对照签字样张</text>
+        <line x1="300" y1="544" x2="300" y2="576" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,580 460,640 300,700 140,640" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="632" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">只有费大力气</text>
+        <text x="300" y="654" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">才扫得出来？</text>
+        <line x1="460" y1="640" x2="552" y2="640" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="503" y="627" text-anchor="middle" fill="#999" font-size="13">是</text>
+        <rect x="560" y="608" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="635" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E2A32">停下来重想</text>
+        <text x="690" y="657" text-anchor="middle" font-size="13" fill="#444">重新设计版式，别微调</text>
+        <line x1="300" y1="700" x2="300" y2="736" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="726" fill="#999" font-size="13">否</text>
+        <rect x="170" y="740" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="775" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">印整批</text>
+      </g>
+    </svg></div>
+    <p class="qr-fig-foot">哪步失败？修那一个变量，重新打样——哪怕只改了一个变量。观众必须走近、倾斜卡片、遮挡反光才扫得出来的码，不是能用的码。</p>
+</figure><h2>样张检查清单，按顺序</h2>
 <p>按下面的顺序做样张，并且记录每个项目的通过或失败，以及用过的手机型号、距离和光线条件。带备注的清单在印刷厂问什么变了、同事重印物品，或者码在现场失败、你需要知道实际测试了什么时很有用。留一份签字、注明日期的批准样张作为整批的参考，并且把刚下印刷机的第一批纸和它比较，因为印刷条件可能偏离样张条件。</p>
 <div class="table-scroll"><table>
 <tr><th>步骤</th><th>要检查什么</th><th>通过意味着</th></tr>

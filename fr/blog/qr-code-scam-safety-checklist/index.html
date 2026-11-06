@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3y-20261104">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3y-20261102">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3y-20261102">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -132,7 +132,7 @@
     },
     {
       "@type": "HowToStep",
-      "name": "Scannez avec votre appareil photo intégré",
+      "name": "Scannez avec l'appareil intégré",
       "text": "Utilisez un lecteur de confiance et attendez l'aperçu de destination au lieu d'ouvrir quoi que ce soit à l'aveugle."
     },
     {
@@ -156,21 +156,106 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3y-20261102"></script>
+<script src="/assets/js/acct-menu.js?v=b3y-20261102"></script>
+<script src="/assets/js/subpage-header.js?v=b3y-20261102"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/scanner.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notes de terrain</div>
     <h1 style="text-align:center;max-width:640px;margin:0 auto">Repérez un faux QR code <span class='hl hl-mint'>avant de le scanner</span></h1>
     <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Un QR code est un lien que vous ne pouvez pas lire avec vos yeux, ce qui explique exactement pourquoi les arnaqueurs l'apprécient. Cette checklist vous offre deux pauses qui stoppent la plupart des arnaques par QR : une inspection rapide avant de scanner, et une lecture attentive de l'aperçu après le scan.</p>
-    <p class="meta" style="text-align:center">4 novembre 2026 · 14 min de lecture</p>
+    <p class="meta" style="text-align:center">4 novembre 2026 · 15 min de lecture</p>
     <div class="prose" style="margin-top:40px">
 <p>Un QR code est un lien que vous ne pouvez pas lire avec vos yeux. C'est ce qui le rend pratique, et c'est aussi ce qui le rend utile aux arnaqueurs. Un code sur un horodateur, une affiche, un colis ou dans un message peut avoir l'air ordinaire tout en pointant vers une fausse page de connexion, une page de paiement que vous n'aviez jamais l'intention de visiter, ou un téléchargement que vous n'avez jamais demandé. La plupart des arnaques par QR échouent si vous ralentissez à deux moments : avant de scanner, et après que votre téléphone vous a montré la destination.</p>
 <h2>Comment fonctionne généralement une arnaque par QR code</h2>
 <p>La plupart des arnaques par QR, souvent appelées <strong>quishing</strong> — hameçonnage par QR code — suivent le même schéma. Un arnaqueur cache un lien nuisible dans un code, puis vous donne une raison de le scanner dans la précipitation. La Federal Trade Commission (FTC) a averti dans son alerte aux consommateurs de décembre 2023 que les arnaqueurs recouvrent les vrais codes des horodateurs avec leurs propres codes, et envoient des codes par SMS ou e-mail avec des histoires inventées : un colis qui n'a pas pu être livré, un problème de compte, ou une activité suspecte qui exigerait soi-disant un changement de mot de passe. Chaque histoire est conçue pour créer l'urgence, afin que vous scanniez le code et ouvriez le lien sans réfléchir.</p>
 <p>Une fois le scan fait, le piège est généralement la page derrière le code plutôt que le code lui-même. La FTC décrit un site usurpé qui a l'air réel mais ne l'est pas : si vous vous y connectez, les arnaqueurs peuvent voler tout ce que vous saisissez, et un mauvais code peut aussi tenter d'installer un logiciel malveillant. ESET, écrivant sur le quishing, souligne un point connexe : parce que la destination est encodée dans un motif visuel plutôt qu'écrite en texte lisible, elle reste cachée jusqu'au scan, et certains filtres d'e-mail traditionnels ne peuvent pas l'inspecter comme ils inspectent un lien visible. Rien de tout cela ne signifie que les QR codes sont dangereux en eux-mêmes. Cela signifie que la vérification doit avoir lieu après le scan, dans l'aperçu que votre téléphone vous montre, avant d'aller plus loin.</p>
-<h2>Avant de scanner : l'inspection en cinq secondes</h2>
+
+<style>
+.prose .qr-fig{background:#fff;border:1px solid #E8E0CE;border-radius:20px;padding:40px 44px;margin:36px 0}
+.prose .qr-fig-eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:bold;color:#8a6a1d;margin:0 0 12px}
+.prose .qr-fig-title{font-size:28px;line-height:1.25;font-weight:bold;color:#1E2A32;margin:0 0 6px;letter-spacing:-.2px}
+.prose .qr-fig-sub{font-size:15px;color:#666;line-height:1.7;margin:0 0 8px}
+.prose .qr-fig-rule{width:48px;height:3px;background:#D9A441;margin:16px 0 28px}
+.prose .qr-fig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.prose .qr-fig-scroll svg{display:block;width:100%;min-width:620px;height:auto}
+.prose .qr-fig-foot{font-size:13px;color:#777;line-height:1.7;margin:26px 0 0}
+@media (max-width:640px){.prose .qr-fig{padding:24px 20px}.prose .qr-fig-title{font-size:22px}}
+</style>
+<figure class="qr-fig">
+
+    <p class="qr-fig-eyebrow">ORGANIGRAMME</p>
+    <div class="qr-fig-title">Dois-je scanner ce code ?</div>
+    <p class="qr-fig-sub">Cinq vérifications avant de scanner, une après. Un seul échec suffit : ne scannez pas.</p>
+    <div class="qr-fig-rule"></div>
+    <div class="qr-fig-scroll"><svg viewBox="0 0 860 1040" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+      <defs>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L9,3 L0,6 Z" fill="#2F4A62"/>
+        </marker>
+      </defs>
+      <g font-size="17">
+        <rect x="170" y="20" width="260" height="52" rx="26" fill="#2F4A62"/>
+        <text x="300" y="53" text-anchor="middle" fill="#fff" font-weight="bold">Un code inattendu ?</text>
+        <line x1="300" y1="72" x2="300" y2="108" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,112 450,165 300,218 150,165" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="158" text-anchor="middle" fill="#1E2A32" font-weight="bold">Autocollant ou surcouche ?</text>
+        <text x="300" y="182" text-anchor="middle" fill="#666" font-size="14">bords surélevés, coins décollés</text>
+        <line x1="450" y1="165" x2="552" y2="165" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="152" text-anchor="middle" fill="#999" font-size="13">OUI</text>
+        <rect x="560" y="133" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="160" text-anchor="middle" fill="#1E2A32" font-weight="bold">Ne scannez pas</text>
+        <text x="690" y="183" text-anchor="middle" fill="#444" font-size="13">l'appli officielle ou l'horodateur</text>
+        <line x1="300" y1="218" x2="300" y2="254" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="244" fill="#999" font-size="13">NON</text>
+        <polygon points="300,258 450,311 300,364 150,311" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="304" text-anchor="middle" fill="#1E2A32" font-weight="bold">Impression défectueuse ?</text>
+        <text x="300" y="328" text-anchor="middle" fill="#666" font-size="14">flou ou impression incohérente</text>
+        <line x1="450" y1="311" x2="552" y2="311" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="298" text-anchor="middle" fill="#999" font-size="13">OUI</text>
+        <rect x="560" y="279" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="306" text-anchor="middle" fill="#1E2A32" font-weight="bold">Ne scannez pas</text>
+        <text x="690" y="329" text-anchor="middle" fill="#444" font-size="13">trouvez le service autrement</text>
+        <line x1="300" y1="364" x2="300" y2="400" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="390" fill="#999" font-size="13">NON</text>
+        <polygon points="300,404 450,457 300,510 150,457" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="450" text-anchor="middle" fill="#1E2A32" font-weight="bold">Ni nom ni fonction ?</text>
+        <text x="300" y="474" text-anchor="middle" fill="#666" font-size="14">ni commerce ni explication</text>
+        <line x1="450" y1="457" x2="552" y2="457" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="444" text-anchor="middle" fill="#999" font-size="13">OUI</text>
+        <rect x="560" y="425" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="452" text-anchor="middle" fill="#1E2A32" font-weight="bold">Laissez-le tranquille</text>
+        <text x="690" y="475" text-anchor="middle" fill="#444" font-size="13">vérifiez par un canal connu</text>
+        <line x1="300" y1="510" x2="300" y2="546" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="536" fill="#999" font-size="13">NON</text>
+        <polygon points="300,550 450,603 300,656 150,603" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="596" text-anchor="middle" fill="#1E2A32" font-weight="bold">Urgence, menaces, lots ?</text>
+        <text x="300" y="620" text-anchor="middle" fill="#666" font-size="14">une histoire invérifiable</text>
+        <line x1="450" y1="603" x2="552" y2="603" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="590" text-anchor="middle" fill="#999" font-size="13">OUI</text>
+        <rect x="560" y="571" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="598" text-anchor="middle" fill="#1E2A32" font-weight="bold">Pause</text>
+        <text x="690" y="621" text-anchor="middle" fill="#444" font-size="13">contactez par un moyen connu</text>
+        <line x1="300" y1="656" x2="300" y2="692" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="682" fill="#999" font-size="13">NON</text>
+        <rect x="150" y="696" width="300" height="56" rx="12" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="731" text-anchor="middle" fill="#1E2A32" font-weight="bold">Scannez avec l'appareil intégré</text>
+        <line x1="300" y1="752" x2="300" y2="788" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <polygon points="300,792 450,845 300,898 150,845" fill="#fff" stroke="#2F4A62" stroke-width="2"/>
+        <text x="300" y="838" text-anchor="middle" fill="#1E2A32" font-weight="bold">L'aperçu correspond ?</text>
+        <text x="300" y="862" text-anchor="middle" fill="#666" font-size="14">ce que vous attendiez</text>
+        <line x1="450" y1="845" x2="552" y2="845" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="498" y="832" text-anchor="middle" fill="#999" font-size="13">NON</text>
+        <rect x="560" y="813" width="260" height="64" rx="12" fill="#D9A441"/>
+        <text x="690" y="840" text-anchor="middle" fill="#1E2A32" font-weight="bold">Ne cliquez pas</text>
+        <text x="690" y="863" text-anchor="middle" fill="#444" font-size="13">fermez, vérifiez autrement</text>
+        <line x1="300" y1="898" x2="300" y2="934" stroke="#2F4A62" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="318" y="924" fill="#999" font-size="13">OUI</text>
+        <rect x="170" y="938" width="260" height="56" rx="12" fill="#2F4A62"/>
+        <text x="300" y="973" text-anchor="middle" fill="#fff" font-weight="bold">Vous pouvez continuer</text>
+      </g>
+    </svg></div>
+</figure><h2>Avant de scanner : l'inspection en cinq secondes</h2>
 <p>L'appareil photo de votre téléphone ne peut pas vous dire si un code imprimé a été trafiqué. Vos yeux peuvent aider. Passez en revue ces vérifications avant de pointer votre appareil photo vers quoi que ce soit.</p>
 <h3>1. Cherchez un autocollant placé sur le vrai code</h3>
 <p><strong>Touchez et regardez les bords.</strong> Un autocollant posé sur un panneau imprimé présente souvent une bordure visible, un bord légèrement surélevé, un brillant ou une texture de papier différente, ou des coins qui se décollent. Si le code se trouve par-dessus un autre code, un logo ou un texte imprimé, considérez-le comme suspect. C'est l'astuce classique de l'horodateur décrite par la FTC : le vrai code de paiement est recouvert, et le paiement va à l'arnaqueur. Si quoi que ce soit semble superposé, ne le scannez pas. Payez plutôt via l'application officielle, l'horodateur lui-même, ou le site web du lieu que vous connaissez déjà.</p>
@@ -246,9 +331,9 @@
     <div class="related">
       <div class="fl" style="margin-top:34px">Continuer la lecture</div>
       <div class="rel-grid">
-        <a class="rel-card" href="/fr/blog/static-vs-dynamic-qr-codes/"><b>QR codes statiques vs dynamiques : gratuits à vie ou abonnement ?</b></a>
-        <a class="rel-card" href="/fr/blog/why-is-my-qr-code-not-working/"><b>QR code qui ne fonctionne pas ? 7 correctifs qui aident</b></a>
-        <a class="rel-card" href="/fr/blog/qr-codes-for-restaurants/"><b>QR codes pour restaurants — Guide gratuit</b></a>
+        <a class="rel-card" href="/fr/blog/pdf-file-qr-code/"><b>PDF File QR Code: Host It, Link It, and Replace It Without Reprinting</b></a>
+        <a class="rel-card" href="/fr/blog/video-qr-code/"><b>Video QR Code: Link a Video Without Making People Type a URL</b></a>
+        <a class="rel-card" href="/fr/blog/pre-print-qr-code-checklist/"><b>Checklist pré-impression des QR codes : testez sur du vrai papier avant d'imprimer des milliers</b></a>
       </div>
     </div>
     <section class="faq" id="faq" style="margin-top:50px">
