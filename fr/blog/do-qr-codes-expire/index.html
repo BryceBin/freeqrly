@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3z-20261109">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3z-20261109">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3z-20261109">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -88,7 +88,7 @@
       "name": "Qu'arrive-t-il aux codes dynamiques payants à la fin d'un abonnement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. La FAQ de QR TIGER dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The Générateur de QR code dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante."
+        "text": "Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. <a href=\"/qr-tiger-alternative/\">La FAQ de QR TIGER</a> dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The Générateur de QR code dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante."
       }
     },
     {
@@ -130,9 +130,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3z-20261109"></script>
+<script src="/assets/js/acct-menu.js?v=b3z-20261109"></script>
+<script src="/assets/js/subpage-header.js?v=b3z-20261109"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/privacy.webp" alt="Qly, la mascotte éléphant de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notes de terrain</div>
@@ -253,7 +253,7 @@
     <details><summary><span>Les QR codes gratuits expirent-ils ?</span></summary><p>Non, s'ils sont statiques. Un QR code statique gratuit dure aussi longtemps que le lien vers lequel il pointe. Les codes qui cessent de fonctionner sont généralement des codes dynamiques liés à un abonnement payant — le fournisseur coupe la redirection quand vous arrêtez de payer — ou des codes pointant vers une page supprimée.</p></details>
     <details><summary><span>Un QR code peut-il cesser de fonctionner ?</span></summary><p>Oui, mais pas à cause de l'expiration. Les causes habituelles sont : la page de destination a été supprimée, le code a été imprimé trop petit ou à faible contraste, il a été physiquement endommagé, sa zone de silence a été rognée, ou une offre dynamique a pris fin ou a atteint un plafond de scans.</p></details>
     <details><summary><span>Combien de temps durent les QR codes statiques ?</span></summary><p>Indéfiniment, tant que la destination fonctionne encore. Le motif encode vos données directement sans aucun serveur, il n'y a donc rien à entretenir ni à renouveler.</p></details>
-    <details><summary><span>Qu'arrive-t-il aux codes dynamiques payants à la fin d'un abonnement ?</span></summary><p>Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. La FAQ de QR TIGER dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The Générateur de QR code dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante.</p></details>
+    <details><summary><span>Qu'arrive-t-il aux codes dynamiques payants à la fin d'un abonnement ?</span></summary><p>Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. <a href="/fr/qr-tiger-alternative/">La FAQ de QR TIGER</a> dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The Générateur de QR code dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante.</p></details>
     <details><summary><span>Une limite de scans peut-elle arrêter un QR code ?</span></summary><p>Oui, chez les fournisseurs qui plafonnent les scans dynamiques gratuits. L'offre freemium de QR TIGER, selon sa propre page d'abonnement, donne 3 codes dynamiques avec une limite de 500 scans chacun. Un code qui atteint son plafond cesse de servir sa destination même si le motif est intact. Les codes dynamiques FreeQrly ont des scans illimités.</p></details>
     <details><summary><span>Les dégâts tuent-ils un QR code ?</span></summary><p>Pas toujours. La correction d'erreur peut reconstruire des données manquantes : au niveau Élevé de la norme ISO/IEC 18004, environ 30 % des mots de code peuvent être restaurés. Cela compte des mots de code, pas de la surface visible — une petite rayure sur un carré de repérage d'angle peut bloquer un scan même quand le motif semble intact dans sa plus grande partie.</p></details>
     <details><summary><span>Comment distinguer un lien mort d'un abonnement mort d'une mauvaise impression ?</span></summary><p>Ouvrez la destination directement dans un navigateur ; scannez une épreuve imprimée sur deux téléphones ; lisez l'URL de l'aperçu du scan avant de toucher ; et, pour un code dynamique, vérifiez l'offre et le quota de scans du compte créateur. Chaque vérification pointe vers une couche différente, et chaque couche a un correctif différent.</p></details>

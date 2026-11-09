@@ -256,7 +256,26 @@
     "DIAGRAM": "図解",
     "FLOWCHART": "フローチャート",
     "NO": "いいえ",
-    "YES": "はい"
+    "YES": "はい",
+    "Dynamic QR Code Statistics: What Scans Actually Tell You": "ダイナミックQRコードの統計：スキャンが実際に教えてくれること",
+    "How to Create a Dynamic QR Code Free (Editable After Printing)": "ダイナミックQRコードを無料で作成（印刷後も編集可能）",
+    "How to Edit a QR Code After Printing (Without Reprinting)": "印刷後にQRコードを編集する方法（再印刷なし）",
+    "How to Get More Google Reviews with a QR Code": "Google 口コミ QRコードで口コミを増やす方法",
+    "How to Scan a QR Code from a Picture, Photo, or Screenshot": "写真・画像・スクリーンショットからQRコードをスキャンする方法",
+    "How to Scan a QR Code on Your Phone: iPhone & Android, No App Needed": "スマホでQRコードを読み取る方法：iPhone・Android、アプリ不要",
+    "PDF File QR Code: Host It, Link It, and Replace It Without Reprinting": "PDFファイルQRコード：ホスティング・リンク・刷り直しなしの差し替え",
+    "QR Code Troubleshooting Guide: Find and Fix Any Scan Failure": "QRコードトラブルシューティングガイド：あらゆるスキャン失敗の発見と修正",
+    "QR Code on a Business Card: Layout, Size, and What It Should Link To": "名刺のQRコード：レイアウト・サイズ・リンク先",
+    "QR Code on a Packaging Label: Space, Curves, and Small-Size Rules": "パッケージラベルのQRコード：スペース・曲面・小サイズのルール",
+    "QR Code vs Barcode: Which One Do You Actually Need?": "QRコード vs バーコード：本当に必要なのはどっち？",
+    "QR Codes for Car Washes: Memberships, Loyalty, Reviews and Wash-Bay Signs": "洗車場のQRコード：会員制度・ロイヤルティ・口コミ・洗車ベイの看板",
+    "QR Codes for Coworking Spaces: WiFi, Rooms, Check-In and Community": "コワーキングスペースのQRコード：WiFi・会議室・チェックイン・コミュニティ",
+    "QR Codes for Gyms and Fitness Studios: Check-Ins, Classes, and Reviews": "ジムとフィットネススタジオのQRコード：チェックイン、クラス、口コミ",
+    "QR Codes for Laundromats: One Code per Machine, Plus Wi-Fi, Reviews, and Loyalty": "コインランドリーのQRコード：マシン1台にコード1つ、Wi-Fi・口コミ・ロイヤルティも",
+    "Scan Any QR Code Online Free — No App, No Upload": "どんなQRコードでもオンラインで無料スキャン — アプリ不要、アップロードなし",
+    "Video QR Code: Link a Video Without Making People Type a URL": "動画QRコード：URLを入力させずに動画へリンクする",
+    "Wedding RSVP QR Codes: No More Chasing Replies": "結婚式のRSVP用QRコード：返信を追いかけるのはもう終わり",
+    "Why Is My QR Code Blurry? 5 Fixes That Work": "QRコードがぼやけるのはなぜ？効果のある5つの修正方法"
   },
   "login": {
     "Sign in — FreeQrly": "ログイン — FreeQrly",
@@ -1027,7 +1046,7 @@
     "Yes, but not from expiry. The usual causes are: the destination page was deleted, the code was printed too small or with low contrast, it got physically damaged, its quiet zone was cropped, or a dynamic plan ended or hit a scan cap.": "はい、ただし期限切れが原因ではありません。よくある原因は、行き先のページが削除された、コードが小さすぎたかコントラストが低かった、物理的に破損した、クワイエットゾーンが切り落とされた、動的プランが終了したかスキャン上限に達した、のいずれかです。",
     "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.": "行き先が動いている限り、無期限です。模様があなたのデータを直接記録し、サーバーは介在しないため、維持するものも更新するものもありません。",
     "<span>What happens to paid dynamic codes when a subscription ends?</span>": "<span>契約が終わると有料の動的コードはどうなりますか？</span>",
-    "It depends on the vendor, and the vendor's own FAQ page is the source to check. QR TIGER's FAQ says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "ベンダーによります。確認すべき情報源はベンダー自身のFAQページです。QR TIGERのFAQでは、有料コードは契約中有効な間スキャン無制限で、「プランが切れると動作しなくなります」とされています。The QR Code Generatorでは、トライアル終了後も2個は有効だが広告が表示され、親プラットフォームUniqodeではトライアル終了後に有料プランなしではコードは無効になるとされています。",
+    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "ベンダーによります。確認すべき情報源はベンダー自身のFAQページです。<a href=\"/qr-tiger-alternative/\">QR TIGERのFAQ</a>では、有料コードは契約中有効な間スキャン無制限で、「プランが切れると動作しなくなります」とされています。The QR Code Generatorでは、トライアル終了後も2個は有効だが広告が表示され、親プラットフォームUniqodeではトライアル終了後に有料プランなしではコードは無効になるとされています。",
     "<span>Can a scan limit stop a QR code?</span>": "<span>スキャン上限でQRコードが止まることはありますか？</span>",
     "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans.": "はい、無料の動的スキャンに上限を設けるベンダーではありえます。QR TIGERのフリーミアムプランは、自社の契約ページの記載によれば、動的コード3個、各500スキャンまでです。上限に達したコードは、模様が無傷でも行き先の案内を止めます。FreeQrlyの動的コードはスキャン無制限です。",
     "<span>Does damage kill a QR code?</span>": "<span>破損でQRコードは死にますか？</span>",
@@ -2855,8 +2874,8 @@
     "17 types": "17種類",
     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. No trial, no card, no expiry games.": "はい。静的コードは無料・無制限でアカウント不要です。動的コードも無料です：登録すれば無料の動的コードを20個（期間限定オファー中は無制限）、スキャン統計付きで使えます。トライアルもカードも期限の仕掛けもありません。",
     "Want the full head-to-head? <a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a>, <a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a>, and <a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> put each free plan under the microscope.": "全面対決が見たいですか？<a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a>、<a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a>、<a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a>では各無料プランを徹底比較しています。",
-    "(<a href=\"/blog/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "（<a href=\"/blog/qr-tiger-alternative/\">QR Tigerの代替品</a>。）",
-    "(<a href=\"/blog/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "（<a href=\"/blog/qr-code-monkey-alternative/\">QRCode Monkeyの代替品</a>。）"
+    "(<a href=\"/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "（<a href=\"/qr-tiger-alternative/\">QR Tigerの代替品</a>。）",
+    "(<a href=\"/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "（<a href=\"/qr-code-monkey-alternative/\">QRCode Monkeyの代替品</a>。）"
   },
   "blog-why-is-my-qr-code-blurry": {
     "Why Is My QR Code Blurry? Fixes That Work | FreeQrly": "QRコードがぼやけるのはなぜ？効く修正方法 | FreeQrly",

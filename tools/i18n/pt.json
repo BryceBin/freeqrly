@@ -255,7 +255,26 @@
     "DIAGRAM": "DIAGRAMA",
     "FLOWCHART": "FLUXOGRAMA",
     "NO": "NÃO",
-    "YES": "SIM"
+    "YES": "SIM",
+    "Dynamic QR Code Statistics: What Scans Actually Tell You": "Estatísticas de QR codes dinâmicos: o que as leituras realmente dizem",
+    "How to Create a Dynamic QR Code Free (Editable After Printing)": "Como criar um QR code dinâmico grátis (editável após a impressão)",
+    "How to Edit a QR Code After Printing (Without Reprinting)": "Como editar um QR code após imprimir (sem reimprimir)",
+    "How to Get More Google Reviews with a QR Code": "Como Conseguir Mais Avaliações no Google com QR Code",
+    "How to Scan a QR Code from a Picture, Photo, or Screenshot": "Como Escanear um QR Code de Foto, Imagem ou Captura de Tela",
+    "How to Scan a QR Code on Your Phone: iPhone & Android, No App Needed": "Como Escanear QR Code pelo Celular: iPhone e Android, Sem App",
+    "PDF File QR Code: Host It, Link It, and Replace It Without Reprinting": "QR Code de Arquivo PDF: Hospede-o, Vincule-o, e Substitua-o Sem Reimprimir",
+    "QR Code Troubleshooting Guide: Find and Fix Any Scan Failure": "Guia de Solução de Problemas de QR Code: Encontre e Corrija Qualquer Falha de Escaneamento",
+    "QR Code on a Business Card: Layout, Size, and What It Should Link To": "QR Code em um Cartão de Visita: Layout, Tamanho e Para o que Ele Deve Vincular",
+    "QR Code on a Packaging Label: Space, Curves, and Small-Size Rules": "QR Code em um Rótulo de Embalagem: Espaço, Curvas e Regras de Tamanho Pequeno",
+    "QR Code vs Barcode: Which One Do You Actually Need?": "QR code vs código de barras: de qual você realmente precisa?",
+    "QR Codes for Car Washes: Memberships, Loyalty, Reviews and Wash-Bay Signs": "QR Codes para Lava-rápidos: Assinaturas, Fidelidade, Avaliações e Placas da Área de Lavagem",
+    "QR Codes for Coworking Spaces: WiFi, Rooms, Check-In and Community": "QR Codes para Espaços de Coworking: WiFi, Salas, Check-in e Comunidade",
+    "QR Codes for Gyms and Fitness Studios: Check-Ins, Classes, and Reviews": "QR Codes para Academias e Estúdios de Fitness: Check-ins, Aulas e Avaliações",
+    "QR Codes for Laundromats: One Code per Machine, Plus Wi-Fi, Reviews, and Loyalty": "QR Codes para Lavanderias: Um Código por Máquina, Além de Wi-Fi, Avaliações e Fidelidade",
+    "Scan Any QR Code Online Free — No App, No Upload": "Escaneie Qualquer QR Code Online Grátis — Sem App, Sem Envio",
+    "Video QR Code: Link a Video Without Making People Type a URL": "QR Code de Vídeo: Vincule um Vídeo Sem Fazer as Pessoas Digitarem uma URL",
+    "Wedding RSVP QR Codes: No More Chasing Replies": "QR codes RSVP para casamentos: chega de correr atrás de respostas",
+    "Why Is My QR Code Blurry? 5 Fixes That Work": "Por que meu QR code está borrado? 5 correções que funcionam"
   },
   "404": {
     "Page not found | FreeQrly": "Página não encontrada | FreeQrly",
@@ -1026,7 +1045,7 @@
     "Yes, but not from expiry. The usual causes are: the destination page was deleted, the code was printed too small or with low contrast, it got physically damaged, its quiet zone was cropped, or a dynamic plan ended or hit a scan cap.": "Sim, mas não por expiração. As causas comuns são: a página de destino foi apagada, o código foi impresso pequeno demais ou com baixo contraste, sofreu dano físico, teve a zona de silêncio cortada, ou um plano dinâmico terminou ou atingiu o limite de escaneamentos.",
     "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.": "Por tempo indeterminado, enquanto o destino continuar funcionando. O padrão codifica os seus dados diretamente, sem nenhum servidor envolvido, então não há nada para manter ou renovar.",
     "<span>What happens to paid dynamic codes when a subscription ends?</span>": "<span>O que acontece com códigos dinâmicos pagos quando uma assinatura termina?</span>",
-    "It depends on the vendor, and the vendor's own FAQ page is the source to check. QR TIGER's FAQ says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "Depende do fornecedor, e a página de perguntas frequentes do próprio fornecedor é a fonte a conferir. As perguntas frequentes do QR TIGER dizem que os códigos pagos têm escaneamentos ilimitados enquanto a assinatura estiver válida e que 'Se o seu plano expirar, ele vai parar de funcionar.' O QR Code Generator diz que, depois que um teste termina, 2 códigos continuam ativos, mas exibem anúncios, enquanto na plataforma-mãe Uniqode os códigos de teste ficam inativos sem um plano pago.",
+    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "Depende do fornecedor, e a página de perguntas frequentes do próprio fornecedor é a fonte a conferir. <a href=\"/qr-tiger-alternative/\">As perguntas frequentes do QR TIGER</a> dizem que os códigos pagos têm escaneamentos ilimitados enquanto a assinatura estiver válida e que 'Se o seu plano expirar, ele vai parar de funcionar.' O QR Code Generator diz que, depois que um teste termina, 2 códigos continuam ativos, mas exibem anúncios, enquanto na plataforma-mãe Uniqode os códigos de teste ficam inativos sem um plano pago.",
     "<span>Can a scan limit stop a QR code?</span>": "<span>Um limite de escaneamentos pode interromper um QR code?</span>",
     "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans.": "Sim, em fornecedores que limitam os escaneamentos dinâmicos gratuitos. O plano freemium do QR TIGER, conforme declarado na própria página de assinatura, oferece 3 códigos dinâmicos com limite de 500 escaneamentos cada. Um código que atinge o limite para de servir o seu destino mesmo com o padrão intacto. Os códigos dinâmicos do FreeQrly têm escaneamentos ilimitados.",
     "<span>Does damage kill a QR code?</span>": "<span>Dano mata um QR code?</span>",
@@ -2854,8 +2873,8 @@
     "17 types": "17 tipos",
     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. No trial, no card, no expiry games.": "Sim. Códigos estáticos são grátis e ilimitados, sem conta. Códigos dinâmicos também são grátis: faça login e receba 20 códigos dinâmicos grátis (ilimitados no momento, durante a oferta por tempo limitado) com estatísticas de scan. Sem teste, sem cartão, sem joguinhos de expiração.",
     "Want the full head-to-head? <a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a>, <a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a>, and <a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> put each free plan under the microscope.": "Quer o confronto completo? <a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a>, <a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a> e <a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> examinam cada plano gratuito em detalhe.",
-    "(<a href=\"/blog/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "(<a href=\"/blog/qr-tiger-alternative/\">Alternativa ao QR Tiger</a>.)",
-    "(<a href=\"/blog/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "(<a href=\"/blog/qr-code-monkey-alternative/\">Alternativa ao QRCode Monkey</a>.)"
+    "(<a href=\"/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "(<a href=\"/qr-tiger-alternative/\">Alternativa ao QR Tiger</a>.)",
+    "(<a href=\"/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "(<a href=\"/qr-code-monkey-alternative/\">Alternativa ao QRCode Monkey</a>.)"
   },
   "blog-why-is-my-qr-code-blurry": {
     "Why Is My QR Code Blurry? Fixes That Work | FreeQrly": "Por Que Meu QR Code Está Embaçado? Correções Que Funcionam | FreeQrly",

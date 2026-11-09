@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3z-20261109">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3z-20261109">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3z-20261109">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -88,7 +88,7 @@
       "name": "付费动态码在订阅结束时会怎样？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "看厂商，厂商自己的 FAQ 页是核对的来源。QR TIGER 的 FAQ 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。"
+        "text": "看厂商，厂商自己的 FAQ 页是核对的来源。<a href=\"/qr-tiger-alternative/\">QR TIGER 的 FAQ</a> 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。"
       }
     },
     {
@@ -130,9 +130,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3z-20261109"></script>
+<script src="/assets/js/acct-menu.js?v=b3z-20261109"></script>
+<script src="/assets/js/subpage-header.js?v=b3z-20261109"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/privacy.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
     <div class="kicker" style="text-align:center">实战笔记</div>
@@ -253,7 +253,7 @@
     <details><summary><span>免费二维码会过期吗？</span></summary><p>不会，如果是静态码。免费静态二维码能用多久，取决于它指向的链接能活多久。停工的码通常是绑定付费订阅的动态码——你停付，厂商就关掉跳转——或者指向被删页面的码。</p></details>
     <details><summary><span>二维码会停止工作吗？</span></summary><p>可以，但不是因为过期。常见原因是：目标页面被删了、码印得太小或对比度太低、物理破损、静区被裁掉了，或者动态套餐结束或触到扫码上限。</p></details>
     <details><summary><span>静态二维码能用多久？</span></summary><p>无限期，只要目标还能用。图案直接编码你的数据，没有服务器参与，所以没什么要维护或续费的。</p></details>
-    <details><summary><span>付费动态码在订阅结束时会怎样？</span></summary><p>看厂商，厂商自己的 FAQ 页是核对的来源。QR TIGER 的 FAQ 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。</p></details>
+    <details><summary><span>付费动态码在订阅结束时会怎样？</span></summary><p>看厂商，厂商自己的 FAQ 页是核对的来源。<a href="/zh/qr-tiger-alternative/">QR TIGER 的 FAQ</a> 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。</p></details>
     <details><summary><span>扫码上限能让二维码停工吗？</span></summary><p>可以，在限制免费动态扫码的厂商那里。QR TIGER 的免费增值套餐，按它自己订阅页的说法，给 3 个动态码，每个 500 次扫码上限。触到上限的码即使图案完好无损，也不再服务它的目标。FreeQrly 的动态码扫码不限。</p></details>
     <details><summary><span>破损会杀死二维码吗？</span></summary><p>不总是。纠错能把缺失的数据补回来：按 ISO/IEC 18004，高级别下大约 30% 的码字可以恢复。算的是码字，不是可见面积——角定位方块上一道小划痕，即使图案大体完好，也能让扫码停工。</p></details>
     <details><summary><span>怎么区分死链、死订阅和印坏的码？</span></summary><p>在浏览器里直接打开目标页面；在两部手机上扫印刷样张；点之前读扫码预览的链接；对动态码，查创建账号的套餐和扫码额度。每项检查指向不同的层次，每个层次有不同的修法。</p></details>

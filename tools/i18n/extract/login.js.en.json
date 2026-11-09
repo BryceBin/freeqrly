@@ -1,5 +1,6 @@
 [
  "We couldn't get a verified email from that account.",
+ "; if(!sid){ const a=new Uint8Array(8); crypto.getRandomValues(a); sid=Array.from(a,x=>x.toString(16).padStart(2,",
  "That link is expired or already used. Request a new one.",
  "That sign-in option is not available right now.",
  "Something went wrong. Please try again.",

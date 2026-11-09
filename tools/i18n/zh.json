@@ -255,7 +255,26 @@
     "DIAGRAM": "示意图",
     "FLOWCHART": "流程图",
     "NO": "否",
-    "YES": "是"
+    "YES": "是",
+    "Dynamic QR Code Statistics: What Scans Actually Tell You": "动态二维码统计：扫码数据到底告诉你什么",
+    "How to Create a Dynamic QR Code Free (Editable After Printing)": "免费创建动态二维码（打印后仍可编辑）",
+    "How to Edit a QR Code After Printing (Without Reprinting)": "打印后如何修改二维码（不用重印）",
+    "How to Get More Google Reviews with a QR Code": "用二维码获得更多 Google 评价",
+    "How to Scan a QR Code from a Picture, Photo, or Screenshot": "怎么从图片、照片或截图里扫二维码",
+    "How to Scan a QR Code on Your Phone: iPhone & Android, No App Needed": "手机怎么扫二维码：iPhone 和 Android，不用装 App",
+    "PDF File QR Code: Host It, Link It, and Replace It Without Reprinting": "PDF 文件二维码：托管它、链接它、不重印也能替换它",
+    "QR Code Troubleshooting Guide: Find and Fix Any Scan Failure": "二维码故障排查指南：找到并修复任何扫码失败",
+    "QR Code on a Business Card: Layout, Size, and What It Should Link To": "名片上的二维码：版式、尺寸与链接目标",
+    "QR Code on a Packaging Label: Space, Curves, and Small-Size Rules": "包装标签上的二维码：空间、曲面与小尺寸规则",
+    "QR Code vs Barcode: Which One Do You Actually Need?": "二维码 vs 条形码：你到底需要哪一个？",
+    "QR Codes for Car Washes: Memberships, Loyalty, Reviews and Wash-Bay Signs": "洗车二维码：会员、会员卡、评价与洗车位招牌",
+    "QR Codes for Coworking Spaces: WiFi, Rooms, Check-In and Community": "共享办公空间二维码：WiFi、会议室、签到与社区",
+    "QR Codes for Gyms and Fitness Studios: Check-Ins, Classes, and Reviews": "健身房与健身工作室二维码：签到、课程与评价",
+    "QR Codes for Laundromats: One Code per Machine, Plus Wi-Fi, Reviews, and Loyalty": "自助洗衣店二维码：一机一码，外加 WiFi、评价与会员",
+    "Scan Any QR Code Online Free — No App, No Upload": "在线扫任何二维码，免费 — 不用 App，不上传",
+    "Video QR Code: Link a Video Without Making People Type a URL": "视频二维码：链接视频，不用让人手输网址",
+    "Wedding RSVP QR Codes: No More Chasing Replies": "婚礼 RSVP 二维码：不用再追着要回复",
+    "Why Is My QR Code Blurry? 5 Fixes That Work": "二维码为什么模糊？5 个管用的修复方法"
   },
   "404": {
     "Page not found | FreeQrly": "页面不存在 | FreeQrly",
@@ -1026,7 +1045,7 @@
     "Yes, but not from expiry. The usual causes are: the destination page was deleted, the code was printed too small or with low contrast, it got physically damaged, its quiet zone was cropped, or a dynamic plan ended or hit a scan cap.": "可以，但不是因为过期。常见原因是：目标页面被删了、码印得太小或对比度太低、物理破损、静区被裁掉了，或者动态套餐结束或触到扫码上限。",
     "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.": "无限期，只要目标还能用。图案直接编码你的数据，没有服务器参与，所以没什么要维护或续费的。",
     "<span>What happens to paid dynamic codes when a subscription ends?</span>": "<span>付费动态码在订阅结束时会怎样？</span>",
-    "It depends on the vendor, and the vendor's own FAQ page is the source to check. QR TIGER's FAQ says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "看厂商，厂商自己的 FAQ 页是核对的来源。QR TIGER 的 FAQ 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。",
+    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "看厂商，厂商自己的 FAQ 页是核对的来源。<a href=\"/qr-tiger-alternative/\">QR TIGER 的 FAQ</a> 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。",
     "<span>Can a scan limit stop a QR code?</span>": "<span>扫码上限能让二维码停工吗？</span>",
     "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans.": "可以，在限制免费动态扫码的厂商那里。QR TIGER 的免费增值套餐，按它自己订阅页的说法，给 3 个动态码，每个 500 次扫码上限。触到上限的码即使图案完好无损，也不再服务它的目标。FreeQrly 的动态码扫码不限。",
     "<span>Does damage kill a QR code?</span>": "<span>破损会杀死二维码吗？</span>",
@@ -2763,8 +2782,8 @@
     "17 types": "17 种类型",
     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. No trial, no card, no expiry games.": "是的。静态码免费不限量，不用账号。动态码也免费：登录后得到 20 个免费动态码（限时活动期间不限量），带扫码统计。没有试用期，不用绑卡，没有过期套路。",
     "Want the full head-to-head? <a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a>, <a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a>, and <a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> put each free plan under the microscope.": "想看完整的正面交锋？<a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a>、<a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a> 和 <a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> 把每个免费方案都细细剖析。",
-    "(<a href=\"/blog/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "（<a href=\"/blog/qr-tiger-alternative/\">QR Tiger 替代品</a>。）",
-    "(<a href=\"/blog/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "（<a href=\"/blog/qr-code-monkey-alternative/\">QRCode Monkey 替代品</a>。）"
+    "(<a href=\"/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "（<a href=\"/qr-tiger-alternative/\">QR Tiger 替代品</a>。）",
+    "(<a href=\"/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "（<a href=\"/qr-code-monkey-alternative/\">QRCode Monkey 替代品</a>。）"
   },
   "blog-why-is-my-qr-code-blurry": {
     "2048 px PNG minimum, or SVG. A poster viewed from 2 meters needs far more pixels than a business card viewed from 30 cm — see the print size guide for the distance rule.": "PNG 至少 2048 像素，或者用 SVG。从 2 米外看的海报，比从 30 厘米外看的名片需要多得多的像素——距离规则看打印尺寸指南。",

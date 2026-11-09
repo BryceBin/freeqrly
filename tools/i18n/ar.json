@@ -172,7 +172,7 @@
     "Yes, but not from expiry. The usual causes are: the destination page was deleted, the code was printed too small or with low contrast, it got physically damaged, its quiet zone was cropped, or a dynamic plan ended or hit a scan cap.": "نعم، لكن ليس بسبب الانتهاء. الأسباب المعتادة هي: صفحة الوجهة حُذفت، أو الرمز طُبع صغيرًا جدًا أو بتباين منخفض، أو تضرر ماديًا، أو قُصّت منطقته الهادئة، أو انتهت خطة ديناميكية أو بلغت حد المسح.",
     "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.": "إلى أجل غير مسمى، ما دامت الوجهة ما زالت تعمل. النقش يشفر بياناتك مباشرة دون أي خادم، فلا يوجد ما يُصان أو يُجدَّد.",
     "<span>What happens to paid dynamic codes when a subscription ends?</span>": "<span>ماذا يحدث للرموز الديناميكية المدفوعة عند انتهاء الاشتراك؟</span>",
-    "It depends on the vendor, and the vendor's own FAQ page is the source to check. QR TIGER's FAQ says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "يعتمد ذلك على المورّد، وصفحة الأسئلة الشائعة الخاصة بالمورّد هي المصدر الذي يجب التحقق منه. تقول أسئلة QR TIGER الشائعة إن الرموز المدفوعة مسحاتها غير محدودة ما دام الاشتراك ساريًا و«إذا انتهت خطتك، سيتوقف عن العمل». ويقول The QR Code Generator إنه بعد انتهاء تجربة، يبقى رمزان نشطين لكنهما يعرضان إعلانات، بينما على منصته الأم Uniqode تصبح رموز التجربة غير نشطة دون خطة مدفوعة.",
+    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "يعتمد ذلك على المورّد، وصفحة الأسئلة الشائعة الخاصة بالمورّد هي المصدر الذي يجب التحقق منه. تقول <a href=\"/qr-tiger-alternative/\">أسئلة QR TIGER الشائعة</a> إن الرموز المدفوعة مسحاتها غير محدودة ما دام الاشتراك ساريًا و«إذا انتهت خطتك، سيتوقف عن العمل». ويقول The QR Code Generator إنه بعد انتهاء تجربة، يبقى رمزان نشطين لكنهما يعرضان إعلانات، بينما على منصته الأم Uniqode تصبح رموز التجربة غير نشطة دون خطة مدفوعة.",
     "<span>Can a scan limit stop a QR code?</span>": "<span>هل يستطيع حد المسح إيقاف رمز QR؟</span>",
     "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans.": "نعم، لدى المورّدين الذين يحدّون مسحات الديناميكي المجانية. خطة QR TIGER المجانية جزئيًا، بحسب ما ورد في صفحة اشتراكه الخاصة، تمنح 3 رموز ديناميكية بحد 500 مسحة لكل واحد. والرمز الذي يبلغ حده يتوقف عن خدمة وجهته رغم أن النقش غير تالف. رموز FreeQrly الديناميكية مسحاتها غير محدودة.",
     "<span>Does damage kill a QR code?</span>": "<span>هل يقتل التلف رمز QR؟</span>",
@@ -1981,7 +1981,26 @@
     "DIAGRAM": "رسم توضيحي",
     "FLOWCHART": "مخطط انسيابي",
     "NO": "لا",
-    "YES": "نعم"
+    "YES": "نعم",
+    "Dynamic QR Code Statistics: What Scans Actually Tell You": "إحصاءات رموز QR الديناميكية: ما تخبرك به عمليات المسح فعلًا",
+    "How to Create a Dynamic QR Code Free (Editable After Printing)": "كيف تنشئ رمز QR ديناميكيًا مجانًا (قابل للتحرير بعد الطباعة)",
+    "How to Edit a QR Code After Printing (Without Reprinting)": "كيف تعدّل رمز QR بعد الطباعة (دون إعادة طباعة)",
+    "How to Get More Google Reviews with a QR Code": "كيفية الحصول على المزيد من تقييمات جوجل عبر رمز QR",
+    "How to Scan a QR Code from a Picture, Photo, or Screenshot": "كيف تمسح رمز QR من صورة أو لقطة شاشة",
+    "How to Scan a QR Code on Your Phone: iPhone & Android, No App Needed": "كيفية مسح رمز QR بالهاتف: آيفون وأندرويد، بدون تطبيق",
+    "PDF File QR Code: Host It, Link It, and Replace It Without Reprinting": "رمز QR لملف PDF: استضفه واربطه واستبدله دون إعادة طباعة",
+    "QR Code Troubleshooting Guide: Find and Fix Any Scan Failure": "دليل استكشاف أخطاء رمز QR: جد وأصلح أي فشل مسح",
+    "QR Code on a Business Card: Layout, Size, and What It Should Link To": "رمز QR على بطاقة عمل: التخطيط والحجم وإلى ماذا يجب أن يربط",
+    "QR Code on a Packaging Label: Space, Curves, and Small-Size Rules": "رمز QR على ملصق تغليف: المساحة والانحناءات وقواعد الحجم الصغير",
+    "QR Code vs Barcode: Which One Do You Actually Need?": "رمز QR مقابل الباركود: أيهما تحتاج فعلًا؟",
+    "QR Codes for Car Washes: Memberships, Loyalty, Reviews and Wash-Bay Signs": "رموز QR لمغاسل السيارات: العضويات والولاء والتقييمات ولافتات حارات الغسيل",
+    "QR Codes for Coworking Spaces: WiFi, Rooms, Check-In and Community": "رموز QR لمساحات العمل المشترك: الواي فاي والغرف وتسجيل الدخول والمجتمع",
+    "QR Codes for Gyms and Fitness Studios: Check-Ins, Classes, and Reviews": "رموز QR للصالات الرياضية ومراكز اللياقة: تسجيل الدخول والحصص والتقييمات",
+    "QR Codes for Laundromats: One Code per Machine, Plus Wi-Fi, Reviews, and Loyalty": "رموز QR للمغاسل: رمز واحد لكل آلة، إضافة إلى الواي فاي والتقييمات والولاء",
+    "Scan Any QR Code Online Free — No App, No Upload": "امسح أي رمز QR عبر الإنترنت مجانًا — بدون تطبيق، بدون رفع",
+    "Video QR Code: Link a Video Without Making People Type a URL": "رمز QR للفيديو: اربط فيديو دون جعل الناس يكتبون URL",
+    "Wedding RSVP QR Codes: No More Chasing Replies": "رموز QR لتأكيد حضور الزفاف: لا مزيد من ملاحقة الردود",
+    "Why Is My QR Code Blurry? 5 Fixes That Work": "لماذا رمز QR الخاص بي ضبابي؟ 5 إصلاحات فعّالة"
   },
   "terms": {
     "Terms of Service — FreeQrly": "شروط الخدمة — FreeQrly",
@@ -2854,8 +2873,8 @@
     "17 types": "17 نوعًا",
     "Yes. Static codes are free and unlimited with no account. Dynamic codes are free too: sign in and you get 20 free dynamic codes (currently unlimited during the limited-time promotion) with scan stats. No trial, no card, no expiry games.": "نعم. الرموز الثابتة مجانية وغير محدودة بدون حساب. الرموز الديناميكية مجانية أيضًا: سجّل الدخول وستحصل على 20 رمزًا ديناميكيًا مجانيًا (غير محدود حاليًا خلال العرض المحدود المدة) مع إحصاءات المسح. لا تجربة ولا بطاقة ولا ألعاب انتهاء.",
     "Want the full head-to-head? <a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a>, <a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a>, and <a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> put each free plan under the microscope.": "تريد المواجهة الكاملة؟ <a href=\"/blog/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a> و<a href=\"/blog/freeqrly-vs-qr-code-monkey/\">FreeQrly vs QRCode Monkey</a> و<a href=\"/blog/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> تضع كل خطة مجانية تحت المجهر.",
-    "(<a href=\"/blog/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "(<a href=\"/blog/qr-tiger-alternative/\">بديل QR Tiger</a>.)",
-    "(<a href=\"/blog/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "(<a href=\"/blog/qr-code-monkey-alternative/\">بديل QRCode Monkey</a>.)"
+    "(<a href=\"/qr-tiger-alternative/\">QR Tiger alternative</a>.)": "(<a href=\"/qr-tiger-alternative/\">بديل QR Tiger</a>.)",
+    "(<a href=\"/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.)": "(<a href=\"/qr-code-monkey-alternative/\">بديل QRCode Monkey</a>.)"
   },
   "blog-why-is-my-qr-code-blurry": {
     "Why Is My QR Code Blurry? Fixes That Work | FreeQrly": "لماذا رمز QR الخاص بي ضبابي؟ إصلاحات ناجحة | FreeQrly",

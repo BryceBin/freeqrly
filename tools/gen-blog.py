@@ -106,7 +106,7 @@ POSTS = [
   ('Do free QR codes expire?', 'No, if they are static. A free static QR code lasts as long as the link it points to. Codes that stop working are usually dynamic codes tied to a paid subscription — the vendor switches the redirect off when you stop paying — or codes pointing at a deleted page.'),
   ('Can a QR code stop working?', 'Yes, but not from expiry. The usual causes are: the destination page was deleted, the code was printed too small or with low contrast, it got physically damaged, its quiet zone was cropped, or a dynamic plan ended or hit a scan cap.'),
   ('How long do static QR codes last?', 'Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.'),
-  ('What happens to paid dynamic codes when a subscription ends?', "It depends on the vendor, and the vendor's own FAQ page is the source to check. QR TIGER's FAQ says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan."),
+  ('What happens to paid dynamic codes when a subscription ends?', "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan."),
   ('Can a scan limit stop a QR code?', "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans."),
   ('Does damage kill a QR code?', 'Not always. Error correction can rebuild missing data: at the High level in ISO/IEC 18004, up to about 30% of codewords can be restored. That counts codewords, not visible area — a small scratch over a corner finder square can stop a scan even when most of the pattern looks intact.'),
   ('How do I tell a dead link from a dead subscription from a bad print?', "Open the destination directly in a browser; scan a printed proof on two phones; read the scan preview URL before tapping; and, for a dynamic code, check the creating account's plan and scan allowance. Each check points at a different layer, and each layer has a different fix."),
@@ -1761,8 +1761,8 @@ POSTS += [
 <h2>The verdict</h2>
 <ul>
 <li><strong>Need free dynamic codes with stats?</strong> FreeQrly: 20 free, editable after printing, scan stats included.</li>
-<li><strong>Need bulk or enterprise features?</strong> QR Tiger: up to 3,000 codes per batch, CRM integrations, white-label. (<a href="/blog/qr-tiger-alternative/">QR Tiger alternative</a>.)</li>
-<li><strong>Just want a quick free static code?</strong> QRCode Monkey is the classic — simple, free, no fuss. (<a href="/blog/qr-code-monkey-alternative/">QRCode Monkey alternative</a>.)</li>
+<li><strong>Need bulk or enterprise features?</strong> QR Tiger: up to 3,000 codes per batch, CRM integrations, white-label. (<a href="/qr-tiger-alternative/">QR Tiger alternative</a>.)</li>
+<li><strong>Just want a quick free static code?</strong> QRCode Monkey is the classic — simple, free, no fuss. (<a href="/qr-code-monkey-alternative/">QRCode Monkey alternative</a>.)</li>
 <li><strong>Want the widest type range?</strong> ME-QR lists 50+ types.</li>
 <li><strong>Want the longest-running brand?</strong> QR Code Generator (Egoditor, since 2009, now part of Bitly).</li>
 </ul>

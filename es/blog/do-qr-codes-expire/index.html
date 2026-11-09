@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261104">
-<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261104">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3z-20261109">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3z-20261109">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3z-20261109">
 <style>
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
 .rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
@@ -88,7 +88,7 @@
       "name": "¿Qué les pasa a los códigos dinámicos de pago cuando termina una suscripción?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Depende del proveedor, y la página de preguntas frecuentes del propio proveedor es la fuente que hay que revisar. Las preguntas frecuentes de QR TIGER dicen que los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente y que «Si tu plan caduca, dejará de funcionar». The QR Code Generator dice que tras una prueba, 2 códigos siguen activos pero muestran anuncios, mientras que en su plataforma madre Uniqode los códigos de prueba se inactivan sin un plan de pago."
+        "text": "Depende del proveedor, y la página de preguntas frecuentes del propio proveedor es la fuente que hay que revisar. <a href=\"/qr-tiger-alternative/\">Las preguntas frecuentes de QR TIGER</a> dicen que los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente y que «Si tu plan caduca, dejará de funcionar». The QR Code Generator dice que tras una prueba, 2 códigos siguen activos pero muestran anuncios, mientras que en su plataforma madre Uniqode los códigos de prueba se inactivan sin un plan de pago."
       }
     },
     {
@@ -130,9 +130,9 @@
 <body>
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="/assets/js/site-header.js?v=b3aa-20261104"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261104"></script>
-<script src="/assets/js/subpage-header.js?v=b3aa-20261104"></script>
+<script src="/assets/js/site-header.js?v=b3z-20261109"></script>
+<script src="/assets/js/acct-menu.js?v=b3z-20261109"></script>
+<script src="/assets/js/subpage-header.js?v=b3z-20261109"></script>
   <article class="article">
     <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/privacy.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
     <div class="kicker" style="text-align:center">Notas de campo</div>
@@ -253,7 +253,7 @@
     <details><summary><span>¿Caducan los códigos QR gratis?</span></summary><p>No, si son estáticos. Un código QR estático gratis dura tanto como el enlace al que apunta. Los códigos que dejan de funcionar suelen ser códigos dinámicos atados a una suscripción de pago — el proveedor apaga la redirección cuando dejas de pagar — o códigos que apuntan a una página borrada.</p></details>
     <details><summary><span>¿Un código QR puede dejar de funcionar?</span></summary><p>Sí, pero no por caducidad. Las causas usuales son: la página de destino se borró, el código se imprimió demasiado pequeño o con bajo contraste, se dañó físicamente, su zona de silencio se recortó o un plan dinámico terminó o alcanzó su tope de escaneos.</p></details>
     <details><summary><span>¿Cuánto duran los códigos QR estáticos?</span></summary><p>Indefinidamente, mientras el destino siga funcionando. El patrón codifica tus datos directamente sin ningún servidor de por medio, así que no hay nada que mantener ni renovar.</p></details>
-    <details><summary><span>¿Qué les pasa a los códigos dinámicos de pago cuando termina una suscripción?</span></summary><p>Depende del proveedor, y la página de preguntas frecuentes del propio proveedor es la fuente que hay que revisar. Las preguntas frecuentes de QR TIGER dicen que los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente y que «Si tu plan caduca, dejará de funcionar». The QR Code Generator dice que tras una prueba, 2 códigos siguen activos pero muestran anuncios, mientras que en su plataforma madre Uniqode los códigos de prueba se inactivan sin un plan de pago.</p></details>
+    <details><summary><span>¿Qué les pasa a los códigos dinámicos de pago cuando termina una suscripción?</span></summary><p>Depende del proveedor, y la página de preguntas frecuentes del propio proveedor es la fuente que hay que revisar. <a href="/es/qr-tiger-alternative/">Las preguntas frecuentes de QR TIGER</a> dicen que los códigos de pago tienen escaneos ilimitados mientras la suscripción esté vigente y que «Si tu plan caduca, dejará de funcionar». The QR Code Generator dice que tras una prueba, 2 códigos siguen activos pero muestran anuncios, mientras que en su plataforma madre Uniqode los códigos de prueba se inactivan sin un plan de pago.</p></details>
     <details><summary><span>¿Puede un límite de escaneos detener un código QR?</span></summary><p>Sí, en proveedores que limitan los escaneos dinámicos gratuitos. El plan freemium de QR TIGER, según su propia página de suscripción, da 3 códigos dinámicos con un límite de 500 escaneos cada uno. Un código que alcanza su tope deja de servir a su destino aunque el patrón esté intacto. Los códigos dinámicos de FreeQrly tienen escaneos ilimitados.</p></details>
     <details><summary><span>¿El daño mata un código QR?</span></summary><p>No siempre. La corrección de errores puede reconstruir datos perdidos: en el nivel Alto de la ISO/IEC 18004 se puede restaurar hasta alrededor del 30% de las palabras de código. Eso cuenta palabras de código, no área visible: un pequeño rasguño sobre un cuadrado de posicionamiento de esquina puede detener un escaneo aunque la mayor parte del patrón parezca intacta.</p></details>
     <details><summary><span>¿Cómo distingo un enlace muerto de una suscripción muerta o de una mala impresión?</span></summary><p>Abre el destino directamente en un navegador; escanea una muestra impresa en dos teléfonos; lee la URL de la vista previa del escaneo antes de tocar; y, para un código dinámico, revisa el plan y la asignación de escaneos de la cuenta que lo creó. Cada comprobación apunta a una capa distinta, y cada capa tiene un arreglo distinto.</p></details>
