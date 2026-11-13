@@ -1,5 +1,9 @@
 // Catch-all: serve known static pages, 404 the rest.
 // - /manage/* permanently moved to /dashboard/* (301, path + query kept).
+// - ?lang= retired for content pages: ?lang=<code> 301s to the matching
+//   /<lang>/ path (?lang=en / unknown values 301 to the clean path).
+//   Only home, landing slugs and /blog/... redirect; dashboard, /api/,
+//   /q/ and other non-localizable routes keep reading ?lang= client-side.
 // - Localized pages live at /<lang>/<slug>/, /<lang>/blog/... and /<lang>/404.html.
 
 const LANGS = new Set(['zh', 'es', 'hi', 'ar', 'pt', 'fr', 'ru', 'de', 'ja']);
@@ -59,6 +63,15 @@ function isKnown(path) {
   return false;
 }
 
+function isLocalizable(path) {
+  if (path === '/') return true;
+  if (path === '/blog' || path === '/blog/' || path.startsWith('/blog/')) return true;
+  const clean = path.replace(/\/$/, '');
+  const seg = clean.slice(1);
+  if (!seg.includes('/') && LANG_SLUGS.has(seg)) return true;
+  return false;
+}
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   // Canonical domain: www -> apex (301, path + query kept). NOTE: this has to
@@ -72,6 +85,32 @@ export async function onRequest(context) {
   // /manage/* permanently moved to /dashboard/* (keep path + query).
   if (url.pathname === '/manage' || url.pathname.startsWith('/manage/')) {
     return Response.redirect(new URL(url.pathname.replace(/^\/manage/, '/dashboard') + url.search, url.origin), 301);
+  }
+  // ?lang= retired for content pages: redirect to the matching /<lang>/ path
+  // (or the clean path for ?lang=en / unknown values). Other query params
+  // are kept. GET/HEAD only; POSTs and non-localizable routes are untouched.
+  if ((context.request.method === 'GET' || context.request.method === 'HEAD') && url.searchParams.has('lang')) {
+    const raw = url.searchParams.get('lang') || '';
+    let base = url.pathname;
+    const first = base.split('/')[1];
+    if (LANGS.has(first)) {
+      base = base.slice(first.length + 1) || '/';
+      if (!base.startsWith('/')) base = '/' + base;
+    }
+    if (isLocalizable(base)) {
+      const params = new URLSearchParams(url.search);
+      params.delete('lang');
+      const rest = params.toString();
+      const suffix = rest ? '?' + rest : '';
+      let target;
+      if (raw === 'en') target = base;
+      else if (LANGS.has(raw)) target = base === '/' ? `/${raw}/` : `/${raw}${base}`;
+      else target = base;
+      const dest = new URL(target + suffix, url.origin);
+      if (dest.toString() !== url.toString()) {
+        return Response.redirect(dest.toString(), 301);
+      }
+    }
   }
   if (isKnown(url.pathname)) {
     return context.env.ASSETS.fetch(context.request);
