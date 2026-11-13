@@ -274,7 +274,8 @@
     "Scan Any QR Code Online Free — No App, No Upload": "Scannez n'importe quel QR code en ligne gratuitement — pas d'app, pas de téléversement",
     "Video QR Code: Link a Video Without Making People Type a URL": "QR code vidéo : renvoyer vers une vidéo sans faire taper une URL",
     "Wedding RSVP QR Codes: No More Chasing Replies": "QR codes RSVP de mariage : fini de courir après les réponses",
-    "Why Is My QR Code Blurry? 5 Fixes That Work": "Pourquoi mon QR code est-il flou ? 5 solutions qui marchent"
+    "Why Is My QR Code Blurry? 5 Fixes That Work": "Pourquoi mon QR code est-il flou ? 5 solutions qui marchent",
+    "More comparisons:": "Autres comparaisons :"
   },
   "404": {
     "Page not found | FreeQrly": "Page introuvable | FreeQrly",
@@ -627,7 +628,19 @@
     "Pre-Print QR Code Checklist: Test on Real Paper Before You Print Thousands": "Checklist pré-impression des QR codes : testez sur du vrai papier avant d'imprimer des milliers",
     "Printable Table Card Template: WiFi, Review & Menu Cards": "Modèle de carte de table imprimable : cartes WiFi, avis et menu",
     "Printable QR Code Cheat Sheet: Size, Quiet Zone & Contrast on One Page": "Aide-mémoire QR code imprimable : taille, zone de silence et contraste sur une page",
-    "Printable Review Card Template: Business-Card Size, 8 per Page": "Modèle de carte d'avis imprimable : taille carte de visite, 8 par page"
+    "Printable Review Card Template: Business-Card Size, 8 per Page": "Modèle de carte d'avis imprimable : taille carte de visite, 8 par page",
+    "The best free QR code generators, compared honestly": "Les meilleurs générateurs de QR code gratuits, comparés honnêtement",
+    "5 free QR code generators compared: FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR. Free tiers, watermarks, limits, and who each fits.": "5 générateurs de QR code gratuits comparés : FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR. Offres gratuites, filigranes, limites, et à qui chacun convient.",
+    "What dynamic QR statistics tell you": "Ce que les statistiques du QR code dynamique vous disent",
+    "Dynamic QR code statistics: total and unique scans, by day, country, city, device, and OS — free with your codes. And what FreeQrly never tracks.": "Statistiques de QR codes dynamiques : scans totaux et uniques, par jour, pays, ville, appareil et système d'exploitation — gratuits avec vos codes. Et ce que FreeQrly ne suit jamais.",
+    "Create a dynamic QR code free: sign in, pick a type, style it, print it. Edit the destination later without reprinting — 20 free codes, currently unlimited.": "Créez un QR code dynamique gratuit : connectez-vous, choisissez un type, personnalisez-le, imprimez-le. Modifiez la destination ensuite sans réimprimer : 20 codes gratuits, actuellement illimités.",
+    "Edit a QR code after printing": "Modifiez un QR code après impression",
+    "Printed the wrong link? Fix it free, without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.": "Vous avez imprimé le mauvais lien ? Corrigez-le gratuitement, sans réimprimer. Modifiez la destination, le type ou le style d'un code dynamique dans le tableau de bord : le code imprimé se met à jour instantanément.",
+    "QR codes in Canva, Excel & Word": "QR codes dans Canva, Excel et Word",
+    "Canva, Excel, and Word have no built-in QR tool. Make the code in FreeQrly (free, no sign-up), download PNG, and drop it into your design or document.": "Canva, Excel et Word n'ont pas d'outil QR intégré. Faites le code dans FreeQrly (gratuit, sans inscription), téléchargez le PNG et déposez-le dans votre design ou document.",
+    "QR code vs barcode": "QR code vs code-barres",
+    "QR code vs barcode: what each one holds, how much data fits, and when to use which. Barcodes for checkout, QR codes for links, menus, and WiFi.": "QR code vs code-barres : ce que chacun contient, combien de données tiennent, et quand utiliser l'un ou l'autre. Codes-barres pour la caisse, QR codes pour liens, menus et WiFi.",
+    "Blurry QR code won't scan? 5 usual causes — low-res export, wrong size, JPEG compression, stretching, bad print — and how to fix each one.": "Un QR code flou qui ne se scanne pas ? 5 causes habituelles — export basse résolution, mauvaise taille, compression JPEG, étirement, mauvaise impression — et comment corriger chacune."
   },
   "landing-wifi-qr-code": {
     "Free WiFi QR Code Generator | FreeQrly": "Générateur gratuit de QR code WiFi | FreeQrly",
@@ -986,7 +999,6 @@
     "FreeQrly, free account": "FreeQrly, compte gratuit",
     "How do I tell a dead link from a dead subscription from a bad print?": "Comment distinguer un lien mort d'un abonnement mort d'une mauvaise impression ?",
     "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.": "Indéfiniment, tant que la destination fonctionne encore. Le motif encode vos données directement sans aucun serveur, il n'y a donc rien à entretenir ni à renouveler.",
-    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. <a href=\"/qr-tiger-alternative/\">La FAQ de QR TIGER</a> dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The QR Code Generator dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante.",
     "Link rot: page deleted, site moved, domain lapsed": "Lien pourri : page supprimée, site déménagé, domaine expiré",
     "Marginal print quality or a damaged finder square": "Qualité d'impression limite ou carré de repérage endommagé",
     "No, if they are static. A free static QR code lasts as long as the link it points to. Codes that stop working are usually dynamic codes tied to a paid subscription — the vendor switches the redirect off when you stop paying — or codes pointing at a deleted page.": "Non, s'ils sont statiques. Un QR code statique gratuit dure aussi longtemps que le lien vers lequel il pointe. Les codes qui cessent de fonctionner sont généralement des codes dynamiques liés à un abonnement payant — le fournisseur coupe la redirection quand vous arrêtez de payer — ou des codes pointant vers une page supprimée.",
@@ -1059,7 +1071,10 @@
     "There is a fourth case that looks like expiry but is not the pattern's fault: codes issued by someone else's system. A boarding pass, ticket, or one-time login code can stop working because the issuer invalidates the session, ticket, or booking behind it. The pattern is still readable; the system behind it has withdrawn permission. That is a property of tickets and logins, not of QR codes in general.": "Il y a un quatrième cas qui ressemble à une expiration mais n'est pas la faute du motif : les codes émis par le système de quelqu'un d'autre. Une carte d'embarquement, un billet ou un code de connexion à usage unique peut cesser de fonctionner parce que l'émetteur invalide la session, le billet ou la réservation derrière lui. Le motif reste lisible ; le système derrière lui a retiré l'autorisation. C'est une propriété des billets et des connexions, pas des QR codes en général.",
     "What actually failed": "Ce qui a réellement échoué",
     "What actually stops a code: a diagnostic table": "Ce qui arrête vraiment un code : un tableau de diagnostic",
-    "What you see on scanning": "Ce que vous voyez au scan"
+    "What you see on scanning": "Ce que vous voyez au scan",
+    "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, freemium plan": "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, offre freemium",
+    "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, free plan": "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, offre gratuite",
+    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' <a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a> says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "Cela dépend du fournisseur, et la page FAQ du fournisseur est la source à vérifier. <a href=\"/qr-tiger-alternative/\">La FAQ de QR TIGER</a> dit que les codes payants ont des scans illimités tant que l'abonnement est valide et « If your plan expires, it will stop working ». The <a href=\"/freeqrly-vs-qr-code-generator/\">QR Code Generator</a> dit qu'après un essai, 2 codes restent actifs mais affichent des publicités, tandis que sur sa plateforme mère Uniqode les codes d'essai deviennent inactifs sans offre payante."
   },
   "blog-free-qr-codes-that-dont-expire": {
     "Free QR Codes That Never Expire | FreeQrly": "QR codes gratuits qui n’expirent jamais | FreeQrly",
@@ -2402,7 +2417,9 @@
     "switch anytime": "à tout moment",
     "the code points here": "le code pointe ici",
     "you must reprint": "réimprimez le code",
-    "you print this once": "vous l'imprimez une fois"
+    "you print this once": "vous l'imprimez une fois",
+    "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, freemium plan": "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, offre freemium",
+    "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, free plan": "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, offre gratuite"
   },
   "blog-how-to-edit-a-qr-code-after-printing": {
     "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a>": "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Les QR codes expirent-ils ? La réponse courte est non — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>Comment scanner un QR code (iPhone et Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>Guide des tailles d’impression des QR codes : quelle taille ?</b></a>",

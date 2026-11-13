@@ -274,7 +274,8 @@
     "Scan Any QR Code Online Free — No App, No Upload": "कोई भी QR कोड ऑनलाइन मुफ़्त स्कैन करें — न ऐप, न अपलोड",
     "Video QR Code: Link a Video Without Making People Type a URL": "वीडियो QR कोड: लोगों से URL टाइप कराए बिना वीडियो लिंक करें",
     "Wedding RSVP QR Codes: No More Chasing Replies": "शादी RSVP QR कोड: जवाबों के पीछे भागना बंद",
-    "Why Is My QR Code Blurry? 5 Fixes That Work": "मेरा QR कोड धुंधला क्यों है? 5 उपाय जो काम करते हैं"
+    "Why Is My QR Code Blurry? 5 Fixes That Work": "मेरा QR कोड धुंधला क्यों है? 5 उपाय जो काम करते हैं",
+    "More comparisons:": "अन्य तुलनाएँ:"
   },
   "404": {
     "Page not found | FreeQrly": "पेज नहीं मिला | FreeQrly",
@@ -626,7 +627,19 @@
     "QR codes for food trucks": "फ़ूड ट्रक के लिए QR कोड",
     "QR codes for gyms and fitness studios": "जिम और फ़िटनेस स्टूडियो के लिए QR कोड",
     "QR codes for laundromats": "लॉन्ड्रोमैट के लिए QR कोड",
-    "Video QR Code: Link a Video Without Making People Type a URL": "वीडियो QR कोड: लोगों से URL टाइप कराए बिना वीडियो लिंक करें"
+    "Video QR Code: Link a Video Without Making People Type a URL": "वीडियो QR कोड: लोगों से URL टाइप कराए बिना वीडियो लिंक करें",
+    "The best free QR code generators, compared honestly": "सर्वश्रेष्ठ मुफ़्त QR कोड जनरेटर, ईमानदार तुलना",
+    "5 free QR code generators compared: FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR. Free tiers, watermarks, limits, and who each fits.": "5 मुफ़्त QR कोड जनरेटर की तुलना: FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR। मुफ़्त टियर, वॉटरमार्क, सीमाएं, और किसके लिए कौन सही है।",
+    "What dynamic QR statistics tell you": "डायनामिक QR कोड स्टैटिस्टिक्स क्या बताते हैं",
+    "Dynamic QR code statistics: total and unique scans, by day, country, city, device, and OS — free with your codes. And what FreeQrly never tracks.": "डायनामिक QR कोड सांख्यिकी: कुल और यूनिक स्कैन, दिन, देश, शहर, डिवाइस और OS के हिसाब से — आपके कोड के साथ मुफ़्त। और FreeQrly कभी क्या ट्रैक नहीं करता।",
+    "Create a dynamic QR code free: sign in, pick a type, style it, print it. Edit the destination later without reprinting — 20 free codes, currently unlimited.": "मुफ़्त डायनामिक QR कोड बनाएँ: साइन इन करें, टाइप चुनें, स्टाइल करें, प्रिंट करें। बाद में बिना दोबारा प्रिंट किए destination बदलें — 20 मुफ़्त कोड, अभी असीमित।",
+    "Edit a QR code after printing": "QR कोड प्रिंट के बाद एडिट करें",
+    "Printed the wrong link? Fix it free, without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.": "गलत लिंक प्रिंट हो गया? मुफ़्त में ठीक करें, बिना दोबारा प्रिंट किए। डैशबोर्ड में डायनामिक कोड का destination, टाइप या स्टाइल बदलें — प्रिंट किया कोड तुरंत अपडेट हो जाता है।",
+    "QR codes in Canva, Excel & Word": "QR कोड Canva, Excel और Word में",
+    "Canva, Excel, and Word have no built-in QR tool. Make the code in FreeQrly (free, no sign-up), download PNG, and drop it into your design or document.": "Canva, Excel और Word में बिल्ट-इन QR टूल नहीं है। FreeQrly में कोड बनाएँ (मुफ़्त, बिना साइन-अप), PNG डाउनलोड करें और अपने डिज़ाइन या दस्तावेज़ में डालें।",
+    "QR code vs barcode": "QR कोड बनाम बारकोड",
+    "QR code vs barcode: what each one holds, how much data fits, and when to use which. Barcodes for checkout, QR codes for links, menus, and WiFi.": "QR कोड vs बारकोड: हर एक में क्या होता है, कितना डेटा आता है, और कब किसका इस्तेमाल करें। बारकोड चेकआउट के लिए, QR कोड लिंक, मेनू और WiFi के लिए।",
+    "Blurry QR code won't scan? 5 usual causes — low-res export, wrong size, JPEG compression, stretching, bad print — and how to fix each one.": "धुंधला QR कोड स्कैन नहीं हो रहा? 5 आम कारण — लो-रेज़ एक्सपोर्ट, गलत साइज़, JPEG कंप्रेशन, खिंचाव, खराब प्रिंट — और हर एक को ठीक करने का तरीका।"
   },
   "landing-wifi-qr-code": {
     "Free WiFi QR Code Generator | FreeQrly": "मुफ़्त WiFi QR कोड जनरेटर | FreeQrly",
@@ -1044,7 +1057,6 @@
     "Yes, but not from expiry. The usual causes are: the destination page was deleted, the code was printed too small or with low contrast, it got physically damaged, its quiet zone was cropped, or a dynamic plan ended or hit a scan cap.": "हाँ, पर एक्सपायरी से नहीं। आम कारण हैं: मंज़िल पेज डिलीट हो गया, कोड बहुत छोटा या कम कंट्रास्ट में प्रिंट हुआ, वह फ़िज़िकली क्षतिग्रस्त हो गया, उसका क्वाइट ज़ोन कट गया, या डायनामिक प्लान खत्म हो गया या स्कैन कैप लग गया।",
     "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.": "अनिश्चित काल तक, जब तक मंज़िल काम करती रहे। पैटर्न आपका डेटा सीधे एनकोड करता है, बिना किसी सर्वर के, इसलिए संभालने या रिन्यू करने लायक कुछ है ही नहीं।",
     "<span>What happens to paid dynamic codes when a subscription ends?</span>": "<span>सब्सक्रिप्शन खत्म होने पर पेड डायनामिक कोड का क्या होता है?</span>",
-    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "यह वेंडर पर निर्भर है, और वेंडर का अपना FAQ पेज ही जांचने का स्रोत है। <a href=\"/qr-tiger-alternative/\">QR TIGER के FAQ</a> में कहा गया है कि पेड कोड सब्सक्रिप्शन वैध रहने तक अनलिमिटेड स्कैन देते हैं और 'अगर आपका प्लान एक्सपायर हो गया, तो यह काम करना बंद कर देगा।' The QR Code Generator कहता है कि ट्रायल खत्म होने के बाद 2 कोड एक्टिव रहते हैं पर विज्ञापन दिखाते हैं, जबकि पैरेंट प्लेटफ़ॉर्म Uniqode पर बिना पेड प्लान के ट्रायल कोड इनएक्टिव हो जाते हैं।",
     "<span>Can a scan limit stop a QR code?</span>": "<span>क्या स्कैन सीमा QR कोड को रोक सकती है?</span>",
     "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans.": "हाँ, उन वेंडर पर जो मुफ़्त डायनामिक स्कैन कैप करते हैं। QR TIGER के फ़्रीमियम प्लान में, उसके अपने सब्सक्रिप्शन पेज के अनुसार, 3 डायनामिक कोड मिलते हैं, हर एक पर 500 स्कैन की सीमा। कैप पर पहुँचने वाला कोड पैटर्न के सही होने के बावजूद अपनी मंज़िल परोसना बंद कर देता है। FreeQrly डायनामिक कोड में अनलिमिटेड स्कैन हैं।",
     "<span>Does damage kill a QR code?</span>": "<span>क्या क्षति QR कोड को मार देती है?</span>",
@@ -1058,7 +1070,10 @@
     "Can a scan limit stop a QR code?": "क्या स्कैन सीमा QR कोड को रोक सकती है?",
     "Does damage kill a QR code?": "क्या क्षति QR कोड को मार देती है?",
     "How do I tell a dead link from a dead subscription from a bad print?": "डेड लिंक, डेड सब्सक्रिप्शन और खराब प्रिंट में फ़र्क़ कैसे पहचानूँ?",
-    "Should a permanent sign or packaging use static or dynamic?": "क्या स्थायी साइन या पैकेजिंग में स्टैटिक इस्तेमाल करना चाहिए या डायनामिक?"
+    "Should a permanent sign or packaging use static or dynamic?": "क्या स्थायी साइन या पैकेजिंग में स्टैटिक इस्तेमाल करना चाहिए या डायनामिक?",
+    "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, freemium plan": "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, फ़्रीमियम प्लान",
+    "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, free plan": "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, मुफ़्त प्लान",
+    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' <a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a> says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "यह वेंडर पर निर्भर है, और वेंडर का अपना FAQ पेज ही जांचने का स्रोत है। <a href=\"/qr-tiger-alternative/\">QR TIGER के FAQ</a> में कहा गया है कि पेड कोड सब्सक्रिप्शन वैध रहने तक अनलिमिटेड स्कैन देते हैं और 'अगर आपका प्लान एक्सपायर हो गया, तो यह काम करना बंद कर देगा।' The <a href=\"/freeqrly-vs-qr-code-generator/\">QR Code Generator</a> कहता है कि ट्रायल खत्म होने के बाद 2 कोड एक्टिव रहते हैं पर विज्ञापन दिखाते हैं, जबकि पैरेंट प्लेटफ़ॉर्म Uniqode पर बिना पेड प्लान के ट्रायल कोड इनएक्टिव हो जाते हैं।"
   },
   "blog-free-qr-codes-that-dont-expire": {
     "Free QR Codes That Never Expire | FreeQrly": "मुफ़्त QR कोड जो कभी एक्सपायर नहीं होते | FreeQrly",
@@ -2401,7 +2416,9 @@
     "baked into the code": "कोड में ही बेक है",
     "To change it,": "बदलने के लिए,",
     "you must reprint": "दोबारा प्रिंट करना होगा",
-    "No scan statistics": "स्कैन आँकड़े नहीं"
+    "No scan statistics": "स्कैन आँकड़े नहीं",
+    "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, freemium plan": "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, फ़्रीमियम प्लान",
+    "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, free plan": "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, मुफ़्त प्लान"
   },
   "blog-how-to-edit-a-qr-code-after-printing": {
     "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a>": "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>क्या QR कोड एक्सपायर होते हैं? छोटा जवाब है नहीं — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>QR कोड कैसे स्कैन करें (iPhone और Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR कोड प्रिंट साइज़ गाइड: कितना बड़ा होना चाहिए?</b></a>",

@@ -589,6 +589,7 @@ dict(slug="freeqrly-vs-qr-tiger", dtype="url",
   <h2>Who should pick which?</h2>
   <p><b>Pick FreeQrly if</b> you print more than 3 editable codes, or any code that might pass 500 scans; if you want batch creation, a barcode generator, or a QR API without paying; or if you want free static codes with no account at all. If you ever cancel Pro, your codes keep working.</p>
   <p><b>Pick QR Tiger if</b> you need its campaign extras \u2014 saved design templates, retargeting, password protection, expiry controls, geofencing, and white-label domains on Premium \u2014 or its enterprise seats and integrations (Canva, Monday.com, Zapier, HubSpot on higher tiers). For raw editable-code count, FreeQrly Pro is unlimited, so Tiger's edge is features and team tooling, not volume.</p>
+  <p>More comparisons: <a href="/freeqrly-vs-qr-code-monkey/">FreeQrly vs QR Code Monkey</a> \u00b7 <a href="/freeqrly-vs-qr-code-generator/">FreeQrly vs QR Code Generator</a> \u00b7 <a href="/qr-tiger-alternative/">QR Tiger alternative</a> \u00b7 <a href="/qr-code-monkey-alternative/">QRCode Monkey alternative</a>.</p>
   <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pricing pages linked above before you decide.</p>
 '''),
 dict(slug="freeqrly-vs-qr-code-monkey", dtype="url",
@@ -626,6 +627,7 @@ dict(slug="freeqrly-vs-qr-code-monkey", dtype="url",
   <h2>Who should pick which?</h2>
   <p><b>Pick FreeQrly if</b> you want anything beyond a fixed code: editing after printing, scan counts, batch runs, barcodes, or an API \u2014 while keeping static codes free with no account.</p>
   <p><b>Pick QR Code Monkey if</b> you only ever need fixed codes and you care most about print design depth: EPS and PDF vectors, templates, gradients, and a 30% logo area. For that one job, it is the best free tool we checked \u2014 FreeQrly does not beat it on vector formats.</p>
+  <p>More comparisons: <a href="/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> \u00b7 <a href="/freeqrly-vs-qr-code-generator/">FreeQrly vs QR Code Generator</a> \u00b7 <a href="/qr-tiger-alternative/">QR Tiger alternative</a> \u00b7 <a href="/qr-code-monkey-alternative/">QRCode Monkey alternative</a>.</p>
   <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pages linked above before you decide.</p>
 '''),
 ]
@@ -667,6 +669,7 @@ dict(slug="freeqrly-vs-qr-code-generator", dtype="url",
   <h2>Who should pick which?</h2>
   <p><b>Pick FreeQrly if</b> you want editable codes and statistics without a trial clock or a per-code allowance, plus batch runs, barcodes, and an API at no extra tier.</p>
   <p><b>Pick QR Code Generator if</b> you run campaigns inside Bitly's ecosystem, need team seats and white-labeling at the top tier, or want its 22 code types and hosted pages. Its paid tiers are the more corporate setup; FreeQrly is the simpler free-first one.</p>
+  <p>More comparisons: <a href="/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> \u00b7 <a href="/freeqrly-vs-qr-code-monkey/">FreeQrly vs QR Code Monkey</a> \u00b7 <a href="/qr-tiger-alternative/">QR Tiger alternative</a> \u00b7 <a href="/qr-code-monkey-alternative/">QRCode Monkey alternative</a>.</p>
   <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pages linked above before you decide.</p>
 '''),
 dict(slug="qr-tiger-alternative", dtype="url",
@@ -704,6 +707,7 @@ dict(slug="qr-tiger-alternative", dtype="url",
   <h2>Switch to FreeQrly if, stay with QR Tiger if</h2>
   <p><b>Switch to FreeQrly if</b> your codes keep hitting the 3-code or 500-scan ceiling, if you want batch creation, a barcode generator, or a QR API without paying, or if you want free static codes with no account at all. If you ever cancel Pro, your codes keep working.</p>
   <p><b>Stay with QR Tiger if</b> you need its campaign extras \u2014 saved design templates, retargeting, password protection, expiry controls, geofencing, and white-label domains on Premium \u2014 or its enterprise seats and integrations. For raw editable-code count, FreeQrly Pro is unlimited, so Tiger's edge is features and team tooling, not volume.</p>
+  <p>More comparisons: <a href="/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> \u00b7 <a href="/freeqrly-vs-qr-code-monkey/">FreeQrly vs QR Code Monkey</a> \u00b7 <a href="/freeqrly-vs-qr-code-generator/">FreeQrly vs QR Code Generator</a> \u00b7 <a href="/qr-code-monkey-alternative/">QRCode Monkey alternative</a>.</p>
   <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pricing pages linked above before you decide.</p>
 '''),
 dict(slug="qr-code-monkey-alternative", dtype="url",
@@ -741,6 +745,7 @@ dict(slug="qr-code-monkey-alternative", dtype="url",
   <h2>Switch to FreeQrly if, stay with QR Code Monkey if</h2>
   <p><b>Switch to FreeQrly if</b> you want anything beyond a fixed code: editing after printing, scan counts, batch runs, barcodes, or an API \u2014 while keeping static codes free with no account.</p>
   <p><b>Stay with QR Code Monkey if</b> you only ever need fixed codes and you care most about print design depth: EPS and PDF vectors, templates, gradients, and a 30% logo area. For that one job, it is the best free tool we checked \u2014 FreeQrly does not beat it on vector formats.</p>
+  <p>More comparisons: <a href="/freeqrly-vs-qr-tiger/">FreeQrly vs QR Tiger</a> \u00b7 <a href="/freeqrly-vs-qr-code-monkey/">FreeQrly vs QR Code Monkey</a> \u00b7 <a href="/freeqrly-vs-qr-code-generator/">FreeQrly vs QR Code Generator</a> \u00b7 <a href="/qr-tiger-alternative/">QR Tiger alternative</a>.</p>
   <p class="updated">Comparison checked October 30, 2026. Prices and limits change \u2014 check the pages linked above before you decide.</p>
 '''),
 ]

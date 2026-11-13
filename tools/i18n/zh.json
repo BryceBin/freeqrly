@@ -274,7 +274,8 @@
     "Scan Any QR Code Online Free — No App, No Upload": "在线扫任何二维码，免费 — 不用 App，不上传",
     "Video QR Code: Link a Video Without Making People Type a URL": "视频二维码：链接视频，不用让人手输网址",
     "Wedding RSVP QR Codes: No More Chasing Replies": "婚礼 RSVP 二维码：不用再追着要回复",
-    "Why Is My QR Code Blurry? 5 Fixes That Work": "二维码为什么模糊？5 个管用的修复方法"
+    "Why Is My QR Code Blurry? 5 Fixes That Work": "二维码为什么模糊？5 个管用的修复方法",
+    "More comparisons:": "更多对比："
   },
   "404": {
     "Page not found | FreeQrly": "页面不存在 | FreeQrly",
@@ -627,7 +628,19 @@
     "QR codes for food trucks": "餐车二维码",
     "QR codes for gyms and fitness studios": "健身房与健身工作室二维码",
     "QR codes for laundromats": "自助洗衣店二维码",
-    "Video QR Code: Link a Video Without Making People Type a URL": "视频二维码：链接视频，不用让人手输网址"
+    "Video QR Code: Link a Video Without Making People Type a URL": "视频二维码：链接视频，不用让人手输网址",
+    "The best free QR code generators, compared honestly": "最佳免费二维码生成器，老实对比",
+    "5 free QR code generators compared: FreeQrly, QRCode Monkey, QR Tiger, QR Code Generator, ME-QR. Free tiers, watermarks, limits, and who each fits.": "5 款免费二维码生成器对比：FreeQrly、QRCode Monkey、QR Tiger、QR Code Generator、ME-QR。免费档、水印、限制条件，分别适合谁。",
+    "What dynamic QR statistics tell you": "动态二维码统计能告诉你什么",
+    "Dynamic QR code statistics: total and unique scans, by day, country, city, device, and OS — free with your codes. And what FreeQrly never tracks.": "动态二维码统计：总扫码与独立扫码，按日、国家、城市、设备和系统划分——随你的码免费提供。以及 FreeQrly 从不追踪什么。",
+    "Create a dynamic QR code free: sign in, pick a type, style it, print it. Edit the destination later without reprinting — 20 free codes, currently unlimited.": "免费创建动态二维码：登录、选类型、美化、打印。之后改指向不用重印——20 个免费码，目前不限量。",
+    "Edit a QR code after printing": "二维码印出来之后再改",
+    "Printed the wrong link? Fix it free, without reprinting. Edit a dynamic QR code's destination, type, or style in the Dashboard — the printed code updates instantly.": "印错链接了？免费修复，不用重印。在控制台里改动态码的指向、类型或样式——印好的码即时更新。",
+    "QR codes in Canva, Excel & Word": "在 Canva、Excel 和 Word 里用二维码",
+    "Canva, Excel, and Word have no built-in QR tool. Make the code in FreeQrly (free, no sign-up), download PNG, and drop it into your design or document.": "Canva、Excel 和 Word 都没有内置二维码工具。在 FreeQrly 里做码（免费、无需注册），下载 PNG，放到你的设计或文档里。",
+    "QR code vs barcode": "二维码 vs 条形码",
+    "QR code vs barcode: what each one holds, how much data fits, and when to use which. Barcodes for checkout, QR codes for links, menus, and WiFi.": "二维码 vs 条形码：各自能装什么、能装多少、什么时候用哪个。条形码用于结账，二维码用于链接、菜单和 WiFi。",
+    "Blurry QR code won't scan? 5 usual causes — low-res export, wrong size, JPEG compression, stretching, bad print — and how to fix each one.": "模糊的二维码扫不出来？5 个常见原因——低分辨率导出、尺寸不对、JPEG 压缩、拉伸变形、打印问题——以及各自的修复方法。"
   },
   "landing-batch-qr-code": {
     "Free Batch QR Code Generator | FreeQrly": "免费批量二维码生成器 | FreeQrly",
@@ -1045,7 +1058,6 @@
     "Yes, but not from expiry. The usual causes are: the destination page was deleted, the code was printed too small or with low contrast, it got physically damaged, its quiet zone was cropped, or a dynamic plan ended or hit a scan cap.": "可以，但不是因为过期。常见原因是：目标页面被删了、码印得太小或对比度太低、物理破损、静区被裁掉了，或者动态套餐结束或触到扫码上限。",
     "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.": "无限期，只要目标还能用。图案直接编码你的数据，没有服务器参与，所以没什么要维护或续费的。",
     "<span>What happens to paid dynamic codes when a subscription ends?</span>": "<span>付费动态码在订阅结束时会怎样？</span>",
-    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "看厂商，厂商自己的 FAQ 页是核对的来源。<a href=\"/qr-tiger-alternative/\">QR TIGER 的 FAQ</a> 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The QR Code Generator 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。",
     "<span>Can a scan limit stop a QR code?</span>": "<span>扫码上限能让二维码停工吗？</span>",
     "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans.": "可以，在限制免费动态扫码的厂商那里。QR TIGER 的免费增值套餐，按它自己订阅页的说法，给 3 个动态码，每个 500 次扫码上限。触到上限的码即使图案完好无损，也不再服务它的目标。FreeQrly 的动态码扫码不限。",
     "<span>Does damage kill a QR code?</span>": "<span>破损会杀死二维码吗？</span>",
@@ -1059,7 +1071,10 @@
     "Can a scan limit stop a QR code?": "扫码上限能让二维码停工吗？",
     "Does damage kill a QR code?": "破损会杀死二维码吗？",
     "How do I tell a dead link from a dead subscription from a bad print?": "怎么区分死链、死订阅和印坏的码？",
-    "Should a permanent sign or packaging use static or dynamic?": "永久招牌或包装应该用静态还是动态？"
+    "Should a permanent sign or packaging use static or dynamic?": "永久招牌或包装应该用静态还是动态？",
+    "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, freemium plan": "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>，免费增值套餐",
+    "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, free plan": "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>，免费套餐",
+    "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' <a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a> says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.": "看厂商，厂商自己的 FAQ 页是核对的来源。<a href=\"/qr-tiger-alternative/\">QR TIGER 的 FAQ</a> 说，付费码在订阅有效期内扫码不限，并且“如果你的套餐过期，它就会停工”。The <a href=\"/freeqrly-vs-qr-code-generator/\">QR Code Generator</a> 说，试用结束之后，2 个码保持可用但显示广告，而在母平台 Uniqode 上，试用码没有付费套餐就会停用。"
   },
   "blog-free-qr-codes-that-dont-expire": {
     "Free QR Codes That Never Expire | FreeQrly": "永不过期的免费二维码 | FreeQrly",
@@ -2402,7 +2417,9 @@
     "baked into the code": "写死在码里",
     "To change it,": "要改它，",
     "you must reprint": "必须重印",
-    "No scan statistics": "没有扫码统计"
+    "No scan statistics": "没有扫码统计",
+    "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>, freemium plan": "<a href=\"/freeqrly-vs-qr-tiger/\">QR TIGER</a>，免费增值套餐",
+    "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>, free plan": "<a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a>，免费套餐"
   },
   "blog-how-to-edit-a-qr-code-after-printing": {
     "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>Do QR Codes Expire? The Short Answer Is No — FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>How to Scan a QR Code (iPhone & Android)</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>QR Code Print Size Guide: How Big Should It Be?</b></a>": "<a class=\"rel-card\" href=\"/blog/do-qr-codes-expire/\"><b>二维码会过期吗？简短回答：不会 | FreeQrly</b></a> <a class=\"rel-card\" href=\"/blog/how-to-scan-a-qr-code/\"><b>怎么扫二维码（iPhone 与安卓）</b></a> <a class=\"rel-card\" href=\"/blog/qr-code-print-size-guide/\"><b>二维码打印尺寸指南：印多大合适？</b></a>",
