@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一次性生成 100 个二维码：从表格到打印成品 | FreeQrly</title>
+<meta name="description" content="分两批、每批 50 个生成 100 个二维码。建好表格，粘贴或上传，一次下载一个 ZIP，试扫、打印——免费，不用注册，没有水印。">
+<link rel="canonical" href="https://freeqrly.com/zh/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="一次性生成 100 个二维码：从表格到打印成品 | FreeQrly">
+<meta property="og:description" content="分两批、每批 50 个生成 100 个二维码。建好表格，粘贴或上传，一次下载一个 ZIP，试扫、打印——免费，不用注册，没有水印。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/zh/blog/bulk-qr-codes-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261119">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"一次性生成 100 个二维码：从表格到打印成品 | FreeQrly","description":"分两批、每批 50 个生成 100 个二维码。建好表格，粘贴或上传，一次下载一个 ZIP，试扫、打印——免费，不用注册，没有水印。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "一次能生成多少个二维码？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每批最多 50 个，不管粘贴还是上传——所以 100 个码就是两批：第 1–50 行，然后第 51–100 行。两半的行顺序保持一致，这样文件名能对应回表格。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "批量生成二维码需要账号吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不用。批量码是静态码，完全在你的浏览器里生成，所以不用注册，不上传，码永不过期，也没有水印。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "批量码可以是动态的、印好之后还能改吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不可以。批量模式只有静态码。如果打印之后目的地变了，重新生成那个码并重印。印好之后需要能改的码，改用动态码，一个一个创建。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "可以上传哪些文件类型？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSV 文件（<code>.csv</code>）或 Excel 文件（<code>.xlsx</code> / <code>.xls</code>）。CSV 一个文件一种类型，生成器会处理带引号的字段，所以字段里的逗号是安全的。Excel 文件一个工作表一种类型，工作表名决定类型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "文件里 Wi-Fi 和联系方式怎么写？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多字段类型用竖线字符 <code>|</code> 分隔字段，顺序固定。Wi-Fi 是网络名称、密码、安全类型——例如 <code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCard 是姓名、电话、邮箱、公司、职位、网站、地址、备注——例如 <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code>（SAMPLE DATA）。模板 <code>freeqrly-batch-template.xlsx</code> 给每种类型展示了字段顺序，带表头和示例行。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "下载能得到什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每个码都可以单独下载为 1024 px 的 PNG。ZIP 是 <code>freeqrly-batch.zip</code>，里面是 <code>qr-1.png</code> 到 <code>qr-50.png</code>，每个都是 1024 px 的 PNG。批量模式里没有 SVG 选项。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎么知道哪个 PNG 对应哪个产品？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按行号：<code>qr-1.png</code> 是第 1 行，<code>qr-37.png</code> 是第 37 行。把表格和 ZIP 放在一起；想要有意义的文件名，就对照表格给副本重命名。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "码应该印多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "普通的码至少 2 × 2 cm，见页面上的说明；内容密的码或从远处扫的码要更大。FreeQrly 的打印尺寸指南按使用场景讲了各种尺寸——不管选多大尺寸，先印一张，在纸上扫一扫。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么有些码印出来扫不出来？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见原因按顺序是：码的内容太密、印得太小；对比度太低；或者有东西——文字、边框、折痕——吃进了静区。印大一点、把模块加深、把边距空出来，再在纸上测一次。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"一次性生成 100 个二维码：从表格到打印成品 | FreeQrly","description":"分两批、每批 50 个生成 100 个二维码。建好表格，粘贴或上传，一次下载一个 ZIP，试扫、打印——免费，不用注册，没有水印。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "建好表格",
+      "text": "一百个码能出的问题，都会出在表格里，而不是生成器里——第 37 行的一个错字，就会变成第 37 行一个错误的码。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "粘贴或上传——选一种输入方式",
+      "text": "批量模式有两种入口，选哪种取决于你的列表现在存在哪儿。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "使用模板文件",
+      "text": "如果你是从一张空白表格开始，不是从现成的导出文件，别凭记忆搭列。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "生成并检查这些码",
+      "text": "生成是最短的一步。选好类型，把列表加进来——粘贴或上传——然后生成。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "下载——一个一个下，或者整个 ZIP 一起下",
+      "text": "每个码都可以单独下载为 1024 px 的 PNG——换单个码、或者一个一个放进设计稿时很有用。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "打印——尺寸、对比度和静区",
+      "text": "三件事决定一个在屏幕上能扫的码，印到纸上、在它真正要待的地方还能不能扫：商店灯光下的货架标签、仓库里的包裹标签、光线昏暗的餐厅里的桌卡。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3aa-20261119"></script>
+<script src="/assets/js/acct-menu.js?v=b3aa-20261119"></script>
+<script src="/assets/js/subpage-header.js?v=b3aa-20261119"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="FreeQrly 的大象吉祥物 Qly"></div>
+    <div class="kicker" style="text-align:center">实战笔记</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">一次性生成 100 个二维码：从表格到打印成品</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">可以——100 个码就是两批、每批 50 个。FreeQrly 的批量模式一次最多生成 50 个二维码，所以一百个码就是用同一个工具跑两遍：建一张 100 行的表，先生成前 50 个，再生成后 50 个，下载两个 ZIP 文件，试扫，打印。</p>
+    <p class="meta" style="text-align:center">2026-11-19 · 阅读约 17 分钟</p>
+    <div class="prose" style="margin-top:40px">
+<p>免费，不用注册，码上没有水印。剩下的讲表格、输入方式、打印前的检查，以及发现不对劲时怎么办。</p>
+<p>这篇指南只讲静态码，因为批量模式生成的就是静态码。静态码把目的地写进图案里：永不过期，不用账号，完全在你的浏览器里生成——不上传、不追踪。代价是静态码印好之后改不了。链接变了，就重新生成那个码、重新打印。如果你需要印好之后还能改、还带扫码统计的码，那就用动态码——动态码一次只能做一个，不能批量。</p>
+<h2>100 个码的计划一览</h2>
+<div class="table-scroll"><table>
+<tr><th>步骤</th><th>你要做的事</th><th>你能得到什么</th></tr>
+<tr><td>1. 建表格</td><td>一个码一行，100 行，列要和类型对上</td><td>一张干净的表：没有空行，没有错字</td></tr>
+<tr><td>2. 选输入方式</td><td>粘贴列表，或者上传 CSV 或 Excel 文件</td><td>你的列表已经进了批量生成器</td></tr>
+<tr><td>3. 分两批生成</td><td>第 1–50 行，然后第 51–100 行</td><td>100 个码，在网格里预览</td></tr>
+<tr><td>4. 下载</td><td>每批一个 ZIP，或者单个 PNG</td><td><code>freeqrly-batch.zip</code> 文件，里面是 <code>qr-1.png</code> … <code>qr-50.png</code></td></tr>
+<tr><td>5. 先测再印</td><td>扫第一个、最后一个，再随机扫中间一个——要在纸上扫</td><td>放在货架、桌上或包裹上都靠得住的码</td></tr>
+</table></div>
+<p>一次真实验证：2026 年 11 月 18 日，一位真实用户就是用这种方法生成了 100 个码——分两次批量操作——并下载了一个 50 个码的 ZIP，那是批量工具第一次被下载 ZIP 文件。</p>
+<h2>第 1 步：建好你的表格</h2>
+<p>一百个码能出的问题，都会出在表格里，而不是生成器里——第 37 行的一个错字，就会变成第 37 行一个错误的码。先花十分钟认真对待表格。</p>
+<h3>只有一条规则：一行，一个码</h3>
+<p>表格里的每一行都会变成恰好一个二维码，顺序不变。第 1 行变成 <code>qr-1.png</code>，第 2 行变成 <code>qr-2.png</code>，依此类推。这个顺序就是码和目的地之间唯一的对应关系，所以把表格文件和下载的 ZIP 放在一起，生成之后不要再调换行的顺序。</p>
+<h3>一个实例：100 个产品页</h3>
+<p>假设一家小店想给每个产品页配一个码，给货架标签用。链接码的表格只需要两列：一列是行标识，一列是链接本身。下面的值全部是 SAMPLE DATA（示例数据）。</p>
+<div class="table-scroll"><table>
+<tr><th>行</th><th>SKU（SAMPLE DATA）</th><th>产品（SAMPLE DATA）</th><th>链接（SAMPLE DATA）</th></tr>
+<tr><td>1</td><td>SKU-001</td><td>陶瓷马克杯 — 沙色</td><td>https://example-shop.com/products/ceramic-mug-sand</td></tr>
+<tr><td>2</td><td>SKU-002</td><td>陶瓷马克杯 — 陶土色</td><td>https://example-shop.com/products/ceramic-mug-clay</td></tr>
+<tr><td>50</td><td>SKU-050</td><td>石器碗</td><td>https://example-shop.com/products/stoneware-bowl</td></tr>
+<tr><td>51</td><td>SKU-051</td><td>棉布围裙</td><td>https://example-shop.com/products/cotton-apron</td></tr>
+<tr><td>100</td><td>SKU-100</td><td>珐琅水壶</td><td>https://example-shop.com/products/enamel-kettle</td></tr>
+</table></div>
+<p>第 1–50 行是第一批，第 51–100 行是第二批。SKU 那一列只是帮人看懂这张表；生成器用的是链接那一列。如果你的目的地已经在一张表格里了——库存导出表、产品清单、嘉宾名单——把目的地那一列复制到一张新表里，别传带着多余列的整个导出文件。</p>
+<h3>每种类型对应的列</h3>
+<p>批量模式支持 16 种类型：url、text、email、sms、phone、geo、wifi、vcard、event、bitcoin、coupon、appstore、review、mp3、google-form 和 menu。单字段类型只需要一列。多字段类型把所有字段打包进一行，用竖线字符 <code>|</code> 分隔，字段按所示顺序排列，竖线两边各留一个空格，方便阅读。</p>
+<div class="table-scroll"><table>
+<tr><th>类型</th><th>字段，按顺序（用 <code>|</code> 分隔）</th><th>示例（SAMPLE DATA）</th></tr>
+<tr><td>url</td><td>链接</td><td><code>https://example.com/products/mug</code></td></tr>
+<tr><td>text</td><td>任意文字</td><td><code>Scan for today's menu</code></td></tr>
+<tr><td>email</td><td>收件人 | 主题 | 正文</td><td><code>hello@example.com | Table ready | Your table for two is ready at 7 pm</code></td></tr>
+<tr><td>sms</td><td>电话号码 | 短信内容</td><td><code>+1 555 010 2030 | Hi, I'd like to book a table</code></td></tr>
+<tr><td>phone</td><td>电话号码</td><td><code>+1 555 010 2030</code></td></tr>
+<tr><td>geo</td><td>纬度，经度</td><td><code>40.7411, -73.9897</code></td></tr>
+<tr><td>wifi</td><td>网络名称 | 密码 | 安全类型</td><td><code>MyWiFi | password | WPA</code></td></tr>
+<tr><td>vcard</td><td>姓名 | 电话 | 邮箱 | 公司 | 职位 | 网站 | 地址 | 备注</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code></td></tr>
+<tr><td>event</td><td>标题 | 开始时间 | 结束时间 | 地点 | 描述</td><td><code>Spring Fair | 2027-04-10T10:00 | 2027-04-10T18:00 | Town Hall | Live music, food stalls, and a craft market</code></td></tr>
+<tr><td>bitcoin</td><td>地址 | 金额 | 标签 | 附言</td><td><code>bc1qexampleaddress | 0.001 | Coffee stall | Thanks for the coffee</code></td></tr>
+<tr><td>coupon</td><td>优惠码 | 描述</td><td><code>SPRING10 | 10% off this weekend</code></td></tr>
+<tr><td>appstore</td><td>iOS 链接 | Android 链接（有 iOS 链接就用 iOS，否则用 Android）</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
+<tr><td>review</td><td>评价页链接</td><td><code>https://example.com/review-us</code></td></tr>
+<tr><td>mp3</td><td>音频链接</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
+<tr><td>google-form</td><td>表单链接</td><td><code>https://forms.example.com/feedback</code></td></tr>
+<tr><td>menu</td><td>菜单链接</td><td><code>https://example.com/menu</code></td></tr>
+</table></div>
+<p>上面这些字段顺序和批量生成器读取的顺序一致——生成器里文本框下方的格式提示显示的也是这个顺序。第一，竖线是分隔符，所以字段里面不能出现竖线：Wi-Fi 密码里如果有 <code>|</code>，会被切到错误的字段里。第二，字段顺序是固定的。Wi-Fi 就是网络名称、密码、安全类型——<code>MyWiFi | password | WPA</code>，和上面显示的一模一样。顺序写反了照样能生成码，但手机会把字段读到错误的位置。第三，目的地能短就短。短链接生成的图案更疏朗、模块更大，在小尺寸打印时扫得更稳。长链接进表之前先缩短——缩短后的链接先测一下。</p>
+<h3>生成之前，先把表格清理干净</h3>
+<p>打开生成器之前，先拿这份清单把全部 100 行过一遍：</p>
+<ol>
+<li><strong>没有空行。</strong>粘贴列表里的空行会被跳过，但生成器可能还是会把表格里的空行当成一个空条目读进去，所以删掉空行。</li>
+<li><strong>粘贴时不要带表头。</strong>粘贴的文本里不要放表头。（CSV 的表头会被自动识别并跳过——见第 2 步——但粘贴的文本没这种照顾。）</li>
+<li><strong>没有尾随空格。</strong>链接末尾的空格会变成码内容的一部分。在表格里选中那一列，把空格修掉。</li>
+<li><strong>每个链接都能打开。</strong>抽查第一个、最后一个和中间几个链接。浏览器里 404 的链接，扫出来也是 404。</li>
+<li><strong>一批只用一种类型。</strong>CSV 上传只用一种类型：生成器里当前选中的类型。别把 Wi-Fi 的行和链接的行混在一批里；按类型把混合任务拆开，或者用下面讲的 Excel 上传。</li>
+</ol>
+<h2>第 2 步：粘贴或上传——选一种输入方式</h2>
+<p>批量模式有两种入口，选哪种取决于你的列表现在存在哪儿。</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>粘贴</th><th>上传文件</th></tr>
+<tr><td><strong>怎么操作</strong></td><td>复制列表，一行一项，粘贴进文本框</td><td>上传 CSV（<code>.csv</code>）或 Excel（<code>.xlsx</code> / <code>.xls</code>）文件</td></tr>
+<tr><td><strong>适合</strong></td><td>短列表，或者存在文档、邮件里而不是表格里的列表</td><td>已在表格里的列表，以及超过十几行的列表</td></tr>
+<tr><td><strong>类型处理</strong></td><td>选中的类型会应用到每一行</td><td>CSV：一个文件一种类型。Excel：一个工作表一种类型——工作表名决定类型</td></tr>
+<tr><td><strong>表头行</strong></td><td>不要带表头；它会变成一个码</td><td>CSV：表头行会被自动识别并跳过</td></tr>
+<tr><td><strong>上限</strong></td><td>每批 50 个码</td><td>每批 50 个码</td></tr>
+</table></div>
+<p>做 100 个码，上传通常更好：文件能把你的表格原样保留，生成器会处理表头行，发现错误还能把同一个文件再传一次。列表短、或者来源不是表格的地方，粘贴更快。</p>
+<h3>Excel 快捷方式：一种类型一个工作表</h3>
+<p>只有 Excel 上传能在一个文件里带好几种类型。每个工作表是一种类型，工作表名决定类型——链接用 <code>url</code>、<code>website</code> 或 <code>link</code>；<code>text</code>；<code>email</code>；<code>sms</code>；<code>phone</code>；<code>geo</code>；<code>wifi</code>；联系人用 <code>vcard</code> 或 <code>contact</code>；<code>event</code>。名字认不出来的工作表会默认当作 url，所以上传之前检查一下名字。超出这九个工作表名的类型不能靠工作表名识别；那些类型请用 CSV 上传，或者选好类型再粘贴。</p>
+<h2>第 3 步：使用模板文件</h2>
+<p>如果你是从一张空白表格开始，不是从现成的导出文件，别凭记忆搭列。FreeQrly 提供一个可下载的模板 <code>freeqrly-batch-template.xlsx</code>，每种类型一个工作表，表头和示例行都已经填好了。下载它，把示例行换成你自己的，删掉不需要的示例，然后上传。模板是把字段顺序搞对的最快办法：对 Wi-Fi、vCard 这种多字段类型，示例行直接展示了顺序。vCard 工作表有 8 列——姓名、电话、邮箱、公司、职位、网站、地址、备注——批量模式按模板顺序读取全部八列，和单个码的联系人表单一样，所以公司和职位也会出现在保存的联系人里。</p>
+<p>另外还有一个 CSV 模板，但只针对选中的类型。混合类型的任务要用 Excel 模板。</p>
+<p>做好的文件留两份——一份是上传用的工作文件，一份是原封不动的原件，和下载的 ZIP 放在一起，这样三个月后行号还能回答“哪个码是哪个产品”。</p>
+<h2>第 4 步：生成并检查这些码</h2>
+<p>生成是最短的一步。选好类型，把列表加进来——粘贴或上传——然后生成。每一项都会变成自己的码，在页面上以网格形式预览。下载或打印之前，先检查一下网格：</p>
+<ul>
+<li><strong>数一数码的数量。</strong>每批应该显示 50 个。如果少了，说明有一行被跳过了——通常是空行。回表格里找。</li>
+<li><strong>读第一个和最后一个码。</strong>扫第一个码，再扫最后一个。如果两个都打开了正确的目的地，设置就是对的；中间的码用的也是同样的设置。不过，手打的行还是要抽查一下。</li>
+<li><strong>抽查一个多字段码。</strong>如果这批是 Wi-Fi 或 vCard，扫一个确认手机真的连上了网络或保存了联系人。能扫出来、但填错字段的码，是悄悄的失败。</li>
+</ul>
+<p>先在屏幕上测：屏幕测试免费又即时。但在亮屏幕上能扫的码，印到纸上仍可能失败，所以第 6 步的打印测试很重要。</p>
+<h2>第 5 步：下载——一个一个下，或者整个 ZIP 一起下</h2>
+<p>每个码都可以单独下载为 1024 px 的 PNG——换单个码、或者一个一个放进设计稿时很有用。做一百个码，ZIP 才是实际的选择：点一下就能下载 <code>freeqrly-batch.zip</code>，里面是 <code>qr-1.png</code> 到 <code>qr-50.png</code>，每个都是 1024 px 的 PNG。批量模式没有 SVG 选项。</p>
+<p>下载时有两件事要做对。第一，把两个 ZIP 分开：两次下载用的都是同一个文件名 <code>freeqrly-batch.zip</code>，所以第二个会覆盖同一文件夹里的第一个。下载第二个之前，先把第一个重命名为 <code>batch-1-rows-1-50.zip</code>，或者每个下载到各自的文件夹里。第二，保留对应关系：ZIP 里面的文件名是行号，不是产品名。如果你要重命名 PNG，就对照表格来改——比如 <code>qr-37.png</code> 改成 <code>SKU-037-mug.png</code>——在副本上改，保持原始 ZIP 不动。</p>
+<p>不用登录：批量码是静态码，在浏览器里生成，所以不用创建账号，没有水印，也不过期。</p>
+<h2>第 6 步：打印——尺寸、对比度和静区</h2>
+<p>三件事决定一个在屏幕上能扫的码，印到纸上、在它真正要待的地方还能不能扫：商店灯光下的货架标签、仓库里的包裹标签、光线昏暗的餐厅里的桌卡。</p>
+<h3>尺寸</h3>
+<p>FreeQrly 的打印尺寸指南按使用场景覆盖了各种尺寸——卡片、传单、海报。底线是：一个普通的码至少要印到 2 × 2 cm，见页面上的说明。内容密的码需要更大的空间：同样的打印尺寸，目的地长的码比目的地短的码需要更大的空间；从远处扫的码，要按距离成比例放大。拿不准就先印一张测试标签，在顾客会站的距离扫一下。</p>
+<h3>对比度和静区</h3>
+<p>对比度永远不变：深色模块配浅色背景，对比要强。浅灰配白色的码，或者品牌色太浅，会在你测不到的手机上失败——老相机、昏暗的房间、反光。保持模块深色、背景浅色干净。</p>
+<p>每个码周围都有静区：那圈空白边距让相机能找到码的边缘。别让文字、边框、折痕或隔壁标签吃进静区。给码留一块干净的浅色背景，四边的静区都要空出来。</p>
+<h3>纸张、墨水和打印测试</h3>
+<p>亮光下哑光纸比光面纸好用，因为光面会反射眩光。如果标签必须用光面，就在它们实际要待的灯光下试扫。整批打印之前一定先做打印测试：印一张，先在纸上扫第一个、最后一个和中间随机一个码，有条件用两部手机——一部 iPhone、一部 Android。如果三个一次就扫出来了，就印这一百个。如果有一个犹豫，就印大一点、提高对比度，或者缩短目的地。</p>
+<h2>常见错误和修复方法</h2>
+<div class="table-scroll"><table>
+<tr><th>错误</th><th>你看到的现象</th><th>修法</th></tr>
+<tr><td>粘贴了表头行</td><td>第一个码打开一个叫“Link”的页面，或者把“Link”这个词当作文本编进去</td><td>只粘贴数据行</td></tr>
+<tr><td>粘贴里有一行空行</td><td>码的数量比行数少</td><td>删掉空行；下载之前数一下网格</td></tr>
+<tr><td>一个 CSV 批次里混了多种类型</td><td>Wi-Fi 的行变成了链接码，或者 vCard 的行变成了纯文本</td><td>一个 CSV 批次只用一种类型；按类型拆分混合任务，或者用 Excel、一种类型一个工作表</td></tr>
+<tr><td>Excel 工作表名拼错了</td><td>那个工作表的码全都变成了 URL 码</td><td>工作表名要和上面列的完全一致；认不出来的名字会默认当作 url</td></tr>
+<tr><td>字段里有一个 <code>|</code></td><td>Wi-Fi 码的密码被切到了两个字段里</td><td>把字段里的竖线去掉，或者换个密码</td></tr>
+<tr><td>字段顺序错了</td><td>码能扫出来，但手机连错了网络或保存了错误的信息</td><td>按模板的字段顺序重建这一行，重新生成</td></tr>
+<tr><td>很长的链接印得很小</td><td>屏幕上能扫的码，标签上扫不出来</td><td>缩短链接，或者印大一点——在纸上测</td></tr>
+<tr><td>覆盖了第一个 ZIP</td><td>文件夹里只有一个 <code>freeqrly-batch.zip</code>，而且是第二批</td><td>下载第二批之前，先把第一批重命名</td></tr>
+<tr><td>没做纸上测试就打印了</td><td>屏幕上能读的码，在店里灯光下失败</td><td>先印一张；在纸上扫第一个、最后一个和中间一个码</td></tr>
+<tr><td>打印之后改链接</td><td>印好的码还是打开旧页面</td><td>静态码改不了——重新生成那个码并重印；要能改的码，改用动态码</td></tr>
+</table></div>
+<h2>批量不适合的场景</h2>
+<p>目的地已经定下来、问题只是数量的时候，批量模式就是合适的工具。三种情况不适合。第一，印好之后需要改码：每月换一次的菜单链接需要动态码，一次做一个，在后台就能改。免费档允许 20 个动态码；Pro 每月 9 美元或每年 90 美元，和免费档唯一的区别就是动态码不限量。在当前限时活动期间，免费动态码不限量；活动结束后，免费档包含 20 个动态码。第二，每个码需要不同的样式：批量模式整套只做一种统一的样式，请用主生成器一个一个做。第三，每个码都需要扫码统计：静态码不记录扫码，所以要用动态码——动态码可不是 50 个一批。</p>
+<h2>整个流程，一段话讲完</h2>
+<p>建一张表，一个码一行，列要和类型对上。清理干净：没有空行，粘贴里没有表头，每个链接都检查过。分两半、每半 50 个上传或粘贴，从零开始就用模板。数一下网格，扫第一个和最后一个码，把 ZIP 下载到不同的文件夹里，表格放在旁边。先印一张，在纸上扫一扫，然后再印这一百个。一百个码不是一百件小事。它是一张表、两批生成、一次测试打印。</p>
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly 举着二维码"></div>
+      <div>
+        <h3>自己试试——免费</h3>
+        <p>本文讲的一切在 FreeQrly 工作室里现在就能用。静态码，全部 17 种内容类型，PNG 和 SVG 导出。</p>
+        <a class="btn" href="/zh/#studio">打开生成器</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">继续读</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/zh/blog/qr-codes-for-event-organizers-checklist/"><b>活动主办方二维码全清单（活动前、活动中、活动后）</b></a>
+        <a class="rel-card" href="/zh/blog/static-vs-dynamic-qr-codes/"><b>静态码与动态码：永久免费还是订阅制？</b></a>
+        <a class="rel-card" href="/zh/blog/why-is-my-qr-code-not-working/"><b>二维码不好用？7 个有用的修复</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>小提示</h2>
+    <details><summary><span>一次能生成多少个二维码？</span></summary><p>每批最多 50 个，不管粘贴还是上传——所以 100 个码就是两批：第 1–50 行，然后第 51–100 行。两半的行顺序保持一致，这样文件名能对应回表格。</p></details>
+    <details><summary><span>批量生成二维码需要账号吗？</span></summary><p>不用。批量码是静态码，完全在你的浏览器里生成，所以不用注册，不上传，码永不过期，也没有水印。</p></details>
+    <details><summary><span>批量码可以是动态的、印好之后还能改吗？</span></summary><p>不可以。批量模式只有静态码。如果打印之后目的地变了，重新生成那个码并重印。印好之后需要能改的码，改用动态码，一个一个创建。</p></details>
+    <details><summary><span>可以上传哪些文件类型？</span></summary><p>CSV 文件（<code>.csv</code>）或 Excel 文件（<code>.xlsx</code> / <code>.xls</code>）。CSV 一个文件一种类型，生成器会处理带引号的字段，所以字段里的逗号是安全的。Excel 文件一个工作表一种类型，工作表名决定类型。</p></details>
+    <details><summary><span>文件里 Wi-Fi 和联系方式怎么写？</span></summary><p>多字段类型用竖线字符 <code>|</code> 分隔字段，顺序固定。Wi-Fi 是网络名称、密码、安全类型——例如 <code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCard 是姓名、电话、邮箱、公司、职位、网站、地址、备注——例如 <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code>（SAMPLE DATA）。模板 <code>freeqrly-batch-template.xlsx</code> 给每种类型展示了字段顺序，带表头和示例行。</p></details>
+    <details><summary><span>下载能得到什么？</span></summary><p>每个码都可以单独下载为 1024 px 的 PNG。ZIP 是 <code>freeqrly-batch.zip</code>，里面是 <code>qr-1.png</code> 到 <code>qr-50.png</code>，每个都是 1024 px 的 PNG。批量模式里没有 SVG 选项。</p></details>
+    <details><summary><span>怎么知道哪个 PNG 对应哪个产品？</span></summary><p>按行号：<code>qr-1.png</code> 是第 1 行，<code>qr-37.png</code> 是第 37 行。把表格和 ZIP 放在一起；想要有意义的文件名，就对照表格给副本重命名。</p></details>
+    <details><summary><span>码应该印多大？</span></summary><p>普通的码至少 2 × 2 cm，见页面上的说明；内容密的码或从远处扫的码要更大。FreeQrly 的打印尺寸指南按使用场景讲了各种尺寸——不管选多大尺寸，先印一张，在纸上扫一扫。</p></details>
+    <details><summary><span>为什么有些码印出来扫不出来？</span></summary><p>常见原因按顺序是：码的内容太密、印得太小；对比度太低；或者有东西——文字、边框、折痕——吃进了静区。印大一点、把模块加深、把边距空出来，再在纸上测一次。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>动态码不限量 — 限时活动</h3>
+        <p>免费登录，想建多少建多少。每个码印后可改，永不过期。</p>
+      </div>
+      <a class="fctaBtn" href="/zh/login/">免费开始</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/zh/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
+        <div class="fmade">静态码，在你的浏览器里生成。</div>
+      </div>
+      <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
+      <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>
+      <div class="fcol"><h4>公司</h4><a href="/zh/about/">关于</a><a href="mailto:hello@freeqrly.com">联系我们</a></div>
+      <div class="fcol"><h4>法律</h4><a href="/zh/privacy/">隐私政策</a><a href="/zh/terms/">服务条款</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

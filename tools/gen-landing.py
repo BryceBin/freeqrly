@@ -478,49 +478,196 @@ dict(slug="mp3-qr-code", dtype="mp3",
        ("Will it play automatically on scan?","Phones open the link in the browser or audio app; autoplay depends on the listener's settings. Most tap play once.")]),
 dict(slug="black-friday-qr-code", dtype="coupon",
   title="Free Black Friday QR Code Generator: Coupons, Sale Pages & Doorbusters | FreeQrly",
-  desc="Free Black Friday QR codes: coupon codes customers scan instead of typing, sale pages you can repoint all weekend, and one code per product via batch. Static codes need no sign-up and never expire.",
-  uses_h2="Black Friday ideas worth a scan",
-  uses=[("Coupon codes customers scan, not type","Print the promo code as a code, not a string of characters to mistype. A coupon scanned at the till beats one copied by hand."),
-        ("One code per product, made in a batch","Fifty sale items, fifty codes: <a href=\"/batch-qr-code/\">Batch mode</a> makes one code per link and downloads them as a ZIP — one per shelf tag or hang tag."),
-        ("A sale page you repoint all weekend","Early access Thursday, doorbusters Friday, Cyber Monday leftovers Monday: a <a href=\"/dynamic-qr-code/\">dynamic code</a> keeps its printed pattern while you change where it goes."),
-        ("Doorbuster countdowns and hourly drops","Point the code at the drop page and repoint it as stock changes — the poster never needs reprinting."),
-        ("Window posters that scan through glass","Print 10 cm (4 in) or more and the code scans from the sidewalk. The size FAQ below has the rule."),
-        ("Receipt codes that outlive the sale","Print the code on the receipt, then repoint it after the weekend: next campaign, returns page, or loyalty sign-up."),
-        ("An early-access list, not a queue","A code on the teaser poster opens the early-access sign-up — or the waitlist page — before the doors open.")],
+  desc="Free Black Friday QR codes for retailers and small businesses: scannable coupons, sale pages you can repoint all weekend, and one code per product via batch. Static codes need no sign-up and never expire.",
   kw="black friday qr code",
   h1='Black Friday deals, <span class="hl hl-blush">one scan away</span>.',
-  lede="Put the sale on every surface \u2014 window posters, shelf tags, receipts, packaging. Turn the promo code into a scannable code, or link straight to the deal. When the offer changes mid-weekend, a dynamic code changes with it. The poster doesn\u2019t.",
-  steps=[("Decide what the scan opens","A promo code, your sale page, a doorbuster list \u2014 one code, one job."),
-         ("Make the code","Coupon codes are static: free, no sign-up, generated in your browser. For a sale page, sign in free and make it dynamic so you can repoint it later."),
+  lede="A Black Friday shopper will not type a promo code, a long URL, or create an account at the till. They will scan a code — or walk past the offer. A QR code turns every surface in and around your shop into a doorway to the sale — window poster, shelf tag, flyer, receipt, social post, email. The shopper points their phone and the discount opens. The one decision that matters most is made before you print anything: static or dynamic? A static code is right for a fixed coupon. A dynamic code is right for anything that might change — the sale page, the hourly drop, the item that sells out by noon. Get that choice right for each placement and the rest of the weekend is easy.",
+  steps=[("Decide what the scan opens","A promo code, your sale page, a doorbuster list \u2014 one code, one job. Check the promo-format table below if you are unsure which type fits the placement."),
+         ("Make the code","Coupon codes are static: free, no sign-up, generated entirely in your browser \u2014 nothing uploaded, no tracking, no watermark, and the code never expires. For a sale page, sign in free and make it dynamic so you can repoint it later and see scan statistics."),
          ("Print once, swap all weekend","Early access Thursday, doorbusters Friday, Cyber Monday leftovers on Monday \u2014 edit the destination, keep the poster.")],
   studio_h2="Make your Black Friday QR code",
-  faq=[("Static or dynamic \u2014 which does a sale need?","Static for the coupon code itself: it carries the code as text and never expires. Dynamic for anything that changes \u2014 the sale page, hourly drops, stock that sells out. Dynamic codes are free with a sign-in, and currently unlimited for a limited time."),
-       ("Can I change where a printed code points?","Yes \u2014 that\u2019s what dynamic means here. Edit the destination from your dashboard any time; the printed code never changes."),
-       ("What happens to my codes after the sale?","Nothing expires. Repoint dynamic codes to your next campaign, and keep the posters for next year \u2014 same codes, new offers."),
-       ("How big should a window poster code be?","Big enough to scan through glass from the sidewalk \u2014 10 cm (4 in) or more. Our blog\u2019s print size guide has the full distance table.")]),
+  faq=[("Static or dynamic \u2014 which does a Black Friday sale need?","Both, for different jobs. Static for the coupon code itself: it carries the code as text and never expires. Dynamic for anything that changes \u2014 the sale page, hourly drops, stock that sells out. Dynamic codes are free with a sign-in, and the free tier includes 20 of them."),
+       ("Can I change where a printed code points?","Yes \u2014 that is what dynamic means here. Edit the destination from your dashboard any time; the printed code never changes. Static codes cannot be changed after printing, which is why they suit fixed coupons only."),
+       ("What happens to my codes after the sale?","Nothing expires. Repoint dynamic codes to your next campaign, and keep the posters for next year \u2014 same codes, new offers. Static codes keep working as long as the page or coupon behind them is still valid."),
+       ("How big should a window poster code be?","Big enough to scan through glass from the sidewalk \u2014 10 cm (4 in) or more. The rule is roughly one-tenth of the scanning distance, so test it from the pavement, not from inside the shop."),
+       ("Can I make a different code for every product on sale?","Yes \u2014 use Batch mode in the generator: one link per line, or upload a CSV/XLSX file, up to 50 codes per batch, downloaded as a ZIP of PNGs. Batch is static-only, so use it for fixed per-product pages and coupons."),
+       ("Do customers need an app to scan the code?","No. Every code opens with the phone's built-in camera. If a code seems to need an app, it was made wrong \u2014 test-scan with a plain camera before printing."),
+       ("How do I stop a coupon from being shared all over social media?","You cannot stop a static coupon from being screenshotted. If the discount is deep, use one-use codes validated at the till instead of one shared code. For most storewide offers, an expiry date, a minimum spend, and a one-per-transaction limit are enough \u2014 and the sharing brings you customers.")],
+  compare='''
+  <h2>Static vs dynamic codes for a short promotion</h2>
+  <p>A <b>static</b> code has its destination — a link, a coupon code, a piece of text — baked into the pattern itself. It can never change, needs no account and no server: FreeQrly generates it entirely in your browser, with nothing uploaded and no tracking. A <b>dynamic</b> code holds a short redirect link instead. The printed pattern stays the same, but you can change where it points and see how many times it was scanned. Dynamic codes need a free sign-in to create.</p>
+  <p>For a three-day sale, that difference is the whole strategy — most shops need both, decided per placement, not per campaign.</p>
+  <h3>Table 1: Static vs dynamic codes for short promotions</h3>
+  <table>
+    <thead><tr><th>Factor</th><th>Static code</th><th>Dynamic code</th></tr></thead>
+    <tbody>
+      <tr><td><b>Cost</b></td><td>Free, no sign-up</td><td>Free with a sign-in; free tier includes 20 dynamic codes; Pro ($9/month or $90/year) adds unlimited dynamic codes and nothing else. During the current limited-time offer, free dynamic codes are unlimited; after the offer ends, the free plan includes 20 dynamic codes.</td></tr>
+      <tr><td><b>Can the destination change after printing?</b></td><td>No — the content is fixed in the pattern</td><td>Yes — edit the destination from your dashboard any time; the printed code never changes</td></tr>
+      <tr><td><b>Scan tracking</b></td><td>No — nothing is tracked or uploaded</td><td>Yes — scan statistics in your dashboard; scans themselves are unlimited</td></tr>
+      <tr><td><b>Expiry</b></td><td>Never expires</td><td>Never expires; repoint it to your next campaign after the sale</td></tr>
+      <tr><td><b>Setup time</b></td><td>Seconds — type, generate, download</td><td>A few minutes — sign in, create, name it (SAMPLE DATA: typical setup time, illustrative only)</td></tr>
+      <tr><td><b>Best for</b></td><td>A fixed coupon code, a single product page, a printed voucher</td><td>The sale page, hourly drops, doorbusters, anything that may sell out or change</td></tr>
+    </tbody>
+  </table>
+  <p><b>The rule of thumb:</b> if the offer is printed as text on the same poster ("20% off, code BF20"), the code can be static — the coupon text never changes. If the scan opens a web page whose content, price, or stock might change during the weekend, make it dynamic. A dynamic code costs a free sign-in and a minute of setup; a reprint costs a poster run, a ladder, and Friday morning.</p>
+  <h2>The customer journey: see it, scan it, claim it, redeem it</h2>
+  <p>A Black Friday QR code fails in exactly four places, one per step of the journey. Design for the step where shoppers actually drop off.</p>
+  <p><b>Figure 1: From poster to purchase.</b> Four steps with arrows — see the code, scan it, claim the coupon, redeem it (in store at the till, or online at checkout). Note beneath: "Every step should take seconds. If a step needs typing, a login, or an app download, shoppers drop off."</p>
+  <ul>
+    <li><b>See the code.</b> The code has to be noticed before it can be scanned. Put it at eye level, give it a quiet margin of empty space, and add a short line saying what the scan gives: "Scan for 20% off" beats "Scan me", because it answers the passer's only question — <i>what do I get?</i></li>
+    <li><b>Scan.</b> It must work with the phone camera alone, no app — true of every code FreeQrly makes. Test on iPhone and Android before printing, in the real lighting, from the real distance.</li>
+    <li><b>Claim the coupon.</b> The page the scan opens should show the discount and its terms on the first screen — percentage, minimum spend, expiry — with nothing to type and nothing to sign up for. Every extra field costs redemptions.</li>
+    <li><b>Redeem.</b> In store, the customer shows the phone at the till. Online, the discount should already be applied at checkout, or the coupon should be one tap to copy. If redemption needs staff to look something up, or a customer to remember a string of characters, the journey breaks at the last step.</li>
+  </ul>
+  <h2>Which code setup for each promo format?</h2>
+  <p>A flyer handed out on the street has different needs from a shelf tag that stays up for a month. Match the setup to the format.</p>
+  <h3>Table 2: Promo format → code setup</h3>
+  <table>
+    <thead><tr><th>Promo format</th><th>Recommended code type</th><th>Why</th><th>Watch out for</th></tr></thead>
+    <tbody>
+      <tr><td><b>Doorbuster flyer</b></td><td>Dynamic</td><td>The offer may sell out or change hourly; repoint the code instead of reprinting</td><td>Print the headline offer in text too</td></tr>
+      <tr><td><b>In-store shelf tag</b></td><td>Static (one per product)</td><td>Fixed discount, long-lived tag; make them all at once with Batch (up to 50 per batch, one link per line or CSV/XLSX upload, ZIP download)</td><td>Test-scan every tag after printing</td></tr>
+      <tr><td><b>Social media post</b></td><td>Dynamic</td><td>You can't edit a posted image; change the destination after the post is live</td><td>Put the offer in the caption too</td></tr>
+      <tr><td><b>Email newsletter</b></td><td>Dynamic</td><td>See which send drove scans; repoint for the next email without changing the link</td><td>Link the button directly — many readers open email on the phone they would scan with</td></tr>
+      <tr><td><b>Window poster</b></td><td>Dynamic</td><td>Early access Thursday, doorbusters Friday, Cyber Monday leftovers Monday — one poster, three destinations</td><td>Print at least 10 cm (4 in) wide; test from the pavement, not from inside</td></tr>
+      <tr><td><b>Receipt or packaging</b></td><td>Dynamic</td><td>Outlives the sale — repoint after the weekend to the next campaign, returns page, or loyalty sign-up</td><td>Thermal paper fades — use high error correction</td></tr>
+      <tr><td><b>In-store screen or TV</b></td><td>Dynamic</td><td>Swap the offer on screen without reprinting anything</td><td>Test from the farthest viewing distance; screens glare</td></tr>
+    </tbody>
+  </table>
+  <h2>Printing and placement tips</h2>
+  <ul>
+    <li><b>Size follows distance.</b> Rough rule: the code should be about one-tenth as wide as the distance it will be scanned from. A shelf tag scanned from 30 cm away can be 3 cm wide; a window poster scanned from the pavement needs at least 10 cm (4 in). When in doubt, print bigger.</li>
+    <li><b>Contrast is not optional.</b> Dark code on a light background, always. A black code on a black poster, a gold code on yellow, or a code over a busy photo will not scan reliably in shop lighting. If the poster is dark, put the code on a white square.</li>
+    <li><b>Leave a quiet zone.</b> Keep a clear margin around the code at least as wide as one of its small squares — no text, no logos, no border touching it.</li>
+    <li><b>Use high error correction for anything handled or outdoors.</b> Set error correction to High or Max for receipts, flyers, and packaging that will be folded, rained on, or scuffed. Higher error correction lets the code survive damage; the trade-off is a slightly denser pattern.</li>
+    <li><b>Add your logo in the center, carefully.</b> Keep it small — under about a fifth of the code's width — and use high error correction so the code still reads.</li>
+    <li><b>Print one, scan it, then print the rest.</b> Print one copy of each design, scan it in the real location, from the real distance, in the real light, and only then print the batch.</li>
+    <li><b>Put the offer in words next to the code.</b> "Scan for 20% off today only" tells a shopper why to bother. A bare code is decoration — and if a phone cannot scan it, the shopper can still read the offer.</li>
+  </ul>
+  <h2>Redemption and fraud: one-use vs unlimited coupons</h2>
+  <ul>
+    <li><b>Unlimited coupons</b> are the default for a Black Friday doorbuster: one code, anyone can use it, no tracking of who redeemed. Simple, fast at a busy till, and right when the discount is modest and the goal is footfall. The risk is exactly what it sounds like — the code spreads. For a 10–20% storewide offer, that is usually acceptable; the sharing <i>is</i> the marketing.</li>
+    <li><b>One-use coupons</b> make sense when the discount is deep — a high-value item, a big percentage, a free gift. One-use needs a system behind the code: a unique code per customer, a list the till can check, a way to mark it used. A single static code cannot do this — everyone scanning the same poster gets the same code. If you need one-use, generate unique codes per customer (Batch mode can make up to 50 at a time) and validate them at the till or at checkout.</li>
+    <li><b>Practical middle ground.</b> Most small retailers do fine with unlimited codes plus three cheap controls: a clear expiry ("Friday only"), a minimum spend, and a per-transaction limit ("one discount per transaction"). Print them on the poster, show them on the landing page, enforce them at the till — no extra system needed.</li>
+    <li><b>Staff briefing matters more than software.</b> Tell till staff in writing what each code does, its terms, and what to do when a customer shows a screenshot of someone else's phone. A five-minute Friday-morning briefing prevents more fraud — and more arguments — than any validation system.</li>
+    <li><b>After the sale, expire visibly.</b> If a coupon has an expiry, honor it and say so on the poster. Nothing damages trust faster than a code that worked on Friday and silently fails on Saturday.</li>
+  </ul>
+  <h2>Black Friday QR code timeline: 4 weeks out to Cyber Monday</h2>
+  <table>
+    <thead><tr><th>When</th><th>Do this</th></tr></thead>
+    <tbody>
+      <tr><td><b>4 weeks out</b></td><td>Plan offers and code list</td></tr>
+      <tr><td><b>3 weeks out</b></td><td>Build codes and test-scan every one</td></tr>
+      <tr><td><b>2 weeks out</b></td><td>Print and place</td></tr>
+      <tr><td><b>Sale weekend</b></td><td>Monitor scans, repoint as needed</td></tr>
+      <tr><td><b>Monday</b></td><td>Repoint codes to Cyber Monday or next campaign</td></tr>
+    </tbody>
+  </table>
+  <h2>When the offer changes mid-sale</h2>
+  <ol>
+    <li><b>Repoint, don't reprint.</b> This is the entire reason to use dynamic codes for sale pages and doorbusters. Edit the destination from your dashboard; the printed code keeps working. A reprint takes hours you do not have on a Friday.</li>
+    <li><b>Decide in advance what a sold-out code points to.</b> The default should be the main sale page or the closest equivalent item — never a dead page, and never a page still advertising the sold-out item at the old price. Write the fallback in your code list during planning week.</li>
+    <li><b>Change the destination, then the poster text if you can.</b> If the poster says "50% off headphones" and the headphones are gone, a small "sold out — see today's deals" sticker over the headline is honest and takes a minute. The code repoint does the rest.</li>
+    <li><b>Keep one person in charge of changes.</b> Mid-sale edits by three people produce three different destinations. One person owns the dashboard for the weekend; everyone else routes requests through them. Log every change in one line — time, code, old and new destination.</li>
+  </ol>
+  <p>FreeQrly offers 17 QR code types, batch generation of up to 50 static codes at a time, a logo in the center, and 10 languages. Static codes are free forever; dynamic codes are free with a sign-in (20 on the free tier) with unlimited scans. Pro ($9/month or $90/year) adds unlimited dynamic codes — and nothing else.</p>
+'''),
 dict(slug="christmas-qr-code", dtype="event",
-  title="Free Christmas QR Code Generator: Cards, Gift Tags & Party Invites | FreeQrly",
-  desc="Free Christmas QR codes for greeting cards, gift tags, and party invitations — video greetings, photo albums, playlists, and calendar invites in one scan. Static codes need no sign-up, no watermark, and never expire.",
-  uses_h2="Christmas ideas worth a scan",
-  uses=[("Video greeting cards","Upload the greeting to any page with a shareable link — an unlisted YouTube video works — and print the code inside the card. One scan and it plays."),
-        ("Photo albums guests can open","Link the code to a shared album from the night itself, or to a year-in-review set. Guests open it in one tap, with no app to install."),
-        ("Playlists for the party","A code on the invitation that opens the evening's playlist — or a code on the table that lets guests add requests."),
-        ("Party invitations that add themselves to calendars","The Event type carries the title, time, and place; one scan drops the party into your guests' calendar apps."),
-        ("A different code on every gift tag","Make them all at once with <a href=\"/batch-qr-code/\">Batch mode</a>: one link per line, one code per tag, downloaded as a ZIP."),
-        ("An advent calendar with 24 doors","Print a code behind each door — a photo, a clue, a tiny video. Twenty-four codes fit comfortably inside one <a href=\"/batch-qr-code/\">Batch</a> run of up to 50."),
-        ("Market stall menus and price lists","A stall code that opens the menu, the price list, or the day's specials page. Update the page and the printed code still works."),
-        ("A thank-you note that outlives the tree","Print the thank-you code with the gifts, then repoint it after the holidays: a <a href=\"/dynamic-qr-code/\">dynamic code</a> keeps its printed pattern while you change where it goes.")],
+  title="Free Christmas QR Code Generator: Gift Cards, Events, Donations & Greeting Cards | FreeQrly",
+  desc="Free Christmas QR codes for shops, charities, churches, and families \u2014 gift cards, holiday events, donations, advent calendars, and greeting cards. Static codes need no sign-up, no watermark, and never expire.",
   kw="christmas qr code",
-  h1='Hide a little Christmas <span class="hl hl-mint">inside a code</span>.',
-  lede="Tape a code inside a card and it plays your video greeting. Stick one on a gift tag. Or send party invitations that land straight in your guests\u2019 calendars \u2014 date, time and place, no typing. Free, and made in your browser.",
-  steps=[("Pick your moment","A video greeting, a photo album, a playlist \u2014 or the party itself, as a calendar event."),
-         ("Paste the link, or set the date","Links become static codes instantly, no sign-up. For invitations, the studio below starts on Event: title, start, end, place."),
-         ("Print it where the surprise lands","Inside the card, on the gift tag, on the invitation envelope. The 1024 px export stays crisp at card size.")],
-  studio_h2="Make your Christmas QR code",
-  faq=[("How do I put a video inside a Christmas card?","Upload the video somewhere with a shareable link \u2014 an unlisted YouTube video is perfect \u2014 make a QR code from the link, and print it inside the card. One scan and it plays."),
-       ("Can a code add the party to my guests\u2019 calendars?","Yes. The Event type (the studio below starts on it) carries the title, time and place; one scan adds the party to their calendar app."),
-       ("Will the code still work next Christmas?","Yes \u2014 static codes never expire. The same printed code works next year too, as long as the page or video behind it is still online."),
-       ("I need a different code on every gift tag. Help?","Use Batch mode in the generator: one link per line, one code per tag, all downloaded as a ZIP.")]),
+  h1='Christmas QR codes: <span class="hl hl-mint">gift cards, events, donations, and cards that do more</span>.',
+  lede="A Christmas QR code is a shortcut printed on something people already hold — a card, a gift tag, a poster, a market stall sign — that takes them straight to the page, video, or form you want them to see. If the destination will never change, use a free static code: no sign-up, no watermark, never expires. If the destination might change mid-season — a sold-out event, a new donation total, a different menu — use a free dynamic code, which you can repoint after printing and which shows you how many times it was scanned. FreeQrly makes both. Static codes are generated entirely in your browser, with nothing uploaded and no tracking.",
+  steps=[("Pick your moment","A video greeting, a photo album, a playlist \u2014 or the party itself, as a calendar event. For a shop or fundraiser, the moment is the page: gift-card shop, donation form, or event page."),
+         ("Decide static or dynamic","Fixed and personal: static, free, no sign-up. Might change or worth measuring: dynamic, free sign-in, editable after printing with scan statistics."),
+         ("Paste the link, or set the date","Links become static codes instantly, no sign-up. For invitations, the Event type carries the title, start, end, and place. For many codes at once \u2014 gift tags, advent doors \u2014 use Batch mode: one link per line, up to 50 codes, downloaded as a ZIP."),
+         ("Style it, test-scan it, then print it where the surprise lands","Choose dot style, colors, and a centered logo if you like; export at 1024 px or higher. Print one copy at real size and scan it with a real phone before the full run — then place it inside the card, on the gift tag, or on the stall counter, with a short line saying what the scan does.")],
+  studio_h2="How to make your Christmas QR code",
+  faq=[("How do I put a video inside a Christmas card?","Upload the video somewhere with a shareable link \u2014 an unlisted YouTube video works well \u2014 make a QR code from the link, and print it inside the card. One scan and it plays. Use a static code: the greeting is fixed, and it will still work next Christmas as long as the video stays online."),
+       ("Can a code add the party to my guests\u2019 calendars?","Yes. The Event type carries the title, time, and place; one scan adds the party to their calendar app. Put it on the invitation itself, not just in the email \u2014 the paper invitation is the one people keep on the fridge."),
+       ("I need a different code on every gift tag. How?","Use Batch mode in the generator: one link per line, one code per tag, all downloaded as a ZIP. Batch is static-only, with a maximum of 50 codes per batch, and you can also upload a CSV or XLSX file instead of pasting links."),
+       ("Can I see how many people scanned my Christmas poster?","Yes, with a dynamic code: scan statistics appear in your FreeQrly dashboard. Static codes are made entirely in your browser with nothing uploaded, so there is nothing to count. If tracking matters, give each poster its own dynamic code \u2014 a shared code only shows the total."),
+       ("Do Christmas QR codes cost anything?","Static codes are free with no sign-up. Dynamic codes are free with a free sign-in \u2014 20 on the free tier, with unlimited scans and no expiry. Pro is $9/month or $90/year, and its only difference is unlimited dynamic codes.")],
+  compare='''
+  <h2>What a Christmas QR code actually does</h2>
+  <p>A QR code is not the gift, the ticket, or the donation. It is the doorway to it: the person scans, their phone opens a page, and the page does the work — plays a video greeting, sells a gift card, takes a donation. The code is printed once and cannot be un-printed; the page behind it can be fixed, updated, or replaced. So the most important decision in this guide is which kind of code you print.</p>
+  <h2>Static vs. dynamic: the decision everything else depends on</h2>
+  <p>A <b>static code</b> carries its content inside the pattern itself. What you print is what it will always do. A <b>dynamic code</b> carries a short redirect: the printed pattern stays the same, but the destination is stored by FreeQrly, so you can change where it points after printing — and see how many times it was scanned.</p>
+  <h3>Table 1 — Static vs. dynamic QR codes for Christmas uses</h3>
+  <table>
+    <thead><tr><th>Feature</th><th>Static code</th><th>Dynamic code</th></tr></thead>
+    <tbody>
+      <tr><td><b>Cost</b></td><td>Free, no sign-up</td><td>Free with a free sign-in; Pro ($9/month or $90/year) only adds unlimited dynamic codes</td></tr>
+      <tr><td><b>Can the destination change after printing?</b></td><td>No — the content is baked into the pattern</td><td>Yes — change the destination any time, the printed code stays the same</td></tr>
+      <tr><td><b>Scan tracking</b></td><td>No — nothing is recorded; the code is made in your browser and nothing is uploaded</td><td>Yes — scan statistics in your dashboard</td></tr>
+      <tr><td><b>Expiry</b></td><td>Never expires</td><td>Never expires</td></tr>
+      <tr><td><b>Setup time</b></td><td>Seconds — paste a link, download, print</td><td>A few minutes — sign in free, create the code, set the destination</td></tr>
+      <tr><td><b>Watermark</b></td><td>None</td><td>None</td></tr>
+      <tr><td><b>Best for</b></td><td>Fixed things: a video greeting, a photo album, a playlist</td><td>Things that might change: an event page, a donation total, a gift-card shop</td></tr>
+    </tbody>
+  </table>
+  <p>The rule of thumb: <b>if reprinting it would be costly or troublesome, make it dynamic.</b> A poster run of 500 copies or a church noticeboard sign is expensive to reprint. A greeting card for one person is not.</p>
+  <p>One caution about tracking: scan statistics only exist for dynamic codes. If you want to know which poster, stall, or card actually got scanned, that placement needs its own dynamic code. A single shared code across five posters tells you the total, not which poster worked.</p>
+  <h2>Which code for which Christmas job</h2>
+  <h3>Table 2 — Christmas scenario → code setup</h3>
+  <table>
+    <thead><tr><th>Scenario</th><th>Code type</th><th>Destination</th><th>Why this setup</th></tr></thead>
+    <tbody>
+      <tr><td><b>Gift cards</b></td><td>Dynamic</td><td>Your gift-card purchase page</td><td>Amounts change mid-season; repoint without reprinting</td></tr>
+      <tr><td><b>Holiday events and markets</b></td><td>Dynamic</td><td>Event page, ticket page, or market map</td><td>Dates change; scan counts show which posters bring bookings</td></tr>
+      <tr><td><b>Greeting cards</b></td><td>Static</td><td>Video greeting, photo album, or playlist link</td><td>Personal and fixed; should work next Christmas too</td></tr>
+      <tr><td><b>Donations and fundraisers</b></td><td>Dynamic</td><td>Donation form or campaign page</td><td>Totals and matched-giving windows update through December</td></tr>
+      <tr><td><b>Advent calendars</b></td><td>Static (batch)</td><td>One link per door — photo, clue, or short video</td><td>24 fixed surprises; make all 24 at once with Batch mode, up to 50 codes per batch</td></tr>
+      <tr><td><b>Thank-you notes</b></td><td>Static, or dynamic if you plan a follow-up</td><td>Thank-you page, photo set, or next event</td><td>Static for a one-off; dynamic to repoint it in January</td></tr>
+    </tbody>
+  </table>
+  <h2>How the customer journey works</h2>
+  <h3>Journey A — Gift-card purchase</h3>
+  <p><b>Figure 1</b> shows the five steps: the shopper sees the code on a gift-card display, poster, or shelf edge → scans it with their phone camera, no app needed → chooses an amount and a message and pays on the page → receives the gift card by email or as a printable card → the recipient redeems it in store or online.</p>
+  <p>The lesson is in step two: the page the code opens must be the gift-card page, not your homepage. Every extra tap loses shoppers standing in your shop, phone in hand, ready to buy.</p>
+  <h3>Journey B — Event ticket and donation</h3>
+  <p><b>Figure 2</b> shows the five steps: the guest sees the code on a poster, church noticeboard, market stall, or social post → scans it to open the event page or donation form → books a ticket, RSVPs, or donates → gets a ticket or receipt by email, and a calendar invite is added → the organizer follows up with a thank-you, and for dynamic codes the scan counts show which posters worked.</p>
+  <p>The lesson is in step four: a donation or booking that ends in silence feels broken, even when the payment went through. Confirm the action on screen and by email. For events, the Event code type adds the date, time, and place straight to the guest's calendar app in one scan.</p>
+  <h2>Gift cards: the highest-value Christmas code</h2>
+  <p>Gift cards are where a QR code most directly turns into money — and where a wrong choice costs the most.</p>
+  <ol>
+    <li><b>Use a dynamic code on the display.</b> Gift-card amounts sell out and designs change; a dynamic code lets you change the destination without reprinting the display stand. The free tier allows 20 dynamic codes, which covers a display, a poster, and a social post with room to spare; Pro ($9/month or $90/year) only removes that 20-code limit. During the current limited-time offer, free dynamic codes are unlimited; after the offer ends, the free plan includes 20 dynamic codes.</li>
+    <li><b>Print the amount range on the display, not just the code.</b> "Gift cards from $10" next to the code sets the expectation before the scan. A bare code with no context gets fewer scans, because shoppers do not know what they are scanning for.</li>
+    <li><b>Test the whole purchase on a real phone.</b> Scan the printed display, buy the cheapest card yourself, and check the email the recipient gets. If any step asks for an app download or a login the buyer does not have, fix the page.</li>
+  </ol>
+  <h2>Donations and fundraisers: trust is the product</h2>
+  <p>A donation code asks a stranger to send money to a page they have never seen. Everything about the setup should reduce doubt:</p>
+  <ul>
+    <li><b>Link to a page that names the cause, the organization, and where the money goes</b> — not to a bare payment form. It should look like the organization that printed it: same name, same logo, same cause.</li>
+    <li><b>Use a dynamic code.</b> Fundraisers change through December: a matched-giving window opens, a target is reached, a new total is posted. A dynamic code lets the same printed poster follow the campaign instead of freezing it at the November wording.</li>
+    <li><b>Put the code where people stand still.</b> A donation code on a poster people walk past gets glanced at; the same code on a collection table, a programme, or a stall counter — where people are already stopped and holding their phones — gets scanned. Add a short line next to it: "Scan to donate" beats a bare code, because it says what happens next. And if the campaign page shows a running total or thank-you message, donors who scan twice see their gift mattered.</li>
+  </ul>
+  <h2>Greeting cards, gift tags, and advent calendars</h2>
+  <p>These are the personal uses, and they are where static codes shine — the content is fixed, personal, and meant to last.</p>
+  <ul>
+    <li><b>Video greeting cards.</b> Upload the greeting somewhere with a shareable link — an unlisted YouTube video works well — make a QR code from the link, and print it inside the card. One scan and it plays. Because the code is static, it works next Christmas too, as long as the video stays online.</li>
+    <li><b>Photo albums, playlists, and invitations.</b> Link the code to a shared album or the evening's playlist — guests open it in one tap, no app to install. The Event code type carries the title, time, and place, so one scan drops the party into your guests' calendar apps.</li>
+    <li><b>A different code on every gift tag.</b> Make them all at once with Batch mode: one link per line, one code per tag, downloaded as a ZIP. Batch is static-only, with a maximum of 50 codes per batch — paste one per line, or upload a CSV or XLSX file.</li>
+    <li><b>An advent calendar with 24 doors.</b> Print a code behind each door — a photo, a clue, a tiny video. Twenty-four codes fit comfortably inside one Batch run of up to 50. Keep each door's destination short and fixed: a clue that changes after printing is a door that disappoints a child.</li>
+    <li><b>A thank-you note that outlives the tree.</b> Print the thank-you code with the gifts. A static code keeps working as long as the page behind it stays online; a dynamic code lets you repoint it after the holidays — to a January sale or next year's event — without reprinting the note.</li>
+  </ul>
+  <h2>Planning timeline: when to print</h2>
+  <p><b>Figure 4</b> shows the four-stage timeline. The order matters more than the dates: decide, test, print, then monitor.</p>
+  <ul>
+    <li><b>Early November — decide the codes and destinations.</b> List every place a code will appear and what each one should open, and decide static or dynamic for each one using Table 2. This is the cheapest moment to change your mind.</li>
+    <li><b>Mid-November — test prints and first scan checks.</b> Print one copy of each code at real size and scan it with two different phones, in the lighting where it will actually be used. Check the page it opens, not just that it scans.</li>
+    <li><b>Late November — print and place everything.</b> Print at 1024 px export or higher for anything larger than a gift tag, and 2048 px for posters. Place codes where people stand still and where the light is good — not behind glass that glares, and not at ankle height.</li>
+    <li><b>December — monitor, repoint, thank.</b> Check dynamic-code scan counts weekly: a poster with no scans may be badly placed, not unpopular. Repoint dynamic codes when details change instead of reprinting.</li>
+  </ul>
+  <h2>When details change mid-season</h2>
+  <p>Christmas plans change: an event moves, a product sells out, a donation target is reached, a market stall moves pitches. What to do depends on the code type:</p>
+  <ul>
+    <li><b>Dynamic code:</b> change the destination in your FreeQrly dashboard. The printed code does not change, and every poster, card, and stall sign follows immediately.</li>
+    <li><b>Static code, and the page behind it is yours:</b> update the page. A static code pointing at your event page still works if you edit the page itself — new time, new details, same code.</li>
+    <li><b>Static code, and the page behind it is not yours:</b> you cannot fix it. A static code pointing at a deleted video or a sold-out third-party ticket page is a dead code — which is why anything outside your control should be dynamic.</li>
+  </ul>
+  <p>FreeQrly offers 17 QR code types, batch generation, logo in the center, and 10 languages. Static codes are genuinely free: no sign-up, no watermark, never expire, generated entirely in the browser with nothing uploaded.</p>
+'''),
 ]
 PAGES += [
 dict(slug="dynamic-qr-code", dtype="url", mode="dynamic",

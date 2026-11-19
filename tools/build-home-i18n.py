@@ -64,6 +64,14 @@ for lang in LANGS:
                       lambda mm: f'placeholder="{html_escape(tr.get(mm.group(1), ""))}"', tag)
     h = re.sub(r'<[^>]*data-i18n-ph="[^"]+"[^>]*>', _ph_tag, h)
 
+    # Translate the QR preview alt / aria-label. These are hardcoded in the
+    # template's pre-rendered generator embed (not data-i18n elements), so
+    # the data-i18n pass above leaves them English. Use the same qrPreviewAlt
+    # key app.js draw() uses at runtime, so static and runtime agree.
+    _alt = html_escape(tr.get('qrPreviewAlt', 'QR code preview'))
+    h = h.replace('alt="QR code preview"', f'alt="{_alt}"')
+    h = h.replace('aria-label="QR code preview"', f'aria-label="{_alt}"')
+
     # Update title and meta description
     h = re.sub(r'<title>.*?</title>', f"<title>{html_escape(tr.get('title', ''))}</title>", h)
     h = re.sub(r'<meta name="description" content=".*?"',

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo generar 100 códigos QR a la vez: de la hoja de cálculo a los códigos impresos | FreeQrly</title>
+<meta name="description" content="Genera 100 códigos QR en dos lotes de 50. Construye la tabla, pégala o súbela, descarga un ZIP, escanea de prueba e imprime: gratis, sin registro, sin marca de agua.">
+<link rel="canonical" href="https://freeqrly.com/es/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="Cómo generar 100 códigos QR a la vez: de la hoja de cálculo a los códigos impresos | FreeQrly">
+<meta property="og:description" content="Genera 100 códigos QR en dos lotes de 50. Construye la tabla, pégala o súbela, descarga un ZIP, escanea de prueba e imprime: gratis, sin registro, sin marca de agua.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/es/blog/bulk-qr-codes-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261119">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Cómo generar 100 códigos QR a la vez: de la hoja de cálculo a los códigos impresos | FreeQrly","description":"Genera 100 códigos QR en dos lotes de 50. Construye la tabla, pégala o súbela, descarga un ZIP, escanea de prueba e imprime: gratis, sin registro, sin marca de agua.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuántos códigos QR puedo generar a la vez?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hasta 50 por lote, ya sea que pegues o subas: así que 100 códigos significan dos lotes, filas 1–50 y luego filas 51–100. Mantén el orden de las filas idéntico en ambas mitades para que los nombres de archivo correspondan a la tabla."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito una cuenta para generar códigos QR en masa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Los códigos por lotes son estáticos y se generan por completo en tu navegador, así que no se necesita registro, no se sube nada y los códigos nunca caducan ni llevan marca de agua."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden los códigos por lotes ser dinámicos o editables después de imprimir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El modo por lotes es solo estático. Si un destino cambia después de imprimir, regenera ese código y reimprímelo. Para los códigos que necesites editar después de imprimir, crea códigos dinámicos uno a uno."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tipos de archivo puedo subir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un archivo CSV (<code>.csv</code>) o un archivo Excel (<code>.xlsx</code> / <code>.xls</code>). Un CSV lleva un tipo por archivo, y el generador maneja los campos entre comillas, así que las comas dentro de un campo son seguras. Un archivo Excel puede llevar un tipo por hoja, con el nombre de la hoja eligiendo el tipo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo formateo los datos de WiFi y de contacto en el archivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los tipos de varios campos usan el carácter pipe <code>|</code> entre campos, en un orden fijo. WiFi es nombre de red, contraseña, tipo de seguridad; por ejemplo, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Una vCard es nombre, teléfono, correo, empresa, cargo, sitio web, dirección, nota; por ejemplo, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Diseñadora | https://example.com | Calle Mayor 123 | Amiga</code> (SAMPLE DATA). La plantilla, <code>freeqrly-batch-template.xlsx</code>, muestra el orden de campos para cada tipo, con encabezados y filas de ejemplo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué obtengo al descargar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada código se puede descargar individualmente como un PNG de 1024 px. El ZIP es <code>freeqrly-batch.zip</code> con <code>qr-1.png</code> hasta <code>qr-50.png</code>, cada uno un PNG de 1024 px. Sin opción SVG en el modo por lotes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé qué PNG pertenece a qué producto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Por número de fila: <code>qr-1.png</code> es la fila 1, <code>qr-37.png</code> es la fila 37. Mantén la tabla con los ZIP; renombra las copias desde la tabla para tener nombres de archivo significativos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿A qué tamaño debería imprimir los códigos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Al menos 2 × 2 cm para un código sencillo, como se muestra en la página; más grande para códigos densos o códigos escaneados desde lejos. La guía de tamaños de impresión de FreeQrly cubre tamaños por caso de uso: sea cual sea el tamaño que elijas, imprime primero una hoja y escáncala en papel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué algunos de mis códigos no escanean después de imprimir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las causas habituales, en orden: la impresión es demasiado pequeña para lo denso que es el código; el contraste es demasiado bajo; o algo — un texto, un borde, un pliegue — se ha comido la zona de silencio. Imprime más grande, oscurece los módulos, despeja el margen y prueba de nuevo en papel."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Cómo generar 100 códigos QR a la vez: de la hoja de cálculo a los códigos impresos | FreeQrly","description":"Genera 100 códigos QR en dos lotes de 50. Construye la tabla, pégala o súbela, descarga un ZIP, escanea de prueba e imprime: gratis, sin registro, sin marca de agua.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Construye tu tabla",
+      "text": "Todo lo que puede salir mal con cien códigos sale mal en la tabla, no en el generador: un error de tipeo en la fila 37 se convierte en un código equivocado en la fila 37."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pegar o subir: elige tu método de entrada",
+      "text": "El modo por lotes ofrece dos formas de entrar; la adecuada depende de dónde viva ya tu lista."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Usa el archivo de plantilla",
+      "text": "Si empiezas desde una hoja en blanco, no desde una exportación existente, no construyas las columnas de memoria."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Genera y revisa los códigos",
+      "text": "La generación es el paso más corto. Selecciona el tipo, añade tu lista — pegando o subiendo — y genera."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Descargar: uno a uno, o todo el ZIP",
+      "text": "Cada código se puede descargar individualmente como un PNG de 1024 px, útil para un código de reemplazo, o cuando estás colocando códigos uno a uno en un diseño."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Imprimir: tamaño, contraste y zona de silencio",
+      "text": "Tres cosas deciden si un código que escanea en pantalla también escanea en papel, donde vivirá: una etiqueta de estantería bajo las luces de la tienda, una etiqueta de paquete en un almacén, una tarjeta de mesa en un restaurante oscuro."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3aa-20261119"></script>
+<script src="/assets/js/acct-menu.js?v=b3aa-20261119"></script>
+<script src="/assets/js/subpage-header.js?v=b3aa-20261119"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, la mascota elefante de FreeQrly"></div>
+    <div class="kicker" style="text-align:center">Notas de campo</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">Cómo generar 100 códigos QR a la vez: de la hoja de cálculo a los códigos impresos</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">sí: 100 códigos significan dos lotes de 50. El modo por lotes de FreeQrly crea hasta 50 códigos QR a la vez, así que cien códigos son dos pasadas por la misma herramienta: construye una tabla de 100 filas, genera los primeros 50, luego los segundos 50, descarga dos archivos ZIP, escanea de prueba e imprime.</p>
+    <p class="meta" style="text-align:center">19 de noviembre de 2026 · 17 min de lectura</p>
+    <div class="prose" style="margin-top:40px">
+<p>Es gratis, no necesita registro y los códigos no llevan marca de agua. El resto cubre la tabla, el método de entrada, las comprobaciones antes de imprimir y qué hacer cuando algo se ve mal.</p>
+<p>Esta guía cubre solo códigos estáticos, porque el modo por lotes solo hace códigos estáticos. Un código estático guarda su destino dentro del patrón: nunca caduca, no necesita cuenta y se genera por completo en tu navegador: no se sube nada ni se rastrea nada. La contrapartida: un código estático no se puede editar después de imprimir. Si un enlace cambia, regenera ese código y reimprímelo. Si necesitas códigos que puedas editar después de imprimir, con estadísticas de escaneo, usa códigos dinámicos, hechos uno a uno, no por lotes.</p>
+<h2>El plan de 100 códigos de un vistazo</h2>
+<div class="table-scroll"><table>
+<tr><th>Paso</th><th>Qué haces</th><th>Qué obtienes</th></tr>
+<tr><td>1. Construir la tabla</td><td>Una fila por código, 100 filas, columnas según el tipo</td><td>Una lista limpia sin filas en blanco ni errores de tipeo</td></tr>
+<tr><td>2. Elegir el método de entrada</td><td>Pega la lista, o sube un archivo CSV o Excel</td><td>Tu lista dentro del generador por lotes</td></tr>
+<tr><td>3. Generar dos lotes</td><td>Filas 1–50, y luego filas 51–100</td><td>100 códigos, con vista previa en cuadrículas</td></tr>
+<tr><td>4. Descargar</td><td>Un ZIP por lote, o PNG individuales</td><td>archivos <code>freeqrly-batch.zip</code> con <code>qr-1.png</code> … <code>qr-50.png</code></td></tr>
+<tr><td>5. Probar y luego imprimir</td><td>Escanea el primer código, el último y uno aleatorio del medio, en papel</td><td>Códigos en los que puedes confiar en el estante, la mesa o el paquete</td></tr>
+</table></div>
+<p>Una comprobación real: el 18 de noviembre de 2026, un usuario real generó 100 códigos de esta forma — dos operaciones por lotes — y descargó un ZIP de 50 códigos, la primera descarga de ZIP que la herramienta de lotes había servido.</p>
+<h2>Paso 1: construye tu tabla</h2>
+<p>Todo lo que puede salir mal con cien códigos sale mal en la tabla, no en el generador: un error de tipeo en la fila 37 se convierte en un código equivocado en la fila 37. Dedícale diez minutos cuidadosos a la tabla primero.</p>
+<h3>La única regla: una fila, un código</h3>
+<p>Cada fila de tu tabla se convierte en exactamente un código QR, en el mismo orden. La fila 1 se convierte en <code>qr-1.png</code>, la fila 2 en <code>qr-2.png</code>, y así sucesivamente. Ese orden es la única correspondencia entre un código y su destino, así que mantén el archivo de la tabla junto a los ZIP descargados y no reordenes las filas.</p>
+<h3>Un ejemplo práctico: 100 páginas de producto</h3>
+<p>Supongamos que una pequeña tienda quiere un código por página de producto, para etiquetas de estantería. La tabla necesita solo dos columnas para un código de enlace: algo que identifique la fila, y el propio enlace. Todos los valores siguientes son SAMPLE DATA.</p>
+<div class="table-scroll"><table>
+<tr><th>Fila</th><th>SKU (SAMPLE DATA)</th><th>Producto (SAMPLE DATA)</th><th>Enlace (SAMPLE DATA)</th></tr>
+<tr><td>1</td><td>SKU-001</td><td>Taza de cerámica — Arena</td><td>https://example-shop.com/products/ceramic-mug-sand</td></tr>
+<tr><td>2</td><td>SKU-002</td><td>Taza de cerámica — Arcilla</td><td>https://example-shop.com/products/ceramic-mug-clay</td></tr>
+<tr><td>50</td><td>SKU-050</td><td>Cuenco de gres</td><td>https://example-shop.com/products/stoneware-bowl</td></tr>
+<tr><td>51</td><td>SKU-051</td><td>Delantal de algodón</td><td>https://example-shop.com/products/cotton-apron</td></tr>
+<tr><td>100</td><td>SKU-100</td><td>Tetera esmaltada</td><td>https://example-shop.com/products/enamel-kettle</td></tr>
+</table></div>
+<p>Las filas 1–50 son el lote 1; las filas 51–100 son el lote 2. La columna SKU solo ayuda a una persona a leer la hoja; el generador usa la columna de enlace. Si tus destinos ya están en una hoja de cálculo — una exportación de inventario, una lista de productos, una lista de invitados — copia la columna de destino en una hoja nueva en lugar de subir toda la exportación.</p>
+<h3>Columnas por tipo</h3>
+<p>El modo por lotes admite 16 tipos: url, text, email, sms, phone, geo, wifi, vcard, event, bitcoin, coupon, appstore, review, mp3, google-form y menu. Los tipos de un solo campo necesitan una columna. Los tipos de varios campos empaquetan sus campos en una línea con el carácter pipe <code>|</code> como separador, los campos en el orden mostrado, con un espacio a cada lado del pipe para legibilidad.</p>
+<div class="table-scroll"><table>
+<tr><th>Tipo</th><th>Campos, en orden (separar con <code>|</code>)</th><th>Ejemplo (SAMPLE DATA)</th></tr>
+<tr><td>url</td><td>Enlace</td><td><code>https://example.com/products/mug</code></td></tr>
+<tr><td>text</td><td>Cualquier palabra</td><td><code>Escanea para ver el menú de hoy</code></td></tr>
+<tr><td>email</td><td>Destinatario | asunto | cuerpo</td><td><code>hello@example.com | Mesa lista | Tu mesa para dos está lista a las 7 pm</code></td></tr>
+<tr><td>sms</td><td>Número de teléfono | mensaje</td><td><code>+1 555 010 2030 | Hola, me gustaría reservar una mesa</code></td></tr>
+<tr><td>phone</td><td>Número de teléfono</td><td><code>+1 555 010 2030</code></td></tr>
+<tr><td>geo</td><td>Latitud, longitud</td><td><code>40.7411, -73.9897</code></td></tr>
+<tr><td>wifi</td><td>Nombre de red | contraseña | tipo de seguridad</td><td><code>MyWiFi | password | WPA</code></td></tr>
+<tr><td>vcard</td><td>Nombre | teléfono | correo | empresa | cargo | sitio web | dirección | nota</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Diseñadora | https://example.com | Calle Mayor 123 | Amiga</code></td></tr>
+<tr><td>event</td><td>Título | inicio | fin | ubicación | descripción</td><td><code>Feria de Primavera | 2027-04-10T10:00 | 2027-04-10T18:00 | Ayuntamiento | Música en vivo, puestos de comida y un mercado de artesanía</code></td></tr>
+<tr><td>bitcoin</td><td>Dirección | cantidad | etiqueta | mensaje</td><td><code>bc1qexampleaddress | 0.001 | Puesto de café | Gracias por el café</code></td></tr>
+<tr><td>coupon</td><td>Código | descripción</td><td><code>SPRING10 | 10% de descuento este fin de semana</code></td></tr>
+<tr><td>appstore</td><td>Enlace iOS | enlace Android (se usa iOS cuando está presente; si no, Android)</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
+<tr><td>review</td><td>Enlace de página de reseñas</td><td><code>https://example.com/review-us</code></td></tr>
+<tr><td>mp3</td><td>Enlace de audio</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
+<tr><td>google-form</td><td>Enlace de formulario</td><td><code>https://forms.example.com/feedback</code></td></tr>
+<tr><td>menu</td><td>Enlace de menú</td><td><code>https://example.com/menu</code></td></tr>
+</table></div>
+<p>Los órdenes de campos anteriores coinciden con lo que lee el generador por lotes: la pista de formato bajo el área de texto muestra el mismo orden. Primero, el pipe es el separador, así que no puede aparecer dentro de un campo: una contraseña WiFi que contenga <code>|</code> se dividirá en los campos equivocados. Segundo, el orden de los campos es fijo. Para WiFi es nombre de red, contraseña, tipo de seguridad: <code>MyWiFi | password | WPA</code>, exactamente como se muestra. Un orden invertido también genera un código, pero el teléfono leerá los campos en los lugares equivocados. Tercero, mantén los destinos cortos donde puedas. Un enlace corto produce un patrón más amplio con módulos más grandes, que escanea con más fiabilidad en tamaños pequeños de impresión. Acorta los enlaces largos antes de ponerlos en la tabla, y prueba primero los enlaces acortados.</p>
+<h3>Limpiar la tabla antes de generar</h3>
+<p>Repasa esta lista de verificación una vez, con las 100 filas, antes de abrir el generador:</p>
+<ol>
+<li><strong>Sin filas en blanco.</strong> Una línea en blanco en una lista pegada se omite, pero el generador puede leer una fila en blanco en una hoja de cálculo como un elemento vacío, así que elimina las filas vacías.</li>
+<li><strong>Sin fila de encabezado en el pegado.</strong> Deja el encabezado fuera del texto pegado. (Una fila de encabezado de CSV se detecta y se omite automáticamente — ver Paso 2 — pero el texto pegado no tiene ayuda.)</li>
+<li><strong>Sin espacios al final.</strong> Un espacio al final de un enlace se convierte en parte del contenido del código. En una hoja de cálculo, selecciona la columna y recórtala.</li>
+<li><strong>Cada enlace abre.</strong> Revisa al azar el primero, el último y algunos enlaces del medio. Un enlace que da 404 en el navegador da 404 al escanearlo.</li>
+<li><strong>Un tipo por lote.</strong> Una subida de CSV usa un solo tipo: el tipo seleccionado en el generador. No mezcles filas de WiFi y filas de enlaces en un lote; divide los trabajos mixtos por tipo, o usa la subida de Excel descrita a continuación.</li>
+</ol>
+<h2>Paso 2: pegar o subir, elige tu método de entrada</h2>
+<p>El modo por lotes ofrece dos formas de entrar; la adecuada depende de dónde viva ya tu lista.</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>Pegar</th><th>Subir un archivo</th></tr>
+<tr><td><strong>Cómo</strong></td><td>Copia la lista, un elemento por línea, en el área de texto</td><td>Sube un archivo CSV (<code>.csv</code>) o Excel (<code>.xlsx</code> / <code>.xls</code>)</td></tr>
+<tr><td><strong>Mejor para</strong></td><td>Listas cortas, o una lista en un documento o correo en lugar de una hoja de cálculo</td><td>Listas ya en una hoja de cálculo, y listas de más de una docena de filas</td></tr>
+<tr><td><strong>Manejo de tipos</strong></td><td>El tipo seleccionado se aplica a cada línea</td><td>CSV: un tipo por archivo. Excel: una hoja por tipo; el nombre de la hoja elige el tipo</td></tr>
+<tr><td><strong>Fila de encabezado</strong></td><td>No incluyas una; se convertiría en un código</td><td>CSV: una fila de encabezado se detecta y se omite automáticamente</td></tr>
+<tr><td><strong>Límite</strong></td><td>50 códigos por lote</td><td>50 códigos por lote</td></tr>
+</table></div>
+<p>Para 100 códigos, la subida suele ser mejor: el archivo mantiene tu tabla intacta, el generador se encarga de la fila de encabezado, y puedes volver a subir el mismo archivo si detectas un error. Pegar es más rápido para una lista corta, o una que venga de un lugar que no es una hoja de cálculo.</p>
+<h3>El atajo de Excel: una hoja por tipo</h3>
+<p>Solo la subida de Excel puede llevar varios tipos en un archivo. Cada hoja es un tipo, y el nombre de la hoja elige el tipo: <code>url</code>, <code>website</code> o <code>link</code> para enlaces; <code>text</code>; <code>email</code>; <code>sms</code>; <code>phone</code>; <code>geo</code>; <code>wifi</code>; <code>vcard</code> o <code>contact</code> para contactos; <code>event</code>. Una hoja cuyo nombre no se reconoce usa url por defecto, así que revisa los nombres antes de subir. Los tipos más allá de esos nueve nombres de hoja no se eligen por nombre de hoja; para esos, usa la subida de CSV o el pegado con el tipo seleccionado.</p>
+<h2>Paso 3: usa el archivo de plantilla</h2>
+<p>Si empiezas desde una hoja en blanco, no desde una exportación existente, no construyas las columnas de memoria. FreeQrly ofrece una plantilla descargable, <code>freeqrly-batch-template.xlsx</code>, con una hoja por tipo, encabezados y filas de ejemplo rellenadas. Descárgala, sustituye las filas de ejemplo por las tuyas, elimina los ejemplos que no necesites y sube el resultado. La plantilla es la forma más rápida de acertar el orden de los campos: para tipos de varios campos como WiFi y vCard, la fila de ejemplo lo muestra. La hoja de vCard tiene 8 columnas — nombre, teléfono, correo, empresa, cargo, sitio web, dirección, nota — y el modo por lotes lee las ocho, en el orden de la plantilla, igual que el formulario de contacto de un solo código, así que la empresa y el cargo también aparecen en el contacto guardado.</p>
+<p>También hay una plantilla CSV solo para el tipo seleccionado. Para un trabajo de tipos mixtos, la plantilla de Excel es la adecuada.</p>
+<p>Guarda dos copias de tu archivo terminado: el archivo de trabajo que subes y un original intacto guardado con los ZIP descargados, para que los números de fila sigan respondiendo «qué código es qué producto» dentro de tres meses.</p>
+<h2>Paso 4: genera y revisa los códigos</h2>
+<p>La generación es el paso más corto. Selecciona el tipo, añade tu lista — pegando o subiendo — y genera. Cada elemento se convierte en su propio código, con vista previa en una cuadrícula en la página. Luego, antes de que se descargue o imprima nada, revisa la cuadrícula:</p>
+<ul>
+<li><strong>Cuenta los códigos.</strong> Cada lote debería mostrar 50. Si la cuenta es menor, se saltó una fila, normalmente una línea en blanco. Vuelve a la tabla.</li>
+<li><strong>Lee el primer y el último código.</strong> Escanea el primer código y luego el último. Si ambos abren el destino correcto, la configuración está bien; los códigos del medio usan los mismos ajustes. Aun así, revisa al azar cualquier fila que hayas escrito a mano.</li>
+<li><strong>Revisa al azar un código de varios campos.</strong> Si tu lote es de WiFi o vCard, escanea uno y confirma que el teléfono se une a la red o guarda el contacto. Un código que escanea pero rellena el campo equivocado es un fallo silencioso.</li>
+</ul>
+<p>Prueba primero en pantalla: probar en pantalla es gratis e instantáneo. Pero un código que escanea en una pantalla brillante puede fallar en papel, por eso importa la prueba de impresión del Paso 6.</p>
+<h2>Paso 5: descarga, uno a uno o todo el ZIP</h2>
+<p>Cada código se puede descargar individualmente como un PNG de 1024 px, útil para un código de reemplazo, o cuando estás colocando códigos uno a uno en un diseño. Para cien códigos, el ZIP es la opción práctica: un clic descarga <code>freeqrly-batch.zip</code> que contiene <code>qr-1.png</code> hasta <code>qr-50.png</code>, cada uno un PNG de 1024 px. No hay opción SVG en el modo por lotes.</p>
+<p>Dos cosas hay que hacer bien al descargar. Primero, mantén los dos ZIP separados: ambos llegan con el mismo nombre de archivo, <code>freeqrly-batch.zip</code>, así que el segundo sobrescribirá al primero en la misma carpeta. Renombra el primero a <code>batch-1-rows-1-50.zip</code> antes de descargar el segundo, o descarga cada uno en su propia carpeta. Segundo, mantén la correspondencia: los nombres de archivo dentro del ZIP son números de fila, no nombres de producto. Si renombras los PNG, renómbralos desde la tabla — <code>qr-37.png</code> se convierte en <code>SKU-037-mug.png</code>, por ejemplo — y trabaja desde una copia, manteniendo intacto el ZIP original.</p>
+<p>No se necesita iniciar sesión: los códigos por lotes son estáticos y se generan en el navegador, así que no hay cuenta que crear, ni marca de agua, ni caducidad.</p>
+<h2>Paso 6: imprime, tamaño, contraste y zona de silencio</h2>
+<p>Tres cosas deciden si un código que escanea en pantalla también escanea en papel, donde vivirá: una etiqueta de estantería bajo las luces de la tienda, una etiqueta de paquete en un almacén, una tarjeta de mesa en un restaurante oscuro.</p>
+<h3>Tamaño</h3>
+<p>La guía de tamaños de impresión de FreeQrly cubre tamaños por caso de uso: tarjetas, volantes, carteles. Como mínimo, un código sencillo debería imprimirse al menos a 2 × 2 cm, como se muestra en la página. Los códigos más densos necesitan más espacio: al mismo tamaño de impresión, un código con un destino largo necesita más espacio que uno con un destino corto, y los códigos escaneados desde lejos deben ser más grandes en proporción a la distancia. Ante la duda, imprime una etiqueta de prueba y escáncala desde la distancia a la que estarán tus clientes.</p>
+<h3>Contraste y zona de silencio</h3>
+<p>El contraste nunca cambia: módulos oscuros sobre fondo claro, con contraste fuerte. Un código en gris pálido sobre blanco, o en un color de marca demasiado claro, fallará en los teléfonos que no puedes probar: cámaras viejas, habitaciones oscuras, reflejos. Mantén los módulos oscuros y el fondo claro y sencillo.</p>
+<p>Alrededor de cada código está la zona de silencio: el margen en blanco que permite a una cámara encontrar los bordes del código. No dejes que un texto, un borde, un pliegue o una etiqueta vecina se coma ese margen. Dale al código su propio espacio despejado de fondo claro, con la zona de silencio libre por los cuatro lados.</p>
+<h3>Papel, tinta y la prueba de impresión</h3>
+<p>El papel mate funciona mejor que el brillante bajo luces intensas, porque el brillo refleja el resplandor. Si las etiquetas deben ser brillantes, haz la prueba de escaneo bajo las luces bajo las que estarán. Siempre haz una prueba de impresión antes de la tirada completa: imprime una hoja y escanea el primer código, el último y uno aleatorio del medio en el papel, con dos teléfonos si puedes: un iPhone y un Android. Si los tres escanean al primer intento, imprime los cien. Si uno duda, imprime más grande, sube el contraste o acorta el destino.</p>
+<h2>Errores comunes y soluciones</h2>
+<div class="table-scroll"><table>
+<tr><th>Error</th><th>Qué ves</th><th>Corrección</th></tr>
+<tr><td>Pegar la fila de encabezado</td><td>El primer código abre una página llamada «Link», o codifica la palabra «Link» como texto</td><td>Pega solo las filas de datos</td></tr>
+<tr><td>Una línea en blanco en el pegado</td><td>Menos códigos que filas</td><td>Elimina las líneas en blanco; cuenta la cuadrícula antes de descargar</td></tr>
+<tr><td>Mezclar tipos en un lote de CSV</td><td>Las filas de WiFi se convierten en códigos de enlace, o las filas de vCard se convierten en texto plano</td><td>Un tipo por lote de CSV; divide los trabajos mixtos por tipo, o usa Excel con una hoja por tipo</td></tr>
+<tr><td>Nombre de hoja de Excel mal escrito</td><td>Los códigos de esa hoja salen como códigos URL</td><td>Usa los nombres de hoja exactamente como se listan; un nombre no reconocido usa url por defecto</td></tr>
+<tr><td>Un <code>|</code> dentro de un campo</td><td>Un código WiFi con la contraseña dividida en dos campos</td><td>Quita el pipe del campo, o cambia la contraseña</td></tr>
+<tr><td>Campos en el orden equivocado</td><td>El código escanea, pero el teléfono se une a la red equivocada o guarda el detalle equivocado</td><td>Reconstruye la fila en el orden de campos de la plantilla y regenera</td></tr>
+<tr><td>Enlaces largos en tamaño de impresión diminuto</td><td>Los códigos escanean en pantalla pero no en la etiqueta</td><td>Acorta los enlaces, o imprime más grande: prueba en papel</td></tr>
+<tr><td>Sobrescribir el primer ZIP</td><td>Solo un <code>freeqrly-batch.zip</code> en la carpeta, y es el lote 2</td><td>Renombra el lote 1 antes de descargar el lote 2</td></tr>
+<tr><td>Imprimir sin una prueba en papel</td><td>Los códigos que se leen en pantalla fallan bajo las luces de la tienda</td><td>Imprime una hoja; escanea el primer código, el último y uno del medio en papel</td></tr>
+<tr><td>Cambiar un enlace después de imprimir</td><td>El código impreso sigue abriendo la página antigua</td><td>Los códigos estáticos no se pueden editar: regenera ese código y reimprime; para códigos editables, usa un código dinámico</td></tr>
+</table></div>
+<h2>Cuándo el modo por lotes es la herramienta equivocada</h2>
+<p>El modo por lotes es la herramienta adecuada cuando los destinos están definidos y el problema es la cantidad. Es la herramienta equivocada en tres casos. Primero, necesitas editar los códigos después de imprimir: un enlace de menú que cambia cada mes necesita un código dinámico, hecho uno a uno y editable desde el panel. El plan gratuito permite 20 códigos dinámicos; Pro cuesta $9/mes o $90/año, y su única diferencia con el plan gratuito son los códigos dinámicos ilimitados. Durante la oferta actual por tiempo limitado, los códigos dinámicos gratuitos son ilimitados; cuando termine la oferta, el plan gratuito incluirá 20 códigos dinámicos. Segundo, cada código necesita un estilo distinto: el modo por lotes hace el conjunto con un solo estilo consistente, así que usa el generador principal uno a uno. Tercero, necesitas estadísticas de escaneo por código: los códigos estáticos no registran escaneos, así que usa códigos dinámicos — y los códigos dinámicos no vienen en un lote de 50.</p>
+<h2>El flujo de trabajo, en un párrafo</h2>
+<p>Construye una tabla, una fila por código, con las columnas según el tipo. Límpiala: sin filas en blanco, sin encabezado en el pegado, cada enlace revisado. Súbela o pégala en dos mitades de 50, usando la plantilla si empiezas desde cero. Cuenta la cuadrícula, escanea el primer y el último código, descarga los ZIP en carpetas separadas con la tabla al lado. Imprime una hoja, escáncala en papel y luego imprime los cien. Cien códigos no son cien trabajos pequeños. Son una tabla, dos lotes y una prueba de impresión.</p>
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presentando un código QR"></div>
+      <div>
+        <h3>Pruébalo tú mismo — gratis</h3>
+        <p>Todo lo de este artículo funciona en el estudio de FreeQrly ahora mismo. Códigos estáticos, los 17 tipos de contenido, exportación en PNG y SVG.</p>
+        <a class="btn" href="/es/#studio">Abrir el generador</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Seguir leyendo</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/es/blog/qr-codes-for-event-organizers-checklist/"><b>Códigos QR para organizadores de eventos: la lista de verificación completa (antes, durante y después)</b></a>
+        <a class="rel-card" href="/es/blog/static-vs-dynamic-qr-codes/"><b>Códigos QR estáticos frente a dinámicos: ¿gratis para siempre o una suscripción?</b></a>
+        <a class="rel-card" href="/es/blog/why-is-my-qr-code-not-working/"><b>¿Código QR no funciona? 7 arreglos que ayudan</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Bueno saberlo</h2>
+    <details><summary><span>¿Cuántos códigos QR puedo generar a la vez?</span></summary><p>Hasta 50 por lote, ya sea que pegues o subas: así que 100 códigos significan dos lotes, filas 1–50 y luego filas 51–100. Mantén el orden de las filas idéntico en ambas mitades para que los nombres de archivo correspondan a la tabla.</p></details>
+    <details><summary><span>¿Necesito una cuenta para generar códigos QR en masa?</span></summary><p>No. Los códigos por lotes son estáticos y se generan por completo en tu navegador, así que no se necesita registro, no se sube nada y los códigos nunca caducan ni llevan marca de agua.</p></details>
+    <details><summary><span>¿Pueden los códigos por lotes ser dinámicos o editables después de imprimir?</span></summary><p>No. El modo por lotes es solo estático. Si un destino cambia después de imprimir, regenera ese código y reimprímelo. Para los códigos que necesites editar después de imprimir, crea códigos dinámicos uno a uno.</p></details>
+    <details><summary><span>¿Qué tipos de archivo puedo subir?</span></summary><p>Un archivo CSV (<code>.csv</code>) o un archivo Excel (<code>.xlsx</code> / <code>.xls</code>). Un CSV lleva un tipo por archivo, y el generador maneja los campos entre comillas, así que las comas dentro de un campo son seguras. Un archivo Excel puede llevar un tipo por hoja, con el nombre de la hoja eligiendo el tipo.</p></details>
+    <details><summary><span>¿Cómo formateo los datos de WiFi y de contacto en el archivo?</span></summary><p>Los tipos de varios campos usan el carácter pipe <code>|</code> entre campos, en un orden fijo. WiFi es nombre de red, contraseña, tipo de seguridad; por ejemplo, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Una vCard es nombre, teléfono, correo, empresa, cargo, sitio web, dirección, nota; por ejemplo, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Diseñadora | https://example.com | Calle Mayor 123 | Amiga</code> (SAMPLE DATA). La plantilla, <code>freeqrly-batch-template.xlsx</code>, muestra el orden de campos para cada tipo, con encabezados y filas de ejemplo.</p></details>
+    <details><summary><span>¿Qué obtengo al descargar?</span></summary><p>Cada código se puede descargar individualmente como un PNG de 1024 px. El ZIP es <code>freeqrly-batch.zip</code> con <code>qr-1.png</code> hasta <code>qr-50.png</code>, cada uno un PNG de 1024 px. Sin opción SVG en el modo por lotes.</p></details>
+    <details><summary><span>¿Cómo sé qué PNG pertenece a qué producto?</span></summary><p>Por número de fila: <code>qr-1.png</code> es la fila 1, <code>qr-37.png</code> es la fila 37. Mantén la tabla con los ZIP; renombra las copias desde la tabla para tener nombres de archivo significativos.</p></details>
+    <details><summary><span>¿A qué tamaño debería imprimir los códigos?</span></summary><p>Al menos 2 × 2 cm para un código sencillo, como se muestra en la página; más grande para códigos densos o códigos escaneados desde lejos. La guía de tamaños de impresión de FreeQrly cubre tamaños por caso de uso: sea cual sea el tamaño que elijas, imprime primero una hoja y escáncala en papel.</p></details>
+    <details><summary><span>¿Por qué algunos de mis códigos no escanean después de imprimir?</span></summary><p>Las causas habituales, en orden: la impresión es demasiado pequeña para lo denso que es el código; el contraste es demasiado bajo; o algo — un texto, un borde, un pliegue — se ha comido la zona de silencio. Imprime más grande, oscurece los módulos, despeja el margen y prueba de nuevo en papel.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Códigos dinámicos ilimitados — oferta por tiempo limitado.</h3>
+        <p>Inicia sesión gratis y crea todos los que necesites. Cada código sigue editable tras imprimirlo y nunca caduca.</p>
+      </div>
+      <a class="fctaBtn" href="/es/login/">Empezar gratis</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/es/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Códigos QR bonitos, creados en tu navegador. Los estáticos nunca caducan.</p>
+        <div class="fmade">Códigos estáticos, hechos en tu navegador.</div>
+      </div>
+      <div class="fcol"><h4>Producto</h4><a href="/es/">Generador QR</a><a href="/es/batch-qr-code/">QR por lotes</a><a href="/es/qr-code-with-logo/">QR con logo</a><a href="/es/scan/">Escáner QR</a><a href="/es/barcode-generator/">Generador de códigos de barras</a><a href="/es/pricing/">Precios</a></div>
+      <div class="fcol"><h4>Recursos</h4><a href="/es/blog/">Blog</a><a href="/es/developers/">Desarrolladores · API y MCP</a><a href="/es/blog/qr-code-print-size-guide/">Guía de tamaño de impresión</a><a href="/es/#faq">Preguntas frecuentes</a></div>
+      <div class="fcol"><h4>Empresa</h4><a href="/es/about/">Acerca de</a><a href="mailto:hello@freeqrly.com">Contacto</a></div>
+      <div class="fcol"><h4>Legal</h4><a href="/es/privacy/">Política de privacidad</a><a href="/es/terms/">Términos del servicio</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

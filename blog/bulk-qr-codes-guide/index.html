@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Generate 100 QR Codes at Once: From Spreadsheet to Printed Codes | FreeQrly</title>
+<meta name="description" content="Generate 100 QR codes in two batches of 50. Build the table, paste or upload it, download one ZIP, test-scan, and print — free, no sign-up, no watermark.">
+<link rel="canonical" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="How to Generate 100 QR Codes at Once: From Spreadsheet to Printed Codes | FreeQrly">
+<meta property="og:description" content="Generate 100 QR codes in two batches of 50. Build the table, paste or upload it, download one ZIP, test-scan, and print — free, no sign-up, no watermark.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="../../assets/css/main.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261119">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Generate 100 QR Codes at Once: From Spreadsheet to Printed Codes | FreeQrly","description":"Generate 100 QR codes in two batches of 50. Build the table, paste or upload it, download one ZIP, test-scan, and print — free, no sign-up, no watermark.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many QR codes can I generate at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to 50 per batch, whether you paste or upload — so 100 codes means two batches: rows 1–50, then rows 51–100. Keep the row order identical in both halves so the file names map back to the table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account to generate QR codes in bulk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Batch codes are static and generated entirely in your browser, so no sign-up is needed, nothing uploaded, and the codes never expire and carry no watermark."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can batch codes be dynamic or editable after printing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Batch mode is static only. If a destination changes after printing, regenerate that code and reprint it. For codes you need to edit after printing, create dynamic codes one at a time instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What file types can I upload?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CSV file (<code>.csv</code>) or an Excel file (<code>.xlsx</code> / <code>.xls</code>). A CSV carries one type per file, and the generator handles quoted fields, so commas inside a field are safe. An Excel file can carry one type per sheet, the sheet name picking the type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I format WiFi and contact details in the file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multi-field types use the pipe character <code>|</code> between fields, in a fixed order. WiFi is network name, password, security type — for example, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). A vCard is name, phone, email, company, title, website, address, note — for example, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code> (SAMPLE DATA). The template, <code>freeqrly-batch-template.xlsx</code>, shows the field order for each type, with headers and example rows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I get when I download?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each code can be downloaded individually as a 1024 px PNG. The ZIP is <code>freeqrly-batch.zip</code> with <code>qr-1.png</code> through <code>qr-50.png</code>, each a 1024 px PNG. No SVG option in batch mode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know which PNG belongs to which product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By row number: <code>qr-1.png</code> is row 1, <code>qr-37.png</code> is row 37. Keep the table with the ZIPs; rename copies from the table for meaningful file names."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size should I print the codes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At least 2 × 2 cm for a plain code, as shown on the page; larger for dense codes or codes scanned from a distance. FreeQrly's print-size guide covers sizes by use case — whatever size you choose, print one sheet first and scan it on paper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some of my codes fail to scan after printing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The usual causes, in order: the print is too small for how dense the code is; the contrast is too low; or something — text, a border, a fold — has eaten into the quiet zone. Print larger, darken the modules, clear the margin, and test again on paper."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to Generate 100 QR Codes at Once: From Spreadsheet to Printed Codes | FreeQrly","description":"Generate 100 QR codes in two batches of 50. Build the table, paste or upload it, download one ZIP, test-scan, and print — free, no sign-up, no watermark.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Build your table",
+      "text": "Everything that can go wrong with a hundred codes goes wrong in the table, not the generator — a typo in row 37 becomes a wrong code in row 37."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Paste or upload — pick your input method",
+      "text": "Batch mode offers two ways in; the right one depends on where your list already lives."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Use the template file",
+      "text": "If you are starting from a blank sheet, not an existing export, do not build the columns from memory."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Generate and check the codes",
+      "text": "Generation is the shortest step. Select the type, add your list — by pasting or uploading — and generate."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download — one by one, or the whole ZIP",
+      "text": "Each code can be downloaded individually as a 1024 px PNG — useful for one replacement code, or when you are placing codes one at a time into a design."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Print — size, contrast, and the quiet zone",
+      "text": "Three things decide whether a code that scans on screen also scans on paper, where it will actually live: a shelf label under shop lights, a parcel label in a warehouse, a table card in a dim restaurant."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3aa-20261119"></script>
+<script src="/assets/js/acct-menu.js?v=b3aa-20261119"></script>
+<script src="/assets/js/subpage-header.js?v=b3aa-20261119"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly the FreeQrly elephant mascot"></div>
+    <div class="kicker" style="text-align:center">Field notes</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">How to Generate 100 QR Codes at Once: From Spreadsheet to Printed Codes</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">yes — 100 codes means two batches of 50. FreeQrly's batch mode makes up to 50 QR codes at a time, so a hundred codes is two runs through the same tool: build one table of 100 rows, generate the first 50, then the second 50, download two ZIP files, test-scan, and print.</p>
+    <p class="meta" style="text-align:center">November 19, 2026 · 17 min read</p>
+    <div class="prose" style="margin-top:40px">
+<p>It is free, needs no sign-up, and the codes carry no watermark. The rest covers the table, the input method, the checks before printing, and what to do when something looks off.</p>
+<p>This guide covers static codes only, because batch mode makes only static codes. A static code holds its destination inside the pattern: it never expires, needs no account, and is generated entirely in your browser — nothing uploaded, nothing tracked. The trade-off: a static code cannot be edited after printing. If a link changes, regenerate that code and reprint it. If you need codes you can edit after printing, with scan statistics, use dynamic codes — made one at a time, not in batches.</p>
+<h2>The 100-code plan at a glance</h2>
+<div class="table-scroll"><table>
+<tr><th>Step</th><th>What you do</th><th>What you get</th></tr>
+<tr><td>1. Build the table</td><td>One row per code, 100 rows, columns to match the type</td><td>A clean list with no blank rows and no typos</td></tr>
+<tr><td>2. Pick the input method</td><td>Paste the list, or upload a CSV or Excel file</td><td>Your list inside the batch generator</td></tr>
+<tr><td>3. Generate two batches</td><td>Rows 1–50, then rows 51–100</td><td>100 codes, previewed in grids</td></tr>
+<tr><td>4. Download</td><td>One ZIP per batch, or single PNGs</td><td><code>freeqrly-batch.zip</code> files with <code>qr-1.png</code> … <code>qr-50.png</code></td></tr>
+<tr><td>5. Test, then print</td><td>Scan the first, last, and a random middle code — on paper</td><td>Codes you can trust on the shelf, table, or parcel</td></tr>
+</table></div>
+<p>One real-world check: on 18 November 2026, a real user generated 100 codes this way — two batch operations — and downloaded a 50-code ZIP, the first ZIP download the batch tool had ever served.</p>
+<h2>Step 1: Build your table</h2>
+<p>Everything that can go wrong with a hundred codes goes wrong in the table, not the generator — a typo in row 37 becomes a wrong code in row 37. Give the table ten careful minutes first.</p>
+<h3>The one rule: one row, one code</h3>
+<p>Every row of your table becomes exactly one QR code, in the same order. Row 1 becomes <code>qr-1.png</code>, row 2 becomes <code>qr-2.png</code>, and so on. That order is the only mapping between a code and its destination, so keep the table file next to the downloaded ZIPs and do not reorder the rows.</p>
+<h3>A worked example: 100 product pages</h3>
+<p>Suppose a small shop wants one code per product page, for shelf labels. The table needs only two columns for a link code: something that identifies the row, and the link itself. All values below are SAMPLE DATA.</p>
+<div class="table-scroll"><table>
+<tr><th>Row</th><th>SKU (SAMPLE DATA)</th><th>Product (SAMPLE DATA)</th><th>Link (SAMPLE DATA)</th></tr>
+<tr><td>1</td><td>SKU-001</td><td>Ceramic Mug — Sand</td><td>https://example-shop.com/products/ceramic-mug-sand</td></tr>
+<tr><td>2</td><td>SKU-002</td><td>Ceramic Mug — Clay</td><td>https://example-shop.com/products/ceramic-mug-clay</td></tr>
+<tr><td>50</td><td>SKU-050</td><td>Stoneware Bowl</td><td>https://example-shop.com/products/stoneware-bowl</td></tr>
+<tr><td>51</td><td>SKU-051</td><td>Cotton Apron</td><td>https://example-shop.com/products/cotton-apron</td></tr>
+<tr><td>100</td><td>SKU-100</td><td>Enamel Kettle</td><td>https://example-shop.com/products/enamel-kettle</td></tr>
+</table></div>
+<p>Rows 1–50 are batch 1; rows 51–100 are batch 2. The SKU column only helps a human read the sheet; the generator uses the link column. If your destinations are already in a spreadsheet — an inventory export, a product list, a guest list — copy the destination column into a fresh sheet instead of uploading the whole export.</p>
+<h3>Columns per type</h3>
+<p>Batch mode supports 16 types: url, text, email, sms, phone, geo, wifi, vcard, event, bitcoin, coupon, appstore, review, mp3, google-form, and menu. Single-field types need one column. Multi-field types pack their fields into one line with the pipe character <code>|</code> as the separator, fields in the order shown, with a space on each side of the pipe for readability.</p>
+<div class="table-scroll"><table>
+<tr><th>Type</th><th>Fields, in order (separate with <code>|</code>)</th><th>Example (SAMPLE DATA)</th></tr>
+<tr><td>url</td><td>Link</td><td><code>https://example.com/products/mug</code></td></tr>
+<tr><td>text</td><td>Any words</td><td><code>Scan for today's menu</code></td></tr>
+<tr><td>email</td><td>Recipient | subject | body</td><td><code>hello@example.com | Table ready | Your table for two is ready at 7 pm</code></td></tr>
+<tr><td>sms</td><td>Phone number | message</td><td><code>+1 555 010 2030 | Hi, I'd like to book a table</code></td></tr>
+<tr><td>phone</td><td>Phone number</td><td><code>+1 555 010 2030</code></td></tr>
+<tr><td>geo</td><td>Latitude, longitude</td><td><code>40.7411, -73.9897</code></td></tr>
+<tr><td>wifi</td><td>Network name | password | security type</td><td><code>MyWiFi | password | WPA</code></td></tr>
+<tr><td>vcard</td><td>Name | phone | email | company | title | website | address | note</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code></td></tr>
+<tr><td>event</td><td>Title | start | end | location | description</td><td><code>Spring Fair | 2027-04-10T10:00 | 2027-04-10T18:00 | Town Hall | Live music, food stalls, and a craft market</code></td></tr>
+<tr><td>bitcoin</td><td>Address | amount | label | message</td><td><code>bc1qexampleaddress | 0.001 | Coffee stall | Thanks for the coffee</code></td></tr>
+<tr><td>coupon</td><td>Code | description</td><td><code>SPRING10 | 10% off this weekend</code></td></tr>
+<tr><td>appstore</td><td>iOS link | Android link (iOS is used when present, otherwise Android)</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
+<tr><td>review</td><td>Review-page link</td><td><code>https://example.com/review-us</code></td></tr>
+<tr><td>mp3</td><td>Audio link</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
+<tr><td>google-form</td><td>Form link</td><td><code>https://forms.example.com/feedback</code></td></tr>
+<tr><td>menu</td><td>Menu link</td><td><code>https://example.com/menu</code></td></tr>
+</table></div>
+<p>The field orders above match what the batch generator reads — the format hint under the textarea shows the same order. First, the pipe is the separator, so it cannot appear inside a field: a WiFi password containing <code>|</code> will split into the wrong fields. Second, field order is fixed. For WiFi it is network name, password, security type — <code>MyWiFi | password | WPA</code>, exactly as shown. A reversed order still generates a code, but the phone will read the fields in the wrong places. Third, keep destinations short where you can. A short link makes a roomier pattern with larger modules, which scans more reliably at small print sizes. Shorten long links before they go in the table — and test the shortened links first.</p>
+<h3>Cleaning the table before you generate</h3>
+<p>Run through this checklist once, on all 100 rows, before you open the generator:</p>
+<ol>
+<li><strong>No blank rows.</strong> A blank line in a pasted list is skipped, but the generator may still read a blank row in a spreadsheet as an empty item, so delete empty rows.</li>
+<li><strong>No header row in the paste.</strong> Leave the header out of pasted text. (A CSV header row is auto-detected and skipped — see Step 2 — but pasted text gets no help.)</li>
+<li><strong>No trailing spaces.</strong> A space at the end of a link becomes part of the code's content. In a spreadsheet, select the column and trim it.</li>
+<li><strong>Every link opens.</strong> Spot-check the first, last, and a few middle links. A link that 404s in the browser 404s when scanned.</li>
+<li><strong>One type per batch.</strong> A CSV upload uses a single type: the type selected in the generator. Do not mix WiFi rows and link rows in one batch; split mixed jobs by type, or use the Excel upload described next.</li>
+</ol>
+<h2>Step 2: Paste or upload — pick your input method</h2>
+<p>Batch mode offers two ways in; the right one depends on where your list already lives.</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>Paste</th><th>Upload a file</th></tr>
+<tr><td><strong>How</strong></td><td>Copy the list, one item per line, into the textarea</td><td>Upload a CSV (<code>.csv</code>) or Excel (<code>.xlsx</code> / <code>.xls</code>) file</td></tr>
+<tr><td><strong>Best for</strong></td><td>Short lists, or a list in a document or email rather than a spreadsheet</td><td>Lists already in a spreadsheet, and lists over a dozen rows</td></tr>
+<tr><td><strong>Type handling</strong></td><td>The selected type applies to every line</td><td>CSV: one type per file. Excel: one sheet per type — the sheet name picks the type</td></tr>
+<tr><td><strong>Header row</strong></td><td>Do not include one; it would become a code</td><td>CSV: a header row is auto-detected and skipped</td></tr>
+<tr><td><strong>Limit</strong></td><td>50 codes per batch</td><td>50 codes per batch</td></tr>
+</table></div>
+<p>For 100 codes, upload is usually better: the file keeps your table intact, the generator handles the header row, and you can re-upload the same file if you spot a mistake. Paste is faster for a short list, or one that comes from somewhere other than a spreadsheet.</p>
+<h3>The Excel shortcut: one sheet per type</h3>
+<p>Only the Excel upload can carry several types in one file. Each sheet is one type, and the sheet name picks the type — <code>url</code>, <code>website</code>, or <code>link</code> for links; <code>text</code>; <code>email</code>; <code>sms</code>; <code>phone</code>; <code>geo</code>; <code>wifi</code>; <code>vcard</code> or <code>contact</code> for contacts; <code>event</code>. A sheet whose name is not recognized defaults to url, so check the names before uploading. Types beyond those nine sheet names are not picked by sheet name; for those, use the CSV upload or paste with the type selected.</p>
+<h2>Step 3: Use the template file</h2>
+<p>If you are starting from a blank sheet, not an existing export, do not build the columns from memory. FreeQrly provides a downloadable template, <code>freeqrly-batch-template.xlsx</code>, with one sheet per type, headers, and filled-in example rows. Download it, replace the example rows with your own, delete the examples you do not need, and upload the result. The template is the fastest way to get the field order right: for multi-field types like WiFi and vCard, the example row shows it. The vCard sheet has 8 columns — name, phone, email, company, title, website, address, note — and batch mode reads all eight, in template order, the same as the single-code contact form, so company and title also appear in the saved contact.</p>
+<p>There is also a CSV template for the selected type only. For a mixed-type job, the Excel template is the right one.</p>
+<p>Keep two copies of your finished file — the working file you upload, and an untouched original saved with the downloaded ZIPs, so the row numbers still answer "which code is which product" in three months.</p>
+<h2>Step 4: Generate and check the codes</h2>
+<p>Generation is the shortest step. Select the type, add your list — by pasting or uploading — and generate. Every item becomes its own code, previewed in a grid on the page. Then, before anything is downloaded or printed, check the grid:</p>
+<ul>
+<li><strong>Count the codes.</strong> Each batch should show 50. If the count is short, a row was skipped — usually a blank line. Go back to the table.</li>
+<li><strong>Read the first and last codes.</strong> Scan the first code, then the last. If both open the right destination, the setup is right; the middle codes use the same settings. Still, spot-check any row you typed by hand.</li>
+<li><strong>Spot-check one multi-field code.</strong> If your batch is WiFi or vCard, scan one and confirm the phone joins the network or saves the contact. A code that scans but fills the wrong field is a silent failure.</li>
+</ul>
+<p>Test on screen first: screen testing is free and instant. But a code that scans on a bright screen can still fail on paper, which is why the print test in Step 6 matters.</p>
+<h2>Step 5: Download — one by one, or the whole ZIP</h2>
+<p>Each code can be downloaded individually as a 1024 px PNG — useful for one replacement code, or when you are placing codes one at a time into a design. For a hundred codes, the ZIP is the practical choice: one click downloads <code>freeqrly-batch.zip</code> containing <code>qr-1.png</code> through <code>qr-50.png</code>, each a 1024 px PNG. There is no SVG option in batch mode.</p>
+<p>Two things to get right at download time. First, keep the two ZIPs apart: both arrive with the same file name, <code>freeqrly-batch.zip</code>, so the second will overwrite the first in the same folder. Rename the first to <code>batch-1-rows-1-50.zip</code> before downloading the second, or download each into its own folder. Second, keep the mapping: the file names inside the ZIP are row numbers, not product names. If you rename the PNGs, rename them from the table — <code>qr-37.png</code> becomes <code>SKU-037-mug.png</code>, for example — and work from a copy, keeping the original ZIP untouched.</p>
+<p>No login is required: batch codes are static and generated in the browser, so there is no account to create, no watermark, and no expiry.</p>
+<h2>Step 6: Print — size, contrast, and the quiet zone</h2>
+<p>Three things decide whether a code that scans on screen also scans on paper, where it will actually live: a shelf label under shop lights, a parcel label in a warehouse, a table card in a dim restaurant.</p>
+<h3>Size</h3>
+<p>FreeQrly's print-size guide covers sizes by use case — cards, flyers, posters. As a floor, a plain code should be printed at least 2 × 2 cm, as shown on the page. Denser codes need more room: at the same print size, a code with a longer destination needs more room than one with a short destination, and codes scanned from a distance need to be larger in proportion to the distance. When in doubt, print one test label and scan it from the distance your customers will stand at.</p>
+<h3>Contrast and the quiet zone</h3>
+<p>Contrast never changes: dark modules on a light background, with strong contrast. A code in pale grey on white, or in a brand color too light, will fail on phones you cannot test — older cameras, dim rooms, glare. Keep the modules dark and the background light and plain.</p>
+<p>Around every code sits the quiet zone: the blank margin that lets a camera find the code's edges. Do not let text, a border, a fold, or a neighbouring label eat into it. Give the code its own clear patch of light background, quiet zone clear on all four sides.</p>
+<h3>Paper, ink, and the print test</h3>
+<p>Matte paper works better than gloss under bright lights, because gloss reflects glare. If the labels must be glossy, test-scan under the lights they will sit under. Always run a print test before the full run: print one sheet and scan the first, last, and one random middle code on the paper, with two phones if you can — one iPhone and one Android. If all three scan on the first try, print the hundred. If one hesitates, print larger, raise the contrast, or shorten the destination.</p>
+<h2>Common mistakes and fixes</h2>
+<div class="table-scroll"><table>
+<tr><th>Mistake</th><th>What you see</th><th>Fix</th></tr>
+<tr><td>Pasting the header row</td><td>The first code opens a page called "Link", or encodes the word "Link" as text</td><td>Paste data rows only</td></tr>
+<tr><td>A blank line in the paste</td><td>Fewer codes than rows</td><td>Delete blank lines; count the grid before downloading</td></tr>
+<tr><td>Mixing types in one CSV batch</td><td>WiFi rows become link codes, or vCard rows become plain text</td><td>One type per CSV batch; split mixed jobs by type, or use Excel with one sheet per type</td></tr>
+<tr><td>Misspelled Excel sheet name</td><td>That sheet's codes come out as URL codes</td><td>Use the sheet names exactly as listed; an unrecognized name defaults to url</td></tr>
+<tr><td>A <code>|</code> inside a field</td><td>A WiFi code with the password split across two fields</td><td>Remove the pipe from the field, or change the password</td></tr>
+<tr><td>Fields in the wrong order</td><td>The code scans, but the phone joins the wrong network or saves the wrong detail</td><td>Rebuild the row in the template's field order and regenerate</td></tr>
+<tr><td>Long links at tiny print size</td><td>Codes scan on screen but not on the label</td><td>Shorten the links, or print larger — test on paper</td></tr>
+<tr><td>Overwriting the first ZIP</td><td>Only one <code>freeqrly-batch.zip</code> in the folder, and it is batch 2</td><td>Rename batch 1 before downloading batch 2</td></tr>
+<tr><td>Printing without a paper test</td><td>Codes that read on screen fail under shop lights</td><td>Print one sheet; scan first, last, and one middle code on paper</td></tr>
+<tr><td>Changing a link after printing</td><td>The printed code still opens the old page</td><td>Static codes cannot be edited — regenerate that code and reprint; for editable codes, use a dynamic code instead</td></tr>
+</table></div>
+<h2>When batch is the wrong tool</h2>
+<p>Batch mode is the right tool when the destinations are settled and the quantity is the problem. It is the wrong tool in three cases. First, you need to edit codes after printing: a menu link that changes monthly needs a dynamic code, made one at a time and editable from the Dashboard. The free tier allows 20 dynamic codes; Pro is $9/month or $90/year, and its only difference from the free tier is unlimited dynamic codes. During the current limited-time offer, free dynamic codes are unlimited; after the offer ends, the free plan includes 20 dynamic codes. Second, every code needs different styling: batch mode makes the set in one consistent style, so use the main generator one at a time instead. Third, you need scan statistics per code: static codes record no scans, so use dynamic codes instead — and dynamic codes do not come in a batch of 50.</p>
+<h2>The workflow, in one paragraph</h2>
+<p>Build a table, one row per code, columns to match the type. Clean it: no blank rows, no header in the paste, every link checked. Upload or paste it in two halves of 50, using the template if you are starting from scratch. Count the grid, scan the first and last codes, download the ZIPs into separate folders with the table beside them. Print one sheet, scan it on paper, then print the hundred. A hundred codes is not a hundred small jobs. It is one table, two batches, and a test print.</p>
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly presenting a QR code"></div>
+      <div>
+        <h3>Try it yourself — free</h3>
+        <p>Everything in this article works in the FreeQrly studio right now. Static codes, all 17 content types, PNG and SVG export.</p>
+        <a class="btn" href="/#studio">Open the studio</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Keep reading</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/blog/qr-codes-for-event-organizers-checklist/"><b>QR Codes for Event Organizers: The Complete Checklist (Before, During, and After)</b></a>
+        <a class="rel-card" href="/blog/static-vs-dynamic-qr-codes/"><b>Static vs Dynamic QR Codes: Free Forever or a Subscription?</b></a>
+        <a class="rel-card" href="/blog/why-is-my-qr-code-not-working/"><b>QR Code Not Working? 7 Fixes That Help</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Good to know</h2>
+    <details><summary><span>How many QR codes can I generate at once?</span></summary><p>Up to 50 per batch, whether you paste or upload — so 100 codes means two batches: rows 1–50, then rows 51–100. Keep the row order identical in both halves so the file names map back to the table.</p></details>
+    <details><summary><span>Do I need an account to generate QR codes in bulk?</span></summary><p>No. Batch codes are static and generated entirely in your browser, so no sign-up is needed, nothing uploaded, and the codes never expire and carry no watermark.</p></details>
+    <details><summary><span>Can batch codes be dynamic or editable after printing?</span></summary><p>No. Batch mode is static only. If a destination changes after printing, regenerate that code and reprint it. For codes you need to edit after printing, create dynamic codes one at a time instead.</p></details>
+    <details><summary><span>What file types can I upload?</span></summary><p>A CSV file (<code>.csv</code>) or an Excel file (<code>.xlsx</code> / <code>.xls</code>). A CSV carries one type per file, and the generator handles quoted fields, so commas inside a field are safe. An Excel file can carry one type per sheet, the sheet name picking the type.</p></details>
+    <details><summary><span>How do I format WiFi and contact details in the file?</span></summary><p>Multi-field types use the pipe character <code>|</code> between fields, in a fixed order. WiFi is network name, password, security type — for example, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). A vCard is name, phone, email, company, title, website, address, note — for example, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code> (SAMPLE DATA). The template, <code>freeqrly-batch-template.xlsx</code>, shows the field order for each type, with headers and example rows.</p></details>
+    <details><summary><span>What do I get when I download?</span></summary><p>Each code can be downloaded individually as a 1024 px PNG. The ZIP is <code>freeqrly-batch.zip</code> with <code>qr-1.png</code> through <code>qr-50.png</code>, each a 1024 px PNG. No SVG option in batch mode.</p></details>
+    <details><summary><span>How do I know which PNG belongs to which product?</span></summary><p>By row number: <code>qr-1.png</code> is row 1, <code>qr-37.png</code> is row 37. Keep the table with the ZIPs; rename copies from the table for meaningful file names.</p></details>
+    <details><summary><span>What size should I print the codes?</span></summary><p>At least 2 × 2 cm for a plain code, as shown on the page; larger for dense codes or codes scanned from a distance. FreeQrly's print-size guide covers sizes by use case — whatever size you choose, print one sheet first and scan it on paper.</p></details>
+    <details><summary><span>Why do some of my codes fail to scan after printing?</span></summary><p>The usual causes, in order: the print is too small for how dense the code is; the contrast is too low; or something — text, a border, a fold — has eaten into the quiet zone. Print larger, darken the modules, clear the margin, and test again on paper.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Unlimited dynamic codes — limited-time offer.</h3>
+        <p>Sign in free and create as many as you need. Every code stays editable after printing and never expires.</p>
+      </div>
+      <a class="fctaBtn" href="/login/">Start free</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Beautiful QR codes, made in your browser. Static codes never expire.</p>
+        <div class="fmade">Made quietly — static codes in your browser.</div>
+      </div>
+      <div class="fcol"><h4>Product</h4><a href="/">QR Generator</a><a href="/batch-qr-code/">Batch QR Codes</a><a href="/qr-code-with-logo/">QR Code with Logo</a><a href="/scan/">QR Scanner</a><a href="/barcode-generator/">Barcode Generator</a><a href="/pricing/">Pricing</a></div>
+      <div class="fcol"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/developers/">Developers · API &amp; MCP</a><a href="/blog/qr-code-print-size-guide/">Print Size Guide</a><a href="/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Company</h4><a href="/about/">About</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
+      <div class="fcol"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

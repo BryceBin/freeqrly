@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 QR-Codes auf einmal erzeugen: Von der Tabelle zum gedruckten Code | FreeQrly</title>
+<meta name="description" content="Erzeuge 100 QR-Codes in zwei Stapeln zu je 50. Baue die Tabelle, füge sie ein oder lade sie hoch, lade eine ZIP herunter, teste per Scan und drucke — kostenlos, ohne Anmeldung, ohne Wasserzeichen.">
+<link rel="canonical" href="https://freeqrly.com/de/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="100 QR-Codes auf einmal erzeugen: Von der Tabelle zum gedruckten Code | FreeQrly">
+<meta property="og:description" content="Erzeuge 100 QR-Codes in zwei Stapeln zu je 50. Baue die Tabelle, füge sie ein oder lade sie hoch, lade eine ZIP herunter, teste per Scan und drucke — kostenlos, ohne Anmeldung, ohne Wasserzeichen.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/de/blog/bulk-qr-codes-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261119">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"100 QR-Codes auf einmal erzeugen: Von der Tabelle zum gedruckten Code | FreeQrly","description":"Erzeuge 100 QR-Codes in zwei Stapeln zu je 50. Baue die Tabelle, füge sie ein oder lade sie hoch, lade eine ZIP herunter, teste per Scan und drucke — kostenlos, ohne Anmeldung, ohne Wasserzeichen.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie viele QR-Codes kann ich auf einmal erzeugen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bis zu 50 pro Stapel, ob du einfügst oder hochlädst — also bedeuten 100 Codes zwei Stapel: Zeilen 1–50, dann Zeilen 51–100. Halte die Zeilenreihenfolge in beiden Hälften identisch, damit die Dateinamen auf die Tabelle verweisen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich ein Konto, um QR-Codes im Stapel zu erzeugen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Stapel-Codes sind statisch und werden komplett in deinem Browser erzeugt, also ist keine Anmeldung nötig, nichts hochgeladen, und die Codes laufen nie ab und tragen kein Wasserzeichen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Können Stapel-Codes dynamisch sein oder nach dem Drucken bearbeitet werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Der Stapel-Modus ist nur statisch. Wenn sich ein Ziel nach dem Drucken ändert, erzeuge den Code neu und drucke ihn erneut. Für Codes, die du nach dem Drucken bearbeiten musst, erstelle stattdessen dynamische Codes, einzeln."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Dateitypen kann ich hochladen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine CSV-Datei (<code>.csv</code>) oder eine Excel-Datei (<code>.xlsx</code> / <code>.xls</code>). Eine CSV trägt einen Typ pro Datei, und der Generator verarbeitet Felder in Anführungszeichen, also sind Kommas in einem Feld sicher. Eine Excel-Datei kann einen Typ pro Blatt tragen, der Blattname wählt den Typ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie formatiere ich WLAN- und Kontaktdaten in der Datei?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typen mit mehreren Feldern nutzen das Pipe-Zeichen <code>|</code> zwischen den Feldern, in fester Reihenfolge. WLAN ist Netzwerkname, Passwort, Sicherheitstyp — zum Beispiel <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Eine vCard ist Name, Telefon, E-Mail, Firma, Titel, Website, Adresse, Notiz — zum Beispiel <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Freundin</code> (SAMPLE DATA). Die Vorlage <code>freeqrly-batch-template.xlsx</code> zeigt die Feldreihenfolge für jeden Typ, mit Kopfzeilen und Beispielzeilen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bekomme ich beim Herunterladen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jeder Code lässt sich einzeln als 1024-px-PNG herunterladen. Die ZIP ist <code>freeqrly-batch.zip</code> mit <code>qr-1.png</code> bis <code>qr-50.png</code>, jedes ein 1024-px-PNG. Keine SVG-Option im Stapel-Modus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Woran erkenne ich, welches PNG zu welchem Produkt gehört?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An der Zeilennummer: <code>qr-1.png</code> ist Zeile 1, <code>qr-37.png</code> ist Zeile 37. Bewahre die Tabelle bei den ZIPs auf; benenne Kopien anhand der Tabelle um, für aussagekräftige Dateinamen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie groß sollte ich die Codes drucken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mindestens 2 × 2 cm für einen einfachen Code, wie auf der Seite gezeigt; größer für dichte Codes oder Codes, die aus der Entfernung gescannt werden. Die Druckgrößen-Anleitung von FreeQrly deckt Größen nach Anwendungsfall ab — egal, welche Größe du wählst, drucke zuerst ein Blatt und scanne es auf Papier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum versagen manche meiner Codes nach dem Drucken beim Scannen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die üblichen Ursachen, der Reihe nach: Der Druck ist zu klein für die Dichte des Codes; der Kontrast ist zu niedrig; oder etwas — Text, ein Rahmen, eine Falte — hat in die Ruhezone hineingefressen. Drucke größer, mache die Module dunkler, räume den Rand frei und teste erneut auf Papier."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"100 QR-Codes auf einmal erzeugen: Von der Tabelle zum gedruckten Code | FreeQrly","description":"Erzeuge 100 QR-Codes in zwei Stapeln zu je 50. Baue die Tabelle, füge sie ein oder lade sie hoch, lade eine ZIP herunter, teste per Scan und drucke — kostenlos, ohne Anmeldung, ohne Wasserzeichen.","step":[
+    {
+      "@type": "HowToStep",
+      "name": "Tabelle bauen",
+      "text": "Alles, was bei hundert Codes schiefgehen kann, geht in der Tabelle schief, nicht im Generator — ein Tippfehler in Zeile 37 wird ein falscher Code in Zeile 37."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Einfügen oder hochladen — wähle deine Eingabemethode",
+      "text": "Der Stapel-Modus bietet zwei Wege hinein; der richtige hängt davon ab, wo deine Liste schon liegt."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Nutze die Vorlagendatei",
+      "text": "Wenn du von einem leeren Blatt startest, nicht von einem vorhandenen Export, baue die Spalten nicht aus dem Gedächtnis."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Erzeugen und die Codes prüfen",
+      "text": "Das Erzeugen ist der kürzeste Schritt. Wähle den Typ, füge deine Liste hinzu — durch Einfügen oder Hochladen — und erzeuge."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Herunterladen — einzeln oder als ganze ZIP",
+      "text": "Jeder Code lässt sich einzeln als 1024-px-PNG herunterladen — nützlich für einen Ersatz-Code oder wenn du Codes einzeln in ein Design einsetzt."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Drucken — Größe, Kontrast und die Ruhezone",
+      "text": "Drei Dinge entscheiden, ob ein Code, der auf dem Bildschirm scannt, auch auf Papier scannt, dort, wo er wirklich leben wird: ein Regaletikett unter Ladenlichtern, ein Paketetikett im Lager, eine Tischkarte in einem dunklen Restaurant."
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3aa-20261119"></script>
+<script src="/assets/js/acct-menu.js?v=b3aa-20261119"></script>
+<script src="/assets/js/subpage-header.js?v=b3aa-20261119"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="Qly, das FreeQrly-Elefantenmaskottchen"></div>
+    <div class="kicker" style="text-align:center">Feldnotizen</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">100 QR-Codes auf einmal erzeugen: Von der Tabelle zum gedruckten Code</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">Ja — 100 Codes bedeuten zwei Stapel zu je 50. Der Stapel-Modus von FreeQrly erzeugt bis zu 50 QR-Codes auf einmal, also sind hundert Codes zwei Durchläufe durch dasselbe Tool: eine Tabelle mit 100 Zeilen bauen, die ersten 50 erzeugen, dann die zweiten 50, zwei ZIP-Dateien herunterladen, per Scan testen und drucken.</p>
+    <p class="meta" style="text-align:center">19. November 2026 · 17 Min. Lesezeit</p>
+    <div class="prose" style="margin-top:40px">
+<p>Es ist kostenlos, braucht keine Anmeldung, und die Codes tragen kein Wasserzeichen. Der Rest behandelt die Tabelle, die Eingabemethode, die Prüfungen vor dem Drucken und was zu tun ist, wenn etwas nicht stimmt.</p>
+<p>Diese Anleitung behandelt nur statische Codes, denn der Stapel-Modus erzeugt nur statische Codes. Ein statischer Code trägt sein Ziel in sich, im Muster: Er läuft nie ab, braucht kein Konto und wird komplett in deinem Browser erzeugt — nichts hochgeladen, nichts verfolgt. Der Kompromiss: Ein statischer Code lässt sich nach dem Drucken nicht mehr bearbeiten. Ändert sich ein Link, erzeuge den Code neu und drucke ihn erneut. Wenn du Codes brauchst, die sich nach dem Drucken bearbeiten lassen, mit Scan-Statistiken, nutze dynamische Codes — einzeln erzeugt, nicht im Stapel.</p>
+<h2>Der 100-Code-Plan auf einen Blick</h2>
+<div class="table-scroll"><table>
+<tr><th>Schritt</th><th>Was du tust</th><th>Was du bekommst</th></tr>
+<tr><td>1. Tabelle bauen</td><td>Eine Zeile pro Code, 100 Zeilen, Spalten passend zum Typ</td><td>Eine saubere Liste ohne leere Zeilen und ohne Tippfehler</td></tr>
+<tr><td>2. Eingabemethode wählen</td><td>Liste einfügen oder eine CSV- oder Excel-Datei hochladen</td><td>Deine Liste im Stapel-Generator</td></tr>
+<tr><td>3. Zwei Stapel erzeugen</td><td>Zeilen 1–50, dann Zeilen 51–100</td><td>100 Codes, in Rastern als Vorschau</td></tr>
+<tr><td>4. Herunterladen</td><td>Eine ZIP pro Stapel oder einzelne PNGs</td><td><code>freeqrly-batch.zip</code>-Dateien mit <code>qr-1.png</code> … <code>qr-50.png</code></td></tr>
+<tr><td>5. Testen, dann drucken</td><td>Den ersten, den letzten und einen zufälligen mittleren Code scannen — auf Papier</td><td>Codes, auf die du dich verlassen kannst — im Regal, auf dem Tisch oder auf dem Paket</td></tr>
+</table></div>
+<p>Eine Prüfung aus der echten Welt: Am 18. November 2026 hat eine echte Nutzerin auf diese Weise 100 Codes erzeugt — zwei Stapel-Vorgänge — und eine ZIP mit 50 Codes heruntergeladen, der erste ZIP-Download, den das Stapel-Tool je ausgeliefert hat.</p>
+<h2>Schritt 1: Baue deine Tabelle</h2>
+<p>Alles, was bei hundert Codes schiefgehen kann, geht in der Tabelle schief, nicht im Generator — ein Tippfehler in Zeile 37 wird ein falscher Code in Zeile 37. Gib der Tabelle zuerst zehn sorgfältige Minuten.</p>
+<h3>Die eine Regel: eine Zeile, ein Code</h3>
+<p>Jede Zeile deiner Tabelle wird genau ein QR-Code, in derselben Reihenfolge. Zeile 1 wird <code>qr-1.png</code>, Zeile 2 wird <code>qr-2.png</code> und so weiter. Diese Reihenfolge ist die einzige Zuordnung zwischen einem Code und seinem Ziel — bewahre die Tabellendatei also neben den heruntergeladenen ZIPs auf und sortiere die Zeilen nicht um.</p>
+<h3>Ein durchgerechnetes Beispiel: 100 Produktseiten</h3>
+<p>Angenommen, ein kleiner Laden will einen Code pro Produktseite, für Regaletiketten. Die Tabelle braucht für einen Link-Code nur zwei Spalten: etwas, das die Zeile kennzeichnet, und den Link selbst. Alle Werte unten sind SAMPLE DATA.</p>
+<div class="table-scroll"><table>
+<tr><th>Zeile</th><th>SKU (SAMPLE DATA)</th><th>Produkt (SAMPLE DATA)</th><th>Link (SAMPLE DATA)</th></tr>
+<tr><td>1</td><td>SKU-001</td><td>Keramiktasse — Sand</td><td>https://example-shop.com/products/ceramic-mug-sand</td></tr>
+<tr><td>2</td><td>SKU-002</td><td>Keramiktasse — Ton</td><td>https://example-shop.com/products/ceramic-mug-clay</td></tr>
+<tr><td>50</td><td>SKU-050</td><td>Steingut-Schüssel</td><td>https://example-shop.com/products/stoneware-bowl</td></tr>
+<tr><td>51</td><td>SKU-051</td><td>Baumwollschürze</td><td>https://example-shop.com/products/cotton-apron</td></tr>
+<tr><td>100</td><td>SKU-100</td><td>Emaille-Kanne</td><td>https://example-shop.com/products/enamel-kettle</td></tr>
+</table></div>
+<p>Zeilen 1–50 sind Stapel 1; Zeilen 51–100 sind Stapel 2. Die SKU-Spalte hilft nur, das Blatt zu lesen; der Generator nutzt die Link-Spalte. Wenn deine Ziele schon in einer Tabelle vorliegen — ein Bestands-Export, eine Produktliste, eine Gästeliste — kopiere die Ziel-Spalte in ein frisches Blatt, statt den ganzen Export hochzuladen.</p>
+<h3>Spalten pro Typ</h3>
+<p>Der Stapel-Modus unterstützt 16 Typen: url, text, email, sms, phone, geo, wifi, vcard, event, bitcoin, coupon, appstore, review, mp3, google-form und menu. Typen mit einem Feld brauchen eine Spalte. Typen mit mehreren Feldern packen ihre Felder in eine Zeile, mit dem Pipe-Zeichen <code>|</code> als Trennzeichen, Felder in der gezeigten Reihenfolge, mit je einem Leerzeichen auf beiden Seiten des Pipes, damit es lesbar bleibt.</p>
+<div class="table-scroll"><table>
+<tr><th>Typ</th><th>Felder, in dieser Reihenfolge (trennen mit <code>|</code>)</th><th>Beispiel (SAMPLE DATA)</th></tr>
+<tr><td>url</td><td>Link</td><td><code>https://example.com/products/mug</code></td></tr>
+<tr><td>text</td><td>Beliebige Wörter</td><td><code>Heutiges Menü hier scannen</code></td></tr>
+<tr><td>email</td><td>Empfänger | Betreff | Text</td><td><code>hello@example.com | Tisch bereit | Ihr Tisch für zwei ist um 19 Uhr bereit</code></td></tr>
+<tr><td>sms</td><td>Telefonnummer | Nachricht</td><td><code>+1 555 010 2030 | Hallo, ich würde gern einen Tisch reservieren</code></td></tr>
+<tr><td>phone</td><td>Telefonnummer</td><td><code>+1 555 010 2030</code></td></tr>
+<tr><td>geo</td><td>Breitengrad, Längengrad</td><td><code>40.7411, -73.9897</code></td></tr>
+<tr><td>wifi</td><td>Netzwerkname | Passwort | Sicherheitstyp</td><td><code>MyWiFi | password | WPA</code></td></tr>
+<tr><td>vcard</td><td>Name | Telefon | E-Mail | Firma | Titel | Website | Adresse | Notiz</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Freundin</code></td></tr>
+<tr><td>event</td><td>Titel | Beginn | Ende | Ort | Beschreibung</td><td><code>Frühlingsmarkt | 2027-04-10T10:00 | 2027-04-10T18:00 | Rathaus | Livemusik, Essensstände und ein Kunsthandwerksmarkt</code></td></tr>
+<tr><td>bitcoin</td><td>Adresse | Betrag | Label | Nachricht</td><td><code>bc1qexampleaddress | 0.001 | Kaffeestand | Danke für den Kaffee</code></td></tr>
+<tr><td>coupon</td><td>Code | Beschreibung</td><td><code>SPRING10 | 10 % Rabatt dieses Wochenende</code></td></tr>
+<tr><td>appstore</td><td>iOS-Link | Android-Link (iOS wird verwendet, wenn vorhanden, sonst Android)</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
+<tr><td>review</td><td>Link zur Bewertungsseite</td><td><code>https://example.com/review-us</code></td></tr>
+<tr><td>mp3</td><td>Audio-Link</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
+<tr><td>google-form</td><td>Formular-Link</td><td><code>https://forms.example.com/feedback</code></td></tr>
+<tr><td>menu</td><td>Menü-Link</td><td><code>https://example.com/menu</code></td></tr>
+</table></div>
+<p>Die Feldreihenfolgen oben entsprechen dem, was der Stapel-Generator liest — der Format-Hinweis unter dem Textfeld zeigt dieselbe Reihenfolge. Erstens ist der Pipe das Trennzeichen, also darf er in keinem Feld vorkommen: Ein WLAN-Passwort mit <code>|</code> würde in die falschen Felder aufgeteilt. Zweitens ist die Feldreihenfolge fest. Bei WLAN ist es Netzwerkname, Passwort, Sicherheitstyp — <code>MyWiFi | password | WPA</code>, genau wie gezeigt. Eine umgekehrte Reihenfolge erzeugt trotzdem einen Code, aber das Telefon liest die Felder an den falschen Stellen. Drittens: Halte Ziele kurz, wo du kannst. Ein kurzer Link ergibt ein luftigeres Muster mit größeren Modulen, das sich bei kleinen Druckgrößen zuverlässiger scannen lässt. Kürze lange Links, bevor sie in die Tabelle kommen — und teste die gekürzten Links zuerst.</p>
+<h3>Die Tabelle vor dem Erzeugen säubern</h3>
+<p>Geh diese Checkliste einmal durch, für alle 100 Zeilen, bevor du den Generator öffnest:</p>
+<ol>
+<li><strong>Keine leeren Zeilen.</strong> Eine leere Zeile in einer eingefügten Liste wird übersprungen, aber der Generator liest eine leere Zeile in einer Tabelle möglicherweise trotzdem als leeren Eintrag — lösche also leere Zeilen.</li>
+<li><strong>Keine Kopfzeile im eingefügten Text.</strong> Lass die Kopfzeile aus dem eingefügten Text heraus. (Eine CSV-Kopfzeile wird automatisch erkannt und übersprungen — siehe Schritt 2 — aber eingefügter Text bekommt keine Hilfe.)</li>
+<li><strong>Keine Leerzeichen am Ende.</strong> Ein Leerzeichen am Ende eines Links wird Teil des Code-Inhalts. Markiere in einer Tabelle die Spalte und schneide sie zu.</li>
+<li><strong>Jeder Link muss sich öffnen lassen.</strong> Prüfe stichprobenartig den ersten, den letzten und ein paar mittlere Links. Ein Link, der im Browser einen 404er liefert, liefert auch beim Scannen einen 404er.</li>
+<li><strong>Ein Typ pro Stapel.</strong> Ein CSV-Upload nutzt einen einzigen Typ: den Typ, der im Generator ausgewählt ist. Mische keine WLAN-Zeilen und Link-Zeilen in einem Stapel; teile gemischte Aufträge nach Typ auf oder nutze den Excel-Upload, der als Nächstes beschrieben wird.</li>
+</ol>
+<h2>Schritt 2: Einfügen oder hochladen — wähle deine Eingabemethode</h2>
+<p>Der Stapel-Modus bietet zwei Wege hinein; der richtige hängt davon ab, wo deine Liste schon liegt.</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>Einfügen</th><th>Datei hochladen</th></tr>
+<tr><td><strong>Wie</strong></td><td>Kopiere die Liste, einen Eintrag pro Zeile, in das Textfeld</td><td>Lade eine CSV-Datei (<code>.csv</code>) oder eine Excel-Datei (<code>.xlsx</code> / <code>.xls</code>) hoch</td></tr>
+<tr><td><strong>Am besten für</strong></td><td>Kurze Listen oder eine Liste in einem Dokument oder einer E-Mail statt in einer Tabelle</td><td>Listen, die bereits in einer Tabelle sind, und Listen mit mehr als einem Dutzend Zeilen</td></tr>
+<tr><td><strong>Typ-Handling</strong></td><td>Der ausgewählte Typ gilt für jede Zeile</td><td>CSV: ein Typ pro Datei. Excel: ein Blatt pro Typ — der Blattname wählt den Typ</td></tr>
+<tr><td><strong>Kopfzeile</strong></td><td>Keine einfügen; sie würde ein Code werden</td><td>CSV: Eine Kopfzeile wird automatisch erkannt und übersprungen</td></tr>
+<tr><td><strong>Limit</strong></td><td>50 Codes pro Stapel</td><td>50 Codes pro Stapel</td></tr>
+</table></div>
+<p>Für 100 Codes ist der Upload meist besser: Die Datei hält deine Tabelle intakt, der Generator erledigt die Kopfzeile, und du kannst dieselbe Datei erneut hochladen, wenn dir ein Fehler auffällt. Einfügen ist schneller für eine kurze Liste oder eine, die von woanders kommt als aus einer Tabelle.</p>
+<h3>Die Excel-Abkürzung: ein Blatt pro Typ</h3>
+<p>Nur der Excel-Upload kann mehrere Typen in einer Datei tragen. Jedes Blatt ist ein Typ, und der Blattname wählt den Typ — <code>url</code>, <code>website</code> oder <code>link</code> für Links; <code>text</code>; <code>email</code>; <code>sms</code>; <code>phone</code>; <code>geo</code>; <code>wifi</code>; <code>vcard</code> oder <code>contact</code> für Kontakte; <code>event</code>. Ein Blatt, dessen Name nicht erkannt wird, fällt auf url zurück — prüfe also die Namen vor dem Hochladen. Typen jenseits dieser neun Blattnamen werden nicht per Blattname gewählt; nutze dafür den CSV-Upload oder das Einfügen mit ausgewähltem Typ.</p>
+<h2>Schritt 3: Nutze die Vorlagendatei</h2>
+<p>Wenn du von einem leeren Blatt startest, nicht von einem vorhandenen Export, baue die Spalten nicht aus dem Gedächtnis. FreeQrly stellt eine herunterladbare Vorlage bereit, <code>freeqrly-batch-template.xlsx</code>, mit einem Blatt pro Typ, Kopfzeilen und ausgefüllten Beispielzeilen. Lade sie herunter, ersetze die Beispielzeilen durch deine eigenen, lösche die Beispiele, die du nicht brauchst, und lade das Ergebnis hoch. Die Vorlage ist der schnellste Weg, die Feldreihenfolge richtig zu bekommen: Bei Typen mit mehreren Feldern wie WLAN und vCard zeigt die Beispielzeile sie. Das vCard-Blatt hat 8 Spalten — Name, Telefon, E-Mail, Firma, Titel, Website, Adresse, Notiz — und der Stapel-Modus liest alle acht, in Vorlagenreihenfolge, genau wie das Einzel-Code-Kontaktformular, sodass Firma und Titel ebenfalls im gespeicherten Kontakt erscheinen.</p>
+<p>Es gibt auch eine CSV-Vorlage, nur für den ausgewählten Typ. Für einen Auftrag mit gemischten Typen ist die Excel-Vorlage die richtige.</p>
+<p>Bewahre zwei Kopien deiner fertigen Datei auf — die Arbeitsdatei, die du hochlädst, und ein unberührtes Original, das du zusammen mit den heruntergeladenen ZIPs ablegst, damit die Zeilennummern auch in drei Monaten noch die Frage beantworten, „welcher Code ist welches Produkt“.</p>
+<h2>Schritt 4: Erzeugen und die Codes prüfen</h2>
+<p>Das Erzeugen ist der kürzeste Schritt. Wähle den Typ, füge deine Liste hinzu — durch Einfügen oder Hochladen — und erzeuge. Jeder Eintrag wird sein eigener Code, als Vorschau in einem Raster auf der Seite. Prüfe dann, bevor etwas heruntergeladen oder gedruckt wird, das Raster:</p>
+<ul>
+<li><strong>Zähle die Codes.</strong> Jeder Stapel sollte 50 zeigen. Wenn die Zahl zu klein ist, wurde eine Zeile übersprungen — meist eine leere Zeile. Geh zurück zur Tabelle.</li>
+<li><strong>Lies den ersten und den letzten Code.</strong> Scanne den ersten Code, dann den letzten. Wenn beide das richtige Ziel öffnen, stimmt die Einrichtung; die mittleren Codes nutzen dieselben Einstellungen. Prüfe trotzdem stichprobenartig jede Zeile, die du von Hand getippt hast.</li>
+<li><strong>Prüfe stichprobenartig einen Code mit mehreren Feldern.</strong> Wenn dein Stapel WLAN oder vCard ist, scanne einen und bestätige, dass das Telefon ins Netzwerk geht oder den Kontakt speichert. Ein Code, der scannt, aber das falsche Feld füllt, ist ein stiller Fehler.</li>
+</ul>
+<p>Teste zuerst auf dem Bildschirm: Bildschirm-Tests sind kostenlos und sofort. Aber ein Code, der auf einem hellen Bildschirm scannt, kann auf Papier trotzdem versagen — deshalb zählt der Drucktest in Schritt 6.</p>
+<h2>Schritt 5: Herunterladen — einzeln oder als ganze ZIP</h2>
+<p>Jeder Code lässt sich einzeln als 1024-px-PNG herunterladen — nützlich für einen Ersatz-Code oder wenn du Codes einzeln in ein Design einsetzt. Für hundert Codes ist die ZIP die praktische Wahl: Ein Klick lädt <code>freeqrly-batch.zip</code> herunter, mit <code>qr-1.png</code> bis <code>qr-50.png</code>, jedes ein 1024-px-PNG. Eine SVG-Option gibt es im Stapel-Modus nicht.</p>
+<p>Zwei Dinge, die du beim Herunterladen richtig machen musst. Erstens: Halte die beiden ZIPs auseinander — beide kommen mit demselben Dateinamen, <code>freeqrly-batch.zip</code>, also überschreibt die zweite die erste im selben Ordner. Benenne die erste in <code>batch-1-rows-1-50.zip</code> um, bevor du die zweite herunterlädst, oder lade jede in einen eigenen Ordner. Zweitens: Behalte die Zuordnung — die Dateinamen in der ZIP sind Zeilennummern, keine Produktnamen. Wenn du die PNGs umbenennst, benenne sie anhand der Tabelle um — <code>qr-37.png</code> wird zum Beispiel zu <code>SKU-037-mug.png</code> — und arbeite mit einer Kopie, während die Original-ZIP unberührt bleibt.</p>
+<p>Es ist keine Anmeldung nötig: Stapel-Codes sind statisch und werden im Browser erzeugt, also gibt es kein Konto anzulegen, kein Wasserzeichen und keinen Ablauf.</p>
+<h2>Schritt 6: Drucken — Größe, Kontrast und die Ruhezone</h2>
+<p>Drei Dinge entscheiden, ob ein Code, der auf dem Bildschirm scannt, auch auf Papier scannt, dort, wo er wirklich leben wird: ein Regaletikett unter Ladenlichtern, ein Paketetikett im Lager, eine Tischkarte in einem dunklen Restaurant.</p>
+<h3>Size</h3>
+<p>Die Druckgrößen-Anleitung von FreeQrly deckt Größen nach Anwendungsfall ab — Karten, Flyer, Plakate. Als Untergrenze sollte ein einfacher Code mindestens 2 × 2 cm groß gedruckt werden, wie auf der Seite gezeigt. Dichtere Codes brauchen mehr Platz: Bei gleicher Druckgröße braucht ein Code mit langem Ziel mehr Platz als einer mit kurzem Ziel, und Codes, die aus der Entfernung gescannt werden, müssen im Verhältnis zur Entfernung größer sein. Im Zweifel drucke ein Testetikett und scanne es aus der Entfernung, aus der deine Kunden stehen werden.</p>
+<h3>Kontrast und die Ruhezone</h3>
+<p>Der Kontrast ändert sich nie: dunkle Module auf hellem Hintergrund, mit starkem Kontrast. Ein Code in blassem Grau auf Weiß oder in einer zu hellen Markenfarbe versagt auf Telefonen, die du nicht testen kannst — ältere Kameras, dunkle Räume, Blendung. Halte die Module dunkel und den Hintergrund hell und schlicht.</p>
+<p>Um jeden Code herum liegt die Ruhezone: der leere Rand, der einer Kamera hilft, die Kanten des Codes zu finden. Lass weder Text noch einen Rahmen, eine Falte oder ein benachbartes Etikett in sie hineinragen. Gib dem Code sein eigenes freies Stück hellen Hintergrund, die Ruhezone auf allen vier Seiten frei.</p>
+<h3>Papier, Tinte und der Drucktest</h3>
+<p>Mattes Papier ist besser als Glanz unter hellem Licht, denn Glanz reflektiert Blendung. Wenn die Etiketten glänzend sein müssen, teste den Scan unter den Lichtern, unter denen sie sitzen werden. Mach vor dem vollen Durchlauf immer einen Drucktest: Drucke ein Blatt und scanne den ersten, den letzten und einen zufälligen mittleren Code auf dem Papier, wenn möglich mit zwei Telefonen — einem iPhone und einem Android. Wenn alle drei beim ersten Versuch scannen, drucke die hundert. Wenn einer zögert, drucke größer, erhöhe den Kontrast oder kürze das Ziel.</p>
+<h2>Häufige Fehler und Lösungen</h2>
+<div class="table-scroll"><table>
+<tr><th>Fehler</th><th>Was du siehst</th><th>Lösung</th></tr>
+<tr><td>Die Kopfzeile einfügen</td><td>Der erste Code öffnet eine Seite namens „Link“, oder codiert das Wort „Link“ als Text</td><td>Nur Datenzeilen einfügen</td></tr>
+<tr><td>Eine leere Zeile im eingefügten Text</td><td>Weniger Codes als Zeilen</td><td>Leere Zeilen löschen; vor dem Herunterladen das Raster zählen</td></tr>
+<tr><td>Typen in einem CSV-Stapel mischen</td><td>WLAN-Zeilen werden zu Link-Codes oder vCard-Zeilen zu einfachem Text</td><td>Ein Typ pro CSV-Stapel; gemischte Aufträge nach Typ teilen oder Excel mit einem Blatt pro Typ nutzen</td></tr>
+<tr><td>Falsch geschriebener Excel-Blattname</td><td>Die Codes dieses Blatts kommen als URL-Codes heraus</td><td>Nutze die Blattnamen genau wie aufgeführt; ein nicht erkannter Name fällt auf url zurück</td></tr>
+<tr><td>Ein <code>|</code> in einem Feld</td><td>Ein WLAN-Code mit dem Passwort, aufgeteilt auf zwei Felder</td><td>Entferne den Pipe aus dem Feld oder ändere das Passwort</td></tr>
+<tr><td>Felder in der falschen Reihenfolge</td><td>Der Code scannt, aber das Telefon geht ins falsche Netzwerk oder speichert das falsche Detail</td><td>Baue die Zeile in der Feldreihenfolge der Vorlage neu auf und erzeuge erneut</td></tr>
+<tr><td>Lange Links bei winziger Druckgröße</td><td>Codes scannen auf dem Bildschirm, aber nicht auf dem Etikett</td><td>Kürze die Links oder drucke größer — teste auf Papier</td></tr>
+<tr><td>Die erste ZIP überschreiben</td><td>Nur eine <code>freeqrly-batch.zip</code> im Ordner, und es ist Stapel 2</td><td>Benenne Stapel 1 um, bevor du Stapel 2 herunterlädst</td></tr>
+<tr><td>Drucken ohne Papiertest</td><td>Codes, die auf dem Bildschirm lesen, versagen unter Ladenlichtern</td><td>Drucke ein Blatt; scanne den ersten, den letzten und einen mittleren Code auf Papier</td></tr>
+<tr><td>Einen Link nach dem Drucken ändern</td><td>Der gedruckte Code öffnet immer noch die alte Seite</td><td>Statische Codes lassen sich nicht bearbeiten — erzeuge den Code neu und drucke erneut; für bearbeitbare Codes nutze stattdessen einen dynamischen Code</td></tr>
+</table></div>
+<h2>Wann der Stapel-Modus das falsche Tool ist</h2>
+<p>Der Stapel-Modus ist das richtige Tool, wenn die Ziele feststehen und die Menge das Problem ist. In drei Fällen ist er das falsche Tool. Erstens: Du musst Codes nach dem Drucken bearbeiten: Ein Menü-Link, der sich monatlich ändert, braucht einen dynamischen Code, einzeln erzeugt und vom Dashboard aus bearbeitbar. Die kostenlose Stufe erlaubt 20 dynamische Codes; Pro kostet 9 $/Monat oder 90 $/Jahr, und der einzige Unterschied zur kostenlosen Stufe ist die unbegrenzte Zahl dynamischer Codes. Während des aktuellen, zeitlich begrenzten Angebots sind kostenlose dynamische Codes unbegrenzt; nach Ende des Angebots umfasst der Gratis-Tarif 20 dynamische Codes. Zweitens: Jeder Code braucht ein anderes Styling: Der Stapel-Modus erzeugt die Reihe in einem einheitlichen Stil, also nutze stattdessen den Haupt-Generator einzeln. Drittens: Du brauchst Scan-Statistiken pro Code: Statische Codes zeichnen keine Scans auf, also nutze stattdessen dynamische Codes — und dynamische Codes kommen nicht in einem Stapel zu 50.</p>
+<h2>Der Ablauf, in einem Absatz</h2>
+<p>Baue eine Tabelle, eine Zeile pro Code, Spalten passend zum Typ. Säubere sie: keine leeren Zeilen, keine Kopfzeile im eingefügten Text, jeder Link geprüft. Lade sie hoch oder füge sie ein, in zwei Hälften zu je 50, und nutze die Vorlage, wenn du bei null anfängst. Zähle das Raster, scanne den ersten und den letzten Code, lade die ZIPs in getrennte Ordner herunter, mit der Tabelle daneben. Drucke ein Blatt, scanne es auf Papier, dann drucke die hundert. Hundert Codes sind nicht hundert kleine Aufgaben. Es ist eine Tabelle, zwei Stapel und ein Testdruck.</p>
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="Qly präsentiert einen QR-Code"></div>
+      <div>
+        <h3>Probier's selbst aus — kostenlos</h3>
+        <p>Alles in diesem Artikel funktioniert im FreeQrly-Studio genau jetzt. Statische Codes, alle 17 Inhaltstypen, PNG- und SVG-Export.</p>
+        <a class="btn" href="/de/#studio">Studio öffnen</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">Weiterlesen</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/de/blog/qr-codes-for-event-organizers-checklist/"><b>QR-Codes für Veranstalter: Die komplette Checkliste (vor, während und nach dem Event)</b></a>
+        <a class="rel-card" href="/de/blog/static-vs-dynamic-qr-codes/"><b>Statische vs. dynamische QR-Codes: Für immer kostenlos oder Abo?</b></a>
+        <a class="rel-card" href="/de/blog/why-is-my-qr-code-not-working/"><b>QR-Code funktioniert nicht? 7 Fixes, die helfen</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>Gut zu wissen</h2>
+    <details><summary><span>Wie viele QR-Codes kann ich auf einmal erzeugen?</span></summary><p>Bis zu 50 pro Stapel, ob du einfügst oder hochlädst — also bedeuten 100 Codes zwei Stapel: Zeilen 1–50, dann Zeilen 51–100. Halte die Zeilenreihenfolge in beiden Hälften identisch, damit die Dateinamen auf die Tabelle verweisen.</p></details>
+    <details><summary><span>Brauche ich ein Konto, um QR-Codes im Stapel zu erzeugen?</span></summary><p>Nein. Stapel-Codes sind statisch und werden komplett in deinem Browser erzeugt, also ist keine Anmeldung nötig, nichts hochgeladen, und die Codes laufen nie ab und tragen kein Wasserzeichen.</p></details>
+    <details><summary><span>Können Stapel-Codes dynamisch sein oder nach dem Drucken bearbeitet werden?</span></summary><p>Nein. Der Stapel-Modus ist nur statisch. Wenn sich ein Ziel nach dem Drucken ändert, erzeuge den Code neu und drucke ihn erneut. Für Codes, die du nach dem Drucken bearbeiten musst, erstelle stattdessen dynamische Codes, einzeln.</p></details>
+    <details><summary><span>Welche Dateitypen kann ich hochladen?</span></summary><p>Eine CSV-Datei (<code>.csv</code>) oder eine Excel-Datei (<code>.xlsx</code> / <code>.xls</code>). Eine CSV trägt einen Typ pro Datei, und der Generator verarbeitet Felder in Anführungszeichen, also sind Kommas in einem Feld sicher. Eine Excel-Datei kann einen Typ pro Blatt tragen, der Blattname wählt den Typ.</p></details>
+    <details><summary><span>Wie formatiere ich WLAN- und Kontaktdaten in der Datei?</span></summary><p>Typen mit mehreren Feldern nutzen das Pipe-Zeichen <code>|</code> zwischen den Feldern, in fester Reihenfolge. WLAN ist Netzwerkname, Passwort, Sicherheitstyp — zum Beispiel <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Eine vCard ist Name, Telefon, E-Mail, Firma, Titel, Website, Adresse, Notiz — zum Beispiel <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Freundin</code> (SAMPLE DATA). Die Vorlage <code>freeqrly-batch-template.xlsx</code> zeigt die Feldreihenfolge für jeden Typ, mit Kopfzeilen und Beispielzeilen.</p></details>
+    <details><summary><span>Was bekomme ich beim Herunterladen?</span></summary><p>Jeder Code lässt sich einzeln als 1024-px-PNG herunterladen. Die ZIP ist <code>freeqrly-batch.zip</code> mit <code>qr-1.png</code> bis <code>qr-50.png</code>, jedes ein 1024-px-PNG. Keine SVG-Option im Stapel-Modus.</p></details>
+    <details><summary><span>Woran erkenne ich, welches PNG zu welchem Produkt gehört?</span></summary><p>An der Zeilennummer: <code>qr-1.png</code> ist Zeile 1, <code>qr-37.png</code> ist Zeile 37. Bewahre die Tabelle bei den ZIPs auf; benenne Kopien anhand der Tabelle um, für aussagekräftige Dateinamen.</p></details>
+    <details><summary><span>Wie groß sollte ich die Codes drucken?</span></summary><p>Mindestens 2 × 2 cm für einen einfachen Code, wie auf der Seite gezeigt; größer für dichte Codes oder Codes, die aus der Entfernung gescannt werden. Die Druckgrößen-Anleitung von FreeQrly deckt Größen nach Anwendungsfall ab — egal, welche Größe du wählst, drucke zuerst ein Blatt und scanne es auf Papier.</p></details>
+    <details><summary><span>Warum versagen manche meiner Codes nach dem Drucken beim Scannen?</span></summary><p>Die üblichen Ursachen, der Reihe nach: Der Druck ist zu klein für die Dichte des Codes; der Kontrast ist zu niedrig; oder etwas — Text, ein Rahmen, eine Falte — hat in die Ruhezone hineingefressen. Drucke größer, mache die Module dunkler, räume den Rand frei und teste erneut auf Papier.</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>Unbegrenzte dynamische Codes — zeitlich begrenztes Angebot.</h3>
+        <p>Kostenlos anmelden und so viele erstellen, wie Sie brauchen. Jeder Code bleibt nach dem Druck bearbeitbar und läuft nie ab.</p>
+      </div>
+      <a class="fctaBtn" href="/de/login/">Kostenlos starten</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/de/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">Schöne QR-Codes, erstellt in Ihrem Browser. Statische Codes laufen nie ab.</p>
+        <div class="fmade">Statische Codes, im Browser erstellt.</div>
+      </div>
+      <div class="fcol"><h4>Produkt</h4><a href="/de/">QR-Generator</a><a href="/de/batch-qr-code/">QR-Codes im Batch</a><a href="/de/qr-code-with-logo/">QR-Code mit Logo</a><a href="/de/scan/">QR-Scanner</a><a href="/de/barcode-generator/">Barcode-Generator</a><a href="/de/pricing/">Preise</a></div>
+      <div class="fcol"><h4>Ressourcen</h4><a href="/de/blog/">Blog</a><a href="/de/developers/">Entwickler · API &amp; MCP</a><a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Guide</a><a href="/de/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Unternehmen</h4><a href="/de/about/">Über uns</a><a href="mailto:hello@freeqrly.com">Kontakt</a></div>
+      <div class="fcol"><h4>Rechtliches</h4><a href="/de/privacy/">Datenschutz</a><a href="/de/terms/">Nutzungsbedingungen</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

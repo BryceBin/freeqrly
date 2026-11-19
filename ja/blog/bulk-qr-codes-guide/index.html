@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100個のQRコードを一度に生成する方法：表計算から印刷まで | FreeQrly</title>
+<meta name="description" content="100個のQRコードを50個ずつ2回に分けて生成します。表を作り、貼り付けかアップロードし、ZIPをひとつダウンロードして、テストスキャンして印刷——無料、登録不要、透かしなし。">
+<link rel="canonical" href="https://freeqrly.com/ja/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="en" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="es" href="https://freeqrly.com/es/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="hi" href="https://freeqrly.com/hi/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ar" href="https://freeqrly.com/ar/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="pt" href="https://freeqrly.com/pt/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="fr" href="https://freeqrly.com/fr/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ru" href="https://freeqrly.com/ru/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="de" href="https://freeqrly.com/de/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/blog/bulk-qr-codes-guide/">
+<link rel="alternate" hreflang="x-default" href="https://freeqrly.com/blog/bulk-qr-codes-guide/">
+<meta name="theme-color" content="#FAF5EA">
+<meta property="og:title" content="100個のQRコードを一度に生成する方法：表計算から印刷まで | FreeQrly">
+<meta property="og:description" content="100個のQRコードを50個ずつ2回に分けて生成します。表を作り、貼り付けかアップロードし、ZIPをひとつダウンロードして、テストスキャンして印刷——無料、登録不要、透かしなし。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://freeqrly.com/ja/blog/bulk-qr-codes-guide/">
+<meta property="og:image" content="https://freeqrly.com/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/img/favicon-scanner.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-scanner.png">
+<link rel="stylesheet" href="/assets/css/main.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/site-header.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/acct-menu.css?v=b3aa-20261119">
+<style>
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.rel-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;display:block}
+.rel-card:hover{border-color:var(--gold)}
+.rel-card b{font-size:14px;font-weight:600;line-height:1.4}
+@media(max-width:720px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"100個のQRコードを一度に生成する方法：表計算から印刷まで | FreeQrly","description":"100個のQRコードを50個ずつ2回に分けて生成します。表を作り、貼り付けかアップロードし、ZIPをひとつダウンロードして、テストスキャンして印刷——無料、登録不要、透かしなし。","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"datePublished":"2026-11-19","author":{"@type":"Organization","name":"FreeQrly"},"publisher":{"@type":"Organization","name":"FreeQrly"}}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "一度に何個のQRコードを生成できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1バッチ最大50個です。貼り付けでもアップロードでも同じです。つまり100個のコードはバッチ2回分です。1〜50行目、次に51〜100行目。ファイル名が表と対応し続けるよう、両方の半分で行の順序を同じにしてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QRコードを一括で生成するのにアカウントは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。一括コードは静的で、すべてブラウザで生成されるので、登録は不要です。アップロードされるものもなく、コードに期限も透かしもありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "一括コードは動的にしたり、印刷後に編集したりできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。一括モードは静的のみです。印刷後に行き先が変わったら、そのコードを作り直して刷り直してください。印刷後に編集する必要があるコードは、代わりに動的コードを1個ずつ作ってください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アップロードできるファイル形式は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSVファイル（<code>.csv</code>）またはExcelファイル（<code>.xlsx</code> / <code>.xls</code>）です。CSVはファイルごとに種類がひとつで、引用符で囲まれた項目はジェネレーターが処理するので、項目の中のカンマは安全です。Excelファイルはシートごとに種類を1つ持て、シート名が種類を決めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ファイルの中でWi-Fiや連絡先の詳細はどう書きますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "複数項目の種類は、項目のあいだにパイプ<code>|</code>を使い、順序は固定です。Wi-Fiはネットワーク名、パスワード、セキュリティ種別です。たとえば<code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCardは名前、電話番号、メールアドレス、会社名、役職、ウェブサイト、住所、メモです。たとえば<code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code>（SAMPLE DATA）。テンプレート<code>freeqrly-batch-template.xlsx</code>は、種類ごとの項目の順序を、ヘッダーとサンプル行付きで示しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ダウンロードすると何が得られますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各コードは1024ピクセルのPNGとして1枚ずつダウンロードできます。ZIPは<code>freeqrly-batch.zip</code>で、中に<code>qr-1.png</code>から<code>qr-50.png</code>まで、各1024ピクセルのPNGが入っています。一括モードにSVGの選択肢はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どのPNGがどの商品か、どう分かりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "行番号で分かります。<code>qr-1.png</code>が1行目、<code>qr-37.png</code>が37行目です。表はZIPと一緒に保管してください。意味のあるファイル名にするには、表をもとにコピーの名前を変えてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "コードはどのサイズで印刷すればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "素のコードは最低2×2cmです。ページに示したとおりです。密度の高いコードや、離れた場所からスキャンされるコードは、もっと大きくしてください。FreeQrlyの印刷サイズガイドは用途ごとのサイズを扱っています。どのサイズを選ぶにしても、まず1枚印刷して紙の上でスキャンしてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷後に一部のコードがスキャンできないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "よくある原因は、順に次のとおりです。印刷がコードの密度に対して小さすぎる。コントラストが低すぎる。あるいは、テキスト、枠、折り目などが静寂ゾーンを食い込んでいる。大きく印刷し、モジュールを濃くし、余白を確保して、紙の上で再度テストしてください。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"100個のQRコードを一度に生成する方法：表計算から印刷まで | FreeQrly","description":"100個のQRコードを50個ずつ2回に分けて生成します。表を作り、貼り付けかアップロードし、ZIPをひとつダウンロードして、テストスキャンして印刷——無料、登録不要、透かしなし。","step":[
+    {
+      "@type": "HowToStep",
+      "name": "表を作る",
+      "text": "100個のコードで起きうる問題は、ジェネレーターではなく表で起きます。37行目の誤字は、37行目の間違ったコードになります。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "貼り付けるかアップロードするか——入力方法を選ぶ",
+      "text": "一括モードには2つの入口があり、どちらが合うかはリストがどこにあるかで決まります。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "テンプレートファイルを使う",
+      "text": "既存のエクスポートからではなく、白紙のシートから始めるなら、列を記憶に頼って作らないでください。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "コードを生成して確認する",
+      "text": "生成が一番短いステップです。種類を選び、リストを追加して——貼り付けでもアップロードでも——生成します。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "ダウンロード——1枚ずつ、またはZIPでまとめて",
+      "text": "各コードは1024ピクセルのPNGとして1枚ずつダウンロードできます。交換用のコードが1個で済むときや、デザインに1枚ずつ配置するときに便利です。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印刷——サイズ、コントラスト、静寂ゾーン",
+      "text": "画面でスキャンできるコードが、置かれる場所——店の照明の下の棚ラベル、倉庫の荷物ラベル、薄暗いレストランのテーブルカード——でも紙の上でスキャンできるかどうかを決めるのは、3つのことです。"
+    }
+  ]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<div id="siteHeader"></div>
+<script src="/assets/js/site-header.js?v=b3aa-20261119"></script>
+<script src="/assets/js/acct-menu.js?v=b3aa-20261119"></script>
+<script src="/assets/js/subpage-header.js?v=b3aa-20261119"></script>
+  <article class="article">
+    <div class="mascot m-blog" aria-hidden="true"><img decoding="async" width="512" height="512" src="/assets/img/mascots/batch.webp" alt="FreeQrlyのゾウのマスコットQly"></div>
+    <div class="kicker" style="text-align:center">フィールドノート</div>
+    <h1 style="text-align:center;max-width:640px;margin:0 auto">100個のQRコードを一度に生成する方法：表計算から印刷まで</h1>
+    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto">はい——100個のコードとは、50個ずつのバッチを2回行うということです。FreeQrlyの一括モードは一度に最大50個のQRコードを作れるので、100個のコードは同じツールを2回通すことになります。100行の表を1つ作り、最初の50個を生成し、次に50個を生成し、ZIPファイルを2つダウンロードして、テストスキャンして印刷します。</p>
+    <p class="meta" style="text-align:center">2026年11月19日 · 約17分で読めます</p>
+    <div class="prose" style="margin-top:40px">
+<p>無料で、登録も要らず、コードに透かしもありません。このガイドの残りでは、表の作り方、入力方法、印刷前のチェック、うまくいかないときの対処法を扱います。</p>
+<p>このガイドで扱うのは静的コードのみです。一括モードで作れるのは静的コードだけだからです。静的コードは行き先を模様の中に持ちます。期限切れにならず、アカウントも要らず、すべてブラウザで生成されます。アップロードされるものも、追跡されるものもありません。その代償は、静的コードは印刷後に編集できないことです。リンクが変われば、そのコードを作り直して刷り直します。印刷後に編集でき、スキャン統計も見られるコードが必要なら、動的コードを使ってください。動的コードは一度に1個ずつ作るもので、一括では作れません。</p>
+<h2>100個のコードの進め方、ひと目で</h2>
+<div class="table-scroll"><table>
+<tr><th>ステップ</th><th>やること</th><th>得られるもの</th></tr>
+<tr><td>1. 表を作る</td><td>1行1コード、100行。種類に合わせた列で</td><td>空白行も誤字もない、きれいなリスト</td></tr>
+<tr><td>2. 入力方法を選ぶ</td><td>リストを貼り付けるか、CSVかExcelファイルをアップロードする</td><td>一括ジェネレーターの中にリストが入る</td></tr>
+<tr><td>3. 2回に分けて生成</td><td>1〜50行目、次に51〜100行目</td><td>100個のコード、グリッドでプレビュー</td></tr>
+<tr><td>4. ダウンロード</td><td>バッチごとにZIPひとつ、またはPNGを1枚ずつ</td><td><code>qr-1.png</code> … <code>qr-50.png</code>入りの<code>freeqrly-batch.zip</code>ファイル</td></tr>
+<tr><td>5. テストしてから印刷</td><td>最初、最後、真ん中のランダムな1個を、紙に印刷してスキャン</td><td>棚でもテーブルでも荷物でも、信頼できるコード</td></tr>
+</table></div>
+<p>現実の裏付けをひとつ。2026年11月18日、実在のユーザーがこの方法で100個のコードを生成しました。バッチ操作2回で、50個入りのZIPをダウンロードしました。一括ツールが初めて提供したZIPダウンロードです。</p>
+<h2>ステップ1：表を作る</h2>
+<p>100個のコードで起きうる問題は、ジェネレーターではなく表で起きます。37行目の誤字は、37行目の間違ったコードになります。まず表に10分だけ丁寧な時間をかけてください。</p>
+<h3>鉄則：1行1コード</h3>
+<p>表の各行が、まったく同じ順序でQRコード1個になります。1行目は<code>qr-1.png</code>、2行目は<code>qr-2.png</code>、という具合です。この順序だけが、コードと行き先の対応付けです。表のファイルはダウンロードしたZIPのそばに置き、行を並べ替えないでください。</p>
+<h3>実例：商品ページ100件</h3>
+<p>小さな店が、棚のラベル用に商品ページごとにコードを1個ずつ作りたいとします。リンクのコードに必要な列は2つだけです。その行を識別するためのものと、リンクそのものです。以下の値はすべてSAMPLE DATAです。</p>
+<div class="table-scroll"><table>
+<tr><th>行</th><th>SKU (SAMPLE DATA)</th><th>商品 (SAMPLE DATA)</th><th>リンク (SAMPLE DATA)</th></tr>
+<tr><td>1</td><td>SKU-001</td><td>セラミックマグ — サンド</td><td>https://example-shop.com/products/ceramic-mug-sand</td></tr>
+<tr><td>2</td><td>SKU-002</td><td>セラミックマグ — クレイ</td><td>https://example-shop.com/products/ceramic-mug-clay</td></tr>
+<tr><td>50</td><td>SKU-050</td><td>ストーンウェアボウル</td><td>https://example-shop.com/products/stoneware-bowl</td></tr>
+<tr><td>51</td><td>SKU-051</td><td>コットンエプロン</td><td>https://example-shop.com/products/cotton-apron</td></tr>
+<tr><td>100</td><td>SKU-100</td><td>エナメルケトル</td><td>https://example-shop.com/products/enamel-kettle</td></tr>
+</table></div>
+<p>1〜50行目がバッチ1、51〜100行目がバッチ2です。SKUの列は人間が表を読む助けになるだけです。ジェネレーターが使うのはリンクの列です。行き先がすでに表計算ソフトに入っているなら——在庫のエクスポート、商品リスト、ゲストリスト——エクスポート全体をアップロードするのではなく、行き先の列だけを新しいシートにコピーしてください。</p>
+<h3>種類ごとの列</h3>
+<p>一括モードは16種類に対応しています。url、text、email、sms、phone、geo、wifi、vcard、event、bitcoin、coupon、appstore、review、mp3、google-form、menuです。1項目だけの種類は列が1つ。複数項目の種類は、項目を1行にまとめ、区切り文字のパイプ<code>|</code>で区切ります。表示の順序どおりに並べ、読みやすさのためパイプの両側にスペースを1つずつ入れます。</p>
+<div class="table-scroll"><table>
+<tr><th>種類</th><th>項目（順序どおり、<code>|</code>で区切る）</th><th>例 (SAMPLE DATA)</th></tr>
+<tr><td>url</td><td>リンク</td><td><code>https://example.com/products/mug</code></td></tr>
+<tr><td>text</td><td>任意の言葉</td><td><code>Scan for today's menu</code></td></tr>
+<tr><td>email</td><td>宛先 | 件名 | 本文</td><td><code>hello@example.com | Table ready | Your table for two is ready at 7 pm</code></td></tr>
+<tr><td>sms</td><td>電話番号 | メッセージ</td><td><code>+1 555 010 2030 | Hi, I'd like to book a table</code></td></tr>
+<tr><td>phone</td><td>電話番号</td><td><code>+1 555 010 2030</code></td></tr>
+<tr><td>geo</td><td>緯度、経度</td><td><code>40.7411, -73.9897</code></td></tr>
+<tr><td>wifi</td><td>ネットワーク名 | パスワード | セキュリティ種別</td><td><code>MyWiFi | password | WPA</code></td></tr>
+<tr><td>vcard</td><td>名前 | 電話番号 | メールアドレス | 会社名 | 役職 | ウェブサイト | 住所 | メモ</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code></td></tr>
+<tr><td>event</td><td>タイトル | 開始 | 終了 | 場所 | 説明</td><td><code>Spring Fair | 2027-04-10T10:00 | 2027-04-10T18:00 | Town Hall | Live music, food stalls, and a craft market</code></td></tr>
+<tr><td>bitcoin</td><td>アドレス | 金額 | ラベル | メッセージ</td><td><code>bc1qexampleaddress | 0.001 | Coffee stall | Thanks for the coffee</code></td></tr>
+<tr><td>coupon</td><td>コード | 説明</td><td><code>SPRING10 | 10% off this weekend</code></td></tr>
+<tr><td>appstore</td><td>iOSリンク | Androidリンク（iOSがあればiOS、なければAndroid）</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
+<tr><td>review</td><td>レビューページのリンク</td><td><code>https://example.com/review-us</code></td></tr>
+<tr><td>mp3</td><td>音声リンク</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
+<tr><td>google-form</td><td>フォームのリンク</td><td><code>https://forms.example.com/feedback</code></td></tr>
+<tr><td>menu</td><td>メニューのリンク</td><td><code>https://example.com/menu</code></td></tr>
+</table></div>
+<p>上の項目の順序は、一括ジェネレーターが読み取る順序と一致しています。テキストエリアの下にある形式のヒントにも、同じ順序が表示されます。まず、パイプが区切り文字なので、項目の中にパイプを入れることはできません。Wi-Fiのパスワードに<code>|</code>が含まれていると、間違った項目に分かれてしまいます。次に、項目の順序は固定です。Wi-Fiの場合、ネットワーク名、パスワード、セキュリティ種別の順です。<code>MyWiFi | password | WPA</code>、まさに表示どおりです。順序を逆にしてもコードは生成されます。ただ、スマホが項目を間違った場所で読むコードになります。3つ目に、行き先はできるだけ短くしておきます。短いリンクは模様にゆとりができ、モジュールが大きくなるので、小さく印刷してもスキャンしやすくなります。長いリンクは表に入れる前に短縮し、短縮したリンクは先にテストしておきます。</p>
+<h3>生成前に表をきれいにする</h3>
+<p>ジェネレーターを開く前に、100行すべてについてこのチェックリストを一度通してください。</p>
+<ol>
+<li><strong>空白行なし。</strong>貼り付けたリストの空白行はスキップされますが、表計算ファイルの空白行はジェネレーターが空の項目として読むことがあります。空の行は削除してください。</li>
+<li><strong>貼り付けにヘッダー行なし。</strong>貼り付けるテキストにはヘッダーを含めないでください。（CSVのヘッダー行は自動で検出してスキップされます。ステップ2参照。貼り付けたテキストにはその助けはありません。）</li>
+<li><strong>末尾のスペースなし。</strong>リンクの末尾のスペースは、コードの内容の一部になります。表計算ソフトでは列を選択してトリミングしてください。</li>
+<li><strong>すべてのリンクが開くこと。</strong>最初、最後、真ん中のいくつかのリンクを抜き打ちで確認してください。ブラウザで404になるリンクは、スキャンしても404になります。</li>
+<li><strong>1バッチ1種類。</strong>CSVのアップロードでは種類はひとつだけです。ジェネレーターで選択されている種類が使われます。Wi-Fiの行とリンクの行を1つのバッチに混ぜないでください。種類ごとに分けるか、次に説明するExcelアップロードを使ってください。</li>
+</ol>
+<h2>ステップ2：貼り付けるかアップロードするか——入力方法を選ぶ</h2>
+<p>一括モードには2つの入口があり、どちらが合うかはリストがどこにあるかで決まります。</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>貼り付け</th><th>ファイルをアップロード</th></tr>
+<tr><td><strong>方法</strong></td><td>リストをコピーし、1行1項目でテキストエリアに貼り付けます</td><td>CSV（<code>.csv</code>）またはExcel（<code>.xlsx</code> / <code>.xls</code>）ファイルをアップロードします</td></tr>
+<tr><td><strong>最適な用途</strong></td><td>短いリストや、表計算ソフトではなく文書やメールの中にあるリスト</td><td>すでに表計算ソフトにあるリストや、十数行を超えるリスト</td></tr>
+<tr><td><strong>種類の扱い</strong></td><td>選択中の種類がすべての行に適用されます</td><td>CSV：ファイルごとに種類はひとつ。Excel：種類ごとにシートを1枚——シート名が種類を決めます</td></tr>
+<tr><td><strong>ヘッダー行</strong></td><td>含めないでください。コードになってしまいます</td><td>CSV：ヘッダー行は自動で検出してスキップされます</td></tr>
+<tr><td><strong>上限</strong></td><td>1バッチ50個まで</td><td>1バッチ50個まで</td></tr>
+</table></div>
+<p>100個のコードなら、アップロードがたいてい賢いです。ファイルが表をそのまま保ち、ヘッダー行はジェネレーターが自動で処理し、間違いに気づいたら同じファイルを再アップロードできます。貼り付けが速いのは、短いリストや、表計算ソフト以外——文書やメール——にあるものです。</p>
+<h3>Excelの近道：種類ごとにシートを1枚</h3>
+<p>複数の種類を1つのファイルで運べるのは、Excelのアップロードだけです。シート1枚が種類ひとつで、シート名が種類を決めます。リンクは<code>url</code>、<code>website</code>、<code>link</code>、<code>text</code>、<code>email</code>、<code>sms</code>、<code>phone</code>、<code>geo</code>、<code>wifi</code>、連絡先は<code>vcard</code>または<code>contact</code>、<code>event</code>です。名前が認識されないシートはurlとして扱われるので、アップロード前に名前を確認してください。この9つのシート名以外の種類は、シート名では選べません。その場合は、CSVアップロードを使うか、種類を選んで貼り付けてください。</p>
+<h2>ステップ3：テンプレートファイルを使う</h2>
+<p>既存のエクスポートからではなく、白紙のシートから始めるなら、列を記憶に頼って作らないでください。FreeQrlyがダウンロードできるテンプレート<code>freeqrly-batch-template.xlsx</code>を用意しています。種類ごとにシートが1枚あり、ヘッダーと入力済みのサンプル行があります。ダウンロードし、サンプル行を自分のものに置き換え、要らないサンプルを削除して、アップロードしてください。テンプレートは、項目の順序を正しく得るための最速の方法です。Wi-FiやvCardのような複数項目の種類では、サンプル行が順序を示してくれます。vCardのシートには8つの列——名前、電話番号、メールアドレス、会社名、役職、ウェブサイト、住所、メモ——があり、一括モードは8つすべてをテンプレートの順序どおりに読み取ります。単体の連絡先フォームと同じで、会社名と役職も保存される連絡先に載ります。</p>
+<p>選択中の種類だけのCSVテンプレートもあります。種類が混ざる作業には、Excelのテンプレートが適しています。</p>
+<p>完成したファイルは2部持っておきましょう。アップロードする作業用ファイルと、ダウンロードしたZIPと一緒に保存しておく手つかずの原本です。そうすれば3か月後でも、行番号が「どのコードがどの商品か」に答えてくれます。</p>
+<h2>ステップ4：コードを生成して確認する</h2>
+<p>生成が一番短いステップです。種類を選び、リストを追加して——貼り付けでもアップロードでも——生成します。項目ごとにコードが1個でき、ページ上のグリッドにプレビューされます。ダウンロードや印刷の前に、グリッドを確認してください。</p>
+<ul>
+<li><strong>コードの数を数える。</strong>各バッチは50個のはずです。数が足りなければ、行がスキップされています。たいてい空白行です。表に戻ってください。</li>
+<li><strong>最初と最後のコードを読む。</strong>最初のコードをスキャンし、次に最後のコードをスキャンします。両方が正しい行き先を開けば、設定は正しいです。真ん中のコードも同じ設定を使います。それでも、手で入力した行は抜き打ちで確認してください。</li>
+<li><strong>複数項目のコードを1個だけ抜き打ちで確認する。</strong>バッチがWi-FiやvCardなら、1個スキャンして、スマホがネットワークに参加するか、連絡先を保存するか確認してください。スキャンはできるのに違う項目に入るコードは、気づかない失敗です。</li>
+</ul>
+<p>まず画面上でテストしてください。画面でのテストは無料で即座にできます。ただ、明るい画面でスキャンできるコードでも、紙では読めないことがあります。だからステップ6の印刷テストが重要なのです。</p>
+<h2>ステップ5：ダウンロード——1枚ずつ、またはZIPでまとめて</h2>
+<p>各コードは1024ピクセルのPNGとして1枚ずつダウンロードできます。交換用のコードが1個で済むときや、デザインに1枚ずつ配置するときに便利です。100個のコードなら、ZIPが現実的な選択です。1クリックで<code>freeqrly-batch.zip</code>がダウンロードされ、中には<code>qr-1.png</code>から<code>qr-50.png</code>まで、各1024ピクセルのPNGが入っています。一括モードにSVGの選択肢はありません。</p>
+<p>ダウンロード時に正しくしておくことは2つです。まず、2つのZIPを分けておくこと。どちらも同じファイル名<code>freeqrly-batch.zip</code>なので、同じフォルダーでは2つ目が1つ目を上書きします。2つ目をダウンロードする前に、1つ目を<code>batch-1-rows-1-50.zip</code>という名前に変えるか、それぞれ別のフォルダーにダウンロードしてください。次に、対応付けを保つこと。ZIPの中のファイル名は商品名ではなく行番号です。PNGの名前を変えるなら、表をもとに変えてください。たとえば<code>qr-37.png</code>を<code>SKU-037-mug.png</code>にする、といった具合です。コピーで作業し、元のZIPは手つかずで残しておきます。</p>
+<p>ログインは要りません。一括コードは静的でブラウザで生成されるので、アカウントを作る必要もなく、透かしもなく、期限もありません。</p>
+<h2>ステップ6：印刷——サイズ、コントラスト、静寂ゾーン</h2>
+<p>画面でスキャンできるコードが、置かれる場所——店の照明の下の棚ラベル、倉庫の荷物ラベル、薄暗いレストランのテーブルカード——でも紙の上でスキャンできるかどうかを決めるのは、3つのことです。</p>
+<h3>サイズ</h3>
+<p>FreeQrlyの印刷サイズガイドは、用途ごとのサイズを扱っています。カード、チラシ、ポスターです。下限として、素のコードは最低2×2cmで印刷してください。ページに示したとおりです。密度の高いコードは、広い場所が必要です。同じ印刷サイズなら、行き先の長いコードは行き先の短いコードより広い場所が必要で、離れた場所からスキャンされるコードは、距離に比例して大きくする必要があります。迷ったら、テストラベルを1枚印刷し、お客様が立つ距離からスキャンしてみてください。</p>
+<h3>コントラストと静寂ゾーン</h3>
+<p>コントラストは決して変わりません。明るい背景に暗いモジュール、強いコントラストです。白地に薄いグレーのコードや、明るすぎるブランドカラーのコードは、テストできないスマホ——古いカメラ、暗い部屋、映り込み——で失敗します。モジュールは暗く、背景は明るくシンプルに保ってください。</p>
+<p>すべてのコードの周りには静寂ゾーンがあります。カメラがコードの縁を見つけられるようにするための空白の余白です。テキスト、枠、折り目、隣のラベルに食い込ませないでください。コードには、明るい背景のきれいな場所を4辺すべてに静寂ゾーンを確保して与えてください。</p>
+<h3>紙、インク、印刷テスト</h3>
+<p>明るい照明の下では、つや消しの紙の方が光沢紙よりうまくいきます。光沢は映り込みを反射するからです。ラベルがどうしても光沢でなければならないなら、置かれる照明の下でテストスキャンしてください。全量を刷る前に、必ず印刷テストを行ってください。1枚印刷し、紙に印刷された最初、最後、真ん中のランダムな1個をスキャンします。できればスマホを2台——iPhoneとAndroidを1台ずつ——使ってください。3つすべてが1回目でスキャンできれば、100個を印刷してかまいません。1つでもためらえば、大きく印刷するか、コントラストを上げるか、行き先を短くしてください。</p>
+<h2>よくある間違いと対処法</h2>
+<div class="table-scroll"><table>
+<tr><th>間違い</th><th>起きること</th><th>修正</th></tr>
+<tr><td>ヘッダー行を貼り付けてしまう</td><td>最初のコードが「Link」というページを開くか、「Link」という言葉をテキストとしてエンコードする</td><td>データ行だけを貼り付ける</td></tr>
+<tr><td>貼り付けの中の空白行</td><td>行数よりコードが少ない</td><td>空白行を削除する。ダウンロード前にグリッドで数を数える</td></tr>
+<tr><td>1つのCSVバッチに種類を混ぜる</td><td>Wi-Fiの行がリンクのコードになったり、vCardの行がただのテキストになったりする</td><td>CSVバッチは種類ひとつ。混ざる作業は種類ごとに分けるか、種類ごとにシートを1枚使ったExcelを使う</td></tr>
+<tr><td>Excelのシート名のスペルミス</td><td>そのシートのコードがURLコードとして出てくる</td><td>シート名は一覧どおりに正確に使うこと。認識されない名前はurlとして扱われます</td></tr>
+<tr><td>項目の中の<code>|</code></td><td>パスワードが2つの項目に分かれたWi-Fiコード</td><td>項目からパイプを取り除くか、パスワードを変える</td></tr>
+<tr><td>項目の順序間違い</td><td>コードはスキャンできるのに、スマホが間違ったネットワークに参加したり、間違った詳細を保存したりする</td><td>テンプレートの項目順序で行を作り直し、再生成する</td></tr>
+<tr><td>小さな印刷サイズに長いリンク</td><td>画面ではスキャンできるコードがラベルでは読めない</td><td>リンクを短くするか、大きく印刷する——紙でテストする</td></tr>
+<tr><td>最初のZIPの上書き</td><td>フォルダーに<code>freeqrly-batch.zip</code>が1つしかなく、それがバッチ2</td><td>バッチ2をダウンロードする前にバッチ1の名前を変える</td></tr>
+<tr><td>紙のテストなしの印刷</td><td>画面で読めたコードが店の照明の下で読めない</td><td>1枚印刷する。紙の上で最初、最後、真ん中の1個をスキャンする</td></tr>
+<tr><td>印刷後にリンクを変更</td><td>印刷したコードが古いページを開き続ける</td><td>静的コードは編集できません。そのコードを作り直して刷り直してください。編集できるコードが必要なら、代わりに動的コードを使ってください</td></tr>
+</table></div>
+<h2>一括が間違った道具となるとき</h2>
+<p>一括モードは、行き先が決まっていて、量が問題のときに合う道具です。間違った道具になるのは3つの場合です。1つ目は、印刷後にコードを編集する必要がある場合です。月に1回変わるメニューのリンクには動的コードが必要です。1個ずつ作り、ダッシュボードから編集できます。無料プランでは動的コードは20個まで。Proは月額9ドルまたは年額90ドルで、無料プランとの唯一の違いは動的コードが無制限になることです。現在実施中の期間限定キャンペーンでは、無料の動的コードは無制限です。キャンペーン終了後は、無料プランの動的コードは20個までとなります。2つ目は、コードごとに違うスタイルが必要な場合です。一括モードでは1つの統一スタイルでまとめて作ります。代わりにメインのジェネレーターで1個ずつ作ってください。3つ目は、コードごとのスキャン統計が必要な場合です。静的コードはスキャンを記録しません。代わりに動的コードを使ってください。動的コードは50個のバッチでは手に入りません。</p>
+<h2>作業の流れ、1段落で</h2>
+<p>表を作ります。コード1個につき1行、種類に合った列です。きれいにします。空白行なし、貼り付けにヘッダーなし、すべてのリンクを確認済み。テンプレートを使いながら、50個ずつ2回に分けて、アップロードまたは貼り付けします。グリッドで数を数え、最初と最後のコードをスキャンし、ZIPを表と一緒に別々のフォルダーにダウンロードします。1枚印刷して紙の上でスキャンし、それから100個を印刷します。100個のコードは、100個の小さな作業ではありません。1つの表、2回のバッチ、1回のテスト印刷です。</p>
+    </div>
+    <div class="cta-card">
+      <div class="mascot" aria-hidden="true"><img loading="lazy" decoding="async" width="512" height="512" src="/assets/img/mascots/studio-qr.webp" alt="QRコードを掲げるQly"></div>
+      <div>
+        <h3>自分で試す — 無料</h3>
+        <p>この記事の内容はすべて、現在のFreeQrlyスタジオでそのまま使えます。静的コード、17種類すべて、PNGとSVGの書き出しに対応しています。</p>
+        <a class="btn" href="/ja/#studio">スタジオを開く</a>
+      </div>
+    </div>
+    <div class="related">
+      <div class="fl" style="margin-top:34px">続きを読む</div>
+      <div class="rel-grid">
+        <a class="rel-card" href="/ja/blog/qr-codes-for-event-organizers-checklist/"><b>イベント主催者のためのQRコード：完全チェックリスト（準備中・当日・終了後）</b></a>
+        <a class="rel-card" href="/ja/blog/static-vs-dynamic-qr-codes/"><b>静的QRコードと動的QRコード：永久無料か、サブスクリプションか？</b></a>
+        <a class="rel-card" href="/ja/blog/why-is-my-qr-code-not-working/"><b>QRコードが動かない？ 解決に役立つ7つの対処法</b></a>
+      </div>
+    </div>
+    <section class="faq" id="faq" style="margin-top:50px">
+      <h2>知っておきたいこと</h2>
+    <details><summary><span>一度に何個のQRコードを生成できますか？</span></summary><p>1バッチ最大50個です。貼り付けでもアップロードでも同じです。つまり100個のコードはバッチ2回分です。1〜50行目、次に51〜100行目。ファイル名が表と対応し続けるよう、両方の半分で行の順序を同じにしてください。</p></details>
+    <details><summary><span>QRコードを一括で生成するのにアカウントは必要ですか？</span></summary><p>いいえ。一括コードは静的で、すべてブラウザで生成されるので、登録は不要です。アップロードされるものもなく、コードに期限も透かしもありません。</p></details>
+    <details><summary><span>一括コードは動的にしたり、印刷後に編集したりできますか？</span></summary><p>いいえ。一括モードは静的のみです。印刷後に行き先が変わったら、そのコードを作り直して刷り直してください。印刷後に編集する必要があるコードは、代わりに動的コードを1個ずつ作ってください。</p></details>
+    <details><summary><span>アップロードできるファイル形式は？</span></summary><p>CSVファイル（<code>.csv</code>）またはExcelファイル（<code>.xlsx</code> / <code>.xls</code>）です。CSVはファイルごとに種類がひとつで、引用符で囲まれた項目はジェネレーターが処理するので、項目の中のカンマは安全です。Excelファイルはシートごとに種類を1つ持て、シート名が種類を決めます。</p></details>
+    <details><summary><span>ファイルの中でWi-Fiや連絡先の詳細はどう書きますか？</span></summary><p>複数項目の種類は、項目のあいだにパイプ<code>|</code>を使い、順序は固定です。Wi-Fiはネットワーク名、パスワード、セキュリティ種別です。たとえば<code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCardは名前、電話番号、メールアドレス、会社名、役職、ウェブサイト、住所、メモです。たとえば<code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code>（SAMPLE DATA）。テンプレート<code>freeqrly-batch-template.xlsx</code>は、種類ごとの項目の順序を、ヘッダーとサンプル行付きで示しています。</p></details>
+    <details><summary><span>ダウンロードすると何が得られますか？</span></summary><p>各コードは1024ピクセルのPNGとして1枚ずつダウンロードできます。ZIPは<code>freeqrly-batch.zip</code>で、中に<code>qr-1.png</code>から<code>qr-50.png</code>まで、各1024ピクセルのPNGが入っています。一括モードにSVGの選択肢はありません。</p></details>
+    <details><summary><span>どのPNGがどの商品か、どう分かりますか？</span></summary><p>行番号で分かります。<code>qr-1.png</code>が1行目、<code>qr-37.png</code>が37行目です。表はZIPと一緒に保管してください。意味のあるファイル名にするには、表をもとにコピーの名前を変えてください。</p></details>
+    <details><summary><span>コードはどのサイズで印刷すればいいですか？</span></summary><p>素のコードは最低2×2cmです。ページに示したとおりです。密度の高いコードや、離れた場所からスキャンされるコードは、もっと大きくしてください。FreeQrlyの印刷サイズガイドは用途ごとのサイズを扱っています。どのサイズを選ぶにしても、まず1枚印刷して紙の上でスキャンしてください。</p></details>
+    <details><summary><span>印刷後に一部のコードがスキャンできないのはなぜですか？</span></summary><p>よくある原因は、順に次のとおりです。印刷がコードの密度に対して小さすぎる。コントラストが低すぎる。あるいは、テキスト、枠、折り目などが静寂ゾーンを食い込んでいる。大きく印刷し、モジュールを濃くし、余白を確保して、紙の上で再度テストしてください。</p></details>
+    </section>
+  </article>
+  <footer>
+    <div class="fcta">
+      <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
+      <div class="fctaText">
+        <h3>動的コード無制限 — 期間限定オファー。</h3>
+        <p>無料でサインインして、必要なだけ作成できます。すべてのコードは印刷後も編集でき、有効期限はありません。</p>
+      </div>
+      <a class="fctaBtn" href="/ja/login/">無料で始める</a>
+    </div>
+    <div class="fmain">
+      <div class="fbrand">
+        <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
+        <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
+        <div class="fmade">静的コードはブラウザで作成。</div>
+      </div>
+      <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
+      <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
+      <div class="fcol"><h4>会社</h4><a href="/ja/about/">私たちについて</a><a href="mailto:hello@freeqrly.com">お問い合わせ</a></div>
+      <div class="fcol"><h4>法的情報</h4><a href="/ja/privacy/">プライバシーポリシー</a><a href="/ja/terms/">利用規約</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
+  </footer>
+</div>
+
+</body>
+</html>

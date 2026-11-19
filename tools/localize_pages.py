@@ -80,7 +80,9 @@ def localize_page(key, lang, trans):
     # FAQ answers with <a href="..."> links stayed English in localized pages
     # for exactly this reason. Also replace the escaped variants.
     for en in list(trans.keys()):
-        if '"' in en and trans[en] != en:
+        # Identity keys (tr == en) are included too: their escaped forms
+        # also need shielding in the main loop below.
+        if '"' in en:
             esc_en = en.replace('"', '\\"')
             if esc_en not in trans:
                 trans[esc_en] = trans[en].replace('"', '\\"')
@@ -90,7 +92,8 @@ def localize_page(key, lang, trans):
     # in all 9 languages). Add the &amp; variant, plus the combined
     # \" + &amp; variant for JSON-LD strings that contain both.
     for en in list(trans.keys()):
-        if '&' in en and trans[en] != en:
+        # Identity keys included too (see the \" variant loop above).
+        if '&' in en:
             esc_amp = re.sub(r'&(?!amp;|#\d+;|[a-zA-Z][a-zA-Z0-9]*;)', '&amp;', en)
             esc_amp_tr = re.sub(r'&(?!amp;|#\d+;|[a-zA-Z][a-zA-Z0-9]*;)', '&amp;', trans[en])
             if esc_amp != en and esc_amp not in trans:
@@ -100,10 +103,45 @@ def localize_page(key, lang, trans):
                 esc_both_tr = esc_amp_tr.replace('"', '\\"')
                 if esc_both not in trans:
                     trans[esc_both] = esc_both_tr
+    # Identity-key placeholder protection, interleaved in the main
+    # longest-first pass below (not a separate earlier pass).
+    # Why not just drop the `tr == en` skip in the loop: replacing a string
+    # with itself is a no-op, so a shorter translated key (e.g. the beer
+    # style "Hazy IPA") would still match inside a longer proper noun
+    # (e.g. the brand "Northbridge Hazy IPA") afterwards. Instead, shield
+    # every identity key behind a unique placeholder and restore it after
+    # the loop. The shielding MUST run in the same longest-first order as
+    # the translations: a longer translatable sentence (e.g. "What is
+    # FreeQrly?") is translated BEFORE the shorter identity key inside it
+    # ("FreeQrly") is shielded, so the sentence still matches; and the
+    # identity key is shielded BEFORE any shorter translated key can match
+    # inside it. A separate protect pass before the loop breaks every
+    # sentence containing a short identity key (brand names like "FreeQrly",
+    # "Google", "PNG" appear inside countless translatable strings).
+    _PROTECT_PREFIX = "\x00__FQPROTECT_"
+    assert _PROTECT_PREFIX not in src, "protect token collides with source"
+    assert all(_PROTECT_PREFIX not in k for k in trans), "protect token collides with a key"
+    _protect = {}  # placeholder -> original EN string
+    _n = 0
     # longest first so 'Email body' wins over 'Email'
     for en in sorted(trans.keys(), key=len, reverse=True):
         tr = trans[en]
-        if tr == en or not en:
+        if not en:
+            continue
+        if tr == en:
+            # Identity key: shield it (see note above), do not translate.
+            ph = f"{_PROTECT_PREFIX}{_n}\x00"
+            _n += 1
+            if "<" in en or " " in en:
+                if out.count(en) == 0:
+                    continue
+                out = out.replace(en, ph)
+            else:
+                pat = re.compile(r"(>|['\"=])" + re.escape(en) + r"(<|['\"])")
+                out, cnt = pat.subn(lambda m: m.group(1) + ph + m.group(2), out)
+                if cnt == 0:
+                    continue
+            _protect[ph] = en
             continue
         if "<" in en or " " in en:
             n = out.count(en)
@@ -115,6 +153,14 @@ def localize_page(key, lang, trans):
             out, n = pat.subn(lambda m: m.group(1) + tr + m.group(2), out)
             if n == 0:
                 missing.append(en)
+    # Restore identity-key placeholders (see protect pass above). This runs
+    # right after the main replacement loop and before any post-processing,
+    # so the placeholders never reach the HTML rewrites below. If one
+    # survived, fail loudly instead of writing a broken page.
+    for ph, en in _protect.items():
+        out = out.replace(ph, en)
+    if _PROTECT_PREFIX in out:
+        raise ValueError(f"protect placeholder leaked in {key}/{lang}")
     # <html lang/data-lang/dir>
     def html_tag(m):
         attrs = m.group(1) or ""
