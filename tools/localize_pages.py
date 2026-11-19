@@ -9,12 +9,38 @@ on HTML/quote boundaries so 'Email' never corrupts 'Email address'.
 Post: <html lang/data-lang/dir>, full hreflang set, self canonical.
 Usage: python3 tools/localize-pages.py [lang ...]  (default: all 9)
 """
-import json, os, re, sys
+import json, os, re, subprocess, sys
 
 SITE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 I18N_DIR = os.path.join(SITE, "tools/i18n")
 LANGS = ["zh", "es", "hi", "ar", "pt", "fr", "ru", "de", "ja"]
 BASE = "https://freeqrly.com"
+
+# app.js I18N (client-side translations) — the single source of truth for
+# generator UI labels. Loaded lazily via node, exactly like
+# build-home-i18n.py (string-aware brace counting, never hardcoded line
+# slices). Used by the data-i18n pass in localize_page() below.
+_APP_I18N = None
+def _app_i18n():
+    global _APP_I18N
+    if _APP_I18N is None:
+        js = subprocess.run(["node", "-e", """
+const fs=require('fs');
+const app=fs.readFileSync('assets/js/app.js','utf8');
+const start=app.indexOf('const I18N = ') + 'const I18N = '.length;
+let _i=start, _d=0, _instr=null, _esc=false;
+for (; _i<app.length; _i++) {
+  const _c=app[_i];
+  if (_instr) { if (_esc) _esc=false; else if (_c==='\\\\') _esc=true; else if (_c===_instr) _instr=null; }
+  else { if (_c==='"' || _c==="'") _instr=_c; else if (_c==='{') _d++; else if (_c==='}') { _d--; if (_d===0) break; } }
+}
+const I18N=eval('('+app.slice(start, _i+1)+')');
+console.log(JSON.stringify(I18N));
+"""], capture_output=True, text=True, cwd=SITE)
+        if js.returncode != 0:
+            raise RuntimeError(f"node failed to extract app.js I18N: {js.stderr}")
+        _APP_I18N = json.loads(js.stdout)
+    return _APP_I18N
 
 # page key -> (en source relpath, localized relpath)
 PAGES = {
@@ -161,6 +187,39 @@ def localize_page(key, lang, trans):
         out = out.replace(ph, en)
     if _PROTECT_PREFIX in out:
         raise ValueError(f"protect placeholder leaked in {key}/{lang}")
+    # Generator static fallback: elements with data-i18n="KEY" carry the
+    # English label as static HTML (shown with JS off / before JS loads).
+    # The dictionary never contained these strings, so the loop above
+    # leaves them English on every landing page. Replace them from app.js
+    # I18N — the same source the homepage generator uses
+    # (build-home-i18n.py) and the same text app.js applies at runtime, so
+    # static and runtime agree. Only the 33 landing pages have data-i18n
+    # elements (43 each + 1 data-i18n-ph); other pages are untouched.
+    # Missing keys keep the English fallback. data-i18n-ph (input
+    # placeholders) likewise: drop the EN placeholder first, else the tag
+    # ends up with two placeholder attributes and browsers use the first
+    # (EN) one.
+    _app_tr = _app_i18n().get(lang, {})
+    out = re.sub(r'(<[^>]*data-i18n="([^"]+)"[^>]*>)(.*?)(</[^>]+>)',
+                 lambda m: f"{m.group(1)}{_app_tr.get(m.group(2), m.group(3))}{m.group(4)}",
+                 out, flags=re.S)
+    def _html_escape(s):
+        return s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;").replace(">", "&gt;")
+    def _ph_tag(m):
+        tag = m.group(0)
+        tag = re.sub(r'\s*placeholder="[^"]*"', '', tag)
+        return re.sub(r'data-i18n-ph="([^"]+)"',
+                      lambda mm: f'placeholder="{_html_escape(_app_tr.get(mm.group(1), ""))}"', tag)
+    out = re.sub(r'<[^>]*data-i18n-ph="[^"]+"[^>]*>', _ph_tag, out)
+    # Same for data-i18n-aria (aria-label on colour dots, upload, etc.):
+    # drop the EN aria-label first, else the tag ends up with two
+    # aria-label attributes. All 7 aria keys exist in all 9 languages.
+    def _aria_tag(m):
+        tag = m.group(0)
+        tag = re.sub(r'\s*aria-label="[^"]*"', '', tag)
+        return re.sub(r'data-i18n-aria="([^"]+)"',
+                      lambda mm: f'aria-label="{_html_escape(_app_tr.get(mm.group(1), ""))}"', tag)
+    out = re.sub(r'<[^>]*data-i18n-aria="[^"]+"[^>]*>', _aria_tag, out)
     # <html lang/data-lang/dir>
     def html_tag(m):
         attrs = m.group(1) or ""

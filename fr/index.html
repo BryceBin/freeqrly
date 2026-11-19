@@ -44,7 +44,7 @@
 <meta name="twitter:title" content="FreeQrly — QR Code Generator, Private by Design">
 <meta name="twitter:description" content="Beautiful QR codes in your browser. Free forever — static codes need no sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://freeqrly.com/og.png">
-<link rel="stylesheet" href="/assets/css/home-bundle.css?v=b3aa-20261119">
+<link rel="stylesheet" href="/assets/css/home-bundle.css?v=b3ab-20261119">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Free QR code generator. Static codes are 100% browser-side, no sign-up.","inLanguage":["en","zh"]}
 </script>
@@ -165,10 +165,10 @@
         <div class="approw"><div class="applabel"><span data-i18n="colors">Couleurs</span><small data-i18n="colorsSub">Touchez ou personnalisez</small></div>
           <div class="cpair">
             <div class="cgroup"><span class="cname" data-i18n="ink">Encre</span><div class="cdots" id="fgDots">
-              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#B4563C" style="background:#B4563C" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#2F6B4F" style="background:#2F6B4F" aria-label="Ink" data-i18n-aria="ink"></button><button class="cdot" data-v="#2F4B7C" style="background:#2F4B7C" aria-label="Ink" data-i18n-aria="ink"></button><button class="cpick" data-kind="fg" aria-label="Custom ink color" data-i18n-aria="ariaCustomInk">+</button>
+              <button class="cdot" data-v="#22303F" style="background:#22303F" aria-label="Encre"></button><button class="cdot" data-v="#1A1A1A" style="background:#1A1A1A" aria-label="Encre"></button><button class="cdot" data-v="#B4563C" style="background:#B4563C" aria-label="Encre"></button><button class="cdot" data-v="#2F6B4F" style="background:#2F6B4F" aria-label="Encre"></button><button class="cdot" data-v="#2F4B7C" style="background:#2F4B7C" aria-label="Encre"></button><button class="cpick" data-kind="fg" aria-label="Couleur d'encre personnalisée">+</button>
             </div></div>
             <div class="cgroup"><span class="cname" data-i18n="background">Fond</span><div class="cdots" id="bgDots">
-              <button class="cdot ctransp on" data-v="transparent" aria-label="Transparent background" data-i18n-aria="transparent"></button><button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Background" data-i18n-aria="background"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Background" data-i18n-aria="background"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Background" data-i18n-aria="background"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Background" data-i18n-aria="background"></button><button class="cpick" data-kind="bg" aria-label="Custom background color" data-i18n-aria="ariaCustomBg">+</button>
+              <button class="cdot ctransp on" data-v="transparent" aria-label="Fond transparent"></button><button class="cdot" data-v="#FFFFFF" style="background:#FFFFFF" aria-label="Fond"></button><button class="cdot" data-v="#FBF6EC" style="background:#FBF6EC" aria-label="Fond"></button><button class="cdot" data-v="#DCE5DD" style="background:#DCE5DD" aria-label="Fond"></button><button class="cdot" data-v="#232323" style="background:#232323" aria-label="Fond"></button><button class="cpick" data-kind="bg" aria-label="Couleur d'arrière-plan personnalisée">+</button>
             </div></div>
           </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="logo">Ajoutez votre logo</span><small data-i18n="logoSub">Marque ou perso</small></div>
@@ -179,7 +179,7 @@
             <button class="logopick" data-preset="instagram" aria-label="Instagram"><img src="/assets/img/logos/instagram.svg" alt="Instagram" loading="lazy"></button>
             <button class="logopick" data-preset="google" aria-label="Google"><img src="/assets/img/logos/google.svg" alt="Google" loading="lazy"></button>
             <button class="logopick" data-preset="microsoft" aria-label="Microsoft"><img src="/assets/img/logos/microsoft.svg" alt="Microsoft" loading="lazy"></button>
-            <label class="logopick logoupload" for="logo" aria-label="Upload logo" data-i18n-aria="ariaUploadLogo">+<input type="file" id="logo" accept="image/*" hidden></label>
+            <label class="logopick logoupload" for="logo" aria-label="Téléverser un logo">+<input type="file" id="logo" accept="image/*" hidden></label>
             
           </div></div>
         <div class="approw"><div class="applabel"><span data-i18n="size">Taille d'export</span><small><span id="sizeVal">1024</span> px</small></div>
@@ -217,7 +217,7 @@
         <button class="btn-primary dynGenBtn" id="dynCreate" data-i18n="dynCreate" hidden>Générer un QR dynamique</button>
         <div class="dlrow"><div class="dlSplit">
           <button id="dlPng" class="dlMain"><span data-i18n="dl">Télécharger</span> PNG ↓</button>
-          <button id="dlArrow" class="dlArrow" aria-label="More formats" data-i18n-aria="moreFormats">▾</button>
+          <button id="dlArrow" class="dlArrow" aria-label="Plus de formats">▾</button>
           <div class="dlMenu" id="dlMenu">
             <button data-fmt="svg">SVG ↓</button>
             <button data-fmt="pdf">PDF ↓</button>
@@ -335,10 +335,10 @@
   <div class="cpop-row"><div class="cpop-preview" id="cpopPrev"></div><input class="cpop-hex" id="cpopHex" value="#22303F" maxlength="7" spellcheck="false"><button class="cpop-ok" id="cpopOk">✓</button></div>
 </div>
 <script src="/assets/lib/qr-code-styling.js"></script>
-<script src="/assets/js/vcard.js?v=b3aa-20261119"></script>
-<script src="/assets/js/acct-menu.js?v=b3aa-20261119"></script>
-<script src="/assets/js/site-header.js?v=b3aa-20261119"></script>
-<script src="/assets/js/app.js?v=b3aa-20261119"></script>
+<script src="/assets/js/vcard.js?v=b3ab-20261119"></script>
+<script src="/assets/js/acct-menu.js?v=b3ab-20261119"></script>
+<script src="/assets/js/site-header.js?v=b3ab-20261119"></script>
+<script src="/assets/js/app.js?v=b3ab-20261119"></script>
 </body>
 </html>
 
