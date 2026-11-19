@@ -83,6 +83,15 @@ for lang in LANGS:
     h = h.replace('alt="QR code preview"', f'alt="{_alt}"')
     h = h.replace('aria-label="QR code preview"', f'aria-label="{_alt}"')
 
+    # Same for the two decorative mascot images (aria-hidden): their alts are
+    # hardcoded English in the template, not data-i18n elements, so the pass
+    # above leaves them English on every localized homepage. Use the same
+    # mascotAlt / privacyShieldAlt keys, so static and runtime agree.
+    _mascot = html_escape(tr.get('mascotAlt', 'Qly presenting a QR code'))
+    h = h.replace('alt="Qly presenting a QR code"', f'alt="{_mascot}"')
+    _shield = html_escape(tr.get('privacyShieldAlt', 'Qly protecting your privacy with a shield'))
+    h = h.replace('alt="Qly protecting your privacy with a shield"', f'alt="{_shield}"')
+
     # Update title and meta description
     h = re.sub(r'<title>.*?</title>', f"<title>{html_escape(tr.get('title', ''))}</title>", h)
     h = re.sub(r'<meta name="description" content=".*?"',
