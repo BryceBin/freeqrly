@@ -67,7 +67,7 @@
       "name": "Preciso de uma conta para gerar QR codes em massa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. Códigos em lote são estáticos e gerados inteiramente no seu navegador, então não é preciso cadastro, nada enviado, e os códigos nunca expiram nem têm marca d'água."
+        "text": "Não. Códigos em lote são estáticos e gerados inteiramente no seu navegador, então não é preciso cadastro, nada é enviado, e os códigos nunca expiram nem têm marca d'água."
       }
     },
     {
@@ -91,7 +91,7 @@
       "name": "Como formato WiFi e dados de contato no arquivo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tipos de vários campos usam o caractere pipe <code>|</code> entre os campos, numa ordem fixa. WiFi é nome da rede, senha, tipo de segurança — por exemplo, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Um vCard é nome, telefone, e-mail, empresa, cargo, site, endereço, observação — por exemplo, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code> (SAMPLE DATA). O modelo, <code>freeqrly-batch-template.xlsx</code>, mostra a ordem dos campos para cada tipo, com cabeçalhos e linhas de exemplo."
+        "text": "Tipos de vários campos usam o caractere pipe <code>|</code> entre os campos, numa ordem fixa. WiFi é nome da rede, senha, tipo de segurança — por exemplo, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Um vCard é nome, telefone, e-mail, empresa, cargo, site, endereço, observação — por exemplo, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | Rua Principal, 123 | Amigo</code> (SAMPLE DATA). O modelo, <code>freeqrly-batch-template.xlsx</code>, mostra a ordem dos campos para cada tipo, com cabeçalhos e linhas de exemplo."
       }
     },
     {
@@ -178,13 +178,13 @@
     <p class="meta" style="text-align:center">19 de novembro de 2026 · 17 min de leitura</p>
     <div class="prose" style="margin-top:40px">
 <p>É grátis, não precisa de cadastro, e os códigos não têm marca d'água. O resto cobre a tabela, o método de entrada, as verificações antes de imprimir e o que fazer quando algo parecer errado.</p>
-<p>Este guia cobre só códigos estáticos, porque o modo em lote faz só códigos estáticos. Um código estático guarda o seu destino dentro do padrão: ele nunca expira, não precisa de conta e é gerado inteiramente no seu navegador — nada enviado, nada rastreado. A contrapartida: um código estático não pode ser editado depois de imprimir. Se um link mudar, regenere esse código e o reimprima. Se precisa de códigos que possam ser editados depois de imprimir, com estatísticas de escaneamento, use códigos dinâmicos — feitos um por vez, não em lotes.</p>
+<p>Este guia cobre só códigos estáticos, porque o modo em lote faz só códigos estáticos. Um código estático guarda o seu destino dentro do padrão: ele nunca expira, não precisa de conta e é gerado inteiramente no seu navegador — nada é enviado, nada é rastreado. A contrapartida: um código estático não pode ser editado depois de imprimir. Se um link mudar, regenere esse código e o reimprima. Se precisa de códigos que possam ser editados depois de imprimir, com estatísticas de escaneamento, use códigos dinâmicos — feitos um por vez, não em lotes.</p>
 <h2>O plano de 100 códigos num relance</h2>
 <div class="table-scroll"><table>
 <tr><th>Passo</th><th>O que você faz</th><th>O que você recebe</th></tr>
 <tr><td>1. Monte a tabela</td><td>Uma linha por código, 100 linhas, colunas conforme o tipo</td><td>Uma lista limpa, sem linhas em branco e sem erros de digitação</td></tr>
 <tr><td>2. Escolha o método de entrada</td><td>Cole a lista, ou envie um arquivo CSV ou Excel</td><td>A sua lista dentro do gerador em lote</td></tr>
-<tr><td>3. Gere dois lotes</td><td>Linhas 1–50 e depois linhas 51–100</td><td>100 códigos, com prévia em grades</td></tr>
+<tr><td>3. Gere dois lotes</td><td>Linhas 1–50 e depois linhas 51–100</td><td>100 códigos, com prévia em grade</td></tr>
 <tr><td>4. Baixe</td><td>Um ZIP por lote, ou PNGs avulsos</td><td>arquivos <code>freeqrly-batch.zip</code> com <code>qr-1.png</code> … <code>qr-50.png</code></td></tr>
 <tr><td>5. Teste e depois imprima</td><td>Escaneie o primeiro, o último e um código aleatório do meio — no papel</td><td>Códigos em que você pode confiar na prateleira, na mesa ou no pacote</td></tr>
 </table></div>
@@ -210,15 +210,15 @@
 <tr><th>Tipo</th><th>Campos, em ordem (separe com <code>|</code>)</th><th>Exemplo (SAMPLE DATA)</th></tr>
 <tr><td>url</td><td>Link</td><td><code>https://example.com/products/mug</code></td></tr>
 <tr><td>text</td><td>Quaisquer palavras</td><td><code>Escaneie para ver o cardápio de hoje</code></td></tr>
-<tr><td>email</td><td>Destinatário | assunto | corpo</td><td><code>hello@example.com | Table ready | Your table for two is ready at 7 pm</code></td></tr>
+<tr><td>email</td><td>Destinatário | assunto | corpo</td><td><code>hello@example.com | Mesa pronta | Sua mesa para dois está pronta às 19h</code></td></tr>
 <tr><td>sms</td><td>Número de telefone | mensagem</td><td><code>+1 555 010 2030 | Oi, gostaria de reservar uma mesa</code></td></tr>
 <tr><td>phone</td><td>Número de telefone</td><td><code>+1 555 010 2030</code></td></tr>
 <tr><td>geo</td><td>Latitude, longitude</td><td><code>40.7411, -73.9897</code></td></tr>
 <tr><td>wifi</td><td>Nome da rede | senha | tipo de segurança</td><td><code>MyWiFi | password | WPA</code></td></tr>
-<tr><td>vcard</td><td>Nome | telefone | e-mail | empresa | cargo | site | endereço | observação</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code></td></tr>
-<tr><td>event</td><td>Título | início | fim | local | descrição</td><td><code>Spring Fair | 2027-04-10T10:00 | 2027-04-10T18:00 | Town Hall | Live music, food stalls, and a craft market</code></td></tr>
-<tr><td>bitcoin</td><td>Endereço | valor | rótulo | mensagem</td><td><code>bc1qexampleaddress | 0.001 | Coffee stall | Thanks for the coffee</code></td></tr>
-<tr><td>coupon</td><td>Código | descrição</td><td><code>SPRING10 | 10% off neste fim de semana</code></td></tr>
+<tr><td>vcard</td><td>Nome | telefone | e-mail | empresa | cargo | site | endereço | observação</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | Rua Principal, 123 | Amigo</code></td></tr>
+<tr><td>event</td><td>Título | início | fim | local | descrição</td><td><code>Feira de Primavera | 2027-04-10T10:00 | 2027-04-10T18:00 | Salão Municipal | Música ao vivo, barracas de comida e um mercado de artesanato</code></td></tr>
+<tr><td>bitcoin</td><td>Endereço | valor | rótulo | mensagem</td><td><code>bc1qexampleaddress | 0,001 | Barraca de café | Obrigado pelo café</code></td></tr>
+<tr><td>coupon</td><td>Código | descrição</td><td><code>SPRING10 | 10% de desconto neste fim de semana</code></td></tr>
 <tr><td>appstore</td><td>Link iOS | link Android (o iOS é usado quando presente; caso contrário, o Android)</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
 <tr><td>review</td><td>Link da página de avaliações</td><td><code>https://example.com/review-us</code></td></tr>
 <tr><td>mp3</td><td>Link de áudio</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
@@ -267,7 +267,7 @@
 <h2>Passo 6: Imprima — tamanho, contraste e zona de silêncio</h2>
 <p>Três coisas decidem se um código que escaneia na tela também escaneia no papel, onde ele realmente vai viver: uma etiqueta de prateleira sob as luzes da loja, uma etiqueta de pacote num armazém, um cartão de mesa num restaurante escuro.</p>
 <h3>Tamanho</h3>
-<p>O guia de tamanho de impressão do FreeQrly cobre os tamanhos por caso de uso — cartões, panfletos, cartazes. Como piso, um código simples deve ser impresso com pelo menos 2 × 2 cm, como mostrado na página. Códigos mais densos precisam de mais espaço: no mesmo tamanho de impressão, um código com um destino mais longo precisa de mais espaço que um com um destino curto, e códigos escaneados à distância precisam ser maiores na proporção da distância. Na dúvida, imprima uma etiqueta de teste e escaneie-a da distância em que os seus clientes vão estar.</p>
+<p>O guia de tamanho de impressão do FreeQrly cobre os tamanhos por caso de uso — cartões, panfletos, cartazes. Como mínimo, um código simples deve ser impresso com pelo menos 2 × 2 cm, como mostrado na página. Códigos mais densos precisam de mais espaço: no mesmo tamanho de impressão, um código com um destino mais longo precisa de mais espaço que um com um destino curto, e códigos escaneados à distância precisam ser maiores na proporção da distância. Na dúvida, imprima uma etiqueta de teste e escaneie-a da distância em que os seus clientes vão estar.</p>
 <h3>Contraste e zona de silêncio</h3>
 <p>Contraste nunca muda: módulos escuros sobre fundo claro, com contraste forte. Um código em cinza pálido sobre branco, ou numa cor de marca clara demais, vai falhar nos celulares que você não consegue testar — câmeras antigas, ambientes escuros, reflexos. Mantenha os módulos escuros e o fundo claro e liso.</p>
 <p>Ao redor de cada código fica a zona de silêncio: a margem em branco que permite à câmera encontrar as bordas do código. Não deixe texto, borda, dobra ou etiqueta vizinha comer essa margem. Dê ao código o seu próprio pedaço limpo de fundo claro, com zona de silêncio livre nos quatro lados.</p>
@@ -284,7 +284,7 @@
 <tr><td>Campos na ordem errada</td><td>O código escaneia, mas o celular entra na rede errada ou salva o detalhe errado</td><td>Reconstrua a linha na ordem de campos do modelo e regenere</td></tr>
 <tr><td>Links longos em impressão minúscula</td><td>Os códigos escaneiam na tela, mas não na etiqueta</td><td>Encurte os links, ou imprima maior — teste no papel</td></tr>
 <tr><td>Sobrescrever o primeiro ZIP</td><td>Só um <code>freeqrly-batch.zip</code> na pasta, e é o lote 2</td><td>Renomeie o lote 1 antes de baixar o lote 2</td></tr>
-<tr><td>Imprimir sem teste no papel</td><td>Códigos que leem na tela falham sob as luzes da loja</td><td>Imprima uma folha; escaneie o primeiro, o último e um código do meio no papel</td></tr>
+<tr><td>Imprimir sem teste no papel</td><td>Códigos que escaneiam bem na tela falham sob as luzes da loja</td><td>Imprima uma folha; escaneie o primeiro, o último e um código do meio no papel</td></tr>
 <tr><td>Mudar um link depois de imprimir</td><td>O código impresso continua abrindo a página antiga</td><td>Códigos estáticos não podem ser editados — regenere esse código e reimprima; para códigos editáveis, use um código dinâmico</td></tr>
 </table></div>
 <h2>Quando o lote é a ferramenta errada</h2>
@@ -311,10 +311,10 @@
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>Bom saber</h2>
     <details><summary><span>Quantos QR codes posso gerar de uma vez?</span></summary><p>Até 50 por lote, cole ou envie — então 100 códigos significam dois lotes: linhas 1–50 e depois linhas 51–100. Mantenha a ordem das linhas idêntica nas duas metades, para os nomes dos arquivos continuarem apontando para a tabela.</p></details>
-    <details><summary><span>Preciso de uma conta para gerar QR codes em massa?</span></summary><p>Não. Códigos em lote são estáticos e gerados inteiramente no seu navegador, então não é preciso cadastro, nada enviado, e os códigos nunca expiram nem têm marca d'água.</p></details>
+    <details><summary><span>Preciso de uma conta para gerar QR codes em massa?</span></summary><p>Não. Códigos em lote são estáticos e gerados inteiramente no seu navegador, então não é preciso cadastro, nada é enviado, e os códigos nunca expiram nem têm marca d'água.</p></details>
     <details><summary><span>Códigos em lote podem ser dinâmicos ou editáveis depois de imprimir?</span></summary><p>Não. O modo em lote é só estático. Se um destino mudar depois de imprimir, regenere esse código e reimprima-o. Para códigos que você precisa editar depois de imprimir, crie códigos dinâmicos um por vez.</p></details>
     <details><summary><span>Quais tipos de arquivo posso enviar?</span></summary><p>Um arquivo CSV (<code>.csv</code>) ou um arquivo Excel (<code>.xlsx</code> / <code>.xls</code>). Um CSV carrega um tipo por arquivo, e o gerador trata os campos entre aspas, então vírgulas dentro de um campo são seguras. Um arquivo Excel pode carregar um tipo por planilha, o nome da planilha escolhendo o tipo.</p></details>
-    <details><summary><span>Como formato WiFi e dados de contato no arquivo?</span></summary><p>Tipos de vários campos usam o caractere pipe <code>|</code> entre os campos, numa ordem fixa. WiFi é nome da rede, senha, tipo de segurança — por exemplo, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Um vCard é nome, telefone, e-mail, empresa, cargo, site, endereço, observação — por exemplo, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code> (SAMPLE DATA). O modelo, <code>freeqrly-batch-template.xlsx</code>, mostra a ordem dos campos para cada tipo, com cabeçalhos e linhas de exemplo.</p></details>
+    <details><summary><span>Como formato WiFi e dados de contato no arquivo?</span></summary><p>Tipos de vários campos usam o caractere pipe <code>|</code> entre os campos, numa ordem fixa. WiFi é nome da rede, senha, tipo de segurança — por exemplo, <code>MyWiFi | password | WPA</code> (SAMPLE DATA). Um vCard é nome, telefone, e-mail, empresa, cargo, site, endereço, observação — por exemplo, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | Rua Principal, 123 | Amigo</code> (SAMPLE DATA). O modelo, <code>freeqrly-batch-template.xlsx</code>, mostra a ordem dos campos para cada tipo, com cabeçalhos e linhas de exemplo.</p></details>
     <details><summary><span>O que recebo quando baixo?</span></summary><p>Cada código pode ser baixado individualmente como um PNG de 1024 px. O ZIP é <code>freeqrly-batch.zip</code> com <code>qr-1.png</code> até <code>qr-50.png</code>, cada um um PNG de 1024 px. Sem opção de SVG no modo em lote.</p></details>
     <details><summary><span>Como sei qual PNG pertence a qual produto?</span></summary><p>Pelo número da linha: <code>qr-1.png</code> é a linha 1, <code>qr-37.png</code> é a linha 37. Guarde a tabela junto com os ZIPs; renomeie as cópias a partir da tabela para nomes de arquivo com sentido.</p></details>
     <details><summary><span>Em que tamanho devo imprimir os códigos?</span></summary><p>Pelo menos 2 × 2 cm para um código simples, como mostrado na página; maior para códigos densos ou códigos escaneados à distância. O guia de tamanho de impressão do FreeQrly cobre os tamanhos por caso de uso — seja qual for o tamanho que você escolher, imprima uma folha primeiro e escaneie-a no papel.</p></details>

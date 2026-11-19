@@ -91,7 +91,7 @@
       "name": "文件里 Wi-Fi 和联系方式怎么写？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "多字段类型用竖线字符 <code>|</code> 分隔字段，顺序固定。Wi-Fi 是网络名称、密码、安全类型——例如 <code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCard 是姓名、电话、邮箱、公司、职位、网站、地址、备注——例如 <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code>（SAMPLE DATA）。模板 <code>freeqrly-batch-template.xlsx</code> 给每种类型展示了字段顺序，带表头和示例行。"
+        "text": "多字段类型用竖线字符 <code>|</code> 分隔字段，顺序固定。Wi-Fi 是网络名称、密码、安全类型——例如 <code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCard 是姓名、电话、邮箱、公司、职位、网站、地址、备注——例如 <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | 设计师 | https://example.com | 123 Main St | 朋友</code>（SAMPLE DATA）。模板 <code>freeqrly-batch-template.xlsx</code> 给每种类型展示了字段顺序，带表头和示例行。"
       }
     },
     {
@@ -209,16 +209,16 @@
 <div class="table-scroll"><table>
 <tr><th>类型</th><th>字段，按顺序（用 <code>|</code> 分隔）</th><th>示例（SAMPLE DATA）</th></tr>
 <tr><td>url</td><td>链接</td><td><code>https://example.com/products/mug</code></td></tr>
-<tr><td>text</td><td>任意文字</td><td><code>Scan for today's menu</code></td></tr>
-<tr><td>email</td><td>收件人 | 主题 | 正文</td><td><code>hello@example.com | Table ready | Your table for two is ready at 7 pm</code></td></tr>
-<tr><td>sms</td><td>电话号码 | 短信内容</td><td><code>+1 555 010 2030 | Hi, I'd like to book a table</code></td></tr>
+<tr><td>text</td><td>任意文字</td><td><code>查看今日菜单</code></td></tr>
+<tr><td>email</td><td>收件人 | 主题 | 正文</td><td><code>hello@example.com | 餐桌已备好 | 您两位的餐桌已于晚上 7 点备好</code></td></tr>
+<tr><td>sms</td><td>电话号码 | 短信内容</td><td><code>+1 555 010 2030 | 你好，我想订一张桌子</code></td></tr>
 <tr><td>phone</td><td>电话号码</td><td><code>+1 555 010 2030</code></td></tr>
 <tr><td>geo</td><td>纬度，经度</td><td><code>40.7411, -73.9897</code></td></tr>
 <tr><td>wifi</td><td>网络名称 | 密码 | 安全类型</td><td><code>MyWiFi | password | WPA</code></td></tr>
-<tr><td>vcard</td><td>姓名 | 电话 | 邮箱 | 公司 | 职位 | 网站 | 地址 | 备注</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code></td></tr>
-<tr><td>event</td><td>标题 | 开始时间 | 结束时间 | 地点 | 描述</td><td><code>Spring Fair | 2027-04-10T10:00 | 2027-04-10T18:00 | Town Hall | Live music, food stalls, and a craft market</code></td></tr>
-<tr><td>bitcoin</td><td>地址 | 金额 | 标签 | 附言</td><td><code>bc1qexampleaddress | 0.001 | Coffee stall | Thanks for the coffee</code></td></tr>
-<tr><td>coupon</td><td>优惠码 | 描述</td><td><code>SPRING10 | 10% off this weekend</code></td></tr>
+<tr><td>vcard</td><td>姓名 | 电话 | 邮箱 | 公司 | 职位 | 网站 | 地址 | 备注</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | 设计师 | https://example.com | 123 Main St | 朋友</code></td></tr>
+<tr><td>event</td><td>标题 | 开始时间 | 结束时间 | 地点 | 描述</td><td><code>春季集市 | 2027-04-10T10:00 | 2027-04-10T18:00 | 市政厅 | 现场音乐、美食摊位和手工艺市场</code></td></tr>
+<tr><td>bitcoin</td><td>地址 | 金额 | 标签 | 附言</td><td><code>bc1qexampleaddress | 0.001 | 咖啡摊 | 谢谢你的咖啡</code></td></tr>
+<tr><td>coupon</td><td>优惠码 | 描述</td><td><code>SPRING10 | 本周末九折</code></td></tr>
 <tr><td>appstore</td><td>iOS 链接 | Android 链接（有 iOS 链接就用 iOS，否则用 Android）</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
 <tr><td>review</td><td>评价页链接</td><td><code>https://example.com/review-us</code></td></tr>
 <tr><td>mp3</td><td>音频链接</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
@@ -276,7 +276,7 @@
 <h2>常见错误和修复方法</h2>
 <div class="table-scroll"><table>
 <tr><th>错误</th><th>你看到的现象</th><th>修法</th></tr>
-<tr><td>粘贴了表头行</td><td>第一个码打开一个叫“Link”的页面，或者把“Link”这个词当作文本编进去</td><td>只粘贴数据行</td></tr>
+<tr><td>粘贴了表头行</td><td>第一个码打开一个叫“链接”的页面，或者把“链接”这个词当作文本编进去</td><td>只粘贴数据行</td></tr>
 <tr><td>粘贴里有一行空行</td><td>码的数量比行数少</td><td>删掉空行；下载之前数一下网格</td></tr>
 <tr><td>一个 CSV 批次里混了多种类型</td><td>Wi-Fi 的行变成了链接码，或者 vCard 的行变成了纯文本</td><td>一个 CSV 批次只用一种类型；按类型拆分混合任务，或者用 Excel、一种类型一个工作表</td></tr>
 <tr><td>Excel 工作表名拼错了</td><td>那个工作表的码全都变成了 URL 码</td><td>工作表名要和上面列的完全一致；认不出来的名字会默认当作 url</td></tr>
@@ -314,7 +314,7 @@
     <details><summary><span>批量生成二维码需要账号吗？</span></summary><p>不用。批量码是静态码，完全在你的浏览器里生成，所以不用注册，不上传，码永不过期，也没有水印。</p></details>
     <details><summary><span>批量码可以是动态的、印好之后还能改吗？</span></summary><p>不可以。批量模式只有静态码。如果打印之后目的地变了，重新生成那个码并重印。印好之后需要能改的码，改用动态码，一个一个创建。</p></details>
     <details><summary><span>可以上传哪些文件类型？</span></summary><p>CSV 文件（<code>.csv</code>）或 Excel 文件（<code>.xlsx</code> / <code>.xls</code>）。CSV 一个文件一种类型，生成器会处理带引号的字段，所以字段里的逗号是安全的。Excel 文件一个工作表一种类型，工作表名决定类型。</p></details>
-    <details><summary><span>文件里 Wi-Fi 和联系方式怎么写？</span></summary><p>多字段类型用竖线字符 <code>|</code> 分隔字段，顺序固定。Wi-Fi 是网络名称、密码、安全类型——例如 <code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCard 是姓名、电话、邮箱、公司、职位、网站、地址、备注——例如 <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code>（SAMPLE DATA）。模板 <code>freeqrly-batch-template.xlsx</code> 给每种类型展示了字段顺序，带表头和示例行。</p></details>
+    <details><summary><span>文件里 Wi-Fi 和联系方式怎么写？</span></summary><p>多字段类型用竖线字符 <code>|</code> 分隔字段，顺序固定。Wi-Fi 是网络名称、密码、安全类型——例如 <code>MyWiFi | password | WPA</code>（SAMPLE DATA）。vCard 是姓名、电话、邮箱、公司、职位、网站、地址、备注——例如 <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | 设计师 | https://example.com | 123 Main St | 朋友</code>（SAMPLE DATA）。模板 <code>freeqrly-batch-template.xlsx</code> 给每种类型展示了字段顺序，带表头和示例行。</p></details>
     <details><summary><span>下载能得到什么？</span></summary><p>每个码都可以单独下载为 1024 px 的 PNG。ZIP 是 <code>freeqrly-batch.zip</code>，里面是 <code>qr-1.png</code> 到 <code>qr-50.png</code>，每个都是 1024 px 的 PNG。批量模式里没有 SVG 选项。</p></details>
     <details><summary><span>怎么知道哪个 PNG 对应哪个产品？</span></summary><p>按行号：<code>qr-1.png</code> 是第 1 行，<code>qr-37.png</code> 是第 37 行。把表格和 ZIP 放在一起；想要有意义的文件名，就对照表格给副本重命名。</p></details>
     <details><summary><span>码应该印多大？</span></summary><p>普通的码至少 2 × 2 cm，见页面上的说明；内容密的码或从远处扫的码要更大。FreeQrly 的打印尺寸指南按使用场景讲了各种尺寸——不管选多大尺寸，先印一张，在纸上扫一扫。</p></details>
@@ -334,7 +334,7 @@
       <div class="fbrand">
         <a class="fbrandName" href="/zh/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">在浏览器里做漂亮的二维码，静态码永不过期。</p>
-        <div class="fmade">静态码，在你的浏览器里生成。</div>
+        <div class="fmade">静态码全程在你的浏览器里生成。</div>
       </div>
       <div class="fcol"><h4>产品</h4><a href="/zh/">二维码生成器</a><a href="/zh/batch-qr-code/">批量二维码</a><a href="/zh/qr-code-with-logo/">带 Logo 二维码</a><a href="/zh/scan/">扫码工具</a><a href="/zh/barcode-generator/">条形码生成器</a><a href="/zh/pricing/">定价</a></div>
       <div class="fcol"><h4>资源</h4><a href="/zh/blog/">博客</a><a href="/zh/developers/">开发者 · API 与 MCP</a><a href="/zh/blog/qr-code-print-size-guide/">打印尺寸指南</a><a href="/zh/#faq">常见问题</a></div>

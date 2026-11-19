@@ -230,7 +230,7 @@
 <p>Parcourez cette liste une fois, sur les 100 lignes, avant d’ouvrir le générateur :</p>
 <ol>
 <li><strong>Pas de lignes vides.</strong> Une ligne vide dans une liste collée est ignorée, mais le générateur peut quand même lire une ligne vide d’un tableur comme un élément vide, alors supprimez les lignes vides.</li>
-<li><strong>Pas de ligne d’en-tête dans le collage.</strong> Laissez l’en-tête hors du texte collé. (Une ligne d’en-tête CSV est détectée automatiquement et ignorée — voir l’étape 2 — mais le texte collé n’a aucune aide.)</li>
+<li><strong>Pas de ligne d’en-tête dans le collage.</strong> Laissez l’en-tête hors du texte collé. (Une ligne d’en-tête CSV est détectée automatiquement et ignorée — voir l’étape 2 — mais le texte collé, lui, ne bénéficie pas de cette détection.)</li>
 <li><strong>Pas d’espaces en fin de ligne.</strong> Un espace à la fin d’un lien fait partie du contenu du code. Dans un tableur, sélectionnez la colonne et nettoyez-la.</li>
 <li><strong>Chaque lien s’ouvre.</strong> Vérifiez au hasard le premier, le dernier et quelques liens du milieu. Un lien qui renvoie une 404 dans le navigateur renvoie une 404 une fois scanné.</li>
 <li><strong>Un type par série.</strong> Un téléversement CSV utilise un seul type : celui sélectionné dans le générateur. Ne mélangez pas des lignes WiFi et des lignes de liens dans une même série ; séparez les tâches mixtes par type, ou utilisez le téléversement Excel décrit ensuite.</li>
@@ -247,7 +247,7 @@
 </table></div>
 <p>Pour 100 codes, le téléversement est généralement meilleur : le fichier garde votre tableau intact, le générateur gère la ligne d’en-tête, et vous pouvez téléverser à nouveau le même fichier si vous repérez une erreur. Le collage est plus rapide pour une liste courte, ou qui vient d’ailleurs que d’un tableur.</p>
 <h3>L’astuce Excel : une feuille par type</h3>
-<p>Seul le téléversement Excel peut porter plusieurs types dans un seul fichier. Chaque feuille est un type, et le nom de la feuille choisit le type — <code>url</code>, <code>website</code> ou <code>link</code> pour les liens ; <code>text</code> ; <code>email</code> ; <code>sms</code> ; <code>phone</code> ; <code>geo</code> ; <code>wifi</code> ; <code>vcard</code> ou <code>contact</code> pour les contacts ; <code>event</code>. Une feuille dont le nom n’est pas reconnu retombe sur url par défaut, alors vérifiez les noms avant de téléverser. Les types au-delà de ces neuf noms de feuilles ne sont pas choisis par le nom de feuille ; pour ceux-là, utilisez le téléversement CSV ou le collage avec le type sélectionné.</p>
+<p>Seul le téléversement Excel peut porter plusieurs types dans un seul fichier. Chaque feuille est un type, et le nom de la feuille choisit le type — <code>url</code>, <code>website</code> ou <code>link</code> pour les liens ; <code>text</code> ; <code>email</code> ; <code>sms</code> ; <code>phone</code> ; <code>geo</code> ; <code>wifi</code> ; <code>vcard</code> ou <code>contact</code> pour les contacts ; <code>event</code>. Une feuille dont le nom n’est pas reconnu revient à url par défaut, alors vérifiez les noms avant de téléverser. Les types au-delà de ces neuf noms de feuilles ne sont pas choisis par le nom de feuille ; pour ceux-là, utilisez le téléversement CSV ou le collage avec le type sélectionné.</p>
 <h2>Étape 3 : utilisez le fichier modèle</h2>
 <p>Si vous partez d’une feuille vierge, pas d’un export existant, ne construisez pas les colonnes de mémoire. FreeQrly fournit un modèle téléchargeable, <code>freeqrly-batch-template.xlsx</code>, avec une feuille par type, des en-têtes et des lignes d’exemple remplies. Téléchargez-le, remplacez les lignes d’exemple par les vôtres, supprimez les exemples dont vous n’avez pas besoin, et téléversez le résultat. Le modèle est le moyen le plus rapide d’avoir le bon ordre de champs : pour les types à plusieurs champs comme le WiFi et la vCard, la ligne d’exemple le montre. La feuille vCard a 8 colonnes — nom, téléphone, e-mail, entreprise, fonction, site web, adresse, note — et le mode série lit les huit, dans l’ordre du modèle, comme le formulaire de contact du code unique, donc l’entreprise et la fonction apparaissent aussi dans le contact enregistré.</p>
 <p>Il existe aussi un modèle CSV pour le type sélectionné uniquement. Pour une tâche à plusieurs types, le modèle Excel est le bon.</p>
@@ -334,7 +334,7 @@
       <div class="fbrand">
         <a class="fbrandName" href="/fr/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n'expirent jamais.</p>
-        <div class="fmade">Codes statiques, faits dans votre navigateur.</div>
+        <div class="fmade">Faits discrètement — des codes statiques dans votre navigateur.</div>
       </div>
       <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a><a href="/fr/pricing/">Tarifs</a></div>
       <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d'impression</a><a href="/fr/#faq">FAQ</a></div>

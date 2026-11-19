@@ -91,7 +91,7 @@
       "name": "फ़ाइल में WiFi और संपर्क जानकारी कैसे फ़ॉर्मेट करूं?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "मल्टी-फ़ील्ड टाइप फ़ील्ड के बीच पाइप अक्षर <code>|</code> इस्तेमाल करते हैं, फ़िक्स्ड क्रम में। WiFi है नेटवर्क नाम, पासवर्ड, सुरक्षा टाइप — उदाहरण के लिए, <code>MyWiFi | password | WPA</code> (SAMPLE DATA)। vCard है नाम, फ़ोन, ईमेल, कंपनी, टाइटल, वेबसाइट, पता, नोट — उदाहरण के लिए, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code> (SAMPLE DATA)। टेम्पलेट, <code>freeqrly-batch-template.xlsx</code>, हर टाइप के लिए फ़ील्ड ऑर्डर दिखाता है, हेडर और उदाहरण रो के साथ।"
+        "text": "मल्टी-फ़ील्ड टाइप फ़ील्ड के बीच पाइप अक्षर <code>|</code> इस्तेमाल करते हैं, फ़िक्स्ड क्रम में। WiFi है नेटवर्क नाम, पासवर्ड, सुरक्षा टाइप — उदाहरण के लिए, <code>MyWiFi | password | WPA</code> (SAMPLE DATA)। vCard है नाम, फ़ोन, ईमेल, कंपनी, टाइटल, वेबसाइट, पता, नोट — उदाहरण के लिए, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | डिज़ाइनर | https://example.com | 123 Main St | दोस्त</code> (SAMPLE DATA)। टेम्पलेट, <code>freeqrly-batch-template.xlsx</code>, हर टाइप के लिए फ़ील्ड ऑर्डर दिखाता है, हेडर और उदाहरण रो के साथ।"
       }
     },
     {
@@ -184,7 +184,7 @@
 <tr><th>कदम</th><th>आप क्या करते हैं</th><th>आपको क्या मिलता है</th></tr>
 <tr><td>1. टेबल बनाएं</td><td>हर कोड के लिए एक रो, 100 रो, टाइप से मेल खाते कॉलम</td><td>बिना खाली रो और बिना टाइपो के साफ़ लिस्ट</td></tr>
 <tr><td>2. इनपुट तरीका चुनें</td><td>लिस्ट पेस्ट करें, या CSV या Excel फ़ाइल अपलोड करें</td><td>बैच जेनरेटर के अंदर आपकी लिस्ट</td></tr>
-<tr><td>3. दो बैच बनाएं</td><td>रो 1–50, फिर रो 51–100</td><td>100 कोड, ग्रिड में प्रीव्यू</td></tr>
+<tr><td>3. दो बैच बनाएं</td><td>रो 1–50, फिर रो 51–100</td><td>100 कोड, ग्रिड में पूर्वावलोकन</td></tr>
 <tr><td>4. डाउनलोड करें</td><td>हर बैच के लिए एक ZIP, या अलग PNG</td><td><code>freeqrly-batch.zip</code> फ़ाइलें, <code>qr-1.png</code> … <code>qr-50.png</code> के साथ</td></tr>
 <tr><td>5. टेस्ट करें, फिर प्रिंट करें</td><td>पहला, आखिरी, और बीच का एक रैंडम कोड स्कैन करें — काग़ज़ पर</td><td>शेल्फ़, टेबल या पार्सल पर भरोसे लायक कोड</td></tr>
 </table></div>
@@ -209,16 +209,16 @@
 <div class="table-scroll"><table>
 <tr><th>टाइप</th><th>फ़ील्ड, क्रम से (<code>|</code> से अलग करें)</th><th>उदाहरण (SAMPLE DATA)</th></tr>
 <tr><td>url</td><td>लिंक</td><td><code>https://example.com/products/mug</code></td></tr>
-<tr><td>text</td><td>कोई भी शब्द</td><td><code>Scan for today's menu</code></td></tr>
-<tr><td>email</td><td>प्राप्तकर्ता | विषय | बॉडी</td><td><code>hello@example.com | Table ready | Your table for two is ready at 7 pm</code></td></tr>
-<tr><td>sms</td><td>फ़ोन नंबर | मैसेज</td><td><code>+1 555 010 2030 | Hi, I'd like to book a table</code></td></tr>
+<tr><td>text</td><td>कोई भी शब्द</td><td><code>आज का मेनू देखने के लिए स्कैन करें</code></td></tr>
+<tr><td>email</td><td>प्राप्तकर्ता | विषय | बॉडी</td><td><code>hello@example.com | टेबल तैयार है | दो लोगों के लिए आपकी टेबल शाम 7 बजे तैयार है</code></td></tr>
+<tr><td>sms</td><td>फ़ोन नंबर | मैसेज</td><td><code>+1 555 010 2030 | नमस्ते, मैं एक टेबल बुक करना चाहूँगा</code></td></tr>
 <tr><td>phone</td><td>फ़ोन नंबर</td><td><code>+1 555 010 2030</code></td></tr>
 <tr><td>geo</td><td>अक्षांश, देशांतर</td><td><code>40.7411, -73.9897</code></td></tr>
 <tr><td>wifi</td><td>नेटवर्क नाम | पासवर्ड | सुरक्षा टाइप</td><td><code>MyWiFi | password | WPA</code></td></tr>
-<tr><td>vcard</td><td>नाम | फ़ोन | ईमेल | कंपनी | टाइटल | वेबसाइट | पता | नोट</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code></td></tr>
-<tr><td>event</td><td>टाइटल | शुरू | खत्म | जगह | विवरण</td><td><code>Spring Fair | 2027-04-10T10:00 | 2027-04-10T18:00 | Town Hall | Live music, food stalls, and a craft market</code></td></tr>
-<tr><td>bitcoin</td><td>पता | रक़म | लेबल | मैसेज</td><td><code>bc1qexampleaddress | 0.001 | Coffee stall | Thanks for the coffee</code></td></tr>
-<tr><td>coupon</td><td>कोड | विवरण</td><td><code>SPRING10 | 10% off this weekend</code></td></tr>
+<tr><td>vcard</td><td>नाम | फ़ोन | ईमेल | कंपनी | टाइटल | वेबसाइट | पता | नोट</td><td><code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | डिज़ाइनर | https://example.com | 123 Main St | दोस्त</code></td></tr>
+<tr><td>event</td><td>टाइटल | शुरू | खत्म | जगह | विवरण</td><td><code>वसंत मेला | 2027-04-10T10:00 | 2027-04-10T18:00 | टाउन हॉल | लाइव संगीत, खाने के स्टॉल और हस्तशिल्प बाज़ार</code></td></tr>
+<tr><td>bitcoin</td><td>पता | रक़म | लेबल | मैसेज</td><td><code>bc1qexampleaddress | 0.001 | कॉफ़ी स्टॉल | कॉफ़ी के लिए शुक्रिया</code></td></tr>
+<tr><td>coupon</td><td>कोड | विवरण</td><td><code>SPRING10 | इस वीकेंड 10% छूट</code></td></tr>
 <tr><td>appstore</td><td>iOS लिंक | Android लिंक (iOS मौजूद हो तो वही इस्तेमाल होता है, वरना Android)</td><td><code>https://apps.apple.com/app/example | https://play.google.com/store/apps/details?id=com.example.app</code></td></tr>
 <tr><td>review</td><td>रिव्यू-पेज लिंक</td><td><code>https://example.com/review-us</code></td></tr>
 <tr><td>mp3</td><td>ऑडियो लिंक</td><td><code>https://example.com/audio/welcome.mp3</code></td></tr>
@@ -253,7 +253,7 @@
 <p>चुने हुए टाइप के लिए CSV टेम्पलेट भी है। मिले-जुले टाइप वाले काम के लिए, Excel टेम्पलेट सही है।</p>
 <p>अपनी तैयार फ़ाइल की दो कॉपियां रखें — काम करने वाली फ़ाइल जिसे आप अपलोड करते हैं, और बिना छेड़छाड़ वाली मूल फ़ाइल जो डाउनलोड किए ZIP के साथ सेव हो, ताकि तीन महीने बाद भी रो नंबर बता सकें कि “कौन सा कोड कौन सा प्रोडक्ट है”।</p>
 <h2>स्टेप 4: कोड बनाएं और जांचें</h2>
-<p>बनाना सबसे छोटा कदम है। टाइप चुनें, अपनी लिस्ट जोड़ें — पेस्ट करके या अपलोड करके — और बनाएं। हर आइटम अपना कोड बन जाता है, पेज पर ग्रिड में प्रीव्यू के साथ। फिर, कुछ भी डाउनलोड या प्रिंट करने से पहले, ग्रिड जांचें:</p>
+<p>बनाना सबसे छोटा कदम है। टाइप चुनें, अपनी लिस्ट जोड़ें — पेस्ट करके या अपलोड करके — और बनाएं। हर आइटम अपना कोड बन जाता है, पेज पर ग्रिड में पूर्वावलोकन के साथ। फिर, कुछ भी डाउनलोड या प्रिंट करने से पहले, ग्रिड जांचें:</p>
 <ul>
 <li><strong>कोड गिनें।</strong> हर बैच में 50 दिखने चाहिए। अगर गिनती कम है, तो कोई रो छोड़ दी गई — आमतौर पर खाली लाइन। टेबल पर वापस जाएं।</li>
 <li><strong>पहला और आखिरी कोड पढ़ें।</strong> पहला कोड स्कैन करें, फिर आखिरी। अगर दोनों सही मंज़िल खोलते हैं, तो सेटअप सही है; बीच वाले कोड वही सेटिंग इस्तेमाल करते हैं। फिर भी, हाथ से टाइप की हुई किसी भी रो को स्पॉट-चेक करें।</li>
@@ -314,7 +314,7 @@
     <details><summary><span>QR कोड बल्क में बनाने के लिए क्या मुझे अकाउंट चाहिए?</span></summary><p>नहीं। बैच कोड स्टैटिक हैं और पूरी तरह आपके ब्राउज़र में बनते हैं, तो कोई साइन-अप ज़रूरी नहीं, कुछ अपलोड नहीं होता, और कोड कभी एक्सपायर नहीं होते और कोई वॉटरमार्क नहीं होता।</p></details>
     <details><summary><span>क्या बैच कोड छापने के बाद डायनामिक या एडिट किए जा सकते हैं?</span></summary><p>नहीं। बैच मोड सिर्फ़ स्टैटिक है। अगर छापने के बाद मंज़िल बदल जाए, तो उस कोड को फिर से बनाएं और दोबारा छापें। जिन कोडों को छापने के बाद एडिट करना हो, उनके लिए डायनामिक कोड एक-एक करके बनाएं।</p></details>
     <details><summary><span>मैं किस तरह की फ़ाइलें अपलोड कर सकता हूं?</span></summary><p>CSV फ़ाइल (<code>.csv</code>) या Excel फ़ाइल (<code>.xlsx</code> / <code>.xls</code>)। CSV हर फ़ाइल में एक टाइप रखता है, और जेनरेटर कोट किए फ़ील्ड संभालता है, तो फ़ील्ड के अंदर कॉमा सुरक्षित हैं। Excel फ़ाइल हर शीट पर एक टाइप रख सकती है, शीट का नाम टाइप चुनता है।</p></details>
-    <details><summary><span>फ़ाइल में WiFi और संपर्क जानकारी कैसे फ़ॉर्मेट करूं?</span></summary><p>मल्टी-फ़ील्ड टाइप फ़ील्ड के बीच पाइप अक्षर <code>|</code> इस्तेमाल करते हैं, फ़िक्स्ड क्रम में। WiFi है नेटवर्क नाम, पासवर्ड, सुरक्षा टाइप — उदाहरण के लिए, <code>MyWiFi | password | WPA</code> (SAMPLE DATA)। vCard है नाम, फ़ोन, ईमेल, कंपनी, टाइटल, वेबसाइट, पता, नोट — उदाहरण के लिए, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | Designer | https://example.com | 123 Main St | Friend</code> (SAMPLE DATA)। टेम्पलेट, <code>freeqrly-batch-template.xlsx</code>, हर टाइप के लिए फ़ील्ड ऑर्डर दिखाता है, हेडर और उदाहरण रो के साथ।</p></details>
+    <details><summary><span>फ़ाइल में WiFi और संपर्क जानकारी कैसे फ़ॉर्मेट करूं?</span></summary><p>मल्टी-फ़ील्ड टाइप फ़ील्ड के बीच पाइप अक्षर <code>|</code> इस्तेमाल करते हैं, फ़िक्स्ड क्रम में। WiFi है नेटवर्क नाम, पासवर्ड, सुरक्षा टाइप — उदाहरण के लिए, <code>MyWiFi | password | WPA</code> (SAMPLE DATA)। vCard है नाम, फ़ोन, ईमेल, कंपनी, टाइटल, वेबसाइट, पता, नोट — उदाहरण के लिए, <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | डिज़ाइनर | https://example.com | 123 Main St | दोस्त</code> (SAMPLE DATA)। टेम्पलेट, <code>freeqrly-batch-template.xlsx</code>, हर टाइप के लिए फ़ील्ड ऑर्डर दिखाता है, हेडर और उदाहरण रो के साथ।</p></details>
     <details><summary><span>डाउनलोड करने पर मुझे क्या मिलता है?</span></summary><p>हर कोड अलग से 1024 px PNG के रूप में डाउनलोड किया जा सकता है। ZIP <code>freeqrly-batch.zip</code> है जिसमें <code>qr-1.png</code> से <code>qr-50.png</code> तक हैं, हर एक 1024 px PNG। बैच मोड में SVG विकल्प नहीं है।</p></details>
     <details><summary><span>मुझे कैसे पता चलेगा कि कौन सा PNG किस प्रोडक्ट का है?</span></summary><p>रो नंबर से: <code>qr-1.png</code> रो 1 है, <code>qr-37.png</code> रो 37 है। टेबल को ZIP के साथ रखें; सार्थक फ़ाइल नाम के लिए कॉपी का नाम टेबल से बदलें।</p></details>
     <details><summary><span>कोड किस साइज़ में छापने चाहिए?</span></summary><p>सादे कोड के लिए कम से कम 2 × 2 cm, जैसा पेज पर दिखाया गया है; घने कोड या दूरी से स्कैन होने वाले कोड के लिए बड़ा। FreeQrly की प्रिंट-साइज़ गाइड इस्तेमाल के हिसाब से साइज़ कवर करती है — पहले एक शीट छापें और काग़ज़ पर स्कैन करें।</p></details>

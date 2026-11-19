@@ -190,7 +190,7 @@
 </table></div>
 <p>Una comprobación real: el 18 de noviembre de 2026, un usuario real generó 100 códigos de esta forma — dos operaciones por lotes — y descargó un ZIP de 50 códigos, la primera descarga de ZIP que la herramienta de lotes había servido.</p>
 <h2>Paso 1: construye tu tabla</h2>
-<p>Todo lo que puede salir mal con cien códigos sale mal en la tabla, no en el generador: un error de tipeo en la fila 37 se convierte en un código equivocado en la fila 37. Dedícale diez minutos cuidadosos a la tabla primero.</p>
+<p>Todo lo que puede salir mal con cien códigos sale mal en la tabla, no en el generador: un error de tipeo en la fila 37 se convierte en un código equivocado en la fila 37. Dedica primero diez minutos con cuidado a la tabla.</p>
 <h3>La única regla: una fila, un código</h3>
 <p>Cada fila de tu tabla se convierte en exactamente un código QR, en el mismo orden. La fila 1 se convierte en <code>qr-1.png</code>, la fila 2 en <code>qr-2.png</code>, y así sucesivamente. Ese orden es la única correspondencia entre un código y su destino, así que mantén el archivo de la tabla junto a los ZIP descargados y no reordenes las filas.</p>
 <h3>Un ejemplo práctico: 100 páginas de producto</h3>
@@ -225,7 +225,7 @@
 <tr><td>google-form</td><td>Enlace de formulario</td><td><code>https://forms.example.com/feedback</code></td></tr>
 <tr><td>menu</td><td>Enlace de menú</td><td><code>https://example.com/menu</code></td></tr>
 </table></div>
-<p>Los órdenes de campos anteriores coinciden con lo que lee el generador por lotes: la pista de formato bajo el área de texto muestra el mismo orden. Primero, el pipe es el separador, así que no puede aparecer dentro de un campo: una contraseña WiFi que contenga <code>|</code> se dividirá en los campos equivocados. Segundo, el orden de los campos es fijo. Para WiFi es nombre de red, contraseña, tipo de seguridad: <code>MyWiFi | password | WPA</code>, exactamente como se muestra. Un orden invertido también genera un código, pero el teléfono leerá los campos en los lugares equivocados. Tercero, mantén los destinos cortos donde puedas. Un enlace corto produce un patrón más amplio con módulos más grandes, que escanea con más fiabilidad en tamaños pequeños de impresión. Acorta los enlaces largos antes de ponerlos en la tabla, y prueba primero los enlaces acortados.</p>
+<p>Los órdenes de campos anteriores coinciden con lo que lee el generador por lotes: la pista de formato bajo el área de texto muestra el mismo orden. Primero, la barra vertical (|) es el separador, así que no puede aparecer dentro de un campo: una contraseña WiFi que contenga <code>|</code> se dividirá en los campos equivocados. Segundo, el orden de los campos es fijo. Para WiFi es nombre de red, contraseña, tipo de seguridad: <code>MyWiFi | password | WPA</code>, exactamente como se muestra. Un orden invertido también genera un código, pero el teléfono leerá los campos en los lugares equivocados. Tercero, mantén los destinos cortos donde puedas. Un enlace corto produce un patrón más amplio con módulos más grandes, que escanea con más fiabilidad en tamaños pequeños de impresión. Acorta los enlaces largos antes de ponerlos en la tabla, y prueba primero los enlaces acortados.</p>
 <h3>Limpiar la tabla antes de generar</h3>
 <p>Repasa esta lista de verificación una vez, con las 100 filas, antes de abrir el generador:</p>
 <ol>
@@ -280,7 +280,7 @@
 <tr><td>Una línea en blanco en el pegado</td><td>Menos códigos que filas</td><td>Elimina las líneas en blanco; cuenta la cuadrícula antes de descargar</td></tr>
 <tr><td>Mezclar tipos en un lote de CSV</td><td>Las filas de WiFi se convierten en códigos de enlace, o las filas de vCard se convierten en texto plano</td><td>Un tipo por lote de CSV; divide los trabajos mixtos por tipo, o usa Excel con una hoja por tipo</td></tr>
 <tr><td>Nombre de hoja de Excel mal escrito</td><td>Los códigos de esa hoja salen como códigos URL</td><td>Usa los nombres de hoja exactamente como se listan; un nombre no reconocido usa url por defecto</td></tr>
-<tr><td>Un <code>|</code> dentro de un campo</td><td>Un código WiFi con la contraseña dividida en dos campos</td><td>Quita el pipe del campo, o cambia la contraseña</td></tr>
+<tr><td>Un <code>|</code> dentro de un campo</td><td>Un código WiFi con la contraseña dividida en dos campos</td><td>Quita la barra vertical del campo, o cambia la contraseña</td></tr>
 <tr><td>Campos en el orden equivocado</td><td>El código escanea, pero el teléfono se une a la red equivocada o guarda el detalle equivocado</td><td>Reconstruye la fila en el orden de campos de la plantilla y regenera</td></tr>
 <tr><td>Enlaces largos en tamaño de impresión diminuto</td><td>Los códigos escanean en pantalla pero no en la etiqueta</td><td>Acorta los enlaces, o imprime más grande: prueba en papel</td></tr>
 <tr><td>Sobrescribir el primer ZIP</td><td>Solo un <code>freeqrly-batch.zip</code> en la carpeta, y es el lote 2</td><td>Renombra el lote 1 antes de descargar el lote 2</td></tr>
