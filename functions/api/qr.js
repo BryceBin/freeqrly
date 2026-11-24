@@ -22,7 +22,15 @@ export async function onRequestOptions() {
 
 // GET /api/qr?data=TEXT&size=1024&margin=4&color=2F4A62&bgcolor=ffffff&ecc=M
 // Returns image/svg+xml. Free, no key, CORS open — built for agents.
-export async function onRequestGet({ request }) {
+//
+// Identical requests are served from the edge cache. The response is fully
+// determined by the query string, so a canonical key (params re-serialised in
+// a fixed order) makes ?a=1&b=2 and ?b=2&a=1 hit the same entry. Without this
+// every call re-ran the 2,300-line encoder: the response already carried
+// Cache-Control: immutable, but Pages Functions responses are not cached at
+// the edge by default, so cf-cache-status stayed DYNAMIC.
+export async function onRequestGet(context) {
+  const { request, waitUntil } = context;
   const q = new URL(request.url).searchParams;
   const data = q.get('data') || '';
 
@@ -45,6 +53,16 @@ export async function onRequestGet({ request }) {
   const ecc = (q.get('ecc') || 'M').toUpperCase();
   if (!['L', 'M', 'Q', 'H'].includes(ecc)) return err('ecc must be one of L, M, Q, H');
 
+  // Cache lookup after validation, so malformed requests never populate it.
+  const keyUrl = new URL(request.url);
+  keyUrl.search = new URLSearchParams({
+    data, size: String(size), margin: String(margin), color, bgcolor, ecc,
+  }).toString();
+  const cacheKey = new Request(keyUrl.toString(), { method: 'GET' });
+  const cache = caches.default;
+  const hit = await cache.match(cacheKey);
+  if (hit) return hit;
+
   let qr;
   try {
     qr = qrcode(0, ecc);
@@ -61,7 +79,7 @@ export async function onRequestGet({ request }) {
     .replace('<path d="', `<path fill="#${color}" d="`)
     .replace(/width="[^"]*" height="[^"]*"/, `width="${size}" height="${size}"`);
 
-  return new Response(svg, {
+  const res = new Response(svg, {
     status: 200,
     headers: {
       'Content-Type': 'image/svg+xml; charset=utf-8',
@@ -70,4 +88,14 @@ export async function onRequestGet({ request }) {
       ...CORS,
     },
   });
+
+  // Store a copy without blocking the response. A failure to cache is not a
+  // failure of the request.
+  try {
+    const put = cache.put(cacheKey, res.clone());
+    if (typeof waitUntil === 'function') waitUntil(put);
+    else await put;
+  } catch (e) { /* cache is best-effort */ }
+
+  return res;
 }
