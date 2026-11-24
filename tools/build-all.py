@@ -20,8 +20,12 @@ FreeQrly 一键构建脚本。
 import os, re, sys, glob, subprocess
 from datetime import date
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 TODAY = date.today().strftime("%Y%m%d")
+
+# --dry-run：只报告会改什么，不写任何文件（包括前两步的生成结果）。
+DRY_RUN = "--dry-run" in sys.argv
 
 def run(cmd):
     r = subprocess.run(cmd, cwd=SITE, capture_output=True, text=True)
@@ -30,60 +34,46 @@ def run(cmd):
         sys.exit(1)
     return r.stdout.strip()
 
-# 1. 重新生成落地页
-print("→ 生成落地页...")
-out = run([sys.executable, "tools/gen-landing.py"])
-print(f"  {out.split(chr(10))[-1] if out else 'ok'}")
-
-# 2. 重新生成多语言首页
-print("→ 生成 9 语言静态首页...")
-out = run([sys.executable, "tools/build-home-i18n.py"])
-for line in out.split("\n"):
-    if line.startswith("Wrote"):
-        print(f"  {line}")
-
-# 2.5. 合并首页 CSS（只首页用 bundle，子页/落地页仍用 3 个源文件）：
-#     main + acct-menu + site-header 按原引用顺序拼接，省 2 个渲染阻塞请求。
-#     bundle 是生成物，源文件不动；顺序即层叠顺序，不可调换。
-print("→ 合并首页 CSS...")
-bundle = ""
-for _name in ["main.css", "acct-menu.css", "site-header.css"]:
-    bundle += open(os.path.join(SITE, "assets/css", _name), encoding="utf-8").read() + "\n"
-open(os.path.join(SITE, "assets/css/home-bundle.css"), "w", encoding="utf-8").write(bundle)
-print(f"  home-bundle.css ({len(bundle)} 字节)")
-
-# 3. 统一版本号：找当前最大的 b3x 后缀，+1
-print("→ 统一 ?v= 版本号...")
-versions = set()
-for f in glob.glob(os.path.join(SITE, "**/*.html"), recursive=True):
-    h = open(f, encoding="utf-8").read()
-    versions.update(re.findall(r'\?v=(b3[a-z]*-\d{8})', h))
-if not versions:
-    print("  未找到旧版本号，跳过")
+if DRY_RUN:
+    print("（--dry-run：前两步生成跳过，只预演版本号同步）")
 else:
-    cur = sorted(versions)[-1]
-    m = re.match(r'b3([a-z]*)-(\d{8})', cur)
-    letter = m.group(1)
-    def bump_letter(s):
-        if not s:
-            return 'a'
-        chars = list(s)
-        i = len(chars) - 1
-        while i >= 0:
-            if chars[i] != 'z':
-                chars[i] = chr(ord(chars[i]) + 1)
-                return ''.join(chars)
-            chars[i] = 'a'
-            i -= 1
-        return 'a' + ''.join(chars)
-    nxt = f"b3{bump_letter(letter)}-{TODAY}"
-    n = 0
-    for f in glob.glob(os.path.join(SITE, "**/*.html"), recursive=True):
-        h = open(f, encoding="utf-8").read()
-        h2, c = re.subn(r'\?v=b3[a-z]*-\d{8}', f'?v={nxt}', h)
-        if c:
-            open(f, "w", encoding="utf-8").write(h2)
-            n += 1
-    print(f"  {cur} → {nxt} ({n} 个文件)")
+    # 1. 重新生成落地页
+    print("→ 生成落地页...")
+    out = run([sys.executable, "tools/gen-landing.py"])
+    print(f"  {out.split(chr(10))[-1] if out else 'ok'}")
+
+    # 2. 重新生成多语言首页
+    print("→ 生成 9 语言静态首页...")
+    out = run([sys.executable, "tools/build-home-i18n.py"])
+    for line in out.split("\n"):
+        if line.startswith("Wrote"):
+            print(f"  {line}")
+
+    # 2.5. 合并首页 CSS（只首页用 bundle，子页/落地页仍用 3 个源文件）：
+    #     main + acct-menu + site-header 按原引用顺序拼接，省 2 个渲染阻塞请求。
+    #     bundle 是生成物，源文件不动；顺序即层叠顺序，不可调换。
+    print("→ 合并首页 CSS...")
+    bundle = ""
+    for _name in ["main.css", "acct-menu.css", "site-header.css"]:
+        bundle += open(os.path.join(SITE, "assets/css", _name), encoding="utf-8").read() + "\n"
+    open(os.path.join(SITE, "assets/css/home-bundle.css"), "w", encoding="utf-8").write(bundle)
+    print(f"  home-bundle.css ({len(bundle)} 字节)")
+
+# 3. 同步 ?v= 版本号：按资源内容哈希，只有文件真的变了才变。
+#
+# 旧做法是每次构建把所有页面的版本号字母 +1，于是哪怕只改一页文案，全站
+# 每个 HTML 的字节都会变，Googlebot 看到的是"整站 600 多页都被修改了"。
+# 现在每个资源用自己的内容哈希当版本号：改一个 CSS 只影响引用它的页面，
+# 改一页正文则完全不动版本号。逻辑见 tools/version_sync.py。
+print("→ 同步 ?v= 版本号（按资源内容哈希）...")
+DRY_RUN = "--dry-run" in sys.argv
+from version_sync import sync_versions
+changed, stamps = sync_versions(SITE, dry_run=DRY_RUN)
+verb = "将改动" if DRY_RUN else "已改动"
+print(f"  {verb} {changed} 个 HTML，{stamps} 处 ?v=")
+if DRY_RUN:
+    print("  （--dry-run：未写入任何文件）")
+elif changed == 0:
+    print("  所有版本号已是最新，无需改动")
 
 print("\n完成。检查 git status，确认无误后 commit + push 即可上线。")
