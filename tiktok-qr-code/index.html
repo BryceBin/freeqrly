@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../assets/css/main.css?v=b3ab-20261119">
-<link rel="stylesheet" href="../assets/css/site-header.css?v=b3ab-20261119">
-<link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3ab-20261119">
+<link rel="stylesheet" href="../assets/css/main.css?v=dc1a90ab">
+<link rel="stylesheet" href="../assets/css/site-header.css?v=892bba49">
+<link rel="stylesheet" href="../assets/css/acct-menu.css?v=6d15df1b">
 <style>
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start;margin-bottom:72px}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Profile link for general follows. A video link plays one video — handy for campaigns, packaging inserts, and posters for a launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -109,8 +117,8 @@
 <body data-lp="tiktok-qr-code" data-type="url">
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="../assets/js/site-header.js?v=b3ab-20261119"></script>
-<script src="../assets/js/acct-menu.js?v=b3ab-20261119"></script>
+<script src="../assets/js/site-header.js?v=7a4cf51f"></script>
+<script src="../assets/js/acct-menu.js?v=ed669f41"></script>
 <script>
 (function(){
   var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">Static codes are generated locally in your browser.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Which TikTok link to use</h2>
+<p>TikTok gives you three kinds of URL, and they behave differently once printed.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Link type</th><th>Looks like</th><th>A scan opens</th><th>Survives a deleted video?</th></tr></thead>
+  <tbody>
+    <tr><td>Profile</td><td><code>tiktok.com/@yourhandle</code></td><td>your profile, follow button at top</td><td>yes</td></tr>
+    <tr><td>Single video</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>that video, playing</td><td>no</td></tr>
+    <tr><td>Hashtag</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>every video on the tag</td><td>yes, but shows other people's posts</td></tr>
+  </tbody>
+</table></div>
+<p>For a business card, shop window, or packaging insert, use the profile link. It keeps working as you post, and the follow button sits one tap from the landing screen.</p>
+<p>Use a video link when the code has exactly one job: a launch poster, or a sticker on the product that points at the ad. The link pins one video ID. Delete that video and the code goes dead.</p>
+<p>Hashtag links work, but they show everyone's posts on the tag, not just yours. Good for a campaign landing page, wrong for a business card.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>What happens when someone scans it</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Scanner</th><th>TikTok installed</th><th>TikTok not installed</th></tr></thead>
+  <tbody>
+    <tr><td>iPhone Camera app</td><td>link opens, prompt to switch to the app</td><td>mobile web profile loads</td></tr>
+    <tr><td>Android camera</td><td>same, app handoff usually automatic</td><td>mobile web profile loads</td></tr>
+    <tr><td>TikTok's own scanner</td><td>opens in app</td><td>prompts to install</td></tr>
+  </tbody>
+</table></div>
+<p>The handoff is a prompt, not a guarantee. Some phones show a full-screen "Open in TikTok?" banner, others show a slim bar at the top, and a few open the mobile site with no prompt at all. People tap through most of the time, but some don't, and you should assume a slice of scans land on the web version.</p>
+<p>Two consequences worth planning for. A scan is not a follow: the person still has to tap Follow after landing, so the code gets them to the door, not through it. And the mobile web version loads slower than the app, which matters if the code is on packaging where attention is already thin.</p>
+<p>A private account shows scanners the profile shell and a request button. No QR code can get around that setting.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>TikTok's own QR code, and when to use it instead</h2>
+<p>The app has a QR code built in: open your profile, tap the share icon, choose QR code. Free, and it works — inside TikTok.</p>
+<p>The catch is who can read it. That code is meant for TikTok's own scanner. Scan it with an iPhone Camera app or a stock Android camera and you often get nothing at all, or a nudge to install TikTok first. On a phone screen, where the person already has the app open, that's fine. On a printed sticker, a shop window, or a menu, the scanner is a stranger holding a default camera app.</p>
+<p>The code you make here is a standard QR code. Any camera reads it, and the link inside behaves the same as a typed URL. That's the entire difference, and it's the reason a printed code is worth generating separately from the in-app one.</p>
+<p>One thing to watch: your handle is part of the URL. Rename the account and both codes break. Generate a fresh one after a rename, and replace anything already printed.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Where to put it</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Placement</th><th>Code size</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>Shipping insert, box sticker</td><td>2 cm</td><td>read at arm's length, often on a curved surface</td></tr>
+    <tr><td>Merch swing tag</td><td>1.5–2 cm</td><td>smaller gets smudged by fabric texture</td></tr>
+    <tr><td>Counter card</td><td>4–5 cm</td><td>scanned from about 30 cm</td></tr>
+    <tr><td>Shop window</td><td>15 cm</td><td>scanned from 1–2 m, often through glass</td></tr>
+    <tr><td>Event poster</td><td>20–30 cm</td><td>scanned from 2–3 m while walking</td></tr>
+    <tr><td>Business card</td><td>1.5 cm</td><td>the practical floor for matte stock</td></tr>
+  </tbody>
+</table></div>
+<p>Keep the quiet zone. The blank margin around the pattern is how cameras find the code in the first place, and cropping it to fit a design is the single most common reason a printed code fails.</p>
+<p>Test the proof with a phone before the print run. A code that reads on screen can fail on a curved bottle or a glossy label, and you find out after the boxes arrive.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>What this code cannot do</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Limit</th><th>Why</th><th>Workaround</th></tr></thead>
+  <tbody>
+    <tr><td>No scan counting</td><td>static code, nothing phones home</td><td>TikTok profile analytics (free)</td></tr>
+    <tr><td>No redirect after printing</td><td>the URL is baked into the pattern</td><td>make a new code, reprint</td></tr>
+    <tr><td>No private-account bypass</td><td>TikTok enforces the setting</td><td>switch the account to public</td></tr>
+    <tr><td>No deep link to a tab</td><td>only profile, video and hashtag URLs exist</td><td>link the profile</td></tr>
+  </tbody>
+</table></div>
+<p>The first two are the ones people ask about. If you need to change the destination later without reprinting, that's a dynamic code, not this one.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Good to know</h2>
     <details><summary><span>Profile link or a specific video?</span></summary><p>Profile link for general follows. A video link plays one video — handy for campaigns, packaging inserts, and posters for a launch.</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>Does it open in the TikTok app?</span></summary><p>On most phones, yes — tapping the scanned link offers the app if installed, otherwise it opens in the browser.</p></details>
     <details><summary><span>Can I add my logo or brand colors?</span></summary><p>Yes — upload your logo and set your brand colors. Keep contrast high so it scans in any light.</p></details>
     <details><summary><span>Does it expire if I change my username?</span></summary><p>The code encodes the exact URL, so if your handle changes, make a fresh code. The code itself never expires.</p></details>
@@ -342,7 +421,7 @@
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3ab-20261119"></script>
-<script src="../assets/js/app.js?v=b3ab-20261119"></script>
+<script src="/assets/js/vcard.js?v=5c0b6341"></script>
+<script src="../assets/js/app.js?v=7d6a9ccc"></script>
 </body>
 </html>

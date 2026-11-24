@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate the 4 SEO landing pages for FreeQrly. Reuses the studio markup from index.html."""
-import re, os, json
+import re, os, json, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from landing_sections import SECTIONS
 
 SITE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 idx = open(os.path.join(SITE, "index.html")).read()
@@ -9,6 +11,20 @@ idx = open(os.path.join(SITE, "index.html")).read()
 m = re.search(r'<main class="studio" id="studio">.*?</main>', idx, re.S)
 assert m, "studio block not found"
 STUDIO = m.group(0)
+
+def _asset_v(rel):
+    """资源内容哈希前 8 位，与 tools/version_sync.py 保持一致。"""
+    import hashlib
+    with open(os.path.join(SITE, rel), "rb") as fh:
+        return hashlib.sha256(fh.read()).hexdigest()[:8]
+
+V_MAIN   = _asset_v("assets/css/main.css")
+V_HDR    = _asset_v("assets/css/site-header.css")
+V_ACCT   = _asset_v("assets/css/acct-menu.css")
+V_VCARD  = _asset_v("assets/js/vcard.js")
+V_APP    = _asset_v("assets/js/app.js")
+V_HDRJS  = _asset_v("assets/js/site-header.js")
+V_ACCTJS = _asset_v("assets/js/acct-menu.js")
 
 PAGES = [
  dict(
@@ -110,8 +126,8 @@ PAGES = [
 ]
 
 HEADER = '''<div id="siteHeader"></div>
-<script src="../assets/js/site-header.js?v=b3q-20261019"></script>
-<script src="../assets/js/acct-menu.js?v=b3q-20261019"></script>
+<script src="../assets/js/site-header.js?v={V_HDRJS}"></script>
+<script src="../assets/js/acct-menu.js?v={V_ACCTJS}"></script>
 <script>
 (function(){
   var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
@@ -184,6 +200,7 @@ HEADER = '''<div id="siteHeader"></div>
   }).catch(function(){});
 })();
 </script>'''
+HEADER = HEADER.replace("{V_HDRJS}", V_HDRJS).replace("{V_ACCTJS}", V_ACCTJS)
 
 STUDIO_H2_RE = re.compile(r'<div class="shead"><div class="over" data-i18n="sOver">.*?</div><h2 data-i18n="sTitle">.*?</h2></div>', re.S)
 
@@ -288,7 +305,7 @@ dict(slug="pdf-qr-code", dtype="url",
          ("Print it anywhere","Flyers, menus, posters, packaging. PNG or SVG, never expires.")],
   studio_h2="Make your PDF QR code",
   faq=[("Can I upload a PDF directly here?","FreeQrly does not host files \u2014 your PDF lives on Drive, Dropbox, or your site, and the QR code simply opens its link. That also means you can swap the file later without reprinting, as long as the link stays the same."),
-       ("Will the QR code still work if I update the PDF?","Yes, if you replace the file at the same link (same Drive file, same URL). The code encodes the link, not the file itself."),
+       ("Does the scanner download the PDF or preview it?","It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table."),
        ("What if the PDF is large?","Size does not matter for the code \u2014 it only encodes the link. Keep the PDF itself reasonable so it opens fast on phones."),
        ("Does it expire?","No. Static codes never expire and need no account.")]),
 dict(slug="multi-link-qr-code", dtype="url",
@@ -375,6 +392,7 @@ dict(slug="tiktok-qr-code", dtype="url",
          ("Print it where fans look","Packaging, posters, merch, flyers. 1024 px export for print.")],
   studio_h2="Make your TikTok QR code",
   faq=[("Profile link or a specific video?","Profile link for general follows. A video link plays one video — handy for campaigns, packaging inserts, and posters for a launch."),
+       ("How do I copy my TikTok link?","Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."),
        ("Does it open in the TikTok app?","On most phones, yes — tapping the scanned link offers the app if installed, otherwise it opens in the browser."),
        ("Can I add my logo or brand colors?","Yes — upload your logo and set your brand colors. Keep contrast high so it scans in any light."),
        ("Does it expire if I change my username?","The code encodes the exact URL, so if your handle changes, make a fresh code. The code itself never expires.")]),
@@ -449,19 +467,20 @@ dict(slug="coupon-qr-code", dtype="coupon",
        ("One code per coupon or one for all?","One code per coupon. Each code is static and free, so make as many as you have promotions."),
        ("Does it expire?","The code itself never expires. When the promotion ends, stop printing it \u2014 the code can't enforce dates.")]),
 dict(slug="app-store-qr-code", dtype="appstore",
-  title="Free App Store QR Code Generator | FreeQrly",
-  desc="One QR code for your iOS App Store and Google Play links. Free, no sign-up. Print it on ads, packaging, posters, and receipts.",
+  title="App Store QR Code Generator: One Code Per Store | FreeQrly",
+  desc="Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes \u2014 here is how to print the right one.",
   kw="app store qr code generator",
-  h1='Get your app installed, <span class="hl hl-honey">one scan away</span>.',
-  lede="Paste your App Store and Google Play links and get a single QR code. One scan opens the right store \u2014 no more \u201ciPhone or Android?\u201d on your poster.",
-  steps=[("Copy both store links","Your App Store and Google Play URLs \u2014 one of them is enough to start."),
-         ("Paste them in","iOS link first, Android second. Your code appears instantly."),
-         ("Print it everywhere","Ads, packaging, posters, receipts, app launch slides. SVG scales to billboard size.")],
+  h1='Your app link, <span class="hl hl-honey">printed right</span>.',
+  lede="A static QR code stores one URL, so your App Store listing and your Play listing need one code each. Fill in a link, print it at a size that scans, and put the right code in front of the right phone.",
+  steps=[("Copy one store link","App Store from App Store Connect, Play from the Play Console. One link per code \u2014 fill the App Store field for iOS, the Google Play field for Android."),
+         ("Paste it in","Your code appears instantly. Leave the other field empty unless you are making a second code."),
+         ("Label it and print","\u201ciPhone\u201d or \u201cAndroid\u201d next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides.")],
   studio_h2="Make your app store QR code",
-  faq=[("How does one code open two stores?","The code opens your iOS link by default; Android users get your Play link. Set both so every scanner lands in the right store."),
-       ("What if I only have one platform?","Just fill that one. The code opens whichever link you provided."),
-       ("Can it detect the phone and route automatically?","This is a static code with your links \u2014 it opens the iOS link first. For automatic device detection you'd need a smart link service in front; the code still works as the front door."),
-       ("Does it track installs?","No \u2014 static codes are private by design and phone nothing home. Your App Store Connect and Play Console already count installs.")]),
+  faq=[("Can one static code open both stores?","No. A static code stores a single URL, and your two store listings are two URLs. Encode the App Store link and Android visitors land on an app they cannot install. Print two labelled codes, or point one code at a page on your own domain that reads the phone and forwards to the right store."),
+       ("What if I fill in both fields?","Only the App Store link is encoded \u2014 the Play field is used when the App Store field is empty. To cover both platforms, make two codes, one per field."),
+       ("What if I only have one platform?","Fill that field and print one code. Nothing else is needed."),
+       ("Can it detect the phone and route automatically?","Not on its own \u2014 a printed pattern cannot run logic. Device detection needs a page in between: host a small router page, then point a dynamic code at it so you can change the destination later without reprinting."),
+       ("Does it track installs?","No. Static codes carry only the link and never phone home. App Store Connect and the Play Console already report installs.")]),
 dict(slug="mp3-qr-code", dtype="mp3",
   title="Free MP3 QR Code Generator: Songs, Podcasts & Voice Notes | FreeQrly",
   desc="Link any audio \u2014 a song, a podcast episode, a voice note \u2014 to a QR code. Free, no sign-up for static codes.",
@@ -904,15 +923,15 @@ EXTRA_CSS = '''
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -971,6 +990,9 @@ def build(p):
         locale_alts = "\n".join(
             f'<meta property="og:locale:alternate" content="{lc}">' for lc in ("zh_CN", "es_ES", "hi_IN", "ar_AR", "pt_BR", "fr_FR", "ru_RU", "de_DE", "ja_JP"))
     compare_html = f'\n  <section class="compare" id="compare">\n{p["compare"]}\n  </section>\n' if p.get("compare") else ""
+    sections_html = "".join(
+        '\n  <section class="lpsec">\n    <h2>%s</h2>\n%s\n  </section>\n' % (h2, body)
+        for h2, body in SECTIONS.get(p["slug"], []))
     if p.get("uses"):
         uses_cards = "\n".join(
             '    <article class="use-card"><span class="use-dot" aria-hidden="true"></span><div class="use-body"><h3>%s</h3><p>%s</p></div></article>' % (t, d) for t, d in p["uses"])
@@ -1001,9 +1023,9 @@ def build(p):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../assets/css/main.css?v=b3r-20261020">
-<link rel="stylesheet" href="../assets/css/site-header.css?v=b3q-20261019">
-<link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3q-20261019">
+<link rel="stylesheet" href="../assets/css/main.css?v={V_MAIN}">
+<link rel="stylesheet" href="../assets/css/site-header.css?v={V_HDR}">
+<link rel="stylesheet" href="../assets/css/acct-menu.css?v={V_ACCT}">
 <style>{EXTRA_CSS}</style>
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — {p["kw"]}","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]}},"offers":{{"@type":"Offer","price":"0"}},"url":"{url}","description":"{p["desc"]}"{datemod}}}
@@ -1035,7 +1057,7 @@ def build(p):
     </ol>
   </section>
 {studio}
-{compare_html}{uses_html}
+{compare_html}{uses_html}{sections_html}
   <section class="faq" id="faq">
     <h2>Good to know</h2>
 {faq_html}
@@ -1066,8 +1088,8 @@ def build(p):
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3r-20261020"></script>
-<script src="../assets/js/app.js?v=b3r-20261020"></script>
+<script src="/assets/js/vcard.js?v={V_VCARD}"></script>
+<script src="../assets/js/app.js?v={V_APP}"></script>
 </body>
 </html>
 '''

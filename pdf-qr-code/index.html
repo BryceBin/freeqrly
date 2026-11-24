@@ -36,9 +36,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../assets/img/favicon-scanner.png">
 <link rel="apple-touch-icon" href="../assets/img/favicon-scanner.png">
-<link rel="stylesheet" href="../assets/css/main.css?v=b3ab-20261119">
-<link rel="stylesheet" href="../assets/css/site-header.css?v=b3ab-20261119">
-<link rel="stylesheet" href="../assets/css/acct-menu.css?v=b3ab-20261119">
+<link rel="stylesheet" href="../assets/css/main.css?v=dc1a90ab">
+<link rel="stylesheet" href="../assets/css/site-header.css?v=892bba49">
+<link rel="stylesheet" href="../assets/css/acct-menu.css?v=6d15df1b">
 <style>
 .lp-hero{grid-template-columns:1fr 1fr;align-items:start;margin-bottom:72px}
 .steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -77,10 +77,10 @@
     },
     {
       "@type": "Question",
-      "name": "Will the QR code still work if I update the PDF?",
+      "name": "Does the scanner download the PDF or preview it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, if you replace the file at the same link (same Drive file, same URL). The code encodes the link, not the file itself."
+        "text": "It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table."
       }
     },
     {
@@ -109,8 +109,8 @@
 <body data-lp="pdf-qr-code" data-type="url">
 <div class="wrap">
 <div id="siteHeader"></div>
-<script src="../assets/js/site-header.js?v=b3ab-20261119"></script>
-<script src="../assets/js/acct-menu.js?v=b3ab-20261119"></script>
+<script src="../assets/js/site-header.js?v=7a4cf51f"></script>
+<script src="../assets/js/acct-menu.js?v=ed669f41"></script>
 <script>
 (function(){
   var LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
@@ -309,10 +309,61 @@
     <p class="privnote-foot" data-i18n="privnote">Static codes are generated locally in your browser.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Where to put the PDF</h2>
+<p>A QR code holds a link, not a file. The code you print points at wherever your PDF already lives, so the first decision is where to host it. Three options cover almost every case.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Where it lives</th><th>What the link looks like</th><th>Free tier</th><th>Breaks if you...</th></tr></thead>
+  <tbody>
+    <tr><td>Google Drive</td><td><code>drive.google.com/file/d/…/view</code></td><td>15 GB</td><td>move the file, delete it, or change who can see it</td></tr>
+    <tr><td>Dropbox</td><td><code>dropbox.com/s/…/menu.pdf</code></td><td>2 GB</td><td>delete or rename the file</td></tr>
+    <tr><td>Your own site</td><td><code>yoursite.com/menu.pdf</code></td><td>depends on host</td><td>remove the file</td></tr>
+  </tbody>
+</table></div>
+<p>Whichever you pick, set sharing to "anyone with the link". A PDF shared with specific people asks every scanner to sign in, and most of them won't.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Why a Drive link sometimes shows a warning</h2>
+<p>Two things trip people up, and neither is a problem with the code.</p>
+<p>The first is file size. Google scans Drive downloads for viruses, and it skips that scan above 100 MB. Instead of a download you get a page that says Google couldn't scan the file, with a button to continue anyway. The PDF still opens, but it looks suspicious on a restaurant table. Keep menus and brochures under 100 MB and the warning never appears.</p>
+<p>The second is permission. If the file is still private, the scanner lands on a Google sign-in page. Open the file's sharing settings and switch to "anyone with the link can view".</p>
+<p>If neither fix is practical — a 300 MB portfolio, or a client who insists on a private folder — host the PDF on your own domain. You control the permissions, and there's no interstitial.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>How big to print it</h2>
+<p>A code that scans on your monitor can fail on a wall. The practical rule: the printed code should be roughly one tenth of the distance you expect people to scan from. Stand 3 metres away, print a 30 cm code.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Where it goes</th><th>Typical scan distance</th><th>Smallest that works</th><th>Comfortable</th></tr></thead>
+  <tbody>
+    <tr><td>Counter card, table tent</td><td>30 cm</td><td>3 cm</td><td>4–5 cm</td></tr>
+    <tr><td>A4 poster in a window</td><td>1–2 m</td><td>10 cm</td><td>15 cm</td></tr>
+    <tr><td>Door sign, trade show panel</td><td>3 m</td><td>30 cm</td><td>40 cm</td></tr>
+    <tr><td>Product packaging</td><td>15–25 cm</td><td>2 cm</td><td>3 cm</td></tr>
+  </tbody>
+</table></div>
+<p>Leave a margin. The blank border around the pattern — the quiet zone — is part of how scanners find the code. Cropping it to save space is the most common reason a printed code stops working.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>When you update the PDF</h2>
+<p>The code points at a link. Whether you can change the PDF without reprinting depends entirely on whether the link stays the same.</p>
+<p>If you replace the file in place, the link survives. In Drive, open the existing file and upload a new version rather than creating a new one; in Dropbox, overwrite the file at the same path. The URL doesn't move, so every printed code still works.</p>
+<p>If you upload a new file, you get a new link. The old code now opens a deleted file or a 404. You'll need to print again — which is worth knowing before you order 500 table tents.</p>
+<p>One more case: if the PDF lives on your own domain and you keep the filename, swapping the file behind it is invisible to scanners. That's the most forgiving setup, and the one we'd pick for anything printed in volume.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Test it before you print</h2>
+<p>Scan the code off your screen with two different phones — one iPhone, one Android — before anything goes to a printer. Screen and paper fail in different ways: glare, ink spread, and the loss of the quiet zone only show up on the printed version.</p>
+<p>Then scan the printed proof from the distance you expect. If it takes more than a second to lock on, the code is too small for that spot, not badly made.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Good to know</h2>
     <details><summary><span>Can I upload a PDF directly here?</span></summary><p>FreeQrly does not host files — your PDF lives on Drive, Dropbox, or your site, and the QR code simply opens its link. That also means you can swap the file later without reprinting, as long as the link stays the same.</p></details>
-    <details><summary><span>Will the QR code still work if I update the PDF?</span></summary><p>Yes, if you replace the file at the same link (same Drive file, same URL). The code encodes the link, not the file itself.</p></details>
+    <details><summary><span>Does the scanner download the PDF or preview it?</span></summary><p>It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table.</p></details>
     <details><summary><span>What if the PDF is large?</span></summary><p>Size does not matter for the code — it only encodes the link. Keep the PDF itself reasonable so it opens fast on phones.</p></details>
     <details><summary><span>Does it expire?</span></summary><p>No. Static codes never expire and need no account.</p></details>
   </section>
@@ -342,7 +393,7 @@
 </div>
 <script src="../assets/lib/qr-code-styling.js"></script>
 <script src="../assets/lib/jszip.min.js"></script>
-<script src="/assets/js/vcard.js?v=b3ab-20261119"></script>
-<script src="../assets/js/app.js?v=b3ab-20261119"></script>
+<script src="/assets/js/vcard.js?v=5c0b6341"></script>
+<script src="../assets/js/app.js?v=7d6a9ccc"></script>
 </body>
 </html>
