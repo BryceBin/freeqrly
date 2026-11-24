@@ -63,6 +63,25 @@ function isKnown(path) {
   return false;
 }
 
+// Visitor's preferred UI language, or null when it cannot be determined.
+// Order: an explicit choice stored by the language menu, then the browser's
+// Accept-Language (already ordered by q-value). Unknown values are ignored.
+// 'en' is a real answer here — it means "stay on /".
+function pickLanguage(request) {
+  const cookie = request.headers.get('Cookie') || '';
+  const saved = cookie.match(/(?:^|;\s*)fq_lang=(en|zh|es|hi|ar|pt|fr|ru|de|ja)(?:;|$)/);
+  if (saved) return saved[1];
+  const accept = request.headers.get('Accept-Language') || '';
+  for (const part of accept.split(',')) {
+    const tag = part.split(';')[0].trim().toLowerCase();
+    if (!tag || tag === '*') continue;
+    const base = tag.split('-')[0];
+    if (base === 'en') return 'en';
+    if (LANGS.has(base)) return base;
+  }
+  return null;
+}
+
 function isLocalizable(path) {
   if (path === '/') return true;
   if (path === '/blog' || path === '/blog/' || path.startsWith('/blog/')) return true;
@@ -112,8 +131,44 @@ export async function onRequest(context) {
       }
     }
   }
+  // Homepage language negotiation: 302 to the visitor's language.
+  //
+  // Only the homepage used to localize itself (every other page carries an
+  // explicit data-lang), and it did so client-side, which left the served
+  // HTML in one language while <html lang>, the title and the canonical
+  // declared another. Deciding here keeps the response, the canonical and
+  // the hreflang in agreement.
+  //
+  // English stays on /, so the canonical URL and hreflang are unchanged and
+  // Googlebot (Accept-Language: en-US) is never redirected. The redirect is
+  // 302 with Vary: Accept-Language so caches key on the header, and an
+  // explicit choice from the language menu (cookie fq_lang) always wins.
+  if ((context.request.method === 'GET' || context.request.method === 'HEAD')
+      && url.pathname === '/' && !url.searchParams.has('lang')) {
+    const chosen = pickLanguage(context.request);
+    if (chosen && chosen !== 'en') {
+      const dest = new URL(`/${chosen}/`, url.origin);
+      dest.search = url.search;
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: dest.toString(),
+          Vary: 'Accept-Language, Cookie',
+          'Cache-Control': 'private, max-age=0, must-revalidate',
+        },
+      });
+    }
+  }
   if (isKnown(url.pathname)) {
-    return context.env.ASSETS.fetch(context.request);
+    const res = await context.env.ASSETS.fetch(context.request);
+    // The homepage response depends on Accept-Language / Cookie, so caches
+    // must key on them. Other pages are language-independent.
+    if (url.pathname === '/') {
+      const headers = new Headers(res.headers);
+      headers.set('Vary', 'Accept-Language, Cookie');
+      return new Response(res.body, { status: res.status, headers });
+    }
+    return res;
   }
   try {
     // Serve a localized 404 when the URL starts with a language code.

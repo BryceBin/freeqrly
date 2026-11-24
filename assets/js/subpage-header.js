@@ -64,6 +64,8 @@
       langNames: LANGN,
       onLangChange: function (code) {
         try { localStorage.setItem("freeqrly-lang", code); } catch (e) {}
+        // Persist the explicit choice for the server-side homepage negotiation.
+        try { document.cookie = "fq_lang=" + code + "; path=/; max-age=31536000; SameSite=Lax"; } catch (e) {}
         location.href = (code === "en" ? enPath : "/" + code + enPath);
       },
       user: getCachedUser(),

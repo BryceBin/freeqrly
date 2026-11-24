@@ -91,10 +91,12 @@ ar:{title:"مولّد QR مجاني — بدون تسجيل، بدون علام�
 const LANGS = ["en","zh","es","hi","ar","pt","fr","ru","de","ja"];
 const LANGN = {en:"English",zh:"\u4e2d\u6587",es:"Espa\u00f1ol",hi:"\u0939\u093f\u0928\u094d\u0926\u0940",ar:"\u0627\u0644\u0639\u0631\u0628\u064a\u0629",pt:"Portugu\u00eas",fr:"Fran\u00e7ais",ru:"\u0420\u0443\u0441\u0441\u043a\u0438\u0439",de:"Deutsch",ja:"\u65e5\u672c\u8a9e"};
 const LANGBCP = {en:"en",zh:"zh-CN",es:"es",hi:"hi",ar:"ar",pt:"pt",fr:"fr",ru:"ru",de:"de",ja:"ja"};
-const GEO2LANG = {CN:"zh",HK:"zh",TW:"zh",MO:"zh",ES:"es",MX:"es",AR:"es",CO:"es",CL:"es",PE:"es",VE:"es",EC:"es",GT:"es",CU:"es",BO:"es",DO:"es",HN:"es",PY:"es",SV:"es",NI:"es",CR:"es",PA:"es",UY:"es",BR:"pt",PT:"pt",AO:"pt",MZ:"pt",FR:"fr",BE:"fr",SN:"fr",CI:"fr",DE:"de",AT:"de",JP:"ja",IN:"hi",SA:"ar",EG:"ar",AE:"ar",DZ:"ar",MA:"ar",IQ:"ar",RU:"ru",BY:"ru"};
-const TZ2LANG = {"Asia/Shanghai":"zh","Asia/Taipei":"zh","Asia/Hong_Kong":"zh","Asia/Macau":"zh","Asia/Urumqi":"zh","America/Mexico_City":"es","America/Bogota":"es","America/Lima":"es","America/Santiago":"es","America/Argentina/Buenos_Aires":"es","Europe/Madrid":"es","America/Sao_Paulo":"pt","Europe/Lisbon":"pt","Europe/Paris":"fr","Europe/Berlin":"de","Europe/Vienna":"de","Asia/Tokyo":"ja","Asia/Kolkata":"hi","Asia/Dubai":"ar","Asia/Riyadh":"ar","Africa/Cairo":"ar"};
 let lang = "en";
-/* language: ?lang= > saved choice > timezone hint > IP geolocation > browser language */
+/* language: ?lang= > page data-lang > saved choice > browser language.
+   The homepage's initial language is negotiated server-side (Accept-Language
+   plus the fq_lang cookie), so nothing here guesses by timezone or IP: that
+   used to rewrite the title and <html lang> of an English canonical URL, and
+   it sent every first-time visitor's IP to a third-party geolocation service. */
 function syncGuess(){
   const q = new URLSearchParams(location.search).get("lang");
   if(q && LANGS.includes(q)) return q;
@@ -102,25 +104,17 @@ function syncGuess(){
   if(dl && LANGS.includes(dl)) return dl;
   const saved = localStorage.getItem("freeqrly-lang");
   if(saved && LANGS.includes(saved)) return saved;
-  try{
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone||"";
-    if(TZ2LANG[tz]) return TZ2LANG[tz];
-    const city = tz.split("/").pop();
-    for(const z in TZ2LANG){ if(z.endsWith("/"+city)) return TZ2LANG[z]; }
-  }catch(e){}
+  // Same explicit choice, mirrored in a cookie so the server can honour it on
+  // the next visit to /. Read it here too, otherwise clearing localStorage
+  // would make the client fall back to navigator.language and contradict the
+  // page the server just served.
+  const ck = document.cookie.match(/(?:^|;\s*)fq_lang=(en|zh|es|hi|ar|pt|fr|ru|de|ja)(?:;|$)/);
+  if(ck) return ck[1];
   return null;
 }
 async function detectLang(){
   const s = syncGuess();
   if(s) return s;
-  try{
-    const ctrl = new AbortController();
-    const t = setTimeout(()=>ctrl.abort(), 1500);
-    const r = await fetch("https://ipapi.co/json/", {signal:ctrl.signal});
-    clearTimeout(t);
-    const j = await r.json();
-    if(j && j.country_code && GEO2LANG[j.country_code]) return GEO2LANG[j.country_code];
-  }catch(e){}
   const bl = (navigator.language||"en").toLowerCase();
   for(const c of LANGS){ if(c!=="en" && (bl===c || bl.indexOf(c+"-")===0)) return c; }
   return "en";
@@ -1598,6 +1592,8 @@ function initAuthHeader(){
       langs: LANGS,
       langNames: LANGN,
       onLangChange: (code) => {
+        // Persist the explicit choice for the server-side homepage negotiation.
+        try{ document.cookie = "fq_lang=" + code + "; path=/; max-age=31536000; SameSite=Lax"; }catch(e){}
         if(document.body && document.body.hasAttribute("data-lp")){
           try{ localStorage.setItem("freeqrly-lang", code); }catch(e){}
           const m = location.pathname.match(/^\/(zh|es|hi|ar|pt|fr|ru|de|ja)(\/.*)?$/);
