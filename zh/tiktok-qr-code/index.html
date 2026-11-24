@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "主页链接适合涨粉。视频链接只播一个视频——适合活动、包装插页和新品发布海报。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">静态码全程在你的浏览器里生成。</p>
   </main>
 
+  <section class="lpsec">
+    <h2>用哪种 TikTok 链接</h2>
+<p>TikTok 有三种链接，印出来之后表现各不相同。</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>链接类型</th><th>长这样</th><th>扫码打开</th><th>视频删除后还有效吗</th></tr></thead>
+  <tbody>
+    <tr><td>主页</td><td><code>tiktok.com/@yourhandle</code></td><td>你的主页，顶部有关注按钮</td><td>有效</td></tr>
+    <tr><td>单条视频</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>那条视频，直接播放</td><td>失效</td></tr>
+    <tr><td>话题标签</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>该标签下的所有视频</td><td>有效，但会混进别人的帖子</td></tr>
+  </tbody>
+</table></div>
+<p>名片、橱窗、包装里附的卡片，用主页链接。你发新视频它照样有效，而且落地页上关注按钮就一步之遥。</p>
+<p>如果这个码只有一个任务——比如新品海报，或者贴在商品上指向那条广告——就用视频链接。链接锁定的是一个视频 ID，视频删了，码就死了。</p>
+<p>话题标签链接能用，但它展示的是这个话题下所有人的帖子，不只是你的。适合活动落地页，不适合名片。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>扫码之后会发生什么</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>扫码工具</th><th>装了 TikTok</th><th>没装 TikTok</th></tr></thead>
+  <tbody>
+    <tr><td>iPhone 相机</td><td>链接打开，提示切换到 App</td><td>加载网页版主页</td></tr>
+    <tr><td>安卓相机</td><td>同上，通常自动跳转</td><td>加载网页版主页</td></tr>
+    <tr><td>TikTok 自带扫码</td><td>在 App 内打开</td><td>提示安装</td></tr>
+  </tbody>
+</table></div>
+<p>跳转 App 靠的是一个提示，不是保证。有的手机弹出全屏的“在 TikTok 中打开？”，有的只在顶部显示一条细栏，还有的干脆不提示，直接打开网页版。多数人会点进去，但也有人不会——所以要假定一部分扫码流量落在网页版上。</p>
+<p>两个后果值得提前想清楚。扫码不等于关注：落地之后人还得点一下关注，码只把人送到门口，送不进去。另外网页版比 App 慢，如果码印在包装上，注意力本来就稀缺，这一点更要紧。</p>
+<p>私密账号会让扫码的人看到一个主页外壳和一个“请求关注”按钮。任何二维码都绕不过这个设置。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>TikTok 自带的二维码，什么时候该用它</h2>
+<p>App 里就自带二维码：打开主页，点分享图标，选二维码。免费，而且能用——在 TikTok 里面。</p>
+<p>问题在于谁能读它。那个码是给 TikTok 自己的扫码器设计的。用 iPhone 相机或者安卓原生相机去扫，经常什么都扫不出来，或者先提示你装 TikTok。在手机屏幕上、App 已经打开的时候，这没问题。但印在贴纸上、贴在橱窗里、放在菜单上，扫码的人只是个拿着默认相机的陌生人。</p>
+<p>你在这里生成的码是标准二维码。任何相机都能读，里面的链接和手动输入的 URL 行为一致。差别就这一点，也正是印出来的码值得单独生成的原因。</p>
+<p>有一点要注意：你的用户名是 URL 的一部分。改了账号名，两种码都会失效。改名之后重新生成，并且把已经印出去的都换掉。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>贴在哪里</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>位置</th><th>码的尺寸</th><th>原因</th></tr></thead>
+  <tbody>
+    <tr><td>发货卡片、外箱贴纸</td><td>2 厘米</td><td>一臂距离内阅读，常在弧面上</td></tr>
+    <tr><td>周边吊牌</td><td>1.5–2 厘米</td><td>再小就会被布料纹理糊掉</td></tr>
+    <tr><td>收银台立牌</td><td>4–5 厘米</td><td>约 30 厘米外扫</td></tr>
+    <tr><td>橱窗</td><td>15 厘米</td><td>1–2 米外扫，常隔着玻璃</td></tr>
+    <tr><td>活动海报</td><td>20–30 厘米</td><td>边走边扫，2–3 米</td></tr>
+    <tr><td>名片</td><td>1.5 厘米</td><td>哑粉纸上的实用下限</td></tr>
+  </tbody>
+</table></div>
+<p>保住静区。图案外圈的空白是相机能找到码的前提，为了排版好看把它裁掉，是印出来的码失效最常见的原因。</p>
+<p>批量印刷之前，先拿手机测打样稿。屏幕上读得出来的码，可能在弧面瓶身或者光面标签上失效——等货到了你才发现。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>这个码做不到的事</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>限制</th><th>原因</th><th>变通办法</th></tr></thead>
+  <tbody>
+    <tr><td>无法统计扫码次数</td><td>静态码，不向任何服务器发数据</td><td>TikTok 主页数据（免费）</td></tr>
+    <tr><td>印出后无法改地址</td><td>URL 已经烧进图案里</td><td>重新生成、重新印</td></tr>
+    <tr><td>绕不过私密账号</td><td>TikTok 强制执行该设置</td><td>把账号改成公开</td></tr>
+    <tr><td>无法直达某个标签页</td><td>只有主页、视频、话题三种 URL</td><td>链接到主页</td></tr>
+  </tbody>
+</table></div>
+<p>问得最多的是前两条。如果你以后想不重印就改目标地址，那需要的是动态码，不是这个。</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>小提示</h2>
     <details><summary><span>主页链接还是具体视频？</span></summary><p>主页链接适合涨粉。视频链接只播一个视频——适合活动、包装插页和新品发布海报。</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>会在 TikTok App 里打开吗？</span></summary><p>在大多数手机上可以——点开扫出来的链接后，如果装了 App 会提示用 App 打开，否则在浏览器里打开。</p></details>
     <details><summary><span>可以加 Logo 或品牌颜色吗？</span></summary><p>可以——上传 Logo，设置品牌颜色。保持高对比度，在任何光线下都能扫出来。</p></details>
     <details><summary><span>改用户名后会过期吗？</span></summary><p>二维码里存的是精确的网址，所以换了用户名就重新生成一个。码本身永不过期。</p></details>

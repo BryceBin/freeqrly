@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>無料App Store QRコード生成 | FreeQrly</title>
-<meta name="description" content="iOS App StoreとGoogle Playのリンクを1つのQRコードに。無料、登録不要。広告・パッケージ・ポスター・レシートに印刷できます。">
+<title>App Store QRコードジェネレーター: One Code Per Store | FreeQrly</title>
+<meta name="description" content="Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.">
 <link rel="canonical" href="https://freeqrly.com/ja/app-store-qr-code/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/app-store-qr-code/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/app-store-qr-code/">
@@ -18,8 +18,8 @@
 <link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/app-store-qr-code/">
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/app-store-qr-code/">
 <meta name="theme-color" content="#e9eef4">
-<meta property="og:title" content="無料App Store QRコード生成 | FreeQrly">
-<meta property="og:description" content="iOS App StoreとGoogle Playのリンクを1つのQRコードに。無料、登録不要。広告・パッケージ・ポスター・レシートに印刷できます。">
+<meta property="og:title" content="App Store QRコードジェネレーター: One Code Per Store | FreeQrly">
+<meta property="og:description" content="Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/ja/app-store-qr-code/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
@@ -46,21 +46,21 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly —— App Store QRコード生成","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ja/app-store-qr-code/","description":"iOS App StoreとGoogle Playのリンクを1つのQRコードに。無料、登録不要。広告・パッケージ・ポスター・レシートに印刷できます。","dateModified":"2026-10-30"}
+{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly —— App Store QRコード生成","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ja/app-store-qr-code/","description":"Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.","dateModified":"2026-10-30"}
 </script>
 <script type="application/ld+json">
 {
@@ -69,10 +69,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "1つのコードで2つのストアを開ける？",
+      "name": "Can one static code open both stores?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "デフォルトでiOSリンクを開き、AndroidユーザーにはPlayリンクを案内。両方設定すれば、誰が読み取っても正しいストアに届きます。"
+        "text": "No. A static code stores a single URL, and your two store listings are two URLs. Encode the App Store link and Android visitors land on an app they cannot install. Print two labelled codes, or point one code at a page on your own domain that reads the phone and forwards to the right store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I fill in both fields?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the App Store link is encoded — the Play field is used when the App Store field is empty. To cover both platforms, make two codes, one per field."
       }
     },
     {
@@ -80,7 +88,7 @@
       "name": "片方のプラットフォームだけの場合は？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "片方だけ入力すればOK。入力したリンクが開きます。"
+        "text": "Fill that field and print one code. Nothing else is needed."
       }
     },
     {
@@ -88,7 +96,7 @@
       "name": "端末を自動判別できる？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "これはリンク入りの静的コードで、まずiOSリンクを開きます。自動判別にはスマートリンクサービスの併用が必要ですが、入口としてのコードは有効です。"
+        "text": "Not on its own — a printed pattern cannot run logic. Device detection needs a page in between: host a small router page, then point a dynamic code at it so you can change the destination later without reprinting."
       }
     },
     {
@@ -96,14 +104,14 @@
       "name": "インストール数は計測できる？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "いいえ——静的コードは設計上プライベートで、外部送信しません。インストール数はApp Store ConnectとPlay Consoleで計測済みです。"
+        "text": "No. Static codes carry only the link and never phone home. App Store Connect and the Play Console already report installs."
       }
     }
   ]
 }
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "App Store QRコードを作成", "description": "App StoreとGoogle Playのリンクを貼って1つのQRコードに。スキャンひとつで正しいストアが開く——ポスターの“iPhone？Android？”はもう不要。", "step": [{"@type": "HowToStep", "name": "両ストアのリンクをコピー", "text": "App StoreとGoogle PlayのURL——まずは片方だけでもOK。"}, {"@type": "HowToStep", "name": "貼り付け", "text": "iOSが先、Androidが後。コードは即座に表示されます。"}, {"@type": "HowToStep", "name": "Print it everywhere", "text": "広告・パッケージ・ポスター・レシート・発表スライド。SVGは看板サイズでもくっきり。"}]}
+{"@context": "https://schema.org", "@type": "HowTo", "name": "App Store QRコードを作成", "description": "A static QR code stores one URL, so your App Store listing and your Play listing need one code each. Fill in a link, print it at a size that scans, and put the right code in front of the right phone.", "step": [{"@type": "HowToStep", "name": "Copy one store link", "text": "App Store from App Store Connect, Play from the Play Console. One link per code — fill the App Store field for iOS, the Google Play field for Android."}, {"@type": "HowToStep", "name": "Paste it in", "text": "Your code appears instantly. Leave the other field empty unless you are making a second code."}, {"@type": "HowToStep", "name": "Label it and print", "text": "“iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides."}]}
 </script>
 </head>
 <body data-lp="app-store-qr-code" data-type="appstore">
@@ -186,15 +194,15 @@
   <section class="hero lp-hero">
     <div>
       <div class="kicker">無料 · 静的コードは登録不要 · 透かしなし</div>
-      <h1>アプリをインストールしてもらう、<span class="hl hl-honey">スキャンひとつ</span>。</h1>
-      <p class="lede">App StoreとGoogle Playのリンクを貼って1つのQRコードに。スキャンひとつで正しいストアが開く——ポスターの“iPhone？Android？”はもう不要。</p>
+      <h1>Your app link, <span class="hl hl-honey">printed right</span>.</h1>
+      <p class="lede">A static QR code stores one URL, so your App Store listing and your Play listing need one code each. Fill in a link, print it at a size that scans, and put the right code in front of the right phone.</p>
       <p class="glance"><b>概要：</b>無料ダイナミックコード20個（期間限定キャンペーン中は現在無制限）· 1バッチ最大50個 · コード種別17種 · Pro月額9ドルまたは年額90ドル · スキャン回数無制限</p>
       <p class="updated">最終更新：2026年10月30日</p>
     </div>
     <ol class="steps" id="how">
-      <li><span class="sn">1</span><span><b>両ストアのリンクをコピー</b>App StoreとGoogle PlayのURL——まずは片方だけでもOK。</span></li>
-      <li><span class="sn">2</span><span><b>貼り付け</b>iOSが先、Androidが後。コードは即座に表示されます。</span></li>
-      <li><span class="sn">3</span><span><b>あらゆる場所に印刷</b>広告・パッケージ・ポスター・レシート・発表スライド。SVGは看板サイズでもくっきり。</span></li>
+      <li><span class="sn">1</span><span><b>Copy one store link</b>App Store from App Store Connect, Play from the Play Console. One link per code — fill the App Store field for iOS, the Google Play field for Android.</span></li>
+      <li><span class="sn">2</span><span><b>Paste it in</b>Your code appears instantly. Leave the other field empty unless you are making a second code.</span></li>
+      <li><span class="sn">3</span><span><b>Label it and print</b>“iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides.</span></li>
     </ol>
   </section>
 <main class="studio" id="studio">
@@ -309,12 +317,60 @@
     <p class="privnote-foot" data-i18n="privnote">静的コードはすべてブラウザ内でローカルに生成されます。</p>
   </main>
 
+  <section class="lpsec">
+    <h2>静的コード1つに入るリンクは1本</h2>
+<p>アプリストア向けのQRコードのページがたいてい飛ばす話なので、はっきり書きます。QRコードが保存するのはテキストで、そのテキストはURLです。1つのコードに1つの行き先。模様の中に、スマホを見てストアを選ぶような仕組みはありません。</p>
+<p>これが効くのは、iOSとAndroidの掲載ページが別々のURLだからです。静的コード1つは、そのどちらか一方しか指せません。App Storeのリンクを入れると、Androidの人は入れないアプリのページに着きます。逆も同じくらい困ります。</p>
+<p>両方のプラットフォームをカバーする方法は3つあります。下の表で比べます。</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>方法</th><th>仕組み</th><th>刷るコード数</th><th>リンク変更に耐えるか</th><th>必要な準備</th></tr></thead>
+  <tbody>
+    <tr><td>2つのコードを並べる</td><td>App Store用とPlay用</td><td>2</td><td>不可。刷り直し</td><td>不要</td></tr>
+    <tr><td>ルーターページへの1つのコード</td><td>ページが端末を判定し、正しいストアへ転送</td><td>1</td><td>可。ページが動的なら</td><td>自分で管理するページ</td></tr>
+    <tr><td>ストアのスマートバナー</td><td>自分のサイトにAppleとGoogleのバナーを置く</td><td>1つ（自分のサイトへ）</td><td>残る</td><td>ウェブサイト</td></tr>
+  </tbody>
+</table></div>
+<p>2つ刷るのが、正直で手間のかからない選択です。ルーターページは、マーケティングサイトを持ったアプリの多くがやる方法です。スマートバナーは、先にあなたのサイトへ来てもらう必要があり、印刷したコードとは別の仕事になります。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>ストアのリンクを取得する</h2>
+<p>どちらのストアも、きれいで永続的なURLを用意しています。場所さえ分かれば簡単です。</p>
+<p>iOSの場合：App Store Connectでアプリを開き、「App情報」に進んでApp StoreのURLをコピーします。<code>apps.apple.com/app/id1234567890</code> のような形です。国コードを足すこともできます——<code>apps.apple.com/gb/app/id…</code>——特定のストアフロントを開きたい場合ですが、通常版は訪問者の地域へリダイレクトされるので、たいていはそちらが望ましい形です。</p>
+<p>Androidの場合：Play Consoleで掲載ページを開き、アドレスバーからリンクをコピーします。<code>play.google.com/store/apps/details?id=com.yourcompany.yourapp</code> のような形です。<code>id</code> はパッケージ名で、アプリ名が変わっても変わりません。</p>
+<p>IDより後ろは削ってください。マーケティングツールは <code>?mt=8</code> や <code>&amp;referrer=…</code> のような計測パラメータを付けがちです。害はありませんが、QRの模様が無駄に密になり、密な模様は小さく印刷しにくくなります。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>機能するルーターページを作る</h2>
+<p>コード1つで行くなら、行き先が必要です。ルーターページは、自分のドメインに置く小さなページで、ユーザーエージェントを読んで転送します。</p>
+<p>ロジックは短いです。ブラウザがiPhoneかiPadを報告したらApp Storeへ、AndroidならPlayへ、それ以外は両方のボタンを出します。パソコン用の受け皿も用意してください。読み取りのかなりの部分が、ノートPCで試している人から来ます。</p>
+<p>実際には2つのことで壊れます。Appleのアプリ内ブラウザや一部のSNSアプリはユーザーエージェントを汎用の値に削るので、判定を外します。もう1つ、ページが描画される前に走るリダイレクトは、壊れたリンクに見えます。両方のボタンを出し、判定したほうを強調するほうが、即座に転送するより寛容です。</p>
+<p>行き先をあとから変えたければ、ルーターページを指す動的コードを使ってください。ページを変えれば、印刷済みのコードはすべて追従します。刷り直しは不要です。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>どこに印刷するか</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>場所</th><th>サイズ</th><th>補足</th></tr></thead>
+  <tbody>
+    <tr><td>アプリ公開のスライド</td><td>8 cm</td><td>席から1〜2mで読む</td></tr>
+    <tr><td>パッケージと同梱物</td><td>2 cm</td><td>プラットフォームごとに1つ、はっきり表示</td></tr>
+    <tr><td>レシートの下部</td><td>1.5cm</td><td>サーマルプリンタは細い線がにじむ。先に試す</td></tr>
+    <tr><td>ポスターや広告</td><td>15 cm</td><td>2〜3mから読む</td></tr>
+    <tr><td>名刺</td><td>1.5cm</td><td>ラベル付きの2つのコードを刷る場合のみ</td></tr>
+  </tbody>
+</table></div>
+<p>2つ刷るときはラベルを付けてください。「iPhone」「Android」の文字がない、見分けのつかない2つの四角は、1つのコードより悪いです。人は間違ったほうを読み、使えないストアに着きます。</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>知っておきたいこと</h2>
-    <details><summary><span>1つのコードで2つのストアを開ける？</span></summary><p>デフォルトでiOSリンクを開き、AndroidユーザーにはPlayリンクを案内。両方設定すれば、誰が読み取っても正しいストアに届きます。</p></details>
-    <details><summary><span>片方のプラットフォームだけの場合は？</span></summary><p>片方だけ入力すればOK。入力したリンクが開きます。</p></details>
-    <details><summary><span>端末を自動判別できる？</span></summary><p>これはリンク入りの静的コードで、まずiOSリンクを開きます。自動判別にはスマートリンクサービスの併用が必要ですが、入口としてのコードは有効です。</p></details>
-    <details><summary><span>インストール数は計測できる？</span></summary><p>いいえ——静的コードは設計上プライベートで、外部送信しません。インストール数はApp Store ConnectとPlay Consoleで計測済みです。</p></details>
+    <details><summary><span>Can one static code open both stores?</span></summary><p>No. A static code stores a single URL, and your two store listings are two URLs. Encode the App Store link and Android visitors land on an app they cannot install. Print two labelled codes, or point one code at a page on your own domain that reads the phone and forwards to the right store.</p></details>
+    <details><summary><span>What if I fill in both fields?</span></summary><p>Only the App Store link is encoded — the Play field is used when the App Store field is empty. To cover both platforms, make two codes, one per field.</p></details>
+    <details><summary><span>片方のプラットフォームだけの場合は？</span></summary><p>Fill that field and print one code. Nothing else is needed.</p></details>
+    <details><summary><span>端末を自動判別できる？</span></summary><p>Not on its own — a printed pattern cannot run logic. Device detection needs a page in between: host a small router page, then point a dynamic code at it so you can change the destination later without reprinting.</p></details>
+    <details><summary><span>インストール数は計測できる？</span></summary><p>No. Static codes carry only the link and never phone home. App Store Connect and the Play Console already report installs.</p></details>
   </section>
 
   <footer>

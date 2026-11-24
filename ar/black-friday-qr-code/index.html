@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -362,7 +362,7 @@
   <p>للنشرة التي تُوزع في الشارع احتياجات تختلف عن بطاقة رف تبقى معلقة شهرًا. فطابق الإعداد مع الصيغة.</p>
   <h3>الجدول 2: صيغة العرض ← إعداد الرمز</h3>
   <table>
-    <thead><tr><th>صيغة العرض</th><th>نوع الرمز الموصى به</th><th>لماذا</th><th>احذر من</th></tr></thead>
+    <thead><tr><th>صيغة العرض</th><th>نوع الرمز الموصى به</th><th>السبب</th><th>احذر من</th></tr></thead>
     <tbody>
       <tr><td><b>نشرة عروض الافتتاح</b></td><td>ديناميكي</td><td>قد ينفد العرض أو يتغير كل ساعة؛ أعد توجيه الرمز بدل إعادة الطباعة</td><td>اطبع العرض الرئيسي كنص أيضًا</td></tr>
       <tr><td><b>بطاقة رف داخل المتجر</b></td><td>ثابت (واحد لكل منتج)</td><td>خصم ثابت وبطاقة طويلة العمر؛ اصنعها كلها دفعة واحدة مع وضع الدُفعات (حتى 50 رمزًا لكل دفعة، رابط واحد في كل سطر أو رفع CSV/XLSX، وتنزيل ZIP)</td><td>امسح كل بطاقة للاختبار بعد الطباعة</td></tr>

@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "आम फ़ॉलो के लिए प्रोफ़ाइल लिंक। वीडियो लिंक एक वीडियो चलाता है — कैंपेन, पैकेजिंग इंसर्ट और लॉन्च पोस्टर के लिए काम का।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">स्टैटिक कोड पूरी तरह आपके ब्राउज़र में बनते हैं।</p>
   </main>
 
+  <section class="lpsec">
+    <h2>कौन-सा TikTok लिंक इस्तेमाल करें</h2>
+<p>TikTok तीन तरह के URL देता है, और छपने के बाद उनका व्यवहार अलग होता है।</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>लिंक का प्रकार</th><th>ऐसा दिखता है</th><th>स्कैन पर खुलता है</th><th>वीडियो मिटने पर बचेगा?</th></tr></thead>
+  <tbody>
+    <tr><td>प्रोफ़ाइल</td><td><code>tiktok.com/@yourhandle</code></td><td>आपकी प्रोफ़ाइल, ऊपर फ़ॉलो बटन</td><td>हाँ</td></tr>
+    <tr><td>एक वीडियो</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>वही वीडियो, चलता हुआ</td><td>नहीं</td></tr>
+    <tr><td>हैशटैग</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>टैग के सारे वीडियो</td><td>हाँ, पर दूसरों के पोस्ट भी दिखेंगे</td></tr>
+  </tbody>
+</table></div>
+<p>विज़िटिंग कार्ड, दुकान की खिड़की या पैकेजिंग में डालने वाले कार्ड के लिए प्रोफ़ाइल लिंक लें। आपके पोस्ट करते रहने पर भी वह चलता रहता है, और फ़ॉलो बटन उस स्क्रीन से एक टैप दूर है जहाँ लोग पहुँचते हैं।</p>
+<p>वीडियो लिंक तब लें जब कोड का सिर्फ़ एक काम हो: लॉन्च पोस्टर, या उत्पाद पर लगा स्टिकर जो विज्ञापन की ओर जाता हो। लिंक एक वीडियो आईडी को पिन करता है। वह वीडियो मिटाया, तो कोड मर गया।</p>
+<p>हैशटैग लिंक चलते हैं, पर वे उस टैग पर सबके पोस्ट दिखाते हैं, सिर्फ़ आपके नहीं। कैंपेन के लैंडिंग पेज के लिए ठीक, विज़िटिंग कार्ड के लिए ग़लत।</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>स्कैन करने पर क्या होता है</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>स्कैनर</th><th>TikTok इंस्टॉल है</th><th>TikTok इंस्टॉल नहीं है</th></tr></thead>
+  <tbody>
+    <tr><td>iPhone कैमरा</td><td>लिंक खुलता है, ऐप पर जाने का सुझाव</td><td>मोबाइल वेब प्रोफ़ाइल खुलती है</td></tr>
+    <tr><td>Android कैमरा</td><td>वही, ऐप पर जाना आमतौर पर अपने आप</td><td>मोबाइल वेब प्रोफ़ाइल खुलती है</td></tr>
+    <tr><td>TikTok का अपना स्कैनर</td><td>ऐप में खुलता है</td><td>इंस्टॉल करने का सुझाव</td></tr>
+  </tbody>
+</table></div>
+<p>ऐप में जाना एक सुझाव है, गारंटी नहीं। कुछ फ़ोन पूरी स्क्रीन पर "TikTok में खोलें?" दिखाते हैं, कुछ ऊपर एक पतली पट्टी, और कुछ बिना किसी सुझाव के सीधे मोबाइल साइट खोल देते हैं। ज़्यादातर लोग टैप कर देते हैं, पर सब नहीं — मान लें कि कुछ स्कैन वेब वर्ज़न पर ही रुक जाएँगे।</p>
+<p>दो नतीजों के लिए तैयार रहें। स्कैन का मतलब फ़ॉलो नहीं: पहुँचने के बाद भी व्यक्ति को फ़ॉलो दबाना होगा, यानी कोड दरवाज़े तक पहुँचाता है, अंदर नहीं ले जाता। और मोबाइल वेब वर्ज़न ऐप से धीमा लोड होता है, जो मायने रखता है अगर कोड पैकेजिंग पर है जहाँ ध्यान पहले ही कम है।</p>
+<p>निजी अकाउंट स्कैन करने वालों को प्रोफ़ाइल का खोल और रिक्वेस्ट बटन दिखाता है। कोई QR कोड इस सेटिंग को बायपास नहीं कर सकता।</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>TikTok का अपना QR कोड, और उसे कब चुनें</h2>
+<p>ऐप में पहले से है: प्रोफ़ाइल खोलें, शेयर आइकन दबाएँ, QR कोड चुनें। मुफ़्त है, और चलता है — TikTok के अंदर।</p>
+<p>पेच यह है कि उसे पढ़ कौन सकता है। वह कोड TikTok के अपने स्कैनर के लिए बना है। iPhone के कैमरे या Android के सामान्य कैमरे से स्कैन करें तो अक्सर कुछ नहीं होता, या पहले TikTok इंस्टॉल करने को कहा जाता है। फ़ोन की स्क्रीन पर, जहाँ ऐप पहले से खुला है, यह ठीक है। छपे हुए स्टिकर, दुकान की खिड़की या मेन्यू पर स्कैन करने वाला एक अजनबी है जिसके हाथ में डिफ़ॉल्ट कैमरा है।</p>
+<p>यहाँ बनाया गया कोड सामान्य QR कोड है। कोई भी कैमरा उसे पढ़ लेता है, और अंदर का लिंक टाइप किए गए URL जैसा व्यवहार करता है। पूरा फ़र्क़ यही है, और छपे हुए कोड को ऐप वाले से अलग बनाने की वजह भी यही।</p>
+<p>एक बात का ध्यान रखें: आपका यूज़रनेम URL का हिस्सा है। अकाउंट का नाम बदला, तो दोनों कोड टूट जाएँगे। नाम बदलने के बाद नया बनाएँ, और जो छप चुका है उसे बदलें।</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>कहाँ लगाएँ</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>जगह</th><th>कोड का आकार</th><th>क्यों</th></tr></thead>
+  <tbody>
+    <tr><td>शिपिंग कार्ड, डिब्बे पर स्टिकर</td><td>2 cm</td><td>बाँह भर दूरी से पढ़ा जाता है, अक्सर घुमावदार सतह पर</td></tr>
+    <tr><td>मर्च हैंग टैग</td><td>1.5–2 सेमी</td><td>इससे छोटा कपड़े की बुनावट में धुँधला हो जाता है</td></tr>
+    <tr><td>काउंटर कार्ड</td><td>4–5 cm</td><td>लगभग 30 सेमी से स्कैन</td></tr>
+    <tr><td>दुकान की खिड़की</td><td>15 cm</td><td>1–2 मीटर से, अक्सर शीशे के पार से</td></tr>
+    <tr><td>इवेंट पोस्टर</td><td>20–30 सेमी</td><td>चलते हुए 2–3 मीटर से</td></tr>
+    <tr><td>विज़िटिंग कार्ड</td><td>1.5 सेमी</td><td>मैट पेपर पर व्यावहारिक न्यूनतम</td></tr>
+  </tbody>
+</table></div>
+<p>क्वाइट ज़ोन बचाए रखें। पैटर्न के चारों ओर का सफ़ेद हाशिया वही है जिससे कैमरे कोड ढूँढते हैं, और डिज़ाइन में फ़िट कराने के लिए उसे काटना छपे हुए कोड के फ़ेल होने की सबसे आम वजह है।</p>
+<p>बड़ी छपाई से पहले प्रूफ़ फ़ोन से जाँचें। स्क्रीन पर पढ़ा जाने वाला कोड घुमावदार बोतल या चमकदार लेबल पर फ़ेल हो सकता है — और पता तब चलता है जब डिब्बे आ जाते हैं।</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>यह कोड क्या नहीं कर सकता</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>सीमा</th><th>क्यों</th><th>विकल्प</th></tr></thead>
+  <tbody>
+    <tr><td>स्कैन की गिनती नहीं</td><td>स्टैटिक कोड, कहीं कुछ नहीं भेजता</td><td>TikTok प्रोफ़ाइल आँकड़े (मुफ़्त)</td></tr>
+    <tr><td>छपने के बाद रीडायरेक्ट नहीं</td><td>URL पैटर्न में पहले से बैठा है</td><td>नया कोड बनाएँ, दोबारा छापें</td></tr>
+    <tr><td>निजी अकाउंट को बायपास नहीं</td><td>TikTok सेटिंग लागू करता है</td><td>अकाउंट को सार्वजनिक करें</td></tr>
+    <tr><td>किसी टैब का सीधा लिंक नहीं</td><td>सिर्फ़ प्रोफ़ाइल, वीडियो और हैशटैग URL मौजूद हैं</td><td>प्रोफ़ाइल से लिंक करें</td></tr>
+  </tbody>
+</table></div>
+<p>सबसे ज़्यादा सवाल पहली दो बातों पर आते हैं। अगर बाद में दोबारा छापे बिना मंज़िल बदलनी है, तो वह डायनैमिक कोड है, यह नहीं।</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>जानना अच्छा रहेगा</h2>
     <details><summary><span>प्रोफ़ाइल लिंक या कोई ख़ास वीडियो?</span></summary><p>आम फ़ॉलो के लिए प्रोफ़ाइल लिंक। वीडियो लिंक एक वीडियो चलाता है — कैंपेन, पैकेजिंग इंसर्ट और लॉन्च पोस्टर के लिए काम का।</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>क्या यह TikTok ऐप में खुलता है?</span></summary><p>ज़्यादातर फ़ोन पर, हां — स्कैन किए गए लिंक पर टैप करने से इंस्टॉल होने पर ऐप खुलने का ऑफ़र मिलता है, नहीं तो ब्राउज़र में खुलता है।</p></details>
     <details><summary><span>क्या मैं अपना लोगो या ब्रांड रंग जोड़ सकता हूँ?</span></summary><p>हां — अपना लोगो अपलोड करें और अपने ब्रांड के रंग सेट करें। कंट्रास्ट ज़्यादा रखें ताकि हर रोशनी में स्कैन हो।</p></details>
     <details><summary><span>अगर मैं अपना यूज़रनेम बदल दूँ तो क्या यह एक्सपायर हो जाएगा?</span></summary><p>कोड में ठीक वही URL होता है, इसलिए अगर आपका हैंडल बदल जाए तो नया कोड बनाएं। कोड खुद कभी एक्सपायर नहीं होता।</p></details>

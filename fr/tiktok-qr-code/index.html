@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Le lien du profil pour les abonnements en général. Un lien vidéo lance une seule vidéo — pratique pour les campagnes, les encarts d'emballage et les affiches de lancement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">Les codes statiques sont générés entièrement dans votre navigateur.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Quel lien TikTok utiliser</h2>
+<p>TikTok propose trois types d'URL, et une fois imprimés ils ne se comportent pas de la même façon.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Type de lien</th><th>Ressemble à</th><th>Un scan ouvre</th><th>Survit à la suppression de la vidéo ?</th></tr></thead>
+  <tbody>
+    <tr><td>Profil</td><td><code>tiktok.com/@yourhandle</code></td><td>votre profil, bouton S'abonner en haut</td><td>oui</td></tr>
+    <tr><td>Vidéo unique</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>cette vidéo, en lecture</td><td>non</td></tr>
+    <tr><td>Hashtag</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>toutes les vidéos du tag</td><td>oui, mais affiche aussi les publications des autres</td></tr>
+  </tbody>
+</table></div>
+<p>Pour une carte de visite, une vitrine ou un encart dans un colis, prenez le lien de profil. Il reste valable au fil de vos publications, et le bouton S'abonner est à un geste de l'écran d'arrivée.</p>
+<p>Utilisez un lien vidéo quand le code n'a qu'une mission : une affiche de lancement, ou un autocollant sur le produit qui renvoie à la publicité. Le lien fige un identifiant de vidéo. Supprimez cette vidéo et le code meurt.</p>
+<p>Les liens de hashtag fonctionnent, mais ils affichent les publications de tout le monde sur le tag, pas seulement les vôtres. Utile pour une page de campagne, à éviter sur une carte de visite.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Ce qui se passe quand quelqu'un scanne</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Lecteur</th><th>TikTok installé</th><th>TikTok non installé</th></tr></thead>
+  <tbody>
+    <tr><td>Appareil photo iPhone</td><td>le lien s'ouvre, invite à basculer vers l'app</td><td>le profil web mobile se charge</td></tr>
+    <tr><td>Appareil photo Android</td><td>idem, bascule souvent automatique</td><td>le profil web mobile se charge</td></tr>
+    <tr><td>Scanner intégré à TikTok</td><td>s'ouvre dans l'app</td><td>propose d'installer</td></tr>
+  </tbody>
+</table></div>
+<p>Le passage vers l'application repose sur une invite, pas sur une garantie. Certains téléphones affichent une bannière plein écran « Ouvrir dans TikTok ? », d'autres une fine barre en haut, et quelques-uns ouvrent le site mobile sans aucune invite. La plupart des gens valident, d'autres non — partez du principe qu'une partie des scans atterrit sur la version web.</p>
+<p>Deux conséquences à anticiper. Un scan n'est pas un abonnement : la personne doit encore appuyer sur S'abonner après l'arrivée, le code l'amène à la porte, pas au-delà. Et la version web mobile charge plus lentement que l'application — ce qui compte si le code est sur un emballage, là où l'attention est déjà mince.</p>
+<p>Un compte privé montre aux scanners la coquille du profil et un bouton de demande. Aucun QR code ne contourne ce réglage.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Le QR code intégré à TikTok, et quand le préférer</h2>
+<p>L'application en contient un : ouvrez votre profil, touchez l'icône de partage, choisissez QR code. Gratuit, et il fonctionne — à l'intérieur de TikTok.</p>
+<p>Le piège, c'est qui peut le lire. Ce code est prévu pour le scanner de TikTok. Scannez-le avec l'appareil photo d'un iPhone ou d'un Android standard et souvent il ne se passe rien, ou on vous invite d'abord à installer TikTok. Sur un écran de téléphone, où l'application est déjà ouverte, c'est parfait. Sur un autocollant imprimé, une vitrine ou un menu, le scanner est un inconnu avec l'appareil photo par défaut.</p>
+<p>Le code que vous créez ici est un QR code standard. N'importe quel appareil photo le lit, et le lien à l'intérieur se comporte comme une URL tapée à la main. C'est toute la différence, et la raison pour laquelle un code imprimé mérite d'être généré séparément de celui de l'application.</p>
+<p>Un point à surveiller : votre identifiant fait partie de l'URL. Renommez le compte et les deux codes cassent. Générez-en un nouveau après un changement de nom, et remplacez tout ce qui est déjà imprimé.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Où le placer</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Emplacement</th><th>Taille du code</th><th>Pourquoi</th></tr></thead>
+  <tbody>
+    <tr><td>Encart d'expédition, autocollant sur carton</td><td>2 cm</td><td>lu à bout de bras, souvent sur une surface bombée</td></tr>
+    <tr><td>Étiquette de produit dérivé</td><td>1,5–2 cm</td><td>plus petit, il se noie dans la texture du tissu</td></tr>
+    <tr><td>Chevalet de comptoir</td><td>4–5 cm</td><td>scanné à environ 30 cm</td></tr>
+    <tr><td>Vitrine</td><td>15 cm</td><td>scanné à 1–2 m, souvent à travers une vitre</td></tr>
+    <tr><td>Affiche d'événement</td><td>20–30 cm</td><td>scanné à 2–3 m en marchant</td></tr>
+    <tr><td>Carte de visite</td><td>1,5 cm</td><td>le plancher pratique sur papier mat</td></tr>
+  </tbody>
+</table></div>
+<p>Préservez la zone de silence. La marge blanche autour du motif est ce qui permet aux appareils photo de trouver le code, et la rogner pour faire tenir un design est la première cause d'échec d'un code imprimé.</p>
+<p>Testez l'épreuve avec un téléphone avant le tirage. Un code lisible à l'écran peut échouer sur une bouteille bombée ou une étiquette brillante, et vous ne le découvrez qu'à l'arrivée des cartons.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Ce que ce code ne peut pas faire</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Limite</th><th>Pourquoi</th><th>Solution de contournement</th></tr></thead>
+  <tbody>
+    <tr><td>Pas de comptage des scans</td><td>code statique, rien n'est transmis</td><td>statistiques du profil TikTok (gratuites)</td></tr>
+    <tr><td>Pas de redirection après impression</td><td>l'URL est figée dans le motif</td><td>créer un nouveau code, réimprimer</td></tr>
+    <tr><td>Pas de contournement du compte privé</td><td>TikTok applique le réglage</td><td>passer le compte en public</td></tr>
+    <tr><td>Pas de lien direct vers un onglet</td><td>seules les URL de profil, vidéo et hashtag existent</td><td>pointer vers le profil</td></tr>
+  </tbody>
+</table></div>
+<p>Les deux premières lignes sont celles qui reviennent le plus. Si vous voulez changer la destination plus tard sans réimprimer, il vous faut un code dynamique, pas celui-ci.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Bon à savoir</h2>
     <details><summary><span>Lien du profil ou vidéo précise ?</span></summary><p>Le lien du profil pour les abonnements en général. Un lien vidéo lance une seule vidéo — pratique pour les campagnes, les encarts d'emballage et les affiches de lancement.</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>Est-ce que ça s'ouvre dans l'app TikTok ?</span></summary><p>Sur la plupart des téléphones, oui — toucher le lien scanné propose l'app si elle est installée, sinon il s'ouvre dans le navigateur.</p></details>
     <details><summary><span>Puis-je ajouter mon logo ou les couleurs de ma marque ?</span></summary><p>Oui — envoyez votre logo et choisissez vos couleurs. Gardez un contraste élevé pour qu’il se scanne dans toutes les lumières.</p></details>
     <details><summary><span>Est-ce que ça expire si je change mon nom d'utilisateur ?</span></summary><p>Le code encode l'URL exacte, donc si votre identifiant change, créez un nouveau code. Le code lui-même n'expire jamais.</p></details>

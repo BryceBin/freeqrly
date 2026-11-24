@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Profil-Link für allgemeine Follows. Ein Videolink spielt ein Video ab — praktisch für Kampagnen, Verpackungseinleger und Poster für einen Launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">Statische Codes werden komplett in deinem Browser erzeugt.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Welchen TikTok-Link du nimmst</h2>
+<p>TikTok gibt dir drei Arten von URLs, und gedruckt verhalten sie sich unterschiedlich.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Link-Art</th><th>Sieht aus wie</th><th>Ein Scan öffnet</th><th>Überlebt ein gelöschtes Video?</th></tr></thead>
+  <tbody>
+    <tr><td>Profil</td><td><code>tiktok.com/@yourhandle</code></td><td>dein Profil, Folgen-Button oben</td><td>ja</td></tr>
+    <tr><td>Einzelnes Video</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>das Video, abspielend</td><td>nein</td></tr>
+    <tr><td>Hashtag</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>jedes Video zum Tag</td><td>ja, zeigt aber auch Beiträge anderer</td></tr>
+  </tbody>
+</table></div>
+<p>Für Visitenkarte, Schaufenster oder Packungsbeilage nimmst du den Profil-Link. Er funktioniert weiter, während du postest, und der Folgen-Button liegt einen Tipp vom Startbildschirm entfernt.</p>
+<p>Einen Video-Link nimmst du, wenn der Code genau eine Aufgabe hat: ein Launch-Poster oder ein Aufkleber auf dem Produkt, der auf die Anzeige zeigt. Der Link fixiert eine Video-ID. Löschst du das Video, ist der Code tot.</p>
+<p>Hashtag-Links funktionieren, zeigen aber alle Beiträge zum Tag, nicht nur deine. Gut für eine Kampagnenseite, falsch für eine Visitenkarte.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Was passiert, wenn jemand scannt</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Scanner</th><th>TikTok installiert</th><th>TikTok nicht installiert</th></tr></thead>
+  <tbody>
+    <tr><td>iPhone-Kamera-App</td><td>Link öffnet, Hinweis zum Wechsel in die App</td><td>mobiles Webprofil lädt</td></tr>
+    <tr><td>Android-Kamera</td><td>dasselbe, Übergabe meist automatisch</td><td>mobiles Webprofil lädt</td></tr>
+    <tr><td>TikToks eigener Scanner</td><td>öffnet in der App</td><td>fordert zur Installation auf</td></tr>
+  </tbody>
+</table></div>
+<p>Die Übergabe an die App ist ein Hinweis, keine Garantie. Manche Handys zeigen ein bildschirmfüllendes „In TikTok öffnen?“, andere einen schmalen Balken oben, und einige öffnen die Mobilseite ganz ohne Hinweis. Meistens tippen die Leute durch, manche aber nicht – rechne damit, dass ein Teil der Scans auf der Webversion landet.</p>
+<p>Zwei Konsequenzen solltest du einplanen. Ein Scan ist kein Follow: Die Person muss nach dem Landen noch auf Folgen tippen, der Code bringt sie also zur Tür, nicht hindurch. Und die mobile Webversion lädt langsamer als die App – wichtig, wenn der Code auf einer Verpackung klebt, wo die Aufmerksamkeit ohnehin knapp ist.</p>
+<p>Ein privates Konto zeigt Scannern die Profilhülle und einen Anfrage-Button. Kein QR-Code kommt um diese Einstellung herum.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>TikToks eigener QR-Code – und wann du ihn besser nimmst</h2>
+<p>Die App hat einen QR-Code eingebaut: Profil öffnen, Teilen-Symbol antippen, QR-Code wählen. Kostenlos, und er funktioniert – innerhalb von TikTok.</p>
+<p>Der Haken ist, wer ihn lesen kann. Dieser Code ist für TikToks eigenen Scanner gedacht. Scannst du ihn mit der iPhone-Kamera oder einer Standard-Android-Kamera, passiert oft gar nichts – oder du wirst erst aufgefordert, TikTok zu installieren. Auf einem Handybildschirm, wo die App schon offen ist, ist das in Ordnung. Auf einem gedruckten Aufkleber, im Schaufenster oder auf einer Speisekarte hält ein Fremder eine Standard-Kamera-App darauf.</p>
+<p>Der Code, den du hier erzeugst, ist ein Standard-QR-Code. Jede Kamera liest ihn, und der Link darin verhält sich wie eine eingetippte URL. Das ist der ganze Unterschied – und der Grund, warum sich ein gedruckter Code vom In-App-Code unterscheidet.</p>
+<p>Eines solltest du beachten: Dein Handle ist Teil der URL. Benennst du das Konto um, brechen beide Codes. Erzeuge nach einer Umbenennung einen neuen und ersetze alles, was schon gedruckt ist.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Wo du ihn anbringst</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Platzierung</th><th>Code-Größe</th><th>Warum</th></tr></thead>
+  <tbody>
+    <tr><td>Versandbeilage, Kartonaufkleber</td><td>2 cm</td><td>auf Armeslänge gelesen, oft auf gewölbter Fläche</td></tr>
+    <tr><td>Merch-Anhänger</td><td>1,5–2 cm</td><td>kleiner verschwimmt in der Stoffstruktur</td></tr>
+    <tr><td>Thekenaufsteller</td><td>4–5 cm</td><td>aus etwa 30 cm gescannt</td></tr>
+    <tr><td>Schaufenster</td><td>15 cm</td><td>aus 1–2 m gescannt, oft durch Glas</td></tr>
+    <tr><td>Event-Poster</td><td>20–30 cm</td><td>aus 2–3 m im Gehen gescannt</td></tr>
+    <tr><td>Visitenkarte</td><td>1,5 cm</td><td>die praktische Untergrenze auf Mattpapier</td></tr>
+  </tbody>
+</table></div>
+<p>Lass die Ruhezone stehen. Der weiße Rand um das Muster ist der Grund, warum Kameras den Code überhaupt finden, und ihn wegzuschneiden, damit das Design passt, ist der häufigste Grund für einen unlesbaren Druck.</p>
+<p>Teste den Probedruck mit einem Handy, bevor die Auflage läuft. Ein Code, der am Bildschirm funktioniert, kann auf einer gewölbten Flasche oder einem glänzenden Etikett versagen – und das merkst du erst, wenn die Kartons da sind.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Was dieser Code nicht kann</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Grenze</th><th>Warum</th><th>Ausweg</th></tr></thead>
+  <tbody>
+    <tr><td>Keine Scan-Zählung</td><td>statischer Code, es wird nichts gesendet</td><td>TikTok-Profilstatistik (kostenlos)</td></tr>
+    <tr><td>Keine Umleitung nach dem Druck</td><td>die URL steckt im Muster</td><td>neuen Code erzeugen, neu drucken</td></tr>
+    <tr><td>Kein Umgehen privater Konten</td><td>TikTok setzt die Einstellung durch</td><td>Konto auf öffentlich stellen</td></tr>
+    <tr><td>Kein Deep-Link auf einen Tab</td><td>es gibt nur Profil-, Video- und Hashtag-URLs</td><td>auf das Profil verlinken</td></tr>
+  </tbody>
+</table></div>
+<p>Nach den ersten beiden wird am häufigsten gefragt. Willst du das Ziel später ohne Neudruck ändern, brauchst du einen dynamischen Code, nicht diesen.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Gut zu wissen</h2>
     <details><summary><span>Profil-Link oder ein bestimmtes Video?</span></summary><p>Profil-Link für allgemeine Follows. Ein Videolink spielt ein Video ab — praktisch für Kampagnen, Verpackungseinleger und Poster für einen Launch.</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>Öffnet er sich in der TikTok-App?</span></summary><p>Auf den meisten Handys ja — beim Antippen des gescannten Links wird die App angeboten, falls installiert, sonst öffnet er sich im Browser.</p></details>
     <details><summary><span>Kann ich mein Logo oder meine Markenfarben einfügen?</span></summary><p>Ja — lad dein Logo hoch und stell deine Markenfarben ein. Halt den Kontrast hoch, damit er bei jedem Licht scannt.</p></details>
     <details><summary><span>Läuft er ab, wenn ich meinen Benutzernamen ändere?</span></summary><p>Der Code codiert die exakte URL, also erstelle bei geändertem Handle einen neuen Code. Der Code selbst läuft nie ab.</p></details>

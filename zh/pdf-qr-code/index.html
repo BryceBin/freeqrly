@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -77,10 +77,10 @@
     },
     {
       "@type": "Question",
-      "name": "更新 PDF 后二维码还有效吗？",
+      "name": "Does the scanner download the PDF or preview it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "有效，只要在同一个链接处替换文件（同一个 Drive 文件、同一个 URL）。二维码编码的是链接，不是文件本身。"
+        "text": "It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table."
       }
     },
     {
@@ -309,10 +309,61 @@
     <p class="privnote-foot" data-i18n="privnote">静态码全程在你的浏览器里生成。</p>
   </main>
 
+  <section class="lpsec">
+    <h2>PDF 放哪里</h2>
+<p>二维码装的是链接，不是文件。你印出来的码，指向 PDF 本来就待的地方——所以第一个决定是：文件放哪。三种做法基本覆盖所有情况。</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>文件放在哪</th><th>链接长什么样</th><th>免费空间</th><th>以下操作会让它失效</th></tr></thead>
+  <tbody>
+    <tr><td>Google Drive</td><td><code>drive.google.com/file/d/…/view</code></td><td>15 GB</td><td>移动文件、删除文件，或改动可见范围</td></tr>
+    <tr><td>Dropbox</td><td><code>dropbox.com/s/…/menu.pdf</code></td><td>2 GB</td><td>删除或重命名文件</td></tr>
+    <tr><td>你自己的网站</td><td><code>yoursite.com/menu.pdf</code></td><td>取决于服务商</td><td>删除文件</td></tr>
+  </tbody>
+</table></div>
+<p>不管选哪种，共享权限都设成“知道链接的任何人”。如果只共享给特定的人，每个扫码的人都会被要求登录，而大多数人不会。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>为什么 Drive 链接有时会弹警告</h2>
+<p>有两个坑，都跟二维码本身没关系。</p>
+<p>第一个是文件大小。Google 会扫描 Drive 下载文件查病毒，超过 100 MB 就跳过扫描。这时你看到的不是下载，而是一个页面，说 Google 无法扫描该文件，下面有个“仍要继续”的按钮。PDF 照样能打开，但在餐厅桌上看着就很可疑。菜单和宣传册控制在 100 MB 以内，这个警告就不会出现。</p>
+<p>第二个是权限。文件还是私有时，扫码的人会落到 Google 登录页。打开文件的共享设置，改成“知道链接的任何人可查看”。</p>
+<p>如果这两条都不适用——比如 300 MB 的作品集，或者客户坚持用私有文件夹——那就把 PDF 放到自己的域名下。权限你自己控制，也没有中间页。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>要印多大</h2>
+<p>在屏幕上扫得动的码，贴到墙上可能就扫不动。实用规则：印出来的码，边长约等于预期扫码距离的十分之一。站在 3 米外扫，就印 30 厘米的码。</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>贴在哪</th><th>常见扫码距离</th><th>最小可用尺寸</th><th>舒适尺寸</th></tr></thead>
+  <tbody>
+    <tr><td>收银台立牌、桌卡</td><td>30 厘米</td><td>3 厘米</td><td>4–5 厘米</td></tr>
+    <tr><td>橱窗里的 A4 海报</td><td>1–2 米</td><td>10 厘米</td><td>15 厘米</td></tr>
+    <tr><td>门牌、展会展板</td><td>3 米</td><td>30 厘米</td><td>40 厘米</td></tr>
+    <tr><td>产品包装</td><td>15–25 厘米</td><td>2 厘米</td><td>3 厘米</td></tr>
+  </tbody>
+</table></div>
+<p>留白边。图案外圈那块空白——静区——是扫码器找到码的依据。为了省地方把它裁掉，是印出来的码扫不动的最常见原因。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>PDF 更新之后</h2>
+<p>码指向的是链接。能不能不重印就换 PDF，完全取决于链接是否保持不变。</p>
+<p>原地替换文件，链接就还在。在 Drive 里，打开已有文件上传新版本，而不是新建一个；在 Dropbox 里，覆盖同一路径下的文件。URL 没动，所有已印的码继续有效。</p>
+<p>上传新文件，就会拿到新链接。旧码现在指向一个已删除的文件，或者 404。你得重印——这一点最好在下单 500 张桌卡之前就知道。</p>
+<p>还有一种情况：PDF 放在自己域名下，文件名不变，那么换掉背后的文件，扫码的人完全看不出来。这是最宽容的做法，也是我们推荐给大批量印刷场景的方案。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>印之前先测</h2>
+<p>送印之前，用两台不同的手机——一台 iPhone、一台安卓——扫屏幕上的码。屏幕和纸的失效方式不一样：反光、油墨扩散、静区被吃掉，这些只有在纸上才看得出来。</p>
+<p>然后按实际扫码距离去扫打样稿。如果超过一秒才识别出来，说明这个位置的码太小，而不是做得不好。</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>小提示</h2>
     <details><summary><span>可以直接在这里上传 PDF 吗？</span></summary><p>FreeQrly 不托管文件——你的 PDF 放在 Drive、Dropbox 或你自己的网站上，二维码只是打开它的链接。这也意味着，只要链接不变，之后换文件也不用重印。</p></details>
-    <details><summary><span>更新 PDF 后二维码还有效吗？</span></summary><p>有效，只要在同一个链接处替换文件（同一个 Drive 文件、同一个 URL）。二维码编码的是链接，不是文件本身。</p></details>
+    <details><summary><span>Does the scanner download the PDF or preview it?</span></summary><p>It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table.</p></details>
     <details><summary><span>PDF 很大怎么办？</span></summary><p>文件大小对二维码没影响——它只编码链接。PDF 本身保持合理大小，这样手机上打开更快。</p></details>
     <details><summary><span>会过期吗？</span></summary><p>不会。静态码永不过期，也不需要账号。</p></details>
   </section>

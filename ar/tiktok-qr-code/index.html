@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "رابط الملف الشخصي للمتابعات العامة. رابط الفيديو يشغّل فيديو واحدًا — مفيد للحملات وإدخالات التغليف وملصقات الإطلاق."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">الرموز الثابتة تُنشأ بالكامل في متصفحك.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>أي رابط TikTok تستخدم</h2>
+<p>يمنحك TikTok ثلاثة أنواع من الروابط، وسلوكها يختلف بعد الطباعة.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>نوع الرابط</th><th>يبدو هكذا</th><th>المسح يفتح</th><th>يصمد إذا حُذف الفيديو؟</th></tr></thead>
+  <tbody>
+    <tr><td>الملف الشخصي</td><td><code>tiktok.com/@yourhandle</code></td><td>ملفك الشخصي، وزر المتابعة في الأعلى</td><td>نعم</td></tr>
+    <tr><td>فيديو واحد</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>ذلك الفيديو، يعمل</td><td>لا</td></tr>
+    <tr><td>وسم</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>كل فيديوهات الوسم</td><td>نعم، لكن مع منشورات الآخرين</td></tr>
+  </tbody>
+</table></div>
+<p>لبطاقة عمل أو واجهة متجر أو بطاقة داخل عبوة، استخدم رابط الملف الشخصي. يظل يعمل مع نشرك، وزر المتابعة على بعد نقرة واحدة من الشاشة التي يصل إليها الشخص.</p>
+<p>استخدم رابط فيديو عندما يكون للرمز مهمة واحدة: ملصق إطلاق، أو ملصق على المنتج يشير إلى الإعلان. الرابط يثبّت معرّف فيديو واحدًا. احذف الفيديو، ويموت الرمز.</p>
+<p>روابط الوسم تعمل، لكنها تعرض منشورات الجميع على الوسم، لا منشوراتك وحدها. مناسبة لصفحة حملة، غير مناسبة لبطاقة عمل.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>ماذا يحدث عند المسح</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>القارئ</th><th>TikTok مثبّت</th><th>TikTok غير مثبّت</th></tr></thead>
+  <tbody>
+    <tr><td>كاميرا iPhone</td><td>يفتح الرابط، مع دعوة للانتقال إلى التطبيق</td><td>يُحمّل الملف الشخصي على الويب للجوال</td></tr>
+    <tr><td>كاميرا أندرويد</td><td>الشيء نفسه، والانتقال غالبًا تلقائي</td><td>يُحمّل الملف الشخصي على الويب للجوال</td></tr>
+    <tr><td>قارئ TikTok نفسه</td><td>يفتح داخل التطبيق</td><td>يطلب التثبيت</td></tr>
+  </tbody>
+</table></div>
+<p>الانتقال إلى التطبيق دعوة، لا ضمان. بعض الهواتف تعرض لافتة ملء الشاشة «فتح في TikTok؟»، وبعضها شريطًا رفيعًا في الأعلى، وقليل منها يفتح الموقع للجوال دون أي دعوة. معظم الناس ينقرون، لكن ليس الجميع — افترض أن جزءًا من المسحات سيبقى في نسخة الويب.</p>
+<p>نتيجتان تستحقان التخطيط. المسح ليس متابعة: لا يزال على الشخص النقر على «متابعة» بعد الوصول، فالرمز يوصله إلى الباب، لا يعبره. ونسخة الويب للجوال أبطأ من التطبيق، وهذا يهم إذا كان الرمز على عبوة حيث الانتباه شحيح أصلًا.</p>
+<p>الحساب الخاص يُظهر لمن يمسح هيكل الملف الشخصي وزر طلب. لا رمز QR يتجاوز هذا الإعداد.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>رمز QR المدمج في TikTok، ومتى تختاره</h2>
+<p>التطبيق يحتوي عليه أصلًا: افتح ملفك الشخصي، اضغط أيقونة المشاركة، اختر رمز QR. مجاني، ويعمل — داخل TikTok.</p>
+<p>المشكلة في من يستطيع قراءته. ذلك الرمز مخصص لقارئ TikTok نفسه. امسحه بكاميرا iPhone أو كاميرا أندرويد الافتراضية وغالبًا لن يحدث شيء، أو يُطلب منك تثبيت TikTok أولًا. على شاشة هاتف والتطبيق مفتوح أصلًا، هذا مقبول. على ملصق مطبوع أو واجهة متجر أو قائمة، من يمسح غريب يحمل كاميرا افتراضية.</p>
+<p>الرمز الذي تنشئه هنا رمز QR قياسي. أي كاميرا تقرأه، والرابط داخله يتصرف كعنوان مكتوب يدويًا. هذا هو الفرق كله، وهو سبب استحقاق الرمز المطبوع أن يُنشأ منفصلًا عن رمز التطبيق.</p>
+<p>نقطة يجب الانتباه إليها: اسم المستخدم جزء من العنوان. غيّر اسم الحساب، وينكسر الرمزان. أنشئ رمزًا جديدًا بعد التغيير، واستبدل كل ما طُبع.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>أين تضعه</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>الموضع</th><th>حجم الرمز</th><th>السبب</th></tr></thead>
+  <tbody>
+    <tr><td>بطاقة شحن، ملصق على الصندوق</td><td>2 cm</td><td>يُقرأ على طول الذراع، وغالبًا على سطح منحنٍ</td></tr>
+    <tr><td>بطاقة معلقة للمنتجات</td><td>1.5–2 سم</td><td>أصغر من ذلك يضيع في نسيج القماش</td></tr>
+    <tr><td>بطاقة عند الكاشير</td><td>4–5 cm</td><td>تُمسح من نحو 30 سم</td></tr>
+    <tr><td>واجهة المتجر</td><td>15 cm</td><td>تُمسح من 1–2 م، غالبًا عبر الزجاج</td></tr>
+    <tr><td>ملصق فعالية</td><td>20–30 سم</td><td>يُمسح من 2–3 م أثناء المشي</td></tr>
+    <tr><td>بطاقة عمل</td><td>1.5 سم</td><td>الحد العملي على ورق مطفي</td></tr>
+  </tbody>
+</table></div>
+<p>حافظ على المنطقة الهادئة. الهامش الأبيض حول النمط هو ما يمكّن الكاميرات من إيجاد الرمز، وقصّه ليلائم التصميم هو السبب الأكثر شيوعًا لفشل رمز مطبوع.</p>
+<p>اختبر المسودة بهاتف قبل الطباعة الكبيرة. رمز يُقرأ على الشاشة قد يفشل على زجاجة منحنية أو ملصق لامع، ولن تعرف إلا بعد وصول الصناديق.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>ما لا يستطيعه هذا الرمز</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>الحد</th><th>السبب</th><th>البديل</th></tr></thead>
+  <tbody>
+    <tr><td>لا عدّ للمسحات</td><td>رمز ثابت، لا يُرسل شيئًا</td><td>إحصاءات ملف TikTok (مجانية)</td></tr>
+    <tr><td>لا إعادة توجيه بعد الطباعة</td><td>العنوان مدموج في النمط</td><td>أنشئ رمزًا جديدًا وأعد الطباعة</td></tr>
+    <tr><td>لا تجاوز للحساب الخاص</td><td>TikTok يفرض الإعداد</td><td>اجعل الحساب عامًا</td></tr>
+    <tr><td>لا رابط مباشر لتبويب</td><td>توجد فقط روابط الملف والفيديو والوسم</td><td>اربط بالملف الشخصي</td></tr>
+  </tbody>
+</table></div>
+<p>أول سطرين هما الأكثر سؤالًا. إذا احتجت تغيير الوجهة لاحقًا دون إعادة طباعة، فذلك رمز ديناميكي، لا هذا.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>من الجيد معرفته</h2>
     <details><summary><span>رابط الملف الشخصي أم فيديو محدد؟</span></summary><p>رابط الملف الشخصي للمتابعات العامة. رابط الفيديو يشغّل فيديو واحدًا — مفيد للحملات وإدخالات التغليف وملصقات الإطلاق.</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>هل يفتح في تطبيق TikTok؟</span></summary><p>على معظم الهواتف، نعم — النقر على الرابط الممسوح يعرض التطبيق إذا كان مثبتًا، وإلا يفتح في المتصفح.</p></details>
     <details><summary><span>هل يمكنني إضافة شعاري أو ألوان علامتي؟</span></summary><p>نعم — ارفع شعارك واضبط ألوان علامتك. حافظ على تباين عالٍ ليُمسح في أي إضاءة.</p></details>
     <details><summary><span>هل ينتهي إذا غيّرت اسم المستخدم؟</span></summary><p>الرمز يشفّر الرابط بالضبط، لذا إذا تغير معرّفك، أنشئ رمزًا جديدًا. الرمز نفسه لا ينتهي أبدًا.</p></details>

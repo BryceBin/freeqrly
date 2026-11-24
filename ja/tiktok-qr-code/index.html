@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "プロフィールリンクはフォロワー全般向け。動画リンクは1本の動画を再生します — キャンペーン、パッケージの差し込み、ローンチ用ポスターに便利です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">静的コードはすべてブラウザ内でローカルに生成されます。</p>
   </main>
 
+  <section class="lpsec">
+    <h2>どのTikTokリンクを使うか</h2>
+<p>TikTokのリンクは3種類あり、印刷すると振る舞いが変わります。</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>リンクの種類</th><th>見た目</th><th>読み取ると開くもの</th><th>動画を消しても残るか</th></tr></thead>
+  <tbody>
+    <tr><td>プロフィール</td><td><code>tiktok.com/@yourhandle</code></td><td>プロフィール、上部にフォローボタン</td><td>残る</td></tr>
+    <tr><td>単体の動画</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>その動画が再生される</td><td>残らない</td></tr>
+    <tr><td>ハッシュタグ</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>タグの付いた全動画</td><td>残るが、他人の投稿も混ざる</td></tr>
+  </tbody>
+</table></div>
+<p>名刺、店頭、パッケージ同梱のカードにはプロフィールのリンクを使ってください。投稿を続けても有効で、フォローボタンは着地した画面から1タップの位置にあります。</p>
+<p>コードの役割が1つだけのとき——ローンチのポスターや、商品に貼って広告へ誘導するシール——は動画のリンクを使います。リンクは動画IDを固定します。その動画を消すと、コードは死にます。</p>
+<p>ハッシュタグのリンクも動きますが、表示されるのはそのタグの全員の投稿で、あなたのものだけではありません。キャンペーンのランディングには向きますが、名刺には向きません。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>読み取ったあとに何が起きるか</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>読み取り側</th><th>TikTokあり</th><th>TikTokなし</th></tr></thead>
+  <tbody>
+    <tr><td>iPhoneのカメラ</td><td>リンクが開き、アプリへの切り替えを促す</td><td>モバイルウェブのプロフィールが開く</td></tr>
+    <tr><td>Androidのカメラ</td><td>同じ。たいてい自動でアプリへ</td><td>モバイルウェブのプロフィールが開く</td></tr>
+    <tr><td>TikTok内のスキャナー</td><td>アプリ内で開く</td><td>インストールを促す</td></tr>
+  </tbody>
+</table></div>
+<p>アプリへの受け渡しは「お願い」であって、保証ではありません。全画面で「TikTokで開きますか？」と出る端末もあれば、上部に細いバーが出るだけの端末、何も出さずにモバイルサイトを開く端末もあります。多くの人はタップしますが、しない人もいます。読み取りの一部はウェブ版に落ちると考えておいてください。</p>
+<p>2つの結果を見込んでおきましょう。読み取りはフォローではありません。着地した人が「フォロー」を押す必要があるので、コードは扉の前まで案内するだけで、中には入れません。もう1つ、モバイルのウェブ版はアプリより読み込みが遅い。パッケージに貼るなら、もともと注意力が薄い場所なので効いてきます。</p>
+<p>非公開アカウントでは、読み取った人にプロフィールの外枠とリクエストボタンが見えます。この設定をQRコードで回避することはできません。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>TikTok標準のQRコードと、使い分け</h2>
+<p>アプリには標準でQRコードがあります。プロフィールを開き、共有アイコンをタップして「QRコード」を選びます。無料で、ちゃんと動きます——TikTokの中でなら。</p>
+<p>落とし穴は「誰が読めるか」です。あのコードはTikTok自身のスキャナーのためのもの。iPhoneのカメラやAndroidの標準カメラで読み取ると、何も起きないか、先にTikTokのインストールを求められることがよくあります。スマホの画面で、アプリがすでに開いているなら問題ありません。印刷したシール、店頭、メニューでは、読み取る側は標準カメラを持った見知らぬ人です。</p>
+<p>ここで作るコードは標準のQRコードです。どんなカメラでも読め、中のリンクは手入力したURLと同じように動きます。違いはそれだけですが、印刷するコードをアプリ内のものと別に作る価値はそこにあります。</p>
+<p>注意点が1つ。ユーザー名はURLの一部です。アカウント名を変えると、どちらのコードも切れます。改名したら新しく作り、すでに印刷したものを差し替えてください。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>どこに貼るか</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>場所</th><th>コードのサイズ</th><th>理由</th></tr></thead>
+  <tbody>
+    <tr><td>同梱カード、箱のシール</td><td>2 cm</td><td>腕を伸ばした距離で読み、曲面のことが多い</td></tr>
+    <tr><td>グッズの下げ札</td><td>1.5〜2cm</td><td>これより小さいと布の質感でつぶれる</td></tr>
+    <tr><td>レジ横のカード</td><td>4–5 cm</td><td>30cmほどから読み取る</td></tr>
+    <tr><td>ショーウィンドウ</td><td>15 cm</td><td>1〜2mから、ガラス越しのことも多い</td></tr>
+    <tr><td>イベントのポスター</td><td>20〜30cm</td><td>歩きながら2〜3mから読む</td></tr>
+    <tr><td>名刺</td><td>1.5cm</td><td>マット紙での実用上の下限</td></tr>
+  </tbody>
+</table></div>
+<p>クワイエットゾーンは残してください。模様の周りの白い余白は、カメラがコードを見つけるための前提です。デザインに合わせて切り落とすのが、印刷したコードが読めなくなる最大の原因です。</p>
+<p>本番印刷の前に、校正刷りをスマホで試してください。画面で読めるコードが、曲面のボトルや光沢のあるラベルでは読めないことがあります。気づくのは箱が届いてからです。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>このコードにできないこと</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>制限</th><th>理由</th><th>回避策</th></tr></thead>
+  <tbody>
+    <tr><td>読み取り回数は数えられない</td><td>静的コード。どこにも送信しない</td><td>TikTokのプロフィール分析（無料）</td></tr>
+    <tr><td>印刷後は行き先を変えられない</td><td>URLが模様に埋め込まれている</td><td>新しく作って刷り直す</td></tr>
+    <tr><td>非公開アカウントは回避できない</td><td>TikTokが設定を強制する</td><td>アカウントを公開にする</td></tr>
+    <tr><td>タブへの直接リンクはない</td><td>プロフィール、動画、ハッシュタグの3種類だけ</td><td>プロフィールにリンクする</td></tr>
+  </tbody>
+</table></div>
+<p>よく聞かれるのは上の2つです。あとから刷り直さずに行き先を変えたいなら、必要なのはこのコードではなく動的コードです。</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>知っておきたいこと</h2>
     <details><summary><span>プロフィールリンクと動画、どっち？</span></summary><p>プロフィールリンクはフォロワー全般向け。動画リンクは1本の動画を再生します — キャンペーン、パッケージの差し込み、ローンチ用ポスターに便利です。</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>TikTokアプリで開く？</span></summary><p>ほとんどのスマホではい — スキャンしたリンクをタップすると、アプリが入っていればアプリで、なければブラウザで開きます。</p></details>
     <details><summary><span>ロゴやブランドカラーを入れられる？</span></summary><p>はい — ロゴをアップロードしてブランドカラーを設定してください。どんな光でも読み取れるよう、コントラストは高く保ってください。</p></details>
     <details><summary><span>ユーザー名を変えたら期限切れになる？</span></summary><p>コードは正確なURLを記録します。ハンドルが変わったら、新しいコードを作ってください。コード自体に期限はありません。</p></details>

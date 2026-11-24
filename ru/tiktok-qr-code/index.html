@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Ссылка на профиль — для подписок в целом. Ссылка на видео запускает одно видео — удобно для кампаний, вкладышей в упаковку и постеров к запуску."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">Статические коды генерируются полностью в вашем браузере.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Какую ссылку TikTok использовать</h2>
+<p>TikTok даёт три вида ссылок, и в печати они ведут себя по-разному.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Тип ссылки</th><th>Выглядит как</th><th>Сканирование открывает</th><th>Переживёт удаление видео?</th></tr></thead>
+  <tbody>
+    <tr><td>Профиль</td><td><code>tiktok.com/@yourhandle</code></td><td>ваш профиль, кнопка подписки сверху</td><td>да</td></tr>
+    <tr><td>Отдельное видео</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>это видео, сразу с воспроизведением</td><td>нет</td></tr>
+    <tr><td>Хештег</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>все видео с этим тегом</td><td>да, но покажет и чужие публикации</td></tr>
+  </tbody>
+</table></div>
+<p>Для визитки, витрины или вкладыша в упаковку берите ссылку на профиль. Она работает и когда вы публикуете новое, а кнопка подписки — в одном касании от экрана, куда попадает человек.</p>
+<p>Ссылку на видео берите, когда у кода ровно одна задача: плакат к запуску или наклейка на товаре, ведущая на рекламу. Ссылка фиксирует идентификатор одного видео. Удалите это видео — и код мёртв.</p>
+<p>Ссылки на хештег работают, но показывают публикации всех под этим тегом, а не только ваши. Хорошо для страницы кампании, плохо для визитки.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Что происходит при сканировании</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Сканер</th><th>TikTok установлен</th><th>TikTok не установлен</th></tr></thead>
+  <tbody>
+    <tr><td>Камера iPhone</td><td>ссылка открывается, приглашение перейти в приложение</td><td>загружается мобильный веб-профиль</td></tr>
+    <tr><td>Камера Android</td><td>то же, переход обычно автоматический</td><td>загружается мобильный веб-профиль</td></tr>
+    <tr><td>Сканер самого TikTok</td><td>открывается в приложении</td><td>предлагает установить</td></tr>
+  </tbody>
+</table></div>
+<p>Переход в приложение — это приглашение, а не гарантия. Одни телефоны показывают баннер во весь экран «Открыть в TikTok?», другие — тонкую полоску сверху, а некоторые открывают мобильный сайт вообще без приглашения. Обычно люди нажимают, но не все, — исходите из того, что часть сканирований останется в веб-версии.</p>
+<p>Два следствия стоит учесть заранее. Сканирование — не подписка: после перехода человеку всё ещё нужно нажать «Подписаться», то есть код доводит до двери, но не проводит через неё. И мобильная веб-версия грузится медленнее приложения, что важно, если код на упаковке, где внимания и так мало.</p>
+<p>Закрытый аккаунт показывает сканирующим оболочку профиля и кнопку запроса. Ни один QR-код не обходит эту настройку.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Собственный QR-код TikTok и когда лучше он</h2>
+<p>В приложении он уже есть: откройте профиль, нажмите значок «Поделиться», выберите QR-код. Бесплатно, и он работает — внутри TikTok.</p>
+<p>Загвоздка в том, кто его прочтёт. Этот код рассчитан на сканер TikTok. Попробуйте просканировать его камерой iPhone или стандартной камерой Android — часто ничего не происходит или сначала предлагают установить TikTok. На экране телефона, где приложение уже открыто, это нормально. На печатной наклейке, в витрине или в меню сканирующий — незнакомец со стандартной камерой.</p>
+<p>Код, который вы создаёте здесь, — обычный QR-код. Его читает любая камера, а ссылка внутри ведёт себя как введённый вручную адрес. В этом вся разница, и поэтому печатный код стоит делать отдельно от того, что в приложении.</p>
+<p>Одно замечание: ваше имя пользователя входит в адрес. Переименуете аккаунт — сломаются оба кода. После переименования создайте новый и замените всё, что уже напечатано.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Куда его разместить</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Размещение</th><th>Размер кода</th><th>Почему</th></tr></thead>
+  <tbody>
+    <tr><td>Вкладыш в посылку, наклейка на коробку</td><td>2 cm</td><td>читают на вытянутой руке, часто на изогнутой поверхности</td></tr>
+    <tr><td>Бирка на мерче</td><td>1,5–2 см</td><td>меньше — смазывается о фактуру ткани</td></tr>
+    <tr><td>Карточка на кассе</td><td>4–5 cm</td><td>сканируют примерно с 30 см</td></tr>
+    <tr><td>Витрина</td><td>15 cm</td><td>сканируют с 1–2 м, часто через стекло</td></tr>
+    <tr><td>Плакат мероприятия</td><td>20–30 см</td><td>сканируют с 2–3 м на ходу</td></tr>
+    <tr><td>Визитка</td><td>1,5 см</td><td>практический минимум на матовой бумаге</td></tr>
+  </tbody>
+</table></div>
+<p>Сохраняйте тихую зону. Белое поле вокруг узора — то, по чему камеры вообще находят код, и обрезка ради макета — самая частая причина, по которой печатный код не читается.</p>
+<p>Проверьте пробный оттиск телефоном до тиража. Код, который читается на экране, может не прочитаться на изогнутой бутылке или глянцевой этикетке — и вы узнаете об этом, когда приедут коробки.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Чего этот код не умеет</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Ограничение</th><th>Почему</th><th>Обходной путь</th></tr></thead>
+  <tbody>
+    <tr><td>Нет подсчёта сканирований</td><td>статический код, ничего не отправляется</td><td>статистика профиля TikTok (бесплатно)</td></tr>
+    <tr><td>Нет перенаправления после печати</td><td>адрес зашит в узор</td><td>создать новый код, перепечатать</td></tr>
+    <tr><td>Не обходит закрытый аккаунт</td><td>TikTok применяет настройку</td><td>сделать аккаунт открытым</td></tr>
+    <tr><td>Нет прямой ссылки на вкладку</td><td>существуют только адреса профиля, видео и хештега</td><td>ссылаться на профиль</td></tr>
+  </tbody>
+</table></div>
+<p>О первых двух спрашивают чаще всего. Если нужно менять адрес назначения позже без перепечатки — это динамический код, а не этот.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Полезно знать</h2>
     <details><summary><span>Ссылка на профиль или на конкретное видео?</span></summary><p>Ссылка на профиль — для подписок в целом. Ссылка на видео запускает одно видео — удобно для кампаний, вкладышей в упаковку и постеров к запуску.</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>Откроется ли это в приложении TikTok?</span></summary><p>На большинстве телефонов — да: нажатие на отсканированную ссылку предложит приложение, если оно установлено, иначе откроется браузер.</p></details>
     <details><summary><span>Можно ли добавить логотип или фирменные цвета?</span></summary><p>Да — загрузите логотип и задайте фирменные цвета. Держите контраст высоким, чтобы код сканировался при любом свете.</p></details>
     <details><summary><span>Он истечёт, если я изменю имя пользователя?</span></summary><p>Код кодирует точный URL, так что если handle изменится, сделайте новый код. Сам код никогда не истекает.</p></details>

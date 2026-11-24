@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Link do perfil para seguidores em geral. Um link de vídeo reproduz um vídeo — útil para campanhas, encartes de embalagem e pôsteres de lançamento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">Códigos estáticos são gerados por completo no seu navegador.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Qual link do TikTok usar</h2>
+<p>O TikTok oferece três tipos de URL, e impressos eles se comportam de forma diferente.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Tipo de link</th><th>Parece com</th><th>A leitura abre</th><th>Sobrevive se o vídeo for apagado?</th></tr></thead>
+  <tbody>
+    <tr><td>Perfil</td><td><code>tiktok.com/@yourhandle</code></td><td>seu perfil, botão de seguir no topo</td><td>sim</td></tr>
+    <tr><td>Vídeo único</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>esse vídeo, reproduzindo</td><td>não</td></tr>
+    <tr><td>Hashtag</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>todos os vídeos da tag</td><td>sim, mas mostra publicações de outras pessoas</td></tr>
+  </tbody>
+</table></div>
+<p>Para cartão de visita, vitrine ou encarte na embalagem, use o link do perfil. Ele continua valendo conforme você publica, e o botão de seguir fica a um toque da tela de chegada.</p>
+<p>Use um link de vídeo quando o código tiver uma única missão: um cartaz de lançamento, ou um adesivo no produto apontando para o anúncio. O link fixa um ID de vídeo. Apague o vídeo e o código morre.</p>
+<p>Links de hashtag funcionam, mas mostram as publicações de todo mundo naquela tag, não só as suas. Bom para uma página de campanha, ruim para um cartão de visita.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>O que acontece quando alguém escaneia</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Leitor</th><th>TikTok instalado</th><th>TikTok não instalado</th></tr></thead>
+  <tbody>
+    <tr><td>Câmera do iPhone</td><td>o link abre, aviso para trocar para o app</td><td>carrega o perfil web móvel</td></tr>
+    <tr><td>Câmera do Android</td><td>igual, a passagem costuma ser automática</td><td>carrega o perfil web móvel</td></tr>
+    <tr><td>Leitor do próprio TikTok</td><td>abre no app</td><td>pede para instalar</td></tr>
+  </tbody>
+</table></div>
+<p>A passagem para o app é um aviso, não uma garantia. Alguns celulares mostram um banner em tela cheia "Abrir no TikTok?", outros uma barra fina no topo, e alguns abrem o site móvel sem aviso nenhum. A maioria das pessoas toca, mas algumas não — conte com uma parte das leituras caindo na versão web.</p>
+<p>Duas consequências para planejar. Uma leitura não é um seguidor: a pessoa ainda precisa tocar em Seguir depois de chegar, então o código leva até a porta, não através dela. E a versão web móvel carrega mais devagar que o app, o que pesa se o código estiver numa embalagem onde a atenção já é escassa.</p>
+<p>Uma conta privada mostra a quem escaneia a casca do perfil e um botão de solicitação. Nenhum QR code contorna esse ajuste.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>O QR code do próprio TikTok, e quando usá-lo</h2>
+<p>O app já traz um: abra seu perfil, toque no ícone de compartilhar, escolha código QR. É grátis e funciona — dentro do TikTok.</p>
+<p>O problema é quem consegue ler. Esse código foi feito para o leitor do TikTok. Escaneie com a câmera de um iPhone ou a câmera padrão do Android e muitas vezes não acontece nada, ou pedem para instalar o TikTok antes. Numa tela de celular, com o app já aberto, tudo bem. Num adesivo impresso, numa vitrine ou num cardápio, quem escaneia é um estranho com a câmera padrão.</p>
+<p>O código que você cria aqui é um QR padrão. Qualquer câmera lê, e o link dentro se comporta como uma URL digitada. É toda a diferença, e o motivo de valer a pena gerar um código impresso separado do que fica no app.</p>
+<p>Um ponto de atenção: seu nome de usuário faz parte da URL. Renomeie a conta e os dois códigos quebram. Gere um novo depois da troca e substitua tudo que já foi impresso.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Onde colocar</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Local</th><th>Tamanho do código</th><th>Por quê</th></tr></thead>
+  <tbody>
+    <tr><td>Encarte de envio, adesivo na caixa</td><td>2 cm</td><td>lido a um braço de distância, muitas vezes em superfície curva</td></tr>
+    <tr><td>Etiqueta de produto</td><td>1,5–2 cm</td><td>menor, borra com a textura do tecido</td></tr>
+    <tr><td>Display de balcão</td><td>4–5 cm</td><td>lido a cerca de 30 cm</td></tr>
+    <tr><td>Vitrine</td><td>15 cm</td><td>lido a 1–2 m, muitas vezes através do vidro</td></tr>
+    <tr><td>Cartaz de evento</td><td>20–30 cm</td><td>lido a 2–3 m enquanto caminha</td></tr>
+    <tr><td>Cartão de visita</td><td>1,5 cm</td><td>o mínimo prático em papel fosco</td></tr>
+  </tbody>
+</table></div>
+<p>Preserve a zona de silêncio. A margem branca ao redor do padrão é o que permite às câmeras encontrar o código, e cortá-la para caber no design é o motivo mais comum de um código impresso falhar.</p>
+<p>Teste a prova com um celular antes da tiragem. Um código que lê na tela pode falhar numa garrafa curva ou num rótulo brilhante, e você só descobre quando as caixas chegam.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>O que este código não faz</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Limite</th><th>Por quê</th><th>Alternativa</th></tr></thead>
+  <tbody>
+    <tr><td>Sem contagem de leituras</td><td>código estático, nada é enviado</td><td>estatísticas do perfil do TikTok (grátis)</td></tr>
+    <tr><td>Sem redirecionamento após imprimir</td><td>a URL está gravada no padrão</td><td>gerar um código novo, reimprimir</td></tr>
+    <tr><td>Não contorna conta privada</td><td>o TikTok aplica o ajuste</td><td>tornar a conta pública</td></tr>
+    <tr><td>Sem link direto para uma aba</td><td>só existem URLs de perfil, vídeo e hashtag</td><td>linkar o perfil</td></tr>
+  </tbody>
+</table></div>
+<p>As duas primeiras linhas são as que mais perguntam. Se precisar mudar o destino depois sem reimprimir, isso é um código dinâmico, não este.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Bom saber</h2>
     <details><summary><span>Link do perfil ou um vídeo específico?</span></summary><p>Link do perfil para seguidores em geral. Um link de vídeo reproduz um vídeo — útil para campanhas, encartes de embalagem e pôsteres de lançamento.</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>Ele abre no app do TikTok?</span></summary><p>Na maioria dos celulares, sim — tocar no link escaneado oferece o app, se instalado; caso contrário, abre no navegador.</p></details>
     <details><summary><span>Posso adicionar meu logo ou as cores da minha marca?</span></summary><p>Sim — envie seu logo e defina as cores da sua marca. Mantenha o contraste alto para escanear sob qualquer luz.</p></details>
     <details><summary><span>Expira se eu mudar meu nome de usuário?</span></summary><p>O código codifica a URL exata, então se seu @ mudar, crie um código novo. O código em si nunca expira.</p></details>

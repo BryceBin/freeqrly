@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -77,10 +77,10 @@
     },
     {
       "@type": "Question",
-      "name": "هل سيظل رمز QR يعمل إذا حدّثت ملف PDF؟",
+      "name": "Does the scanner download the PDF or preview it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "نعم، إذا استبدلت الملف على الرابط نفسه (ملف Drive نفسه، الرابط نفسه). الرمز يشفّر الرابط، لا الملف نفسه."
+        "text": "It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table."
       }
     },
     {
@@ -309,10 +309,61 @@
     <p class="privnote-foot" data-i18n="privnote">الرموز الثابتة تُنشأ بالكامل في متصفحك.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>أين تضع ملف PDF</h2>
+<p>رمز QR يحمل رابطًا، لا ملفًا. الرمز الذي تطبعه يشير إلى المكان الذي يوجد فيه ملف PDF أصلًا، لذا أول قرار هو: أين تستضيفه. ثلاثة خيارات تغطي معظم الحالات.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>أين يوجد الملف</th><th>كيف يبدو الرابط</th><th>المساحة المجانية</th><th>يتعطل إذا…</th></tr></thead>
+  <tbody>
+    <tr><td>Google Drive</td><td><code>drive.google.com/file/d/…/view</code></td><td>15 GB</td><td>نقلت الملف أو حذفته أو غيّرت من يمكنه رؤيته</td></tr>
+    <tr><td>Dropbox</td><td><code>dropbox.com/s/…/menu.pdf</code></td><td>2 GB</td><td>حذفت الملف أو غيّرت اسمه</td></tr>
+    <tr><td>موقعك الخاص</td><td><code>yoursite.com/menu.pdf</code></td><td>حسب الاستضافة</td><td>أزلت الملف</td></tr>
+  </tbody>
+</table></div>
+<p>أيًّا كان اختيارك، اضبط المشاركة على «أي شخص لديه الرابط». ملف PDF تشاركه مع أشخاص محددين يطلب من كل من يمسحه تسجيل الدخول، ومعظمهم لن يفعل ذلك.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>لماذا يظهر تحذير أحيانًا على رابط Drive</h2>
+<p>أمران يربكان الناس، ولا علاقة لأي منهما بالرمز نفسه.</p>
+<p>الأول حجم الملف. يفحص Google تنزيلات Drive بحثًا عن الفيروسات، ويتخطى الفحص فوق 100 ميغابايت. بدل التنزيل تظهر صفحة تقول إن Google لم يتمكن من فحص الملف، مع زر للمتابعة على أي حال. الملف يفتح، لكن على طاولة مطعم يبدو مريبًا. أبقِ القوائم والكتيبات تحت 100 ميغابايت ولن يظهر التحذير أبدًا.</p>
+<p>الثاني الأذونات. إذا كان الملف ما زال خاصًا، يصل من يمسحه إلى صفحة تسجيل دخول Google. افتح إعدادات المشاركة وغيّرها إلى «أي شخص لديه الرابط يمكنه العرض».</p>
+<p>إذا لم يكن أي من الحلين عمليًا — ملف أعمال بحجم 300 ميغابايت، أو عميل يصرّ على مجلد خاص — فاستضف الملف على نطاقك الخاص. أنت تتحكم في الأذونات، ولا توجد صفحة وسيطة.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>بأي حجم تطبعه</h2>
+<p>رمز يُقرأ على شاشتك قد يفشل على جدار. القاعدة العملية: يجب أن يساوي ضلع الرمز المطبوع نحو عُشر المسافة التي تتوقع المسح منها. على مسافة 3 أمتار، اطبع رمزًا بطول 30 سم.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>أين يوضع</th><th>مسافة المسح المعتادة</th><th>أصغر حجم فعّال</th><th>حجم مريح</th></tr></thead>
+  <tbody>
+    <tr><td>بطاقة عند الكاشير، حامل طاولة</td><td>30 cm</td><td>3 cm</td><td>4–5 cm</td></tr>
+    <tr><td>ملصق A4 في واجهة متجر</td><td>1–2 m</td><td>10 cm</td><td>15 cm</td></tr>
+    <tr><td>لوحة على الباب، جناح في معرض</td><td>3 m</td><td>30 cm</td><td>40 cm</td></tr>
+    <tr><td>عبوة المنتج</td><td>15–25 cm</td><td>2 cm</td><td>3 cm</td></tr>
+  </tbody>
+</table></div>
+<p>اترك هامشًا. الإطار الأبيض حول النمط — المنطقة الهادئة — جزء من طريقة العثور على الرمز. قصّه لتوفير المساحة هو السبب الأكثر شيوعًا لتوقف رمز مطبوع عن العمل.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>عند تحديث ملف PDF</h2>
+<p>الرمز يشير إلى رابط. القدرة على تغيير الملف دون إعادة طباعة تعتمد كليًا على بقاء الرابط كما هو.</p>
+<p>إذا استبدلت الملف في مكانه، يبقى الرابط. في Drive، افتح الملف الموجود وارفع نسخة جديدة بدل إنشاء ملف آخر؛ وفي Dropbox، استبدل الملف في المسار نفسه. العنوان لا يتغيّر، لذا تظل كل الرموز المطبوعة تعمل.</p>
+<p>إذا رفعت ملفًا جديدًا، ستحصل على رابط جديد. الرمز القديم يفتح الآن ملفًا محذوفًا أو خطأ 404. ستحتاج إلى إعادة الطباعة — وهو أمر يستحق المعرفة قبل طلب 500 حامل طاولة.</p>
+<p>حالة أخرى: إذا كان الملف على نطاقك وبقي اسم الملف كما هو، فإن استبدال الملف خلفه لا يراه من يمسح. هذا الإعداد الأكثر تسامحًا، وهو الذي نختاره لأي طباعة بكميات كبيرة.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>اختبره قبل الطباعة</h2>
+<p>امسح الرمز من الشاشة بهاتفين مختلفين — iPhone وأندرويد — قبل إرسال أي شيء إلى المطبعة. الشاشة والورق يفشلان بطرق مختلفة: الانعكاس، وانتشار الحبر، وغياب المنطقة الهادئة لا تظهر إلا في النسخة المطبوعة.</p>
+<p>ثم امسح المسودة المطبوعة من المسافة المتوقعة. إذا استغرق التثبيت أكثر من ثانية، فالرمز صغير جدًا على ذلك المكان، لا سيئ الصنع.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>من الجيد معرفته</h2>
     <details><summary><span>هل يمكنني رفع ملف PDF مباشرة هنا؟</span></summary><p>FreeQrly لا يستضيف الملفات — ملف PDF يعيش على Drive أو Dropbox أو موقعك، ورمز QR يفتح رابطه فقط. هذا يعني أيضًا أنك تستطيع استبدال الملف لاحقًا بدون إعادة طباعة، ما دام الرابط نفسه.</p></details>
-    <details><summary><span>هل سيظل رمز QR يعمل إذا حدّثت ملف PDF؟</span></summary><p>نعم، إذا استبدلت الملف على الرابط نفسه (ملف Drive نفسه، الرابط نفسه). الرمز يشفّر الرابط، لا الملف نفسه.</p></details>
+    <details><summary><span>Does the scanner download the PDF or preview it?</span></summary><p>It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table.</p></details>
     <details><summary><span>ماذا لو كان ملف PDF كبيرًا؟</span></summary><p>الحجم لا يهم للرمز — فهو يشفّر الرابط فقط. حافظ على حجم PDF معقولًا ليفتح بسرعة على الهواتف.</p></details>
     <details><summary><span>هل ينتهي؟</span></summary><p>لا. الرموز الثابتة لا تنتهي أبدًا ولا تحتاج حسابًا.</p></details>
   </section>

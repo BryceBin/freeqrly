@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -73,6 +73,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Enlace de perfil para seguidores en general. Un enlace de video reproduce un video: útil para campañas, insertos en empaques y carteles de lanzamiento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy my TikTok link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address."
       }
     },
     {
@@ -309,9 +317,80 @@
     <p class="privnote-foot" data-i18n="privnote">Los códigos estáticos se hacen por completo en tu navegador.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Qué enlace de TikTok usar</h2>
+<p>TikTok te da tres tipos de URL, y una vez impresos no se comportan igual.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Tipo de enlace</th><th>Se ve así</th><th>Un escaneo abre</th><th>¿Sobrevive si borras el vídeo?</th></tr></thead>
+  <tbody>
+    <tr><td>Perfil</td><td><code>tiktok.com/@yourhandle</code></td><td>tu perfil, botón de seguir arriba</td><td>sí</td></tr>
+    <tr><td>Vídeo único</td><td><code>tiktok.com/@yourhandle/video/7312…</code></td><td>ese vídeo, reproduciéndose</td><td>no</td></tr>
+    <tr><td>Hashtag</td><td><code>tiktok.com/tag/yourcampaign</code></td><td>todos los vídeos de la etiqueta</td><td>sí, pero muestra publicaciones ajenas</td></tr>
+  </tbody>
+</table></div>
+<p>Para una tarjeta de visita, un escaparate o un encarte en un paquete, usa el enlace del perfil. Sigue funcionando mientras publicas, y el botón de seguir está a un toque de la pantalla de llegada.</p>
+<p>Usa un enlace de vídeo cuando el código tenga una sola misión: un cartel de lanzamiento, o una pegatina en el producto que apunte al anuncio. El enlace fija un identificador de vídeo. Si borras ese vídeo, el código muere.</p>
+<p>Los enlaces de hashtag funcionan, pero muestran las publicaciones de todo el mundo con esa etiqueta, no solo las tuyas. Bien para una página de campaña, mal para una tarjeta de visita.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Qué pasa cuando alguien lo escanea</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Escáner</th><th>TikTok instalado</th><th>TikTok sin instalar</th></tr></thead>
+  <tbody>
+    <tr><td>Cámara del iPhone</td><td>el enlace se abre, aviso para cambiar a la app</td><td>carga el perfil web móvil</td></tr>
+    <tr><td>Cámara de Android</td><td>igual, el salto a la app suele ser automático</td><td>carga el perfil web móvil</td></tr>
+    <tr><td>Escáner propio de TikTok</td><td>se abre en la app</td><td>pide instalarla</td></tr>
+  </tbody>
+</table></div>
+<p>El salto a la app es un aviso, no una garantía. Algunos móviles muestran un cartel a pantalla completa «¿Abrir en TikTok?», otros una barra fina arriba, y unos pocos abren el sitio móvil sin ningún aviso. La mayoría de la gente pulsa, pero algunos no —cuenta con que una parte de los escaneos acabe en la versión web.</p>
+<p>Dos consecuencias que conviene prever. Un escaneo no es un seguimiento: la persona tiene que pulsar Seguir al llegar, así que el código la lleva a la puerta, no la atraviesa. Y la versión web móvil carga más despacio que la app, algo que importa si el código va en un envase donde la atención ya es escasa.</p>
+<p>Una cuenta privada muestra a quien escanea la carcasa del perfil y un botón de solicitud. Ningún código QR se salta ese ajuste.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>El QR propio de TikTok, y cuándo usarlo en su lugar</h2>
+<p>La app incluye uno: abre tu perfil, toca el icono de compartir, elige código QR. Es gratis y funciona —dentro de TikTok.</p>
+<p>La trampa está en quién puede leerlo. Ese código está pensado para el escáner de TikTok. Escanéalo con la cámara de un iPhone o con la cámara estándar de Android y a menudo no pasa nada, o te piden instalar TikTok primero. En una pantalla de móvil, donde la app ya está abierta, está bien. En una pegatina impresa, un escaparate o un menú, quien escanea es un desconocido con la cámara por defecto.</p>
+<p>El código que creas aquí es un QR estándar. Cualquier cámara lo lee, y el enlace de dentro se comporta igual que una URL escrita a mano. Esa es toda la diferencia, y la razón por la que merece la pena generar un código impreso aparte del de la app.</p>
+<p>Un detalle a vigilar: tu nombre de usuario forma parte de la URL. Si renombras la cuenta, los dos códigos se rompen. Genera uno nuevo tras el cambio y sustituye todo lo que ya esté impreso.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Dónde colocarlo</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Ubicación</th><th>Tamaño del código</th><th>Por qué</th></tr></thead>
+  <tbody>
+    <tr><td>Encarte de envío, pegatina en la caja</td><td>2 cm</td><td>se lee a un brazo de distancia, a menudo en superficie curva</td></tr>
+    <tr><td>Etiqueta colgante de merchandising</td><td>1,5–2 cm</td><td>más pequeño se emborrona con la textura del tejido</td></tr>
+    <tr><td>Cartel de mostrador</td><td>4–5 cm</td><td>se escanea a unos 30 cm</td></tr>
+    <tr><td>Escaparate</td><td>15 cm</td><td>se escanea a 1–2 m, a menudo a través del cristal</td></tr>
+    <tr><td>Cartel de evento</td><td>20–30 cm</td><td>se escanea a 2–3 m mientras se camina</td></tr>
+    <tr><td>Tarjeta de visita</td><td>1,5 cm</td><td>el mínimo práctico en papel mate</td></tr>
+  </tbody>
+</table></div>
+<p>Respeta la zona de silencio. El margen blanco alrededor del patrón es lo que permite a las cámaras encontrar el código, y recortarlo para que encaje en un diseño es la causa más común de que un código impreso falle.</p>
+<p>Prueba la copia de prueba con un móvil antes de la tirada. Un código que se lee en pantalla puede fallar en una botella curva o una etiqueta brillante, y lo descubres cuando llegan las cajas.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Lo que este código no puede hacer</h2>
+<div class="tblwrap"><table>
+  <thead><tr><th>Límite</th><th>Por qué</th><th>Solución</th></tr></thead>
+  <tbody>
+    <tr><td>Sin recuento de escaneos</td><td>código estático, no envía nada</td><td>estadísticas del perfil de TikTok (gratis)</td></tr>
+    <tr><td>Sin redirección tras imprimir</td><td>la URL está grabada en el patrón</td><td>crear un código nuevo, reimprimir</td></tr>
+    <tr><td>No salta cuentas privadas</td><td>TikTok aplica el ajuste</td><td>cambiar la cuenta a pública</td></tr>
+    <tr><td>Sin enlace directo a una pestaña</td><td>solo existen URL de perfil, vídeo y hashtag</td><td>enlazar el perfil</td></tr>
+  </tbody>
+</table></div>
+<p>Las dos primeras filas son las que más preguntan. Si necesitas cambiar el destino más adelante sin reimprimir, eso es un código dinámico, no este.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Bueno saberlo</h2>
     <details><summary><span>¿Enlace de perfil o un video concreto?</span></summary><p>Enlace de perfil para seguidores en general. Un enlace de video reproduce un video: útil para campañas, insertos en empaques y carteles de lanzamiento.</p></details>
+    <details><summary><span>How do I copy my TikTok link?</span></summary><p>Open the profile or video, tap Share, then Copy link. On desktop, copy the URL from the address bar. Both give the same permanent address.</p></details>
     <details><summary><span>¿Se abre en la app de TikTok?</span></summary><p>En la mayoría de los teléfonos, sí: al tocar el enlace escaneado se ofrece la app si está instalada; si no, se abre en el navegador.</p></details>
     <details><summary><span>¿Puedo añadir mi logo o los colores de mi marca?</span></summary><p>Sí: sube tu logo y pon los colores de tu marca. Mantén el contraste alto para que se escanee con cualquier luz.</p></details>
     <details><summary><span>¿Caduca si cambio mi nombre de usuario?</span></summary><p>El código codifica la URL exacta, así que si tu nombre cambia, genera un código nuevo. El código en sí nunca caduca.</p></details>

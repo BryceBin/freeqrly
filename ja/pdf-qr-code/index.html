@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -77,10 +77,10 @@
     },
     {
       "@type": "Question",
-      "name": "PDFを更新してもQRコードは使える？",
+      "name": "Does the scanner download the PDF or preview it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい。同じリンクでファイルを置き換えれば（同じDriveファイル、同じURL）、使えます。コードが記録するのはリンクであって、ファイルそのものではありません。"
+        "text": "It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table."
       }
     },
     {
@@ -309,10 +309,61 @@
     <p class="privnote-foot" data-i18n="privnote">静的コードはすべてブラウザ内でローカルに生成されます。</p>
   </main>
 
+  <section class="lpsec">
+    <h2>PDF の置き場所</h2>
+<p>QRコードに入るのはリンクであって、ファイルそのものではありません。印刷したコードは、PDFがすでにある場所を指します。ですから最初に決めるのは「どこに置くか」です。ほぼすべてのケースは3つの方法で足ります。</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>置き場所</th><th>リンクの形</th><th>無料容量</th><th>以下をすると切れます</th></tr></thead>
+  <tbody>
+    <tr><td>Google Drive</td><td><code>drive.google.com/file/d/…/view</code></td><td>15 GB</td><td>ファイルを移動する、削除する、見られる人を変える</td></tr>
+    <tr><td>Dropbox</td><td><code>dropbox.com/s/…/menu.pdf</code></td><td>2 GB</td><td>ファイルを削除する、名前を変える</td></tr>
+    <tr><td>自分のサイト</td><td><code>yoursite.com/menu.pdf</code></td><td>サーバー次第</td><td>ファイルを消す</td></tr>
+  </tbody>
+</table></div>
+<p>どれを選んでも、共有設定は「リンクを知っている全員」にしてください。特定の相手だけに共有したPDFは、スキャンするたびにログインを求めます。ほとんどの人はそこで離脱します。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Driveのリンクで警告が出ることがある理由</h2>
+<p>つまずきやすい点が2つあります。どちらもコード側の問題ではありません。</p>
+<p>1つはファイルサイズです。GoogleはDriveのダウンロードをウイルス検査しますが、100MBを超えると検査を飛ばします。するとダウンロードではなく、「ファイルを検査できませんでした」というページと、そのまま続けるボタンが表示されます。PDFは開きますが、飲食店のテーブルに置くには不安な見た目です。メニューやパンフレットは100MB未満に収めておけば、この警告は出ません。</p>
+<p>もう1つは権限です。ファイルが非公開のままだと、スキャンした人はGoogleのログイン画面に着きます。ファイルの共有設定を開き、「リンクを知っている全員が閲覧可」に変えてください。</p>
+<p>どちらも難しい場合——300MBのポートフォリオや、非公開フォルダにこだわるクライアント——は、自分のドメインにPDFを置いてください。権限は自分で管理でき、間に挟まるページもありません。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>どのくらいの大きさで印刷するか</h2>
+<p>モニターで読めるコードが、壁に貼ると読めないことがあります。実用的な目安は、印刷したコードの一辺を、想定する読み取り距離のおよそ10分の1にすることです。3メートルから読ませるなら30センチのコードを刷ります。</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>貼る場所</th><th>よくある読み取り距離</th><th>最小サイズ</th><th>余裕のあるサイズ</th></tr></thead>
+  <tbody>
+    <tr><td>レジ横のカード、テーブルテント</td><td>30 cm</td><td>3 cm</td><td>4–5 cm</td></tr>
+    <tr><td>ショーウィンドウのA4ポスター</td><td>1–2 m</td><td>10 cm</td><td>15 cm</td></tr>
+    <tr><td>ドアの表示、展示会のパネル</td><td>3 m</td><td>30 cm</td><td>40 cm</td></tr>
+    <tr><td>商品パッケージ</td><td>15–25 cm</td><td>2 cm</td><td>3 cm</td></tr>
+  </tbody>
+</table></div>
+<p>余白は残してください。模様の周りの白い枠——クワイエットゾーン——は、カメラがコードを見つけるための一部です。場所を節約してここを切り落とすのが、印刷したコードが読めなくなる最大の原因です。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>PDFを差し替えるとき</h2>
+<p>コードが指すのはリンクです。刷り直さずにPDFを差し替えられるかどうかは、リンクが変わらないかどうかで決まります。</p>
+<p>同じ場所でファイルを差し替えれば、リンクは残ります。Driveなら新しいファイルを作らず、既存のファイルを開いて新しいバージョンをアップロードします。Dropboxなら同じパスのファイルを上書きします。URLは動かないので、印刷済みのコードはすべてそのまま使えます。</p>
+<p>新しいファイルをアップロードすると、新しいリンクになります。古いコードは削除済みのファイルか404を開きます。刷り直しが必要です——テーブルテントを500部発注する前に知っておきたい点です。</p>
+<p>もう1つ。PDFが自分のドメインにあり、ファイル名を変えなければ、中身を差し替えてもスキャンする人には分かりません。これがいちばん寛容な構成で、大量に印刷するものにはこれを選びます。</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>印刷する前に試す</h2>
+<p>印刷所に出す前に、画面のコードを2台のスマホ——iPhoneとAndroid——で読み取ってください。画面と紙は失敗の仕方が違います。反射、インクのにじみ、クワイエットゾーンの欠けは、印刷したものにしか現れません。</p>
+<p>次に、想定した距離から校正刷りを読み取ります。1秒以上かかって認識するなら、その場所にはコードが小さすぎるのであって、作りが悪いわけではありません。</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>知っておきたいこと</h2>
     <details><summary><span>ここにPDFを直接アップロードできる？</span></summary><p>FreeQrlyはファイルをホストしません — PDFはDrive、Dropbox、またはあなたのサイトに置いたまま、QRコードはそのリンクを開くだけです。リンクが同じなら、後からファイルを差し替えても再印刷は不要です。</p></details>
-    <details><summary><span>PDFを更新してもQRコードは使える？</span></summary><p>はい。同じリンクでファイルを置き換えれば（同じDriveファイル、同じURL）、使えます。コードが記録するのはリンクであって、ファイルそのものではありません。</p></details>
+    <details><summary><span>Does the scanner download the PDF or preview it?</span></summary><p>It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table.</p></details>
     <details><summary><span>PDFが大きい場合は？</span></summary><p>コードにとってサイズは関係ありません — 記録するのはリンクだけです。スマホで速く開けるよう、PDF自体は適度なサイズにしておいてください。</p></details>
     <details><summary><span>期限はある？</span></summary><p>いいえ。静的コードに期限はなく、アカウントも不要です。</p></details>
   </section>

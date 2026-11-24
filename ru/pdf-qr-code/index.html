@@ -46,15 +46,15 @@
 .steps .sn{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .steps b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 @media(max-width:960px){.lp-hero{grid-template-columns:1fr}}
-.compare{max-width:860px;margin:0 auto 72px;padding:0 8px}
-.compare h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
-.compare p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
-.compare table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
-.compare th,.compare td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-.compare th{background:var(--card);color:var(--ink);font-weight:700}
-.compare td:first-child{white-space:nowrap}
+.compare,.lpsec{max-width:860px;margin:0 auto 72px;padding:0 8px}
+.compare h2,.lpsec h2{font-size:28px;line-height:1.25;margin:40px 0 12px}
+.compare p,.lpsec p{font-size:15.5px;line-height:1.7;color:var(--soft);margin:0 0 14px}
+.compare table,.lpsec table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14.5px;line-height:1.55}
+.compare th,.compare td,.lpsec th,.lpsec td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.compare th,.lpsec th{background:var(--card);color:var(--ink);font-weight:700}
+.compare td:first-child,.lpsec td:first-child{white-space:nowrap}
 .compare .csrc,.compare .updated{font-size:13.5px;color:var(--soft)}
-@media(max-width:640px){.compare td:first-child{white-space:normal}.compare table{font-size:13.5px}}
+@media(max-width:640px){.compare td:first-child,.lpsec td:first-child{white-space:normal}.compare table,.lpsec table{font-size:13.5px}.lpsec .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 20px}.lpsec .tblwrap table{margin:0}}
 .lp-hero .glance{font-size:15px;line-height:1.7;color:var(--soft);margin:16px 0 0}
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
@@ -77,10 +77,10 @@
     },
     {
       "@type": "Question",
-      "name": "Будет ли QR-код работать, если я обновлю PDF?",
+      "name": "Does the scanner download the PDF or preview it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Да, если заменить файл по той же ссылке (тот же файл на Drive, тот же URL). Код шифрует ссылку, а не сам файл."
+        "text": "It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table."
       }
     },
     {
@@ -309,10 +309,61 @@
     <p class="privnote-foot" data-i18n="privnote">Статические коды генерируются полностью в вашем браузере.</p>
   </main>
 
+  <section class="lpsec">
+    <h2>Где хранить PDF</h2>
+<p>QR-код содержит ссылку, а не файл. Код, который вы печатаете, ведёт туда, где PDF уже лежит, поэтому первое решение — где его разместить. Три варианта покрывают почти все случаи.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Где лежит файл</th><th>Как выглядит ссылка</th><th>Бесплатный объём</th><th>Перестанет работать, если…</th></tr></thead>
+  <tbody>
+    <tr><td>Google Drive</td><td><code>drive.google.com/file/d/…/view</code></td><td>15 GB</td><td>переместить файл, удалить его или изменить, кто может его видеть</td></tr>
+    <tr><td>Dropbox</td><td><code>dropbox.com/s/…/menu.pdf</code></td><td>2 GB</td><td>удалить или переименовать файл</td></tr>
+    <tr><td>Ваш собственный сайт</td><td><code>yoursite.com/menu.pdf</code></td><td>зависит от хостинга</td><td>удалить файл</td></tr>
+  </tbody>
+</table></div>
+<p>Какой бы вариант вы ни выбрали, поставьте доступ «все, у кого есть ссылка». PDF, открытый только для конкретных людей, требует входа при каждом сканировании, и большинство этого делать не станет.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Почему ссылка на Drive иногда показывает предупреждение</h2>
+<p>Две вещи сбивают с толку, и ни одна не связана с самим кодом.</p>
+<p>Первая — размер файла. Google проверяет загрузки с Drive на вирусы и пропускает проверку для файлов больше 100 МБ. Вместо загрузки вы видите страницу с сообщением, что Google не смог проверить файл, и кнопкой «Всё равно продолжить». PDF открывается, но на столике в кафе это выглядит подозрительно. Держите меню и брошюры в пределах 100 МБ, и предупреждение не появится.</p>
+<p>Вторая — права доступа. Если файл всё ещё закрыт, сканирующий попадает на страницу входа Google. Откройте настройки доступа к файлу и переключите на «Все, у кого есть ссылка, могут просматривать».</p>
+<p>Если ни то, ни другое не подходит — портфолио на 300 МБ или клиент, который настаивает на закрытой папке, — разместите PDF на своём домене. Права контролируете вы, и промежуточной страницы нет.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Какого размера печатать</h2>
+<p>Код, который читается с монитора, может не прочитаться на стене. Практическое правило: сторона напечатанного кода должна быть примерно в десять раз меньше расстояния, с которого его будут сканировать. С трёх метров печатайте код 30 см.</p>
+<div class="tblwrap"><table>
+  <thead><tr><th>Куда его</th><th>Обычное расстояние сканирования</th><th>Минимальный рабочий размер</th><th>Комфортный размер</th></tr></thead>
+  <tbody>
+    <tr><td>Карточка на кассе, тейбл-тент</td><td>30 cm</td><td>3 cm</td><td>4–5 cm</td></tr>
+    <tr><td>Плакат A4 в витрине</td><td>1–2 m</td><td>10 cm</td><td>15 cm</td></tr>
+    <tr><td>Табличка на двери, стенд на выставке</td><td>3 m</td><td>30 cm</td><td>40 cm</td></tr>
+    <tr><td>Упаковка товара</td><td>15–25 cm</td><td>2 cm</td><td>3 cm</td></tr>
+  </tbody>
+</table></div>
+<p>Оставьте поле. Белая кайма вокруг узора — тихая зона — часть того, по чему сканер находит код. Обрезать её ради экономии места — самая частая причина, по которой напечатанный код перестаёт читаться.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Когда вы обновляете PDF</h2>
+<p>Код ведёт на ссылку. Возможность заменить PDF без перепечатки целиком зависит от того, останется ли ссылка прежней.</p>
+<p>Если заменить файл на том же месте, ссылка сохранится. В Drive откройте существующий файл и загрузите новую версию, а не создавайте новый; в Dropbox перезапишите файл по тому же пути. Адрес не меняется, поэтому все напечатанные коды продолжают работать.</p>
+<p>Если загрузить новый файл, получите новую ссылку. Старый код теперь открывает удалённый файл или 404. Придётся печатать заново — полезно знать это до заказа 500 тейбл-тентов.</p>
+<p>Ещё один случай: если PDF лежит на вашем домене и имя файла не меняется, замена файла внутри незаметна для сканирующих. Это самый терпимый вариант и тот, который мы выбрали бы для любого крупного тиража.</p>
+  </section>
+
+  <section class="lpsec">
+    <h2>Проверьте до печати</h2>
+<p>Отсканируйте код с экрана двумя разными телефонами — iPhone и Android — прежде чем отправлять что-либо в печать. Экран и бумага отказывают по-разному: блики, расплывшиеся чернила и срезанная тихая зона видны только на печати.</p>
+<p>Затем отсканируйте пробный оттиск с того расстояния, с которого будут сканировать. Если наведение занимает больше секунды, код слишком мал для этого места, а не плохо сделан.</p>
+  </section>
+
   <section class="faq" id="faq">
     <h2>Полезно знать</h2>
     <details><summary><span>Можно ли загрузить PDF прямо сюда?</span></summary><p>FreeQrly не хранит файлы — ваш PDF живёт на Drive, в Dropbox или на вашем сайте, а QR-код просто открывает его ссылку. Это значит, что файл можно заменить позже без перепечатки, пока ссылка остаётся той же.</p></details>
-    <details><summary><span>Будет ли QR-код работать, если я обновлю PDF?</span></summary><p>Да, если заменить файл по той же ссылке (тот же файл на Drive, тот же URL). Код шифрует ссылку, а не сам файл.</p></details>
+    <details><summary><span>Does the scanner download the PDF or preview it?</span></summary><p>It depends on the file and the phone. iOS and Android both preview most PDFs in the browser before saving; a large file may download instead. Keep the PDF under a few megabytes if you want it to open quickly at the table.</p></details>
     <details><summary><span>Что, если PDF большой?</span></summary><p>Для кода размер не имеет значения — он шифрует только ссылку. Держите сам PDF разумного размера, чтобы он быстро открывался на телефонах.</p></details>
     <details><summary><span>Истекает ли срок?</span></summary><p>Нет. Статические коды никогда не истекают и не требуют аккаунта.</p></details>
   </section>
