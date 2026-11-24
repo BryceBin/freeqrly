@@ -26,6 +26,12 @@ TODAY = date.today().strftime("%Y%m%d")
 
 # --dry-run：只报告会改什么，不写任何文件（包括前两步的生成结果）。
 DRY_RUN = "--dry-run" in sys.argv
+# --no-push：构建但不通知搜索引擎。
+NO_PUSH = "--no-push" in sys.argv
+
+# 构建前记录每个 HTML 的内容哈希，末尾对比，只推真正变了的页面。
+from push_indexnow import snapshot, push_changed
+BEFORE = {} if DRY_RUN else snapshot(SITE)
 
 def run(cmd):
     r = subprocess.run(cmd, cwd=SITE, capture_output=True, text=True)
@@ -75,5 +81,16 @@ if DRY_RUN:
     print("  （--dry-run：未写入任何文件）")
 elif changed == 0:
     print("  所有版本号已是最新，无需改动")
+
+# 4. 通知搜索引擎：只推内容真的变了的页面
+if not DRY_RUN and not NO_PUSH:
+    print("→ 通知搜索引擎...")
+    try:
+        push_changed(SITE, BEFORE)
+    except Exception as e:
+        # 推送失败不影响构建结果
+        print(f"  ⚠️  推送出错（不影响构建）：{e}")
+elif DRY_RUN:
+    print("\n（--dry-run：跳过搜索引擎推送）")
 
 print("\n完成。检查 git status，确认无误后 commit + push 即可上线。")
