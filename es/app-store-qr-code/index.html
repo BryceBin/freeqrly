@@ -343,8 +343,8 @@
 
   <section class="lpsec">
     <h2>Crear una página enrutadora que funcione</h2>
-<p>Si eliges un solo código, necesita un destino. Una página enrutadora es una página pequeña en tu dominio que lee el user agent y redirige.</p>
-<p>La lógica es corta: si el navegador indica iPhone o iPad, al App Store; si indica Android, a Play; en cualquier otro caso, muestra los dos botones. Deja un respaldo para escritorio, porque una parte importante de los escaneos viene de gente probando en un portátil.</p>
+<p>Si eliges un solo código, necesita un destino. Una página enrutadora es una página pequeña en tu dominio que detecta el user agent y redirige.</p>
+<p>La lógica es corta: si el navegador indica iPhone o iPad, al App Store; si indica Android, a Play; en cualquier otro caso, muestra los dos botones. Deja una alternativa para escritorio, porque una parte importante de los escaneos viene de gente probando en un portátil.</p>
 <p>Dos cosas rompen estas páginas en la práctica. Los navegadores internos de Apple y algunas apps sociales reducen el user agent a algo genérico, y la detección se equivoca. Y una redirección que se dispara antes de que la página se dibuje parece un enlace roto. Mostrar los dos botones destacando el detectado es más tolerante que redirigir al instante.</p>
 <p>Si quieres poder editar el destino más adelante, usa un código dinámico que apunte a la página enrutadora. Cambias la página y todos los códigos impresos la siguen, sin reimprimir.</p>
   </section>

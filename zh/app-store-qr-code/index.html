@@ -319,8 +319,8 @@
 
   <section class="lpsec">
     <h2>一个静态码只装一个链接</h2>
-<p>这一点大多数 App Store 二维码页面都跳过，所以我们直说：二维码存的是文本，而这段文本是一个 URL。一个码，一个目的地。图案里没有逻辑，没法看手机型号再挑商店。</p>
-<p>这很关键，因为你的 iOS 和安卓上架页是两个不同的 URL。一个静态码只能指向其中一个。编码 App Store 链接，安卓用户就会落到一个他们装不了的页面；反过来一样糟。</p>
+<p>这一点大多数应用商店的二维码页面都跳过，所以我们直说：二维码存的是文本，而这段文本是一个 URL。一个码，一个目的地。图案里没有逻辑，没法看手机型号再挑商店。</p>
+<p>你的 iOS 和安卓上架页是两个不同的 URL。一个静态码只能指向其中一个。把 App Store 链接写进码里，安卓用户就会落到一个他们装不了的页面；反过来一样糟。</p>
 <p>覆盖双平台有三种做法，下表做个对比。</p>
 <div class="tblwrap"><table>
   <thead><tr><th>方案</th><th>原理</th><th>要印几个码</th><th>链接变了还能用吗</th><th>需要准备</th></tr></thead>
@@ -330,13 +330,13 @@
     <tr><td>商店的 Smart Banner</td><td>在你自己的网站上放 Apple 和 Google 的横幅</td><td>1 个（指向你的网站）</td><td>有效</td><td>一个网站</td></tr>
   </tbody>
 </table></div>
-<p>两个码是最诚实、零成本的做法。路由页是大多数 App 有了营销站之后的常见方案。Smart Banner 只对先落到你网站的人才有效，那是另一回事，跟印出来的码不是一回事。</p>
+<p>两个码是最诚实、也最省事的做法。路由页是大多数 App 有了营销站之后的常见方案。Smart Banner 只对先落到你网站的人才有效，那和印出来的码是两件事。</p>
   </section>
 
   <section class="lpsec">
     <h2>怎么拿到商店链接</h2>
 <p>两个商店都会给你一个干净、永久的 URL，知道去哪找就很容易。</p>
-<p>iOS：在 App Store Connect 打开你的 App，进“App 信息”，复制 App Store URL。它长这样 <code>apps.apple.com/app/id1234567890</code>。你可以加国家代码——<code>apps.apple.com/gb/app/id…</code>——让码打开指定区服；但默认版本会按访客所在地区跳转，通常这才是你要的。</p>
+<p>iOS：在 App Store Connect 打开你的 App，进“App 信息”，复制 App Store URL。它长这样 <code>apps.apple.com/app/id1234567890</code>。你可以加国家代码——<code>apps.apple.com/gb/app/id…</code>——让码打开指定地区的商店；但默认版本会按访客所在地区跳转，通常这才是你要的。</p>
 <p>安卓：在 Play Console 打开商品页，从地址栏复制链接。它长这样 <code>play.google.com/store/apps/details?id=com.yourcompany.yourapp</code>。<code>id</code> 是你的包名，即使 App 改名也不会变。</p>
 <p>ID 之后的东西都删掉。营销工具常会加跟踪参数，比如 <code>?mt=8</code> 或 <code>&amp;referrer=…</code>。它们没有害处，但会让二维码图案变密，一点好处都没有——而图案越密，小尺寸越难印清楚。</p>
   </section>
@@ -345,7 +345,7 @@
     <h2>做一个能用的路由页</h2>
 <p>选一个码的话，它得有个去处。路由页是你自己域名下的一张小页面，读 User-Agent 然后跳转。</p>
 <p>逻辑很短：浏览器报 iPhone 或 iPad，去 App Store；报 Android，去 Play；其余情况两个按钮都显示。给桌面端留个兜底，因为相当一部分扫码来自在电脑上测试的人。</p>
-<p>实际使用中有两种东西会让这类页面失灵。Apple 的应用内浏览器和部分社交 App 会把 User-Agent 削成通用值，识别就猜错了。另外，在页面渲染完成前就触发的跳转，看起来像坏链接。两个按钮都显示、把识别到的那个高亮，比直接跳转更宽容。</p>
+<p>实际使用中有两种东西会让这类页面失灵。Apple 的应用内浏览器和部分社交 App 会把 User-Agent 削成通用值，识别就猜错了。另外，在页面渲染完成前就触发的跳转，看起来像坏链接。两个按钮都显示、把识别到的那个高亮，比直接跳转更友好。</p>
 <p>如果想让目标以后可改，就用动态码指向路由页。改页面，所有印出去的码跟着变，不用重印。</p>
   </section>
 

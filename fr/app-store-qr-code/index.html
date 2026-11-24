@@ -327,10 +327,10 @@
   <tbody>
     <tr><td>Deux codes côte à côte</td><td>un App Store, un Play</td><td>2</td><td>non, réimpression</td><td>aucune</td></tr>
     <tr><td>Un code vers une page routeur</td><td>la page lit l'appareil et redirige vers la bonne boutique</td><td>1</td><td>oui, si la page est dynamique</td><td>une page que vous contrôlez</td></tr>
-    <tr><td>Bannière intelligente des stores</td><td>bannières Apple et Google sur votre site</td><td>1 (vers votre site)</td><td>oui</td><td>un site web</td></tr>
+    <tr><td>Bannière intelligente des boutiques</td><td>bannières Apple et Google sur votre site</td><td>1 (vers votre site)</td><td>oui</td><td>un site web</td></tr>
   </tbody>
 </table></div>
-<p>Deux codes, c'est l'option honnête et sans effort. La page routeur est ce que font la plupart des applications une fois qu'elles ont un site marketing. Les bannières intelligentes ne fonctionnent que si les gens passent d'abord par votre site, ce qui est un autre travail qu'un code imprimé.</p>
+<p>Deux codes, c'est l'option honnête et sans effort. La page routeur est ce que font la plupart des applications une fois qu'elles ont un site marketing. Les bannières intelligentes ne fonctionnent que si les gens passent d'abord par votre site, une autre tâche que celle d'un code imprimé.</p>
   </section>
 
   <section class="lpsec">
@@ -343,8 +343,8 @@
 
   <section class="lpsec">
     <h2>Construire une page routeur qui fonctionne</h2>
-<p>Si vous choisissez un seul code, il lui faut une destination. Une page routeur est une petite page sur votre domaine qui lit l'agent utilisateur et redirige.</p>
-<p>La logique est courte : si le navigateur signale un iPhone ou un iPad, direction l'App Store ; s'il signale Android, Play ; sinon, affichez les deux boutons. Prévoyez un repli pour le bureau, car une part significative des scans vient de gens qui testent sur un ordinateur portable.</p>
+<p>Si vous choisissez un seul code, il lui faut une destination. Une page routeur est une petite page sur votre domaine qui détecte l'agent utilisateur et redirige.</p>
+<p>La logique est courte : si le navigateur signale un iPhone ou un iPad, direction l'App Store ; s'il signale Android, Play ; sinon, affichez les deux boutons. Prévoyez une solution de repli pour ordinateur de bureau, car une part significative des scans vient de gens qui testent sur un ordinateur portable.</p>
 <p>Deux choses cassent ces pages en pratique. Les navigateurs intégrés d'Apple et certaines applications sociales réduisent l'agent utilisateur à une valeur générique, et la détection se trompe. Et une redirection déclenchée avant le rendu de la page ressemble à un lien cassé. Afficher les deux boutons en mettant en avant celui détecté est plus indulgent qu'un renvoi immédiat.</p>
 <p>Si vous voulez pouvoir modifier la destination plus tard, utilisez un code dynamique pointant vers la page routeur. Changez la page et tous les codes imprimés suivent, sans réimpression.</p>
   </section>

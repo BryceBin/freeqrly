@@ -321,7 +321,7 @@
     <h2>Um código estático contém um único link</h2>
 <p>É o que quase toda página de QR para loja de apps omite, então aqui vai sem rodeios: um QR guarda texto, e esse texto é uma URL. Um código, um destino. Dentro do padrão não há lógica capaz de olhar o celular e escolher a loja.</p>
 <p>Isso importa porque suas fichas de iOS e Android são duas URLs diferentes. Um único código estático só pode apontar para uma delas. Se você codificar o link do App Store, usuários de Android caem numa página de um app que não podem instalar; o contrário é igualmente ruim.</p>
-<p>Há três formas de cobrir as duas plataformas. A tabela abaixo compara.</p>
+<p>Há três formas de cobrir as duas plataformas. A tabela abaixo compara as três.</p>
 <div class="tblwrap"><table>
   <thead><tr><th>Abordagem</th><th>Como funciona</th><th>Códigos impressos</th><th>Funciona se o link mudar</th><th>Preparação</th></tr></thead>
   <tbody>
@@ -330,7 +330,7 @@
     <tr><td>Banner inteligente das lojas</td><td>banners da Apple e do Google no seu site</td><td>1 (para o seu site)</td><td>sim</td><td>um site</td></tr>
   </tbody>
 </table></div>
-<p>Dois códigos é a opção honesta e sem esforço. A página roteadora é o que a maioria dos apps faz quando já tem um site de marketing. Banners inteligentes só funcionam se as pessoas chegarem antes ao seu site, o que é outro trabalho, diferente de um código impresso.</p>
+<p>Dois códigos são a opção honesta e sem esforço. A página roteadora é o que a maioria dos apps faz quando já tem um site de marketing. Banners inteligentes só funcionam se as pessoas chegarem antes ao seu site, o que é outro trabalho, diferente de um código impresso.</p>
   </section>
 
   <section class="lpsec">
@@ -343,8 +343,8 @@
 
   <section class="lpsec">
     <h2>Montar uma página roteadora que funcione</h2>
-<p>Se escolher um código, ele precisa de um destino. Uma página roteadora é uma página pequena no seu domínio que lê o user agent e redireciona.</p>
-<p>A lógica é curta: se o navegador indicar iPhone ou iPad, vai para o App Store; se indicar Android, vai para o Play; caso contrário, mostra os dois botões. Deixe um fallback para desktop, porque boa parte das leituras vem de gente testando no notebook.</p>
+<p>Se escolher um código, ele precisa de um destino. Uma página roteadora é uma página pequena no seu domínio que detecta o user agent e redireciona.</p>
+<p>A lógica é curta: se o navegador indicar iPhone ou iPad, vai para o App Store; se indicar Android, vai para o Play; caso contrário, mostra os dois botões. Deixe uma alternativa para desktop, porque boa parte das leituras vem de gente testando no notebook.</p>
 <p>Duas coisas quebram essas páginas na prática. Os navegadores internos da Apple e alguns apps sociais reduzem o user agent a algo genérico, e a detecção erra. E um redirecionamento disparado antes de a página renderizar parece um link quebrado. Mostrar os dois botões com o detectado em destaque é mais tolerante do que redirecionar na hora.</p>
 <p>Se quiser poder editar o destino depois, use um código dinâmico apontando para a página roteadora. Mude a página e todos os códigos impressos acompanham, sem reimprimir.</p>
   </section>
