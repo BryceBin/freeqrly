@@ -54,6 +54,11 @@ function isKnown(path) {
   const clean = path.replace(/\/$/, '');
   const seg = clean.slice(1);
   if (!seg.includes('/') && TOP_LEVEL.has(seg)) return true;
+  // IndexNow ownership key: /<32-64 hex or alnum>.txt at the root. Bing, Yandex,
+  // Seznam and Naver fetch it to prove the submitter controls the host. It was
+  // in the repo but this catch-all returned 404 for it, so every IndexNow ping
+  // failed verification.
+  if (/^[A-Za-z0-9-]{8,128}\.txt$/.test(seg)) return true;
   // Localized pages: /<lang>/<slug>/, /<lang>/blog/... and /<lang>/404.html
   const parts = seg.split('/');
   if (parts.length >= 2 && LANGS.has(parts[0])) {
