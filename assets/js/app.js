@@ -863,7 +863,42 @@ $("batchZip").onclick = async ()=>{ track("batch_zip",{count:batchItems.length})
    steps of one visit for funnel analysis; it is discarded when the tab closes
    and is never tied to an account or identity. */
 function fqSid(){ try{ let s=sessionStorage.getItem("fq_sid"); if(!s){ try{ const a=new Uint8Array(8); crypto.getRandomValues(a); s=Array.from(a,x=>x.toString(16).padStart(2,"0")).join(""); }catch(e){ s=Array.from({length:16},()=>Math.floor(Math.random()*16).toString(16)).join(""); } sessionStorage.setItem("fq_sid",s); } return s; }catch(e){ return ""; } }
-function fqRef(){ try{ const r=document.referrer; if(!r) return "direct"; const h=new URL(r).hostname; if(/(^|\.)google\./.test(h)) return "google"; if(/(^|\.)baidu\.com$/.test(h)) return "baidu"; if(/(^|\.)bing\.com$/.test(h)) return "bing"; if(/(^|\.)(chatgpt|openai)\.com$/.test(h)||/(^|\.)perplexity\.ai$/.test(h)||/(^|\.)claude\.ai$/.test(h)) return "ai"; return "other"; }catch(e){ return "other"; } }
+/* 来源分类。先看 referrer 的 hostname，再看 utm_source——多数 AI 助手
+   会给引用链接加 utm_source，即使 referrer 被剥离也能认出来。
+   顺序很重要：gemini.google.com 要先于 google 匹配，否则会被当成普通搜索。 */
+function fqRef(){ try{
+  const r=document.referrer;
+  const p=new URLSearchParams(location.search);
+  const us=(p.get("utm_source")||"").toLowerCase();
+  const usm=(p.get("utm_medium")||"").toLowerCase();
+  const h=r?new URL(r).hostname:"";
+  // AI 助手（按具体产品区分）
+  if(/(^|\.)(chatgpt|chat\.openai|openai)\.com$/.test(h)||/chatgpt|openai/.test(us)) return "chatgpt";
+  if(/(^|\.)perplexity\.ai$/.test(h)||/perplexity/.test(us)) return "perplexity";
+  if(/(^|\.)claude\.ai$/.test(h)||/claude|anthropic/.test(us)) return "claude";
+  if(/(^|\.)gemini\.google\.com$/.test(h)||/gemini/.test(us)) return "gemini";
+  if(/(^|\.)(copilot|bing)\.microsoft\.com$/.test(h)||/copilot/.test(us)) return "copilot";
+  if(/(^|\.)grok\.com$|(^|\.)x\.ai$/.test(h)||/grok/.test(us)) return "grok";
+  if(/(^|\.)you\.com$/.test(h)||/(^|\.)phind\.com$/.test(h)||/(^|\.)kagi\.com$/.test(h)||/(^|\.)poe\.com$/.test(h)||/(^|\.)meta\.ai$/.test(h)||/(^|\.)deepseek\.com$/.test(h)||/(^|\.)mistral\.ai$/.test(h)||/chat\.mistral\.ai$/.test(h)) return "ai-other";
+  if(/chatgpt|perplexity|claude|gemini|copilot|grok/.test(usm)) return "ai-other";
+  // 传统搜索
+  if(/(^|\.)google\./.test(h)) return "google";
+  if(/(^|\.)baidu\.com$/.test(h)) return "baidu";
+  if(/(^|\.)bing\.com$/.test(h)) return "bing";
+  if(/(^|\.)(yandex|ya)\.(ru|com)$/.test(h)) return "yandex";
+  if(/(^|\.)duckduckgo\.com$/.test(h)) return "duckduckgo";
+  if(/(^|\.)so\.com$/.test(h)||/(^|\.)sogou\.com$/.test(h)) return "sogou";
+  if(/(^|\.)search\.brave\.com$/.test(h)) return "brave";
+  // 社交与内容社区
+  if(/(^|\.)(t\.co|twitter\.com|x\.com)$/.test(h)) return "twitter";
+  if(/(^|\.)reddit\.com$/.test(h)) return "reddit";
+  if(/(^|\.)(facebook|fb)\.com$/.test(h)) return "facebook";
+  if(/(^|\.)linkedin\.com$/.test(h)) return "linkedin";
+  if(/(^|\.)(youtube|youtu\.be)$/.test(h)||/(^|\.)youtube\.com$/.test(h)) return "youtube";
+  if(/(^|\.)(producthunt|news\.ycombinator|dev\.to|medium|substack)\.(com|to)$/.test(h)) return "community";
+  if(r) return "other";
+  return "direct";
+}catch(e){ return "other"; } }
 function fqDevice(){ return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent||"") ? "mobile" : "desktop"; }
 function fqBrowser(){ const u=navigator.userAgent||""; if(/Edg\//.test(u)) return "edge"; if(/Chrome\//.test(u)) return "chrome"; if(/Firefox\//.test(u)) return "firefox"; if(/Safari\//.test(u)) return "safari"; return "other"; }
 function track(event, props){

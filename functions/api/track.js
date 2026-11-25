@@ -5,7 +5,10 @@
    blob1 = type (qr type | page path | action name)
    blob2 = format (png|svg) | method (camera|upload)
    blob3 = UI language
-   blob4 = referrer class (direct|google|baidu|bing|ai|other)
+   blob4 = referrer class. Traditional search: google|baidu|bing|yandex|
+           duckduckgo|sogou|brave. AI assistants: chatgpt|perplexity|claude|
+           gemini|copilot|grok|ai-other. Social: twitter|reddit|facebook|
+           linkedin|youtube|community. Otherwise direct|other.
    blob5 = per-tab random session id (sessionStorage, discarded on tab close)
    blob6 = device class (mobile|desktop)
    blob7 = browser family (chrome|safari|firefox|edge|other)
@@ -44,7 +47,13 @@ export async function onRequest(context) {
         clean(body.type, 64),
         clean(body.format || body.method, 16),
         clean(body.lang, 8),
-        oneOf(body.ref, ["direct", "google", "baidu", "bing", "ai", "other"], "other"),
+        // 传统搜索 / AI 助手 / 社交社区，分三类；旧值 "ai" 保留兼容历史数据
+        oneOf(body.ref, [
+          "direct", "other",
+          "google", "baidu", "bing", "yandex", "duckduckgo", "sogou", "brave",
+          "chatgpt", "perplexity", "claude", "gemini", "copilot", "grok", "ai", "ai-other",
+          "twitter", "reddit", "facebook", "linkedin", "youtube", "community",
+        ], "other"),
         sid,
         oneOf(body.device, ["mobile", "desktop"], "other"),
         oneOf(body.browser, ["chrome", "safari", "firefox", "edge", "other"], "other"),
