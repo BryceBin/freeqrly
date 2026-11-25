@@ -276,6 +276,15 @@ def localize_page(key, lang, trans):
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
         open(out_path, "w", encoding="utf-8").write(out)
         return missing
+    # noindex 页面（login/reset/dashboard）：Google 不索引，hreflang 对它们
+    # 毫无作用；而英文版本身不带反向标签，留着只会让审计工具持续报
+    # "missing reciprocal hreflang"。直接整块去掉。
+    if re.search(r'<meta name="robots"[^>]*noindex', out):
+        out = re.sub(r'(<link rel="alternate" hreflang="[^"]*"[^>]*>\n?)+', "", out)
+        out_path = os.path.join(SITE, out_tmpl.format(lang=lang))
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        open(out_path, "w", encoding="utf-8").write(out)
+        return missing
     block = hreflang_block(key)
     if "hreflang=" in out:
         out = re.sub(r'(<link rel="alternate" hreflang="[^"]*"[^>]*>\n?)+', block + "\n", out, count=1)

@@ -6497,7 +6497,7 @@
  "blog-printable-table-card-template": {
   "30 × 30 mm": "30 × 30 mm",
   "30 × 30 mm is sized for a guest scanning from their seat, roughly 30–50 cm away. Do not shrink it to squeeze in more text; a code that is too small for its distance is the most common reason a printed code fails.": "30 × 30 mm उस मेहमान के हिसाब से साइज़ किया गया है जो अपनी सीट से, लगभग 30–50 cm की दूरी से स्कैन करता है। ज़्यादा टेक्स्ट ठूँसने के लिए इसे छोटा न करें; अपनी दूरी के लिए बहुत छोटा कोड छपे कोड के फ़ेल होने की सबसे आम वजह है।",
-  "<a href=\"ISO 216\">A6 paper size 105 × 148 mm</a> - International paper size standard; A6 is half of A5.": "<a href=\"ISO 216\">A6 पेपर साइज़ 105 × 148 mm</a> - अंतरराष्ट्रीय पेपर साइज़ मानक; A6, A5 का आधा है।",
+  "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A6 paper size 105 × 148 mm</a> - International paper size standard; A6 is half of A5.": "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A6 पेपर साइज़ 105 × 148 mm</a> - अंतरराष्ट्रीय पेपर साइज़ मानक; A6, A5 का आधा है।",
   "<span>Can I print just one of the three cards?</span>": "<span>क्या तीन में से सिर्फ़ एक कार्ड छाप सकता हूँ?</span>",
   "<span>My menu changes often. Do I have to reprint every time?</span>": "<span>मेरा मेनू अक्सर बदलता है। क्या हर बार दोबारा छापना होगा?</span>",
   "<span>What paper should I print table cards on?</span>": "<span>टेबल कार्ड किस काग़ज़ पर छापूँ?</span>",
@@ -6543,7 +6543,7 @@
   "30–50 cm, arm's / seat length": "30–50 cm, हाथ / सीट की दूरी",
   "3–5 cm": "3–5 cm",
   "<a href=\"/blog/qr-code-print-size-guide/\">QR Code Print Size Guide</a> - FreeQrly's own size table: distance ÷ 10 rule, 4-module quiet zone, 2 cm print minimum.": "<a href=\"/blog/qr-code-print-size-guide/\">QR कोड प्रिंट साइज़ गाइड</a> - FreeQrly की अपनी साइज़ टेबल: दूरी ÷ 10 नियम, 4-मॉड्यूल क्वाइट ज़ोन, 2 cm प्रिंट न्यूनतम।",
-  "<a href=\"ISO 216\">A4 paper size 210 × 297 mm</a> - International paper size standard.": "<a href=\"ISO 216\">A4 पेपर साइज़ 210 × 297 mm</a> - अंतरराष्ट्रीय पेपर साइज़ मानक।",
+  "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A4 paper size 210 × 297 mm</a> - International paper size standard.": "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A4 पेपर साइज़ 210 × 297 mm</a> - अंतरराष्ट्रीय पेपर साइज़ मानक।",
   "<span>Can I print it in black and white?</span>": "<span>क्या इसे ब्लैक एंड व्हाइट में छाप सकता हूँ?</span>",
   "<span>Can I scale this sheet down to A5?</span>": "<span>क्या इस शीट को A5 तक छोटा कर सकता हूँ?</span>",
   "<span>Does this really fit on one A4 page?</span>": "<span>क्या यह सच में एक A4 पेज पर फिट होता है?</span>",
@@ -6615,7 +6615,7 @@
   "What is a \"module\" in the quiet-zone rule?": "क्वाइट-ज़ोन नियम में “मॉड्यूल” क्या है?"
  },
  "blog-printable-review-card-template": {
-  "<a href=\"ISO/IEC 7810 ID-1\">Card size 85.60 × 53.98 mm</a> - International card size standard; this template rounds to the commonly printed 85 × 55 mm.": "<a href=\"ISO/IEC 7810 ID-1\">कार्ड साइज़ 85.60 × 53.98 mm</a> - अंतरराष्ट्रीय कार्ड साइज़ मानक; यह टेम्पलेट आमतौर पर छपे 85 × 55 mm तक राउंड करता है।",
+  "<a href=\"https://en.wikipedia.org/wiki/ISO/IEC_7810\">Card size 85.60 × 53.98 mm</a> - International card size standard; this template rounds to the commonly printed 85 × 55 mm.": "<a href=\"https://en.wikipedia.org/wiki/ISO/IEC_7810\">कार्ड साइज़ 85.60 × 53.98 mm</a> - अंतरराष्ट्रीय कार्ड साइज़ मानक; यह टेम्पलेट आमतौर पर छपे 85 × 55 mm तक राउंड करता है।",
   "<span>How many cards fit on one page, and how do I cut them?</span>": "<span>एक पेज पर कितने कार्ड फिट होते हैं, और उन्हें कैसे काटूँ?</span>",
   "<span>Is 25 mm big enough for the code?</span>": "<span>क्या कोड के लिए 25 mm काफ़ी बड़ा है?</span>",
   "<span>Should I laminate them?</span>": "<span>क्या उन्हें लेमिनेट करना चाहिए?</span>",

@@ -4434,7 +4434,7 @@ POSTS += [
   ('Print and cut', 'Once the proof scans first time, print the full run on card stock and cut each card to 105 × 148 mm.'),
   ],
   sources=[
-  ('ISO 216', 'A6 paper size 105 × 148 mm', 'International paper size standard; A6 is half of A5.'),
+  ('https://en.wikipedia.org/wiki/ISO_216', 'A6 paper size 105 × 148 mm', 'International paper size standard; A6 is half of A5.'),
   ],
  ),
  dict(
@@ -4538,7 +4538,7 @@ POSTS += [
   ],
   sources=[
   ('/blog/qr-code-print-size-guide/', 'QR Code Print Size Guide', "FreeQrly's own size table: distance ÷ 10 rule, 4-module quiet zone, 2 cm print minimum."),
-  ('ISO 216', 'A4 paper size 210 × 297 mm', 'International paper size standard.'),
+  ('https://en.wikipedia.org/wiki/ISO_216', 'A4 paper size 210 × 297 mm', 'International paper size standard.'),
   ],
  ),
  dict(
@@ -4688,7 +4688,7 @@ POSTS += [
   ('Hand it over at the right moment', 'Give the card with the receipt or the goodbye — the moment the customer is happiest — and let the card do the asking.'),
   ],
   sources=[
-  ('ISO/IEC 7810 ID-1', 'Card size 85.60 × 53.98 mm', 'International card size standard; this template rounds to the commonly printed 85 × 55 mm.'),
+  ('https://en.wikipedia.org/wiki/ISO/IEC_7810', 'Card size 85.60 × 53.98 mm', 'International card size standard; this template rounds to the commonly printed 85 × 55 mm.'),
   ],
  ),
   dict(
@@ -4918,7 +4918,7 @@ POSTS += [
 <p>The trade-off is that FreeQrly is a small, focused tool with one paid tier, not a large platform with a large team. Development moves at the pace Pro subscriptions can fund. If you need an enterprise contract, a dedicated account manager, or a service-level agreement with guaranteed uptime penalties, this is not that product, and it does not pretend to be.</p>
 <p>What you get in exchange is a straightforward deal, stated in one paragraph: static codes are free forever, with no sign-up and no expiry; dynamic codes are free up to 20, with editing and statistics included; Pro is $9 a month or $90 a year and removes only the 20-code cap; nothing is advertised to you and nothing about you is sold.</p>
 <p>That is a modest promise. It is also a checkable one. Generate a static code without signing up. Print it. Scan it in a year. Create a free account, make a dynamic code, edit its destination, and watch the scan count. Cancel Pro if you ever try it — your codes keep working. The model either holds up under that kind of checking, or it does not.</p>
-<p><em>FreeQrly is a free QR code generator: static codes are free with no sign-up, no watermark, and no expiry, generated entirely in your browser. Dynamic codes are free up to 20 with a free sign-in, editable after printing, with scan statistics and unlimited scans. Pro is $9/month or $90/year, and its only difference is unlimited dynamic codes. Try the generator at <a href=\"https://freeqrly.com\">freeqrly.com</a>.</em></p>""",
+<p><em>FreeQrly is a free QR code generator: static codes are free with no sign-up, no watermark, and no expiry, generated entirely in your browser. Dynamic codes are free up to 20 with a free sign-in, editable after printing, with scan statistics and unlimited scans. Pro is $9/month or $90/year, and its only difference is unlimited dynamic codes. Try the generator at <a href=\"https://freeqrly.com/\">freeqrly.com</a>.</em></p>""",
   faq=[
   ("Will static codes stay free?", "Yes. Static codes are free with no sign-up, no watermark, and no expiry — not a promotional period and not a trial. There is no plan to charge for them. The promise is structural: static codes are generated in your browser and cost almost nothing to serve. Pro pays for the dynamic-code system, not for static codes. Static codes remain free regardless of whether you ever pay."),
   ("Will my codes expire if I never pay?", "No. Codes do not expire — static or dynamic, free or paid. A static code cannot expire, because no server is involved when someone scans it; the destination is encoded in the pattern itself. A dynamic code does not expire either. If you never pay, your codes keep working for as long as their destinations exist. There is no renewal date, no grace period, and no \"your code will stop working in 7 days\" email."),

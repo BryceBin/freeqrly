@@ -6428,7 +6428,7 @@
  "blog-printable-table-card-template": {
   "30 × 30 mm": "30 × 30 mm",
   "30 × 30 mm is sized for a guest scanning from their seat, roughly 30–50 cm away. Do not shrink it to squeeze in more text; a code that is too small for its distance is the most common reason a printed code fails.": "30 × 30 mm 是按客人坐在座位上扫码、距离大约 30–50 cm 来定的。别为了塞更多文字把它缩小；码相对于距离太小，是印刷码失败最常见的原因。",
-  "<a href=\"ISO 216\">A6 paper size 105 × 148 mm</a> - International paper size standard; A6 is half of A5.": "<a href=\"ISO 216\">A6 纸张尺寸 105 × 148 mm</a>——国际纸张尺寸标准；A6 是 A5 的一半。",
+  "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A6 paper size 105 × 148 mm</a> - International paper size standard; A6 is half of A5.": "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A6 纸张尺寸 105 × 148 mm</a>——国际纸张尺寸标准；A6 是 A5 的一半。",
   "<span>Can I print just one of the three cards?</span>": "<span>三张卡能只印其中一张吗？</span>",
   "<span>My menu changes often. Do I have to reprint every time?</span>": "<span>菜单经常变，每次都要重印吗？</span>",
   "<span>What paper should I print table cards on?</span>": "<span>桌卡应该用什么纸打印？</span>",
@@ -6474,7 +6474,7 @@
   "30–50 cm, arm's / seat length": "30–50 cm，约一臂 / 一座位距离",
   "3–5 cm": "3–5 cm",
   "<a href=\"/blog/qr-code-print-size-guide/\">QR Code Print Size Guide</a> - FreeQrly's own size table: distance ÷ 10 rule, 4-module quiet zone, 2 cm print minimum.": "<a href=\"/blog/qr-code-print-size-guide/\">二维码打印尺寸指南</a>——FreeQrly 自家的尺寸表：距离 ÷ 10 规则、4 模块静区、印刷最小 2 cm。",
-  "<a href=\"ISO 216\">A4 paper size 210 × 297 mm</a> - International paper size standard.": "<a href=\"ISO 216\">A4 纸张尺寸 210 × 297 mm</a>——国际纸张尺寸标准。",
+  "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A4 paper size 210 × 297 mm</a> - International paper size standard.": "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A4 纸张尺寸 210 × 297 mm</a>——国际纸张尺寸标准。",
   "<span>Can I print it in black and white?</span>": "<span>能黑白打印吗？</span>",
   "<span>Can I scale this sheet down to A5?</span>": "<span>能把这张表缩到 A5 吗？</span>",
   "<span>Does this really fit on one A4 page?</span>": "<span>真的能装进一页 A4 吗？</span>",
@@ -6546,7 +6546,7 @@
   "Proof before the run": "批量印之前先打样"
  },
  "blog-printable-review-card-template": {
-  "<a href=\"ISO/IEC 7810 ID-1\">Card size 85.60 × 53.98 mm</a> - International card size standard; this template rounds to the commonly printed 85 × 55 mm.": "<a href=\"ISO/IEC 7810 ID-1\">卡片尺寸 85.60 × 53.98 mm</a>——国际卡片尺寸标准；本模板取整为常见的印刷尺寸 85 × 55 mm。",
+  "<a href=\"https://en.wikipedia.org/wiki/ISO/IEC_7810\">Card size 85.60 × 53.98 mm</a> - International card size standard; this template rounds to the commonly printed 85 × 55 mm.": "<a href=\"https://en.wikipedia.org/wiki/ISO/IEC_7810\">卡片尺寸 85.60 × 53.98 mm</a>——国际卡片尺寸标准；本模板取整为常见的印刷尺寸 85 × 55 mm。",
   "<span>How many cards fit on one page, and how do I cut them?</span>": "<span>一页能印几张卡，怎么裁？</span>",
   "<span>Is 25 mm big enough for the code?</span>": "<span>25 mm 的码够大吗？</span>",
   "<span>Should I laminate them?</span>": "<span>需要覆膜吗？</span>",

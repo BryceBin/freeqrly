@@ -45,7 +45,7 @@
  "Stick a print of your code in the box, then scan it from the distance it will be used at.",
  "One rule covers most failures: print one proof on the real paper, scan it from the real distance, in the real light — then print the run.",
  "<a href=\"/blog/qr-code-print-size-guide/\">QR Code Print Size Guide</a> - FreeQrly's own size table: distance ÷ 10 rule, 4-module quiet zone, 2 cm print minimum.",
- "<a href=\"ISO 216\">A4 paper size 210 × 297 mm</a> - International paper size standard.",
+ "<a href=\"https://en.wikipedia.org/wiki/ISO_216\">A4 paper size 210 × 297 mm</a> - International paper size standard.",
  "<span>Does this really fit on one A4 page?</span>",
  "Yes — the sheet is laid out for A4 with tightened margins and compact type (about 10–11 pt). Print at 100% scale, not \"fit to page,\" and check in the print preview that it stays on one page before printing.",
  "<span>Can I print it in black and white?</span>",
