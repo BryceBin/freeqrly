@@ -1968,7 +1968,7 @@
   "The decoded text or link appears immediately. Links get an Open button; everything else gets Copy.": "解码出的文本或链接立刻出现。链接有打开按钮；其他内容有复制按钮。",
   "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>QR Codes for Events: Check-In, Tickets & More</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>How to Create a Dynamic QR Code (Free & Editable)</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>Dynamic QR Code Statistics: What You Can Track</b></a>": "<a class=\"rel-card\" href=\"/blog/qr-codes-for-events/\"><b>活动二维码：签到、门票及更多</b></a> <a class=\"rel-card\" href=\"/blog/how-to-create-a-dynamic-qr-code/\"><b>怎么创建动态二维码（免费、可编辑）</b></a> <a class=\"rel-card\" href=\"/blog/dynamic-qr-code-statistics/\"><b>动态二维码统计：能看什么</b></a>",
   "Scan Any QR Code Online Free — No App, No Upload | FreeQrly": "在线扫任何二维码，免费 — 不用 App，不上传 | FreeQrly",
-  "Scan a QR code online in seconds: use your camera or upload a photo or screenshot. Decoded in your browser, so nothing is ever uploaded. No app, no sign-up.": "几秒钟在线扫二维码：用摄像头，或上传照片或截图。在你的浏览器里解码，所以什么都不会上传。不用装 App，不用注册。",
+  "Scan a QR code online in seconds: use your camera or upload a photo or screenshot. Decoded in your browser, so nothing is ever uploaded. No app, no sign-up.": "几秒钟在线扫二维码：用摄像头，或上传照片或截图，在浏览器里直接解码，图片不会上传到任何服务器。不用装 App，不用注册账号，桌面和手机都能用。",
   "Go to the <a href=\"/scan/\">FreeQrly scanner</a> — no app to install, no account needed.": "去 <a href=\"/scan/\">FreeQrly 扫码器</a>——不用装 App，不用账号。"
  },
  "blog-static-vs-dynamic-qr-codes": {
