@@ -271,15 +271,15 @@ async function draw(){
     && !logoData && (typeof getFrame!=="function"||getFrame()==="none")
     && $("dots").value==="square" && $("ecc").value==="M"
     && $("fg").value.toLowerCase()==="#22303f" && $("bgc").value.toLowerCase()==="#ffffff"
-    && $("transp") && $("transp").checked
+    && $("transp") && !$("transp").checked
     && $("qrbox") && $("qrbox").querySelector("img[data-prerender]");
   if(pristine){ return; }
-  const qr = new QRCodeStyling(styleOpts(236));
+  const qr = new QRCodeStyling(styleOpts(300));
   try{
     // Use SVG (synchronous data) instead of canvas append (async, may be blank)
     const svgBlob = await qr.getRawData("svg");
     let svgText = await svgBlob.text();
-    svgText = frameWrap(svgText, 236);
+    svgText = frameWrap(svgText, 300);
     const box = $("qrbox");
     if(box) box.innerHTML = `<img src="data:image/svg+xml,${encodeURIComponent(svgText)}" alt="${(I18N[lang]&&I18N[lang].qrPreviewAlt)||I18N.en.qrPreviewAlt}">`;
   }catch(e){
