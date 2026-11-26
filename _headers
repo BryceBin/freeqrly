@@ -1,0 +1,44 @@
+# Cloudflare Pages response headers.
+#
+# Without this file every static asset is served with Pages' default
+# "cache-control: public, max-age=0, must-revalidate". The zone's Browser
+# Cache TTL (14400) only rewrites the header sent to the browser; the edge
+# keeps using the origin TTL of 0, so it revalidated on every single
+# request — 7,141 /assets/ requests over 7 days produced 1 cache HIT and
+# 5,657 REVALIDATED.
+#
+# CSS and JS carry a content hash in ?v= (tools/version_sync.py), so a
+# change always produces a new URL. They can be cached forever.
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images use hand-written ?v=t2 / ?v=m3 markers rather than a content hash,
+# so keep these finite: a replaced file shows up within a week.
+/assets/img/*
+  Cache-Control: public, max-age=604800
+
+# Third-party libraries (jszip, qr-code-styling). No version marker in the
+# URL, so a finite TTL rather than immutable.
+/assets/lib/*
+  Cache-Control: public, max-age=604800
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og.png
+  Cache-Control: public, max-age=86400
+
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Cache-Control: public, max-age=3600
