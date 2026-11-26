@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Développeurs — API et MCP FreeQrly</title>
-<meta name="description" content="FreeQrly pour les agents : une API de QR code gratuite et un serveur MCP. Générez des QR codes statiques par programme — sans clé, sans inscription.">
+<meta name="description" content="FreeQrly pour les agents : une API de QR code gratuite et un serveur MCP. Générez des QR codes statiques par programme — sans clé, sans inscription.">
 <link rel="canonical" href="https://freeqrly.com/fr/developers/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/developers/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/developers/">
@@ -98,7 +98,7 @@
     <div class="prose">
       <h2>API HTTP</h2>
       <div class="endpoint"><span class="m">GET</span> https://freeqrly.com/api/qr?data=TEXT&amp;size=1024&amp;margin=4&amp;color=2F4A62&amp;bgcolor=ffffff&amp;ecc=M</div>
-      <p>Renvoie <code>image/svg+xml</code>. Seul <code>data</code> est requis ; tout le reste a une valeur par défaut raisonnable. Les erreurs reviennent en JSON avec un champ <code>error</code>.</p>
+      <p>Renvoie <code>image/svg+xml</code>. Seul <code>data</code> est requis ; tout le reste a une valeur par défaut raisonnable. Les erreurs reviennent en JSON avec un champ <code>error</code>.</p>
       <pre class="code">curl "https://freeqrly.com/api/qr?data=https://example.com&amp;size=1024" \
   -o qr.svg
 
@@ -116,7 +116,7 @@ curl "https://freeqrly.com/api/qr?data=WIFI:T:WPA;S:CafeNet;P:s3cret;;" \
       </ul>
 
       <h2 id="api-tokens">Dynamic codes API (authenticated)</h2>
-      <p>Les codes dynamiques restent modifiables après l'impression et suivent les scans — les mêmes codes que vous gérez dans le <a href="/dashboard/">tableau de bord</a>, avec le même quota (20 gratuits — illimités pour tous pendant la promotion actuelle à durée limitée). Créez un jeton dans le tableau de bord, sous <strong>API Tokens</strong> (affiché une seule fois), puis transmettez-le comme jeton Bearer :</p>
+      <p>Les codes dynamiques restent modifiables après l’impression et suivent les scans — les mêmes codes que vous gérez dans le <a href="/dashboard/">tableau de bord</a>, avec le même quota (20 gratuits — illimités pour tous pendant la promotion actuelle à durée limitée). Créez un jeton dans le tableau de bord, sous <strong>API Tokens</strong> (affiché une seule fois), puis transmettez-le comme jeton Bearer :</p>
       <div class="endpoint"><span class="m">POST</span> https://freeqrly.com/api/codes</div>
       <pre class="code">export FQ_TOKEN="fqly_..."  # from your dashboard
 
@@ -161,7 +161,7 @@ Place   : geo:37.7749,-122.4194
 SMS     : sms:+15550100?body=Hello</pre>
 
       <h2>Usage équitable</h2>
-      <p>C’est gratuit, mais soyez aimable : mettez les résultats en cache au lieu de redemander le même code, et gardez le trafic automatisé raisonnable. Des limites de débit par IP s’appliquent. Les codes statiques sont déterministes — la même entrée donne toujours la même sortie, donc la mise en cache est triviale.</p>
+      <p>C’est gratuit, mais soyez aimable : mettez les résultats en cache au lieu de redemander le même code, et gardez le trafic automatisé raisonnable. Des limites de débit par IP s’appliquent. Les codes statiques sont déterministes — la même entrée donne toujours la même sortie, donc la mise en cache est triviale.</p>
     </div>
   </div>
 
@@ -170,20 +170,20 @@ SMS     : sms:+15550100?body=Hello</pre>
       <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
       <div class="fctaText">
         <h3>Codes dynamiques illimités — offre à durée limitée.</h3>
-        <p>Connectez-vous gratuitement et créez-en autant que nécessaire. Chaque code reste modifiable après impression et n'expire jamais.</p>
+        <p>Connectez-vous gratuitement et créez-en autant que nécessaire. Chaque code reste modifiable après impression et n’expire jamais.</p>
       </div>
       <a class="fctaBtn" href="/fr/login/">Commencer gratuitement</a>
     </div>
     <div class="fmain">
       <div class="fbrand">
         <a class="fbrandName" href="/fr/" style="text-decoration:none">Free<em>Qrly</em></a>
-        <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n'expirent jamais.</p>
-        <div class="fmade">Faits discrètement — des codes statiques dans votre navigateur.</div>
+        <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n’expirent jamais.</p>
+        <div class="fmade">Fait discrètement — codes statiques dans votre navigateur.</div>
       </div>
       <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a><a href="/fr/pricing/">Tarifs</a></div>
-      <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d'impression</a><a href="/fr/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d’impression</a><a href="/fr/#faq">FAQ</a></div>
       <div class="fcol"><h4>Entreprise</h4><a href="/fr/about/">À propos</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
-      <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d'utilisation</a></div>
+      <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d’utilisation</a></div>
     </div>
     <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
   </footer>

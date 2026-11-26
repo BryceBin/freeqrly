@@ -145,7 +145,7 @@
     {
       "@type": "HowToStep",
       "name": "ラベルを付けて印刷",
-      "text": "コードの横に「iPhone」「Android」と添えて、2cm以上のサイズで。広告、パッケージ、レシート、発表スライドに。"
+      "text": "コードの横に「iPhone」「Android」と添えて、2cm以上のサイズで。広告、パッケージ、レシート、発表スライドなどに使えます。"
     }
   ]
 }</script>
@@ -238,7 +238,7 @@
     <ol class="steps" id="how">
       <li><span class="sn">1</span><span><b>ストアのリンクを1つコピー</b>App StoreはApp Store Connectから、PlayはPlay Consoleから。1つのコードに1つのリンクです。iOS用はApp Storeの欄に、Android用はGoogle Playの欄に入力します。</span></li>
       <li><span class="sn">2</span><span><b>貼り付ける</b>コードはすぐに表示されます。2つ目のコードを作るとき以外は、もう片方の欄は空のままにしてください。</span></li>
-      <li><span class="sn">3</span><span><b>ラベルを付けて印刷</b>コードの横に「iPhone」「Android」と添えて、2cm以上のサイズで。広告、パッケージ、レシート、発表スライドに。</span></li>
+      <li><span class="sn">3</span><span><b>ラベルを付けて印刷</b>コードの横に「iPhone」「Android」と添えて、2cm以上のサイズで。広告、パッケージ、レシート、発表スライドなどに使えます。</span></li>
     </ol>
   </section>
 <main class="studio" id="studio">
@@ -252,7 +252,7 @@
         <div id="fields"></div>
 
         <div id="batchPanel" hidden>
-          <div class="fl"><span data-i18n="bType">種類：</span>: <select id="batchType" class="batchTypeSel"></select></div>
+          <div class="fl"><span data-i18n="bType">種類</span>: <select id="batchType" class="batchTypeSel"></select></div>
           <div class="fl" data-i18n="bLabel">1行に1リンク</div>
           <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
           <div class="fl batchFmt" id="batchFmt"></div>
@@ -273,7 +273,7 @@
             <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Black Friday</span></button>
             <button type="button" class="fpBtn" data-preset="xmas"><span class="fpDot" style="background:#1F4D3A"></span><span id="fpXmT">Christmas</span></button>
           </div></div>
-        <div class="approw"><div class="applabel"><span data-i18n="dots">ドットの形</span><small data-i18n="dotsSub">ドットの形</small></div>
+        <div class="approw"><div class="applabel"><span data-i18n="dots">ドットの形</span><small data-i18n="dotsSub">QRドットの形</small></div>
           <div class="seg" id="segDots" role="radiogroup">
             <button data-v="square" data-i18n="dSquare">四角</button><button data-v="dots" data-i18n="dRound">丸</button><button data-v="rounded" data-i18n="dSoft">やわらか</button><button data-v="extra-rounded" data-i18n="dPebble">小石</button>
           </div></div>
@@ -380,7 +380,7 @@
   <section class="lpsec">
     <h2>機能するルーターページを作る</h2>
 <p>コード1つで行くなら、行き先が必要です。ルーターページは、自分のドメインに置く小さなページで、ユーザーエージェントを読んで転送します。</p>
-<p>ロジックは短いです。ブラウザがiPhoneかiPadを報告したらApp Storeへ、AndroidならPlayへ、それ以外は両方のボタンを出します。パソコン用の受け皿も用意してください。読み取りのかなりの部分が、ノートPCで試している人から来ます。</p>
+<p>ロジックはシンプルです。ブラウザがiPhoneかiPadを報告したらApp Storeへ、AndroidならPlayへ、それ以外は両方のボタンを出します。パソコン用の受け皿も用意してください。読み取りのかなりの部分が、ノートPCで試している人から来ます。</p>
 <p>実際には2つのことで壊れます。Appleのアプリ内ブラウザや一部のSNSアプリはユーザーエージェントを汎用の値に削るので、判定を外します。もう1つ、ページが描画される前に走るリダイレクトは、壊れたリンクに見えます。両方のボタンを出し、判定したほうを強調するほうが、即座に転送するより寛容です。</p>
 <p>行き先をあとから変えたければ、ルーターページを指す動的コードを使ってください。ページを変えれば、印刷済みのコードはすべて追従します。刷り直しは不要です。</p>
   </section>
@@ -390,10 +390,10 @@
 <div class="tblwrap"><table>
   <thead><tr><th>場所</th><th>サイズ</th><th>補足</th></tr></thead>
   <tbody>
-    <tr><td>アプリ公開のスライド</td><td>8 cm</td><td>席から1〜2mで読む</td></tr>
+    <tr><td>アプリ公開のスライド</td><td>8 cm</td><td>席から1〜2m離れて読み取る</td></tr>
     <tr><td>パッケージと同梱物</td><td>2 cm</td><td>プラットフォームごとに1つ、はっきり表示</td></tr>
     <tr><td>レシートの下部</td><td>1.5cm</td><td>サーマルプリンタは細い線がにじむ。先に試す</td></tr>
-    <tr><td>ポスターや広告</td><td>15 cm</td><td>2〜3mから読む</td></tr>
+    <tr><td>ポスターや広告</td><td>15 cm</td><td>2〜3mから読み取る</td></tr>
     <tr><td>名刺</td><td>1.5cm</td><td>ラベル付きの2つのコードを刷る場合のみ</td></tr>
   </tbody>
 </table></div>
@@ -422,7 +422,7 @@
       <div class="fbrand">
         <a class="fbrandName" href="/ja/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">ブラウザで作る美しいQRコード。静的コードに有効期限はありません。</p>
-        <div class="fmade">静かに、静的コードはブラウザで作成。</div>
+        <div class="fmade">静かに — 静的コードはブラウザで作成。</div>
       </div>
       <div class="fcol"><h4>製品</h4><a href="/ja/">QR生成</a><a href="/ja/batch-qr-code/">一括QRコード</a><a href="/ja/qr-code-with-logo/">ロゴ付きQRコード</a><a href="/ja/dynamic-qr-code/">動的QRコード</a><a href="/ja/ticket-qr-code/">チケットQRコード</a><a href="/ja/scan/">QRスキャナー</a><a href="/ja/barcode-generator/">バーコード生成</a><a href="/ja/pricing/">料金</a></div>
       <div class="fcol"><h4>リソース</h4><a href="/ja/blog/">ブログ</a><a href="/ja/developers/">開発者向け · APIとMCP</a><a href="/ja/blog/qr-code-print-size-guide/">印刷サイズガイド</a><a href="/ja/#faq">よくある質問</a></div>
@@ -435,6 +435,6 @@
 <script src="/assets/lib/qr-code-styling.js?v=518a6a06"></script>
 <script src="/assets/lib/jszip.min.js?v=acc7e414"></script>
 <script src="/assets/js/vcard.js?v=ef54dd14"></script>
-<script src="/assets/js/app.js?v=6a675286"></script>
+<script src="/assets/js/app.js?v=8e09cfd2"></script>
 </body>
 </html>

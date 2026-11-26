@@ -82,7 +82,7 @@
     },
     {
       "@type": "Question",
-      "name": "هل أحتاج حسابًا لتوليد رموز QR بالجملة؟",
+      "name": "هل أحتاج حسابًا لتوليد رموز QR بالدفعات؟",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "لا. فرموز الدُفعات ثابتة وتُولَّد بالكامل في متصفحك، فلا حاجة للتسجيل ولا شيء مرفوع، والرموز لا تنتهي أبدًا ولا تحمل علامة مائية."
@@ -332,7 +332,7 @@
     <section class="faq" id="faq" style="margin-top:50px">
       <h2>من الجيد معرفته</h2>
     <details><summary><span>كم رمز QR يمكنني توليده دفعة واحدة؟</span></summary><p>حتى 50 رمزًا في الدفعة، سواء لصقت أو رفعت — فـ 100 رمز تعني دفعتين: الصفوف 1–50، ثم الصفوف 51–100. وأبقِ ترتيب الصفوف مطابقًا في النصفين حتى تربط أسماء الملفات بالجدول.</p></details>
-    <details><summary><span>هل أحتاج حسابًا لتوليد رموز QR بالجملة؟</span></summary><p>لا. فرموز الدُفعات ثابتة وتُولَّد بالكامل في متصفحك، فلا حاجة للتسجيل ولا شيء مرفوع، والرموز لا تنتهي أبدًا ولا تحمل علامة مائية.</p></details>
+    <details><summary><span>هل أحتاج حسابًا لتوليد رموز QR بالدفعات؟</span></summary><p>لا. فرموز الدُفعات ثابتة وتُولَّد بالكامل في متصفحك، فلا حاجة للتسجيل ولا شيء مرفوع، والرموز لا تنتهي أبدًا ولا تحمل علامة مائية.</p></details>
     <details><summary><span>هل يمكن أن تكون رموز الدُفعات ديناميكية أو قابلة للتعديل بعد الطباعة؟</span></summary><p>لا. فوضع الدُفعات للثابتة فقط. فإذا تغيرت وجهة بعد الطباعة، فأعد توليد ذلك الرمز وأعد طباعته. وللرموز التي تحتاج تعديلها بعد الطباعة، أنشئ رموزًا ديناميكية واحدًا واحدًا بدلًا منها.</p></details>
     <details><summary><span>ما أنواع الملفات التي يمكنني رفعها؟</span></summary><p>ملف CSV (<code>.csv</code>) أو ملف Excel (<code>.xlsx</code> / <code>.xls</code>). وملف CSV يحمل نوعًا واحدًا لكل ملف، والمولّد يعالج الحقول المقتبسة، فالفواصل داخل حقل آمنة. أما ملف Excel فيمكنه حمل نوع واحد لكل ورقة، واسم الورقة يحدد النوع.</p></details>
     <details><summary><span>كيف أنسّق تفاصيل WiFi وجهات الاتصال في الملف؟</span></summary><p>الأنواع متعددة الحقول تستخدم حرف الخط العمودي <code>|</code> بين الحقول، بترتيب ثابت. فـ WiFi هي اسم الشبكة وكلمة المرور ونوع الأمان — مثلًا، <code>MyWiFi | password | WPA</code> (SAMPLE DATA). أما vCard فهي الاسم والهاتف والبريد والشركة والمسمى والموقع والعنوان والملاحظة — مثلًا، <code>Ada Lovelace | +1 555 010 2040 | ada@example.com | Alder Design Studio | مصممة | https://example.com | 123 Main St | صديقة</code> (SAMPLE DATA). والقالب، <code>freeqrly-batch-template.xlsx</code>، يُظهر ترتيب الحقول لكل نوع، مع رؤوس وصفوف أمثلة.</p></details>
@@ -355,9 +355,9 @@
       <div class="fbrand">
         <a class="fbrandName" href="/ar/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">رموز QR جميلة تُصنع في متصفحك. الرموز الثابتة لا تنتهي أبدًا.</p>
-        <div class="fmade">رموز ثابتة، صُنعت بصمت في متصفحك。</div>
+        <div class="fmade">صُنع بهدوء — رموز ثابتة في متصفحك.</div>
       </div>
-      <div class="fcol"><h4>المنتج</h4><a href="/ar/">منشئ QR</a><a href="/ar/batch-qr-code/">رموز QR بالجملة</a><a href="/ar/qr-code-with-logo/">QR مع شعار</a><a href="/ar/scan/">ماسح QR</a><a href="/ar/barcode-generator/">منشئ الباركود</a><a href="/ar/pricing/">التسعير</a></div>
+      <div class="fcol"><h4>المنتج</h4><a href="/ar/">منشئ QR</a><a href="/ar/batch-qr-code/">رموز QR بالدفعات</a><a href="/ar/qr-code-with-logo/">QR مع شعار</a><a href="/ar/scan/">ماسح QR</a><a href="/ar/barcode-generator/">منشئ الباركود</a><a href="/ar/pricing/">التسعير</a></div>
       <div class="fcol"><h4>الموارد</h4><a href="/ar/blog/">المدونة</a><a href="/ar/developers/">المطورون · API وMCP</a><a href="/ar/blog/qr-code-print-size-guide/">دليل مقاس الطباعة</a><a href="/ar/#faq">الأسئلة الشائعة</a></div>
       <div class="fcol"><h4>الشركة</h4><a href="/ar/about/">من نحن</a><a href="mailto:hello@freeqrly.com">اتصل بنا</a></div>
       <div class="fcol"><h4>قانوني</h4><a href="/ar/privacy/">سياسة الخصوصية</a><a href="/ar/terms/">شروط الخدمة</a></div>

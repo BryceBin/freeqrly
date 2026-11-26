@@ -121,7 +121,7 @@
       "name": "能统计安装量吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不会。静态码只带着链接，从不回传数据。安装量在 App Store Connect 和 Play Console 里本来就有。"
+        "text": "不能。静态码只带着链接，从不回传数据。安装量在 App Store Connect 和 Play Console 里本来就有。"
       }
     }
   ]
@@ -130,7 +130,7 @@
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "生成你的应用商店二维码",
-  "description": "一个静态二维码只装一个 URL，所以 App Store 上架页和 Play 上架页各需要一个码。填入链接，按扫得动的尺寸打印，再把对的码放到对的手机面前。",
+  "description": "一个静态二维码只装一个 URL，所以 App Store 商店页和 Play 商店页各需要一个码。填入链接，按扫得动的尺寸打印，再把对的码放到对的手机面前。",
   "step": [
     {
       "@type": "HowToStep",
@@ -231,7 +231,7 @@
     <div>
       <div class="kicker">免费 · 静态码免注册 · 无水印</div>
       <h1>你的 App 链接，<span class="hl hl-honey">印得刚刚好</span>。</h1>
-      <p class="lede">一个静态二维码只装一个 URL，所以 App Store 上架页和 Play 上架页各需要一个码。填入链接，按扫得动的尺寸打印，再把对的码放到对的手机面前。</p>
+      <p class="lede">一个静态二维码只装一个 URL，所以 App Store 商店页和 Play 商店页各需要一个码。填入链接，按扫得动的尺寸打印，再把对的码放到对的手机面前。</p>
       <p class="glance"><b>一览：</b>20 个免费动态码（限时活动期间目前不限量）· 每批最多 50 个码 · 17 种码类型 · Pro 9 美元/月或 90 美元/年 · 扫描次数不限</p>
       <p class="updated">最后更新：2026 年 10 月 30 日</p>
     </div>
@@ -380,7 +380,7 @@
   <section class="lpsec">
     <h2>做一个能用的路由页</h2>
 <p>选一个码的话，它得有个去处。路由页是你自己域名下的一张小页面，读 User-Agent 然后跳转。</p>
-<p>逻辑很短：浏览器报 iPhone 或 iPad，去 App Store；报 Android，去 Play；其余情况两个按钮都显示。给桌面端留个兜底，因为相当一部分扫码来自在电脑上测试的人。</p>
+<p>逻辑很简单：浏览器报 iPhone 或 iPad，去 App Store；报 Android，去 Play；其余情况两个按钮都显示。给桌面端留个兜底，因为相当一部分扫码来自在电脑上测试的人。</p>
 <p>实际使用中有两种东西会让这类页面失灵。Apple 的应用内浏览器和部分社交 App 会把 User-Agent 削成通用值，识别就猜错了。另外，在页面渲染完成前就触发的跳转，看起来像坏链接。两个按钮都显示、把识别到的那个高亮，比直接跳转更友好。</p>
 <p>如果想让目标以后可改，就用动态码指向路由页。改页面，所有印出去的码跟着变，不用重印。</p>
   </section>
@@ -406,7 +406,7 @@
     <details><summary><span>两栏都填会怎样？</span></summary><p>只会编码 App Store 链接——Play 那一栏只在 App Store 栏为空时才会用到。要覆盖两个平台，就做两个码，一栏一个。</p></details>
     <details><summary><span>只有一个平台怎么办？</span></summary><p>填那一栏，印一个码就够了，别的都不用。</p></details>
     <details><summary><span>能自动识别手机并跳转吗？</span></summary><p>单靠它不行——印在纸上的图案没法执行逻辑。要识别设备，中间得加一个页面：自己托管一个小的路由页，再用动态码指向它，这样以后改目标也不用重印。</p></details>
-    <details><summary><span>能统计安装量吗？</span></summary><p>不会。静态码只带着链接，从不回传数据。安装量在 App Store Connect 和 Play Console 里本来就有。</p></details>
+    <details><summary><span>能统计安装量吗？</span></summary><p>不能。静态码只带着链接，从不回传数据。安装量在 App Store Connect 和 Play Console 里本来就有。</p></details>
   </section>
 
   <footer>
@@ -435,6 +435,6 @@
 <script src="/assets/lib/qr-code-styling.js?v=518a6a06"></script>
 <script src="/assets/lib/jszip.min.js?v=acc7e414"></script>
 <script src="/assets/js/vcard.js?v=ef54dd14"></script>
-<script src="/assets/js/app.js?v=6a675286"></script>
+<script src="/assets/js/app.js?v=8e09cfd2"></script>
 </body>
 </html>

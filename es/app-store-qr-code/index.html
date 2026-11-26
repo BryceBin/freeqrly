@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Generador de QR App Store: un código por tienda | FreeQrly</title>
+<title>Generador de QR para App Store: un código por tienda | FreeQrly</title>
 <meta name="description" content="Crea un QR para tu enlace de App Store o Google Play. Un código estático guarda una URL: iOS y Android son dos códigos, y aquí ves cómo imprimir el correcto.">
 <link rel="canonical" href="https://freeqrly.com/es/app-store-qr-code/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/app-store-qr-code/">
@@ -18,7 +18,7 @@
 <link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/app-store-qr-code/">
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/app-store-qr-code/">
 <meta name="theme-color" content="#e9eef4">
-<meta property="og:title" content="Generador de QR App Store: un código por tienda | FreeQrly">
+<meta property="og:title" content="Generador de QR para App Store: un código por tienda | FreeQrly">
 <meta property="og:description" content="Crea un QR para tu enlace de App Store o Google Play. Un código estático guarda una URL: iOS y Android son dos códigos, y aquí ves cómo imprimir el correcto.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/es/app-store-qr-code/">
@@ -113,7 +113,7 @@
       "name": "¿Detecta el teléfono y redirige solo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No por sí solo: un patrón impreso no puede ejecutar lógica. La detección de dispositivo necesita una página en medio: aloja una pequeña página de redirección y apunta a ella un código dinámico, así podrás cambiar el destino después sin reimprimir."
+        "text": "No por sí solo: un patrón impreso no puede ejecutar lógica. La detección de dispositivo necesita una página en medio: aloja una pequeña página enrutadora y apunta a ella un código dinámico, así podrás cambiar el destino después sin reimprimir."
       }
     },
     {
@@ -362,7 +362,7 @@
   <thead><tr><th>Enfoque</th><th>Cómo funciona</th><th>Códigos impresos</th><th>Funciona si cambia el enlace</th><th>Preparación</th></tr></thead>
   <tbody>
     <tr><td>Dos códigos, uno al lado del otro</td><td>uno para App Store, uno para Play</td><td>2</td><td>no, reimprimir</td><td>ninguna</td></tr>
-    <tr><td>Un código a una página enrutadora</td><td>la página lee el dispositivo y redirige a la tienda correcta</td><td>1</td><td>sí, si la página es dinámica</td><td>una página que controlas</td></tr>
+    <tr><td>Un código hacia una página enrutadora</td><td>la página lee el dispositivo y redirige a la tienda correcta</td><td>1</td><td>sí, si la página es dinámica</td><td>una página que controlas</td></tr>
     <tr><td>Banner inteligente de las tiendas</td><td>banners de Apple y Google en tu web</td><td>1 (a tu web)</td><td>sí</td><td>una web</td></tr>
   </tbody>
 </table></div>
@@ -379,7 +379,7 @@
 
   <section class="lpsec">
     <h2>Crear una página enrutadora que funcione</h2>
-<p>Si eliges un solo código, necesita un destino. Una página enrutadora es una página pequeña en tu dominio que detecta el user agent y redirige.</p>
+<p>Si eliges un solo código, necesita un destino. Una página enrutadora es una página pequeña en tu dominio que detecta el agente de usuario y redirige.</p>
 <p>La lógica es corta: si el navegador indica iPhone o iPad, al App Store; si indica Android, a Play; en cualquier otro caso, muestra los dos botones. Deja una alternativa para escritorio, porque una parte importante de los escaneos viene de gente probando en un portátil.</p>
 <p>Dos cosas rompen estas páginas en la práctica. Los navegadores internos de Apple y algunas apps sociales reducen el user agent a algo genérico, y la detección se equivoca. Y una redirección que se dispara antes de que la página se dibuje parece un enlace roto. Mostrar los dos botones destacando el detectado es más tolerante que redirigir al instante.</p>
 <p>Si quieres poder editar el destino más adelante, usa un código dinámico que apunte a la página enrutadora. Cambias la página y todos los códigos impresos la siguen, sin reimprimir.</p>
@@ -392,20 +392,20 @@
   <tbody>
     <tr><td>Diapositiva de lanzamiento</td><td>8 cm</td><td>se escanea desde el asiento, a 1–2 m</td></tr>
     <tr><td>Envases y encartes</td><td>2 cm</td><td>un código por plataforma, bien etiquetado</td></tr>
-    <tr><td>Pie del ticket</td><td>1,5 cm</td><td>las impresoras térmicas emborronan las líneas finas; prueba antes</td></tr>
+    <tr><td>Pie del recibo</td><td>1,5 cm</td><td>las impresoras térmicas emborronan las líneas finas; prueba antes</td></tr>
     <tr><td>Cartel o anuncio</td><td>15 cm</td><td>se escanea a 2–3 m</td></tr>
     <tr><td>Tarjeta de visita</td><td>1,5 cm</td><td>solo si imprimes dos códigos etiquetados</td></tr>
   </tbody>
 </table></div>
-<p>Cuando imprimas dos códigos, etiquétalos. Dos cuadrados idénticos sin «iPhone» y «Android» son peores que un solo código, porque la gente escanea el equivocado y acaba en una tienda que no le sirve.</p>
+<p>Cuando imprimas dos códigos, etiquétalos. Dos cuadrados idénticos sin “iPhone” y “Android” son peores que un solo código, porque la gente escanea el equivocado y acaba en una tienda que no le sirve.</p>
   </section>
 
   <section class="faq" id="faq">
-    <h2>Bueno saberlo</h2>
+    <h2>Conviene saberlo</h2>
     <details><summary><span>¿Puede un código estático abrir las dos tiendas?</span></summary><p>No. Un código estático guarda una sola URL, y tus dos fichas de tienda son dos URLs. Si codificas el enlace de App Store, los visitantes de Android llegan a una app que no pueden instalar. Imprime dos códigos etiquetados o apunta un código a una página de tu propio dominio que detecte el teléfono y redirija a la tienda correcta.</p></details>
     <details><summary><span>¿Y si relleno los dos campos?</span></summary><p>Solo se codifica el enlace de App Store: el campo de Play se usa cuando el de App Store está vacío. Para cubrir las dos plataformas, crea dos códigos, uno por campo.</p></details>
     <details><summary><span>¿Y si solo tengo una plataforma?</span></summary><p>Rellena ese campo e imprime un código. No hace falta nada más.</p></details>
-    <details><summary><span>¿Detecta el teléfono y redirige solo?</span></summary><p>No por sí solo: un patrón impreso no puede ejecutar lógica. La detección de dispositivo necesita una página en medio: aloja una pequeña página de redirección y apunta a ella un código dinámico, así podrás cambiar el destino después sin reimprimir.</p></details>
+    <details><summary><span>¿Detecta el teléfono y redirige solo?</span></summary><p>No por sí solo: un patrón impreso no puede ejecutar lógica. La detección de dispositivo necesita una página en medio: aloja una pequeña página enrutadora y apunta a ella un código dinámico, así podrás cambiar el destino después sin reimprimir.</p></details>
     <details><summary><span>¿Cuenta las instalaciones?</span></summary><p>No. Los códigos estáticos solo llevan el enlace y nunca envían nada. App Store Connect y Play Console ya informan de las instalaciones.</p></details>
   </section>
 
@@ -422,7 +422,7 @@
       <div class="fbrand">
         <a class="fbrandName" href="/es/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">Códigos QR bonitos, creados en tu navegador. Los estáticos nunca caducan.</p>
-        <div class="fmade">Códigos estáticos, hechos en tu navegador.</div>
+        <div class="fmade">Hecho en silencio: códigos estáticos en tu navegador.</div>
       </div>
       <div class="fcol"><h4>Producto</h4><a href="/es/">Generador QR</a><a href="/es/batch-qr-code/">QR por lotes</a><a href="/es/qr-code-with-logo/">QR con logo</a><a href="/es/dynamic-qr-code/">Códigos QR dinámicos</a><a href="/es/ticket-qr-code/">Códigos QR para entradas</a><a href="/es/scan/">Escáner QR</a><a href="/es/barcode-generator/">Generador de códigos de barras</a><a href="/es/pricing/">Precios</a></div>
       <div class="fcol"><h4>Recursos</h4><a href="/es/blog/">Blog</a><a href="/es/developers/">Desarrolladores · API y MCP</a><a href="/es/blog/qr-code-print-size-guide/">Guía de tamaño de impresión</a><a href="/es/#faq">Preguntas frecuentes</a></div>
@@ -435,6 +435,6 @@
 <script src="/assets/lib/qr-code-styling.js?v=518a6a06"></script>
 <script src="/assets/lib/jszip.min.js?v=acc7e414"></script>
 <script src="/assets/js/vcard.js?v=ef54dd14"></script>
-<script src="/assets/js/app.js?v=6a675286"></script>
+<script src="/assets/js/app.js?v=8e09cfd2"></script>
 </body>
 </html>

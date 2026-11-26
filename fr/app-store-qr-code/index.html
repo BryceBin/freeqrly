@@ -102,7 +102,7 @@
     },
     {
       "@type": "Question",
-      "name": "Et si je n'ai qu'une plateforme ?",
+      "name": "Et si je n’ai qu’une plateforme ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Remplissez ce champ et imprimez un code. Rien d’autre n’est nécessaire."
@@ -110,15 +110,15 @@
     },
     {
       "@type": "Question",
-      "name": "Détecte-t-il le téléphone et redirige-t-il automatiquement ?",
+      "name": "Détecte-t-il le téléphone et redirige-t-il automatiquement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pas tout seul — un motif imprimé ne peut pas exécuter de logique. La détection d’appareil demande une page intermédiaire : hébergez une petite page de redirection, puis faites pointer un code dynamique dessus pour pouvoir changer la destination plus tard sans réimprimer."
+        "text": "Pas tout seul — un motif imprimé ne peut pas exécuter de logique. La détection d’appareil demande une page intermédiaire : hébergez une petite page routeur, puis faites pointer un code dynamique dessus pour pouvoir changer la destination plus tard sans réimprimer."
       }
     },
     {
       "@type": "Question",
-      "name": "Compte-t-il les installations ?",
+      "name": "Compte-t-il les installations ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Non. Les codes statiques ne contiennent que le lien et ne renvoient jamais rien. App Store Connect et la Play Console indiquent déjà les installations."
@@ -145,7 +145,7 @@
     {
       "@type": "HowToStep",
       "name": "Étiquetez et imprimez",
-      "text": "« iPhone » ou « Android » à côté du code, d'au moins 2 cm. Pubs, emballages, tickets, visuels de lancement."
+      "text": "« iPhone » ou « Android » à côté du code, d’au moins 2 cm. Pubs, emballages, reçus, visuels de lancement."
     }
   ]
 }</script>
@@ -232,13 +232,13 @@
       <div class="kicker">Gratuit · Codes statiques sans inscription · Sans filigrane</div>
       <h1>Votre lien d’app, <span class="hl hl-honey">imprimé comme il faut</span>.</h1>
       <p class="lede">Un QR code statique ne stocke qu’une URL : votre fiche App Store et votre fiche Play ont donc besoin d’un code chacune. Collez un lien, imprimez-le à une taille qui se scanne et placez le bon code devant le bon téléphone.</p>
-      <p class="glance"><b>En bref :</b> 20 codes dynamiques gratuits (actuellement illimités pendant l'offre à durée limitée) · jusqu'à 50 codes par lot · 17 types de codes · Pro 9 $/mois ou 90 $/an · scans illimités</p>
-      <p class="updated">Dernière mise à jour : 30 octobre 2026</p>
+      <p class="glance"><b>En bref :</b> 20 codes dynamiques gratuits (actuellement illimités pendant l’offre à durée limitée) · jusqu’à 50 codes par lot · 17 types de codes · Pro 9 $/mois ou 90 $/an · scans illimités</p>
+      <p class="updated">Dernière mise à jour : 30 octobre 2026</p>
     </div>
     <ol class="steps" id="how">
       <li><span class="sn">1</span><span><b>Copiez un lien de boutique</b>App Store depuis App Store Connect, Play depuis la Play Console. Un lien par code — remplissez le champ App Store pour iOS, le champ Google Play pour Android.</span></li>
       <li><span class="sn">2</span><span><b>Collez-le</b>Votre code apparaît aussitôt. Laissez l’autre champ vide, sauf si vous créez un second code.</span></li>
-      <li><span class="sn">3</span><span><b>Étiquetez et imprimez</b>« iPhone » ou « Android » à côté du code, d'au moins 2 cm. Pubs, emballages, tickets, visuels de lancement.</span></li>
+      <li><span class="sn">3</span><span><b>Étiquetez et imprimez</b>« iPhone » ou « Android » à côté du code, d’au moins 2 cm. Pubs, emballages, reçus, visuels de lancement.</span></li>
     </ol>
   </section>
 <main class="studio" id="studio">
@@ -267,7 +267,7 @@
         </div>
 
         <div class="fl" data-i18n="appearance">Apparence</div>
-        <div class="approw"><div class="applabel"><span id="fpLab">Préréglages fêtes</span><small id="fpSub">En un geste : encre, papier et cadre</small></div>
+        <div class="approw"><div class="applabel"><span id="fpLab">Préréglages de fêtes</span><small id="fpSub">En un geste : encre, papier et cadre</small></div>
           <div class="seg framePresets" id="framePresets">
             <button type="button" class="fpBtn on" data-preset="aucune"><span id="fpNoneT">None</span></button>
             <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Black Friday</span></button>
@@ -355,58 +355,58 @@
 
   <section class="lpsec">
     <h2>Un code statique contient un seul lien</h2>
-<p>Voilà ce que la plupart des pages de QR code pour app store passent sous silence : un QR code stocke du texte, et ce texte est une URL. Un code, une destination. Le motif ne contient aucune logique capable de regarder le téléphone et de choisir une boutique.</p>
-<p>Cela compte parce que vos fiches iOS et Android sont deux URL différentes. Un seul code statique ne peut pointer que vers l'une des deux. Encodez le lien App Store et les utilisateurs Android atterrissent sur une page pour une application qu'ils ne peuvent pas installer ; l'inverse est tout aussi mauvais.</p>
+<p>Voilà ce que la plupart des pages de QR code pour boutique d’applications passent sous silence : un QR code stocke du texte, et ce texte est une URL. Un code, une destination. Le motif ne contient aucune logique capable de regarder le téléphone et de choisir une boutique.</p>
+<p>Cela compte parce que vos fiches iOS et Android sont deux URL différentes. Un seul code statique ne peut pointer que vers l’une des deux. Encodez le lien App Store et les utilisateurs Android atterrissent sur une page pour une application qu’ils ne peuvent pas installer ; l’inverse est tout aussi mauvais.</p>
 <p>Trois approches permettent de couvrir les deux plateformes. Le tableau ci-dessous les compare.</p>
 <div class="tblwrap"><table>
   <thead><tr><th>Approche</th><th>Fonctionnement</th><th>Codes imprimés</th><th>Résiste à un changement de lien</th><th>Mise en place</th></tr></thead>
   <tbody>
     <tr><td>Deux codes côte à côte</td><td>un App Store, un Play</td><td>2</td><td>non, réimpression</td><td>aucune</td></tr>
-    <tr><td>Un code vers une page routeur</td><td>la page lit l'appareil et redirige vers la bonne boutique</td><td>1</td><td>oui, si la page est dynamique</td><td>une page que vous contrôlez</td></tr>
+    <tr><td>Un code vers une page routeur</td><td>la page lit l’appareil et redirige vers la bonne boutique</td><td>1</td><td>oui, si la page est dynamique</td><td>une page que vous contrôlez</td></tr>
     <tr><td>Bannière intelligente des boutiques</td><td>bannières Apple et Google sur votre site</td><td>1 (vers votre site)</td><td>oui</td><td>un site web</td></tr>
   </tbody>
 </table></div>
-<p>Deux codes, c'est l'option honnête et sans effort. La page routeur est ce que font la plupart des applications une fois qu'elles ont un site marketing. Les bannières intelligentes ne fonctionnent que si les gens passent d'abord par votre site, une autre tâche que celle d'un code imprimé.</p>
+<p>Deux codes, c’est l’option honnête et sans effort. La page routeur est ce que font la plupart des applications une fois qu’elles ont un site marketing. Les bannières intelligentes ne fonctionnent que si les gens passent d’abord par votre site, une autre tâche que celle d’un code imprimé.</p>
   </section>
 
   <section class="lpsec">
     <h2>Comment récupérer vos liens de boutique</h2>
 <p>Les deux boutiques vous donnent une URL propre et permanente, et les deux sont faciles à trouver quand on sait où regarder.</p>
-<p>Pour iOS : ouvrez votre application dans App Store Connect, allez dans Informations sur l'app et copiez l'URL App Store. Elle ressemble à <code>apps.apple.com/app/id1234567890</code>. Vous pouvez ajouter un segment pays — <code>apps.apple.com/gb/app/id…</code> — si vous voulez que le code ouvre une vitrine précise, mais la version simple redirige vers la région du visiteur, ce qui est généralement ce que vous voulez.</p>
-<p>Pour Android : ouvrez la fiche dans la Play Console et copiez le lien depuis la barre d'adresse. Il ressemble à <code>play.google.com/store/apps/details?id=com.yourcompany.yourapp</code>. L'<code>id</code> est votre nom de package, et il ne change jamais, même si le nom de l'application évolue.</p>
-<p>Supprimez tout ce qui suit l'ID. Les outils marketing ajoutent souvent des paramètres de suivi, comme <code>?mt=8</code> ou <code>&amp;referrer=…</code>. Ils sont inoffensifs, mais densifient le motif QR sans aucun bénéfice — et un motif plus dense s'imprime moins bien en petit.</p>
+<p>Pour iOS : ouvrez votre application dans App Store Connect, allez dans Informations sur l’app et copiez l’URL App Store. Elle ressemble à <code>apps.apple.com/app/id1234567890</code>. Vous pouvez ajouter un segment pays — <code>apps.apple.com/gb/app/id…</code> — si vous voulez que le code ouvre une vitrine précise, mais la version simple redirige vers la région du visiteur, ce qui est généralement ce que vous voulez.</p>
+<p>Pour Android : ouvrez la fiche dans la Play Console et copiez le lien depuis la barre d’adresse. Il ressemble à <code>play.google.com/store/apps/details?id=com.yourcompany.yourapp</code>. L'<code>id</code> est votre nom de package, et il ne change jamais, même si le nom de l’application évolue.</p>
+<p>Supprimez tout ce qui suit l’ID. Les outils marketing ajoutent souvent des paramètres de suivi, comme <code>?mt=8</code> ou <code>&amp;referrer=…</code>. Ils sont inoffensifs, mais densifient le motif QR sans aucun bénéfice — et un motif plus dense s’imprime moins bien en petit.</p>
   </section>
 
   <section class="lpsec">
     <h2>Construire une page routeur qui fonctionne</h2>
-<p>Si vous choisissez un seul code, il lui faut une destination. Une page routeur est une petite page sur votre domaine qui détecte l'agent utilisateur et redirige.</p>
-<p>La logique est courte : si le navigateur signale un iPhone ou un iPad, direction l'App Store ; s'il signale Android, Play ; sinon, affichez les deux boutons. Prévoyez une solution de repli pour ordinateur de bureau, car une part significative des scans vient de gens qui testent sur un ordinateur portable.</p>
-<p>Deux choses cassent ces pages en pratique. Les navigateurs intégrés d'Apple et certaines applications sociales réduisent l'agent utilisateur à une valeur générique, et la détection se trompe. Et une redirection déclenchée avant le rendu de la page ressemble à un lien cassé. Afficher les deux boutons en mettant en avant celui détecté est plus indulgent qu'un renvoi immédiat.</p>
+<p>Si vous choisissez un seul code, il lui faut une destination. Une page routeur est une petite page sur votre domaine qui détecte l’agent utilisateur et redirige.</p>
+<p>La logique est courte : si le navigateur signale un iPhone ou un iPad, direction l’App Store ; s’il signale Android, Play ; sinon, affichez les deux boutons. Prévoyez une solution de repli pour ordinateur de bureau, car une part significative des scans vient de gens qui testent sur un ordinateur portable.</p>
+<p>Deux choses cassent ces pages en pratique. Les navigateurs intégrés d’Apple et certaines applications sociales réduisent l’agent utilisateur à une valeur générique, et la détection se trompe. Et une redirection déclenchée avant le rendu de la page ressemble à un lien cassé. Afficher les deux boutons en mettant en avant celui détecté est plus indulgent qu’un renvoi immédiat.</p>
 <p>Si vous voulez pouvoir modifier la destination plus tard, utilisez un code dynamique pointant vers la page routeur. Changez la page et tous les codes imprimés suivent, sans réimpression.</p>
   </section>
 
   <section class="lpsec">
-    <h2>Où l'imprimer</h2>
+    <h2>Où l’imprimer</h2>
 <div class="tblwrap"><table>
   <thead><tr><th>Emplacement</th><th>Taille</th><th>Remarque</th></tr></thead>
   <tbody>
     <tr><td>Diapositive de lancement</td><td>8 cm</td><td>scanné depuis un siège, à 1–2 m</td></tr>
     <tr><td>Emballages et encarts</td><td>2 cm</td><td>un code par plateforme, clairement étiqueté</td></tr>
-    <tr><td>Bas de ticket de caisse</td><td>1,5 cm</td><td>les imprimantes thermiques bavent sur les traits fins ; testez d'abord</td></tr>
+    <tr><td>Bas de ticket de caisse</td><td>1,5 cm</td><td>les imprimantes thermiques bavent sur les traits fins ; testez d’abord</td></tr>
     <tr><td>Affiche ou publicité</td><td>15 cm</td><td>scanné à 2–3 m</td></tr>
     <tr><td>Carte de visite</td><td>1,5 cm</td><td>uniquement si vous imprimez deux codes étiquetés</td></tr>
   </tbody>
 </table></div>
-<p>Quand vous imprimez deux codes, étiquetez-les. Deux carrés identiques sans mention « iPhone » et « Android » sont pires qu'un seul code, parce que les gens scannent le mauvais et atterrissent dans une boutique inutilisable.</p>
+<p>Quand vous imprimez deux codes, étiquetez-les. Deux carrés identiques sans mention « iPhone » et « Android » sont pires qu’un seul code, parce que les gens scannent le mauvais et atterrissent dans une boutique inutilisable.</p>
   </section>
 
   <section class="faq" id="faq">
     <h2>Bon à savoir</h2>
     <details><summary><span>Un code statique peut-il ouvrir les deux boutiques ?</span></summary><p>Non. Un code statique stocke une seule URL, et vos deux fiches de boutique sont deux URL. Si vous encodez le lien App Store, les visiteurs Android atterrissent sur une app qu’ils ne peuvent pas installer. Imprimez deux codes étiquetés, ou faites pointer un code vers une page de votre domaine qui détecte le téléphone et redirige vers la bonne boutique.</p></details>
     <details><summary><span>Et si je remplis les deux champs ?</span></summary><p>Seul le lien App Store est encodé — le champ Play sert quand le champ App Store est vide. Pour couvrir les deux plateformes, créez deux codes, un par champ.</p></details>
-    <details><summary><span>Et si je n'ai qu'une plateforme ?</span></summary><p>Remplissez ce champ et imprimez un code. Rien d’autre n’est nécessaire.</p></details>
-    <details><summary><span>Détecte-t-il le téléphone et redirige-t-il automatiquement ?</span></summary><p>Pas tout seul — un motif imprimé ne peut pas exécuter de logique. La détection d’appareil demande une page intermédiaire : hébergez une petite page de redirection, puis faites pointer un code dynamique dessus pour pouvoir changer la destination plus tard sans réimprimer.</p></details>
-    <details><summary><span>Compte-t-il les installations ?</span></summary><p>Non. Les codes statiques ne contiennent que le lien et ne renvoient jamais rien. App Store Connect et la Play Console indiquent déjà les installations.</p></details>
+    <details><summary><span>Et si je n’ai qu’une plateforme ?</span></summary><p>Remplissez ce champ et imprimez un code. Rien d’autre n’est nécessaire.</p></details>
+    <details><summary><span>Détecte-t-il le téléphone et redirige-t-il automatiquement ?</span></summary><p>Pas tout seul — un motif imprimé ne peut pas exécuter de logique. La détection d’appareil demande une page intermédiaire : hébergez une petite page routeur, puis faites pointer un code dynamique dessus pour pouvoir changer la destination plus tard sans réimprimer.</p></details>
+    <details><summary><span>Compte-t-il les installations ?</span></summary><p>Non. Les codes statiques ne contiennent que le lien et ne renvoient jamais rien. App Store Connect et la Play Console indiquent déjà les installations.</p></details>
   </section>
 
   <footer>
@@ -414,20 +414,20 @@
       <img loading="lazy" decoding="async" width="160" height="160" src="/assets/img/mascots/scanner.webp" alt="">
       <div class="fctaText">
         <h3>Codes dynamiques illimités — offre à durée limitée.</h3>
-        <p>Connectez-vous gratuitement et créez-en autant que nécessaire. Chaque code reste modifiable après impression et n'expire jamais.</p>
+        <p>Connectez-vous gratuitement et créez-en autant que nécessaire. Chaque code reste modifiable après impression et n’expire jamais.</p>
       </div>
       <a class="fctaBtn" href="/fr/login/">Commencer gratuitement</a>
     </div>
     <div class="fmain">
       <div class="fbrand">
         <a class="fbrandName" href="/fr/" style="text-decoration:none">Free<em>Qrly</em></a>
-        <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n'expirent jamais.</p>
-        <div class="fmade">Faits discrètement — des codes statiques dans votre navigateur.</div>
+        <p class="ftag">De beaux QR codes, créés dans votre navigateur. Les codes statiques n’expirent jamais.</p>
+        <div class="fmade">Fait discrètement — codes statiques dans votre navigateur.</div>
       </div>
       <div class="fcol"><h4>Produit</h4><a href="/fr/">Générateur QR</a><a href="/fr/batch-qr-code/">QR par lots</a><a href="/fr/qr-code-with-logo/">QR avec logo</a><a href="/fr/dynamic-qr-code/">QR codes dynamiques</a><a href="/fr/ticket-qr-code/">QR codes de billet</a><a href="/fr/scan/">Scanner QR</a><a href="/fr/barcode-generator/">Générateur de codes-barres</a><a href="/fr/pricing/">Tarifs</a></div>
-      <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d'impression</a><a href="/fr/#faq">FAQ</a></div>
+      <div class="fcol"><h4>Ressources</h4><a href="/fr/blog/">Blog</a><a href="/fr/developers/">Développeurs · API et MCP</a><a href="/fr/blog/qr-code-print-size-guide/">Guide des tailles d’impression</a><a href="/fr/#faq">FAQ</a></div>
       <div class="fcol"><h4>Entreprise</h4><a href="/fr/about/">À propos</a><a href="mailto:hello@freeqrly.com">Contact</a></div>
-      <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d'utilisation</a></div>
+      <div class="fcol"><h4>Légal</h4><a href="/fr/privacy/">Politique de confidentialité</a><a href="/fr/terms/">Conditions d’utilisation</a></div>
     </div>
     <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
   </footer>
@@ -435,6 +435,6 @@
 <script src="/assets/lib/qr-code-styling.js?v=518a6a06"></script>
 <script src="/assets/lib/jszip.min.js?v=acc7e414"></script>
 <script src="/assets/js/vcard.js?v=ef54dd14"></script>
-<script src="/assets/js/app.js?v=6a675286"></script>
+<script src="/assets/js/app.js?v=8e09cfd2"></script>
 </body>
 </html>

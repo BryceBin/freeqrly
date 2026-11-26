@@ -120,6 +120,27 @@ def localize_page(key, lang, trans):
         return (s.replace("\\", "\\\\").replace('"', '\\"')
                  .replace("\r\n", "\\n").replace("\n", "\\n").replace("\r", "\\n"))
 
+    # HTML entities: the extractor decodes entities, so a key holds the real
+    # character while the page has the entity — "Try the generator →" never
+    # matched "Try the generator &rarr;", and that call-to-action stayed
+    # English on all nine About pages. Register the entity form as well.
+    _ENTITIES = {"→": "&rarr;", "←": "&larr;", "—": "&mdash;", "–": "&ndash;",
+                 "…": "&hellip;", "×": "&times;", "’": "&rsquo;",
+                 "“": "&ldquo;", "”": "&rdquo;"}
+    for en in list(trans.keys()):
+        ent = en
+        for ch, code in _ENTITIES.items():
+            if ch in ent:
+                ent = ent.replace(ch, code)
+        # Only register the variant when the page actually carries the entity
+        # form; otherwise every key containing a dash or arrow would add a
+        # phantom "missing" entry for no reason.
+        if ent != en and ent not in trans and ent in out:
+            tr_ent = trans[en]
+            for ch, code in _ENTITIES.items():
+                if ch in tr_ent:
+                    tr_ent = tr_ent.replace(ch, code)
+            trans[ent] = tr_ent
     # JSON-LD: string values appear with \" escapes (json.dumps), so the plain
     # EN string never matches inside <script type="application/ld+json">.
     # FAQ answers with <a href="..."> links stayed English in localized pages

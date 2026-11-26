@@ -61,7 +61,7 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-sy
 <script src="/assets/js/acct-menu.js?v=ed669f41"></script>
 <script src="/assets/js/subpage-header.js?v=17f09708"></script>
   <h1>Privacy Policy</h1>
-  <p class="dateline">Last updated: October 24, 2026</p>
+  <p class="dateline">Last updated: November 26, 2026</p>
   <p class="lede">FreeQrly is built around a simple idea: the static QR generator runs entirely in your browser, and we collect as little as possible. This page says plainly what we do collect, why, and how long we keep it.</p>
 
   <h2>What we collect</h2>
@@ -97,6 +97,16 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-sy
 
   <h2>Cookies</h2>
   <p>One strictly-necessary session cookie keeps you signed in. That is all. No tracking pixels, no advertising cookies, and no analytics that follow you around the web. We do run anonymous usage analytics to understand how the site is used: page views, button clicks, and feature use are counted in aggregate. These events record only coarse details — the page, the feature used, the general device type, the browser language, the country, and how you arrived (direct, a search engine, or an AI tool). They use a random session identifier that lives only in your current browser tab and is discarded when the tab closes; it is never linked to your account or identity. We never record what you type into the generator (links, WiFi passwords, contacts), your IP address, or any cross-site identifier. Static codes are still generated entirely in your browser, and their content never leaves your device.</p>
+
+  <h2>The browser extension</h2>
+  <p>The FreeQrly QR Code Generator extension for Chrome works entirely on your device. It has no account, sends no analytics, and makes no network requests, with the single exception described below.</p>
+  <ul>
+    <li><b>The address of the tab you are on.</b> When you open the extension, it reads the current tab's URL so the field is already filled in. That address is used to draw the code on your device and is never sent anywhere.</li>
+    <li><b>Your recent items.</b> The last few things you generated or downloaded are kept in your browser's local storage on your own computer, so you can bring them back with one click. They stay there until you clear them or uninstall the extension.</li>
+    <li><b>Images you choose to scan.</b> An image you drop, paste or pick is read in your browser to find the code inside it. It is never uploaded.</li>
+  </ul>
+  <p>The one request the extension can make is one you ask for: if you paste an image URL and press Load, your browser fetches that address directly. Nothing about you is sent along with it.</p>
+  <p>Uninstalling the extension deletes everything it stored locally.</p>
 
   <h2>Your rights</h2>
   <p>You can <a href="/dashboard/">export your data</a> or <a href="/dashboard/">delete your account</a> at any time from your Dashboard. Deleting your account releases your codes — they keep working, but can no longer be edited — and removes your account data. If you need anything else, reach us through the contact link in the footer.</p>

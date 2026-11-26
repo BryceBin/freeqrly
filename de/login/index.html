@@ -93,10 +93,10 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-sy
   <div class="brand">
     <img class="mascot" src="/assets/img/mascots/qly-url.webp" alt="Qly hält einen QR-Code">
     <h1>Deine Codes,<br> alle an einem Ort.</h1>
-    <p class="lede">Sign in to manage the dynamic codes on your account &mdash; edit them any time, even after they&rsquo;re printed.</p>
+    <p class="lede">Melde dich an, um die dynamischen Codes deines Kontos zu verwalten &mdash; ändere sie jederzeit, auch nach dem Druck.</p>
     <ul>
       <li>Alle deine dynamischen Codes in einer Liste</li>
-      <li>Edit a code even after it&rsquo;s printed</li>
+      <li>Code auch nach dem Druck noch ändern</li>
       <li>Scans nach Tag, Stadt und Gerät sehen</li>
     </ul>
     <p class="small">Statische Codes brauchen nie ein Konto. Anmelden musst du dich nur für dynamische Codes.</p>
@@ -119,7 +119,7 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-sy
       </div>
       <button class="btn" id="pwBtn" type="submit">Anmelden</button>
       <p class="merror" id="pwErr" hidden></p>
-      <p class="note" id="pwHint" hidden>We'll email you a verification link &mdash; click it and you're in.</p>
+      <p class="note" id="pwHint" hidden>Wir schicken dir einen Bestätigungslink per E-Mail &mdash; klick drauf und du bist drin.</p>
       <div class="rowBetween">
         <span></span>
         <a href="/de/reset/" id="forgotLink">Forgot password?</a>
@@ -133,9 +133,9 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-sy
   <div class="inboxState" id="inboxState" hidden>
     <div class="inboxIcon">✉️</div>
     <h2>Prüf dein Postfach</h2>
-    <p id="inboxText">We sent you a link. Click it in any tab &mdash; this page continues automatically once you're verified.</p>
+    <p id="inboxText">Wir haben dir einen Link geschickt. Klick ihn in einem beliebigen Tab an &mdash; diese Seite geht automatisch weiter, sobald du bestätigt bist.</p>
     <button class="btn" id="recheckBtn" style="margin-top:18px">Schon bestätigt? Nochmal prüfen</button>
-    <p class="mok" id="recheckNote" hidden>Not verified yet &mdash; check your inbox for the link.</p>
+    <p class="mok" id="recheckNote" hidden>Noch nicht bestätigt &mdash; schau in deinem Postfach nach dem Link.</p>
     <p style="margin-top:14px"><button class="linkbtn" id="inboxBackBtn" type="button">Andere E-Mail verwenden</button></p>
   </div>
 
@@ -143,7 +143,7 @@ footer{margin-top:40px;padding:44px 0 40px;text-align:left;font-family:-apple-sy
   <div class="inboxState" id="verifiedState" hidden>
     <div class="inboxIcon">✅</div>
     <h2>Bestätigt</h2>
-    <p>You're signed in. If you started from another tab, return to your original tab &mdash; it continues automatically.</p>
+    <p>Du bist angemeldet. Wenn du von einem anderen Tab gestartet bist, geh zurück zu deinem ursprünglichen Tab &mdash; er geht automatisch weiter.</p>
     <button class="btn" id="verifiedContinueBtn" style="margin-top:18px">Weiter zum Dashboard</button>
   </div>
 
@@ -381,9 +381,9 @@ $('pwForm').addEventListener('submit', async e => {
       <div class="fbrand">
         <a class="fbrandName" href="/de/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">Schöne QR-Codes, erstellt in Ihrem Browser. Statische Codes laufen nie ab.</p>
-        <div class="fmade">Statische Codes, im Browser erstellt.</div>
+        <div class="fmade">Leise gemacht — statische Codes in deinem Browser.</div>
       </div>
-      <div class="fcol"><h4>Produkt</h4><a href="/de/">QR-Generator</a><a href="/de/batch-qr-code/">QR-Codes im Batch</a><a href="/de/qr-code-with-logo/">QR-Code mit Logo</a><a href="/de/scan/">QR-Scanner</a><a href="/de/barcode-generator/">Barcode-Generator</a><a href="/de/pricing/">Preise</a></div>
+      <div class="fcol"><h4>Produkt</h4><a href="/de/">QR-Generator</a><a href="/de/batch-qr-code/">QR-Codes im Stapel</a><a href="/de/qr-code-with-logo/">QR-Code mit Logo</a><a href="/de/scan/">QR-Scanner</a><a href="/de/barcode-generator/">Barcode-Generator</a><a href="/de/pricing/">Preise</a></div>
       <div class="fcol"><h4>Ressourcen</h4><a href="/de/blog/">Blog</a><a href="/de/developers/">Entwickler · API &amp; MCP</a><a href="/de/blog/qr-code-print-size-guide/">Druckgrößen-Guide</a><a href="/de/#faq">FAQ</a></div>
       <div class="fcol"><h4>Unternehmen</h4><a href="/de/about/">Über uns</a><a href="mailto:hello@freeqrly.com">Kontakt</a></div>
       <div class="fcol"><h4>Rechtliches</h4><a href="/de/privacy/">Datenschutz</a><a href="/de/terms/">Nutzungsbedingungen</a></div>

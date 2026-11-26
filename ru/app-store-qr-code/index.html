@@ -252,7 +252,7 @@
         <div id="fields"></div>
 
         <div id="batchPanel" hidden>
-          <div class="fl"><span data-i18n="bType">Тип:</span>: <select id="batchType" class="batchTypeSel"></select></div>
+          <div class="fl"><span data-i18n="bType">Тип</span>: <select id="batchType" class="batchTypeSel"></select></div>
           <div class="fl" data-i18n="bLabel">Одна ссылка на строку</div>
           <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
           <div class="fl batchFmt" id="batchFmt"></div>
@@ -273,7 +273,7 @@
             <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Чёрная пятница</span></button>
             <button type="button" class="fpBtn" data-preset="xmas"><span class="fpDot" style="background:#1F4D3A"></span><span id="fpXmT">Рождество</span></button>
           </div></div>
-        <div class="approw"><div class="applabel"><span data-i18n="dots">Форма точек</span><small data-i18n="dotsSub">Форма точек</small></div>
+        <div class="approw"><div class="applabel"><span data-i18n="dots">Форма точек</span><small data-i18n="dotsSub">Форма точек в QR-коде</small></div>
           <div class="seg" id="segDots" role="radiogroup">
             <button data-v="square" data-i18n="dSquare">Квадрат</button><button data-v="dots" data-i18n="dRound">Круг</button><button data-v="rounded" data-i18n="dSoft">Мягкий</button><button data-v="extra-rounded" data-i18n="dPebble">Галька</button>
           </div></div>
@@ -363,7 +363,7 @@
   <tbody>
     <tr><td>Два кода рядом</td><td>один для App Store, один для Play</td><td>2</td><td>нет, перепечатка</td><td>ничего</td></tr>
     <tr><td>Один код на страницу-маршрутизатор</td><td>страница определяет устройство и перенаправляет в нужный магазин</td><td>1</td><td>да, если страница динамическая</td><td>страница, которую вы контролируете</td></tr>
-    <tr><td>Умный баннер магазинов</td><td>баннеры Apple и Google на вашем сайте</td><td>1 (на ваш сайт)</td><td>да</td><td>сайт</td></tr>
+    <tr><td>Смарт-баннер магазина</td><td>баннеры Apple и Google на вашем сайте</td><td>1 (на ваш сайт)</td><td>да</td><td>сайт</td></tr>
   </tbody>
 </table></div>
 <p>Два кода — честный вариант без усилий. Страница-маршрутизатор — то, что делают большинство приложений, когда у них уже есть маркетинговый сайт. Умные баннеры работают, только если человек сначала попал на ваш сайт, а это другая задача, не печатный код.</p>
@@ -371,7 +371,7 @@
 
   <section class="lpsec">
     <h2>Как получить ссылки на магазины</h2>
-<p>Оба магазина дают чистый постоянный адрес, и оба легко найти, если знать где.</p>
+<p>Оба магазина дают чистый постоянный адрес, и оба легко найти, если знать, где искать.</p>
 <p>Для iOS: откройте приложение в App Store Connect, перейдите в «Информация о приложении» и скопируйте адрес App Store. Он выглядит так: <code>apps.apple.com/app/id1234567890</code>. Можно добавить код страны — <code>apps.apple.com/gb/app/id…</code> — если код должен открывать конкретный регион; но обычная версия перенаправляет в регион посетителя, и обычно это то, что нужно.</p>
 <p>Для Android: откройте страницу в Play Console и скопируйте ссылку из адресной строки. Она выглядит так: <code>play.google.com/store/apps/details?id=com.yourcompany.yourapp</code>. <code>id</code> — это имя пакета, и оно не меняется, даже если название приложения меняется.</p>
 <p>Уберите всё после ID. Маркетинговые инструменты часто добавляют параметры отслеживания, например <code>?mt=8</code> или <code>&amp;referrer=…</code>. Они безвредны, но делают узор QR плотнее без всякой пользы, а плотный узор хуже печатается мелко.</p>
@@ -381,7 +381,7 @@
     <h2>Страница-маршрутизатор, которая работает</h2>
 <p>Если выбираете один код, ему нужно куда-то вести. Страница-маршрутизатор — небольшая страница на вашем домене, которая читает user agent и перенаправляет.</p>
 <p>Логика короткая: браузер сообщает iPhone или iPad — ведём в App Store; сообщает Android — в Play; во всех остальных случаях показываем обе кнопки. Оставьте запасной вариант для компьютера, потому что заметная часть сканирований приходит от тех, кто проверяет с ноутбука.</p>
-<p>На практике такие страницы ломают две вещи. Встроенные браузеры Apple и некоторые соцсети урезают user agent до чего-то общего, и определение ошибается. А перенаправление, сработавшее до отрисовки страницы, выглядит как битая ссылка. Показать обе кнопки, выделив определённую, мягче, чем мгновенный переход.</p>
+<p>На практике такие страницы ломают две вещи. Встроенные браузеры Apple и некоторые соцсети урезают user agent до чего-то общего, и определение ошибается. А перенаправление, сработавшее до отрисовки страницы, выглядит как битая ссылка. Показать обе кнопки, выделив определённую, удобнее, чем мгновенный переход.</p>
 <p>Если адрес назначения нужно будет менять, используйте динамический код, ведущий на страницу-маршрутизатор. Меняете страницу — и все напечатанные коды следуют за ней, без перепечатки.</p>
   </section>
 
@@ -390,7 +390,7 @@
 <div class="tblwrap"><table>
   <thead><tr><th>Размещение</th><th>Размер</th><th>Примечание</th></tr></thead>
   <tbody>
-    <tr><td>Слайд к запуску приложения</td><td>8 см</td><td>сканируют с места, с 1–2 м</td></tr>
+    <tr><td>Слайд запуска приложения</td><td>8 см</td><td>сканируют с места, с 1–2 м</td></tr>
     <tr><td>Упаковка и вкладыши</td><td>2 cm</td><td>по одному коду на платформу, с ясной подписью</td></tr>
     <tr><td>Низ чека</td><td>1,5 см</td><td>термопринтеры размывают тонкие линии; сначала проверьте</td></tr>
     <tr><td>Плакат или реклама</td><td>15 cm</td><td>сканируют с 2–3 м</td></tr>
@@ -422,7 +422,7 @@
       <div class="fbrand">
         <a class="fbrandName" href="/ru/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">Красивые QR-коды прямо в браузере. Статические коды не истекают никогда.</p>
-        <div class="fmade">Статические коды сделаны в вашем браузере.</div>
+        <div class="fmade">Сделано тихо — статические коды в вашем браузере.</div>
       </div>
       <div class="fcol"><h4>Продукт</h4><a href="/ru/">Генератор QR</a><a href="/ru/batch-qr-code/">Пакетные QR-коды</a><a href="/ru/qr-code-with-logo/">QR с логотипом</a><a href="/ru/dynamic-qr-code/">Динамические QR-коды</a><a href="/ru/ticket-qr-code/">QR-коды для билетов</a><a href="/ru/scan/">Сканер QR</a><a href="/ru/barcode-generator/">Генератор штрихкодов</a><a href="/ru/pricing/">Цены</a></div>
       <div class="fcol"><h4>Ресурсы</h4><a href="/ru/blog/">Блог</a><a href="/ru/developers/">Разработчикам · API и MCP</a><a href="/ru/blog/qr-code-print-size-guide/">Гид по размерам печати</a><a href="/ru/#faq">Вопросы и ответы</a></div>
@@ -435,6 +435,6 @@
 <script src="/assets/lib/qr-code-styling.js?v=518a6a06"></script>
 <script src="/assets/lib/jszip.min.js?v=acc7e414"></script>
 <script src="/assets/js/vcard.js?v=ef54dd14"></script>
-<script src="/assets/js/app.js?v=6a675286"></script>
+<script src="/assets/js/app.js?v=8e09cfd2"></script>
 </body>
 </html>

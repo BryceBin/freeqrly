@@ -252,7 +252,7 @@
         <div id="fields"></div>
 
         <div id="batchPanel" hidden>
-          <div class="fl"><span data-i18n="bType">النوع:</span>: <select id="batchType" class="batchTypeSel"></select></div>
+          <div class="fl"><span data-i18n="bType">النوع</span>: <select id="batchType" class="batchTypeSel"></select></div>
           <div class="fl" data-i18n="bLabel">رابط واحد في كل سطر</div>
           <textarea id="batchInput" rows="6" placeholder="https://example.com/a&#10;https://example.com/b&#10;https://example.com/c"></textarea>
           <div class="fl batchFmt" id="batchFmt"></div>
@@ -273,7 +273,7 @@
             <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Black Friday</span></button>
             <button type="button" class="fpBtn" data-preset="xmas"><span class="fpDot" style="background:#1F4D3A"></span><span id="fpXmT">Christmas</span></button>
           </div></div>
-        <div class="approw"><div class="applabel"><span data-i18n="dots">شكل النقاط</span><small data-i18n="dotsSub">شكل النقاط</small></div>
+        <div class="approw"><div class="applabel"><span data-i18n="dots">شكل النقاط</span><small data-i18n="dotsSub">شكل النقاط في رمز QR</small></div>
           <div class="seg" id="segDots" role="radiogroup">
             <button data-v="square" data-i18n="dSquare">مربع</button><button data-v="dots" data-i18n="dRound">دائري</button><button data-v="rounded" data-i18n="dSoft">ناعم</button><button data-v="extra-rounded" data-i18n="dPebble">حصاة</button>
           </div></div>
@@ -356,7 +356,7 @@
   <section class="lpsec">
     <h2>الرمز الثابت الواحد يحمل رابطًا واحدًا</h2>
 <p>هذا ما تتجاهله معظم صفحات رموز QR لمتاجر التطبيقات، فلنقله بصراحة: رمز QR يخزّن نصًا، وهذا النص عنوان. رمز واحد، وجهة واحدة. لا يوجد داخل النمط منطق يفحص الهاتف ويختار متجرًا.</p>
-<p>هذا مهم لأن صفحتا iOS وأندرويد عنوانان مختلفان. رمز ثابت واحد يمكنه الإشارة إلى واحد منهما فقط. إن شفّرت رابط App Store، يصل مستخدمو أندرويد إلى صفحة تطبيق لا يستطيعون تثبيته؛ والعكس سيئ بالقدر نفسه.</p>
+<p>هذا مهم لأن صفحتا iOS وAndroid عنوانان مختلفان. رمز ثابت واحد يمكنه الإشارة إلى واحد منهما فقط. إن شفّرت رابط App Store، يصل مستخدمو أندرويد إلى صفحة تطبيق لا يستطيعون تثبيته؛ والعكس سيئ بالقدر نفسه.</p>
 <p>هناك ثلاث طرق لتغطية المنصتين. الجدول أدناه يقارنها.</p>
 <div class="tblwrap"><table>
   <thead><tr><th>الطريقة</th><th>كيف تعمل</th><th>الرموز المطبوعة</th><th>تعمل إذا تغيّر الرابط</th><th>ما تحتاجه</th></tr></thead>
@@ -422,9 +422,9 @@
       <div class="fbrand">
         <a class="fbrandName" href="/ar/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">رموز QR جميلة تُصنع في متصفحك. الرموز الثابتة لا تنتهي أبدًا.</p>
-        <div class="fmade">رموز ثابتة، صُنعت بصمت في متصفحك。</div>
+        <div class="fmade">صُنع بهدوء — رموز ثابتة في متصفحك.</div>
       </div>
-      <div class="fcol"><h4>المنتج</h4><a href="/ar/">منشئ QR</a><a href="/ar/batch-qr-code/">رموز QR بالجملة</a><a href="/ar/qr-code-with-logo/">QR مع شعار</a><a href="/ar/dynamic-qr-code/">رموز QR الديناميكية</a><a href="/ar/ticket-qr-code/">رموز QR للتذاكر</a><a href="/ar/scan/">ماسح QR</a><a href="/ar/barcode-generator/">منشئ الباركود</a><a href="/ar/pricing/">التسعير</a></div>
+      <div class="fcol"><h4>المنتج</h4><a href="/ar/">منشئ QR</a><a href="/ar/batch-qr-code/">رموز QR بالدفعات</a><a href="/ar/qr-code-with-logo/">QR مع شعار</a><a href="/ar/dynamic-qr-code/">رموز QR الديناميكية</a><a href="/ar/ticket-qr-code/">رموز QR للتذاكر</a><a href="/ar/scan/">ماسح QR</a><a href="/ar/barcode-generator/">منشئ الباركود</a><a href="/ar/pricing/">التسعير</a></div>
       <div class="fcol"><h4>الموارد</h4><a href="/ar/blog/">المدونة</a><a href="/ar/developers/">المطورون · API وMCP</a><a href="/ar/blog/qr-code-print-size-guide/">دليل مقاس الطباعة</a><a href="/ar/#faq">الأسئلة الشائعة</a></div>
       <div class="fcol"><h4>الشركة</h4><a href="/ar/about/">من نحن</a><a href="mailto:hello@freeqrly.com">اتصل بنا</a></div>
       <div class="fcol"><h4>قانوني</h4><a href="/ar/privacy/">سياسة الخصوصية</a><a href="/ar/terms/">شروط الخدمة</a></div>
@@ -435,6 +435,6 @@
 <script src="/assets/lib/qr-code-styling.js?v=518a6a06"></script>
 <script src="/assets/lib/jszip.min.js?v=acc7e414"></script>
 <script src="/assets/js/vcard.js?v=ef54dd14"></script>
-<script src="/assets/js/app.js?v=6a675286"></script>
+<script src="/assets/js/app.js?v=8e09cfd2"></script>
 </body>
 </html>

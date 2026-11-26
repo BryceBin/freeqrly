@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerador de QR code App Store: um código por loja | FreeQrly</title>
+<title>Gerador de QR code para App Store: um código por loja | FreeQrly</title>
 <meta name="description" content="Crie um QR code para seu link da App Store ou do Google Play. Um código estático guarda uma URL: iOS e Android são dois códigos, e aqui você vê qual imprimir.">
 <link rel="canonical" href="https://freeqrly.com/pt/app-store-qr-code/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/app-store-qr-code/">
@@ -18,7 +18,7 @@
 <link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/app-store-qr-code/">
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/app-store-qr-code/">
 <meta name="theme-color" content="#e9eef4">
-<meta property="og:title" content="Gerador de QR code App Store: um código por loja | FreeQrly">
+<meta property="og:title" content="Gerador de QR code para App Store: um código por loja | FreeQrly">
 <meta property="og:description" content="Crie um QR code para seu link da App Store ou do Google Play. Um código estático guarda uma URL: iOS e Android são dois códigos, e aqui você vê qual imprimir.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/pt/app-store-qr-code/">
@@ -113,7 +113,7 @@
       "name": "Detecta o telefone e redireciona sozinho?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não sozinho — um padrão impresso não executa lógica. A detecção de aparelho precisa de uma página no meio: hospede uma pequena página de redirecionamento e aponte um código dinâmico para ela, assim você muda o destino depois sem reimprimir."
+        "text": "Não sozinho — um padrão impresso não executa lógica. A detecção de aparelho precisa de uma página no meio: hospede uma pequena página roteadora e aponte um código dinâmico para ela, assim você muda o destino depois sem reimprimir."
       }
     },
     {
@@ -356,7 +356,7 @@
   <section class="lpsec">
     <h2>Um código estático contém um único link</h2>
 <p>É o que quase toda página de QR para loja de apps omite, então aqui vai sem rodeios: um QR guarda texto, e esse texto é uma URL. Um código, um destino. Dentro do padrão não há lógica capaz de olhar o celular e escolher a loja.</p>
-<p>Isso importa porque suas fichas de iOS e Android são duas URLs diferentes. Um único código estático só pode apontar para uma delas. Se você codificar o link do App Store, usuários de Android caem numa página de um app que não podem instalar; o contrário é igualmente ruim.</p>
+<p>Isso importa porque suas páginas de iOS e Android são duas URLs diferentes. Um único código estático só pode apontar para uma delas. Se você codificar o link do App Store, usuários de Android caem numa página de um app que não podem instalar; o contrário é igualmente ruim.</p>
 <p>Há três formas de cobrir as duas plataformas. A tabela abaixo compara as três.</p>
 <div class="tblwrap"><table>
   <thead><tr><th>Abordagem</th><th>Como funciona</th><th>Códigos impressos</th><th>Funciona se o link mudar</th><th>Preparação</th></tr></thead>
@@ -379,7 +379,7 @@
 
   <section class="lpsec">
     <h2>Montar uma página roteadora que funcione</h2>
-<p>Se escolher um código, ele precisa de um destino. Uma página roteadora é uma página pequena no seu domínio que detecta o user agent e redireciona.</p>
+<p>Se escolher um código, ele precisa de um destino. Uma página roteadora é uma página pequena no seu domínio que detecta o agente de usuário e redireciona.</p>
 <p>A lógica é curta: se o navegador indicar iPhone ou iPad, vai para o App Store; se indicar Android, vai para o Play; caso contrário, mostra os dois botões. Deixe uma alternativa para desktop, porque boa parte das leituras vem de gente testando no notebook.</p>
 <p>Duas coisas quebram essas páginas na prática. Os navegadores internos da Apple e alguns apps sociais reduzem o user agent a algo genérico, e a detecção erra. E um redirecionamento disparado antes de a página renderizar parece um link quebrado. Mostrar os dois botões com o detectado em destaque é mais tolerante do que redirecionar na hora.</p>
 <p>Se quiser poder editar o destino depois, use um código dinâmico apontando para a página roteadora. Mude a página e todos os códigos impressos acompanham, sem reimprimir.</p>
@@ -392,7 +392,7 @@
   <tbody>
     <tr><td>Slide de lançamento</td><td>8 cm</td><td>lido do assento, a 1–2 m</td></tr>
     <tr><td>Embalagens e encartes</td><td>2 cm</td><td>um código por plataforma, bem etiquetado</td></tr>
-    <tr><td>Rodapé do cupom</td><td>1,5 cm</td><td>impressoras térmicas borram linhas finas; teste antes</td></tr>
+    <tr><td>Rodapé do recibo</td><td>1,5 cm</td><td>impressoras térmicas borram linhas finas; teste antes</td></tr>
     <tr><td>Cartaz ou anúncio</td><td>15 cm</td><td>lido a 2–3 m</td></tr>
     <tr><td>Cartão de visita</td><td>1,5 cm</td><td>só se imprimir dois códigos etiquetados</td></tr>
   </tbody>
@@ -405,7 +405,7 @@
     <details><summary><span>Um código estático pode abrir as duas lojas?</span></summary><p>Não. Um código estático guarda uma única URL, e suas duas páginas de loja são duas URLs. Se você codificar o link da App Store, visitantes de Android caem num app que não podem instalar. Imprima dois códigos etiquetados ou aponte um código para uma página do seu próprio domínio que detecte o telefone e encaminhe para a loja certa.</p></details>
     <details><summary><span>E se eu preencher os dois campos?</span></summary><p>Só o link da App Store é codificado — o campo Play é usado quando o campo App Store está vazio. Para cobrir as duas plataformas, crie dois códigos, um por campo.</p></details>
     <details><summary><span>E se eu só tiver uma plataforma?</span></summary><p>Preencha esse campo e imprima um código. Não precisa de mais nada.</p></details>
-    <details><summary><span>Detecta o telefone e redireciona sozinho?</span></summary><p>Não sozinho — um padrão impresso não executa lógica. A detecção de aparelho precisa de uma página no meio: hospede uma pequena página de redirecionamento e aponte um código dinâmico para ela, assim você muda o destino depois sem reimprimir.</p></details>
+    <details><summary><span>Detecta o telefone e redireciona sozinho?</span></summary><p>Não sozinho — um padrão impresso não executa lógica. A detecção de aparelho precisa de uma página no meio: hospede uma pequena página roteadora e aponte um código dinâmico para ela, assim você muda o destino depois sem reimprimir.</p></details>
     <details><summary><span>Conta as instalações?</span></summary><p>Não. Códigos estáticos carregam só o link e nunca enviam nada. O App Store Connect e o Play Console já informam as instalações.</p></details>
   </section>
 
@@ -422,7 +422,7 @@
       <div class="fbrand">
         <a class="fbrandName" href="/pt/" style="text-decoration:none">Free<em>Qrly</em></a>
         <p class="ftag">QR codes bonitos, feitos no seu navegador. Os estáticos nunca expiram.</p>
-        <div class="fmade">Códigos estáticos, feitos no seu navegador.</div>
+        <div class="fmade">Feito com calma — códigos estáticos no seu navegador.</div>
       </div>
       <div class="fcol"><h4>Produto</h4><a href="/pt/">Gerador de QR</a><a href="/pt/batch-qr-code/">QR em lote</a><a href="/pt/qr-code-with-logo/">QR com logo</a><a href="/pt/dynamic-qr-code/">Códigos QR dinâmicos</a><a href="/pt/ticket-qr-code/">Códigos QR para ingressos</a><a href="/pt/scan/">Scanner QR</a><a href="/pt/barcode-generator/">Gerador de código de barras</a><a href="/pt/pricing/">Preços</a></div>
       <div class="fcol"><h4>Recursos</h4><a href="/pt/blog/">Blog</a><a href="/pt/developers/">Desenvolvedores · API e MCP</a><a href="/pt/blog/qr-code-print-size-guide/">Guia de tamanho de impressão</a><a href="/pt/#faq">Perguntas frequentes</a></div>
@@ -435,6 +435,6 @@
 <script src="/assets/lib/qr-code-styling.js?v=518a6a06"></script>
 <script src="/assets/lib/jszip.min.js?v=acc7e414"></script>
 <script src="/assets/js/vcard.js?v=ef54dd14"></script>
-<script src="/assets/js/app.js?v=6a675286"></script>
+<script src="/assets/js/app.js?v=8e09cfd2"></script>
 </body>
 </html>
