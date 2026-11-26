@@ -7,9 +7,11 @@
 Googlebot 每次都会看到"整站几百页都被修改了"。
 
 规则：
-- 只处理 assets/css/ 和 assets/js/ 下的引用；图片用的是手工维护的
-  ?v=t2 / m3 标记，不在本模块职责内。
-- 本来就带 ?v= 的引用才更新，不会给没带版本号的引用新增参数。
+- 处理 assets/css/、assets/js/ 和 assets/lib/ 下的引用；图片用的是手工
+  维护的 ?v=t2 / m3 标记，不在本模块职责内。
+- assets/lib/ 即使原来没有 ?v= 也会补上：第三方库文件名固定，不给它一个
+  内容哈希就没有任何办法让浏览器换掉旧副本（_headers 给它设了长缓存）。
+- 其余资源本来就带 ?v= 的才更新，不会给没带版本号的引用新增参数。
 - 找不到对应文件（外部资源、拼错的路径）时保持原样。
 - 相对路径（../assets/css/main.css）相对该 HTML 所在目录解析。
 """
@@ -20,7 +22,7 @@ import re
 
 LINK_RE = re.compile(
     r'(?P<pre>(?:href|src)=")'
-    r'(?P<url>[^"?#]*assets/(?:css|js)/[^"?#]+\.[A-Za-z0-9]+)'
+    r'(?P<url>[^"?#]*assets/(?:css|js|lib)/[^"?#]+\.[A-Za-z0-9]+)'
     r'(?:\?v=(?P<ver>[^"&]*))?'
     r'(?P<post>[^"]*")'
 )
@@ -63,7 +65,11 @@ def sync_versions(site, dry_run=False, html_glob="**/*.html"):
 
         def repl(m, _path=path):
             ver = asset_hash(m.group("url"), _path)
-            if ver is None or m.group("ver") is None:
+            if ver is None:
+                return m.group(0)
+            # assets/lib/: add the version even when the reference has none,
+            # because the filename never changes.
+            if m.group("ver") is None and "assets/lib/" not in m.group("url"):
                 return m.group(0)
             if m.group("ver") == ver:
                 return m.group(0)

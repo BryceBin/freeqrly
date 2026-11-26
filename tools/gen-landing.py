@@ -25,6 +25,10 @@ V_VCARD  = _asset_v("assets/js/vcard.js")
 V_APP    = _asset_v("assets/js/app.js")
 V_HDRJS  = _asset_v("assets/js/site-header.js")
 V_ACCTJS = _asset_v("assets/js/acct-menu.js")
+# Vendored libraries: fixed filenames, so the ?v= is the only way to move a
+# browser off an old copy (they carry a long Cache-Control in _headers).
+V_QRLIB  = _asset_v("assets/lib/qr-code-styling.js")
+V_JSZIP  = _asset_v("assets/lib/jszip.min.js")
 
 PAGES = [
  dict(
@@ -1086,8 +1090,8 @@ def build(p):
     <div class="fbottom"><span>© 2026 FreeQrly</span><a href="mailto:hello@freeqrly.com">hello@freeqrly.com</a></div>
   </footer>
 </div>
-<script src="../assets/lib/qr-code-styling.js"></script>
-<script src="../assets/lib/jszip.min.js"></script>
+<script src="../assets/lib/qr-code-styling.js?v={V_QRLIB}"></script>
+<script src="../assets/lib/jszip.min.js?v={V_JSZIP}"></script>
 <script src="/assets/js/vcard.js?v={V_VCARD}"></script>
 <script src="../assets/js/app.js?v={V_APP}"></script>
 </body>

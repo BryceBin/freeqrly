@@ -110,7 +110,7 @@
   </footer>
 </div>
 <script src="/assets/js/vcard.js?v=5c0b6341"></script>
-<script src="../assets/lib/jsqr.js"></script>
+<script src="../assets/lib/jsqr.js?v=bc40c8a1"></script>
 <script>
 (function(){
   function fqSid(){ try{ let s=sessionStorage.getItem("fq_sid"); if(!s){ try{ const a=new Uint8Array(8); crypto.getRandomValues(a); s=Array.from(a,x=>x.toString(16).padStart(2,"0")).join(""); }catch(e){ s=Array.from({length:16},()=>Math.floor(Math.random()*16).toString(16)).join(""); } sessionStorage.setItem("fq_sid",s); } return s; }catch(e){ return ""; } }
