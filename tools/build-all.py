@@ -55,6 +55,15 @@ else:
         if line.startswith("Wrote"):
             print(f"  {line}")
 
+    # 2.1 重新生成本地化子页（/<lang>/<slug>/）。
+    #     以前这一步只在手工调用时才跑，于是英文页改过之后，各语言的落地页
+    #     长期停在旧版本上：App Store 页的正文在 9 种语言里都还是英文。
+    print("→ 重新生成本地化子页...")
+    out = run([sys.executable, "tools/localize_pages.py"])
+    for line in out.split("\n")[-3:]:
+        if line.strip():
+            print(f"  {line}")
+
     # 2.5. 合并首页 CSS（只首页用 bundle，子页/落地页仍用 3 个源文件）：
     #     main + acct-menu + site-header 按原引用顺序拼接，省 2 个渲染阻塞请求。
     #     bundle 是生成物，源文件不动；顺序即层叠顺序，不可调换。
@@ -64,6 +73,15 @@ else:
         bundle += open(os.path.join(SITE, "assets/css", _name), encoding="utf-8").read() + "\n"
     open(os.path.join(SITE, "assets/css/home-bundle.css"), "w", encoding="utf-8").write(bundle)
     print(f"  home-bundle.css ({len(bundle)} 字节)")
+
+    # 2.6. 重建 sitemap。
+    #     这一步以前不在构建里，于是新写的博客从来没进过 sitemap：线上 819 条，
+    #     实际有 849 条，30 个已上线、可访问的页面搜索引擎一无所知。
+    #     lastmod 只取自页面自身的日期值（见 gen-sitemap.py），所以改文案、
+    #     跑构建都不会让它变——只有页面内容日期真的更新时才会变。
+    print("→ 重建 sitemap...")
+    out = run([sys.executable, "tools/gen-sitemap.py"])
+    print(f"  {out.split(chr(10))[-1] if out else 'ok'}")
 
 # 3. 同步 ?v= 版本号：按资源内容哈希，只有文件真的变了才变。
 #

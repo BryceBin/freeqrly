@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — WiFi 二维码生成器","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/zh/wifi-qr-code/","description":"免费生成 WiFi 二维码，客人扫一下就连上你的网络。不用装 App，静态码免注册。静态码的密码永远不会离开你的浏览器。","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — WiFi 二维码生成器",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/zh/wifi-qr-code/",
+  "description": "免费生成 WiFi 二维码，客人扫一下就连上你的网络。不用装 App，静态码免注册。静态码的密码永远不会离开你的浏览器。",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "做你的 WiFi 二维码", "description": "输入一次网络名和密码，打印二维码，贴在冰箱上。客人扫一下就上线——不用再隔着房间喊密码。", "step": [{"@type": "HowToStep", "name": "输入网络信息", "text": "网络名、密码和加密类型（大多数家用路由器是 WPA2）。"}, {"@type": "HowToStep", "name": "打印二维码", "text": "下载高分辨率 PNG——印在小卡片上也清晰可读。"}, {"@type": "HowToStep", "name": "客人扫码加入", "text": "iPhone 相机（iOS 11+）和安卓（10+）扫一下直接连接。不用装 App。"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "做你的 WiFi 二维码",
+  "description": "输入一次网络名和密码，打印二维码，贴在冰箱上。客人扫一下就上线——不用再隔着房间喊密码。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "输入网络信息",
+      "text": "网络名、密码和加密类型（大多数家用路由器是 WPA2）。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "打印二维码",
+      "text": "下载高分辨率 PNG——印在小卡片上也清晰可读。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "客人扫码加入",
+      "text": "iPhone 相机（iOS 11+）和安卓（10+）扫一下直接连接。不用装 App。"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="wifi-qr-code" data-type="wifi">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">方形</option><option value="dots">圆形</option><option value="rounded">柔和</option><option value="extra-rounded">鹅卵石</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">即时输入，即时生成</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">在控制台中查看 →</a>

@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — 支付二维码生成器","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/zh/payment-qr-code/","description":"把 PayPal、Venmo 或支付链接变成可扫的二维码。免费，静态码免注册。扫一下就收款。","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — 支付二维码生成器",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/zh/payment-qr-code/",
+  "description": "把 PayPal、Venmo 或支付链接变成可扫的二维码。免费，静态码免注册。扫一下就收款。",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "生成你的支付二维码", "description": "粘贴你的 PayPal、Venmo、Cash App 或结账链接，得到一个顾客扫码付款的二维码。印在发票、市集摊位和小费罐上。", "step": [{"@type": "HowToStep", "name": "复制你的支付链接", "text": "PayPal.me、Venmo 个人主页、Cash App $cashtag 链接，或任何结账 URL。"}, {"@type": "HowToStep", "name": "粘贴链接", "text": "你的二维码会立刻出现在网址栏里。"}, {"@type": "HowToStep", "name": "印在你卖货的地方", "text": "发票、市集摊位、小费罐、包装。"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "生成你的支付二维码",
+  "description": "粘贴你的 PayPal、Venmo、Cash App 或结账链接，得到一个顾客扫码付款的二维码。印在发票、市集摊位和小费罐上。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "复制你的支付链接",
+      "text": "PayPal.me、Venmo 个人主页、Cash App $cashtag 链接，或任何结账 URL。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "粘贴链接",
+      "text": "你的二维码会立刻出现在网址栏里。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印在你卖货的地方",
+      "text": "发票、市集摊位、小费罐、包装。"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="payment-qr-code" data-type="url">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">方形</option><option value="dots">圆形</option><option value="rounded">柔和</option><option value="extra-rounded">鹅卵石</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">即时输入，即时生成</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">在控制台中查看 →</a>

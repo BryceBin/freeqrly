@@ -41,7 +41,10 @@ CONTENT = {
 }
 EXCLUDE_DIRS = {"assets", "skills", "api", "functions", "tools", "login", "reset",
                  "dashboard", "node_modules", ".git"}
-EXCLUDE_URLS = {"/zh/ticket-qr-code/"}
+# /zh/ticket-qr-code/ used to 404 and was excluded. It now exists, is tracked,
+# returns 200, and the EN ticket page's hreflang points at it — leaving it out
+# meant the sitemap contradicted the hreflang cluster.
+EXCLUDE_URLS = set()
 
 MONTHS = {name: f"{i:02d}" for i, name in enumerate(
     ["January", "February", "March", "April", "May", "June", "July",

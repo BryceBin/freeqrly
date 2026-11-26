@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — generador de códigos qr para tiktok","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/es/tiktok-qr-code/","description":"Convierte tu perfil o video de TikTok en un código QR escaneable. Gratis, sin registro para códigos estáticos. Imprímelo para empaques, carteles y merchandising.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — generador de códigos qr para tiktok",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/es/tiktok-qr-code/",
+  "description": "Convierte tu perfil o video de TikTok en un código QR escaneable. Gratis, sin registro para códigos estáticos. Imprímelo para empaques, carteles y merchandising.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -108,11 +125,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Crea tu código QR para TikTok", "description": "Pega el enlace de tu perfil o video de TikTok y obtén un código QR que lo abre directo en la app. Empaques, carteles, merchandising, tarjetas de visita: nuevos seguidores sin deletrear el nombre de usuario.", "step": [{"@type": "HowToStep", "name": "Copia tu enlace de TikTok", "text": "Perfil, video o hashtag: cualquier URL de TikTok. Desde la app: Compartir → Copiar enlace."}, {"@type": "HowToStep", "name": "Pega el enlace", "text": "Tu código aparece al instante en el campo Sitio web."}, {"@type": "HowToStep", "name": "Imprímelo donde miran tus fans", "text": "Empaques, carteles, merchandising, volantes. Exporta a 1024 px para imprimir."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Crea tu código QR para TikTok",
+  "description": "Pega el enlace de tu perfil o video de TikTok y obtén un código QR que lo abre directo en la app. Empaques, carteles, merchandising, tarjetas de visita: nuevos seguidores sin deletrear el nombre de usuario.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Copia tu enlace de TikTok",
+      "text": "Perfil, video o hashtag: cualquier URL de TikTok. Desde la app: Compartir → Copiar enlace."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pega el enlace",
+      "text": "Tu código aparece al instante en el campo Sitio web."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Imprímelo donde miran tus fans",
+      "text": "Empaques, carteles, merchandising, volantes. Exporta a 1024 px para imprimir."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="tiktok-qr-code" data-type="url">
 <div class="wrap">
@@ -281,7 +317,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Cuadrado</option><option value="dots">Redondo</option><option value="rounded">Suave</option><option value="extra-rounded">Guijarro</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -291,7 +327,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Escribe y se crea al momento</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Vista previa del código QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Vista previa del código QR" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Rellena tu contenido y pulsa Generar</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Vista previa del código QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Vista previa del código QR" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Rellena tu contenido y pulsa Generar</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Ver en el Panel →</a>

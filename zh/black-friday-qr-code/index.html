@@ -59,11 +59,27 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — 黑色星期五二维码","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/zh/black-friday-qr-code/","description":"免费黑五二维码，面向零售商和小商家：可扫的优惠券、整个周末都能改指向的促销页，还能批量给每个产品做一个码。静态码不用注册，永不过期。"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — 黑色星期五二维码",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/zh/black-friday-qr-code/",
+  "description": "免费黑五二维码，面向零售商和小商家：可扫的优惠券、整个周末都能改指向的促销页，还能批量给每个产品做一个码。静态码不用注册，永不过期。"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -124,11 +140,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "生成你的黑五二维码", "description": "黑五的购物者不会在收银台输入促销码、长网址，也不会创建账号。他们会扫码——或者直接走过这个优惠。二维码把店里店外的每个面都变成通向促销的门——橱窗海报、货架标签、传单、收据、社交媒体帖子、邮件。顾客举起手机，折扣就打开了。最重要的决定在打印任何东西之前就做了：静态还是动态？固定优惠券用静态码。任何可能变的东西——促销页、每小时上新的商品、中午前就卖完的货——都用动态码。每个位置都选对了，接下来这个周末就轻松了。", "step": [{"@type": "HowToStep", "name": "先定扫码打开什么", "text": "一个促销码、你的促销页、一份限时抢购清单——一个码、一个任务。不确定哪种类型适合这个位置，就看下面的促销形式表。"}, {"@type": "HowToStep", "name": "做一张码", "text": "优惠券码是静态的：免费，不用注册，完全在你的浏览器里生成——不上传、不追踪、没有水印，码永不过期。促销页的话，免费登录后做成动态，这样以后能改指向、还能看扫码统计。"}, {"@type": "HowToStep", "name": "印一次，整个周末随便换", "text": "周四提前购、周五开门抢购、周一网购星期一清仓——改目的地就行，海报照旧。"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "生成你的黑五二维码",
+  "description": "黑五的购物者不会在收银台输入促销码、长网址，也不会创建账号。他们会扫码——或者直接走过这个优惠。二维码把店里店外的每个面都变成通向促销的门——橱窗海报、货架标签、传单、收据、社交媒体帖子、邮件。顾客举起手机，折扣就打开了。最重要的决定在打印任何东西之前就做了：静态还是动态？固定优惠券用静态码。任何可能变的东西——促销页、每小时上新的商品、中午前就卖完的货——都用动态码。每个位置都选对了，接下来这个周末就轻松了。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "先定扫码打开什么",
+      "text": "一个促销码、你的促销页、一份限时抢购清单——一个码、一个任务。不确定哪种类型适合这个位置，就看下面的促销形式表。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "做一张码",
+      "text": "优惠券码是静态的：免费，不用注册，完全在你的浏览器里生成——不上传、不追踪、没有水印，码永不过期。促销页的话，免费登录后做成动态，这样以后能改指向、还能看扫码统计。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印一次，整个周末随便换",
+      "text": "周四提前购、周五开门抢购、周一网购星期一清仓——改目的地就行，海报照旧。"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="black-friday-qr-code" data-type="coupon">
 <div class="wrap">
@@ -295,7 +330,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">方形</option><option value="dots">圆形</option><option value="rounded">柔和</option><option value="extra-rounded">鹅卵石</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -305,7 +340,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">即时输入，即时生成</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">在控制台中查看 →</a>

@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — رمز QR للعقارات","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ar/real-estate-qr-code/","description":"رموز QR للعقارات: القوائم والجولات الافتراضية والنشرات ولوحات الساحة. مجانية، بدون تسجيل للرموز الثابتة — مسحة واحدة تأخذ المشترين إلى القائمة.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — رمز QR للعقارات",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/ar/real-estate-qr-code/",
+  "description": "رموز QR للعقارات: القوائم والجولات الافتراضية والنشرات ولوحات الساحة. مجانية، بدون تسجيل للرموز الثابتة — مسحة واحدة تأخذ المشترين إلى القائمة.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "اصنع رمز QR العقاري الخاص بك", "description": "اربط القوائم والجولات الافتراضية وتفاصيل البيت المفتوح برموز قابلة للمسح. اطبعها للوحات الساحة والكتيبات وعروض النوافذ — مجانية إلى الأبد، لا حاجة لحساب للرموز الثابتة.", "step": [{"@type": "HowToStep", "name": "انسخ رابط قائمتك", "text": "صفحة MLS أو رابط Zillow/Redfin أو جولتك الافتراضية — أي رابط يعمل."}, {"@type": "HowToStep", "name": "الصق رابطك", "text": "يظهر رمزك فورًا في تبويب الرابط."}, {"@type": "HowToStep", "name": "اطبع للوحات والنشرات", "text": "SVG لطابعة اللوحات، PNG للنشرات. لوحات الساحة تحتاج 10+ سم — انظر قاعدة 1:10 العامة."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "اصنع رمز QR العقاري الخاص بك",
+  "description": "اربط القوائم والجولات الافتراضية وتفاصيل البيت المفتوح برموز قابلة للمسح. اطبعها للوحات الساحة والكتيبات وعروض النوافذ — مجانية إلى الأبد، لا حاجة لحساب للرموز الثابتة.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "انسخ رابط قائمتك",
+      "text": "صفحة MLS أو رابط Zillow/Redfin أو جولتك الافتراضية — أي رابط يعمل."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "الصق رابطك",
+      "text": "يظهر رمزك فورًا في تبويب الرابط."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "اطبع للوحات والنشرات",
+      "text": "SVG لطابعة اللوحات، PNG للنشرات. لوحات الساحة تحتاج 10+ سم — انظر قاعدة 1:10 العامة."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="real-estate-qr-code" data-type="url">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">مربع</option><option value="dots">دائري</option><option value="rounded">ناعم</option><option value="extra-rounded">حصاة</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">معاينة حية — تتغير أثناء الكتابة</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="معاينة رمز QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="معاينة رمز QR" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">املأ المحتوى ثم اضغط إنشاء</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="معاينة رمز QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="معاينة رمز QR" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">املأ المحتوى ثم اضغط إنشاء</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">عرض في لوحة التحكم →</a>

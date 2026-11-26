@@ -10,8 +10,6 @@
  "A <strong>dynamic QR code</strong> contains a short link on the vendor's server. Scan it, your phone visits their server, and their server redirects you to the real destination. Because the destination lives on their server, the vendor can change it later — and count every scan.",
  "That's the entire difference. Everything else is consequences.",
  "Static vs dynamic at a glance",
- "Static code",
- "Dynamic code",
  "<strong>Where the destination lives</strong>",
  "In the pattern itself",
  "On the vendor's server, behind a short link",

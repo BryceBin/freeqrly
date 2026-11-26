@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — generador de códigos qr wifi","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/es/wifi-qr-code/","description":"Crea un código QR WiFi gratis para que tus invitados se unan a tu red con un escaneo. Sin app, sin registro para códigos estáticos. Para un código estático, tu contraseña nunca sale de tu navegador.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — generador de códigos qr wifi",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/es/wifi-qr-code/",
+  "description": "Crea un código QR WiFi gratis para que tus invitados se unan a tu red con un escaneo. Sin app, sin registro para códigos estáticos. Para un código estático, tu contraseña nunca sale de tu navegador.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Crea tu código QR WiFi", "description": "Escribe el nombre de tu red y la contraseña una vez, imprime el código, pégalo en la nevera. Los invitados escanean y están en línea: sin gritar la contraseña por toda la habitación.", "step": [{"@type": "HowToStep", "name": "Escribe los datos de tu red", "text": "Nombre de red, contraseña y tipo de seguridad (WPA2 en la mayoría de los routers domésticos)."}, {"@type": "HowToStep", "name": "Imprime el código", "text": "Descarga un PNG en alta resolución: sigue siendo legible incluso en una tarjeta pequeña."}, {"@type": "HowToStep", "name": "Los invitados escanean para unirse", "text": "La cámara del iPhone (iOS 11+) y Android (10+) se conectan directo desde el escaneo. Sin app."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Crea tu código QR WiFi",
+  "description": "Escribe el nombre de tu red y la contraseña una vez, imprime el código, pégalo en la nevera. Los invitados escanean y están en línea: sin gritar la contraseña por toda la habitación.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Escribe los datos de tu red",
+      "text": "Nombre de red, contraseña y tipo de seguridad (WPA2 en la mayoría de los routers domésticos)."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Imprime el código",
+      "text": "Descarga un PNG en alta resolución: sigue siendo legible incluso en una tarjeta pequeña."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Los invitados escanean para unirse",
+      "text": "La cámara del iPhone (iOS 11+) y Android (10+) se conectan directo desde el escaneo. Sin app."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="wifi-qr-code" data-type="wifi">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Cuadrado</option><option value="dots">Redondo</option><option value="rounded">Suave</option><option value="extra-rounded">Guijarro</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Escribe y se crea al momento</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Vista previa del código QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Vista previa del código QR" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Rellena tu contenido y pulsa Generar</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Vista previa del código QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Vista previa del código QR" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Rellena tu contenido y pulsa Generar</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Ver en el Panel →</a>

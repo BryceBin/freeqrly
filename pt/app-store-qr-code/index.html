@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App Store QR Code Generator: One Code Per Store | FreeQrly</title>
-<meta name="description" content="Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.">
+<title>Gerador de QR code App Store: um código por loja | FreeQrly</title>
+<meta name="description" content="Crie um QR code para seu link da App Store ou do Google Play. Um código estático guarda uma URL: iOS e Android são dois códigos, e aqui você vê qual imprimir.">
 <link rel="canonical" href="https://freeqrly.com/pt/app-store-qr-code/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/app-store-qr-code/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/app-store-qr-code/">
@@ -18,8 +18,8 @@
 <link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/app-store-qr-code/">
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/app-store-qr-code/">
 <meta name="theme-color" content="#e9eef4">
-<meta property="og:title" content="App Store QR Code Generator: One Code Per Store | FreeQrly">
-<meta property="og:description" content="Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.">
+<meta property="og:title" content="Gerador de QR code App Store: um código por loja | FreeQrly">
+<meta property="og:description" content="Crie um QR code para seu link da App Store ou do Google Play. Um código estático guarda uma URL: iOS e Android são dois códigos, e aqui você vê qual imprimir.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/pt/app-store-qr-code/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
@@ -59,28 +59,45 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — gerador de QR code da App Store","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/pt/app-store-qr-code/","description":"Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — gerador de QR code da App Store",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/pt/app-store-qr-code/",
+  "description": "Crie um QR code para seu link da App Store ou do Google Play. Um código estático guarda uma URL: iOS e Android são dois códigos, e aqui você vê qual imprimir.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Can one static code open both stores?",
+      "name": "Um código estático pode abrir as duas lojas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A static code stores a single URL, and your two store listings are two URLs. Encode the App Store link and Android visitors land on an app they cannot install. Print two labelled codes, or point one code at a page on your own domain that reads the phone and forwards to the right store."
+        "text": "Não. Um código estático guarda uma única URL, e suas duas páginas de loja são duas URLs. Se você codificar o link da App Store, visitantes de Android caem num app que não podem instalar. Imprima dois códigos etiquetados ou aponte um código para uma página do seu próprio domínio que detecte o telefone e encaminhe para a loja certa."
       }
     },
     {
       "@type": "Question",
-      "name": "What if I fill in both fields?",
+      "name": "E se eu preencher os dois campos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only the App Store link is encoded — the Play field is used when the App Store field is empty. To cover both platforms, make two codes, one per field."
+        "text": "Só o link da App Store é codificado — o campo Play é usado quando o campo App Store está vazio. Para cobrir as duas plataformas, crie dois códigos, um por campo."
       }
     },
     {
@@ -88,7 +105,7 @@
       "name": "E se eu só tiver uma plataforma?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fill that field and print one code. Nothing else is needed."
+        "text": "Preencha esse campo e imprima um código. Não precisa de mais nada."
       }
     },
     {
@@ -96,7 +113,7 @@
       "name": "Detecta o telefone e redireciona sozinho?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not on its own — a printed pattern cannot run logic. Device detection needs a page in between: host a small router page, then point a dynamic code at it so you can change the destination later without reprinting."
+        "text": "Não sozinho — um padrão impresso não executa lógica. A detecção de aparelho precisa de uma página no meio: hospede uma pequena página de redirecionamento e aponte um código dinâmico para ela, assim você muda o destino depois sem reimprimir."
       }
     },
     {
@@ -104,15 +121,34 @@
       "name": "Conta as instalações?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Código estáticos carry only the link and never phone home. App Store Connect and the Play Console already report installs."
+        "text": "Não. Códigos estáticos carregam só o link e nunca enviam nada. O App Store Connect e o Play Console já informam as instalações."
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Crie seu QR code da App Store", "description": "A static QR code stores one URL, so your App Store listing and your Play listing need one code each. Fill in a link, print it at a size that scans, and put the right code in front of the right phone.", "step": [{"@type": "HowToStep", "name": "Copy one store link", "text": "App Store from App Store Connect, Play from the Play Console. One link per code — fill the App Store field for iOS, the Google Play field for Android."}, {"@type": "HowToStep", "name": "Paste it in", "text": "Your code appears instantly. Leave the other field empty unless you are making a second code."}, {"@type": "HowToStep", "name": "Label it and print", "text": "“iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Crie seu QR code da App Store",
+  "description": "Um QR code estático guarda uma URL, então sua página da App Store e sua página da Play precisam de um código cada. Cole um link, imprima num tamanho que escaneie e coloque o código certo na frente do telefone certo.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Copie um link da loja",
+      "text": "App Store no App Store Connect, Play no Play Console. Um link por código — preencha o campo App Store para iOS, o campo Google Play para Android."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cole",
+      "text": "Seu código aparece na hora. Deixe o outro campo vazio, a não ser que esteja criando um segundo código."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Etiquete e imprima",
+      "text": "“iPhone” ou “Android” ao lado do código, com 2 cm ou mais. Anúncios, embalagens, recibos, slides de lançamento."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="app-store-qr-code" data-type="appstore">
 <div class="wrap">
@@ -194,15 +230,15 @@
   <section class="hero lp-hero">
     <div>
       <div class="kicker">Grátis · Códigos estáticos sem cadastro · Sem marca d'água</div>
-      <h1>Your app link, <span class="hl hl-honey">printed right</span>.</h1>
-      <p class="lede">A static QR code stores one URL, so your App Store listing and your Play listing need one code each. Fill in a link, print it at a size that scans, and put the right code in front of the right phone.</p>
+      <h1>Seu link de app, <span class="hl hl-honey">impresso do jeito certo</span>.</h1>
+      <p class="lede">Um QR code estático guarda uma URL, então sua página da App Store e sua página da Play precisam de um código cada. Cole um link, imprima num tamanho que escaneie e coloque o código certo na frente do telefone certo.</p>
       <p class="glance"><b>Em resumo:</b> 20 códigos dinâmicos grátis (atualmente ilimitados durante a promoção por tempo limitado) · até 50 códigos por lote · 17 tipos de código · Pro US$ 9/mês ou US$ 90/ano · leituras ilimitadas</p>
       <p class="updated">Última atualização: 30 de outubro de 2026</p>
     </div>
     <ol class="steps" id="how">
-      <li><span class="sn">1</span><span><b>Copy one store link</b>App Store from App Store Connect, Play from the Play Console. One link per code — fill the App Store field for iOS, the Google Play field for Android.</span></li>
-      <li><span class="sn">2</span><span><b>Paste it in</b>Your code appears instantly. Leave the other field empty unless you are making a second code.</span></li>
-      <li><span class="sn">3</span><span><b>Label it and print</b>“iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides.</span></li>
+      <li><span class="sn">1</span><span><b>Copie um link da loja</b>App Store no App Store Connect, Play no Play Console. Um link por código — preencha o campo App Store para iOS, o campo Google Play para Android.</span></li>
+      <li><span class="sn">2</span><span><b>Cole</b>Seu código aparece na hora. Deixe o outro campo vazio, a não ser que esteja criando um segundo código.</span></li>
+      <li><span class="sn">3</span><span><b>Etiquete e imprima</b>“iPhone” ou “Android” ao lado do código, com 2 cm ou mais. Anúncios, embalagens, recibos, slides de lançamento.</span></li>
     </ol>
   </section>
 <main class="studio" id="studio">
@@ -233,7 +269,7 @@
         <div class="fl" data-i18n="appearance">Aparência</div>
         <div class="approw"><div class="applabel"><span id="fpLab">Temas de fim de ano</span><small id="fpSub">Um toque — tinta, papel e moldura prontos</small></div>
           <div class="seg framePresets" id="framePresets">
-            <button type="button" class="fpBtn on" data-preset="none"><span id="fpNoneT">Nenhum</span></button>
+            <button type="button" class="fpBtn on" data-preset="nenhuma"><span id="fpNoneT">Nenhum</span></button>
             <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Black Friday</span></button>
             <button type="button" class="fpBtn" data-preset="xmas"><span class="fpDot" style="background:#1F4D3A"></span><span id="fpXmT">Natal</span></button>
           </div></div>
@@ -272,7 +308,7 @@
         <div class="approw"><div class="applabel"><span data-i18n="frame">Moldura</span><small data-i18n="frameSub">Borda ao redor do código</small></div>
           <div class="frameWrap" id="frameWrap">
             <div class="seg segFrame" id="segFrame" role="radiogroup">
-              <button data-v="none" data-i18n="frameNone">Nenhuma</button><button data-v="rounded" data-i18n="frameRounded">Arredondada</button><button data-v="cta" data-i18n="frameCta">Com texto</button>
+              <button data-v="nenhuma" data-i18n="frameNone">Nenhuma</button><button data-v="rounded" data-i18n="frameRounded">Arredondada</button><button data-v="cta" data-i18n="frameCta">Com texto</button>
             </div>
             <div class="frameExpand" id="frameExpand">
               <input type="text" id="frameText" class="frameExpandInput" placeholder="Escaneie">
@@ -281,7 +317,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Quadrado</option><option value="dots">Redondo</option><option value="rounded">Suave</option><option value="extra-rounded">Seixo</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -291,7 +327,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Prévia ao vivo — muda ao digitar</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Pré-visualização do QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Pré-visualização do QR code" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Preencha seu conteúdo e clique em Gerar</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Pré-visualização do QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Pré-visualização do QR code" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Preencha seu conteúdo e clique em Gerar</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Ver no Painel →</a>
@@ -366,11 +402,11 @@
 
   <section class="faq" id="faq">
     <h2>Bom saber</h2>
-    <details><summary><span>Can one static code open both stores?</span></summary><p>No. A static code stores a single URL, and your two store listings are two URLs. Encode the App Store link and Android visitors land on an app they cannot install. Print two labelled codes, or point one code at a page on your own domain that reads the phone and forwards to the right store.</p></details>
-    <details><summary><span>What if I fill in both fields?</span></summary><p>Only the App Store link is encoded — the Play field is used when the App Store field is empty. To cover both platforms, make two codes, one per field.</p></details>
-    <details><summary><span>E se eu só tiver uma plataforma?</span></summary><p>Fill that field and print one code. Nothing else is needed.</p></details>
-    <details><summary><span>Detecta o telefone e redireciona sozinho?</span></summary><p>Not on its own — a printed pattern cannot run logic. Device detection needs a page in between: host a small router page, then point a dynamic code at it so you can change the destination later without reprinting.</p></details>
-    <details><summary><span>Conta as instalações?</span></summary><p>No. Código estáticos carry only the link and never phone home. App Store Connect and the Play Console already report installs.</p></details>
+    <details><summary><span>Um código estático pode abrir as duas lojas?</span></summary><p>Não. Um código estático guarda uma única URL, e suas duas páginas de loja são duas URLs. Se você codificar o link da App Store, visitantes de Android caem num app que não podem instalar. Imprima dois códigos etiquetados ou aponte um código para uma página do seu próprio domínio que detecte o telefone e encaminhe para a loja certa.</p></details>
+    <details><summary><span>E se eu preencher os dois campos?</span></summary><p>Só o link da App Store é codificado — o campo Play é usado quando o campo App Store está vazio. Para cobrir as duas plataformas, crie dois códigos, um por campo.</p></details>
+    <details><summary><span>E se eu só tiver uma plataforma?</span></summary><p>Preencha esse campo e imprima um código. Não precisa de mais nada.</p></details>
+    <details><summary><span>Detecta o telefone e redireciona sozinho?</span></summary><p>Não sozinho — um padrão impresso não executa lógica. A detecção de aparelho precisa de uma página no meio: hospede uma pequena página de redirecionamento e aponte um código dinâmico para ela, assim você muda o destino depois sem reimprimir.</p></details>
+    <details><summary><span>Conta as instalações?</span></summary><p>Não. Códigos estáticos carregam só o link e nunca enviam nada. O App Store Connect e o Play Console já informam as instalações.</p></details>
   </section>
 
   <footer>

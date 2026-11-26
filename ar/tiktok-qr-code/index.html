@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — مولّد رمز QR لـ TikTok","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ar/tiktok-qr-code/","description":"حوّل ملف TikTok الشخصي أو فيديو إلى رمز QR قابل للمسح. مجاني، بدون تسجيل للرموز الثابتة. اطبعه للتغليف والملصقات والمنتجات.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — مولّد رمز QR لـ TikTok",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/ar/tiktok-qr-code/",
+  "description": "حوّل ملف TikTok الشخصي أو فيديو إلى رمز QR قابل للمسح. مجاني، بدون تسجيل للرموز الثابتة. اطبعه للتغليف والملصقات والمنتجات.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -108,11 +125,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "أنشئ رمز QR لـ TikTok", "description": "الصق رابط ملف TikTok الشخصي أو الفيديو واحصل على رمز QR يفتحه مباشرة في التطبيق. التغليف والملصقات والمنتجات وبطاقات الأعمال — متابعون جدد دون تهجئة اسم المستخدم.", "step": [{"@type": "HowToStep", "name": "انسخ رابط TikTok", "text": "ملف شخصي أو فيديو أو وسم — أي رابط TikTok. من التطبيق: مشاركة → نسخ الرابط."}, {"@type": "HowToStep", "name": "الصق الرابط", "text": "يظهر رمزك فورًا في حقل الموقع."}, {"@type": "HowToStep", "name": "اطبعه حيث ينظر المعجبون", "text": "التغليف والملصقات والمنتجات والمنشورات. تصدير 1024 px للطباعة."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "أنشئ رمز QR لـ TikTok",
+  "description": "الصق رابط ملف TikTok الشخصي أو الفيديو واحصل على رمز QR يفتحه مباشرة في التطبيق. التغليف والملصقات والمنتجات وبطاقات الأعمال — متابعون جدد دون تهجئة اسم المستخدم.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "انسخ رابط TikTok",
+      "text": "ملف شخصي أو فيديو أو وسم — أي رابط TikTok. من التطبيق: مشاركة → نسخ الرابط."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "الصق الرابط",
+      "text": "يظهر رمزك فورًا في حقل الموقع."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "اطبعه حيث ينظر المعجبون",
+      "text": "التغليف والملصقات والمنتجات والمنشورات. تصدير 1024 px للطباعة."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="tiktok-qr-code" data-type="url">
 <div class="wrap">
@@ -281,7 +317,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">مربع</option><option value="dots">دائري</option><option value="rounded">ناعم</option><option value="extra-rounded">حصاة</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -291,7 +327,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">معاينة حية — تتغير أثناء الكتابة</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="معاينة رمز QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="معاينة رمز QR" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">املأ المحتوى ثم اضغط إنشاء</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="معاينة رمز QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="معاينة رمز QR" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">املأ المحتوى ثم اضغط إنشاء</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">عرض في لوحة التحكم →</a>

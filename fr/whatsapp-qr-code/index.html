@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — générateur de qr code whatsapp","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/fr/whatsapp-qr-code/","description":"Transformez votre numéro WhatsApp ou lien de discussion en un QR code scannable. Gratuit, sans inscription pour les codes statiques. Vos clients scannent et vous écrivent.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — générateur de qr code whatsapp",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/fr/whatsapp-qr-code/",
+  "description": "Transformez votre numéro WhatsApp ou lien de discussion en un QR code scannable. Gratuit, sans inscription pour les codes statiques. Vos clients scannent et vous écrivent.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Créez votre QR code WhatsApp", "description": "Collez votre lien de discussion WhatsApp (wa.me) et obtenez un QR code qui ouvre une discussion avec vous. Vitrines, cartes de visite, emballages — vos clients scannent et commencent à parler.", "step": [{"@type": "HowToStep", "name": "Copiez votre lien wa.me", "text": "wa.me/ suivi de votre numéro international complet, ex. wa.me/15551234567."}, {"@type": "HowToStep", "name": "Collez le lien", "text": "Votre code apparaît instantanément dans le champ Site web."}, {"@type": "HowToStep", "name": "Imprimez-le là où vos clients regardent", "text": "Vitrine, cartes, reçus, emballages."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Créez votre QR code WhatsApp",
+  "description": "Collez votre lien de discussion WhatsApp (wa.me) et obtenez un QR code qui ouvre une discussion avec vous. Vitrines, cartes de visite, emballages — vos clients scannent et commencent à parler.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Copiez votre lien wa.me",
+      "text": "wa.me/ suivi de votre numéro international complet, ex. wa.me/15551234567."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Collez le lien",
+      "text": "Votre code apparaît instantanément dans le champ Site web."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Imprimez-le là où vos clients regardent",
+      "text": "Vitrine, cartes, reçus, emballages."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="whatsapp-qr-code" data-type="url">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Carré</option><option value="dots">Rond</option><option value="rounded">Doux</option><option value="extra-rounded">Galet</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Aperçu en direct — change à la frappe</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Aperçu du QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Aperçu du QR code" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Remplissez votre contenu, puis cliquez sur Générer</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Aperçu du QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Aperçu du QR code" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Remplissez votre contenu, puis cliquez sur Générer</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Voir dans le Tableau de bord →</a>

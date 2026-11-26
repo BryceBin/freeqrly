@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App Store QR Code Generator: One Code Per Store | FreeQrly</title>
-<meta name="description" content="Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.">
+<title>App Store 二维码生成器：一码一店 | FreeQrly</title>
+<meta name="description" content="为 App Store 或 Google Play 链接免费生成二维码。静态码只装一个 URL，iOS 和安卓各做一个码，扫码才落到对的商店。">
 <link rel="canonical" href="https://freeqrly.com/zh/app-store-qr-code/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/app-store-qr-code/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/app-store-qr-code/">
@@ -18,8 +18,8 @@
 <link rel="alternate" hreflang="ja" href="https://freeqrly.com/ja/app-store-qr-code/">
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/app-store-qr-code/">
 <meta name="theme-color" content="#e9eef4">
-<meta property="og:title" content="App Store QR Code Generator: One Code Per Store | FreeQrly">
-<meta property="og:description" content="Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.">
+<meta property="og:title" content="App Store 二维码生成器：一码一店 | FreeQrly">
+<meta property="og:description" content="为 App Store 或 Google Play 链接免费生成二维码。静态码只装一个 URL，iOS 和安卓各做一个码，扫码才落到对的商店。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/zh/app-store-qr-code/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
@@ -59,28 +59,45 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly —— 应用商店二维码生成器","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/zh/app-store-qr-code/","description":"Make a QR code for your App Store or Google Play link. A static code holds one URL, so iOS and Android are two codes — here is how to print the right one.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly —— 应用商店二维码生成器",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/zh/app-store-qr-code/",
+  "description": "为 App Store 或 Google Play 链接免费生成二维码。静态码只装一个 URL，iOS 和安卓各做一个码，扫码才落到对的商店。",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Can one static code open both stores?",
+      "name": "一个静态码能同时打开两个商店吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A static code stores a single URL, and your two store listings are two URLs. Encode the App Store link and Android visitors land on an app they cannot install. Print two labelled codes, or point one code at a page on your own domain that reads the phone and forwards to the right store."
+        "text": "不能。一个静态码只存一个 URL，而你的两个上架页就是两个 URL。写了 App Store 链接，安卓用户就会落到一个装不了的页面。要么印两个带标注的码，要么让一个码指向你自己域名下的一页，由它识别手机型号再转到对应的商店。"
       }
     },
     {
       "@type": "Question",
-      "name": "What if I fill in both fields?",
+      "name": "两栏都填会怎样？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only the App Store link is encoded — the Play field is used when the App Store field is empty. To cover both platforms, make two codes, one per field."
+        "text": "只会编码 App Store 链接——Play 那一栏只在 App Store 栏为空时才会用到。要覆盖两个平台，就做两个码，一栏一个。"
       }
     },
     {
@@ -88,7 +105,7 @@
       "name": "只有一个平台怎么办？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fill that field and print one code. Nothing else is needed."
+        "text": "填那一栏，印一个码就够了，别的都不用。"
       }
     },
     {
@@ -96,7 +113,7 @@
       "name": "能自动识别手机并跳转吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not on its own — a printed pattern cannot run logic. Device detection needs a page in between: host a small router page, then point a dynamic code at it so you can change the destination later without reprinting."
+        "text": "单靠它不行——印在纸上的图案没法执行逻辑。要识别设备，中间得加一个页面：自己托管一个小的路由页，再用动态码指向它，这样以后改目标也不用重印。"
       }
     },
     {
@@ -104,15 +121,34 @@
       "name": "能统计安装量吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Static codes carry only the link and never phone home. App Store Connect and the Play Console already report installs."
+        "text": "不会。静态码只带着链接，从不回传数据。安装量在 App Store Connect 和 Play Console 里本来就有。"
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "生成你的应用商店二维码", "description": "A static QR code stores one URL, so your App Store listing and your Play listing need one code each. Fill in a link, print it at a size that scans, and put the right code in front of the right phone.", "step": [{"@type": "HowToStep", "name": "Copy one store link", "text": "App Store from App Store Connect, Play from the Play Console. One link per code — fill the App Store field for iOS, the Google Play field for Android."}, {"@type": "HowToStep", "name": "Paste it in", "text": "Your code appears instantly. Leave the other field empty unless you are making a second code."}, {"@type": "HowToStep", "name": "Label it and print", "text": "“iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "生成你的应用商店二维码",
+  "description": "一个静态二维码只装一个 URL，所以 App Store 上架页和 Play 上架页各需要一个码。填入链接，按扫得动的尺寸打印，再把对的码放到对的手机面前。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "复制一个商店链接",
+      "text": "App Store 的从 App Store Connect 拿，Play 的从 Play Console 拿。一个码配一个链接——iOS 填 App Store 那一栏，安卓填 Google Play 那一栏。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "粘贴进去",
+      "text": "二维码立刻出现。除非你要做第二个码，否则另一栏留空。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "标注并打印",
+      "text": "在码旁边写上“iPhone”或“安卓”，尺寸 2 厘米以上。广告、包装、小票、发布会幻灯片都能用。"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="app-store-qr-code" data-type="appstore">
 <div class="wrap">
@@ -194,15 +230,15 @@
   <section class="hero lp-hero">
     <div>
       <div class="kicker">免费 · 静态码免注册 · 无水印</div>
-      <h1>Your app link, <span class="hl hl-honey">printed right</span>.</h1>
-      <p class="lede">A static QR code stores one URL, so your App Store listing and your Play listing need one code each. Fill in a link, print it at a size that scans, and put the right code in front of the right phone.</p>
+      <h1>你的 App 链接，<span class="hl hl-honey">印得刚刚好</span>。</h1>
+      <p class="lede">一个静态二维码只装一个 URL，所以 App Store 上架页和 Play 上架页各需要一个码。填入链接，按扫得动的尺寸打印，再把对的码放到对的手机面前。</p>
       <p class="glance"><b>一览：</b>20 个免费动态码（限时活动期间目前不限量）· 每批最多 50 个码 · 17 种码类型 · Pro 9 美元/月或 90 美元/年 · 扫描次数不限</p>
       <p class="updated">最后更新：2026 年 10 月 30 日</p>
     </div>
     <ol class="steps" id="how">
-      <li><span class="sn">1</span><span><b>Copy one store link</b>App Store from App Store Connect, Play from the Play Console. One link per code — fill the App Store field for iOS, the Google Play field for Android.</span></li>
-      <li><span class="sn">2</span><span><b>Paste it in</b>Your code appears instantly. Leave the other field empty unless you are making a second code.</span></li>
-      <li><span class="sn">3</span><span><b>Label it and print</b>“iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides.</span></li>
+      <li><span class="sn">1</span><span><b>复制一个商店链接</b>App Store 的从 App Store Connect 拿，Play 的从 Play Console 拿。一个码配一个链接——iOS 填 App Store 那一栏，安卓填 Google Play 那一栏。</span></li>
+      <li><span class="sn">2</span><span><b>粘贴进去</b>二维码立刻出现。除非你要做第二个码，否则另一栏留空。</span></li>
+      <li><span class="sn">3</span><span><b>标注并打印</b>在码旁边写上“iPhone”或“安卓”，尺寸 2 厘米以上。广告、包装、小票、发布会幻灯片都能用。</span></li>
     </ol>
   </section>
 <main class="studio" id="studio">
@@ -233,7 +269,7 @@
         <div class="fl" data-i18n="appearance">外观样式</div>
         <div class="approw"><div class="applabel"><span id="fpLab">Holiday presets</span><small id="fpSub">One tap — ink, paper &amp; frame set</small></div>
           <div class="seg framePresets" id="framePresets">
-            <button type="button" class="fpBtn on" data-preset="none"><span id="fpNoneT">None</span></button>
+            <button type="button" class="fpBtn on" data-preset="无需"><span id="fpNoneT">None</span></button>
             <button type="button" class="fpBtn" data-preset="bf"><span class="fpDot" style="background:#161616"></span><span id="fpBfT">Black Friday</span></button>
             <button type="button" class="fpBtn" data-preset="xmas"><span class="fpDot" style="background:#1F4D3A"></span><span id="fpXmT">Christmas</span></button>
           </div></div>
@@ -272,7 +308,7 @@
         <div class="approw"><div class="applabel"><span data-i18n="frame">边框</span><small data-i18n="frameSub">码外面的边框</small></div>
           <div class="frameWrap" id="frameWrap">
             <div class="seg segFrame" id="segFrame" role="radiogroup">
-              <button data-v="none" data-i18n="frameNone">无</button><button data-v="rounded" data-i18n="frameRounded">圆角</button><button data-v="cta" data-i18n="frameCta">带文字</button>
+              <button data-v="无需" data-i18n="frameNone">无</button><button data-v="rounded" data-i18n="frameRounded">圆角</button><button data-v="cta" data-i18n="frameCta">带文字</button>
             </div>
             <div class="frameExpand" id="frameExpand">
               <input type="text" id="frameText" class="frameExpandInput" placeholder="扫我">
@@ -281,7 +317,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">方形</option><option value="dots">圆形</option><option value="rounded">柔和</option><option value="extra-rounded">鹅卵石</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -291,7 +327,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">即时输入，即时生成</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">在控制台中查看 →</a>
@@ -366,11 +402,11 @@
 
   <section class="faq" id="faq">
     <h2>小提示</h2>
-    <details><summary><span>Can one static code open both stores?</span></summary><p>No. A static code stores a single URL, and your two store listings are two URLs. Encode the App Store link and Android visitors land on an app they cannot install. Print two labelled codes, or point one code at a page on your own domain that reads the phone and forwards to the right store.</p></details>
-    <details><summary><span>What if I fill in both fields?</span></summary><p>Only the App Store link is encoded — the Play field is used when the App Store field is empty. To cover both platforms, make two codes, one per field.</p></details>
-    <details><summary><span>只有一个平台怎么办？</span></summary><p>Fill that field and print one code. Nothing else is needed.</p></details>
-    <details><summary><span>能自动识别手机并跳转吗？</span></summary><p>Not on its own — a printed pattern cannot run logic. Device detection needs a page in between: host a small router page, then point a dynamic code at it so you can change the destination later without reprinting.</p></details>
-    <details><summary><span>能统计安装量吗？</span></summary><p>No. Static codes carry only the link and never phone home. App Store Connect and the Play Console already report installs.</p></details>
+    <details><summary><span>一个静态码能同时打开两个商店吗？</span></summary><p>不能。一个静态码只存一个 URL，而你的两个上架页就是两个 URL。写了 App Store 链接，安卓用户就会落到一个装不了的页面。要么印两个带标注的码，要么让一个码指向你自己域名下的一页，由它识别手机型号再转到对应的商店。</p></details>
+    <details><summary><span>两栏都填会怎样？</span></summary><p>只会编码 App Store 链接——Play 那一栏只在 App Store 栏为空时才会用到。要覆盖两个平台，就做两个码，一栏一个。</p></details>
+    <details><summary><span>只有一个平台怎么办？</span></summary><p>填那一栏，印一个码就够了，别的都不用。</p></details>
+    <details><summary><span>能自动识别手机并跳转吗？</span></summary><p>单靠它不行——印在纸上的图案没法执行逻辑。要识别设备，中间得加一个页面：自己托管一个小的路由页，再用动态码指向它，这样以后改目标也不用重印。</p></details>
+    <details><summary><span>能统计安装量吗？</span></summary><p>不会。静态码只带着链接，从不回传数据。安装量在 App Store Connect 和 Play Console 里本来就有。</p></details>
   </section>
 
   <footer>

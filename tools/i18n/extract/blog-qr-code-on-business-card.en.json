@@ -75,6 +75,7 @@
  "Why does my code scan on screen but not on the printed card?",
  "Pick one job",
  "Decide whether the code saves a contact or drives a single next step, and do not mix both jobs into one code.",
+ "Choose static or dynamic",
  "Use a lean static vCard for stable details, or a dynamic link when the destination or your details may change.",
  "Keep the destination lean",
  "Include name, one phone number, one email, company, and website for a vCard, or one focused landing page for a link.",

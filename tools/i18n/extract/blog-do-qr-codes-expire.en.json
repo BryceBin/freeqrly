@@ -82,7 +82,7 @@
  "<span>How long do static QR codes last?</span>",
  "Indefinitely, as long as the destination still works. The pattern encodes your data directly with no server involved, so there is nothing to maintain or renew.",
  "<span>What happens to paid dynamic codes when a subscription ends?</span>",
- "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' The QR Code Generator says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.",
+ "It depends on the vendor, and the vendor's own FAQ page is the source to check. <a href=\"/qr-tiger-alternative/\">QR TIGER's FAQ</a> says paid codes have unlimited scans while the subscription is valid and 'If your plan expires, it will stop working.' <a href=\"/freeqrly-vs-qr-code-generator/\">The QR Code Generator</a> says that after a trial ends, 2 codes remain active but display ads, while on its parent platform Uniqode trial codes become inactive without a paid plan.",
  "<span>Can a scan limit stop a QR code?</span>",
  "Yes, on vendors that cap free dynamic scans. QR TIGER's freemium plan, as stated on its own subscription page, gives 3 dynamic codes with a 500 scan limit each. A code that hits its cap stops serving its destination even though the pattern is undamaged. FreeQrly dynamic codes have unlimited scans.",
  "<span>Does damage kill a QR code?</span>",

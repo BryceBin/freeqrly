@@ -5,6 +5,7 @@
  "For a one-off static code, both tools are free forever. QR Code Monkey stops there: its free tool makes static codes only, with no editing and no scan statistics. FreeQrly — freeqrly.com keeps static codes free with no sign-up and no watermark, and adds free dynamic codes with editing and statistics, batch mode, a barcode generator, and a QR API.",
  "<b>Pick FreeQrly if</b> you want anything beyond a fixed code: editing after printing, scan counts, batch runs, barcodes, or an API — while keeping static codes free with no account.",
  "<b>Pick QR Code Monkey if</b> you only ever need fixed codes and you care most about print design depth: EPS and PDF vectors, templates, gradients, and a 30% logo area. For that one job, it is the best free tool we checked — FreeQrly does not beat it on vector formats.",
+ "More comparisons: <a href=\"/freeqrly-vs-qr-tiger/\">FreeQrly vs QR Tiger</a> · <a href=\"/freeqrly-vs-qr-code-generator/\">FreeQrly vs QR Code Generator</a> · <a href=\"/qr-tiger-alternative/\">QR Tiger alternative</a> · <a href=\"/qr-code-monkey-alternative/\">QRCode Monkey alternative</a>.",
  "<span>Is QR Code Monkey really free?</span>",
  "Yes, for static codes: 100% free, including commercial use, with no expiry. The catch is only that the codes are static — you cannot edit them or track scans.",
  "<span>Can I edit a Monkey code after printing?</span>",

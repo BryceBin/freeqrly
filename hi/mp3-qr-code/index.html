@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — MP3 QR कोड जनरेटर","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/hi/mp3-qr-code/","description":"कोई भी ऑडियो — गाना, पॉडकास्ट एपिसोड, वॉइस नोट — QR कोड से जोड़ें। मुफ्त, स्टैटिक कोड के लिए बिना साइन-अप।","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — MP3 QR कोड जनरेटर",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/hi/mp3-qr-code/",
+  "description": "कोई भी ऑडियो — गाना, पॉडकास्ट एपिसोड, वॉइस नोट — QR कोड से जोड़ें। मुफ्त, स्टैटिक कोड के लिए बिना साइन-अप।",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "अपना MP3 QR कोड बनाएं", "description": "ऑडियो फ़ाइल का लिंक पेस्ट करें, उसे बजाने वाला QR कोड पाएं। एल्बम इंसर्ट, पॉडकास्ट फ्लायर, म्यूज़ियम लेबल, ग्रीटिंग कार्ड — जहां सुनना स्कैन से शुरू होता है।", "step": [{"@type": "HowToStep", "name": "ऑडियो ऑनलाइन रखें", "text": "साइट, Drive, Dropbox या SoundCloud पर MP3 — डायरेक्ट लिंक कॉपी करें।"}, {"@type": "HowToStep", "name": "लिंक चिपकाएं", "text": "Audio फ़ील्ड में कोड तुरंत बन जाता है।"}, {"@type": "HowToStep", "name": "जहां कान हों वहां प्रिंट करें", "text": "एल्बम आर्ट, फ्लायर, प्रदर्शनी, निमंत्रण। प्रिंट के लिए 1024 px एक्सपोर्ट।"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "अपना MP3 QR कोड बनाएं",
+  "description": "ऑडियो फ़ाइल का लिंक पेस्ट करें, उसे बजाने वाला QR कोड पाएं। एल्बम इंसर्ट, पॉडकास्ट फ्लायर, म्यूज़ियम लेबल, ग्रीटिंग कार्ड — जहां सुनना स्कैन से शुरू होता है।",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "ऑडियो ऑनलाइन रखें",
+      "text": "साइट, Drive, Dropbox या SoundCloud पर MP3 — डायरेक्ट लिंक कॉपी करें।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "लिंक चिपकाएं",
+      "text": "Audio फ़ील्ड में कोड तुरंत बन जाता है।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "जहां कान हों वहां प्रिंट करें",
+      "text": "एल्बम आर्ट, फ्लायर, प्रदर्शनी, निमंत्रण। प्रिंट के लिए 1024 px एक्सपोर्ट।"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="mp3-qr-code" data-type="mp3">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">चौकोर</option><option value="dots">गोल</option><option value="rounded">नर्म</option><option value="extra-rounded">कंकड़</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">लाइव प्रीव्यू — लिखते ही बदलेगा</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR कोड पूर्वावलोकन"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR कोड पूर्वावलोकन" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">अपनी सामग्री भरें, फिर जनरेट दबाएं</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR कोड पूर्वावलोकन"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR कोड पूर्वावलोकन" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">अपनी सामग्री भरें, फिर जनरेट दबाएं</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">डैशबोर्ड में देखें →</a>

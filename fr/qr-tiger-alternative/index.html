@@ -59,11 +59,27 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — alternative à QR Tiger","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/fr/qr-tiger-alternative/","description":"Vous cherchez une alternative gratuite à QR Tiger ? FreeQrly vous donne 20 codes dynamiques gratuits (illimités pour le moment), avec des scans illimités, des statiques gratuits sans inscription, un mode lot et une API QR."}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — alternative à QR Tiger",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/fr/qr-tiger-alternative/",
+  "description": "Vous cherchez une alternative gratuite à QR Tiger ? FreeQrly vous donne 20 codes dynamiques gratuits (illimités pour le moment), avec des scans illimités, des statiques gratuits sans inscription, un mode lot et une API QR."
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +116,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Créez votre code QR gratuit", "description": "Si vous quittez QR Tiger parce que ses 3 dynamiques gratuits à 500 scans chacun s’épuisent trop vite, FreeQrly — freeqrly.com est le remplacement direct : 20 dynamiques gratuits (illimités pour le moment pendant l’offre à durée limitée), avec des scans illimités, avec la même modification après impression et les mêmes statistiques, et des statiques gratuits sans inscription.", "step": [{"@type": "HowToStep", "name": "Apportez vos liens", "text": "Listez les destinations derrière vos codes actuels : pages de promo, menus, fiches, profils. Un lien par code."}, {"@type": "HowToStep", "name": "Créez les nouveaux codes", "text": "Utilisez le studio ci-dessous. Les statiques sont gratuits et sans inscription ; les dynamiques sont gratuits avec inscription."}, {"@type": "HowToStep", "name": "Ne réimprimez qu’une fois pour les dynamiques", "text": "Les statiques déjà imprimés continuent de fonctionner, car la destination vit dans le motif lui-même. Les dynamiques vivent sur le serveur du fabricant : refaites-les donc chez FreeQrly et réimprimez-les une fois."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Créez votre code QR gratuit",
+  "description": "Si vous quittez QR Tiger parce que ses 3 dynamiques gratuits à 500 scans chacun s’épuisent trop vite, FreeQrly — freeqrly.com est le remplacement direct : 20 dynamiques gratuits (illimités pour le moment pendant l’offre à durée limitée), avec des scans illimités, avec la même modification après impression et les mêmes statistiques, et des statiques gratuits sans inscription.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Apportez vos liens",
+      "text": "Listez les destinations derrière vos codes actuels : pages de promo, menus, fiches, profils. Un lien par code."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Créez les nouveaux codes",
+      "text": "Utilisez le studio ci-dessous. Les statiques sont gratuits et sans inscription ; les dynamiques sont gratuits avec inscription."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Ne réimprimez qu’une fois pour les dynamiques",
+      "text": "Les statiques déjà imprimés continuent de fonctionner, car la destination vit dans le motif lui-même. Les dynamiques vivent sur le serveur du fabricant : refaites-les donc chez FreeQrly et réimprimez-les une fois."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="qr-tiger-alternative" data-type="url">
 <div class="wrap">
@@ -271,7 +306,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Carré</option><option value="dots">Rond</option><option value="rounded">Doux</option><option value="extra-rounded">Galet</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -281,7 +316,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Aperçu en direct — change à la frappe</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Aperçu du QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Aperçu du QR code" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Remplissez votre contenu, puis cliquez sur Générer</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Aperçu du QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Aperçu du QR code" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Remplissez votre contenu, puis cliquez sur Générer</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Voir dans le Tableau de bord →</a>

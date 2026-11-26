@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — WLAN-QR-Code-Generator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/de/wifi-qr-code/","description":"Erstell einen kostenlosen WLAN-QR-Code, damit Gäste mit einem Scan in deinem Netzwerk sind. Keine App nötig, keine Anmeldung für statische Codes. Bei einem statischen Code verlässt dein Passwort nie deinen Browser.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — WLAN-QR-Code-Generator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/de/wifi-qr-code/",
+  "description": "Erstell einen kostenlosen WLAN-QR-Code, damit Gäste mit einem Scan in deinem Netzwerk sind. Keine App nötig, keine Anmeldung für statische Codes. Bei einem statischen Code verlässt dein Passwort nie deinen Browser.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Mach deinen WLAN-QR-Code", "description": "Gib Netzwerkname und Passwort einmal ein, drucke den Code, kleb ihn an den Kühlschrank. Gäste scannen und sind online — kein Passwort-mehr-durchs-Zimmer-Rufen.", "step": [{"@type": "HowToStep", "name": "Netzwerkdaten eingeben", "text": "Netzwerkname, Passwort und Sicherheitstyp (WPA2 bei den meisten Heimroutern)."}, {"@type": "HowToStep", "name": "Code drucken", "text": "Hochauflösendes PNG herunterladen — auch auf einer kleinen Karte noch lesbar."}, {"@type": "HowToStep", "name": "Gäste scannen zum Beitreten", "text": "iPhone-Kamera (iOS 11+) und Android (10+) verbinden sich direkt aus dem Scan. Keine App nötig."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Mach deinen WLAN-QR-Code",
+  "description": "Gib Netzwerkname und Passwort einmal ein, drucke den Code, kleb ihn an den Kühlschrank. Gäste scannen und sind online — kein Passwort-mehr-durchs-Zimmer-Rufen.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Netzwerkdaten eingeben",
+      "text": "Netzwerkname, Passwort und Sicherheitstyp (WPA2 bei den meisten Heimroutern)."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Code drucken",
+      "text": "Hochauflösendes PNG herunterladen — auch auf einer kleinen Karte noch lesbar."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Gäste scannen zum Beitreten",
+      "text": "iPhone-Kamera (iOS 11+) und Android (10+) verbinden sich direkt aus dem Scan. Keine App nötig."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="wifi-qr-code" data-type="wifi">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Eckig</option><option value="dots">Rund</option><option value="rounded">Weich</option><option value="extra-rounded">Kiesel</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Live-Vorschau — ändert sich beim Tippen</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR-Code-Vorschau"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR-Code-Vorschau" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Fülle deinen Inhalt aus und klicke auf Generieren</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR-Code-Vorschau"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR-Code-Vorschau" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Fülle deinen Inhalt aus und klicke auf Generieren</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Im Dashboard ansehen →</a>

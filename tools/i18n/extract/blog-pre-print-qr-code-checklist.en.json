@@ -55,7 +55,6 @@
  "Fail any step? Fix that one variable and re-proof — even if only one variable changed. A code that only works when viewers step closer, tilt the card, and shield it from glare is not a working code.",
  "The proof checklist, in order",
  "Work through the proof in the order below, and record a pass or fail for each item, with the phone models, distances, and light conditions used. A checklist with notes is useful when the printer asks what changed, when a colleague reprints the item, or when a code fails in the field and you need to know what was actually tested. Keep one approved proof, signed and dated, as the reference for the full run, and compare the first sheets off the press against it, because press conditions can drift from proof conditions.",
- "Step",
  "What to check",
  "Pass means",
  "1. File",

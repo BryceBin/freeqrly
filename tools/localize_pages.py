@@ -101,6 +101,25 @@ def localize_page(key, lang, trans):
     src = open(os.path.join(SITE, src_rel), encoding="utf-8").read()
     out = src
     missing = []
+    # JSON-LD blocks are JSON, not HTML. A translation that puts a double
+    # quote inside a value (es/pt "gratis") broke the document when the plain
+    # substitution loop dropped it in raw: the EN key had no quotes, so no
+    # escaped variant existed, and the FAQPage script stopped parsing.
+    # Lift the blocks out first, translate them with JSON-escaped strings,
+    # and refuse to write a page whose JSON-LD does not parse.
+    _jsonld = []
+
+    def _stash(m):
+        _jsonld.append(m.group(2))
+        return "%s\x00__FQJSONLD_%d\x00%s" % (m.group(1), len(_jsonld) - 1, m.group(3))
+
+    out = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)',
+                 _stash, out, flags=re.S)
+
+    def _json_escape(s):
+        return (s.replace("\\", "\\\\").replace('"', '\\"')
+                 .replace("\r\n", "\\n").replace("\n", "\\n").replace("\r", "\\n"))
+
     # JSON-LD: string values appear with \" escapes (json.dumps), so the plain
     # EN string never matches inside <script type="application/ld+json">.
     # FAQ answers with <a href="..."> links stayed English in localized pages
@@ -187,6 +206,35 @@ def localize_page(key, lang, trans):
         out = out.replace(ph, en)
     if _PROTECT_PREFIX in out:
         raise ValueError(f"protect placeholder leaked in {key}/{lang}")
+    # Translate the lifted JSON-LD blocks, then put them back.
+    #
+    # Do this on the parsed object, not on the raw text: a blind string
+    # replace rewrote "@type": "FAQPage" into "@type": "常见问题Page", because
+    # "FAQPage" also appears as a visible string elsewhere on the page and so
+    # has a translation. Schema.org types, property names and URLs are
+    # structural — only human-readable values may change.
+    _STRUCTURAL = {"@context", "@type", "@id", "url", "image", "logo",
+                   "sameAs", "target", "cssSelector"}
+
+    def _tr_node(node, skip=False):
+        if isinstance(node, str):
+            return trans.get(node, node) if not skip else node
+        if isinstance(node, list):
+            return [_tr_node(v, skip) for v in node]
+        if isinstance(node, dict):
+            return {k: _tr_node(v, skip or k in _STRUCTURAL)
+                    for k, v in node.items()}
+        return node
+
+    for _i, _blk in enumerate(_jsonld):
+        try:
+            _obj = json.loads(_blk)
+        except Exception as _exc:
+            raise ValueError(f"source JSON-LD does not parse in {key}/{lang}: {_exc}")
+        _new = json.dumps(_tr_node(_obj), ensure_ascii=False, indent=2)
+        out = out.replace("\x00__FQJSONLD_%d\x00" % _i, _new)
+    if "\x00__FQJSONLD_" in out:
+        raise ValueError(f"JSON-LD placeholder leaked in {key}/{lang}")
     # Generator static fallback: elements with data-i18n="KEY" carry the
     # English label as static HTML (shown with JS off / before JS loads).
     # The dictionary never contained these strings, so the loop above

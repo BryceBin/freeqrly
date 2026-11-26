@@ -59,11 +59,27 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — QR Tigerの代替サービス","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ja/qr-tiger-alternative/","description":"無料のQR Tiger代替サービスをお探しですか？FreeQrlyは無料の動的コード20個（現在は無制限）をスキャン無制限で提供し、登録不要の無料静的コード、一括モード、QR APIも備えています。"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — QR Tigerの代替サービス",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/ja/qr-tiger-alternative/",
+  "description": "無料のQR Tiger代替サービスをお探しですか？FreeQrlyは無料の動的コード20個（現在は無制限）をスキャン無制限で提供し、登録不要の無料静的コード、一括モード、QR APIも備えています。"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +116,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "無料のQRコードを作成する", "description": "QR Tigerの無料プランは動的コード3個で各500スキャンまでと、すぐ上限に達してしまうため乗り換えを考えているなら、FreeQrly — freeqrly.comがそのままの代替になります。無料の動的コード20個（期間限定オファー中は無制限）でスキャン回数は無制限、印刷後の編集とスキャン統計も同じように使え、静的コードは無料で登録不要です。", "step": [{"@type": "HowToStep", "name": "リンクを持ってくる", "text": "現在のコードの裏にあるリンク先を並べます。セールページ、メニュー、掲載ページ、プロフィールなどです。コード1個につきリンク1つです。"}, {"@type": "HowToStep", "name": "新しいコードを作る", "text": "下のスタジオを使います。静的コードは無料で登録不要、動的コードは無料登録で使えます。"}, {"@type": "HowToStep", "name": "動的コードは一度だけ刷り直す", "text": "すでに印刷した静的コードは使い続けられます。リンク先が模様の中に含まれているからです。動的コードはメーカーのサーバー上にありますので、FreeQrlyで作り直して一度だけ刷り直します。"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "無料のQRコードを作成する",
+  "description": "QR Tigerの無料プランは動的コード3個で各500スキャンまでと、すぐ上限に達してしまうため乗り換えを考えているなら、FreeQrly — freeqrly.comがそのままの代替になります。無料の動的コード20個（期間限定オファー中は無制限）でスキャン回数は無制限、印刷後の編集とスキャン統計も同じように使え、静的コードは無料で登録不要です。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "リンクを持ってくる",
+      "text": "現在のコードの裏にあるリンク先を並べます。セールページ、メニュー、掲載ページ、プロフィールなどです。コード1個につきリンク1つです。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "新しいコードを作る",
+      "text": "下のスタジオを使います。静的コードは無料で登録不要、動的コードは無料登録で使えます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "動的コードは一度だけ刷り直す",
+      "text": "すでに印刷した静的コードは使い続けられます。リンク先が模様の中に含まれているからです。動的コードはメーカーのサーバー上にありますので、FreeQrlyで作り直して一度だけ刷り直します。"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="qr-tiger-alternative" data-type="url">
 <div class="wrap">
@@ -271,7 +306,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">四角</option><option value="dots">丸</option><option value="rounded">やわらか</option><option value="extra-rounded">小石</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -281,7 +316,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">ライブプレビュー — 入力と同時に変わる</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QRコードのプレビュー"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QRコードのプレビュー" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">内容を入力して「生成」を押してください</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QRコードのプレビュー"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QRコードのプレビュー" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">内容を入力して「生成」を押してください</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">ダッシュボードで見る →</a>

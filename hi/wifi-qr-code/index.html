@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — wifi qr कोड जनरेटर","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/hi/wifi-qr-code/","description":"मुफ़्त WiFi QR कोड बनाएं ताकि मेहमान एक स्कैन में आपके नेटवर्क से जुड़ जाएं। ऐप की ज़रूरत नहीं, स्टैटिक कोड के लिए साइन-अप नहीं। स्टैटिक कोड के लिए, आपका पासवर्ड कभी आपके ब्राउज़र से बाहर नहीं जाता।","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — wifi qr कोड जनरेटर",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/hi/wifi-qr-code/",
+  "description": "मुफ़्त WiFi QR कोड बनाएं ताकि मेहमान एक स्कैन में आपके नेटवर्क से जुड़ जाएं। ऐप की ज़रूरत नहीं, स्टैटिक कोड के लिए साइन-अप नहीं। स्टैटिक कोड के लिए, आपका पासवर्ड कभी आपके ब्राउज़र से बाहर नहीं जाता।",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "अपना WiFi QR कोड बनाएं", "description": "अपना नेटवर्क नाम और पासवर्ड एक बार टाइप करें, कोड प्रिंट करें, फ्रिज पर चिपकाएं। मेहमान स्कैन करते हैं और ऑनलाइन हो जाते हैं — कमरे के पार पासवर्ड चिल्लाना बंद।", "step": [{"@type": "HowToStep", "name": "अपने नेटवर्क की जानकारी डालें", "text": "नेटवर्क नाम, पासवर्ड और सुरक्षा टाइप (ज़्यादातर होम राउटर पर WPA2)।"}, {"@type": "HowToStep", "name": "कोड प्रिंट करें", "text": "हाई-रेज़ोल्यूशन PNG डाउनलोड करें — छोटे कार्ड पर भी पढ़ा जा सकता है।"}, {"@type": "HowToStep", "name": "मेहमान जुड़ने के लिए स्कैन करें", "text": "iPhone कैमरा (iOS 11+) और Android (10+) स्कैन से सीधे कनेक्ट हो जाते हैं। ऐप की ज़रूरत नहीं।"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "अपना WiFi QR कोड बनाएं",
+  "description": "अपना नेटवर्क नाम और पासवर्ड एक बार टाइप करें, कोड प्रिंट करें, फ्रिज पर चिपकाएं। मेहमान स्कैन करते हैं और ऑनलाइन हो जाते हैं — कमरे के पार पासवर्ड चिल्लाना बंद।",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "अपने नेटवर्क की जानकारी डालें",
+      "text": "नेटवर्क नाम, पासवर्ड और सुरक्षा टाइप (ज़्यादातर होम राउटर पर WPA2)।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "कोड प्रिंट करें",
+      "text": "हाई-रेज़ोल्यूशन PNG डाउनलोड करें — छोटे कार्ड पर भी पढ़ा जा सकता है।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "मेहमान जुड़ने के लिए स्कैन करें",
+      "text": "iPhone कैमरा (iOS 11+) और Android (10+) स्कैन से सीधे कनेक्ट हो जाते हैं। ऐप की ज़रूरत नहीं।"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="wifi-qr-code" data-type="wifi">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">चौकोर</option><option value="dots">गोल</option><option value="rounded">नर्म</option><option value="extra-rounded">कंकड़</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">लाइव प्रीव्यू — लिखते ही बदलेगा</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR कोड पूर्वावलोकन"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR कोड पूर्वावलोकन" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">अपनी सामग्री भरें, फिर जनरेट दबाएं</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR कोड पूर्वावलोकन"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR कोड पूर्वावलोकन" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">अपनी सामग्री भरें, फिर जनरेट दबाएं</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">डैशबोर्ड में देखें →</a>

@@ -51,25 +51,92 @@
 .bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
 @media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"Gerador de Código de Barras FreeQrly","url":"https://freeqrly.com/pt/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Gere códigos de barras Code 128, EAN-13, UPC-A, Code 39 e ITF-14 grátis, no navegador. Baixe PNG ou SVG."}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Qual formato de código de barras devo usar?","acceptedAnswer":{"@type":"Answer","text":"Code 128 para uso geral — aceita qualquer texto. EAN-13 para produtos de varejo vendidos internacionalmente, UPC-A para varejo nos EUA, Code 39 quando o scanner é antigo ou o código precisa ser legível por humanos, ITF-14 para caixas de transporte."}},
-  {"@type":"Question","name":"Preciso de um dígito verificador?","acceptedAnswer":{"@type":"Answer","text":"Não — para EAN-13, UPC-A e ITF-14, digite um dígito a menos e o dígito verificador é calculado para você. Code 128 e Code 39 não precisam de nenhum."}},
-  {"@type":"Question","name":"PNG ou SVG para impressão?","acceptedAnswer":{"@type":"Answer","text":"SVG para embalagens e impressão profissional — escala infinitamente sem borrar. PNG para impressão de escritório e apps que não aceitam SVG."}},
-  {"@type":"Question","name":"É mesmo grátis? Tem marca d'água?","acceptedAnswer":{"@type":"Answer","text":"Grátis, sem marca d'água, sem cadastro. O código de barras é desenhado no seu navegador — nada é enviado."}}
-]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","name":"Crie um código de barras","description":"Gere um código de barras grátis, no seu navegador.","step":[
-  {"@type":"HowToStep","name":"Escolha um formato","text":"Code 128 para uso geral, EAN-13 para produtos de varejo, UPC-A para varejo nos EUA, Code 39 para scanners mais antigos, ITF-14 para caixas de transporte."},
-  {"@type":"HowToStep","name":"Digite o valor","text":"Digite o número ou o texto. Para EAN-13, UPC-A e ITF-14, omita o dígito verificador — ele é adicionado automaticamente."},
-  {"@type":"HowToStep","name":"Estilize","text":"Largura e altura das barras, e se o valor aparece abaixo das barras."},
-  {"@type":"HowToStep","name":"Download","text":"PNG para impressão de escritório, SVG para embalagens e impressão profissional."}
-]}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "name": "Gerador de Código de Barras FreeQrly",
+  "url": "https://freeqrly.com/pt/barcode-generator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "description": "Gere códigos de barras Code 128, EAN-13, UPC-A, Code 39 e ITF-14 grátis, no navegador. Baixe PNG ou SVG."
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual formato de código de barras devo usar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code 128 para uso geral — aceita qualquer texto. EAN-13 para produtos de varejo vendidos internacionalmente, UPC-A para varejo nos EUA, Code 39 quando o scanner é antigo ou o código precisa ser legível por humanos, ITF-14 para caixas de transporte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso de um dígito verificador?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não — para EAN-13, UPC-A e ITF-14, digite um dígito a menos e o dígito verificador é calculado para você. Code 128 e Code 39 não precisam de nenhum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG ou SVG para impressão?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVG para embalagens e impressão profissional — escala infinitamente sem borrar. PNG para impressão de escritório e apps que não aceitam SVG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "É mesmo grátis? Tem marca d'água?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grátis, sem marca d'água, sem cadastro. O código de barras é desenhado no seu navegador — nada é enviado."
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Crie um código de barras",
+  "description": "Gere um código de barras grátis, no seu navegador.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Escolha um formato",
+      "text": "Code 128 para uso geral, EAN-13 para produtos de varejo, UPC-A para varejo nos EUA, Code 39 para scanners mais antigos, ITF-14 para caixas de transporte."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Digite o valor",
+      "text": "Digite o número ou o texto. Para EAN-13, UPC-A e ITF-14, omita o dígito verificador — ele é adicionado automaticamente."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Estilize",
+      "text": "Largura e altura das barras, e se o valor aparece abaixo das barras."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "PNG para impressão de escritório, SVG para embalagens e impressão profissional."
+    }
+  ]
+}</script>
 <link rel="stylesheet" href="/assets/css/site-header.css?v=892bba49">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=6d15df1b">
 </head>

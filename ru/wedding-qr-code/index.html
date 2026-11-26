@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — свадебный QR-код","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ru/wedding-qr-code/","description":"QR-коды для свадеб: формы RSVP, обмен фото, меню, схемы рассадки. Бесплатно, без регистрации для статических кодов — одно сканирование для ваших гостей.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — свадебный QR-код",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/ru/wedding-qr-code/",
+  "description": "QR-коды для свадеб: формы RSVP, обмен фото, меню, схемы рассадки. Бесплатно, без регистрации для статических кодов — одно сканирование для ваших гостей.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Создайте свадебный QR-код", "description": "Форма RSVP, фотоальбом, меню, схема рассадки — превратите каждую свадебную ссылку в красивый QR-код для приглашений и настольных карточек. Бесплатно навсегда, в стиле вашей темы.", "step": [{"@type": "HowToStep", "name": "Выберите, что нужно гостям", "text": "Ссылка RSVP, общий фотоальбом, меню, схема рассадки — один код на ссылку."}, {"@type": "HowToStep", "name": "Оформите в своём стиле", "text": "Ваши свадебные цвета, ваш логотип или монограмма в центре."}, {"@type": "HowToStep", "name": "Напечатайте для приглашений и столов", "text": "SVG — для типографии, PNG — для настольных карточек. Они никогда не истекают."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Создайте свадебный QR-код",
+  "description": "Форма RSVP, фотоальбом, меню, схема рассадки — превратите каждую свадебную ссылку в красивый QR-код для приглашений и настольных карточек. Бесплатно навсегда, в стиле вашей темы.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Выберите, что нужно гостям",
+      "text": "Ссылка RSVP, общий фотоальбом, меню, схема рассадки — один код на ссылку."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Оформите в своём стиле",
+      "text": "Ваши свадебные цвета, ваш логотип или монограмма в центре."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Напечатайте для приглашений и столов",
+      "text": "SVG — для типографии, PNG — для настольных карточек. Они никогда не истекают."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="wedding-qr-code" data-type="url">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Квадрат</option><option value="dots">Круг</option><option value="rounded">Мягкий</option><option value="extra-rounded">Галька</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Живой предпросмотр — меняется при вводе</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Предпросмотр QR-кода"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Предпросмотр QR-кода" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Заполните содержимое и нажмите «Создать»</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Предпросмотр QR-кода"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Предпросмотр QR-кода" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Заполните содержимое и нажмите «Создать»</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Посмотреть в Панели управления →</a>

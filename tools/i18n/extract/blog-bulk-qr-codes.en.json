@@ -5,7 +5,6 @@
  "Fifty product pages, fifty codes, one afternoon you don't have to spend making them one by one. Paste the links, download a ZIP, done.",
  "October 28, 2026 · 3 min read",
  "Making one QR code takes seconds. Making fifty, one at a time, takes an afternoon — and the fiftieth always has a typo. Bulk generation exists for exactly this job: you paste a list of links, every link becomes its own code, and you download the whole set in one ZIP.",
- "How it works",
  "<b>Paste your links, one per line.</b> Up to 50 at a time in the <a href=\"/batch-qr-code/\">batch QR code generator</a>.",
  "<b>Hit Generate all.</b> Every link becomes its own QR code, previewed in a grid.",
  "<b>Download the ZIP.</b> One click packs them all as print-ready PNGs at 1024 px, named qr-1.png, qr-2.png, and so on. Need more than 50? Run another batch — there's no daily cap and no account to hit.",

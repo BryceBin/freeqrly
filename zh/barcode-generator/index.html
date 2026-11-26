@@ -51,25 +51,92 @@
 .bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
 @media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly 条形码生成器","url":"https://freeqrly.com/zh/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"在浏览器里免费生成 Code 128、EAN-13、UPC-A、Code 39 和 ITF-14 条形码。下载 PNG 或 SVG。"}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"该用哪种条形码格式？","acceptedAnswer":{"@type":"Answer","text":"Code 128 通用——能装任意文本。EAN-13 用于国际零售商品，UPC-A 用于美国零售，扫描器老旧或条码必须能人工识读时用 Code 39，ITF-14 用于运输箱。"}},
-  {"@type":"Question","name":"需要校验位吗？","acceptedAnswer":{"@type":"Answer","text":"不需要——EAN-13、UPC-A 和 ITF-14 少输一位，校验位会自动算好。Code 128 和 Code 39 不需要校验位。"}},
-  {"@type":"Question","name":"打印用 PNG 还是 SVG？","acceptedAnswer":{"@type":"Answer","text":"SVG 用于包装和专业印刷——可以无限放大而不模糊。PNG 用于办公打印和不支持 SVG 的应用。"}},
-  {"@type":"Question","name":"真的免费吗？有水印吗？","acceptedAnswer":{"@type":"Answer","text":"免费，无水印，免注册。条形码在你的浏览器里画出来——什么都不上传。"}}
-]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","name":"生成条形码","description":"在你的浏览器里免费生成条形码。","step":[
-  {"@type":"HowToStep","name":"选一种格式","text":"Code 128 通用，EAN-13 用于零售商品，UPC-A 用于美国零售，Code 39 用于老旧扫描器，ITF-14 用于运输箱。"},
-  {"@type":"HowToStep","name":"输入编码内容","text":"输入数字或文本。EAN-13、UPC-A 和 ITF-14 不用输校验位——会自动补上。"},
-  {"@type":"HowToStep","name":"做样式","text":"条宽、高度，以及是否在条下方显示编码内容。"},
-  {"@type":"HowToStep","name":"Download","text":"PNG 用于办公打印，SVG 用于包装和专业印刷。"}
-]}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "name": "FreeQrly 条形码生成器",
+  "url": "https://freeqrly.com/zh/barcode-generator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "description": "在浏览器里免费生成 Code 128、EAN-13、UPC-A、Code 39 和 ITF-14 条形码。下载 PNG 或 SVG。"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "该用哪种条形码格式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code 128 通用——能装任意文本。EAN-13 用于国际零售商品，UPC-A 用于美国零售，扫描器老旧或条码必须能人工识读时用 Code 39，ITF-14 用于运输箱。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "需要校验位吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要——EAN-13、UPC-A 和 ITF-14 少输一位，校验位会自动算好。Code 128 和 Code 39 不需要校验位。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "打印用 PNG 还是 SVG？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVG 用于包装和专业印刷——可以无限放大而不模糊。PNG 用于办公打印和不支持 SVG 的应用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "真的免费吗？有水印吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费，无水印，免注册。条形码在你的浏览器里画出来——什么都不上传。"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "生成条形码",
+  "description": "在你的浏览器里免费生成条形码。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "选一种格式",
+      "text": "Code 128 通用，EAN-13 用于零售商品，UPC-A 用于美国零售，Code 39 用于老旧扫描器，ITF-14 用于运输箱。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "输入编码内容",
+      "text": "输入数字或文本。EAN-13、UPC-A 和 ITF-14 不用输校验位——会自动补上。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "做样式",
+      "text": "条宽、高度，以及是否在条下方显示编码内容。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "PNG 用于办公打印，SVG 用于包装和专业印刷。"
+    }
+  ]
+}</script>
 <link rel="stylesheet" href="/assets/css/site-header.css?v=892bba49">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=6d15df1b">
 </head>

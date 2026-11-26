@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — générateur de qr code en lot","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/fr/batch-qr-code/","description":"Générez des dizaines de QR codes à la fois et téléchargez-les en ZIP. Gratuit, sans inscription pour les codes statiques, sans jeux de limites. Un lien par ligne — c’est fait.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — générateur de qr code en lot",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/fr/batch-qr-code/",
+  "description": "Générez des dizaines de QR codes à la fois et téléchargez-les en ZIP. Gratuit, sans inscription pour les codes statiques, sans jeux de limites. Un lien par ligne — c’est fait.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Générez votre lot", "description": "Collez vos liens — un par ligne — cliquez sur générer, et téléchargez chaque code dans un ZIP bien rangé. La fonctionnalité de lot que d’autres outils mettent derrière un paywall, gratuite ici.", "step": [{"@type": "HowToStep", "name": "Collez vos liens", "text": "Une URL par ligne dans la boîte de lot. Jusqu’à 50 à la fois."}, {"@type": "HowToStep", "name": "Cliquez sur Tout générer", "text": "Chaque lien devient son propre QR code, prévisualisé en grille."}, {"@type": "HowToStep", "name": "Téléchargez le ZIP", "text": "Un clic les emballe tous en PNG prêts à imprimer, nommés qr-1, qr-2, et ainsi de suite."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Générez votre lot",
+  "description": "Collez vos liens — un par ligne — cliquez sur générer, et téléchargez chaque code dans un ZIP bien rangé. La fonctionnalité de lot que d’autres outils mettent derrière un paywall, gratuite ici.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Collez vos liens",
+      "text": "Une URL par ligne dans la boîte de lot. Jusqu’à 50 à la fois."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cliquez sur Tout générer",
+      "text": "Chaque lien devient son propre QR code, prévisualisé en grille."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Téléchargez le ZIP",
+      "text": "Un clic les emballe tous en PNG prêts à imprimer, nommés qr-1, qr-2, et ainsi de suite."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="batch-qr-code" data-type="batch">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Carré</option><option value="dots">Rond</option><option value="rounded">Doux</option><option value="extra-rounded">Galet</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Aperçu en direct — change à la frappe</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Aperçu du QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Aperçu du QR code" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Remplissez votre contenu, puis cliquez sur Générer</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Aperçu du QR code"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Aperçu du QR code" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Remplissez votre contenu, puis cliquez sur Générer</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Voir dans le Tableau de bord →</a>

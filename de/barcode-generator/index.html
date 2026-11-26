@@ -51,25 +51,92 @@
 .bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
 @media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly Barcode-Generator","url":"https://freeqrly.com/de/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Code-128-, EAN-13-, UPC-A-, Code-39- und ITF-14-Barcodes kostenlos im Browser erstellen. PNG oder SVG herunterladen."}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Welches Barcode-Format soll ich nehmen?","acceptedAnswer":{"@type":"Answer","text":"Code 128 für den allgemeinen Gebrauch — er speichert jeden Text. EAN-13 für Produkte im internationalen Einzelhandel, UPC-A für den US-Einzelhandel, Code 39 bei alten Scannern oder wenn der Code menschenlesbar sein muss, ITF-14 für Versandkartons."}},
-  {"@type":"Question","name":"Brauche ich eine Prüfziffer?","acceptedAnswer":{"@type":"Answer","text":"Nein — bei EAN-13, UPC-A und ITF-14 gibst du eine Ziffer weniger ein, und die Prüfziffer wird für dich berechnet. Code 128 und Code 39 brauchen keine."}},
-  {"@type":"Question","name":"PNG oder SVG für den Druck?","acceptedAnswer":{"@type":"Answer","text":"SVG für Verpackungen und professionellen Druck — es skaliert unbegrenzt ohne Unschärfe. PNG für den Bürodruck und Apps, die kein SVG akzeptieren."}},
-  {"@type":"Question","name":"Ist es wirklich kostenlos? Irgendein Wasserzeichen?","acceptedAnswer":{"@type":"Answer","text":"Kostenlos, ohne Wasserzeichen, ohne Anmeldung. Der Barcode wird in deinem Browser gezeichnet — nichts wird hochgeladen."}}
-]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","name":"Barcode erstellen","description":"Erstell kostenlos einen Barcode, in deinem Browser.","step":[
-  {"@type":"HowToStep","name":"Format wählen","text":"Code 128 für den allgemeinen Gebrauch, EAN-13 für Produkte im Einzelhandel, UPC-A für den US-Einzelhandel, Code 39 für ältere Scanner, ITF-14 für Versandkartons."},
-  {"@type":"HowToStep","name":"Wert eingeben","text":"Gib die Nummer oder den Text ein. Bei EAN-13, UPC-A und ITF-14 lässt du die Prüfziffer weg — sie wird automatisch ergänzt."},
-  {"@type":"HowToStep","name":"Stylen","text":"Balkenbreite, Höhe und ob der Wert unter den Balken steht."},
-  {"@type":"HowToStep","name":"Download","text":"PNG für den Bürodruck, SVG für Verpackungen und professionellen Druck."}
-]}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "name": "FreeQrly Barcode-Generator",
+  "url": "https://freeqrly.com/de/barcode-generator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "description": "Code-128-, EAN-13-, UPC-A-, Code-39- und ITF-14-Barcodes kostenlos im Browser erstellen. PNG oder SVG herunterladen."
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welches Barcode-Format soll ich nehmen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code 128 für den allgemeinen Gebrauch — er speichert jeden Text. EAN-13 für Produkte im internationalen Einzelhandel, UPC-A für den US-Einzelhandel, Code 39 bei alten Scannern oder wenn der Code menschenlesbar sein muss, ITF-14 für Versandkartons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich eine Prüfziffer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein — bei EAN-13, UPC-A und ITF-14 gibst du eine Ziffer weniger ein, und die Prüfziffer wird für dich berechnet. Code 128 und Code 39 brauchen keine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG oder SVG für den Druck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVG für Verpackungen und professionellen Druck — es skaliert unbegrenzt ohne Unschärfe. PNG für den Bürodruck und Apps, die kein SVG akzeptieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist es wirklich kostenlos? Irgendein Wasserzeichen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kostenlos, ohne Wasserzeichen, ohne Anmeldung. Der Barcode wird in deinem Browser gezeichnet — nichts wird hochgeladen."
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Barcode erstellen",
+  "description": "Erstell kostenlos einen Barcode, in deinem Browser.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Format wählen",
+      "text": "Code 128 für den allgemeinen Gebrauch, EAN-13 für Produkte im Einzelhandel, UPC-A für den US-Einzelhandel, Code 39 für ältere Scanner, ITF-14 für Versandkartons."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Wert eingeben",
+      "text": "Gib die Nummer oder den Text ein. Bei EAN-13, UPC-A und ITF-14 lässt du die Prüfziffer weg — sie wird automatisch ergänzt."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Stylen",
+      "text": "Balkenbreite, Höhe und ob der Wert unter den Balken steht."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "PNG für den Bürodruck, SVG für Verpackungen und professionellen Druck."
+    }
+  ]
+}</script>
 <link rel="stylesheet" href="/assets/css/site-header.css?v=892bba49">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=6d15df1b">
 </head>

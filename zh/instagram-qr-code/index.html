@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — Instagram 二维码","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/zh/instagram-qr-code/","description":"把你的 Instagram 主页或帖子变成可扫的二维码。免费，静态码免注册。印在包装、传单和橱窗上。","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — Instagram 二维码",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/zh/instagram-qr-code/",
+  "description": "把你的 Instagram 主页或帖子变成可扫的二维码。免费，静态码免注册。印在包装、传单和橱窗上。",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "做你的 Instagram 二维码", "description": "粘贴你的 Instagram 链接，得到用于包装、传单、收据和橱窗的可扫二维码。涨粉，不用拼用户名。", "step": [{"@type": "HowToStep", "name": "复制主页链接", "text": "从你的主页：instagram.com/你的用户名——或任何帖子、Reel 链接。"}, {"@type": "HowToStep", "name": "粘贴你的链接", "text": "你的二维码会立刻出现在链接选项里。"}, {"@type": "HowToStep", "name": "印在人们看的地方", "text": "包装插页、柜台卡、传单。导出 1024 px 用于打印。"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "做你的 Instagram 二维码",
+  "description": "粘贴你的 Instagram 链接，得到用于包装、传单、收据和橱窗的可扫二维码。涨粉，不用拼用户名。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "复制主页链接",
+      "text": "从你的主页：instagram.com/你的用户名——或任何帖子、Reel 链接。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "粘贴你的链接",
+      "text": "你的二维码会立刻出现在链接选项里。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "印在人们看的地方",
+      "text": "包装插页、柜台卡、传单。导出 1024 px 用于打印。"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="instagram-qr-code" data-type="url">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">方形</option><option value="dots">圆形</option><option value="rounded">柔和</option><option value="extra-rounded">鹅卵石</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">即时输入，即时生成</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="二维码预览"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="二维码预览" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">填好内容，然后点生成</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">在控制台中查看 →</a>

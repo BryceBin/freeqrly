@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — رمز QR ديناميكي","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ar/dynamic-qr-code/","description":"أنشئ رمز QR ديناميكيًا مجانيًا يمكنك تعديله بعد الطباعة. غيّر الوجهة في أي وقت، واطّلع على عدد المسحات — تسجيل دخول مجاني، دون انتهاء، ودون علامة مائية.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — رمز QR ديناميكي",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/ar/dynamic-qr-code/",
+  "description": "أنشئ رمز QR ديناميكيًا مجانيًا يمكنك تعديله بعد الطباعة. غيّر الوجهة في أي وقت، واطّلع على عدد المسحات — تسجيل دخول مجاني، دون انتهاء، ودون علامة مائية.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "جرّب الاستوديو — ثم اجعله ديناميكيًا", "description": "اطبعه مرة واحدة، ووجّهه إلى أي مكان، للأبد. الرمز الديناميكي يحافظ على النقشة المطبوعة نفسها بينما تغيّر وجهتها — ويعرض لك عدد مرات مسحه. مجاني مع تسجيل الدخول.", "step": [{"@type": "HowToStep", "name": "اصنع رمزًا هنا", "text": "الصق رابطك في الاستوديو أدناه — يظهر رمزك فورًا، مجانًا، دون تسجيل للنسخة الثابتة."}, {"@type": "HowToStep", "name": "سجّل الدخول مجانًا لجعله ديناميكيًا", "text": "من لوحة تحكمك، أنشئ رمزًا ديناميكيًا للوجهة نفسها. يبدو نفسه على الورق — الفرق من جهتنا."}, {"@type": "HowToStep", "name": "عدّل وتتبّع من لوحة تحكمك", "text": "غيّر الوجهة في أي وقت، وتحقق من عدد المسحات، وأعد توجيه الملصقات القديمة إلى حملتك التالية. الرمز المطبوع لا يتغير أبدًا."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "جرّب الاستوديو — ثم اجعله ديناميكيًا",
+  "description": "اطبعه مرة واحدة، ووجّهه إلى أي مكان، للأبد. الرمز الديناميكي يحافظ على النقشة المطبوعة نفسها بينما تغيّر وجهتها — ويعرض لك عدد مرات مسحه. مجاني مع تسجيل الدخول.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "اصنع رمزًا هنا",
+      "text": "الصق رابطك في الاستوديو أدناه — يظهر رمزك فورًا، مجانًا، دون تسجيل للنسخة الثابتة."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "سجّل الدخول مجانًا لجعله ديناميكيًا",
+      "text": "من لوحة تحكمك، أنشئ رمزًا ديناميكيًا للوجهة نفسها. يبدو نفسه على الورق — الفرق من جهتنا."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "عدّل وتتبّع من لوحة تحكمك",
+      "text": "غيّر الوجهة في أي وقت، وتحقق من عدد المسحات، وأعد توجيه الملصقات القديمة إلى حملتك التالية. الرمز المطبوع لا يتغير أبدًا."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="dynamic-qr-code" data-type="url" data-mode="dynamic">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">مربع</option><option value="dots">دائري</option><option value="rounded">ناعم</option><option value="extra-rounded">حصاة</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">معاينة حية — تتغير أثناء الكتابة</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="معاينة رمز QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="معاينة رمز QR" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">املأ المحتوى ثم اضغط إنشاء</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="معاينة رمز QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="معاينة رمز QR" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">املأ المحتوى ثم اضغط إنشاء</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">عرض في لوحة التحكم →</a>

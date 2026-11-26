@@ -51,25 +51,92 @@
 .bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
 @media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"FreeQrly バーコード生成ツール","url":"https://freeqrly.com/ja/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Code 128、EAN-13、UPC-A、Code 39、ITF-14のバーコードを無料で、ブラウザで生成。PNGやSVGでダウンロード。"}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"どのバーコード形式を使えばいい？","acceptedAnswer":{"@type":"Answer","text":"汎用ならCode 128 — どんなテキストでも持てます。国際販売の小売商品にはEAN-13、米国の小売にはUPC-A、スキャナーが古い場合や人が読めなければいけない場合はCode 39、輸送用ケースにはITF-14。"}},
-  {"@type":"Question","name":"チェックデジットは必要？","acceptedAnswer":{"@type":"Answer","text":"いいえ — EAN-13、UPC-A、ITF-14では1桁少なく入力すれば、チェックデジットが自動で計算されます。Code 128とCode 39には不要です。"}},
-  {"@type":"Question","name":"印刷にはPNGとSVG、どっち？","acceptedAnswer":{"@type":"Answer","text":"SVGはパッケージやプロの印刷向け — どれだけ拡大してもぼやけません。PNGはオフィス印刷やSVGに対応していないアプリ向けです。"}},
-  {"@type":"Question","name":"本当に無料？透かしは？","acceptedAnswer":{"@type":"Answer","text":"無料、透かしなし、登録不要。バーコードはブラウザで描画されます — アップロードされるものは何もありません。"}}
-]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","name":"バーコードを作る","description":"バーコードを無料で、ブラウザで生成。","step":[
-  {"@type":"HowToStep","name":"形式を選ぶ","text":"汎用ならCode 128、小売商品ならEAN-13、米国小売ならUPC-A、古いスキャナーならCode 39、輸送用ケースならITF-14。"},
-  {"@type":"HowToStep","name":"値を入力","text":"数字やテキストを入力します。EAN-13、UPC-A、ITF-14ではチェックデジットを省いてください — 自動で追加されます。"},
-  {"@type":"HowToStep","name":"スタイルを調整","text":"バーの太さ・高さ、値の表示有無を調整。"},
-  {"@type":"HowToStep","name":"Download","text":"オフィス印刷にはPNG、パッケージやプロの印刷にはSVG。"}
-]}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "name": "FreeQrly バーコード生成ツール",
+  "url": "https://freeqrly.com/ja/barcode-generator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "description": "Code 128、EAN-13、UPC-A、Code 39、ITF-14のバーコードを無料で、ブラウザで生成。PNGやSVGでダウンロード。"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "どのバーコード形式を使えばいい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "汎用ならCode 128 — どんなテキストでも持てます。国際販売の小売商品にはEAN-13、米国の小売にはUPC-A、スキャナーが古い場合や人が読めなければいけない場合はCode 39、輸送用ケースにはITF-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "チェックデジットは必要？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ — EAN-13、UPC-A、ITF-14では1桁少なく入力すれば、チェックデジットが自動で計算されます。Code 128とCode 39には不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "印刷にはPNGとSVG、どっち？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVGはパッケージやプロの印刷向け — どれだけ拡大してもぼやけません。PNGはオフィス印刷やSVGに対応していないアプリ向けです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "本当に無料？透かしは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "無料、透かしなし、登録不要。バーコードはブラウザで描画されます — アップロードされるものは何もありません。"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "バーコードを作る",
+  "description": "バーコードを無料で、ブラウザで生成。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "形式を選ぶ",
+      "text": "汎用ならCode 128、小売商品ならEAN-13、米国小売ならUPC-A、古いスキャナーならCode 39、輸送用ケースならITF-14。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "値を入力",
+      "text": "数字やテキストを入力します。EAN-13、UPC-A、ITF-14ではチェックデジットを省いてください — 自動で追加されます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "スタイルを調整",
+      "text": "バーの太さ・高さ、値の表示有無を調整。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "オフィス印刷にはPNG、パッケージやプロの印刷にはSVG。"
+    }
+  ]
+}</script>
 <link rel="stylesheet" href="/assets/css/site-header.css?v=892bba49">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=6d15df1b">
 </head>

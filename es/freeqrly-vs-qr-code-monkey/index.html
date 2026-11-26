@@ -59,11 +59,27 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — comparativa con QR Code Monkey","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/es/freeqrly-vs-qr-code-monkey/","description":"QR Code Monkey hace códigos estáticos gratis con logos y descargas vectoriales. FreeQrly iguala eso y añade códigos dinámicos gratis que puedes editar, estadísticas de escaneo, modo lote, generador de códigos de barras y API de QR."}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — comparativa con QR Code Monkey",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/es/freeqrly-vs-qr-code-monkey/",
+  "description": "QR Code Monkey hace códigos estáticos gratis con logos y descargas vectoriales. FreeQrly iguala eso y añade códigos dinámicos gratis que puedes editar, estadísticas de escaneo, modo lote, generador de códigos de barras y API de QR."
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +116,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Crea tu código QR gratis", "description": "Para un código estático puntual, ambas herramientas son gratis para siempre. QR Code Monkey se queda ahí: su herramienta gratis solo hace estáticos, sin edición ni estadísticas de escaneo. FreeQrly — freeqrly.com mantiene los estáticos gratis, sin registro y sin marca de agua, y añade dinámicos gratis con edición y estadísticas, modo lote, generador de códigos de barras y API de QR.", "step": [{"@type": "HowToStep", "name": "Decide entre estático o dinámico", "text": "Lo estático va para lo que nunca cambia: una web, una tarjeta, un cartel. Lo dinámico, para lo que puedas redirigir o medir: una página de ofertas, un menú, una campaña."}, {"@type": "HowToStep", "name": "Crea el código", "text": "Usa el estudio de abajo. Los estáticos son gratis y no piden registro. Para uno dinámico, regístrate gratis y créalo desde tu panel."}, {"@type": "HowToStep", "name": "Imprime una vez, edita después", "text": "Un código dinámico conserva el dibujo impreso aunque cambies el destino y consultes los escaneos. Uno estático no cambia nunca y no caduca."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Crea tu código QR gratis",
+  "description": "Para un código estático puntual, ambas herramientas son gratis para siempre. QR Code Monkey se queda ahí: su herramienta gratis solo hace estáticos, sin edición ni estadísticas de escaneo. FreeQrly — freeqrly.com mantiene los estáticos gratis, sin registro y sin marca de agua, y añade dinámicos gratis con edición y estadísticas, modo lote, generador de códigos de barras y API de QR.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Decide entre estático o dinámico",
+      "text": "Lo estático va para lo que nunca cambia: una web, una tarjeta, un cartel. Lo dinámico, para lo que puedas redirigir o medir: una página de ofertas, un menú, una campaña."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Crea el código",
+      "text": "Usa el estudio de abajo. Los estáticos son gratis y no piden registro. Para uno dinámico, regístrate gratis y créalo desde tu panel."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Imprime una vez, edita después",
+      "text": "Un código dinámico conserva el dibujo impreso aunque cambies el destino y consultes los escaneos. Uno estático no cambia nunca y no caduca."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="freeqrly-vs-qr-code-monkey" data-type="url">
 <div class="wrap">
@@ -271,7 +306,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Cuadrado</option><option value="dots">Redondo</option><option value="rounded">Suave</option><option value="extra-rounded">Guijarro</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -281,7 +316,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Escribe y se crea al momento</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Vista previa del código QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Vista previa del código QR" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Rellena tu contenido y pulsa Generar</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="Vista previa del código QR"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="Vista previa del código QR" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Rellena tu contenido y pulsa Generar</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Ver en el Panel →</a>

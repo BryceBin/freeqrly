@@ -51,25 +51,92 @@
 .bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
 @media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"Генератор штрихкодов FreeQrly","url":"https://freeqrly.com/ru/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Создавайте штрихкоды Code 128, EAN-13, UPC-A, Code 39 и ITF-14 бесплатно, в браузере. Скачивайте PNG или SVG."}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Какой формат штрихкода выбрать?","acceptedAnswer":{"@type":"Answer","text":"Code 128 — для общего использования, он хранит любой текст. EAN-13 — для розничных товаров, продаваемых по всему миру, UPC-A — для розничной торговли в США, Code 39 — когда сканер старый или код должен читаться человеком, ITF-14 — для транспортных коробок."}},
-  {"@type":"Question","name":"Нужна ли контрольная цифра?","acceptedAnswer":{"@type":"Answer","text":"Нет — для EAN-13, UPC-A и ITF-14 введите на одну цифру меньше, и контрольная цифра будет рассчитана за вас. Code 128 и Code 39 в ней не нуждаются."}},
-  {"@type":"Question","name":"PNG или SVG для печати?","acceptedAnswer":{"@type":"Answer","text":"SVG — для упаковки и профессиональной печати: масштабируется бесконечно без размытия. PNG — для офисной печати и приложений, не принимающих SVG."}},
-  {"@type":"Question","name":"Это правда бесплатно? Без водяных знаков?","acceptedAnswer":{"@type":"Answer","text":"Бесплатно, без водяных знаков, без регистрации. Штрихкод рисуется в вашем браузере — ничего не загружается."}}
-]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","name":"Создайте штрихкод","description":"Создайте штрихкод бесплатно, в браузере.","step":[
-  {"@type":"HowToStep","name":"Выберите формат","text":"Code 128 — для общего использования, EAN-13 — для розничных товаров, UPC-A — для розничной торговли в США, Code 39 — для старых сканеров, ITF-14 — для транспортных коробок."},
-  {"@type":"HowToStep","name":"Введите значение","text":"Введите число или текст. Для EAN-13, UPC-A и ITF-14 не вводите контрольную цифру — она добавляется автоматически."},
-  {"@type":"HowToStep","name":"Оформите","text":"Ширина штриха, высота и показ значения под штрихами."},
-  {"@type":"HowToStep","name":"Download","text":"PNG — для офисной печати, SVG — для упаковки и профессиональной печати."}
-]}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "name": "Генератор штрихкодов FreeQrly",
+  "url": "https://freeqrly.com/ru/barcode-generator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "description": "Создавайте штрихкоды Code 128, EAN-13, UPC-A, Code 39 и ITF-14 бесплатно, в браузере. Скачивайте PNG или SVG."
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какой формат штрихкода выбрать?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code 128 — для общего использования, он хранит любой текст. EAN-13 — для розничных товаров, продаваемых по всему миру, UPC-A — для розничной торговли в США, Code 39 — когда сканер старый или код должен читаться человеком, ITF-14 — для транспортных коробок."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужна ли контрольная цифра?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет — для EAN-13, UPC-A и ITF-14 введите на одну цифру меньше, и контрольная цифра будет рассчитана за вас. Code 128 и Code 39 в ней не нуждаются."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG или SVG для печати?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVG — для упаковки и профессиональной печати: масштабируется бесконечно без размытия. PNG — для офисной печати и приложений, не принимающих SVG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Это правда бесплатно? Без водяных знаков?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Бесплатно, без водяных знаков, без регистрации. Штрихкод рисуется в вашем браузере — ничего не загружается."
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Создайте штрихкод",
+  "description": "Создайте штрихкод бесплатно, в браузере.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Выберите формат",
+      "text": "Code 128 — для общего использования, EAN-13 — для розничных товаров, UPC-A — для розничной торговли в США, Code 39 — для старых сканеров, ITF-14 — для транспортных коробок."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Введите значение",
+      "text": "Введите число или текст. Для EAN-13, UPC-A и ITF-14 не вводите контрольную цифру — она добавляется автоматически."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Оформите",
+      "text": "Ширина штриха, высота и показ значения под штрихами."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "PNG — для офисной печати, SVG — для упаковки и профессиональной печати."
+    }
+  ]
+}</script>
 <link rel="stylesheet" href="/assets/css/site-header.css?v=892bba49">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=6d15df1b">
 </head>

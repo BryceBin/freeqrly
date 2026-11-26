@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kostenloser Ticket-QR-Code-Generator | FreeQrly</title>
-<meta name="description" content="Erstelle kostenlose QR-Codes für Tickets: Verlinke deine Ticket- oder Check-in-Seite, drucke mit dem Batch-Modus einen Code pro Ticket, keine Anmeldung für statische Codes, läuft nie ab.">
+<meta name="description" content="Kostenlose QR-Codes für Tickets: ein Code pro Ticket per Stapelmodus, ohne Anmeldung für statische Codes, laufen nie ab.">
 <link rel="canonical" href="https://freeqrly.com/de/ticket-qr-code/">
 <link rel="alternate" hreflang="en" href="https://freeqrly.com/ticket-qr-code/">
 <link rel="alternate" hreflang="zh" href="https://freeqrly.com/zh/ticket-qr-code/">
@@ -19,7 +19,7 @@
 <link rel="alternate" hreflang="x-default" href="https://freeqrly.com/ticket-qr-code/">
 <meta name="theme-color" content="#e9eef4">
 <meta property="og:title" content="Kostenloser Ticket-QR-Code-Generator | FreeQrly">
-<meta property="og:description" content="Erstelle kostenlose QR-Codes für Tickets: Verlinke deine Ticket- oder Check-in-Seite, drucke mit dem Batch-Modus einen Code pro Ticket, keine Anmeldung für statische Codes, läuft nie ab.">
+<meta property="og:description" content="Kostenlose QR-Codes für Tickets: ein Code pro Ticket per Stapelmodus, ohne Anmeldung für statische Codes, laufen nie ab.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://freeqrly.com/de/ticket-qr-code/">
 <meta property="og:image" content="https://freeqrly.com/og.png">
@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — QR-Code-Ticket","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/de/ticket-qr-code/","description":"Erstelle kostenlose QR-Codes für Tickets: Verlinke deine Ticket- oder Check-in-Seite, drucke mit dem Batch-Modus einen Code pro Ticket, keine Anmeldung für statische Codes, läuft nie ab.","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — QR-Code-Ticket",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/de/ticket-qr-code/",
+  "description": "Kostenlose QR-Codes für Tickets: ein Code pro Ticket per Stapelmodus, ohne Anmeldung für statische Codes, laufen nie ab.",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -80,7 +97,7 @@
       "name": "Kann ich für jedes Ticket einen anderen Code erstellen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja – der Batch-Modus erzeugt einen Code pro Link: einen Ticket-Link pro Zeile einfügen, alle als ZIP herunterladen und jeden auf sein eigenes Ticket drucken."
+        "text": "Ja – der Stapelmodus erzeugt einen Code pro Link: einen Ticket-Link pro Zeile einfügen, alle als ZIP herunterladen und jeden auf sein eigenes Ticket drucken."
       }
     },
     {
@@ -88,7 +105,7 @@
       "name": "Laufen Ticket-QR-Codes ab?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Statische Codes laufen nie ab. Wenn die Veranstaltung verlegt wird, zeige die Seite hinter dem Code auf die neuen Details – oder lenke mit einem dynamischen Code den Code selbst um, ohne neu zu drucken."
+        "text": "Nein. Statische Codes laufen nie ab. Wenn die Veranstaltung verlegt wird, richte die Seite hinter dem Code auf die neuen Details aus – oder lenke mit einem dynamischen Code den Code selbst um, ohne neu zu drucken."
       }
     },
     {
@@ -96,15 +113,34 @@
       "name": "Wie groß sollte ich ihn auf einem Ticket drucken?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mindestens 2 × 2 cm mit klarem freiem Rand, bei einem Export von 1024 px oder mehr. An einem belebten Eingang ist größer sicherer – ein Code, der beim ersten Versuch scannt, hält die Schlange in Bewegung."
+        "text": "Mindestens 2 × 2 cm mit einer klar abgegrenzten Ruhezone, bei einem Export von 1024 px oder mehr. An einem belebten Eingang ist größer sicherer – ein Code, der beim ersten Versuch scannt, hält die Schlange in Bewegung."
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "Erstelle deinen Ticket-QR-Code", "description": "Setze einen QR-Code auf jedes Ticket, Plakat und jede Bestätigungs-E-Mail. Gäste scannen am Eingang und landen direkt auf deiner Ticket- oder Check-in-Seite – Konzerte, Konferenzen, Workshops, Schulveranstaltungen.", "step": [{"@type": "HowToStep", "name": "Zu deiner Ticket-Seite verlinken", "text": "Deine Ticketing-Seite, dein Check-in-Formular oder die Veranstaltungsdetails – ein Code, ein Ziel."}, {"@type": "HowToStep", "name": "Code erstellen", "text": "Link unten im Studio einfügen. Druckfertiges PNG oder SVG, kostenlos, kein Wasserzeichen, keine Anmeldung für statische Codes."}, {"@type": "HowToStep", "name": "Ein Code pro Ticket, mit Batch", "text": "Für jedes Ticket einen anderen Code nötig? Der Batch-Modus nimmt einen Link pro Zeile und lädt jeden Code als ZIP herunter."}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Erstelle deinen Ticket-QR-Code",
+  "description": "Setze einen QR-Code auf jedes Ticket, Plakat und jede Bestätigungs-E-Mail. Gäste scannen am Eingang und landen direkt auf deiner Ticket- oder Check-in-Seite – Konzerte, Konferenzen, Workshops, Schulveranstaltungen.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Zu deiner Ticket-Seite verlinken",
+      "text": "Deine Ticketing-Seite, dein Check-in-Formular oder die Veranstaltungsdetails – ein Code, ein Ziel."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Code erstellen",
+      "text": "Link unten im Studio einfügen. Druckfertiges PNG oder SVG, kostenlos, kein Wasserzeichen, keine Anmeldung für statische Codes."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Ein Code pro Ticket, mit Batch",
+      "text": "Brauchst du für jedes Ticket einen anderen Code? Der Stapelmodus nimmt einen Link pro Zeile und lädt jeden Code als ZIP herunter."
+    }
+  ]
+}</script>
 </head>
 <body data-lp="ticket-qr-code" data-type="url">
 <div class="wrap">
@@ -194,7 +230,7 @@
     <ol class="steps" id="how">
       <li><span class="sn">1</span><span><b>Zu deiner Ticket-Seite verlinken</b>Deine Ticketing-Seite, dein Check-in-Formular oder die Veranstaltungsdetails – ein Code, ein Ziel.</span></li>
       <li><span class="sn">2</span><span><b>Den Code erstellen</b>Link unten im Studio einfügen. Druckfertiges PNG oder SVG, kostenlos, kein Wasserzeichen, keine Anmeldung für statische Codes.</span></li>
-      <li><span class="sn">3</span><span><b>Ein Code pro Ticket, mit Batch</b>Für jedes Ticket einen anderen Code nötig? Der Batch-Modus nimmt einen Link pro Zeile und lädt jeden Code als ZIP herunter.</span></li>
+      <li><span class="sn">3</span><span><b>Ein Code pro Ticket, mit Stapelmodus</b>Brauchst du für jedes Ticket einen anderen Code? Der Stapelmodus nimmt einen Link pro Zeile und lädt jeden Code als ZIP herunter.</span></li>
     </ol>
   </section>
 <main class="studio" id="studio">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">Eckig</option><option value="dots">Rund</option><option value="rounded">Weich</option><option value="extra-rounded">Kiesel</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">Live-Vorschau — ändert sich beim Tippen</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR-Code-Vorschau"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR-Code-Vorschau" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">Fülle deinen Inhalt aus und klicke auf Generieren</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR-Code-Vorschau"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR-Code-Vorschau" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">Fülle deinen Inhalt aus und klicke auf Generieren</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">Im Dashboard ansehen →</a>
@@ -312,9 +348,9 @@
   <section class="faq" id="faq">
     <h2>Gut zu wissen</h2>
     <details><summary><span>Worauf sollte ein Ticket-QR-Code verlinken?</span></summary><p>Deine Ticket-Seite, ein Check-in-Formular oder die Seite mit den Veranstaltungsdetails. Der Code öffnet diese Seite einfach auf dem Smartphone des Gastes – die Seite selbst bleibt die maßgebliche Quelle für den Einlass.</p></details>
-    <details><summary><span>Kann ich für jedes Ticket einen anderen Code erstellen?</span></summary><p>Ja – der Batch-Modus erzeugt einen Code pro Link: einen Ticket-Link pro Zeile einfügen, alle als ZIP herunterladen und jeden auf sein eigenes Ticket drucken.</p></details>
-    <details><summary><span>Laufen Ticket-QR-Codes ab?</span></summary><p>Nein. Statische Codes laufen nie ab. Wenn die Veranstaltung verlegt wird, zeige die Seite hinter dem Code auf die neuen Details – oder lenke mit einem dynamischen Code den Code selbst um, ohne neu zu drucken.</p></details>
-    <details><summary><span>Wie groß sollte ich ihn auf einem Ticket drucken?</span></summary><p>Mindestens 2 × 2 cm mit klarem freiem Rand, bei einem Export von 1024 px oder mehr. An einem belebten Eingang ist größer sicherer – ein Code, der beim ersten Versuch scannt, hält die Schlange in Bewegung.</p></details>
+    <details><summary><span>Kann ich für jedes Ticket einen anderen Code erstellen?</span></summary><p>Ja – der Stapelmodus erzeugt einen Code pro Link: einen Ticket-Link pro Zeile einfügen, alle als ZIP herunterladen und jeden auf sein eigenes Ticket drucken.</p></details>
+    <details><summary><span>Laufen Ticket-QR-Codes ab?</span></summary><p>Nein. Statische Codes laufen nie ab. Wenn die Veranstaltung verlegt wird, richte die Seite hinter dem Code auf die neuen Details aus – oder lenke mit einem dynamischen Code den Code selbst um, ohne neu zu drucken.</p></details>
+    <details><summary><span>Wie groß sollte ich ihn auf einem Ticket drucken?</span></summary><p>Mindestens 2 × 2 cm mit einer klar abgegrenzten Ruhezone, bei einem Export von 1024 px oder mehr. An einem belebten Eingang ist größer sicherer – ein Code, der beim ersten Versuch scannt, hält die Schlange in Bewegung.</p></details>
   </section>
 
   <footer>

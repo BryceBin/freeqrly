@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — लोगो वाला qr कोड","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/hi/qr-code-with-logo/","description":"किसी भी QR कोड के बीच में अपना लोगो जोड़ें। मुफ़्त, स्टैटिक कोड के लिए साइन-अप नहीं, वॉटरमार्क नहीं। एरर करेक्शन अपने आप एडजस्ट हो जाता है ताकि यह हमेशा स्कैन हो।","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — लोगो वाला qr कोड",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/hi/qr-code-with-logo/",
+  "description": "किसी भी QR कोड के बीच में अपना लोगो जोड़ें। मुफ़्त, स्टैटिक कोड के लिए साइन-अप नहीं, वॉटरमार्क नहीं। एरर करेक्शन अपने आप एडजस्ट हो जाता है ताकि यह हमेशा स्कैन हो।",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "अपना लोगो QR कोड बनाएं", "description": "अपना लोगो अपलोड करें और यह बिल्कुल बीच में आ जाता है, एरर करेक्शन अपने आप बढ़ जाता है ताकि कोड फिर भी परफ़ेक्ट स्कैन हो। मुफ़्त, वॉटरमार्क नहीं, स्टैटिक कोड के लिए अकाउंट की ज़रूरत नहीं।", "step": [{"@type": "HowToStep", "name": "अपना कोड बनाएं", "text": "कोई भी टाइप — लिंक, vCard, WiFi। लोगो वाला स्टेप सबके साथ काम करता है।"}, {"@type": "HowToStep", "name": "अपना लोगो अपलोड करें", "text": "पारदर्शिता वाला चौकोर PNG सबसे अच्छा काम करता है। नियम के तौर पर इसे कोड एरिया के ~30% से कम रखें।"}, {"@type": "HowToStep", "name": "प्रिंट-रेडी डाउनलोड करें", "text": "2048 px तक PNG या अनंत रूप से स्केल किया जा सकने वाला SVG — कार्ड और बैनर दोनों पर क्रिस्प।"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "अपना लोगो QR कोड बनाएं",
+  "description": "अपना लोगो अपलोड करें और यह बिल्कुल बीच में आ जाता है, एरर करेक्शन अपने आप बढ़ जाता है ताकि कोड फिर भी परफ़ेक्ट स्कैन हो। मुफ़्त, वॉटरमार्क नहीं, स्टैटिक कोड के लिए अकाउंट की ज़रूरत नहीं।",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "अपना कोड बनाएं",
+      "text": "कोई भी टाइप — लिंक, vCard, WiFi। लोगो वाला स्टेप सबके साथ काम करता है।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "अपना लोगो अपलोड करें",
+      "text": "पारदर्शिता वाला चौकोर PNG सबसे अच्छा काम करता है। नियम के तौर पर इसे कोड एरिया के ~30% से कम रखें।"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "प्रिंट-रेडी डाउनलोड करें",
+      "text": "2048 px तक PNG या अनंत रूप से स्केल किया जा सकने वाला SVG — कार्ड और बैनर दोनों पर क्रिस्प।"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="qr-code-with-logo" data-type="url">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">चौकोर</option><option value="dots">गोल</option><option value="rounded">नर्म</option><option value="extra-rounded">कंकड़</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">लाइव प्रीव्यू — लिखते ही बदलेगा</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR कोड पूर्वावलोकन"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR कोड पूर्वावलोकन" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">अपनी सामग्री भरें, फिर जनरेट दबाएं</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QR कोड पूर्वावलोकन"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QR कोड पूर्वावलोकन" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">अपनी सामग्री भरें, फिर जनरेट दबाएं</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">डैशबोर्ड में देखें →</a>

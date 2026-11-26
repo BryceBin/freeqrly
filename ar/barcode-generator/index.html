@@ -51,25 +51,92 @@
 .bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1}
 @media(max-width:560px){.bc-card{padding:16px}.bc-btns .btn-solid,.bc-btns .btn-ghost{flex:1 1 100%}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"name":"مولّد باركود FreeQrly","url":"https://freeqrly.com/ar/barcode-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"أنشئ باركود Code 128 وEAN-13 وUPC-A وCode 39 وITF-14 مجانًا، في المتصفح. نزّل PNG أو SVG."}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"أي تنسيق باركود يجب أن أستخدم؟","acceptedAnswer":{"@type":"Answer","text":"Code 128 للاستخدام العام — يحمل أي نص. EAN-13 لمنتجات التجزئة المباعة دوليًا، وUPC-A لتجزئة الولايات المتحدة، وCode 39 عندما يكون الماسح قديمًا أو يجب أن يكون الرمز مقروءًا للبشر، وITF-14 لصناديق الشحن."}},
-  {"@type":"Question","name":"هل أحتاج رقم تحقق؟","acceptedAnswer":{"@type":"Answer","text":"لا — بالنسبة إلى EAN-13 وUPC-A وITF-14، أدخل رقمًا واحدًا أقل وسيُحسب رقم التحقق لك. أما Code 128 وCode 39 فلا يحتاجان إليه."}},
-  {"@type":"Question","name":"PNG أم SVG للطباعة؟","acceptedAnswer":{"@type":"Answer","text":"SVG للتغليف والطباعة الاحترافية — يتدرج بلا حدود دون تشويش. PNG للطباعة المكتبية والتطبيقات التي لا تقبل SVG."}},
-  {"@type":"Question","name":"هل هو مجاني حقًا؟ أي علامة مائية؟","acceptedAnswer":{"@type":"Answer","text":"مجاني، بدون علامة مائية، بدون تسجيل. يُرسم الباركود في متصفحك — لا يُرفع أي شيء."}}
-]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","name":"أنشئ باركود","description":"أنشئ باركود مجانًا، في متصفحك.","step":[
-  {"@type":"HowToStep","name":"اختر تنسيقًا","text":"Code 128 للاستخدام العام، وEAN-13 لمنتجات التجزئة، وUPC-A لتجزئة الولايات المتحدة، وCode 39 للماسحات الأقدم، وITF-14 لصناديق الشحن."},
-  {"@type":"HowToStep","name":"أدخل القيمة","text":"اكتب الرقم أو النص. بالنسبة إلى EAN-13 وUPC-A وITF-14، اترك رقم التحقق — يُضاف تلقائيًا."},
-  {"@type":"HowToStep","name":"نسّقه","text":"عرض الشريط والارتفاع وما إذا كانت القيمة تظهر أسفل الأشرطة."},
-  {"@type":"HowToStep","name":"Download","text":"PNG للطباعة المكتبية، وSVG للتغليف والطباعة الاحترافية."}
-]}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "name": "مولّد باركود FreeQrly",
+  "url": "https://freeqrly.com/ar/barcode-generator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "description": "أنشئ باركود Code 128 وEAN-13 وUPC-A وCode 39 وITF-14 مجانًا، في المتصفح. نزّل PNG أو SVG."
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "أي تنسيق باركود يجب أن أستخدم؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code 128 للاستخدام العام — يحمل أي نص. EAN-13 لمنتجات التجزئة المباعة دوليًا، وUPC-A لتجزئة الولايات المتحدة، وCode 39 عندما يكون الماسح قديمًا أو يجب أن يكون الرمز مقروءًا للبشر، وITF-14 لصناديق الشحن."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل أحتاج رقم تحقق؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لا — بالنسبة إلى EAN-13 وUPC-A وITF-14، أدخل رقمًا واحدًا أقل وسيُحسب رقم التحقق لك. أما Code 128 وCode 39 فلا يحتاجان إليه."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNG أم SVG للطباعة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVG للتغليف والطباعة الاحترافية — يتدرج بلا حدود دون تشويش. PNG للطباعة المكتبية والتطبيقات التي لا تقبل SVG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل هو مجاني حقًا؟ أي علامة مائية؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "مجاني، بدون علامة مائية، بدون تسجيل. يُرسم الباركود في متصفحك — لا يُرفع أي شيء."
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "أنشئ باركود",
+  "description": "أنشئ باركود مجانًا، في متصفحك.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "اختر تنسيقًا",
+      "text": "Code 128 للاستخدام العام، وEAN-13 لمنتجات التجزئة، وUPC-A لتجزئة الولايات المتحدة، وCode 39 للماسحات الأقدم، وITF-14 لصناديق الشحن."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "أدخل القيمة",
+      "text": "اكتب الرقم أو النص. بالنسبة إلى EAN-13 وUPC-A وITF-14، اترك رقم التحقق — يُضاف تلقائيًا."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "نسّقه",
+      "text": "عرض الشريط والارتفاع وما إذا كانت القيمة تظهر أسفل الأشرطة."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "PNG للطباعة المكتبية، وSVG للتغليف والطباعة الاحترافية."
+    }
+  ]
+}</script>
 <link rel="stylesheet" href="/assets/css/site-header.css?v=892bba49">
 <link rel="stylesheet" href="/assets/css/acct-menu.css?v=6d15df1b">
 </head>

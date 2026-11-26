@@ -1,10 +1,10 @@
 [
  "How to Create a Dynamic QR Code Free (Editable After Printing) | FreeQrly",
- "Create a dynamic QR code free: sign in, pick a type, style it, print it. Edit the destination later without reprinting — 20 free codes, currently unlimited.",
  "How to create a <span class='hl hl-mint'>dynamic</span> QR code",
  "A dynamic QR code lets you change the destination after printing — and see how many people scanned. Here's how to make one, free, in about a minute.",
  "Yes — you can create a dynamic QR code free, in about a minute, and change where it points after you have printed it. Choose dynamic when the destination is not final yet, when you want to count scans, or when one printed code must serve a new page next month. Choose static when the destination will never change: a fixed link, a WiFi password, or a business card needs no account and no redirect. This guide covers the FreeQrly process, the redirect mechanism in plain language, and the free limits up front.",
  "On FreeQrly, dynamic codes are free. Sign in with email and password, Google, or GitHub, and you get 20 dynamic codes on the free account, currently unlimited during the limited-time promotion. There is no trial period and no card required to start, and scans are unlimited. You can edit a code after printing, see its scan statistics, generate codes in bulk in static form, and use the API.",
+ "Dynamic or static? Decide before you print",
  "The decision cannot be reversed for a code that is already printed. A static code holds the destination inside the pattern, so it can never be repointed. A dynamic code holds a short link that redirects to the destination, so the destination can be changed later. A printed static code with a wrong link needs a reprint; a printed dynamic code needs only an edit in the Dashboard.",
  "Your situation",
  "Link, WiFi password, or contact details will not change",

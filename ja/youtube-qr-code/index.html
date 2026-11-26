@@ -59,11 +59,28 @@
 .lp-hero .glance b{color:var(--ink);font-weight:700}
 .lp-hero .updated{font-size:13.5px;color:var(--soft);margin:6px 0 0}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FreeQrly — YouTube QRコードジェネレーター","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lede"]},"offers":{"@type":"Offer","price":"0"},"url":"https://freeqrly.com/ja/youtube-qr-code/","description":"YouTubeの動画やチャンネルをスキャン可能なQRコードに。無料、静的コードは登録不要。パッケージ、ポスター、グッズに印刷して。","dateModified":"2026-10-30"}
-</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FreeQrly — YouTube QRコードジェネレーター",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "url": "https://freeqrly.com/ja/youtube-qr-code/",
+  "description": "YouTubeの動画やチャンネルをスキャン可能なQRコードに。無料、静的コードは登録不要。パッケージ、ポスター、グッズに印刷して。",
+  "dateModified": "2026-10-30"
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -100,11 +117,30 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "HowTo", "name": "YouTube QRコードを作る", "description": "YouTubeの動画やチャンネルのURLを貼れば、アプリでそのまま開くQRコードに。ポスター、パッケージ、グッズ、名刺 — 視聴者はスキャンしてそのまま視聴します。", "step": [{"@type": "HowToStep", "name": "YouTubeリンクをコピー", "text": "動画、チャンネル、Short、プレイリスト — どのYouTube URLでもOK。"}, {"@type": "HowToStep", "name": "リンクを貼り付け", "text": "コードがウェブサイト欄にすぐに表示されます。"}, {"@type": "HowToStep", "name": "視聴者の目に入るところに印刷", "text": "ポスター、グッズ、パッケージ、配布物。印刷には1024pxで書き出し。"}]}
-</script>
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "YouTube QRコードを作る",
+  "description": "YouTubeの動画やチャンネルのURLを貼れば、アプリでそのまま開くQRコードに。ポスター、パッケージ、グッズ、名刺 — 視聴者はスキャンしてそのまま視聴します。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "YouTubeリンクをコピー",
+      "text": "動画、チャンネル、Short、プレイリスト — どのYouTube URLでもOK。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "リンクを貼り付け",
+      "text": "コードがウェブサイト欄にすぐに表示されます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "視聴者の目に入るところに印刷",
+      "text": "ポスター、グッズ、パッケージ、配布物。印刷には1024pxで書き出し。"
+    }
+  ]
+}</script>
 </head>
 <body data-lp="youtube-qr-code" data-type="url">
 <div class="wrap">
@@ -273,7 +309,7 @@
         <!-- hidden native controls (synced by the visual UI above) -->
         <div hidden><select id="dots"><option value="square">四角</option><option value="dots">丸</option><option value="rounded">やわらか</option><option value="extra-rounded">小石</option></select>
         <select id="ecc"><option value="L">L</option><option value="M" selected>M</option><option value="Q">Q</option><option value="H">H</option></select>
-        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp" checked><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
+        <input type="color" id="fg" value="#22303F"><input type="color" id="bgc" value="#ffffff"><input type="checkbox" id="transp"><input type="range" id="size" min="512" max="4096" step="512" value="1024"></div>
 
       </div>
       <div class="previewCol">
@@ -283,7 +319,7 @@
         </div>
         <div class="modeHintLine" id="modeHintLine" data-i18n="live">ライブプレビュー — 入力と同時に変わる</div>
         <div class="quotaHint" id="quotaHint" hidden></div>
-        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QRコードのプレビュー"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QRコードのプレビュー" width="236" height="236"></div><div class="blurOverlay" data-i18n="dynBlurHint">内容を入力して「生成」を押してください</div></div>
+        <div class="qrpaper"><div id="qrbox" role="img" aria-label="QRコードのプレビュー"><img data-prerender="1" src="/assets/img/qr-default.svg" alt="QRコードのプレビュー" width="300" height="300"></div><div class="blurOverlay" data-i18n="dynBlurHint">内容を入力して「生成」を押してください</div></div>
         <div id="dynResult" hidden>
           <div class="dynShort"><a id="dynShortUrl" href="#" target="_blank" rel="noopener"></a></div>
           <a class="dynManageLink" id="dynDashLink" href="/dashboard/" hidden data-i18n="dynDashLink">ダッシュボードで見る →</a>
