@@ -143,7 +143,9 @@ function formTouched(){
   if(!box) return false;
   return [...box.querySelectorAll("input,textarea")].some(el => {
     if(el.type === "checkbox" || el.type === "radio") return el.checked;
-    if(el.type === "file" || el.type === "hidden" || el.type === "submit") return false;
+    if(el.type === "file" || el.type === "submit") return false;
+    // Hidden inputs are the datetime-local fields behind the custom picker;
+    // a picked date there is real input and must count.
     return String(el.value||"").trim() !== "";
   });
 }
