@@ -150,7 +150,10 @@ for lang in LANGS:
     h = re.sub(r'(href=")(/[^"]*)', _loc_href, h)
 
     # og:url: self-reference (canonical already does; og:url was EN root)
-    h = re.sub(r'<meta property="og:url" content="[^"]*"',
+    # 注意：正则必须把结尾的 > 一起吃掉，否则替换后原标签的 > 会留下，
+    # 变成 ">>"，多出来的那个字符会提前闭合 </head>，把后面的
+    # og:image / og:locale / twitter:* 全挤进 <body>。
+    h = re.sub(r'<meta property="og:url" content="[^"]*">',
                f'<meta property="og:url" content="https://freeqrly.com/{lang}/">', h)
 
     # Translate the FAQPage JSON-LD (name/text) — the data-i18n pass above
