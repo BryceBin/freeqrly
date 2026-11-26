@@ -20,6 +20,15 @@ function build(contact){
   const lines=["BEGIN:VCARD","VERSION:3.0","N:;"+escapeText(name)+";;;","FN:"+escapeText(name)];
   if(contact.phone) lines.push("TEL;TYPE=CELL:"+String(contact.phone).replace(/[\r\n]/g,""));
   if(contact.email) lines.push("EMAIL;TYPE=INTERNET:"+escapeText(contact.email));
+  if(contact.org) lines.push("ORG:"+escapeText(contact.org));
+  if(contact.title) lines.push("TITLE:"+escapeText(contact.title));
+  // URL is a URI, not text: escaping would corrupt it. Only strip newlines.
+  if(contact.url) lines.push("URL:"+String(contact.url).replace(/[\r\n]/g,""));
+  // ADR is seven semicolon-separated components (PO box; extended; street;
+  // city; region; postcode; country). The form collects one free-text
+  // address, so it goes in the street component.
+  if(contact.address) lines.push("ADR;TYPE=HOME:;;"+escapeText(contact.address)+";;;;");
+  if(contact.note) lines.push("NOTE:"+escapeText(contact.note));
   lines.push("END:VCARD");
   return serialize(lines);
 }

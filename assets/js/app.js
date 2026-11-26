@@ -128,50 +128,118 @@ const ORDER = ["url","text","wifi","vcard","email","sms","phone","geo","event","
 const _preType = document.body.getAttribute("data-type") || new URLSearchParams(location.search).get("type");
 if (_preType && ORDER.includes(_preType)) cur = _preType;
 
-const v = id => { const el = $("f_"+id); if(!el) return ""; return el.value.trim() || (el.placeholder||""); };
+// Placeholder text is demo content: it keeps the live preview from being
+// blank before the first keystroke. It must never reach the QR payload —
+// leaving "Company" empty used to write the placeholder ("Acme Inc") into
+// the contact, so a scan saved a fake employer.
+const raw = id => { const el = $("f_"+id); return el ? el.value.trim() : ""; };
+const v = id => raw(id) || (($("f_"+id)||{}).placeholder || "");
+// True once the visitor has typed anything into the current type's form.
+// Selects are ignored on purpose: they always carry a value (WPA, the first
+// option), so counting them would mark every form as touched before the
+// visitor typed a single character.
+function formTouched(){
+  const box = $("fields");
+  if(!box) return false;
+  return [...box.querySelectorAll("input,textarea")].some(el => {
+    if(el.type === "checkbox" || el.type === "radio") return el.checked;
+    if(el.type === "file" || el.type === "hidden" || el.type === "submit") return false;
+    return String(el.value||"").trim() !== "";
+  });
+}
+// iCalendar DTSTAMP, fixed for the life of the page: a per-render timestamp
+// would change the QR bytes every second and repaint the preview for nothing.
+const PAGE_STAMP = new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
 function content(){
+  // Untouched form: keep showing the demo (placeholders). Once anything is
+  // entered, only what the visitor actually typed goes into the payload.
+  const q = formTouched() ? raw : v;
   switch(cur){
-    case "url": return v("url")||"https://example.com";
-    case "text": return v("text")||" ";
-    case "wifi": return `WIFI:T:${v("enc")};S:${v("ssid")};P:${v("pass")};;`;
-    case "vcard": {
-      let s = `BEGIN:VCARD\nVERSION:3.0\nN:${v("name")}\n`;
-      if(v("vcorg")) s += `ORG:${v("vcorg")}\n`;
-      if(v("vctitle")) s += `TITLE:${v("vctitle")}\n`;
-      s += `TEL:${v("phone")}\nEMAIL:${v("email")}\n`;
-      if(v("vcurl")) s += `URL:${v("vcurl")}\n`;
-      if(v("vcadr")) s += `ADR:;;${v("vcadr")}\n`;
-      if(v("vcnote")) s += `NOTE:${v("vcnote")}\n`;
-      return s + "END:VCARD";
+    case "url": return q("url")||"https://example.com";
+    case "text": return q("text")||" ";
+    case "wifi": {
+      // ZXing's WIFI: payload reserves \ ; , : and " inside SSID and password.
+      // Without escaping, a password like "ab;cd" ends the field at the
+      // semicolon and the rest is silently lost.
+      const esc = s => String(s||"").replace(/([\\;,:])/g, "\\$1");
+      const enc = q("enc") || "WPA";
+      const ssid = esc(q("ssid"));
+      if(enc === "nopass") return `WIFI:T:nopass;S:${ssid};;`;
+      return `WIFI:T:${enc};S:${ssid};P:${esc(q("pass"))};;`;
     }
-    case "email": return `mailto:${v("to")}?subject=${encodeURIComponent(v("subject"))}&body=${encodeURIComponent(v("body"))}`;
-    case "sms": return `sms:${v("phone")}?body=${encodeURIComponent(v("body"))}`;
-    case "phone": return `tel:${v("phone")}`;
-    case "geo": return `geo:${v("lat")},${v("lng")}`;
+    case "vcard": {
+      const c = {name:q("name"), phone:q("phone"), email:q("email"),
+        org:q("vcorg"), title:q("vctitle"), url:q("vcurl"),
+        address:q("vcadr"), note:q("vcnote")};
+      // vcard.js is the single correct builder (CRLF, FN, escaping, folding)
+      // and is loaded before this file everywhere the generator appears.
+      if(window.FreeQrlyVCard) return FreeQrlyVCard.build(c);
+      // Fallback keeps the essentials if that script ever fails to load.
+      const e = s => String(s||"").replace(/\\/g,"\\\\").replace(/[\r\n]+/g,"\\n").replace(/;/g,"\\;").replace(/,/g,"\\,");
+      const n = String(c.name||c.phone||c.email||"Contact").trim()||"Contact";
+      const L = ["BEGIN:VCARD","VERSION:3.0","N:;"+e(n)+";;;","FN:"+e(n)];
+      if(c.phone) L.push("TEL;TYPE=CELL:"+String(c.phone).replace(/[\r\n]/g,""));
+      if(c.email) L.push("EMAIL;TYPE=INTERNET:"+e(c.email));
+      L.push("END:VCARD");
+      return L.join("\r\n")+"\r\n";
+    }
+    case "email": return `mailto:${q("to")}?subject=${encodeURIComponent(q("subject"))}&body=${encodeURIComponent(q("body"))}`;
+    case "sms": return `sms:${q("phone")}?body=${encodeURIComponent(q("body"))}`;
+    case "phone": return `tel:${q("phone")}`;
+    case "geo": return `geo:${q("lat")},${q("lng")}`;
     case "bitcoin": {
-      const addr = v("btcaddr");
-      const q = [];
-      if(v("btcamt")) q.push("amount="+encodeURIComponent(v("btcamt")));
-      if(v("btclabel")) q.push("label="+encodeURIComponent(v("btclabel")));
-      if(v("btcmsg")) q.push("message="+encodeURIComponent(v("btcmsg")));
-      return "bitcoin:" + addr + (q.length ? "?" + q.join("&") : "");
+      const addr = q("btcaddr");
+      const params = [];
+      if(q("btcamt")) params.push("amount="+encodeURIComponent(q("btcamt")));
+      if(q("btclabel")) params.push("label="+encodeURIComponent(q("btclabel")));
+      if(q("btcmsg")) params.push("message="+encodeURIComponent(q("btcmsg")));
+      return "bitcoin:" + addr + (params.length ? "?" + params.join("&") : "");
     }
     case "coupon": {
-      const code = v("cpcode"), desc = v("cpdesc");
+      const code = q("cpcode"), desc = q("cpdesc");
       return desc ? `${desc}\nCode: ${code}` : `Code: ${code}`;
     }
     case "appstore": {
-      const ios = v("appios"), and = v("appand");
+      const ios = q("appios"), and = q("appand");
       // Return a simple landing format - iOS first, fallback Android
       return ios || and || "";
     }
-    case "review": return v("rvlink")||"";
-    case "mp3": return v("mp3link")||"";
-    case "google-form": return v("gflink")||"";
-    case "menu": return v("mnlink")||"";
+    case "review": return q("rvlink")||"";
+    case "mp3": return q("mp3link")||"";
+    case "google-form": return q("gflink")||"";
+    case "menu": return q("mnlink")||"";
     case "event": {
-      const f = s => { s=(s||"").replace(/-/g,"").replace(/:/g,""); return s.length===13 ? s+"00" : s; };
-      return `BEGIN:VEVENT\nSUMMARY:${v("etitle")}\nDTSTART:${f(v("estart"))}\nDTEND:${f(v("eend"))}\nLOCATION:${v("eloc")}\nDESCRIPTION:${v("edesc")}\nEND:VEVENT`;
+      // RFC 5545: a bare VEVENT is not an iCalendar object. It needs the
+      // VCALENDAR wrapper, a VERSION, and a DTSTAMP, or "add to calendar"
+      // flows reject it. Text values must also be escaped.
+      const esc = s => String(s||"").replace(/\\/g,"\\\\").replace(/\r\n|\r|\n/g,"\\n").replace(/;/g,"\\;").replace(/,/g,"\\,");
+      // datetime-local gives "2026-12-01T10:00" or "...T10:00:30"; a bare
+      // date input gives "2026-12-01". iCalendar wants YYYYMMDDTHHMMSS.
+      const dt = s => {
+        const t = String(s||"").trim();
+        const m = t.match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2})(?::(\d{2}))?)?$/);
+        if(!m) return {v:t.replace(/[-:]/g,"").replace(/\.\d+/,""), date:false};
+        const [, y, mo, d, hh, mi, se] = m;
+        if(!hh) return {v:y+mo+d, date:true};
+        return {v:y+mo+d+"T"+hh+mi+(se||"00"), date:false};
+      };
+      const start = dt(q("estart")), end = dt(q("eend"));
+      const title = q("etitle");
+      // DTSTAMP and UID must not change between redraws, or the QR pattern
+      // would shift every time a colour or dot style is changed. DTSTAMP is
+      // fixed once per page load; the UID is a hash of the event itself.
+      const stamp = PAGE_STAMP;
+      const hash = s => { let h = 5381; for(const ch of s) h = ((h << 5) + h + ch.codePointAt(0)) | 0; return (h >>> 0).toString(16); };
+      const uid = hash(title + "|" + start.v + "|" + q("eloc")) + "@freeqrly.com";
+      const L = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//FreeQrly//QR Event//EN",
+        "CALSCALE:GREGORIAN","BEGIN:VEVENT","UID:"+uid,"DTSTAMP:"+stamp,
+        "SUMMARY:"+esc(title)];
+      if(start.v) L.push("DTSTART"+(start.date?";VALUE=DATE":"")+":"+start.v);
+      if(end.v) L.push("DTEND"+(end.date?";VALUE=DATE":"")+":"+end.v);
+      if(q("eloc")) L.push("LOCATION:"+esc(q("eloc")));
+      if(q("edesc")) L.push("DESCRIPTION:"+esc(q("edesc")));
+      L.push("END:VEVENT","END:VCALENDAR");
+      return L.join("\r\n");
     };
   }
   return " ";
@@ -1569,6 +1637,11 @@ function restoreDraft(){
 
   // Expose refresh for draw() to call when content changes
   window.refreshDynamicUI = refreshDynamicUI;
+
+  // Payload builders, exposed so the formats can be checked without a camera:
+  // these strings are what a scanner actually reads back, and a malformed one
+  // fails silently (a vCard with no FN still scans, it just imports wrong).
+  window.FreeQrlyPayload = { content };
 
 })();
 
