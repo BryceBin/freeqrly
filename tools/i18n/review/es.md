@@ -118,7 +118,7 @@ EN: If you want the destination editable later, use a dynamic code pointing at t
 →  Si quieres poder cambiar el destino más adelante, usa un código dinámico que apunte a la página de redirección. Cambia la página y todos los códigos impresos la siguen, sin reimprimir.
 
 EN: App launch slide
-→  Slide de lanzamiento
+→  Diapositiva de lanzamiento
 
 ⚠️ 未翻译（与英文相同）
 EN: 8 cm
@@ -368,7 +368,7 @@ EN: <span>How big should I print it on a ticket?</span>
 →  <span>¿A qué tamaño debo imprimirlo en una entrada?</span>
 
 EN: At least 2 × 2 cm with a clear quiet margin, at 1024 px export or higher. At a busy entrance, bigger is safer — a code that scans first try keeps the line moving.
-→  Al menos 2 × 2 cm con un zona de silencio despejada, con exportación a 1024 px o más. En una entrada concurrida, más grande es más seguro: un código que escanea a la primera mantiene la cola en movimiento.
+→  Al menos 2 × 2 cm con una zona de silencio despejada, con exportación a 1024 px o más. En una entrada concurrida, más grande es más seguro: un código que escanea a la primera mantiene la cola en movimiento.
 
 EN: FreeQrly — qr code ticket
 →  FreeQrly — código QR para entradas

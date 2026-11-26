@@ -28,9 +28,9 @@ TITLE_FIXES = [
     ("fr", "landing-ticket-qr-code",
      "Générateur gratuit de billet avec QR code | FreeQrly",
      "Générateur de QR code pour billets, gratuit | FreeQrly"),
-    ("pt", "landing-ticket-qr-code",
-     "Gerador de QR Code do Ingresso Grátis | FreeQrly",
-     "Gerador de QR code para ingressos grátis | FreeQrly"),
+    # "grátis" must modify the generator, not the tickets.
+    # (pt ticket title is fixed by the round-2 rule below, which matches the
+    #  current wording rather than the original one.)
     ("pt", "landing-app-store-qr-code",
      "Gerador de QR code da App Store: um código por loja | FreeQrly",
      "Gerador de QR code App Store: um código por loja | FreeQrly"),
@@ -92,8 +92,8 @@ FIXES = [
     ("fr", "landing-app-store-qr-code", "le bon store", "la bonne boutique"),
     ("fr", "landing-app-store-qr-code", "les deux stores", "les deux boutiques"),
     ("fr", "landing-app-store-qr-code", "fiches de store", "fiches de boutique"),
-    ("fr", "landing-app-store-qr-code", "sur 2", "sur au moins 2"),
-    ("fr", "landing-app-store-qr-code", "cm minimum", "cm"),
+    # ("sur 2 cm minimum" -> "d'au moins 2 cm" is handled by the round-2 rule
+    #  below; the intermediate "sur au moins" step is no longer needed.)
     ("fr", "landing-app-store-qr-code", "slides de lancement", "visuels de lancement"),
     ("fr", "landing-app-store-qr-code", "sur un portable", "sur un ordinateur portable"),
     ("fr", "landing-app-store-qr-code", "plus tolérant qu", "plus robuste qu"),
@@ -130,8 +130,8 @@ FIXES = [
      "один код — один адрес назначения"),
     ("ru", "landing-ticket-qr-code", "направьте страницу за кодом на новые детали",
      "направьте страницу, на которую ведёт код, на новые детали"),
-    ("ru", "landing-ticket-qr-code", "а источником истины для входа пусть остаётся сама страница",
-     "а точкой входа пусть остаётся сама страница"),
+    # (superseded by the round-2 wording below: "точкой входа" named the wrong
+    #  thing — the code is the entry point, the page is the authority.)
     ("ru", "landing-ticket-qr-code", "при экспорте от 1024 px и выше",
      "при экспорте от 1024 px"),
     ("ru", "about", "и они включают 20 бесплатно", "и включают 20 кодов бесплатно"),
@@ -146,7 +146,9 @@ FIXES = [
     ("ar", "about", 'المولّدات "المجانية"', "المولّدات “المجانية”"),
     ("ar", "landing-app-store-qr-code", "ويسهل العثور عليه في كليهما",
      "ويسهل العثور عليهما"),
-    ("ar", "about", "والرسائل والمكالمات والمواقع", "والرسائل والمكالمات والمواقع الجغرافية"),
+    # NOTE: "والمواقع" -> "والمواقع الجغرافية" is not idempotent (the needle is
+    # a substring of the replacement) and was applied by hand; a re-run would
+    # append the word again. Do not re-add it as a needle rule.
     ("ar", "about", "لا تجارب، لا رموز معطّلة", "لا فترات تجريبية، لا رموز معطّلة"),
     ("ar", "about", "بدون تجربة", "بدون فترة تجريبية"),
     ("ar", "landing-ticket-qr-code", "مسحة واحدة عند الباب", "مسحة واحدة عند المدخل"),
@@ -167,8 +169,8 @@ FIXES = [
     ("zh", "landing-ticket-qr-code", "并留出足够的空白边距", "并留足静区"),
     ("zh", "landing-app-store-qr-code", "最诚实、也最省事", "最实在、也最省事"),
     ("zh", "landing-app-store-qr-code", "逻辑很短：", "逻辑很简单："),
-    ("zh", "landing-app-store-qr-code", "App Store 或 Google Play 链接免费生成二维码。",
-     "为 App Store 或 Google Play 链接免费生成二维码。"),
+    # zh "App Store 或 …链接免费生成二维码。" -> "为 App Store 或 …" is not
+    # idempotent (needle is a substring of the replacement); applied by hand.
 
     # ---------- Japanese ----------
     ("ja", "about", "バッチ生成", "一括生成"),
@@ -205,6 +207,33 @@ FIXES = [
     ("hi", "about", "हां — व्यावसायिक इस्तेमाल मुफ़्त है",
      "हाँ — कमर्शियल इस्तेमाल मुफ़्त है"),
     ("hi", "landing-app-store-qr-code", "स्टोर लिंक कहां से लें", "स्टोर लिंक कहाँ से लें"),
+
+    # ---------- Round 2: problems the first fix pass introduced or missed ----------
+    ("de", "landing-ticket-qr-code", "Ein Code pro Ticket, mit Batch",
+     "Ein Code pro Ticket, mit Stapelmodus"),
+    ("de", "about", "Batch-Generierung", "Generierung im Stapelmodus"),
+    ("es", "landing-ticket-qr-code", "con un zona de silencio", "con una zona de silencio"),
+    ("es", "landing-app-store-qr-code", "Slide de lanzamiento", "Diapositiva de lanzamiento"),
+    ("fr", "landing-app-store-qr-code", "Bannière intelligente du store",
+     "Bannière intelligente de la boutique"),
+    ("fr", "landing-app-store-qr-code", "Comment récupérer vos liens de store",
+     "Comment récupérer vos liens de boutique"),
+    ("fr", "landing-app-store-qr-code", "Les deux stores vous donnent",
+     "Les deux boutiques vous donnent"),
+    ("fr", "landing-app-store-qr-code", "sur un store inutilisable",
+     "sur une boutique inutilisable"),
+    ("fr", "landing-app-store-qr-code", "sur au moins 2\xa0cm", "d'au moins 2\xa0cm"),
+    ("fr", "landing-app-store-qr-code", "Slide de lancement", "Visuel de lancement"),
+    ("pt", "landing-app-store-qr-code", "em destaque é funciona melhor",
+     "em destaque funciona melhor"),
+    ("pt", "landing-ticket-qr-code", "no celular do visitante", "no celular do convidado"),
+    ("pt", "landing-ticket-qr-code", "para ingressos grátis | FreeQrly",
+     "grátis para ingressos | FreeQrly"),
+    ("ru", "landing-ticket-qr-code",
+     "а точкой входа пусть остаётся сама страница",
+     "а сама страница пусть остаётся главным ориентиром для входа"),
+    ("ar", "landing-app-store-qr-code", "وانتقل إلى App Information",
+     "وانتقل إلى «معلومات التطبيق»"),
 ]
 
 
@@ -244,6 +273,11 @@ def apply(lang, page, needle, repl, dry):
     bucket = table.get(page)
     if not bucket:
         return f"{lang}/{page}: 页面不存在"
+    # Idempotence guard: if the needle is a substring of its own replacement
+    # (e.g. "المواقع" -> "المواقع الجغرافية"), a second run would append the
+    # word again — that is how one string ended up with "الجغرافية" five times.
+    if needle in repl and needle != repl:
+        return f"{lang}/{page}: 规则不幂等，改用 SET_VALUES “{needle[:30]}”"
     hits = [k for k, v in bucket.items() if needle in v]
     if not hits:
         # Already done by an earlier rule (or by a previous run): the

@@ -94,7 +94,7 @@ EN: Both stores give you a clean, permanent URL, and both are easy to find once 
 →  يمنحك المتجران عنوان URL ثابتًا وأنيقًا، ويسهل العثور عليهما متى عرفت أين تبحث.
 
 EN: For iOS, open your app in App Store Connect, go to App Information, and copy the App Store URL. It looks like <code>apps.apple.com/app/id1234567890</code>. You can add a country segment — <code>apps.apple.com/gb/app/id…</code> — if you want the code to open a specific storefront, but the plain version redirects to the visitor's own region, which is usually what you want.
-→  لـ iOS، افتح تطبيقك في App Store Connect، وانتقل إلى App Information، وانسخ URL الخاص بـ App Store. يبدو هكذا: <code>apps.apple.com/app/id1234567890</code>. يمكنك إضافة مقطع للدولة — <code>apps.apple.com/gb/app/id…</code> — إذا أردت أن يفتح الرمز واجهة متجر محددة، لكن النسخة العادية تحوّل إلى منطقة الزائر، وهذا غالبًا ما تريده.
+→  لـ iOS، افتح تطبيقك في App Store Connect، وانتقل إلى «معلومات التطبيق»، وانسخ URL الخاص بـ App Store. يبدو هكذا: <code>apps.apple.com/app/id1234567890</code>. يمكنك إضافة مقطع للدولة — <code>apps.apple.com/gb/app/id…</code> — إذا أردت أن يفتح الرمز واجهة متجر محددة، لكن النسخة العادية تحوّل إلى منطقة الزائر، وهذا غالبًا ما تريده.
 
 EN: For Android, open the Play Console listing and copy the link from the browser bar. It looks like <code>play.google.com/store/apps/details?id=com.yourcompany.yourapp</code>. The <code>id</code> is your package name, and it never changes even when the app name does.
 →  لـ Android، افتح صفحة التطبيق في Play Console وانسخ الرابط من شريط المتصفح. يبدو هكذا: <code>play.google.com/store/apps/details?id=com.yourcompany.yourapp</code>. و<code>id</code> هو اسم الحزمة، ولا يتغير أبدًا حتى لو تغيّر اسم التطبيق.
@@ -298,7 +298,7 @@ EN: What is FreeQrly?
 →  ما هو FreeQrly؟
 
 EN: FreeQrly is a free online QR code generator. It creates static QR codes for links, text, WiFi, vCards, SMS, calls, and locations — entirely in your browser, with no account and no fees.
-→  FreeQrly مولّد رموز QR مجاني على الإنترنت. ينشئ رموز QR ثابتة للروابط والنصوص وWiFi وبطاقات vCard والرسائل والمكالمات والمواقع الجغرافية الجغرافية الجغرافية الجغرافية الجغرافية — بالكامل في متصفحك، بدون حساب وبدون رسوم.
+→  FreeQrly مولّد رموز QR مجاني على الإنترنت. ينشئ رموز QR ثابتة للروابط والنصوص وWiFi وبطاقات vCard والرسائل والمكالمات والمواقع الجغرافية — بالكامل في متصفحك، بدون حساب وبدون رسوم.
 
 EN: Yes — almost everything. Static codes are free with no trial and no watermarks, including logo upload, batch generation, and high-resolution export. Static codes need no account; dynamic codes need a free sign-in and include 20 free, with an optional Pro subscription for unlimited dynamic codes.
 →  نعم — كل شيء تقريبًا. الرموز الثابتة مجانية، بدون فترة تجريبية وبدون علامات مائية، بما في ذلك رفع الشعار والإنشاء بالجملة والتصدير عالي الدقة. الرموز الثابتة لا تحتاج إلى حساب؛ والرموز الديناميكية تحتاج إلى تسجيل دخول مجاني وتشمل 20 مجانًا، مع اشتراك Pro اختياري لرموز ديناميكية غير محدودة.

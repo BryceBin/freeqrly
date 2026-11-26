@@ -22,7 +22,7 @@ EN: <span class="sn">2</span><span><b>Paste it in</b>Your code appears instantly
 →  <span class="sn">2</span><span><b>Collez-le</b>Votre code apparaît aussitôt. Laissez l’autre champ vide, sauf si vous créez un second code.</span>
 
 EN: <span class="sn">3</span><span><b>Label it and print</b>“iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides.</span>
-→  <span class="sn">3</span><span><b>Étiquetez et imprimez</b>« iPhone » ou « Android » à côté du code, sur au moins 2 cm. Pubs, emballages, tickets, visuels de lancement.</span>
+→  <span class="sn">3</span><span><b>Étiquetez et imprimez</b>« iPhone » ou « Android » à côté du code, d'au moins 2 cm. Pubs, emballages, tickets, visuels de lancement.</span>
 
 EN: One static code holds one link
 →  Un code statique, un lien
@@ -73,7 +73,7 @@ EN: a page you control
 →  une page que vous contrôlez
 
 EN: Store smart banner
-→  Bannière intelligente du store
+→  Bannière intelligente de la boutique
 
 EN: Apple and Google banners on your own site
 →  Bannières Apple et Google sur votre propre site
@@ -88,10 +88,10 @@ EN: Two codes is the honest, zero-effort option. Router page is what most apps d
 →  Deux codes, c’est l’option honnête et sans effort. La page de redirection, c’est ce que font la plupart des apps une fois qu’elles ont un site marketing. Les bannières intelligentes ne marchent que si les gens arrivent d’abord sur votre site, ce qui n’est pas le même travail qu’un code imprimé.
 
 EN: How to get your store links
-→  Comment récupérer vos liens de store
+→  Comment récupérer vos liens de boutique
 
 EN: Both stores give you a clean, permanent URL, and both are easy to find once you know where to look.
-→  Les deux stores vous donnent une URL propre et permanente, et les deux sont faciles à trouver quand on sait où regarder.
+→  Les deux boutiques vous donnent une URL propre et permanente, et les deux sont faciles à trouver quand on sait où regarder.
 
 EN: For iOS, open your app in App Store Connect, go to App Information, and copy the App Store URL. It looks like <code>apps.apple.com/app/id1234567890</code>. You can add a country segment — <code>apps.apple.com/gb/app/id…</code> — if you want the code to open a specific storefront, but the plain version redirects to the visitor's own region, which is usually what you want.
 →  Pour iOS, ouvrez votre app dans App Store Connect, allez dans Informations sur l’app et copiez l’URL App Store. Elle ressemble à <code>apps.apple.com/app/id1234567890</code>. Vous pouvez ajouter un segment de pays — <code>apps.apple.com/gb/app/id…</code> — si vous voulez que le code ouvre une vitrine précise, mais la version simple redirige vers la région du visiteur, ce qui est généralement ce que vous voulez.
@@ -118,7 +118,7 @@ EN: If you want the destination editable later, use a dynamic code pointing at t
 →  Si vous voulez pouvoir modifier la destination plus tard, utilisez un code dynamique pointant vers la page de redirection. Changez la page et tous les codes imprimés suivent, sans réimpression.
 
 EN: App launch slide
-→  Slide de lancement
+→  Visuel de lancement
 
 EN: 8 cm
 →  8 cm
@@ -148,7 +148,7 @@ EN: only if you print two codes with labels
 →  uniquement si vous imprimez deux codes étiquetés
 
 EN: When you print two codes, label them. A pair of identical-looking squares with no "iPhone" and "Android" text is worse than one code, because people scan the wrong one and land on a store they can't use.
-→  Quand vous imprimez deux codes, étiquetez-les. Deux carrés identiques sans mention « iPhone » et « Android » sont pires qu’un seul code : les gens scannent le mauvais et atterrissent sur un store inutilisable pour eux.
+→  Quand vous imprimez deux codes, étiquetez-les. Deux carrés identiques sans mention « iPhone » et « Android » sont pires qu’un seul code : les gens scannent le mauvais et atterrissent sur une boutique inutilisable pour eux.
 
 EN: <span>Can one static code open both stores?</span>
 →  <span>Un code statique peut-il ouvrir les deux boutiques ?</span>
@@ -217,7 +217,7 @@ EN: Label it and print
 →  Étiquetez et imprimez
 
 EN: “iPhone” or “Android” next to the code, at 2 cm or larger. Ads, packaging, receipts, launch slides.
-→  « iPhone » ou « Android » à côté du code, sur au moins 2 cm. Pubs, emballages, tickets, visuels de lancement.
+→  « iPhone » ou « Android » à côté du code, d'au moins 2 cm. Pubs, emballages, tickets, visuels de lancement.
 
 
 ## about

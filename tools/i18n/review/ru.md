@@ -349,7 +349,7 @@ EN: <span>What should a ticket QR code link to?</span>
 →  <span>На что должен ссылаться QR-код билета?</span>
 
 EN: Your ticket page, a check-in form, or the event details page. The code simply opens that page on the guest’s phone — keep the page itself as the source of truth for entry.
-→  Страница билета, форма регистрации или страница с деталями мероприятия. Код просто открывает эту страницу на телефоне гостя — а точкой входа пусть остаётся сама страница.
+→  Страница билета, форма регистрации или страница с деталями мероприятия. Код просто открывает эту страницу на телефоне гостя — а сама страница пусть остаётся главным ориентиром для входа.
 
 EN: <span>Can I make a different code for every ticket?</span>
 →  <span>Можно ли сделать отдельный код для каждого билета?</span>

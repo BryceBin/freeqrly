@@ -112,7 +112,7 @@ EN: The logic is short: if the browser reports an iPhone or iPad, go to the App 
 →  A lógica é curta: se o navegador informar um iPhone ou iPad, vá para a App Store; se informar Android, vá para a Play; caso contrário, mostre os dois botões. Mantenha uma alternativa para desktop, porque boa parte dos escaneamentos vem de gente testando no notebook.
 
 EN: Two things break these pages in practice. Apple's in-app browsers and some social apps strip the user agent down to something generic, so the detection guesses wrong. And a redirect that fires before the page renders can look like a broken link. Showing both buttons with the detected one highlighted is more forgiving than an instant forward.
-→  Na prática, duas coisas quebram essas páginas. Os navegadores internos da Apple e alguns apps sociais reduzem o agente do usuário a algo genérico, e a detecção erra. E um redirecionamento que dispara antes de a página renderizar pode parecer um link quebrado. Mostrar os dois botões com o detectado em destaque é funciona melhor do que encaminhar na hora.
+→  Na prática, duas coisas quebram essas páginas. Os navegadores internos da Apple e alguns apps sociais reduzem o agente do usuário a algo genérico, e a detecção erra. E um redirecionamento que dispara antes de a página renderizar pode parecer um link quebrado. Mostrar os dois botões com o detectado em destaque funciona melhor do que encaminhar na hora.
 
 EN: If you want the destination editable later, use a dynamic code pointing at the router page. Change the page and every printed code follows, no reprint.
 →  Se você quiser poder editar o destino depois, use um código dinâmico apontando para a página de redirecionamento. Mude a página e todos os códigos impressos acompanham, sem reimprimir.
@@ -326,7 +326,7 @@ EN: Ten: English, Chinese, Spanish, Hindi, Arabic (with right-to-left layout), P
 ## landing-ticket-qr-code
 
 EN: Free Ticket QR Code Generator | FreeQrly
-→  Gerador de QR code para ingressos grátis | FreeQrly
+→  Gerador de QR code grátis para ingressos | FreeQrly
 
 EN: Create free QR codes for tickets: link to your ticket or check-in page, print one code per ticket with Batch mode, no sign-up for static codes, never expires.
 →  QR codes grátis para ingressos: um código por ingresso com o modo lote, sem cadastro para códigos estáticos — eles nunca expiram.
@@ -350,7 +350,7 @@ EN: <span>What should a ticket QR code link to?</span>
 →  <span>Para onde deve apontar o QR code do ingresso?</span>
 
 EN: Your ticket page, a check-in form, or the event details page. The code simply opens that page on the guest’s phone — keep the page itself as the source of truth for entry.
-→  Sua página de ingresso, um formulário de check-in ou a página de detalhes do evento. O código apenas abre essa página no celular do visitante — mantenha a própria página como fonte oficial para a entrada.
+→  Sua página de ingresso, um formulário de check-in ou a página de detalhes do evento. O código apenas abre essa página no celular do convidado — mantenha a própria página como fonte oficial para a entrada.
 
 EN: <span>Can I make a different code for every ticket?</span>
 →  <span>Posso criar um código diferente para cada ingresso?</span>

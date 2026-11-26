@@ -302,7 +302,7 @@ EN: FreeQrly is a free online QR code generator. It creates static QR codes for 
 →  FreeQrly ist ein kostenloser Online-QR-Code-Generator. Er erstellt statische QR-Codes für Links, Texte, WLAN, vCards, SMS, Anrufe und Orte — vollständig in deinem Browser, ohne Konto und ohne Gebühren.
 
 EN: Yes — almost everything. Static codes are free with no trial and no watermarks, including logo upload, batch generation, and high-resolution export. Static codes need no account; dynamic codes need a free sign-in and include 20 free, with an optional Pro subscription for unlimited dynamic codes.
-→  Ja — fast alles. Statische Codes sind kostenlos, ohne Testphase und ohne Wasserzeichen, einschließlich Logo-Upload, Batch-Generierung und Export in hoher Auflösung. Statische Codes brauchen kein Konto; dynamische Codes brauchen eine kostenlose Anmeldung und enthalten 20 kostenlose Codes, mit einem optionalen Pro-Abo für unbegrenzt dynamische Codes.
+→  Ja — fast alles. Statische Codes sind kostenlos, ohne Testphase und ohne Wasserzeichen, einschließlich Logo-Upload, Generierung im Stapelmodus und Export in hoher Auflösung. Statische Codes brauchen kein Konto; dynamische Codes brauchen eine kostenlose Anmeldung und enthalten 20 kostenlose Codes, mit einem optionalen Pro-Abo für unbegrenzt dynamische Codes.
 
 EN: Do FreeQrly QR codes expire?
 →  Laufen FreeQrly-QR-Codes ab?
@@ -398,7 +398,7 @@ EN: Paste the link in the studio below. Print-ready PNG or SVG, free, no waterma
 →  Link unten im Studio einfügen. Druckfertiges PNG oder SVG, kostenlos, kein Wasserzeichen, keine Anmeldung für statische Codes.
 
 EN: One code per ticket, with Batch
-→  Ein Code pro Ticket, mit Batch
+→  Ein Code pro Ticket, mit Stapelmodus
 
 EN: Need a different code on every ticket? Batch mode takes one link per line and downloads every code as a ZIP.
 →  Brauchst du für jedes Ticket einen anderen Code? Der Stapelmodus nimmt einen Link pro Zeile und lädt jeden Code als ZIP herunter.
