@@ -59,6 +59,11 @@ function isKnown(path) {
   // in the repo but this catch-all returned 404 for it, so every IndexNow ping
   // failed verification.
   if (/^[A-Za-z0-9-]{8,128}\.txt$/.test(seg)) return true;
+  // Anything that names a real file (…​.html, …​.xml, …​.webmanifest): this
+  // catch-all runs before the static asset layer, so without this every
+  // /index.html, /zh/about/index.html and /404.html returned 404 even though
+  // the file exists. Pages' own handler then applies its pretty-URL rule.
+  if (/\.[A-Za-z0-9]{2,5}$/.test(seg)) return true;
   // Localized pages: /<lang>/<slug>/, /<lang>/blog/... and /<lang>/404.html
   const parts = seg.split('/');
   if (parts.length >= 2 && LANGS.has(parts[0])) {

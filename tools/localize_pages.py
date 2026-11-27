@@ -187,6 +187,7 @@ def localize_page(key, lang, trans):
     _PROTECT_PREFIX = "\x00__FQPROTECT_"
     assert _PROTECT_PREFIX not in src, "protect token collides with source"
     assert all(_PROTECT_PREFIX not in k for k in trans), "protect token collides with a key"
+    assert all(_PROTECT_PREFIX not in v for v in trans.values()), "protect token collides with a translation"
     _protect = {}  # placeholder -> original EN string
     _n = 0
     # longest first so 'Email body' wins over 'Email'
@@ -209,22 +210,35 @@ def localize_page(key, lang, trans):
                     continue
             _protect[ph] = en
             continue
+        # Shield the translation too, for the same reason identity keys are
+        # shielded: a later, shorter key must not match inside text that is
+        # already translated. Without this, a translation that legitimately
+        # keeps an English fragment — a brand name, say — got that fragment
+        # translated again on the next pass: the French privacy line came out
+        # "L'extension FreeQrly Générateur de QR code pour Chrome" because the
+        # shared key "QR Code Generator" matched inside the sentence that
+        # contained it. Restored together with the identity placeholders.
+        ph = f"{_PROTECT_PREFIX}{_n}\x00"
         if "<" in en or " " in en:
-            n = out.count(en)
-            if n == 0:
+            if out.count(en) == 0:
                 missing.append(en)
-            out = out.replace(en, tr)
+                continue
+            out = out.replace(en, ph)
         else:
             pat = re.compile(r"(>|['\"=])" + re.escape(en) + r"(<|['\"])")
-            out, n = pat.subn(lambda m: m.group(1) + tr + m.group(2), out)
+            out, n = pat.subn(lambda m: m.group(1) + ph + m.group(2), out)
             if n == 0:
                 missing.append(en)
-    # Restore identity-key placeholders (see protect pass above). This runs
-    # right after the main replacement loop and before any post-processing,
-    # so the placeholders never reach the HTML rewrites below. If one
-    # survived, fail loudly instead of writing a broken page.
-    for ph, en in _protect.items():
-        out = out.replace(ph, en)
+                continue
+        _protect[ph] = tr
+        _n += 1
+    # Restore the placeholders — identity keys keep their EN text, translated
+    # keys get their translation back. This runs right after the main
+    # replacement loop and before any post-processing, so the placeholders
+    # never reach the HTML rewrites below. If one survived, fail loudly
+    # instead of writing a broken page.
+    for ph, text in _protect.items():
+        out = out.replace(ph, text)
     if _PROTECT_PREFIX in out:
         raise ValueError(f"protect placeholder leaked in {key}/{lang}")
     # Translate the lifted JSON-LD blocks, then put them back.
